@@ -36,8 +36,13 @@
 		</developer>
 	</developers>
 	<properties>
-		<maven.compiler.source>POM_JDK_TARGET</maven.compiler.source>
-		<maven.compiler.target>POM_JDK_TARGET</maven.compiler.target>
+		<!-- see https://stackoverflow.com/questions/3017695/how-can-i-configure-encoding-in-maven -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>POM_JDK_TARGET</java.version>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<binFolderName>bin</binFolderName>
 		<runtimeFolderName>POM_RUNTIME_PLACEHOLDER</runtimeFolderName>
 		<rootDir>${basedir}/../../../</rootDir>
@@ -99,12 +104,15 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>3.14.1</version>
 				<configuration>
 					<compilerArgs>
 						<arg>-cp</arg>
-						<arg>${originalClassPath};${jcobridgepath}</arg>
+						<arg>${originalClassPath}${path.separator}${jcobridgepath}</arg>
 					</compilerArgs>
+					<release>${maven.compiler.release}</release>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -192,7 +200,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!--plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>1.6.7</version>
@@ -201,6 +209,17 @@
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>false</autoReleaseAfterClose>
+				</configuration>
+			</plugin-->
+			<plugin>
+				<!-- see https://central.sonatype.org/publish/publish-portal-maven/ -->
+				<groupId>org.sonatype.central</groupId>
+				<artifactId>central-publishing-maven-plugin</artifactId>
+				<version>0.9.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<publishingServerId>central</publishingServerId>
+					<centralSnapshotsUrl>https://central.sonatype.com/repository/maven-snapshots/</centralSnapshotsUrl>
 				</configuration>
 			</plugin>
 		</plugins>

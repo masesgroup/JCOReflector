@@ -10,22 +10,31 @@ on:
     branches: 'master'
   workflow_dispatch:
     inputs:
-    
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   check:
     if: ${{ github.repository_owner == 'masesgroup' }} # do not execute outside main repo
     name: Check changed files
     outputs:
-      run_job: ${{ steps.check_files.outputs.run_job }}
+      run_job: ${{ steps.check_files.outputs.run_job || steps.force_execute.outputs.run_job }}
     runs-on: ubuntu-latest
     steps:
-      - id: get_changed_files
+      - name: Force check on true
+        id: force_execute
+        if: ${{ github.event_name != 'push' }}
+        run: echo "run_job=true" >> $GITHUB_OUTPUT
+        
+      - name: Create modified file list
+        if: ${{ github.event_name == 'push' }}
+        id: get_changed_files
         uses: masesgroup/retrieve-changed-files@v3
         with:
           format: 'csv'
 
-      - id: check_files
+      - name: Check modified file list
+        if: ${{ github.event_name == 'push' }}
+        id: check_files
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
@@ -92,7 +101,7 @@ jobs:
           distribution: temurin
           java-version: 11
           cache: 'maven'
-          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-id: central # Value of the distributionManagement/repository/id field of the pom.xml, old value was ossrh
           server-username: MAVEN_USERNAME # env variable for username in deploy
           server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
@@ -106,6 +115,7 @@ jobs:
         shell: bash
         run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
         env:
-          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
-          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME_CHANGE_2025 }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN_CHANGE_2025 }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+          JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 # see https://stackoverflow.com/questions/3017695/how-can-i-configure-encoding-in-maven

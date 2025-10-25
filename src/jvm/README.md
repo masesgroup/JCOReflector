@@ -6,4 +6,4 @@ There are three main folders:
 * [**_net8.0_**](net8.0.md) contains the reflected classes generated from .NET 8, divided by the containing assembly
 * [**_net9.0_**](net9.0.md) contains the reflected classes generated from .NET 9, divided by the containing assembly
 
-**jvm** is the folder of common classes for both **.NET** **Framework**, **8** and **9**
+**JCOReflector** is the folder of common classes for both **.NET** **Framework**, **8** and **9**

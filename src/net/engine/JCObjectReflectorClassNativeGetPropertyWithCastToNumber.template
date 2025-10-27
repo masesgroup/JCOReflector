@@ -11,8 +11,8 @@
                 // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
                 if (retObjectPROPERTY_NAME != null) {
                     java.lang.Class<?> retObjectPROPERTY_NAMEClass = retObjectPROPERTY_NAME.getClass();
-                    java.lang.reflect.Method retObjectPROPERTY_NAMEMethod = retObjectPROPERTY_NAMEClass.getMethod("METHOD_RETURN_TYPEValue");
-                    return (METHOD_RETURN_TYPE)retObjectPROPERTY_NAMEMethod.invoke(retObjectPROPERTY_NAME);
+                    java.lang.reflect.Method retObjectPROPERTY_NAMEMethod = retObjectPROPERTY_NAMEClass.getMethod("PROPERTY_OUTPUTTYPEValue");
+                    return (PROPERTY_OUTPUTTYPE)retObjectPROPERTY_NAMEMethod.invoke(retObjectPROPERTY_NAME);
                 }
                 // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
                 // java.lang.Number retObjectPROPERTY_NAMENumber = (java.lang.Number)retObjectPROPERTY_NAME;

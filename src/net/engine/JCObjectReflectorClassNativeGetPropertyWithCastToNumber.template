@@ -14,11 +14,12 @@
                     java.lang.reflect.Method retObjectPROPERTY_NAMEMethod = retObjectPROPERTY_NAMEClass.getMethod("PROPERTY_OUTPUTTYPEValue");
                     return (PROPERTY_OUTPUTTYPE)retObjectPROPERTY_NAMEMethod.invoke(retObjectPROPERTY_NAME);
                 }
+                else throw new java.lang.NullPointerException();
                 // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
                 // java.lang.Number retObjectPROPERTY_NAMENumber = (java.lang.Number)retObjectPROPERTY_NAME;
                 // return retObjectPROPERTY_NAMENumber.PROPERTY_OUTPUTTYPEValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into PROPERTY_OUTPUTTYPE and, as fallback solution, into java.lang.Number", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null", retObjectPROPERTY_NAME_ToString), cce);
+            } catch (java.lang.Exception cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into PROPERTY_OUTPUTTYPE and, as fallback solution, using reflection", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null", retObjectPROPERTY_NAME_ToString), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

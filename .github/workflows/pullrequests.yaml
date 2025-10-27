@@ -124,7 +124,7 @@ jobs:
       - name: Compress source files
         run: Compress-Archive -Path .\src\jvm\src\${{ matrix.framework }}\* -DestinationPath .\source_${{ matrix.framework }}.zip
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: LatestSource_${{ matrix.framework }}
           path: .\source_${{ matrix.framework }}.zip
@@ -138,7 +138,7 @@ jobs:
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_${{ matrix.framework }}_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: ${{ matrix.framework }}
           path: .\bin\${{ matrix.framework }}\*.*

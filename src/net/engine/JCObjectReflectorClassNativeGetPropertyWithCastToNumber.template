@@ -19,7 +19,7 @@
                 // java.lang.Number retObjectPROPERTY_NAMENumber = (java.lang.Number)retObjectPROPERTY_NAME;
                 // return retObjectPROPERTY_NAMENumber.PROPERTY_OUTPUTTYPEValue();
             } catch (java.lang.Exception cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into PROPERTY_OUTPUTTYPE and, as fallback solution, using reflection", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null", retObjectPROPERTY_NAME_ToString), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into PROPERTY_OUTPUTTYPE and, as fallback solution, using reflection with exception %s (%s)", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null", retObjectPROPERTY_NAME_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

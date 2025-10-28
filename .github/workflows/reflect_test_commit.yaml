@@ -332,7 +332,7 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           if-no-files-found: ignore
           name: Errors_java_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -462,7 +462,7 @@ jobs:
         shell: cmd
         continue-on-error: true
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           if-no-files-found: ignore
           name: Errors_scala_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -565,7 +565,7 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           if-no-files-found: ignore
           name: Errors_java_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -684,7 +684,7 @@ jobs:
 
       - run: rm -rf ./tests/jvm/scala/output
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           if-no-files-found: ignore
           name: Errors_java_tests_linux_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -808,7 +808,7 @@ jobs:
 
       - run: rm -rf ./tests/jvm/scala/output
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           if-no-files-found: ignore
           name: Errors_scala_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -855,17 +855,17 @@ jobs:
           path: ./bin/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net9.0_${{ github.sha }}
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: net8.0
           path: .\bin\net8.0\**\*
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: net9.0
           path: .\bin\net9.0\**\*
         
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: net462
           path: .\bin\net462\**\*
@@ -876,7 +876,7 @@ jobs:
 
       - run: nuget pack src\net\CLI\JCOReflectorCLI.nuspec -OutputDirectory .\bin
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: JCOReflectorNuGet
           path: .\bin\*nupkg

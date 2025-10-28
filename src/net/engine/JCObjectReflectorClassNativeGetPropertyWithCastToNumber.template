@@ -8,18 +8,20 @@
         } catch (java.lang.ClassCastException cce) {
             java.lang.String retObjectPROPERTY_NAME_ToString = retObjectPROPERTY_NAME == null ? "null" : retObjectPROPERTY_NAME.toString();
             try {
-                // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
                 if (retObjectPROPERTY_NAME != null) {
-                    java.lang.Class<?> retObjectPROPERTY_NAMEClass = retObjectPROPERTY_NAME.getClass();
-                    java.lang.reflect.Method retObjectPROPERTY_NAMEMethod = retObjectPROPERTY_NAMEClass.getMethod("PROPERTY_OUTPUTTYPEValue");
-                    return (PROPERTY_OUTPUTTYPE)retObjectPROPERTY_NAMEMethod.invoke(retObjectPROPERTY_NAME);
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPROPERTY_NAMEClass = retObjectPROPERTY_NAME.getClass();
+                    // java.lang.reflect.Method retObjectPROPERTY_NAMEMethod = retObjectPROPERTY_NAMEClass.getMethod("PROPERTY_OUTPUTTYPEValue");
+                    // return (PROPERTY_OUTPUTTYPE)retObjectPROPERTY_NAMEMethod.invoke(retObjectPROPERTY_NAME);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPROPERTY_NAMENumber = java.text.NumberFormat.getInstance().parse(retObjectPROPERTY_NAME_ToString);
+                    return retObjectPROPERTY_NAMENumber.PROPERTY_OUTPUTTYPEValue();
                 }
-                else throw new java.lang.NullPointerException();
-                // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
-                // java.lang.Number retObjectPROPERTY_NAMENumber = (java.lang.Number)retObjectPROPERTY_NAME;
-                // return retObjectPROPERTY_NAMENumber.PROPERTY_OUTPUTTYPEValue();
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
             } catch (java.lang.Exception cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into PROPERTY_OUTPUTTYPE and, as fallback solution, using reflection with exception %s (%s)", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null", retObjectPROPERTY_NAME_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into PROPERTY_OUTPUTTYPE and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null", retObjectPROPERTY_NAME_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

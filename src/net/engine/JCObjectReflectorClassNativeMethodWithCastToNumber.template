@@ -8,18 +8,20 @@
         } catch (java.lang.ClassCastException cce) {
             java.lang.String retObjectMETHOD_NAME_ToString = retObjectMETHOD_NAME == null ? "null" : retObjectMETHOD_NAME.toString();
             try {
-                // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
                 if (retObjectMETHOD_NAME != null) {
-                    java.lang.Class<?> retObjectMETHOD_NAMEClass = retObjectMETHOD_NAME.getClass();
-                    java.lang.reflect.Method retObjectMETHOD_NAMEMethod = retObjectMETHOD_NAMEClass.getMethod("METHOD_RETURN_TYPEValue");
-                    return (METHOD_RETURN_TYPE)retObjectMETHOD_NAMEMethod.invoke(retObjectMETHOD_NAME);
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMETHOD_NAMEClass = retObjectMETHOD_NAME.getClass();
+                    // java.lang.reflect.Method retObjectMETHOD_NAMEMethod = retObjectMETHOD_NAMEClass.getMethod("METHOD_RETURN_TYPEValue");
+                    // return (METHOD_RETURN_TYPE)retObjectMETHOD_NAMEMethod.invoke(retObjectMETHOD_NAME);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMETHOD_NAMENumber = java.text.NumberFormat.getInstance().parse(retObjectMETHOD_NAME_ToString);
+                    return retObjectMETHOD_NAMENumber.METHOD_RETURN_TYPEValue();
                 }
-                else throw new java.lang.NullPointerException();
-                // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
-                // java.lang.Number retObjectMETHOD_NAMENumber = (java.lang.Number)retObjectMETHOD_NAME;
-                // return retObjectMETHOD_NAMENumber.METHOD_RETURN_TYPEValue();
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
             } catch (java.lang.Exception cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into METHOD_RETURN_TYPE and, as fallback solution, using reflection with exception %s (%s)", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null", retObjectMETHOD_NAME_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into METHOD_RETURN_TYPE and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null", retObjectMETHOD_NAME_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

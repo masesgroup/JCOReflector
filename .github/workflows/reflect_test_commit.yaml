@@ -23,16 +23,6 @@ on:
         required: false
         default: false
         type: boolean
-      ExecuteSocketTestAsync:
-        description: 'Execute the test related to async mode socket'
-        required: false
-        default: false
-        type: boolean
-      ExecuteScalaEventTest:
-        description: 'Execute the test related to event under Scala'
-        required: false
-        default: false
-        type: boolean
 
 env:
     SCALARELEASE: 2.13.13
@@ -237,7 +227,7 @@ jobs:
           path: ./bin/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
 
-  execute_java_tests_windows:
+  java_tests_windows:
     needs: build_windows
     strategy:
       fail-fast: false
@@ -257,7 +247,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
     
     steps:
       # Runs a set of commands using the runners shell
@@ -302,35 +292,34 @@ jobs:
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
     
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTestAsync == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - uses: actions/upload-artifact@v5
         with:
@@ -339,7 +328,7 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
-  execute_scala_tests_windows:
+  scala_tests_windows:
     needs: build_windows_prepare_scala
     strategy:
       fail-fast: false
@@ -359,7 +348,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
       
     steps:
       # Runs a set of commands using the runners shell
@@ -417,50 +406,47 @@ jobs:
               
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteScalaEventTest == true }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteScalaEventTest == true }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
     
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTestAsync == true && inputs.ExecuteScalaEventTest == true }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: cd ./tests/jvm/scala && rmdir output /s /q
         shell: cmd
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - uses: actions/upload-artifact@v5
         with:
@@ -469,7 +455,7 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
-  execute_java_tests_unix:
+  java_tests_unix:
     needs: build_linux
     strategy:
       fail-fast: false
@@ -489,7 +475,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -535,35 +521,34 @@ jobs:
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
     
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTestAsync == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
   
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - uses: actions/upload-artifact@v5
         with:
@@ -572,7 +557,7 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
-  execute_scala_tests_linux:
+  scala_tests_linux:
     needs: build_linux
     strategy:
       fail-fast: false
@@ -592,7 +577,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -650,37 +635,34 @@ jobs:
           scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteScalaEventTest == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteScalaEventTest == true }}  
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
     
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTestAsync == true && inputs.ExecuteScalaEventTest == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: rm -rf ./tests/jvm/scala/output
 
@@ -691,7 +673,7 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
-  execute_scala_tests_mac:
+  scala_tests_mac:
     needs: build_linux
     strategy:
       fail-fast: false
@@ -711,7 +693,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -774,37 +756,34 @@ jobs:
           ${{ env.SCALA_BIN }}/scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteScalaEventTest == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteScalaEventTest == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
     
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTestAsync == true && inputs.ExecuteScalaEventTest == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: rm -rf ./tests/jvm/scala/output
 
@@ -816,7 +795,7 @@ jobs:
           retention-days: 1
 
   execute_finalize:
-    needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_unix, execute_scala_tests_linux, execute_scala_tests_mac]
+    needs: [java_tests_windows, scala_tests_windows, java_tests_unix, scala_tests_linux, scala_tests_mac]
 
     runs-on: windows-2022
     steps:

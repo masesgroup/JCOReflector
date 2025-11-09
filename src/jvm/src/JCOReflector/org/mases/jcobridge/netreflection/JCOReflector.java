@@ -39,6 +39,7 @@ import java.lang.reflect.*;
  * Main class to manage {@link JCOReflector} features
  */
 public class JCOReflector {
+    static boolean _fallbackOnNativeParse = false;
     static String _scopeOn = "JCOReflector";
     static String _scopeOnVersion = "1.16.0.0";
     static String _runtimeFolder = null;
@@ -61,6 +62,24 @@ public class JCOReflector {
             System.exit(1);
         }
         return null;
+    }
+
+    /**
+     * Return the FallbackOnNativeParse value
+     * 
+     * @return the FallbackOnNativeParse value
+     */
+    public static synchronized boolean getFallbackOnNativeParse() {
+        return _fallbackOnNativeParse;
+    }
+
+    /**
+     * Set the FallbackOnNativeParse value
+     * 
+     * @param fallbackOnNative set the FallbackOnNativeParse value
+     */
+    public static synchronized void setFallbackOnNativeParse(boolean fallbackOnNativeParse) {
+        _fallbackOnNativeParse = fallbackOnNativeParse;
     }
 
     /**

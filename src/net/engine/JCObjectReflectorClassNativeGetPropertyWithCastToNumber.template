@@ -9,6 +9,9 @@
             boolean reportPROPERTY_NAMEError = true;
             java.lang.String retObjectPROPERTY_NAME_ToString = retObjectPROPERTY_NAME == null ? "null" : retObjectPROPERTY_NAME.toString();
             try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
                 if (retObjectPROPERTY_NAME != null) {
                     // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
                     // java.lang.Class<?> retObjectPROPERTY_NAMEClass = retObjectPROPERTY_NAME.getClass();

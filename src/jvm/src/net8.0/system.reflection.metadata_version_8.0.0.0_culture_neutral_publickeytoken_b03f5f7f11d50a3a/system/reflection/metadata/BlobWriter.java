@@ -274,13 +274,32 @@ public class BlobWriter extends ValueType  {
             retObjectWriteBytes = classInstance.Invoke("WriteBytes", source == null ? null : source.getJCOInstance(), byteCount);
             return (int)retObjectWriteBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWriteBytesError = true;
             java.lang.String retObjectWriteBytes_ToString = retObjectWriteBytes == null ? "null" : retObjectWriteBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWriteBytesNumber = (java.lang.Number)retObjectWriteBytes;
-                return retObjectWriteBytesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWriteBytes != null ? retObjectWriteBytes.getClass() : "null", retObjectWriteBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWriteBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWriteBytesClass = retObjectWriteBytes.getClass();
+                    // java.lang.reflect.Method retObjectWriteBytesMethod = retObjectWriteBytesClass.getMethod("intValue");
+                    // return (int)retObjectWriteBytesMethod.invoke(retObjectWriteBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWriteBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectWriteBytes_ToString);
+                    return retObjectWriteBytesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWriteBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWriteBytes != null ? retObjectWriteBytes.getClass() : "null", retObjectWriteBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWriteBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -669,13 +688,32 @@ public class BlobWriter extends ValueType  {
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLengthError = true;
             java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
-                return retObjectLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLengthClass = retObjectLength.getClass();
+                    // java.lang.reflect.Method retObjectLengthMethod = retObjectLengthClass.getMethod("intValue");
+                    // return (int)retObjectLengthMethod.invoke(retObjectLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectLength_ToString);
+                    return retObjectLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -690,13 +728,32 @@ public class BlobWriter extends ValueType  {
             retObjectOffset = classInstance.Get("Offset");
             return (int)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetError = true;
             java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
-                return retObjectOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetClass = retObjectOffset.getClass();
+                    // java.lang.reflect.Method retObjectOffsetMethod = retObjectOffsetClass.getMethod("intValue");
+                    // return (int)retObjectOffsetMethod.invoke(retObjectOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectOffset_ToString);
+                    return retObjectOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -721,13 +778,32 @@ public class BlobWriter extends ValueType  {
             retObjectRemainingBytes = classInstance.Get("RemainingBytes");
             return (int)retObjectRemainingBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRemainingBytesError = true;
             java.lang.String retObjectRemainingBytes_ToString = retObjectRemainingBytes == null ? "null" : retObjectRemainingBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRemainingBytesNumber = (java.lang.Number)retObjectRemainingBytes;
-                return retObjectRemainingBytesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemainingBytes != null ? retObjectRemainingBytes.getClass() : "null", retObjectRemainingBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRemainingBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRemainingBytesClass = retObjectRemainingBytes.getClass();
+                    // java.lang.reflect.Method retObjectRemainingBytesMethod = retObjectRemainingBytesClass.getMethod("intValue");
+                    // return (int)retObjectRemainingBytesMethod.invoke(retObjectRemainingBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRemainingBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectRemainingBytes_ToString);
+                    return retObjectRemainingBytesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRemainingBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRemainingBytes != null ? retObjectRemainingBytes.getClass() : "null", retObjectRemainingBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRemainingBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

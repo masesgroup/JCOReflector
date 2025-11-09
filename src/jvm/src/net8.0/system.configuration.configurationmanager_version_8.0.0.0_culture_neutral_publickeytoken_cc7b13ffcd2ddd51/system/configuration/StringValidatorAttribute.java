@@ -173,13 +173,32 @@ public class StringValidatorAttribute extends ConfigurationValidatorAttribute  {
             retObjectMaxLength = classInstance.Get("MaxLength");
             return (int)retObjectMaxLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxLengthError = true;
             java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
-                return retObjectMaxLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxLengthClass = retObjectMaxLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxLengthMethod = retObjectMaxLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaxLengthMethod.invoke(retObjectMaxLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxLength_ToString);
+                    return retObjectMaxLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,13 +223,32 @@ public class StringValidatorAttribute extends ConfigurationValidatorAttribute  {
             retObjectMinLength = classInstance.Get("MinLength");
             return (int)retObjectMinLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinLengthError = true;
             java.lang.String retObjectMinLength_ToString = retObjectMinLength == null ? "null" : retObjectMinLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinLengthNumber = (java.lang.Number)retObjectMinLength;
-                return retObjectMinLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinLength != null ? retObjectMinLength.getClass() : "null", retObjectMinLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinLengthClass = retObjectMinLength.getClass();
+                    // java.lang.reflect.Method retObjectMinLengthMethod = retObjectMinLengthClass.getMethod("intValue");
+                    // return (int)retObjectMinLengthMethod.invoke(retObjectMinLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMinLength_ToString);
+                    return retObjectMinLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinLength != null ? retObjectMinLength.getClass() : "null", retObjectMinLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

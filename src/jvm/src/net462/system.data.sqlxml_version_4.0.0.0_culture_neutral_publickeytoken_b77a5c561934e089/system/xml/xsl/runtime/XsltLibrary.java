@@ -205,13 +205,32 @@ public class XsltLibrary extends NetObject  {
             retObjectRegisterDecimalFormatter = classInstance.Invoke("RegisterDecimalFormatter", formatPicture, infinitySymbol, nanSymbol, characters);
             return (double)retObjectRegisterDecimalFormatter;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRegisterDecimalFormatterError = true;
             java.lang.String retObjectRegisterDecimalFormatter_ToString = retObjectRegisterDecimalFormatter == null ? "null" : retObjectRegisterDecimalFormatter.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRegisterDecimalFormatterNumber = (java.lang.Number)retObjectRegisterDecimalFormatter;
-                return retObjectRegisterDecimalFormatterNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRegisterDecimalFormatter != null ? retObjectRegisterDecimalFormatter.getClass() : "null", retObjectRegisterDecimalFormatter_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRegisterDecimalFormatter != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRegisterDecimalFormatterClass = retObjectRegisterDecimalFormatter.getClass();
+                    // java.lang.reflect.Method retObjectRegisterDecimalFormatterMethod = retObjectRegisterDecimalFormatterClass.getMethod("doubleValue");
+                    // return (double)retObjectRegisterDecimalFormatterMethod.invoke(retObjectRegisterDecimalFormatter);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRegisterDecimalFormatterNumber = java.text.NumberFormat.getInstance().parse(retObjectRegisterDecimalFormatter_ToString);
+                    return retObjectRegisterDecimalFormatterNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRegisterDecimalFormatterError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRegisterDecimalFormatter != null ? retObjectRegisterDecimalFormatter.getClass() : "null", retObjectRegisterDecimalFormatter_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRegisterDecimalFormatterError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,13 +245,32 @@ public class XsltLibrary extends NetObject  {
             retObjectCheckScriptNamespace = classInstance.Invoke("CheckScriptNamespace", nsUri);
             return (int)retObjectCheckScriptNamespace;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCheckScriptNamespaceError = true;
             java.lang.String retObjectCheckScriptNamespace_ToString = retObjectCheckScriptNamespace == null ? "null" : retObjectCheckScriptNamespace.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCheckScriptNamespaceNumber = (java.lang.Number)retObjectCheckScriptNamespace;
-                return retObjectCheckScriptNamespaceNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCheckScriptNamespace != null ? retObjectCheckScriptNamespace.getClass() : "null", retObjectCheckScriptNamespace_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCheckScriptNamespace != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCheckScriptNamespaceClass = retObjectCheckScriptNamespace.getClass();
+                    // java.lang.reflect.Method retObjectCheckScriptNamespaceMethod = retObjectCheckScriptNamespaceClass.getMethod("intValue");
+                    // return (int)retObjectCheckScriptNamespaceMethod.invoke(retObjectCheckScriptNamespace);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCheckScriptNamespaceNumber = java.text.NumberFormat.getInstance().parse(retObjectCheckScriptNamespace_ToString);
+                    return retObjectCheckScriptNamespaceNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCheckScriptNamespaceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCheckScriptNamespace != null ? retObjectCheckScriptNamespace.getClass() : "null", retObjectCheckScriptNamespace_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCheckScriptNamespaceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,13 +285,32 @@ public class XsltLibrary extends NetObject  {
             retObjectLangToLcid = classInstance.Invoke("LangToLcid", lang, forwardCompatibility);
             return (int)retObjectLangToLcid;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLangToLcidError = true;
             java.lang.String retObjectLangToLcid_ToString = retObjectLangToLcid == null ? "null" : retObjectLangToLcid.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLangToLcidNumber = (java.lang.Number)retObjectLangToLcid;
-                return retObjectLangToLcidNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLangToLcid != null ? retObjectLangToLcid.getClass() : "null", retObjectLangToLcid_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLangToLcid != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLangToLcidClass = retObjectLangToLcid.getClass();
+                    // java.lang.reflect.Method retObjectLangToLcidMethod = retObjectLangToLcidClass.getMethod("intValue");
+                    // return (int)retObjectLangToLcidMethod.invoke(retObjectLangToLcid);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLangToLcidNumber = java.text.NumberFormat.getInstance().parse(retObjectLangToLcid_ToString);
+                    return retObjectLangToLcidNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLangToLcidError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLangToLcid != null ? retObjectLangToLcid.getClass() : "null", retObjectLangToLcid_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLangToLcidError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,13 +325,32 @@ public class XsltLibrary extends NetObject  {
             retObjectRegisterDecimalFormat = classInstance.Invoke("RegisterDecimalFormat", name == null ? null : name.getJCOInstance(), infinitySymbol, nanSymbol, characters);
             return (int)retObjectRegisterDecimalFormat;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRegisterDecimalFormatError = true;
             java.lang.String retObjectRegisterDecimalFormat_ToString = retObjectRegisterDecimalFormat == null ? "null" : retObjectRegisterDecimalFormat.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRegisterDecimalFormatNumber = (java.lang.Number)retObjectRegisterDecimalFormat;
-                return retObjectRegisterDecimalFormatNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRegisterDecimalFormat != null ? retObjectRegisterDecimalFormat.getClass() : "null", retObjectRegisterDecimalFormat_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRegisterDecimalFormat != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRegisterDecimalFormatClass = retObjectRegisterDecimalFormat.getClass();
+                    // java.lang.reflect.Method retObjectRegisterDecimalFormatMethod = retObjectRegisterDecimalFormatClass.getMethod("intValue");
+                    // return (int)retObjectRegisterDecimalFormatMethod.invoke(retObjectRegisterDecimalFormat);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRegisterDecimalFormatNumber = java.text.NumberFormat.getInstance().parse(retObjectRegisterDecimalFormat_ToString);
+                    return retObjectRegisterDecimalFormatNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRegisterDecimalFormatError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRegisterDecimalFormat != null ? retObjectRegisterDecimalFormat.getClass() : "null", retObjectRegisterDecimalFormat_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRegisterDecimalFormatError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -226,13 +226,32 @@ public class RadialGradientBrush extends GradientBrush  {
             retObjectRadiusX = classInstance.Get("RadiusX");
             return (double)retObjectRadiusX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRadiusXError = true;
             java.lang.String retObjectRadiusX_ToString = retObjectRadiusX == null ? "null" : retObjectRadiusX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRadiusXNumber = (java.lang.Number)retObjectRadiusX;
-                return retObjectRadiusXNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRadiusX != null ? retObjectRadiusX.getClass() : "null", retObjectRadiusX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRadiusX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRadiusXClass = retObjectRadiusX.getClass();
+                    // java.lang.reflect.Method retObjectRadiusXMethod = retObjectRadiusXClass.getMethod("doubleValue");
+                    // return (double)retObjectRadiusXMethod.invoke(retObjectRadiusX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRadiusXNumber = java.text.NumberFormat.getInstance().parse(retObjectRadiusX_ToString);
+                    return retObjectRadiusXNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRadiusXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRadiusX != null ? retObjectRadiusX.getClass() : "null", retObjectRadiusX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRadiusXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -257,13 +276,32 @@ public class RadialGradientBrush extends GradientBrush  {
             retObjectRadiusY = classInstance.Get("RadiusY");
             return (double)retObjectRadiusY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRadiusYError = true;
             java.lang.String retObjectRadiusY_ToString = retObjectRadiusY == null ? "null" : retObjectRadiusY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRadiusYNumber = (java.lang.Number)retObjectRadiusY;
-                return retObjectRadiusYNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRadiusY != null ? retObjectRadiusY.getClass() : "null", retObjectRadiusY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRadiusY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRadiusYClass = retObjectRadiusY.getClass();
+                    // java.lang.reflect.Method retObjectRadiusYMethod = retObjectRadiusYClass.getMethod("doubleValue");
+                    // return (double)retObjectRadiusYMethod.invoke(retObjectRadiusY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRadiusYNumber = java.text.NumberFormat.getInstance().parse(retObjectRadiusY_ToString);
+                    return retObjectRadiusYNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRadiusYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRadiusY != null ? retObjectRadiusY.getClass() : "null", retObjectRadiusY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRadiusYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

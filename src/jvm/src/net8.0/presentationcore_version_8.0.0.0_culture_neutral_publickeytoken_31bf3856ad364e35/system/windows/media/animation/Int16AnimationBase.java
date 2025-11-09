@@ -162,13 +162,32 @@ public class Int16AnimationBase extends AnimationTimeline  {
             retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue, defaultDestinationValue, animationClock == null ? null : animationClock.getJCOInstance());
             return (short)retObjectGetCurrentValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCurrentValueError = true;
             java.lang.String retObjectGetCurrentValue_ToString = retObjectGetCurrentValue == null ? "null" : retObjectGetCurrentValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCurrentValueNumber = (java.lang.Number)retObjectGetCurrentValue;
-                return retObjectGetCurrentValueNumber.shortValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null", retObjectGetCurrentValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCurrentValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCurrentValueClass = retObjectGetCurrentValue.getClass();
+                    // java.lang.reflect.Method retObjectGetCurrentValueMethod = retObjectGetCurrentValueClass.getMethod("shortValue");
+                    // return (short)retObjectGetCurrentValueMethod.invoke(retObjectGetCurrentValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCurrentValueNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCurrentValue_ToString);
+                    return retObjectGetCurrentValueNumber.shortValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCurrentValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null", retObjectGetCurrentValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCurrentValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

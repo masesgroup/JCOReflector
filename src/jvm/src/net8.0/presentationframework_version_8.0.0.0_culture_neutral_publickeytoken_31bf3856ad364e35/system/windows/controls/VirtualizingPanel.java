@@ -225,13 +225,32 @@ public class VirtualizingPanel extends Panel  {
             retObjectGetItemOffset = classInstance.Invoke("GetItemOffset", child == null ? null : child.getJCOInstance());
             return (double)retObjectGetItemOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetItemOffsetError = true;
             java.lang.String retObjectGetItemOffset_ToString = retObjectGetItemOffset == null ? "null" : retObjectGetItemOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetItemOffsetNumber = (java.lang.Number)retObjectGetItemOffset;
-                return retObjectGetItemOffsetNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetItemOffset != null ? retObjectGetItemOffset.getClass() : "null", retObjectGetItemOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetItemOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetItemOffsetClass = retObjectGetItemOffset.getClass();
+                    // java.lang.reflect.Method retObjectGetItemOffsetMethod = retObjectGetItemOffsetClass.getMethod("doubleValue");
+                    // return (double)retObjectGetItemOffsetMethod.invoke(retObjectGetItemOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetItemOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectGetItemOffset_ToString);
+                    return retObjectGetItemOffsetNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetItemOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetItemOffset != null ? retObjectGetItemOffset.getClass() : "null", retObjectGetItemOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetItemOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

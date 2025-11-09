@@ -199,13 +199,32 @@ public class Mouse extends NetObject  {
             retObjectWheelScrollLines = classInstance.Get("WheelScrollLines");
             return (int)retObjectWheelScrollLines;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWheelScrollLinesError = true;
             java.lang.String retObjectWheelScrollLines_ToString = retObjectWheelScrollLines == null ? "null" : retObjectWheelScrollLines.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWheelScrollLinesNumber = (java.lang.Number)retObjectWheelScrollLines;
-                return retObjectWheelScrollLinesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWheelScrollLines != null ? retObjectWheelScrollLines.getClass() : "null", retObjectWheelScrollLines_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWheelScrollLines != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWheelScrollLinesClass = retObjectWheelScrollLines.getClass();
+                    // java.lang.reflect.Method retObjectWheelScrollLinesMethod = retObjectWheelScrollLinesClass.getMethod("intValue");
+                    // return (int)retObjectWheelScrollLinesMethod.invoke(retObjectWheelScrollLines);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWheelScrollLinesNumber = java.text.NumberFormat.getInstance().parse(retObjectWheelScrollLines_ToString);
+                    return retObjectWheelScrollLinesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWheelScrollLinesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWheelScrollLines != null ? retObjectWheelScrollLines.getClass() : "null", retObjectWheelScrollLines_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWheelScrollLinesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

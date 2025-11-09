@@ -279,13 +279,32 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
             retObjectNewStartingIndex = classInstance.Get("NewStartingIndex");
             return (int)retObjectNewStartingIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNewStartingIndexError = true;
             java.lang.String retObjectNewStartingIndex_ToString = retObjectNewStartingIndex == null ? "null" : retObjectNewStartingIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNewStartingIndexNumber = (java.lang.Number)retObjectNewStartingIndex;
-                return retObjectNewStartingIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNewStartingIndex != null ? retObjectNewStartingIndex.getClass() : "null", retObjectNewStartingIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNewStartingIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNewStartingIndexClass = retObjectNewStartingIndex.getClass();
+                    // java.lang.reflect.Method retObjectNewStartingIndexMethod = retObjectNewStartingIndexClass.getMethod("intValue");
+                    // return (int)retObjectNewStartingIndexMethod.invoke(retObjectNewStartingIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNewStartingIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectNewStartingIndex_ToString);
+                    return retObjectNewStartingIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNewStartingIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNewStartingIndex != null ? retObjectNewStartingIndex.getClass() : "null", retObjectNewStartingIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNewStartingIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -300,13 +319,32 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
             retObjectOldStartingIndex = classInstance.Get("OldStartingIndex");
             return (int)retObjectOldStartingIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOldStartingIndexError = true;
             java.lang.String retObjectOldStartingIndex_ToString = retObjectOldStartingIndex == null ? "null" : retObjectOldStartingIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOldStartingIndexNumber = (java.lang.Number)retObjectOldStartingIndex;
-                return retObjectOldStartingIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOldStartingIndex != null ? retObjectOldStartingIndex.getClass() : "null", retObjectOldStartingIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOldStartingIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOldStartingIndexClass = retObjectOldStartingIndex.getClass();
+                    // java.lang.reflect.Method retObjectOldStartingIndexMethod = retObjectOldStartingIndexClass.getMethod("intValue");
+                    // return (int)retObjectOldStartingIndexMethod.invoke(retObjectOldStartingIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOldStartingIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectOldStartingIndex_ToString);
+                    return retObjectOldStartingIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOldStartingIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOldStartingIndex != null ? retObjectOldStartingIndex.getClass() : "null", retObjectOldStartingIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOldStartingIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

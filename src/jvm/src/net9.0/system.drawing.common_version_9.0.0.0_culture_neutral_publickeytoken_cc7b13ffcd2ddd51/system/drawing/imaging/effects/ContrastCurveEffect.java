@@ -177,13 +177,32 @@ public class ContrastCurveEffect extends ColorCurveEffect  {
             retObjectContrast = classInstance.Get("Contrast");
             return (int)retObjectContrast;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportContrastError = true;
             java.lang.String retObjectContrast_ToString = retObjectContrast == null ? "null" : retObjectContrast.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectContrastNumber = (java.lang.Number)retObjectContrast;
-                return retObjectContrastNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContrast != null ? retObjectContrast.getClass() : "null", retObjectContrast_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectContrast != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectContrastClass = retObjectContrast.getClass();
+                    // java.lang.reflect.Method retObjectContrastMethod = retObjectContrastClass.getMethod("intValue");
+                    // return (int)retObjectContrastMethod.invoke(retObjectContrast);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectContrastNumber = java.text.NumberFormat.getInstance().parse(retObjectContrast_ToString);
+                    return retObjectContrastNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportContrastError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectContrast != null ? retObjectContrast.getClass() : "null", retObjectContrast_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportContrastError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

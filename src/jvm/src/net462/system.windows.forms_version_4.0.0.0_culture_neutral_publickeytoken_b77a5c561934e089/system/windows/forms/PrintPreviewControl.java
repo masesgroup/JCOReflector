@@ -253,13 +253,32 @@ public class PrintPreviewControl extends Control  {
             retObjectZoom = classInstance.Get("Zoom");
             return (double)retObjectZoom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportZoomError = true;
             java.lang.String retObjectZoom_ToString = retObjectZoom == null ? "null" : retObjectZoom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectZoomNumber = (java.lang.Number)retObjectZoom;
-                return retObjectZoomNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectZoom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectZoomClass = retObjectZoom.getClass();
+                    // java.lang.reflect.Method retObjectZoomMethod = retObjectZoomClass.getMethod("doubleValue");
+                    // return (double)retObjectZoomMethod.invoke(retObjectZoom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectZoomNumber = java.text.NumberFormat.getInstance().parse(retObjectZoom_ToString);
+                    return retObjectZoomNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportZoomError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportZoomError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,13 +303,32 @@ public class PrintPreviewControl extends Control  {
             retObjectColumns = classInstance.Get("Columns");
             return (int)retObjectColumns;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportColumnsError = true;
             java.lang.String retObjectColumns_ToString = retObjectColumns == null ? "null" : retObjectColumns.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectColumnsNumber = (java.lang.Number)retObjectColumns;
-                return retObjectColumnsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumns != null ? retObjectColumns.getClass() : "null", retObjectColumns_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectColumns != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectColumnsClass = retObjectColumns.getClass();
+                    // java.lang.reflect.Method retObjectColumnsMethod = retObjectColumnsClass.getMethod("intValue");
+                    // return (int)retObjectColumnsMethod.invoke(retObjectColumns);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectColumnsNumber = java.text.NumberFormat.getInstance().parse(retObjectColumns_ToString);
+                    return retObjectColumnsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportColumnsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectColumns != null ? retObjectColumns.getClass() : "null", retObjectColumns_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportColumnsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -315,13 +353,32 @@ public class PrintPreviewControl extends Control  {
             retObjectRows = classInstance.Get("Rows");
             return (int)retObjectRows;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRowsError = true;
             java.lang.String retObjectRows_ToString = retObjectRows == null ? "null" : retObjectRows.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRowsNumber = (java.lang.Number)retObjectRows;
-                return retObjectRowsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRows != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRowsClass = retObjectRows.getClass();
+                    // java.lang.reflect.Method retObjectRowsMethod = retObjectRowsClass.getMethod("intValue");
+                    // return (int)retObjectRowsMethod.invoke(retObjectRows);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRowsNumber = java.text.NumberFormat.getInstance().parse(retObjectRows_ToString);
+                    return retObjectRowsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRowsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRowsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -346,13 +403,32 @@ public class PrintPreviewControl extends Control  {
             retObjectStartPage = classInstance.Get("StartPage");
             return (int)retObjectStartPage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStartPageError = true;
             java.lang.String retObjectStartPage_ToString = retObjectStartPage == null ? "null" : retObjectStartPage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStartPageNumber = (java.lang.Number)retObjectStartPage;
-                return retObjectStartPageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartPage != null ? retObjectStartPage.getClass() : "null", retObjectStartPage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStartPage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStartPageClass = retObjectStartPage.getClass();
+                    // java.lang.reflect.Method retObjectStartPageMethod = retObjectStartPageClass.getMethod("intValue");
+                    // return (int)retObjectStartPageMethod.invoke(retObjectStartPage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStartPageNumber = java.text.NumberFormat.getInstance().parse(retObjectStartPage_ToString);
+                    return retObjectStartPageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStartPageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStartPage != null ? retObjectStartPage.getClass() : "null", retObjectStartPage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStartPageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

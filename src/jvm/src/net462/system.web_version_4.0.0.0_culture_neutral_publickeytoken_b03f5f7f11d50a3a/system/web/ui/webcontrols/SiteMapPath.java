@@ -236,13 +236,32 @@ public class SiteMapPath extends CompositeControl  {
             retObjectParentLevelsDisplayed = classInstance.Get("ParentLevelsDisplayed");
             return (int)retObjectParentLevelsDisplayed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportParentLevelsDisplayedError = true;
             java.lang.String retObjectParentLevelsDisplayed_ToString = retObjectParentLevelsDisplayed == null ? "null" : retObjectParentLevelsDisplayed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectParentLevelsDisplayedNumber = (java.lang.Number)retObjectParentLevelsDisplayed;
-                return retObjectParentLevelsDisplayedNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectParentLevelsDisplayed != null ? retObjectParentLevelsDisplayed.getClass() : "null", retObjectParentLevelsDisplayed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectParentLevelsDisplayed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectParentLevelsDisplayedClass = retObjectParentLevelsDisplayed.getClass();
+                    // java.lang.reflect.Method retObjectParentLevelsDisplayedMethod = retObjectParentLevelsDisplayedClass.getMethod("intValue");
+                    // return (int)retObjectParentLevelsDisplayedMethod.invoke(retObjectParentLevelsDisplayed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectParentLevelsDisplayedNumber = java.text.NumberFormat.getInstance().parse(retObjectParentLevelsDisplayed_ToString);
+                    return retObjectParentLevelsDisplayedNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportParentLevelsDisplayedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectParentLevelsDisplayed != null ? retObjectParentLevelsDisplayed.getClass() : "null", retObjectParentLevelsDisplayed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportParentLevelsDisplayedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

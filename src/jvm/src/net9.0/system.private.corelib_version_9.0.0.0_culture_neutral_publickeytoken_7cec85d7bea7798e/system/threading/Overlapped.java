@@ -184,13 +184,32 @@ public class Overlapped extends NetObject  {
             retObjectEventHandle = classInstance.Get("EventHandle");
             return (int)retObjectEventHandle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEventHandleError = true;
             java.lang.String retObjectEventHandle_ToString = retObjectEventHandle == null ? "null" : retObjectEventHandle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEventHandleNumber = (java.lang.Number)retObjectEventHandle;
-                return retObjectEventHandleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventHandle != null ? retObjectEventHandle.getClass() : "null", retObjectEventHandle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEventHandle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEventHandleClass = retObjectEventHandle.getClass();
+                    // java.lang.reflect.Method retObjectEventHandleMethod = retObjectEventHandleClass.getMethod("intValue");
+                    // return (int)retObjectEventHandleMethod.invoke(retObjectEventHandle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEventHandleNumber = java.text.NumberFormat.getInstance().parse(retObjectEventHandle_ToString);
+                    return retObjectEventHandleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEventHandleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEventHandle != null ? retObjectEventHandle.getClass() : "null", retObjectEventHandle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEventHandleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,13 +234,32 @@ public class Overlapped extends NetObject  {
             retObjectOffsetHigh = classInstance.Get("OffsetHigh");
             return (int)retObjectOffsetHigh;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetHighError = true;
             java.lang.String retObjectOffsetHigh_ToString = retObjectOffsetHigh == null ? "null" : retObjectOffsetHigh.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetHighNumber = (java.lang.Number)retObjectOffsetHigh;
-                return retObjectOffsetHighNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffsetHigh != null ? retObjectOffsetHigh.getClass() : "null", retObjectOffsetHigh_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffsetHigh != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetHighClass = retObjectOffsetHigh.getClass();
+                    // java.lang.reflect.Method retObjectOffsetHighMethod = retObjectOffsetHighClass.getMethod("intValue");
+                    // return (int)retObjectOffsetHighMethod.invoke(retObjectOffsetHigh);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetHighNumber = java.text.NumberFormat.getInstance().parse(retObjectOffsetHigh_ToString);
+                    return retObjectOffsetHighNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetHighError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffsetHigh != null ? retObjectOffsetHigh.getClass() : "null", retObjectOffsetHigh_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetHighError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -246,13 +284,32 @@ public class Overlapped extends NetObject  {
             retObjectOffsetLow = classInstance.Get("OffsetLow");
             return (int)retObjectOffsetLow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetLowError = true;
             java.lang.String retObjectOffsetLow_ToString = retObjectOffsetLow == null ? "null" : retObjectOffsetLow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetLowNumber = (java.lang.Number)retObjectOffsetLow;
-                return retObjectOffsetLowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffsetLow != null ? retObjectOffsetLow.getClass() : "null", retObjectOffsetLow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffsetLow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetLowClass = retObjectOffsetLow.getClass();
+                    // java.lang.reflect.Method retObjectOffsetLowMethod = retObjectOffsetLowClass.getMethod("intValue");
+                    // return (int)retObjectOffsetLowMethod.invoke(retObjectOffsetLow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetLowNumber = java.text.NumberFormat.getInstance().parse(retObjectOffsetLow_ToString);
+                    return retObjectOffsetLowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetLowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffsetLow != null ? retObjectOffsetLow.getClass() : "null", retObjectOffsetLow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetLowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

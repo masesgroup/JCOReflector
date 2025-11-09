@@ -279,13 +279,32 @@ public class Thread extends CriticalFinalizerObject  {
             retObjectGetDomainID = classType.Invoke("GetDomainID");
             return (int)retObjectGetDomainID;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDomainIDError = true;
             java.lang.String retObjectGetDomainID_ToString = retObjectGetDomainID == null ? "null" : retObjectGetDomainID.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDomainIDNumber = (java.lang.Number)retObjectGetDomainID;
-                return retObjectGetDomainIDNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDomainID != null ? retObjectGetDomainID.getClass() : "null", retObjectGetDomainID_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDomainID != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDomainIDClass = retObjectGetDomainID.getClass();
+                    // java.lang.reflect.Method retObjectGetDomainIDMethod = retObjectGetDomainIDClass.getMethod("intValue");
+                    // return (int)retObjectGetDomainIDMethod.invoke(retObjectGetDomainID);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDomainIDNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDomainID_ToString);
+                    return retObjectGetDomainIDNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDomainIDError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDomainID != null ? retObjectGetDomainID.getClass() : "null", retObjectGetDomainID_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDomainIDError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -800,13 +819,32 @@ public class Thread extends CriticalFinalizerObject  {
             retObjectManagedThreadId = classInstance.Get("ManagedThreadId");
             return (int)retObjectManagedThreadId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportManagedThreadIdError = true;
             java.lang.String retObjectManagedThreadId_ToString = retObjectManagedThreadId == null ? "null" : retObjectManagedThreadId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectManagedThreadIdNumber = (java.lang.Number)retObjectManagedThreadId;
-                return retObjectManagedThreadIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectManagedThreadId != null ? retObjectManagedThreadId.getClass() : "null", retObjectManagedThreadId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectManagedThreadId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectManagedThreadIdClass = retObjectManagedThreadId.getClass();
+                    // java.lang.reflect.Method retObjectManagedThreadIdMethod = retObjectManagedThreadIdClass.getMethod("intValue");
+                    // return (int)retObjectManagedThreadIdMethod.invoke(retObjectManagedThreadId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectManagedThreadIdNumber = java.text.NumberFormat.getInstance().parse(retObjectManagedThreadId_ToString);
+                    return retObjectManagedThreadIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportManagedThreadIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectManagedThreadId != null ? retObjectManagedThreadId.getClass() : "null", retObjectManagedThreadId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportManagedThreadIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

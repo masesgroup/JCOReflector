@@ -173,13 +173,32 @@ public class WrapPanel extends Panel  {
             retObjectItemHeight = classInstance.Get("ItemHeight");
             return (double)retObjectItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportItemHeightError = true;
             java.lang.String retObjectItemHeight_ToString = retObjectItemHeight == null ? "null" : retObjectItemHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectItemHeightNumber = (java.lang.Number)retObjectItemHeight;
-                return retObjectItemHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectItemHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectItemHeightClass = retObjectItemHeight.getClass();
+                    // java.lang.reflect.Method retObjectItemHeightMethod = retObjectItemHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectItemHeightMethod.invoke(retObjectItemHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectItemHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectItemHeight_ToString);
+                    return retObjectItemHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportItemHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportItemHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,13 +223,32 @@ public class WrapPanel extends Panel  {
             retObjectItemWidth = classInstance.Get("ItemWidth");
             return (double)retObjectItemWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportItemWidthError = true;
             java.lang.String retObjectItemWidth_ToString = retObjectItemWidth == null ? "null" : retObjectItemWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectItemWidthNumber = (java.lang.Number)retObjectItemWidth;
-                return retObjectItemWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectItemWidth != null ? retObjectItemWidth.getClass() : "null", retObjectItemWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectItemWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectItemWidthClass = retObjectItemWidth.getClass();
+                    // java.lang.reflect.Method retObjectItemWidthMethod = retObjectItemWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectItemWidthMethod.invoke(retObjectItemWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectItemWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectItemWidth_ToString);
+                    return retObjectItemWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportItemWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectItemWidth != null ? retObjectItemWidth.getClass() : "null", retObjectItemWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportItemWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

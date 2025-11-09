@@ -205,13 +205,32 @@ public class DropShadowEffect extends Effect  {
             retObjectBlurRadius = classInstance.Get("BlurRadius");
             return (double)retObjectBlurRadius;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBlurRadiusError = true;
             java.lang.String retObjectBlurRadius_ToString = retObjectBlurRadius == null ? "null" : retObjectBlurRadius.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBlurRadiusNumber = (java.lang.Number)retObjectBlurRadius;
-                return retObjectBlurRadiusNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBlurRadius != null ? retObjectBlurRadius.getClass() : "null", retObjectBlurRadius_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBlurRadius != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBlurRadiusClass = retObjectBlurRadius.getClass();
+                    // java.lang.reflect.Method retObjectBlurRadiusMethod = retObjectBlurRadiusClass.getMethod("doubleValue");
+                    // return (double)retObjectBlurRadiusMethod.invoke(retObjectBlurRadius);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBlurRadiusNumber = java.text.NumberFormat.getInstance().parse(retObjectBlurRadius_ToString);
+                    return retObjectBlurRadiusNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBlurRadiusError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBlurRadius != null ? retObjectBlurRadius.getClass() : "null", retObjectBlurRadius_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBlurRadiusError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -236,13 +255,32 @@ public class DropShadowEffect extends Effect  {
             retObjectDirection = classInstance.Get("Direction");
             return (double)retObjectDirection;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDirectionError = true;
             java.lang.String retObjectDirection_ToString = retObjectDirection == null ? "null" : retObjectDirection.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDirectionNumber = (java.lang.Number)retObjectDirection;
-                return retObjectDirectionNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDirection != null ? retObjectDirection.getClass() : "null", retObjectDirection_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDirection != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDirectionClass = retObjectDirection.getClass();
+                    // java.lang.reflect.Method retObjectDirectionMethod = retObjectDirectionClass.getMethod("doubleValue");
+                    // return (double)retObjectDirectionMethod.invoke(retObjectDirection);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDirectionNumber = java.text.NumberFormat.getInstance().parse(retObjectDirection_ToString);
+                    return retObjectDirectionNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDirectionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDirection != null ? retObjectDirection.getClass() : "null", retObjectDirection_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDirectionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -267,13 +305,32 @@ public class DropShadowEffect extends Effect  {
             retObjectOpacity = classInstance.Get("Opacity");
             return (double)retObjectOpacity;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOpacityError = true;
             java.lang.String retObjectOpacity_ToString = retObjectOpacity == null ? "null" : retObjectOpacity.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOpacityNumber = (java.lang.Number)retObjectOpacity;
-                return retObjectOpacityNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOpacity != null ? retObjectOpacity.getClass() : "null", retObjectOpacity_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOpacity != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOpacityClass = retObjectOpacity.getClass();
+                    // java.lang.reflect.Method retObjectOpacityMethod = retObjectOpacityClass.getMethod("doubleValue");
+                    // return (double)retObjectOpacityMethod.invoke(retObjectOpacity);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOpacityNumber = java.text.NumberFormat.getInstance().parse(retObjectOpacity_ToString);
+                    return retObjectOpacityNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOpacityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOpacity != null ? retObjectOpacity.getClass() : "null", retObjectOpacity_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOpacityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -298,13 +355,32 @@ public class DropShadowEffect extends Effect  {
             retObjectShadowDepth = classInstance.Get("ShadowDepth");
             return (double)retObjectShadowDepth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportShadowDepthError = true;
             java.lang.String retObjectShadowDepth_ToString = retObjectShadowDepth == null ? "null" : retObjectShadowDepth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectShadowDepthNumber = (java.lang.Number)retObjectShadowDepth;
-                return retObjectShadowDepthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectShadowDepth != null ? retObjectShadowDepth.getClass() : "null", retObjectShadowDepth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectShadowDepth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectShadowDepthClass = retObjectShadowDepth.getClass();
+                    // java.lang.reflect.Method retObjectShadowDepthMethod = retObjectShadowDepthClass.getMethod("doubleValue");
+                    // return (double)retObjectShadowDepthMethod.invoke(retObjectShadowDepth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectShadowDepthNumber = java.text.NumberFormat.getInstance().parse(retObjectShadowDepth_ToString);
+                    return retObjectShadowDepthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportShadowDepthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectShadowDepth != null ? retObjectShadowDepth.getClass() : "null", retObjectShadowDepth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportShadowDepthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -177,13 +177,32 @@ public class ScrollEventArgs extends RoutedEventArgs  {
             retObjectNewValue = classInstance.Get("NewValue");
             return (double)retObjectNewValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNewValueError = true;
             java.lang.String retObjectNewValue_ToString = retObjectNewValue == null ? "null" : retObjectNewValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNewValueNumber = (java.lang.Number)retObjectNewValue;
-                return retObjectNewValueNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectNewValue != null ? retObjectNewValue.getClass() : "null", retObjectNewValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNewValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNewValueClass = retObjectNewValue.getClass();
+                    // java.lang.reflect.Method retObjectNewValueMethod = retObjectNewValueClass.getMethod("doubleValue");
+                    // return (double)retObjectNewValueMethod.invoke(retObjectNewValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNewValueNumber = java.text.NumberFormat.getInstance().parse(retObjectNewValue_ToString);
+                    return retObjectNewValueNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNewValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNewValue != null ? retObjectNewValue.getClass() : "null", retObjectNewValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNewValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

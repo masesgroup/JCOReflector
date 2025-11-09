@@ -305,13 +305,32 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectANSICodePage = classInstance.Get("ANSICodePage");
             return (int)retObjectANSICodePage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportANSICodePageError = true;
             java.lang.String retObjectANSICodePage_ToString = retObjectANSICodePage == null ? "null" : retObjectANSICodePage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectANSICodePageNumber = (java.lang.Number)retObjectANSICodePage;
-                return retObjectANSICodePageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectANSICodePage != null ? retObjectANSICodePage.getClass() : "null", retObjectANSICodePage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectANSICodePage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectANSICodePageClass = retObjectANSICodePage.getClass();
+                    // java.lang.reflect.Method retObjectANSICodePageMethod = retObjectANSICodePageClass.getMethod("intValue");
+                    // return (int)retObjectANSICodePageMethod.invoke(retObjectANSICodePage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectANSICodePageNumber = java.text.NumberFormat.getInstance().parse(retObjectANSICodePage_ToString);
+                    return retObjectANSICodePageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportANSICodePageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectANSICodePage != null ? retObjectANSICodePage.getClass() : "null", retObjectANSICodePage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportANSICodePageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -326,13 +345,32 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectEBCDICCodePage = classInstance.Get("EBCDICCodePage");
             return (int)retObjectEBCDICCodePage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEBCDICCodePageError = true;
             java.lang.String retObjectEBCDICCodePage_ToString = retObjectEBCDICCodePage == null ? "null" : retObjectEBCDICCodePage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEBCDICCodePageNumber = (java.lang.Number)retObjectEBCDICCodePage;
-                return retObjectEBCDICCodePageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEBCDICCodePage != null ? retObjectEBCDICCodePage.getClass() : "null", retObjectEBCDICCodePage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEBCDICCodePage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEBCDICCodePageClass = retObjectEBCDICCodePage.getClass();
+                    // java.lang.reflect.Method retObjectEBCDICCodePageMethod = retObjectEBCDICCodePageClass.getMethod("intValue");
+                    // return (int)retObjectEBCDICCodePageMethod.invoke(retObjectEBCDICCodePage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEBCDICCodePageNumber = java.text.NumberFormat.getInstance().parse(retObjectEBCDICCodePage_ToString);
+                    return retObjectEBCDICCodePageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEBCDICCodePageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEBCDICCodePage != null ? retObjectEBCDICCodePage.getClass() : "null", retObjectEBCDICCodePage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEBCDICCodePageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -347,13 +385,32 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectLCID = classInstance.Get("LCID");
             return (int)retObjectLCID;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLCIDError = true;
             java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
-                return retObjectLCIDNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLCID != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLCIDClass = retObjectLCID.getClass();
+                    // java.lang.reflect.Method retObjectLCIDMethod = retObjectLCIDClass.getMethod("intValue");
+                    // return (int)retObjectLCIDMethod.invoke(retObjectLCID);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLCIDNumber = java.text.NumberFormat.getInstance().parse(retObjectLCID_ToString);
+                    return retObjectLCIDNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLCIDError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLCIDError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -368,13 +425,32 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectMacCodePage = classInstance.Get("MacCodePage");
             return (int)retObjectMacCodePage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMacCodePageError = true;
             java.lang.String retObjectMacCodePage_ToString = retObjectMacCodePage == null ? "null" : retObjectMacCodePage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMacCodePageNumber = (java.lang.Number)retObjectMacCodePage;
-                return retObjectMacCodePageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMacCodePage != null ? retObjectMacCodePage.getClass() : "null", retObjectMacCodePage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMacCodePage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMacCodePageClass = retObjectMacCodePage.getClass();
+                    // java.lang.reflect.Method retObjectMacCodePageMethod = retObjectMacCodePageClass.getMethod("intValue");
+                    // return (int)retObjectMacCodePageMethod.invoke(retObjectMacCodePage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMacCodePageNumber = java.text.NumberFormat.getInstance().parse(retObjectMacCodePage_ToString);
+                    return retObjectMacCodePageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMacCodePageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMacCodePage != null ? retObjectMacCodePage.getClass() : "null", retObjectMacCodePage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMacCodePageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -389,13 +465,32 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
             retObjectOEMCodePage = classInstance.Get("OEMCodePage");
             return (int)retObjectOEMCodePage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOEMCodePageError = true;
             java.lang.String retObjectOEMCodePage_ToString = retObjectOEMCodePage == null ? "null" : retObjectOEMCodePage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOEMCodePageNumber = (java.lang.Number)retObjectOEMCodePage;
-                return retObjectOEMCodePageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOEMCodePage != null ? retObjectOEMCodePage.getClass() : "null", retObjectOEMCodePage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOEMCodePage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOEMCodePageClass = retObjectOEMCodePage.getClass();
+                    // java.lang.reflect.Method retObjectOEMCodePageMethod = retObjectOEMCodePageClass.getMethod("intValue");
+                    // return (int)retObjectOEMCodePageMethod.invoke(retObjectOEMCodePage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOEMCodePageNumber = java.text.NumberFormat.getInstance().parse(retObjectOEMCodePage_ToString);
+                    return retObjectOEMCodePageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOEMCodePageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOEMCodePage != null ? retObjectOEMCodePage.getClass() : "null", retObjectOEMCodePage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOEMCodePageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

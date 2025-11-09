@@ -166,13 +166,32 @@ public class IXmlLineInfoImplementation extends NetObject implements IXmlLineInf
             retObjectLineNumber = classInstance.Get("LineNumber");
             return (int)retObjectLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLineNumberError = true;
             java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
-                return retObjectLineNumberNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLineNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLineNumberClass = retObjectLineNumber.getClass();
+                    // java.lang.reflect.Method retObjectLineNumberMethod = retObjectLineNumberClass.getMethod("intValue");
+                    // return (int)retObjectLineNumberMethod.invoke(retObjectLineNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLineNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectLineNumber_ToString);
+                    return retObjectLineNumberNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLineNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLineNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,13 +206,32 @@ public class IXmlLineInfoImplementation extends NetObject implements IXmlLineInf
             retObjectLinePosition = classInstance.Get("LinePosition");
             return (int)retObjectLinePosition;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLinePositionError = true;
             java.lang.String retObjectLinePosition_ToString = retObjectLinePosition == null ? "null" : retObjectLinePosition.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLinePositionNumber = (java.lang.Number)retObjectLinePosition;
-                return retObjectLinePositionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinePosition != null ? retObjectLinePosition.getClass() : "null", retObjectLinePosition_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLinePosition != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLinePositionClass = retObjectLinePosition.getClass();
+                    // java.lang.reflect.Method retObjectLinePositionMethod = retObjectLinePositionClass.getMethod("intValue");
+                    // return (int)retObjectLinePositionMethod.invoke(retObjectLinePosition);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLinePositionNumber = java.text.NumberFormat.getInstance().parse(retObjectLinePosition_ToString);
+                    return retObjectLinePositionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLinePositionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLinePosition != null ? retObjectLinePosition.getClass() : "null", retObjectLinePosition_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLinePositionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

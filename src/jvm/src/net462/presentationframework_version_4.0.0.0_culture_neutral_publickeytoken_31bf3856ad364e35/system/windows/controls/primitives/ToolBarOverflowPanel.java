@@ -172,13 +172,32 @@ public class ToolBarOverflowPanel extends Panel  {
             retObjectWrapWidth = classInstance.Get("WrapWidth");
             return (double)retObjectWrapWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWrapWidthError = true;
             java.lang.String retObjectWrapWidth_ToString = retObjectWrapWidth == null ? "null" : retObjectWrapWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWrapWidthNumber = (java.lang.Number)retObjectWrapWidth;
-                return retObjectWrapWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWrapWidth != null ? retObjectWrapWidth.getClass() : "null", retObjectWrapWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWrapWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWrapWidthClass = retObjectWrapWidth.getClass();
+                    // java.lang.reflect.Method retObjectWrapWidthMethod = retObjectWrapWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectWrapWidthMethod.invoke(retObjectWrapWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWrapWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectWrapWidth_ToString);
+                    return retObjectWrapWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWrapWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWrapWidth != null ? retObjectWrapWidth.getClass() : "null", retObjectWrapWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWrapWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

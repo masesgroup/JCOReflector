@@ -468,13 +468,32 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
             retObjectExpandDepth = classInstance.Get("ExpandDepth");
             return (int)retObjectExpandDepth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportExpandDepthError = true;
             java.lang.String retObjectExpandDepth_ToString = retObjectExpandDepth == null ? "null" : retObjectExpandDepth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectExpandDepthNumber = (java.lang.Number)retObjectExpandDepth;
-                return retObjectExpandDepthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExpandDepth != null ? retObjectExpandDepth.getClass() : "null", retObjectExpandDepth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectExpandDepth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectExpandDepthClass = retObjectExpandDepth.getClass();
+                    // java.lang.reflect.Method retObjectExpandDepthMethod = retObjectExpandDepthClass.getMethod("intValue");
+                    // return (int)retObjectExpandDepthMethod.invoke(retObjectExpandDepth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectExpandDepthNumber = java.text.NumberFormat.getInstance().parse(retObjectExpandDepth_ToString);
+                    return retObjectExpandDepthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportExpandDepthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectExpandDepth != null ? retObjectExpandDepth.getClass() : "null", retObjectExpandDepth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportExpandDepthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -499,13 +518,32 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
             retObjectMaxDataBindDepth = classInstance.Get("MaxDataBindDepth");
             return (int)retObjectMaxDataBindDepth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxDataBindDepthError = true;
             java.lang.String retObjectMaxDataBindDepth_ToString = retObjectMaxDataBindDepth == null ? "null" : retObjectMaxDataBindDepth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxDataBindDepthNumber = (java.lang.Number)retObjectMaxDataBindDepth;
-                return retObjectMaxDataBindDepthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDataBindDepth != null ? retObjectMaxDataBindDepth.getClass() : "null", retObjectMaxDataBindDepth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxDataBindDepth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxDataBindDepthClass = retObjectMaxDataBindDepth.getClass();
+                    // java.lang.reflect.Method retObjectMaxDataBindDepthMethod = retObjectMaxDataBindDepthClass.getMethod("intValue");
+                    // return (int)retObjectMaxDataBindDepthMethod.invoke(retObjectMaxDataBindDepth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxDataBindDepthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxDataBindDepth_ToString);
+                    return retObjectMaxDataBindDepthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxDataBindDepthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxDataBindDepth != null ? retObjectMaxDataBindDepth.getClass() : "null", retObjectMaxDataBindDepth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxDataBindDepthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -530,13 +568,32 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
             retObjectNodeIndent = classInstance.Get("NodeIndent");
             return (int)retObjectNodeIndent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNodeIndentError = true;
             java.lang.String retObjectNodeIndent_ToString = retObjectNodeIndent == null ? "null" : retObjectNodeIndent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNodeIndentNumber = (java.lang.Number)retObjectNodeIndent;
-                return retObjectNodeIndentNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNodeIndent != null ? retObjectNodeIndent.getClass() : "null", retObjectNodeIndent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNodeIndent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNodeIndentClass = retObjectNodeIndent.getClass();
+                    // java.lang.reflect.Method retObjectNodeIndentMethod = retObjectNodeIndentClass.getMethod("intValue");
+                    // return (int)retObjectNodeIndentMethod.invoke(retObjectNodeIndent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNodeIndentNumber = java.text.NumberFormat.getInstance().parse(retObjectNodeIndent_ToString);
+                    return retObjectNodeIndentNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNodeIndentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNodeIndent != null ? retObjectNodeIndent.getClass() : "null", retObjectNodeIndent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNodeIndentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

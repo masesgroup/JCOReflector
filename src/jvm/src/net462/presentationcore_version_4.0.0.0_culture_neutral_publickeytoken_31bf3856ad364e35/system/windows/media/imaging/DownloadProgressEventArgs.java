@@ -166,13 +166,32 @@ public class DownloadProgressEventArgs extends EventArgs  {
             retObjectProgress = classInstance.Get("Progress");
             return (int)retObjectProgress;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProgressError = true;
             java.lang.String retObjectProgress_ToString = retObjectProgress == null ? "null" : retObjectProgress.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProgressNumber = (java.lang.Number)retObjectProgress;
-                return retObjectProgressNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProgress != null ? retObjectProgress.getClass() : "null", retObjectProgress_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProgress != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProgressClass = retObjectProgress.getClass();
+                    // java.lang.reflect.Method retObjectProgressMethod = retObjectProgressClass.getMethod("intValue");
+                    // return (int)retObjectProgressMethod.invoke(retObjectProgress);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProgressNumber = java.text.NumberFormat.getInstance().parse(retObjectProgress_ToString);
+                    return retObjectProgressNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProgressError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProgress != null ? retObjectProgress.getClass() : "null", retObjectProgress_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProgressError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

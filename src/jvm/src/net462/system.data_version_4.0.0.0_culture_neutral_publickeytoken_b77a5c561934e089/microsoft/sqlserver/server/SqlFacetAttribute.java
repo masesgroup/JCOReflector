@@ -220,13 +220,32 @@ public class SqlFacetAttribute extends Attribute  {
             retObjectMaxSize = classInstance.Get("MaxSize");
             return (int)retObjectMaxSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxSizeError = true;
             java.lang.String retObjectMaxSize_ToString = retObjectMaxSize == null ? "null" : retObjectMaxSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxSizeNumber = (java.lang.Number)retObjectMaxSize;
-                return retObjectMaxSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null", retObjectMaxSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxSizeClass = retObjectMaxSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxSizeMethod = retObjectMaxSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxSizeMethod.invoke(retObjectMaxSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxSize_ToString);
+                    return retObjectMaxSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null", retObjectMaxSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -251,13 +270,32 @@ public class SqlFacetAttribute extends Attribute  {
             retObjectPrecision = classInstance.Get("Precision");
             return (int)retObjectPrecision;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPrecisionError = true;
             java.lang.String retObjectPrecision_ToString = retObjectPrecision == null ? "null" : retObjectPrecision.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPrecisionNumber = (java.lang.Number)retObjectPrecision;
-                return retObjectPrecisionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPrecision != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPrecisionClass = retObjectPrecision.getClass();
+                    // java.lang.reflect.Method retObjectPrecisionMethod = retObjectPrecisionClass.getMethod("intValue");
+                    // return (int)retObjectPrecisionMethod.invoke(retObjectPrecision);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPrecisionNumber = java.text.NumberFormat.getInstance().parse(retObjectPrecision_ToString);
+                    return retObjectPrecisionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPrecisionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPrecisionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,13 +320,32 @@ public class SqlFacetAttribute extends Attribute  {
             retObjectScale = classInstance.Get("Scale");
             return (int)retObjectScale;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportScaleError = true;
             java.lang.String retObjectScale_ToString = retObjectScale == null ? "null" : retObjectScale.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectScaleNumber = (java.lang.Number)retObjectScale;
-                return retObjectScaleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScale != null ? retObjectScale.getClass() : "null", retObjectScale_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectScale != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectScaleClass = retObjectScale.getClass();
+                    // java.lang.reflect.Method retObjectScaleMethod = retObjectScaleClass.getMethod("intValue");
+                    // return (int)retObjectScaleMethod.invoke(retObjectScale);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectScaleNumber = java.text.NumberFormat.getInstance().parse(retObjectScale_ToString);
+                    return retObjectScaleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportScaleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectScale != null ? retObjectScale.getClass() : "null", retObjectScale_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportScaleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

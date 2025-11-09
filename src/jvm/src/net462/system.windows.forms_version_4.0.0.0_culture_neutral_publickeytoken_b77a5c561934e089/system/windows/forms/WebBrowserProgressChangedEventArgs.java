@@ -176,13 +176,32 @@ public class WebBrowserProgressChangedEventArgs extends EventArgs  {
             retObjectCurrentProgress = classInstance.Get("CurrentProgress");
             return (long)retObjectCurrentProgress;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentProgressError = true;
             java.lang.String retObjectCurrentProgress_ToString = retObjectCurrentProgress == null ? "null" : retObjectCurrentProgress.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentProgressNumber = (java.lang.Number)retObjectCurrentProgress;
-                return retObjectCurrentProgressNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCurrentProgress != null ? retObjectCurrentProgress.getClass() : "null", retObjectCurrentProgress_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentProgress != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentProgressClass = retObjectCurrentProgress.getClass();
+                    // java.lang.reflect.Method retObjectCurrentProgressMethod = retObjectCurrentProgressClass.getMethod("longValue");
+                    // return (long)retObjectCurrentProgressMethod.invoke(retObjectCurrentProgress);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentProgressNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentProgress_ToString);
+                    return retObjectCurrentProgressNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentProgressError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentProgress != null ? retObjectCurrentProgress.getClass() : "null", retObjectCurrentProgress_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentProgressError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class WebBrowserProgressChangedEventArgs extends EventArgs  {
             retObjectMaximumProgress = classInstance.Get("MaximumProgress");
             return (long)retObjectMaximumProgress;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumProgressError = true;
             java.lang.String retObjectMaximumProgress_ToString = retObjectMaximumProgress == null ? "null" : retObjectMaximumProgress.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumProgressNumber = (java.lang.Number)retObjectMaximumProgress;
-                return retObjectMaximumProgressNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumProgress != null ? retObjectMaximumProgress.getClass() : "null", retObjectMaximumProgress_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumProgress != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumProgressClass = retObjectMaximumProgress.getClass();
+                    // java.lang.reflect.Method retObjectMaximumProgressMethod = retObjectMaximumProgressClass.getMethod("longValue");
+                    // return (long)retObjectMaximumProgressMethod.invoke(retObjectMaximumProgress);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumProgressNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumProgress_ToString);
+                    return retObjectMaximumProgressNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumProgressError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumProgress != null ? retObjectMaximumProgress.getClass() : "null", retObjectMaximumProgress_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumProgressError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

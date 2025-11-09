@@ -197,13 +197,32 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
             retObjectKeySpec = classInstance.Get("KeySpec");
             return (int)retObjectKeySpec;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportKeySpecError = true;
             java.lang.String retObjectKeySpec_ToString = retObjectKeySpec == null ? "null" : retObjectKeySpec.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectKeySpecNumber = (java.lang.Number)retObjectKeySpec;
-                return retObjectKeySpecNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeySpec != null ? retObjectKeySpec.getClass() : "null", retObjectKeySpec_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectKeySpec != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectKeySpecClass = retObjectKeySpec.getClass();
+                    // java.lang.reflect.Method retObjectKeySpecMethod = retObjectKeySpecClass.getMethod("intValue");
+                    // return (int)retObjectKeySpecMethod.invoke(retObjectKeySpec);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectKeySpecNumber = java.text.NumberFormat.getInstance().parse(retObjectKeySpec_ToString);
+                    return retObjectKeySpecNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportKeySpecError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectKeySpec != null ? retObjectKeySpec.getClass() : "null", retObjectKeySpec_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportKeySpecError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,13 +247,32 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
             retObjectProviderType = classInstance.Get("ProviderType");
             return (int)retObjectProviderType;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProviderTypeError = true;
             java.lang.String retObjectProviderType_ToString = retObjectProviderType == null ? "null" : retObjectProviderType.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProviderTypeNumber = (java.lang.Number)retObjectProviderType;
-                return retObjectProviderTypeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProviderType != null ? retObjectProviderType.getClass() : "null", retObjectProviderType_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProviderType != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProviderTypeClass = retObjectProviderType.getClass();
+                    // java.lang.reflect.Method retObjectProviderTypeMethod = retObjectProviderTypeClass.getMethod("intValue");
+                    // return (int)retObjectProviderTypeMethod.invoke(retObjectProviderType);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProviderTypeNumber = java.text.NumberFormat.getInstance().parse(retObjectProviderType_ToString);
+                    return retObjectProviderTypeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProviderTypeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProviderType != null ? retObjectProviderType.getClass() : "null", retObjectProviderType_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProviderTypeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -244,13 +244,32 @@ public class RadioButtonList extends ListControl implements system.web.ui.INamin
             retObjectCellPadding = classInstance.Get("CellPadding");
             return (int)retObjectCellPadding;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCellPaddingError = true;
             java.lang.String retObjectCellPadding_ToString = retObjectCellPadding == null ? "null" : retObjectCellPadding.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCellPaddingNumber = (java.lang.Number)retObjectCellPadding;
-                return retObjectCellPaddingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCellPadding != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCellPaddingClass = retObjectCellPadding.getClass();
+                    // java.lang.reflect.Method retObjectCellPaddingMethod = retObjectCellPaddingClass.getMethod("intValue");
+                    // return (int)retObjectCellPaddingMethod.invoke(retObjectCellPadding);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCellPaddingNumber = java.text.NumberFormat.getInstance().parse(retObjectCellPadding_ToString);
+                    return retObjectCellPaddingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCellPaddingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCellPaddingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -275,13 +294,32 @@ public class RadioButtonList extends ListControl implements system.web.ui.INamin
             retObjectCellSpacing = classInstance.Get("CellSpacing");
             return (int)retObjectCellSpacing;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCellSpacingError = true;
             java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
-                return retObjectCellSpacingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCellSpacing != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCellSpacingClass = retObjectCellSpacing.getClass();
+                    // java.lang.reflect.Method retObjectCellSpacingMethod = retObjectCellSpacingClass.getMethod("intValue");
+                    // return (int)retObjectCellSpacingMethod.invoke(retObjectCellSpacing);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCellSpacingNumber = java.text.NumberFormat.getInstance().parse(retObjectCellSpacing_ToString);
+                    return retObjectCellSpacingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCellSpacingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCellSpacingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -306,13 +344,32 @@ public class RadioButtonList extends ListControl implements system.web.ui.INamin
             retObjectRepeatColumns = classInstance.Get("RepeatColumns");
             return (int)retObjectRepeatColumns;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRepeatColumnsError = true;
             java.lang.String retObjectRepeatColumns_ToString = retObjectRepeatColumns == null ? "null" : retObjectRepeatColumns.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRepeatColumnsNumber = (java.lang.Number)retObjectRepeatColumns;
-                return retObjectRepeatColumnsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null", retObjectRepeatColumns_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRepeatColumns != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRepeatColumnsClass = retObjectRepeatColumns.getClass();
+                    // java.lang.reflect.Method retObjectRepeatColumnsMethod = retObjectRepeatColumnsClass.getMethod("intValue");
+                    // return (int)retObjectRepeatColumnsMethod.invoke(retObjectRepeatColumns);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRepeatColumnsNumber = java.text.NumberFormat.getInstance().parse(retObjectRepeatColumns_ToString);
+                    return retObjectRepeatColumnsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRepeatColumnsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null", retObjectRepeatColumns_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRepeatColumnsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

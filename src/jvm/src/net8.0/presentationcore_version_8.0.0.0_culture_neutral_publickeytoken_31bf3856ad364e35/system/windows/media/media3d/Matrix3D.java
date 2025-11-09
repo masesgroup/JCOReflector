@@ -523,13 +523,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectDeterminant = classInstance.Get("Determinant");
             return (double)retObjectDeterminant;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDeterminantError = true;
             java.lang.String retObjectDeterminant_ToString = retObjectDeterminant == null ? "null" : retObjectDeterminant.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDeterminantNumber = (java.lang.Number)retObjectDeterminant;
-                return retObjectDeterminantNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDeterminant != null ? retObjectDeterminant.getClass() : "null", retObjectDeterminant_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDeterminant != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDeterminantClass = retObjectDeterminant.getClass();
+                    // java.lang.reflect.Method retObjectDeterminantMethod = retObjectDeterminantClass.getMethod("doubleValue");
+                    // return (double)retObjectDeterminantMethod.invoke(retObjectDeterminant);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDeterminantNumber = java.text.NumberFormat.getInstance().parse(retObjectDeterminant_ToString);
+                    return retObjectDeterminantNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDeterminantError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDeterminant != null ? retObjectDeterminant.getClass() : "null", retObjectDeterminant_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDeterminantError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -544,13 +563,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM11 = classInstance.Get("M11");
             return (double)retObjectM11;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM11Error = true;
             java.lang.String retObjectM11_ToString = retObjectM11 == null ? "null" : retObjectM11.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM11Number = (java.lang.Number)retObjectM11;
-                return retObjectM11Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM11 != null ? retObjectM11.getClass() : "null", retObjectM11_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM11 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM11Class = retObjectM11.getClass();
+                    // java.lang.reflect.Method retObjectM11Method = retObjectM11Class.getMethod("doubleValue");
+                    // return (double)retObjectM11Method.invoke(retObjectM11);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM11Number = java.text.NumberFormat.getInstance().parse(retObjectM11_ToString);
+                    return retObjectM11Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM11Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM11 != null ? retObjectM11.getClass() : "null", retObjectM11_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM11Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -575,13 +613,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM12 = classInstance.Get("M12");
             return (double)retObjectM12;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM12Error = true;
             java.lang.String retObjectM12_ToString = retObjectM12 == null ? "null" : retObjectM12.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM12Number = (java.lang.Number)retObjectM12;
-                return retObjectM12Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM12 != null ? retObjectM12.getClass() : "null", retObjectM12_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM12 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM12Class = retObjectM12.getClass();
+                    // java.lang.reflect.Method retObjectM12Method = retObjectM12Class.getMethod("doubleValue");
+                    // return (double)retObjectM12Method.invoke(retObjectM12);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM12Number = java.text.NumberFormat.getInstance().parse(retObjectM12_ToString);
+                    return retObjectM12Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM12Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM12 != null ? retObjectM12.getClass() : "null", retObjectM12_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM12Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -606,13 +663,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM13 = classInstance.Get("M13");
             return (double)retObjectM13;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM13Error = true;
             java.lang.String retObjectM13_ToString = retObjectM13 == null ? "null" : retObjectM13.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM13Number = (java.lang.Number)retObjectM13;
-                return retObjectM13Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM13 != null ? retObjectM13.getClass() : "null", retObjectM13_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM13 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM13Class = retObjectM13.getClass();
+                    // java.lang.reflect.Method retObjectM13Method = retObjectM13Class.getMethod("doubleValue");
+                    // return (double)retObjectM13Method.invoke(retObjectM13);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM13Number = java.text.NumberFormat.getInstance().parse(retObjectM13_ToString);
+                    return retObjectM13Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM13Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM13 != null ? retObjectM13.getClass() : "null", retObjectM13_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM13Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -637,13 +713,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM14 = classInstance.Get("M14");
             return (double)retObjectM14;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM14Error = true;
             java.lang.String retObjectM14_ToString = retObjectM14 == null ? "null" : retObjectM14.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM14Number = (java.lang.Number)retObjectM14;
-                return retObjectM14Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM14 != null ? retObjectM14.getClass() : "null", retObjectM14_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM14 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM14Class = retObjectM14.getClass();
+                    // java.lang.reflect.Method retObjectM14Method = retObjectM14Class.getMethod("doubleValue");
+                    // return (double)retObjectM14Method.invoke(retObjectM14);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM14Number = java.text.NumberFormat.getInstance().parse(retObjectM14_ToString);
+                    return retObjectM14Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM14Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM14 != null ? retObjectM14.getClass() : "null", retObjectM14_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM14Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -668,13 +763,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM21 = classInstance.Get("M21");
             return (double)retObjectM21;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM21Error = true;
             java.lang.String retObjectM21_ToString = retObjectM21 == null ? "null" : retObjectM21.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM21Number = (java.lang.Number)retObjectM21;
-                return retObjectM21Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM21 != null ? retObjectM21.getClass() : "null", retObjectM21_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM21 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM21Class = retObjectM21.getClass();
+                    // java.lang.reflect.Method retObjectM21Method = retObjectM21Class.getMethod("doubleValue");
+                    // return (double)retObjectM21Method.invoke(retObjectM21);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM21Number = java.text.NumberFormat.getInstance().parse(retObjectM21_ToString);
+                    return retObjectM21Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM21Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM21 != null ? retObjectM21.getClass() : "null", retObjectM21_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM21Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -699,13 +813,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM22 = classInstance.Get("M22");
             return (double)retObjectM22;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM22Error = true;
             java.lang.String retObjectM22_ToString = retObjectM22 == null ? "null" : retObjectM22.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM22Number = (java.lang.Number)retObjectM22;
-                return retObjectM22Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM22 != null ? retObjectM22.getClass() : "null", retObjectM22_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM22 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM22Class = retObjectM22.getClass();
+                    // java.lang.reflect.Method retObjectM22Method = retObjectM22Class.getMethod("doubleValue");
+                    // return (double)retObjectM22Method.invoke(retObjectM22);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM22Number = java.text.NumberFormat.getInstance().parse(retObjectM22_ToString);
+                    return retObjectM22Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM22Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM22 != null ? retObjectM22.getClass() : "null", retObjectM22_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM22Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -730,13 +863,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM23 = classInstance.Get("M23");
             return (double)retObjectM23;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM23Error = true;
             java.lang.String retObjectM23_ToString = retObjectM23 == null ? "null" : retObjectM23.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM23Number = (java.lang.Number)retObjectM23;
-                return retObjectM23Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM23 != null ? retObjectM23.getClass() : "null", retObjectM23_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM23 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM23Class = retObjectM23.getClass();
+                    // java.lang.reflect.Method retObjectM23Method = retObjectM23Class.getMethod("doubleValue");
+                    // return (double)retObjectM23Method.invoke(retObjectM23);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM23Number = java.text.NumberFormat.getInstance().parse(retObjectM23_ToString);
+                    return retObjectM23Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM23Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM23 != null ? retObjectM23.getClass() : "null", retObjectM23_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM23Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -761,13 +913,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM24 = classInstance.Get("M24");
             return (double)retObjectM24;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM24Error = true;
             java.lang.String retObjectM24_ToString = retObjectM24 == null ? "null" : retObjectM24.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM24Number = (java.lang.Number)retObjectM24;
-                return retObjectM24Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM24 != null ? retObjectM24.getClass() : "null", retObjectM24_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM24 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM24Class = retObjectM24.getClass();
+                    // java.lang.reflect.Method retObjectM24Method = retObjectM24Class.getMethod("doubleValue");
+                    // return (double)retObjectM24Method.invoke(retObjectM24);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM24Number = java.text.NumberFormat.getInstance().parse(retObjectM24_ToString);
+                    return retObjectM24Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM24Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM24 != null ? retObjectM24.getClass() : "null", retObjectM24_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM24Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -792,13 +963,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM31 = classInstance.Get("M31");
             return (double)retObjectM31;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM31Error = true;
             java.lang.String retObjectM31_ToString = retObjectM31 == null ? "null" : retObjectM31.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM31Number = (java.lang.Number)retObjectM31;
-                return retObjectM31Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM31 != null ? retObjectM31.getClass() : "null", retObjectM31_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM31 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM31Class = retObjectM31.getClass();
+                    // java.lang.reflect.Method retObjectM31Method = retObjectM31Class.getMethod("doubleValue");
+                    // return (double)retObjectM31Method.invoke(retObjectM31);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM31Number = java.text.NumberFormat.getInstance().parse(retObjectM31_ToString);
+                    return retObjectM31Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM31Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM31 != null ? retObjectM31.getClass() : "null", retObjectM31_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM31Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -823,13 +1013,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM32 = classInstance.Get("M32");
             return (double)retObjectM32;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM32Error = true;
             java.lang.String retObjectM32_ToString = retObjectM32 == null ? "null" : retObjectM32.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM32Number = (java.lang.Number)retObjectM32;
-                return retObjectM32Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM32 != null ? retObjectM32.getClass() : "null", retObjectM32_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM32 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM32Class = retObjectM32.getClass();
+                    // java.lang.reflect.Method retObjectM32Method = retObjectM32Class.getMethod("doubleValue");
+                    // return (double)retObjectM32Method.invoke(retObjectM32);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM32Number = java.text.NumberFormat.getInstance().parse(retObjectM32_ToString);
+                    return retObjectM32Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM32Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM32 != null ? retObjectM32.getClass() : "null", retObjectM32_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM32Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -854,13 +1063,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM33 = classInstance.Get("M33");
             return (double)retObjectM33;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM33Error = true;
             java.lang.String retObjectM33_ToString = retObjectM33 == null ? "null" : retObjectM33.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM33Number = (java.lang.Number)retObjectM33;
-                return retObjectM33Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM33 != null ? retObjectM33.getClass() : "null", retObjectM33_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM33 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM33Class = retObjectM33.getClass();
+                    // java.lang.reflect.Method retObjectM33Method = retObjectM33Class.getMethod("doubleValue");
+                    // return (double)retObjectM33Method.invoke(retObjectM33);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM33Number = java.text.NumberFormat.getInstance().parse(retObjectM33_ToString);
+                    return retObjectM33Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM33Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM33 != null ? retObjectM33.getClass() : "null", retObjectM33_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM33Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -885,13 +1113,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM34 = classInstance.Get("M34");
             return (double)retObjectM34;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM34Error = true;
             java.lang.String retObjectM34_ToString = retObjectM34 == null ? "null" : retObjectM34.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM34Number = (java.lang.Number)retObjectM34;
-                return retObjectM34Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM34 != null ? retObjectM34.getClass() : "null", retObjectM34_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM34 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM34Class = retObjectM34.getClass();
+                    // java.lang.reflect.Method retObjectM34Method = retObjectM34Class.getMethod("doubleValue");
+                    // return (double)retObjectM34Method.invoke(retObjectM34);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM34Number = java.text.NumberFormat.getInstance().parse(retObjectM34_ToString);
+                    return retObjectM34Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM34Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM34 != null ? retObjectM34.getClass() : "null", retObjectM34_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM34Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -916,13 +1163,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectM44 = classInstance.Get("M44");
             return (double)retObjectM44;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportM44Error = true;
             java.lang.String retObjectM44_ToString = retObjectM44 == null ? "null" : retObjectM44.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectM44Number = (java.lang.Number)retObjectM44;
-                return retObjectM44Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectM44 != null ? retObjectM44.getClass() : "null", retObjectM44_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectM44 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectM44Class = retObjectM44.getClass();
+                    // java.lang.reflect.Method retObjectM44Method = retObjectM44Class.getMethod("doubleValue");
+                    // return (double)retObjectM44Method.invoke(retObjectM44);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectM44Number = java.text.NumberFormat.getInstance().parse(retObjectM44_ToString);
+                    return retObjectM44Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportM44Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectM44 != null ? retObjectM44.getClass() : "null", retObjectM44_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportM44Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -947,13 +1213,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectOffsetX = classInstance.Get("OffsetX");
             return (double)retObjectOffsetX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetXError = true;
             java.lang.String retObjectOffsetX_ToString = retObjectOffsetX == null ? "null" : retObjectOffsetX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetXNumber = (java.lang.Number)retObjectOffsetX;
-                return retObjectOffsetXNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null", retObjectOffsetX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffsetX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetXClass = retObjectOffsetX.getClass();
+                    // java.lang.reflect.Method retObjectOffsetXMethod = retObjectOffsetXClass.getMethod("doubleValue");
+                    // return (double)retObjectOffsetXMethod.invoke(retObjectOffsetX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetXNumber = java.text.NumberFormat.getInstance().parse(retObjectOffsetX_ToString);
+                    return retObjectOffsetXNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null", retObjectOffsetX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -978,13 +1263,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectOffsetY = classInstance.Get("OffsetY");
             return (double)retObjectOffsetY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetYError = true;
             java.lang.String retObjectOffsetY_ToString = retObjectOffsetY == null ? "null" : retObjectOffsetY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetYNumber = (java.lang.Number)retObjectOffsetY;
-                return retObjectOffsetYNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null", retObjectOffsetY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffsetY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetYClass = retObjectOffsetY.getClass();
+                    // java.lang.reflect.Method retObjectOffsetYMethod = retObjectOffsetYClass.getMethod("doubleValue");
+                    // return (double)retObjectOffsetYMethod.invoke(retObjectOffsetY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetYNumber = java.text.NumberFormat.getInstance().parse(retObjectOffsetY_ToString);
+                    return retObjectOffsetYNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null", retObjectOffsetY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1009,13 +1313,32 @@ public class Matrix3D extends ValueType implements system.IFormattable {
             retObjectOffsetZ = classInstance.Get("OffsetZ");
             return (double)retObjectOffsetZ;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetZError = true;
             java.lang.String retObjectOffsetZ_ToString = retObjectOffsetZ == null ? "null" : retObjectOffsetZ.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetZNumber = (java.lang.Number)retObjectOffsetZ;
-                return retObjectOffsetZNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetZ != null ? retObjectOffsetZ.getClass() : "null", retObjectOffsetZ_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffsetZ != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetZClass = retObjectOffsetZ.getClass();
+                    // java.lang.reflect.Method retObjectOffsetZMethod = retObjectOffsetZClass.getMethod("doubleValue");
+                    // return (double)retObjectOffsetZMethod.invoke(retObjectOffsetZ);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetZNumber = java.text.NumberFormat.getInstance().parse(retObjectOffsetZ_ToString);
+                    return retObjectOffsetZNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetZError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffsetZ != null ? retObjectOffsetZ.getClass() : "null", retObjectOffsetZ_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetZError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

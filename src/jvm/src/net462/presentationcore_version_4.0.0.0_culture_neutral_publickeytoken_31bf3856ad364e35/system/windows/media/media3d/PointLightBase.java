@@ -196,13 +196,32 @@ public class PointLightBase extends Light  {
             retObjectConstantAttenuation = classInstance.Get("ConstantAttenuation");
             return (double)retObjectConstantAttenuation;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportConstantAttenuationError = true;
             java.lang.String retObjectConstantAttenuation_ToString = retObjectConstantAttenuation == null ? "null" : retObjectConstantAttenuation.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectConstantAttenuationNumber = (java.lang.Number)retObjectConstantAttenuation;
-                return retObjectConstantAttenuationNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectConstantAttenuation != null ? retObjectConstantAttenuation.getClass() : "null", retObjectConstantAttenuation_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectConstantAttenuation != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectConstantAttenuationClass = retObjectConstantAttenuation.getClass();
+                    // java.lang.reflect.Method retObjectConstantAttenuationMethod = retObjectConstantAttenuationClass.getMethod("doubleValue");
+                    // return (double)retObjectConstantAttenuationMethod.invoke(retObjectConstantAttenuation);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectConstantAttenuationNumber = java.text.NumberFormat.getInstance().parse(retObjectConstantAttenuation_ToString);
+                    return retObjectConstantAttenuationNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportConstantAttenuationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectConstantAttenuation != null ? retObjectConstantAttenuation.getClass() : "null", retObjectConstantAttenuation_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportConstantAttenuationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -227,13 +246,32 @@ public class PointLightBase extends Light  {
             retObjectLinearAttenuation = classInstance.Get("LinearAttenuation");
             return (double)retObjectLinearAttenuation;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLinearAttenuationError = true;
             java.lang.String retObjectLinearAttenuation_ToString = retObjectLinearAttenuation == null ? "null" : retObjectLinearAttenuation.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLinearAttenuationNumber = (java.lang.Number)retObjectLinearAttenuation;
-                return retObjectLinearAttenuationNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLinearAttenuation != null ? retObjectLinearAttenuation.getClass() : "null", retObjectLinearAttenuation_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLinearAttenuation != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLinearAttenuationClass = retObjectLinearAttenuation.getClass();
+                    // java.lang.reflect.Method retObjectLinearAttenuationMethod = retObjectLinearAttenuationClass.getMethod("doubleValue");
+                    // return (double)retObjectLinearAttenuationMethod.invoke(retObjectLinearAttenuation);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLinearAttenuationNumber = java.text.NumberFormat.getInstance().parse(retObjectLinearAttenuation_ToString);
+                    return retObjectLinearAttenuationNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLinearAttenuationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLinearAttenuation != null ? retObjectLinearAttenuation.getClass() : "null", retObjectLinearAttenuation_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLinearAttenuationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -258,13 +296,32 @@ public class PointLightBase extends Light  {
             retObjectQuadraticAttenuation = classInstance.Get("QuadraticAttenuation");
             return (double)retObjectQuadraticAttenuation;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportQuadraticAttenuationError = true;
             java.lang.String retObjectQuadraticAttenuation_ToString = retObjectQuadraticAttenuation == null ? "null" : retObjectQuadraticAttenuation.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectQuadraticAttenuationNumber = (java.lang.Number)retObjectQuadraticAttenuation;
-                return retObjectQuadraticAttenuationNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectQuadraticAttenuation != null ? retObjectQuadraticAttenuation.getClass() : "null", retObjectQuadraticAttenuation_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectQuadraticAttenuation != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectQuadraticAttenuationClass = retObjectQuadraticAttenuation.getClass();
+                    // java.lang.reflect.Method retObjectQuadraticAttenuationMethod = retObjectQuadraticAttenuationClass.getMethod("doubleValue");
+                    // return (double)retObjectQuadraticAttenuationMethod.invoke(retObjectQuadraticAttenuation);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectQuadraticAttenuationNumber = java.text.NumberFormat.getInstance().parse(retObjectQuadraticAttenuation_ToString);
+                    return retObjectQuadraticAttenuationNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportQuadraticAttenuationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectQuadraticAttenuation != null ? retObjectQuadraticAttenuation.getClass() : "null", retObjectQuadraticAttenuation_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportQuadraticAttenuationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -289,13 +346,32 @@ public class PointLightBase extends Light  {
             retObjectRange = classInstance.Get("Range");
             return (double)retObjectRange;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRangeError = true;
             java.lang.String retObjectRange_ToString = retObjectRange == null ? "null" : retObjectRange.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRangeNumber = (java.lang.Number)retObjectRange;
-                return retObjectRangeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRange != null ? retObjectRange.getClass() : "null", retObjectRange_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRange != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRangeClass = retObjectRange.getClass();
+                    // java.lang.reflect.Method retObjectRangeMethod = retObjectRangeClass.getMethod("doubleValue");
+                    // return (double)retObjectRangeMethod.invoke(retObjectRange);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRangeNumber = java.text.NumberFormat.getInstance().parse(retObjectRange_ToString);
+                    return retObjectRangeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRangeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRange != null ? retObjectRange.getClass() : "null", retObjectRange_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRangeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

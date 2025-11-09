@@ -1001,13 +1001,32 @@ public class MetadataReader extends NetObject  {
             retObjectMetadataLength = classInstance.Get("MetadataLength");
             return (int)retObjectMetadataLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMetadataLengthError = true;
             java.lang.String retObjectMetadataLength_ToString = retObjectMetadataLength == null ? "null" : retObjectMetadataLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMetadataLengthNumber = (java.lang.Number)retObjectMetadataLength;
-                return retObjectMetadataLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetadataLength != null ? retObjectMetadataLength.getClass() : "null", retObjectMetadataLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMetadataLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMetadataLengthClass = retObjectMetadataLength.getClass();
+                    // java.lang.reflect.Method retObjectMetadataLengthMethod = retObjectMetadataLengthClass.getMethod("intValue");
+                    // return (int)retObjectMetadataLengthMethod.invoke(retObjectMetadataLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMetadataLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMetadataLength_ToString);
+                    return retObjectMetadataLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMetadataLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMetadataLength != null ? retObjectMetadataLength.getClass() : "null", retObjectMetadataLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMetadataLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

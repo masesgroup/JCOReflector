@@ -166,13 +166,32 @@ public class QuicStreamCapacityChangedArgs extends ValueType  {
             retObjectBidirectionalIncrement = classInstance.Get("BidirectionalIncrement");
             return (int)retObjectBidirectionalIncrement;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBidirectionalIncrementError = true;
             java.lang.String retObjectBidirectionalIncrement_ToString = retObjectBidirectionalIncrement == null ? "null" : retObjectBidirectionalIncrement.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBidirectionalIncrementNumber = (java.lang.Number)retObjectBidirectionalIncrement;
-                return retObjectBidirectionalIncrementNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBidirectionalIncrement != null ? retObjectBidirectionalIncrement.getClass() : "null", retObjectBidirectionalIncrement_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBidirectionalIncrement != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBidirectionalIncrementClass = retObjectBidirectionalIncrement.getClass();
+                    // java.lang.reflect.Method retObjectBidirectionalIncrementMethod = retObjectBidirectionalIncrementClass.getMethod("intValue");
+                    // return (int)retObjectBidirectionalIncrementMethod.invoke(retObjectBidirectionalIncrement);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBidirectionalIncrementNumber = java.text.NumberFormat.getInstance().parse(retObjectBidirectionalIncrement_ToString);
+                    return retObjectBidirectionalIncrementNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBidirectionalIncrementError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBidirectionalIncrement != null ? retObjectBidirectionalIncrement.getClass() : "null", retObjectBidirectionalIncrement_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBidirectionalIncrementError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class QuicStreamCapacityChangedArgs extends ValueType  {
             retObjectUnidirectionalIncrement = classInstance.Get("UnidirectionalIncrement");
             return (int)retObjectUnidirectionalIncrement;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUnidirectionalIncrementError = true;
             java.lang.String retObjectUnidirectionalIncrement_ToString = retObjectUnidirectionalIncrement == null ? "null" : retObjectUnidirectionalIncrement.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUnidirectionalIncrementNumber = (java.lang.Number)retObjectUnidirectionalIncrement;
-                return retObjectUnidirectionalIncrementNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUnidirectionalIncrement != null ? retObjectUnidirectionalIncrement.getClass() : "null", retObjectUnidirectionalIncrement_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUnidirectionalIncrement != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUnidirectionalIncrementClass = retObjectUnidirectionalIncrement.getClass();
+                    // java.lang.reflect.Method retObjectUnidirectionalIncrementMethod = retObjectUnidirectionalIncrementClass.getMethod("intValue");
+                    // return (int)retObjectUnidirectionalIncrementMethod.invoke(retObjectUnidirectionalIncrement);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUnidirectionalIncrementNumber = java.text.NumberFormat.getInstance().parse(retObjectUnidirectionalIncrement_ToString);
+                    return retObjectUnidirectionalIncrementNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUnidirectionalIncrementError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUnidirectionalIncrement != null ? retObjectUnidirectionalIncrement.getClass() : "null", retObjectUnidirectionalIncrement_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUnidirectionalIncrementError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

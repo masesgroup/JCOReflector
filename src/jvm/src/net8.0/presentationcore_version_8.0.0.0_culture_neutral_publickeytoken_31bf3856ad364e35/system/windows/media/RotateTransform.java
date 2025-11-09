@@ -224,13 +224,32 @@ public class RotateTransform extends Transform  {
             retObjectAngle = classInstance.Get("Angle");
             return (double)retObjectAngle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAngleError = true;
             java.lang.String retObjectAngle_ToString = retObjectAngle == null ? "null" : retObjectAngle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAngleNumber = (java.lang.Number)retObjectAngle;
-                return retObjectAngleNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAngle != null ? retObjectAngle.getClass() : "null", retObjectAngle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAngle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAngleClass = retObjectAngle.getClass();
+                    // java.lang.reflect.Method retObjectAngleMethod = retObjectAngleClass.getMethod("doubleValue");
+                    // return (double)retObjectAngleMethod.invoke(retObjectAngle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAngleNumber = java.text.NumberFormat.getInstance().parse(retObjectAngle_ToString);
+                    return retObjectAngleNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAngleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAngle != null ? retObjectAngle.getClass() : "null", retObjectAngle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAngleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -255,13 +274,32 @@ public class RotateTransform extends Transform  {
             retObjectCenterX = classInstance.Get("CenterX");
             return (double)retObjectCenterX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCenterXError = true;
             java.lang.String retObjectCenterX_ToString = retObjectCenterX == null ? "null" : retObjectCenterX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCenterXNumber = (java.lang.Number)retObjectCenterX;
-                return retObjectCenterXNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterX != null ? retObjectCenterX.getClass() : "null", retObjectCenterX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCenterX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCenterXClass = retObjectCenterX.getClass();
+                    // java.lang.reflect.Method retObjectCenterXMethod = retObjectCenterXClass.getMethod("doubleValue");
+                    // return (double)retObjectCenterXMethod.invoke(retObjectCenterX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCenterXNumber = java.text.NumberFormat.getInstance().parse(retObjectCenterX_ToString);
+                    return retObjectCenterXNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCenterXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCenterX != null ? retObjectCenterX.getClass() : "null", retObjectCenterX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCenterXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -286,13 +324,32 @@ public class RotateTransform extends Transform  {
             retObjectCenterY = classInstance.Get("CenterY");
             return (double)retObjectCenterY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCenterYError = true;
             java.lang.String retObjectCenterY_ToString = retObjectCenterY == null ? "null" : retObjectCenterY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCenterYNumber = (java.lang.Number)retObjectCenterY;
-                return retObjectCenterYNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCenterY != null ? retObjectCenterY.getClass() : "null", retObjectCenterY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCenterY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCenterYClass = retObjectCenterY.getClass();
+                    // java.lang.reflect.Method retObjectCenterYMethod = retObjectCenterYClass.getMethod("doubleValue");
+                    // return (double)retObjectCenterYMethod.invoke(retObjectCenterY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCenterYNumber = java.text.NumberFormat.getInstance().parse(retObjectCenterY_ToString);
+                    return retObjectCenterYNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCenterYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCenterY != null ? retObjectCenterY.getClass() : "null", retObjectCenterY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCenterYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

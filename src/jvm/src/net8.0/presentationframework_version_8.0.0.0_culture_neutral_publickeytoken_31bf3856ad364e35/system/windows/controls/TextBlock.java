@@ -247,13 +247,32 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
             retObjectGetBaselineOffset = classType.Invoke("GetBaselineOffset", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetBaselineOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetBaselineOffsetError = true;
             java.lang.String retObjectGetBaselineOffset_ToString = retObjectGetBaselineOffset == null ? "null" : retObjectGetBaselineOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetBaselineOffsetNumber = (java.lang.Number)retObjectGetBaselineOffset;
-                return retObjectGetBaselineOffsetNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetBaselineOffset != null ? retObjectGetBaselineOffset.getClass() : "null", retObjectGetBaselineOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetBaselineOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetBaselineOffsetClass = retObjectGetBaselineOffset.getClass();
+                    // java.lang.reflect.Method retObjectGetBaselineOffsetMethod = retObjectGetBaselineOffsetClass.getMethod("doubleValue");
+                    // return (double)retObjectGetBaselineOffsetMethod.invoke(retObjectGetBaselineOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetBaselineOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectGetBaselineOffset_ToString);
+                    return retObjectGetBaselineOffsetNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetBaselineOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetBaselineOffset != null ? retObjectGetBaselineOffset.getClass() : "null", retObjectGetBaselineOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetBaselineOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,13 +287,32 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
             retObjectGetFontSize = classType.Invoke("GetFontSize", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetFontSizeError = true;
             java.lang.String retObjectGetFontSize_ToString = retObjectGetFontSize == null ? "null" : retObjectGetFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetFontSizeNumber = (java.lang.Number)retObjectGetFontSize;
-                return retObjectGetFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetFontSize != null ? retObjectGetFontSize.getClass() : "null", retObjectGetFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetFontSizeClass = retObjectGetFontSize.getClass();
+                    // java.lang.reflect.Method retObjectGetFontSizeMethod = retObjectGetFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectGetFontSizeMethod.invoke(retObjectGetFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectGetFontSize_ToString);
+                    return retObjectGetFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetFontSize != null ? retObjectGetFontSize.getClass() : "null", retObjectGetFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -289,13 +327,32 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
             retObjectGetLineHeight = classType.Invoke("GetLineHeight", element == null ? null : element.getJCOInstance());
             return (double)retObjectGetLineHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetLineHeightError = true;
             java.lang.String retObjectGetLineHeight_ToString = retObjectGetLineHeight == null ? "null" : retObjectGetLineHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetLineHeightNumber = (java.lang.Number)retObjectGetLineHeight;
-                return retObjectGetLineHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetLineHeight != null ? retObjectGetLineHeight.getClass() : "null", retObjectGetLineHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetLineHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetLineHeightClass = retObjectGetLineHeight.getClass();
+                    // java.lang.reflect.Method retObjectGetLineHeightMethod = retObjectGetLineHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectGetLineHeightMethod.invoke(retObjectGetLineHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetLineHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectGetLineHeight_ToString);
+                    return retObjectGetLineHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetLineHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetLineHeight != null ? retObjectGetLineHeight.getClass() : "null", retObjectGetLineHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetLineHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -603,13 +660,32 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
             retObjectBaselineOffset = classInstance.Get("BaselineOffset");
             return (double)retObjectBaselineOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBaselineOffsetError = true;
             java.lang.String retObjectBaselineOffset_ToString = retObjectBaselineOffset == null ? "null" : retObjectBaselineOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBaselineOffsetNumber = (java.lang.Number)retObjectBaselineOffset;
-                return retObjectBaselineOffsetNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBaselineOffset != null ? retObjectBaselineOffset.getClass() : "null", retObjectBaselineOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBaselineOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBaselineOffsetClass = retObjectBaselineOffset.getClass();
+                    // java.lang.reflect.Method retObjectBaselineOffsetMethod = retObjectBaselineOffsetClass.getMethod("doubleValue");
+                    // return (double)retObjectBaselineOffsetMethod.invoke(retObjectBaselineOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBaselineOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectBaselineOffset_ToString);
+                    return retObjectBaselineOffsetNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBaselineOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBaselineOffset != null ? retObjectBaselineOffset.getClass() : "null", retObjectBaselineOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBaselineOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -634,13 +710,32 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
             retObjectFontSize = classInstance.Get("FontSize");
             return (double)retObjectFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFontSizeError = true;
             java.lang.String retObjectFontSize_ToString = retObjectFontSize == null ? "null" : retObjectFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFontSizeNumber = (java.lang.Number)retObjectFontSize;
-                return retObjectFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFontSizeClass = retObjectFontSize.getClass();
+                    // java.lang.reflect.Method retObjectFontSizeMethod = retObjectFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectFontSizeMethod.invoke(retObjectFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectFontSize_ToString);
+                    return retObjectFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -665,13 +760,32 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
             retObjectLineHeight = classInstance.Get("LineHeight");
             return (double)retObjectLineHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLineHeightError = true;
             java.lang.String retObjectLineHeight_ToString = retObjectLineHeight == null ? "null" : retObjectLineHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLineHeightNumber = (java.lang.Number)retObjectLineHeight;
-                return retObjectLineHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLineHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLineHeightClass = retObjectLineHeight.getClass();
+                    // java.lang.reflect.Method retObjectLineHeightMethod = retObjectLineHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectLineHeightMethod.invoke(retObjectLineHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLineHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectLineHeight_ToString);
+                    return retObjectLineHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLineHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLineHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

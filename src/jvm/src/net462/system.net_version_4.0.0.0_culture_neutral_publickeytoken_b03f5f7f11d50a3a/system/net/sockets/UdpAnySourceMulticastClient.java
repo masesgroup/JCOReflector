@@ -176,13 +176,32 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
             retObjectEndReceiveFromGroup = classInstance.Invoke("EndReceiveFromGroup", result == null ? null : result.getJCOInstance(), source.getJCRefOut());
             return (int)retObjectEndReceiveFromGroup;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndReceiveFromGroupError = true;
             java.lang.String retObjectEndReceiveFromGroup_ToString = retObjectEndReceiveFromGroup == null ? "null" : retObjectEndReceiveFromGroup.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndReceiveFromGroupNumber = (java.lang.Number)retObjectEndReceiveFromGroup;
-                return retObjectEndReceiveFromGroupNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceiveFromGroup != null ? retObjectEndReceiveFromGroup.getClass() : "null", retObjectEndReceiveFromGroup_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndReceiveFromGroup != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndReceiveFromGroupClass = retObjectEndReceiveFromGroup.getClass();
+                    // java.lang.reflect.Method retObjectEndReceiveFromGroupMethod = retObjectEndReceiveFromGroupClass.getMethod("intValue");
+                    // return (int)retObjectEndReceiveFromGroupMethod.invoke(retObjectEndReceiveFromGroup);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndReceiveFromGroupNumber = java.text.NumberFormat.getInstance().parse(retObjectEndReceiveFromGroup_ToString);
+                    return retObjectEndReceiveFromGroupNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndReceiveFromGroupError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndReceiveFromGroup != null ? retObjectEndReceiveFromGroup.getClass() : "null", retObjectEndReceiveFromGroup_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndReceiveFromGroupError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -403,13 +422,32 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
             retObjectReceiveBufferSize = classInstance.Get("ReceiveBufferSize");
             return (int)retObjectReceiveBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveBufferSizeError = true;
             java.lang.String retObjectReceiveBufferSize_ToString = retObjectReceiveBufferSize == null ? "null" : retObjectReceiveBufferSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveBufferSizeNumber = (java.lang.Number)retObjectReceiveBufferSize;
-                return retObjectReceiveBufferSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceiveBufferSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveBufferSizeClass = retObjectReceiveBufferSize.getClass();
+                    // java.lang.reflect.Method retObjectReceiveBufferSizeMethod = retObjectReceiveBufferSizeClass.getMethod("intValue");
+                    // return (int)retObjectReceiveBufferSizeMethod.invoke(retObjectReceiveBufferSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveBufferSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectReceiveBufferSize_ToString);
+                    return retObjectReceiveBufferSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveBufferSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveBufferSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -434,13 +472,32 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
             retObjectSendBufferSize = classInstance.Get("SendBufferSize");
             return (int)retObjectSendBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendBufferSizeError = true;
             java.lang.String retObjectSendBufferSize_ToString = retObjectSendBufferSize == null ? "null" : retObjectSendBufferSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendBufferSizeNumber = (java.lang.Number)retObjectSendBufferSize;
-                return retObjectSendBufferSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null", retObjectSendBufferSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendBufferSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendBufferSizeClass = retObjectSendBufferSize.getClass();
+                    // java.lang.reflect.Method retObjectSendBufferSizeMethod = retObjectSendBufferSizeClass.getMethod("intValue");
+                    // return (int)retObjectSendBufferSizeMethod.invoke(retObjectSendBufferSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendBufferSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectSendBufferSize_ToString);
+                    return retObjectSendBufferSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendBufferSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null", retObjectSendBufferSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendBufferSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

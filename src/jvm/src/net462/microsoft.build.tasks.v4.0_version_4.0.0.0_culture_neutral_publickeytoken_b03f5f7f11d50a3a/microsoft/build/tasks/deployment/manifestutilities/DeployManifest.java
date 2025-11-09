@@ -341,13 +341,32 @@ public class DeployManifest extends Manifest  {
             retObjectUpdateInterval = classInstance.Get("UpdateInterval");
             return (int)retObjectUpdateInterval;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUpdateIntervalError = true;
             java.lang.String retObjectUpdateInterval_ToString = retObjectUpdateInterval == null ? "null" : retObjectUpdateInterval.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUpdateIntervalNumber = (java.lang.Number)retObjectUpdateInterval;
-                return retObjectUpdateIntervalNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpdateInterval != null ? retObjectUpdateInterval.getClass() : "null", retObjectUpdateInterval_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUpdateInterval != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUpdateIntervalClass = retObjectUpdateInterval.getClass();
+                    // java.lang.reflect.Method retObjectUpdateIntervalMethod = retObjectUpdateIntervalClass.getMethod("intValue");
+                    // return (int)retObjectUpdateIntervalMethod.invoke(retObjectUpdateInterval);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUpdateIntervalNumber = java.text.NumberFormat.getInstance().parse(retObjectUpdateInterval_ToString);
+                    return retObjectUpdateIntervalNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUpdateIntervalError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUpdateInterval != null ? retObjectUpdateInterval.getClass() : "null", retObjectUpdateInterval_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUpdateIntervalError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -434,13 +434,32 @@ public class DbSpatialServices extends NetObject  {
             retObjectDistance = classInstance.Invoke("Distance", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
             return (double)retObjectDistance;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDistanceError = true;
             java.lang.String retObjectDistance_ToString = retObjectDistance == null ? "null" : retObjectDistance.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDistanceNumber = (java.lang.Number)retObjectDistance;
-                return retObjectDistanceNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDistance != null ? retObjectDistance.getClass() : "null", retObjectDistance_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDistance != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDistanceClass = retObjectDistance.getClass();
+                    // java.lang.reflect.Method retObjectDistanceMethod = retObjectDistanceClass.getMethod("doubleValue");
+                    // return (double)retObjectDistanceMethod.invoke(retObjectDistance);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDistanceNumber = java.text.NumberFormat.getInstance().parse(retObjectDistance_ToString);
+                    return retObjectDistanceNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDistanceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDistance != null ? retObjectDistance.getClass() : "null", retObjectDistance_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDistanceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -455,13 +474,32 @@ public class DbSpatialServices extends NetObject  {
             retObjectDistance = classInstance.Invoke("Distance", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
             return (double)retObjectDistance;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDistanceError = true;
             java.lang.String retObjectDistance_ToString = retObjectDistance == null ? "null" : retObjectDistance.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDistanceNumber = (java.lang.Number)retObjectDistance;
-                return retObjectDistanceNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDistance != null ? retObjectDistance.getClass() : "null", retObjectDistance_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDistance != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDistanceClass = retObjectDistance.getClass();
+                    // java.lang.reflect.Method retObjectDistanceMethod = retObjectDistanceClass.getMethod("doubleValue");
+                    // return (double)retObjectDistanceMethod.invoke(retObjectDistance);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDistanceNumber = java.text.NumberFormat.getInstance().parse(retObjectDistance_ToString);
+                    return retObjectDistanceNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDistanceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDistance != null ? retObjectDistance.getClass() : "null", retObjectDistance_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDistanceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -476,13 +514,32 @@ public class DbSpatialServices extends NetObject  {
             retObjectGetCoordinateSystemId = classInstance.Invoke("GetCoordinateSystemId", geographyValue == null ? null : geographyValue.getJCOInstance());
             return (int)retObjectGetCoordinateSystemId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCoordinateSystemIdError = true;
             java.lang.String retObjectGetCoordinateSystemId_ToString = retObjectGetCoordinateSystemId == null ? "null" : retObjectGetCoordinateSystemId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCoordinateSystemIdNumber = (java.lang.Number)retObjectGetCoordinateSystemId;
-                return retObjectGetCoordinateSystemIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCoordinateSystemId != null ? retObjectGetCoordinateSystemId.getClass() : "null", retObjectGetCoordinateSystemId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCoordinateSystemId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCoordinateSystemIdClass = retObjectGetCoordinateSystemId.getClass();
+                    // java.lang.reflect.Method retObjectGetCoordinateSystemIdMethod = retObjectGetCoordinateSystemIdClass.getMethod("intValue");
+                    // return (int)retObjectGetCoordinateSystemIdMethod.invoke(retObjectGetCoordinateSystemId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCoordinateSystemIdNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCoordinateSystemId_ToString);
+                    return retObjectGetCoordinateSystemIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCoordinateSystemIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCoordinateSystemId != null ? retObjectGetCoordinateSystemId.getClass() : "null", retObjectGetCoordinateSystemId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCoordinateSystemIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -497,13 +554,32 @@ public class DbSpatialServices extends NetObject  {
             retObjectGetCoordinateSystemId = classInstance.Invoke("GetCoordinateSystemId", geometryValue == null ? null : geometryValue.getJCOInstance());
             return (int)retObjectGetCoordinateSystemId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCoordinateSystemIdError = true;
             java.lang.String retObjectGetCoordinateSystemId_ToString = retObjectGetCoordinateSystemId == null ? "null" : retObjectGetCoordinateSystemId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCoordinateSystemIdNumber = (java.lang.Number)retObjectGetCoordinateSystemId;
-                return retObjectGetCoordinateSystemIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCoordinateSystemId != null ? retObjectGetCoordinateSystemId.getClass() : "null", retObjectGetCoordinateSystemId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCoordinateSystemId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCoordinateSystemIdClass = retObjectGetCoordinateSystemId.getClass();
+                    // java.lang.reflect.Method retObjectGetCoordinateSystemIdMethod = retObjectGetCoordinateSystemIdClass.getMethod("intValue");
+                    // return (int)retObjectGetCoordinateSystemIdMethod.invoke(retObjectGetCoordinateSystemId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCoordinateSystemIdNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCoordinateSystemId_ToString);
+                    return retObjectGetCoordinateSystemIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCoordinateSystemIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCoordinateSystemId != null ? retObjectGetCoordinateSystemId.getClass() : "null", retObjectGetCoordinateSystemId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCoordinateSystemIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -518,13 +594,32 @@ public class DbSpatialServices extends NetObject  {
             retObjectGetDimension = classInstance.Invoke("GetDimension", geographyValue == null ? null : geographyValue.getJCOInstance());
             return (int)retObjectGetDimension;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDimensionError = true;
             java.lang.String retObjectGetDimension_ToString = retObjectGetDimension == null ? "null" : retObjectGetDimension.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDimensionNumber = (java.lang.Number)retObjectGetDimension;
-                return retObjectGetDimensionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDimension != null ? retObjectGetDimension.getClass() : "null", retObjectGetDimension_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDimension != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDimensionClass = retObjectGetDimension.getClass();
+                    // java.lang.reflect.Method retObjectGetDimensionMethod = retObjectGetDimensionClass.getMethod("intValue");
+                    // return (int)retObjectGetDimensionMethod.invoke(retObjectGetDimension);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDimensionNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDimension_ToString);
+                    return retObjectGetDimensionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDimensionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDimension != null ? retObjectGetDimension.getClass() : "null", retObjectGetDimension_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDimensionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -539,13 +634,32 @@ public class DbSpatialServices extends NetObject  {
             retObjectGetDimension = classInstance.Invoke("GetDimension", geometryValue == null ? null : geometryValue.getJCOInstance());
             return (int)retObjectGetDimension;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDimensionError = true;
             java.lang.String retObjectGetDimension_ToString = retObjectGetDimension == null ? "null" : retObjectGetDimension.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDimensionNumber = (java.lang.Number)retObjectGetDimension;
-                return retObjectGetDimensionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDimension != null ? retObjectGetDimension.getClass() : "null", retObjectGetDimension_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDimension != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDimensionClass = retObjectGetDimension.getClass();
+                    // java.lang.reflect.Method retObjectGetDimensionMethod = retObjectGetDimensionClass.getMethod("intValue");
+                    // return (int)retObjectGetDimensionMethod.invoke(retObjectGetDimension);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDimensionNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDimension_ToString);
+                    return retObjectGetDimensionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDimensionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDimension != null ? retObjectGetDimension.getClass() : "null", retObjectGetDimension_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDimensionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -176,13 +176,32 @@ public class DpiScale extends ValueType  {
             retObjectDpiScaleX = classInstance.Get("DpiScaleX");
             return (double)retObjectDpiScaleX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDpiScaleXError = true;
             java.lang.String retObjectDpiScaleX_ToString = retObjectDpiScaleX == null ? "null" : retObjectDpiScaleX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDpiScaleXNumber = (java.lang.Number)retObjectDpiScaleX;
-                return retObjectDpiScaleXNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDpiScaleX != null ? retObjectDpiScaleX.getClass() : "null", retObjectDpiScaleX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDpiScaleX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDpiScaleXClass = retObjectDpiScaleX.getClass();
+                    // java.lang.reflect.Method retObjectDpiScaleXMethod = retObjectDpiScaleXClass.getMethod("doubleValue");
+                    // return (double)retObjectDpiScaleXMethod.invoke(retObjectDpiScaleX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDpiScaleXNumber = java.text.NumberFormat.getInstance().parse(retObjectDpiScaleX_ToString);
+                    return retObjectDpiScaleXNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDpiScaleXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDpiScaleX != null ? retObjectDpiScaleX.getClass() : "null", retObjectDpiScaleX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDpiScaleXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class DpiScale extends ValueType  {
             retObjectDpiScaleY = classInstance.Get("DpiScaleY");
             return (double)retObjectDpiScaleY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDpiScaleYError = true;
             java.lang.String retObjectDpiScaleY_ToString = retObjectDpiScaleY == null ? "null" : retObjectDpiScaleY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDpiScaleYNumber = (java.lang.Number)retObjectDpiScaleY;
-                return retObjectDpiScaleYNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDpiScaleY != null ? retObjectDpiScaleY.getClass() : "null", retObjectDpiScaleY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDpiScaleY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDpiScaleYClass = retObjectDpiScaleY.getClass();
+                    // java.lang.reflect.Method retObjectDpiScaleYMethod = retObjectDpiScaleYClass.getMethod("doubleValue");
+                    // return (double)retObjectDpiScaleYMethod.invoke(retObjectDpiScaleY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDpiScaleYNumber = java.text.NumberFormat.getInstance().parse(retObjectDpiScaleY_ToString);
+                    return retObjectDpiScaleYNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDpiScaleYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDpiScaleY != null ? retObjectDpiScaleY.getClass() : "null", retObjectDpiScaleY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDpiScaleYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,13 +256,32 @@ public class DpiScale extends ValueType  {
             retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
             return (double)retObjectPixelsPerDip;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPixelsPerDipError = true;
             java.lang.String retObjectPixelsPerDip_ToString = retObjectPixelsPerDip == null ? "null" : retObjectPixelsPerDip.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPixelsPerDipNumber = (java.lang.Number)retObjectPixelsPerDip;
-                return retObjectPixelsPerDipNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPixelsPerDip != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPixelsPerDipClass = retObjectPixelsPerDip.getClass();
+                    // java.lang.reflect.Method retObjectPixelsPerDipMethod = retObjectPixelsPerDipClass.getMethod("doubleValue");
+                    // return (double)retObjectPixelsPerDipMethod.invoke(retObjectPixelsPerDip);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPixelsPerDipNumber = java.text.NumberFormat.getInstance().parse(retObjectPixelsPerDip_ToString);
+                    return retObjectPixelsPerDipNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPixelsPerDipError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPixelsPerDipError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,13 +296,32 @@ public class DpiScale extends ValueType  {
             retObjectPixelsPerInchX = classInstance.Get("PixelsPerInchX");
             return (double)retObjectPixelsPerInchX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPixelsPerInchXError = true;
             java.lang.String retObjectPixelsPerInchX_ToString = retObjectPixelsPerInchX == null ? "null" : retObjectPixelsPerInchX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPixelsPerInchXNumber = (java.lang.Number)retObjectPixelsPerInchX;
-                return retObjectPixelsPerInchXNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerInchX != null ? retObjectPixelsPerInchX.getClass() : "null", retObjectPixelsPerInchX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPixelsPerInchX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPixelsPerInchXClass = retObjectPixelsPerInchX.getClass();
+                    // java.lang.reflect.Method retObjectPixelsPerInchXMethod = retObjectPixelsPerInchXClass.getMethod("doubleValue");
+                    // return (double)retObjectPixelsPerInchXMethod.invoke(retObjectPixelsPerInchX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPixelsPerInchXNumber = java.text.NumberFormat.getInstance().parse(retObjectPixelsPerInchX_ToString);
+                    return retObjectPixelsPerInchXNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPixelsPerInchXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPixelsPerInchX != null ? retObjectPixelsPerInchX.getClass() : "null", retObjectPixelsPerInchX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPixelsPerInchXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -260,13 +336,32 @@ public class DpiScale extends ValueType  {
             retObjectPixelsPerInchY = classInstance.Get("PixelsPerInchY");
             return (double)retObjectPixelsPerInchY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPixelsPerInchYError = true;
             java.lang.String retObjectPixelsPerInchY_ToString = retObjectPixelsPerInchY == null ? "null" : retObjectPixelsPerInchY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPixelsPerInchYNumber = (java.lang.Number)retObjectPixelsPerInchY;
-                return retObjectPixelsPerInchYNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerInchY != null ? retObjectPixelsPerInchY.getClass() : "null", retObjectPixelsPerInchY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPixelsPerInchY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPixelsPerInchYClass = retObjectPixelsPerInchY.getClass();
+                    // java.lang.reflect.Method retObjectPixelsPerInchYMethod = retObjectPixelsPerInchYClass.getMethod("doubleValue");
+                    // return (double)retObjectPixelsPerInchYMethod.invoke(retObjectPixelsPerInchY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPixelsPerInchYNumber = java.text.NumberFormat.getInstance().parse(retObjectPixelsPerInchY_ToString);
+                    return retObjectPixelsPerInchYNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPixelsPerInchYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPixelsPerInchY != null ? retObjectPixelsPerInchY.getClass() : "null", retObjectPixelsPerInchY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPixelsPerInchYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

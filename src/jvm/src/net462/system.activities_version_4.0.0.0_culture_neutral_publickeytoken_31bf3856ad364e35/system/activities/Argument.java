@@ -238,13 +238,32 @@ public class Argument extends NetObject  {
             retObjectEvaluationOrder = classInstance.Get("EvaluationOrder");
             return (int)retObjectEvaluationOrder;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEvaluationOrderError = true;
             java.lang.String retObjectEvaluationOrder_ToString = retObjectEvaluationOrder == null ? "null" : retObjectEvaluationOrder.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEvaluationOrderNumber = (java.lang.Number)retObjectEvaluationOrder;
-                return retObjectEvaluationOrderNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEvaluationOrder != null ? retObjectEvaluationOrder.getClass() : "null", retObjectEvaluationOrder_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEvaluationOrder != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEvaluationOrderClass = retObjectEvaluationOrder.getClass();
+                    // java.lang.reflect.Method retObjectEvaluationOrderMethod = retObjectEvaluationOrderClass.getMethod("intValue");
+                    // return (int)retObjectEvaluationOrderMethod.invoke(retObjectEvaluationOrder);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEvaluationOrderNumber = java.text.NumberFormat.getInstance().parse(retObjectEvaluationOrder_ToString);
+                    return retObjectEvaluationOrderNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEvaluationOrderError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEvaluationOrder != null ? retObjectEvaluationOrder.getClass() : "null", retObjectEvaluationOrder_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEvaluationOrderError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

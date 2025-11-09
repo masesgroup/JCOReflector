@@ -440,13 +440,32 @@ public class MonthCalendar extends Control  {
             retObjectMaxSelectionCount = classInstance.Get("MaxSelectionCount");
             return (int)retObjectMaxSelectionCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxSelectionCountError = true;
             java.lang.String retObjectMaxSelectionCount_ToString = retObjectMaxSelectionCount == null ? "null" : retObjectMaxSelectionCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxSelectionCountNumber = (java.lang.Number)retObjectMaxSelectionCount;
-                return retObjectMaxSelectionCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxSelectionCount != null ? retObjectMaxSelectionCount.getClass() : "null", retObjectMaxSelectionCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxSelectionCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxSelectionCountClass = retObjectMaxSelectionCount.getClass();
+                    // java.lang.reflect.Method retObjectMaxSelectionCountMethod = retObjectMaxSelectionCountClass.getMethod("intValue");
+                    // return (int)retObjectMaxSelectionCountMethod.invoke(retObjectMaxSelectionCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxSelectionCountNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxSelectionCount_ToString);
+                    return retObjectMaxSelectionCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxSelectionCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxSelectionCount != null ? retObjectMaxSelectionCount.getClass() : "null", retObjectMaxSelectionCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxSelectionCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -471,13 +490,32 @@ public class MonthCalendar extends Control  {
             retObjectScrollChange = classInstance.Get("ScrollChange");
             return (int)retObjectScrollChange;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportScrollChangeError = true;
             java.lang.String retObjectScrollChange_ToString = retObjectScrollChange == null ? "null" : retObjectScrollChange.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectScrollChangeNumber = (java.lang.Number)retObjectScrollChange;
-                return retObjectScrollChangeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScrollChange != null ? retObjectScrollChange.getClass() : "null", retObjectScrollChange_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectScrollChange != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectScrollChangeClass = retObjectScrollChange.getClass();
+                    // java.lang.reflect.Method retObjectScrollChangeMethod = retObjectScrollChangeClass.getMethod("intValue");
+                    // return (int)retObjectScrollChangeMethod.invoke(retObjectScrollChange);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectScrollChangeNumber = java.text.NumberFormat.getInstance().parse(retObjectScrollChange_ToString);
+                    return retObjectScrollChangeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportScrollChangeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectScrollChange != null ? retObjectScrollChange.getClass() : "null", retObjectScrollChange_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportScrollChangeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -176,13 +176,32 @@ public class StoreItemCollection extends ItemCollection  {
             retObjectStoreSchemaVersion = classInstance.Get("StoreSchemaVersion");
             return (double)retObjectStoreSchemaVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStoreSchemaVersionError = true;
             java.lang.String retObjectStoreSchemaVersion_ToString = retObjectStoreSchemaVersion == null ? "null" : retObjectStoreSchemaVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStoreSchemaVersionNumber = (java.lang.Number)retObjectStoreSchemaVersion;
-                return retObjectStoreSchemaVersionNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStoreSchemaVersion != null ? retObjectStoreSchemaVersion.getClass() : "null", retObjectStoreSchemaVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStoreSchemaVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStoreSchemaVersionClass = retObjectStoreSchemaVersion.getClass();
+                    // java.lang.reflect.Method retObjectStoreSchemaVersionMethod = retObjectStoreSchemaVersionClass.getMethod("doubleValue");
+                    // return (double)retObjectStoreSchemaVersionMethod.invoke(retObjectStoreSchemaVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStoreSchemaVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectStoreSchemaVersion_ToString);
+                    return retObjectStoreSchemaVersionNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStoreSchemaVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStoreSchemaVersion != null ? retObjectStoreSchemaVersion.getClass() : "null", retObjectStoreSchemaVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStoreSchemaVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -178,13 +178,32 @@ public class MouseEventArgs extends EventArgs  {
             retObjectClicks = classInstance.Get("Clicks");
             return (int)retObjectClicks;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportClicksError = true;
             java.lang.String retObjectClicks_ToString = retObjectClicks == null ? "null" : retObjectClicks.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectClicksNumber = (java.lang.Number)retObjectClicks;
-                return retObjectClicksNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectClicks != null ? retObjectClicks.getClass() : "null", retObjectClicks_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectClicks != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectClicksClass = retObjectClicks.getClass();
+                    // java.lang.reflect.Method retObjectClicksMethod = retObjectClicksClass.getMethod("intValue");
+                    // return (int)retObjectClicksMethod.invoke(retObjectClicks);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectClicksNumber = java.text.NumberFormat.getInstance().parse(retObjectClicks_ToString);
+                    return retObjectClicksNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportClicksError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectClicks != null ? retObjectClicks.getClass() : "null", retObjectClicks_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportClicksError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -199,13 +218,32 @@ public class MouseEventArgs extends EventArgs  {
             retObjectDelta = classInstance.Get("Delta");
             return (int)retObjectDelta;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDeltaError = true;
             java.lang.String retObjectDelta_ToString = retObjectDelta == null ? "null" : retObjectDelta.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDeltaNumber = (java.lang.Number)retObjectDelta;
-                return retObjectDeltaNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDelta != null ? retObjectDelta.getClass() : "null", retObjectDelta_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDelta != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDeltaClass = retObjectDelta.getClass();
+                    // java.lang.reflect.Method retObjectDeltaMethod = retObjectDeltaClass.getMethod("intValue");
+                    // return (int)retObjectDeltaMethod.invoke(retObjectDelta);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDeltaNumber = java.text.NumberFormat.getInstance().parse(retObjectDelta_ToString);
+                    return retObjectDeltaNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDeltaError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDelta != null ? retObjectDelta.getClass() : "null", retObjectDelta_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDeltaError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -220,13 +258,32 @@ public class MouseEventArgs extends EventArgs  {
             retObjectX = classInstance.Get("X");
             return (int)retObjectX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportXError = true;
             java.lang.String retObjectX_ToString = retObjectX == null ? "null" : retObjectX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectXNumber = (java.lang.Number)retObjectX;
-                return retObjectXNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectXClass = retObjectX.getClass();
+                    // java.lang.reflect.Method retObjectXMethod = retObjectXClass.getMethod("intValue");
+                    // return (int)retObjectXMethod.invoke(retObjectX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectXNumber = java.text.NumberFormat.getInstance().parse(retObjectX_ToString);
+                    return retObjectXNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectX != null ? retObjectX.getClass() : "null", retObjectX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -241,13 +298,32 @@ public class MouseEventArgs extends EventArgs  {
             retObjectY = classInstance.Get("Y");
             return (int)retObjectY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportYError = true;
             java.lang.String retObjectY_ToString = retObjectY == null ? "null" : retObjectY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectYNumber = (java.lang.Number)retObjectY;
-                return retObjectYNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectYClass = retObjectY.getClass();
+                    // java.lang.reflect.Method retObjectYMethod = retObjectYClass.getMethod("intValue");
+                    // return (int)retObjectYMethod.invoke(retObjectY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectYNumber = java.text.NumberFormat.getInstance().parse(retObjectY_ToString);
+                    return retObjectYNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectY != null ? retObjectY.getClass() : "null", retObjectY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -349,13 +349,32 @@ public class ServicePointManager extends NetObject  {
             retObjectDefaultConnectionLimit = classType.Get("DefaultConnectionLimit");
             return (int)retObjectDefaultConnectionLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDefaultConnectionLimitError = true;
             java.lang.String retObjectDefaultConnectionLimit_ToString = retObjectDefaultConnectionLimit == null ? "null" : retObjectDefaultConnectionLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDefaultConnectionLimitNumber = (java.lang.Number)retObjectDefaultConnectionLimit;
-                return retObjectDefaultConnectionLimitNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultConnectionLimit != null ? retObjectDefaultConnectionLimit.getClass() : "null", retObjectDefaultConnectionLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDefaultConnectionLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDefaultConnectionLimitClass = retObjectDefaultConnectionLimit.getClass();
+                    // java.lang.reflect.Method retObjectDefaultConnectionLimitMethod = retObjectDefaultConnectionLimitClass.getMethod("intValue");
+                    // return (int)retObjectDefaultConnectionLimitMethod.invoke(retObjectDefaultConnectionLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDefaultConnectionLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectDefaultConnectionLimit_ToString);
+                    return retObjectDefaultConnectionLimitNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDefaultConnectionLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDefaultConnectionLimit != null ? retObjectDefaultConnectionLimit.getClass() : "null", retObjectDefaultConnectionLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDefaultConnectionLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -380,13 +399,32 @@ public class ServicePointManager extends NetObject  {
             retObjectDnsRefreshTimeout = classType.Get("DnsRefreshTimeout");
             return (int)retObjectDnsRefreshTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDnsRefreshTimeoutError = true;
             java.lang.String retObjectDnsRefreshTimeout_ToString = retObjectDnsRefreshTimeout == null ? "null" : retObjectDnsRefreshTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDnsRefreshTimeoutNumber = (java.lang.Number)retObjectDnsRefreshTimeout;
-                return retObjectDnsRefreshTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDnsRefreshTimeout != null ? retObjectDnsRefreshTimeout.getClass() : "null", retObjectDnsRefreshTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDnsRefreshTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDnsRefreshTimeoutClass = retObjectDnsRefreshTimeout.getClass();
+                    // java.lang.reflect.Method retObjectDnsRefreshTimeoutMethod = retObjectDnsRefreshTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectDnsRefreshTimeoutMethod.invoke(retObjectDnsRefreshTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDnsRefreshTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectDnsRefreshTimeout_ToString);
+                    return retObjectDnsRefreshTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDnsRefreshTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDnsRefreshTimeout != null ? retObjectDnsRefreshTimeout.getClass() : "null", retObjectDnsRefreshTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDnsRefreshTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -411,13 +449,32 @@ public class ServicePointManager extends NetObject  {
             retObjectMaxServicePointIdleTime = classType.Get("MaxServicePointIdleTime");
             return (int)retObjectMaxServicePointIdleTime;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxServicePointIdleTimeError = true;
             java.lang.String retObjectMaxServicePointIdleTime_ToString = retObjectMaxServicePointIdleTime == null ? "null" : retObjectMaxServicePointIdleTime.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxServicePointIdleTimeNumber = (java.lang.Number)retObjectMaxServicePointIdleTime;
-                return retObjectMaxServicePointIdleTimeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxServicePointIdleTime != null ? retObjectMaxServicePointIdleTime.getClass() : "null", retObjectMaxServicePointIdleTime_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxServicePointIdleTime != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxServicePointIdleTimeClass = retObjectMaxServicePointIdleTime.getClass();
+                    // java.lang.reflect.Method retObjectMaxServicePointIdleTimeMethod = retObjectMaxServicePointIdleTimeClass.getMethod("intValue");
+                    // return (int)retObjectMaxServicePointIdleTimeMethod.invoke(retObjectMaxServicePointIdleTime);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxServicePointIdleTimeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxServicePointIdleTime_ToString);
+                    return retObjectMaxServicePointIdleTimeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxServicePointIdleTimeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxServicePointIdleTime != null ? retObjectMaxServicePointIdleTime.getClass() : "null", retObjectMaxServicePointIdleTime_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxServicePointIdleTimeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -442,13 +499,32 @@ public class ServicePointManager extends NetObject  {
             retObjectMaxServicePoints = classType.Get("MaxServicePoints");
             return (int)retObjectMaxServicePoints;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxServicePointsError = true;
             java.lang.String retObjectMaxServicePoints_ToString = retObjectMaxServicePoints == null ? "null" : retObjectMaxServicePoints.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxServicePointsNumber = (java.lang.Number)retObjectMaxServicePoints;
-                return retObjectMaxServicePointsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxServicePoints != null ? retObjectMaxServicePoints.getClass() : "null", retObjectMaxServicePoints_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxServicePoints != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxServicePointsClass = retObjectMaxServicePoints.getClass();
+                    // java.lang.reflect.Method retObjectMaxServicePointsMethod = retObjectMaxServicePointsClass.getMethod("intValue");
+                    // return (int)retObjectMaxServicePointsMethod.invoke(retObjectMaxServicePoints);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxServicePointsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxServicePoints_ToString);
+                    return retObjectMaxServicePointsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxServicePointsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxServicePoints != null ? retObjectMaxServicePoints.getClass() : "null", retObjectMaxServicePoints_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxServicePointsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

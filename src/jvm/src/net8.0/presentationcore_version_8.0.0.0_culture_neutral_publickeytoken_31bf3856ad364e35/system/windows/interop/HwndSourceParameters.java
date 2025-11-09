@@ -380,13 +380,32 @@ public class HwndSourceParameters extends ValueType  {
             retObjectExtendedWindowStyle = classInstance.Get("ExtendedWindowStyle");
             return (int)retObjectExtendedWindowStyle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportExtendedWindowStyleError = true;
             java.lang.String retObjectExtendedWindowStyle_ToString = retObjectExtendedWindowStyle == null ? "null" : retObjectExtendedWindowStyle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectExtendedWindowStyleNumber = (java.lang.Number)retObjectExtendedWindowStyle;
-                return retObjectExtendedWindowStyleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExtendedWindowStyle != null ? retObjectExtendedWindowStyle.getClass() : "null", retObjectExtendedWindowStyle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectExtendedWindowStyle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectExtendedWindowStyleClass = retObjectExtendedWindowStyle.getClass();
+                    // java.lang.reflect.Method retObjectExtendedWindowStyleMethod = retObjectExtendedWindowStyleClass.getMethod("intValue");
+                    // return (int)retObjectExtendedWindowStyleMethod.invoke(retObjectExtendedWindowStyle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectExtendedWindowStyleNumber = java.text.NumberFormat.getInstance().parse(retObjectExtendedWindowStyle_ToString);
+                    return retObjectExtendedWindowStyleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportExtendedWindowStyleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectExtendedWindowStyle != null ? retObjectExtendedWindowStyle.getClass() : "null", retObjectExtendedWindowStyle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportExtendedWindowStyleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -411,13 +430,32 @@ public class HwndSourceParameters extends ValueType  {
             retObjectHeight = classInstance.Get("Height");
             return (int)retObjectHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportHeightError = true;
             java.lang.String retObjectHeight_ToString = retObjectHeight == null ? "null" : retObjectHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectHeightNumber = (java.lang.Number)retObjectHeight;
-                return retObjectHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectHeightClass = retObjectHeight.getClass();
+                    // java.lang.reflect.Method retObjectHeightMethod = retObjectHeightClass.getMethod("intValue");
+                    // return (int)retObjectHeightMethod.invoke(retObjectHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectHeight_ToString);
+                    return retObjectHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectHeight != null ? retObjectHeight.getClass() : "null", retObjectHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -442,13 +480,32 @@ public class HwndSourceParameters extends ValueType  {
             retObjectPositionX = classInstance.Get("PositionX");
             return (int)retObjectPositionX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPositionXError = true;
             java.lang.String retObjectPositionX_ToString = retObjectPositionX == null ? "null" : retObjectPositionX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPositionXNumber = (java.lang.Number)retObjectPositionX;
-                return retObjectPositionXNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionX != null ? retObjectPositionX.getClass() : "null", retObjectPositionX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPositionX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPositionXClass = retObjectPositionX.getClass();
+                    // java.lang.reflect.Method retObjectPositionXMethod = retObjectPositionXClass.getMethod("intValue");
+                    // return (int)retObjectPositionXMethod.invoke(retObjectPositionX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPositionXNumber = java.text.NumberFormat.getInstance().parse(retObjectPositionX_ToString);
+                    return retObjectPositionXNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPositionXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPositionX != null ? retObjectPositionX.getClass() : "null", retObjectPositionX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPositionXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -473,13 +530,32 @@ public class HwndSourceParameters extends ValueType  {
             retObjectPositionY = classInstance.Get("PositionY");
             return (int)retObjectPositionY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPositionYError = true;
             java.lang.String retObjectPositionY_ToString = retObjectPositionY == null ? "null" : retObjectPositionY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPositionYNumber = (java.lang.Number)retObjectPositionY;
-                return retObjectPositionYNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionY != null ? retObjectPositionY.getClass() : "null", retObjectPositionY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPositionY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPositionYClass = retObjectPositionY.getClass();
+                    // java.lang.reflect.Method retObjectPositionYMethod = retObjectPositionYClass.getMethod("intValue");
+                    // return (int)retObjectPositionYMethod.invoke(retObjectPositionY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPositionYNumber = java.text.NumberFormat.getInstance().parse(retObjectPositionY_ToString);
+                    return retObjectPositionYNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPositionYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPositionY != null ? retObjectPositionY.getClass() : "null", retObjectPositionY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPositionYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -504,13 +580,32 @@ public class HwndSourceParameters extends ValueType  {
             retObjectWidth = classInstance.Get("Width");
             return (int)retObjectWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWidthError = true;
             java.lang.String retObjectWidth_ToString = retObjectWidth == null ? "null" : retObjectWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWidthNumber = (java.lang.Number)retObjectWidth;
-                return retObjectWidthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWidthClass = retObjectWidth.getClass();
+                    // java.lang.reflect.Method retObjectWidthMethod = retObjectWidthClass.getMethod("intValue");
+                    // return (int)retObjectWidthMethod.invoke(retObjectWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectWidth_ToString);
+                    return retObjectWidthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWidth != null ? retObjectWidth.getClass() : "null", retObjectWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -535,13 +630,32 @@ public class HwndSourceParameters extends ValueType  {
             retObjectWindowClassStyle = classInstance.Get("WindowClassStyle");
             return (int)retObjectWindowClassStyle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWindowClassStyleError = true;
             java.lang.String retObjectWindowClassStyle_ToString = retObjectWindowClassStyle == null ? "null" : retObjectWindowClassStyle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWindowClassStyleNumber = (java.lang.Number)retObjectWindowClassStyle;
-                return retObjectWindowClassStyleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowClassStyle != null ? retObjectWindowClassStyle.getClass() : "null", retObjectWindowClassStyle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWindowClassStyle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWindowClassStyleClass = retObjectWindowClassStyle.getClass();
+                    // java.lang.reflect.Method retObjectWindowClassStyleMethod = retObjectWindowClassStyleClass.getMethod("intValue");
+                    // return (int)retObjectWindowClassStyleMethod.invoke(retObjectWindowClassStyle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWindowClassStyleNumber = java.text.NumberFormat.getInstance().parse(retObjectWindowClassStyle_ToString);
+                    return retObjectWindowClassStyleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWindowClassStyleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWindowClassStyle != null ? retObjectWindowClassStyle.getClass() : "null", retObjectWindowClassStyle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWindowClassStyleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -566,13 +680,32 @@ public class HwndSourceParameters extends ValueType  {
             retObjectWindowStyle = classInstance.Get("WindowStyle");
             return (int)retObjectWindowStyle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWindowStyleError = true;
             java.lang.String retObjectWindowStyle_ToString = retObjectWindowStyle == null ? "null" : retObjectWindowStyle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWindowStyleNumber = (java.lang.Number)retObjectWindowStyle;
-                return retObjectWindowStyleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWindowStyle != null ? retObjectWindowStyle.getClass() : "null", retObjectWindowStyle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWindowStyle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWindowStyleClass = retObjectWindowStyle.getClass();
+                    // java.lang.reflect.Method retObjectWindowStyleMethod = retObjectWindowStyleClass.getMethod("intValue");
+                    // return (int)retObjectWindowStyleMethod.invoke(retObjectWindowStyle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWindowStyleNumber = java.text.NumberFormat.getInstance().parse(retObjectWindowStyle_ToString);
+                    return retObjectWindowStyleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWindowStyleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWindowStyle != null ? retObjectWindowStyle.getClass() : "null", retObjectWindowStyle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWindowStyleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

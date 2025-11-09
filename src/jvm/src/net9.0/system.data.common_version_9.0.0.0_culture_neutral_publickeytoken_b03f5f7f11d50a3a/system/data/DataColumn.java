@@ -322,13 +322,32 @@ public class DataColumn extends MarshalByValueComponent  {
             retObjectMaxLength = classInstance.Get("MaxLength");
             return (int)retObjectMaxLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxLengthError = true;
             java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
-                return retObjectMaxLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxLengthClass = retObjectMaxLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxLengthMethod = retObjectMaxLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaxLengthMethod.invoke(retObjectMaxLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxLength_ToString);
+                    return retObjectMaxLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -353,13 +372,32 @@ public class DataColumn extends MarshalByValueComponent  {
             retObjectOrdinal = classInstance.Get("Ordinal");
             return (int)retObjectOrdinal;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOrdinalError = true;
             java.lang.String retObjectOrdinal_ToString = retObjectOrdinal == null ? "null" : retObjectOrdinal.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOrdinalNumber = (java.lang.Number)retObjectOrdinal;
-                return retObjectOrdinalNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOrdinal != null ? retObjectOrdinal.getClass() : "null", retObjectOrdinal_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOrdinal != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOrdinalClass = retObjectOrdinal.getClass();
+                    // java.lang.reflect.Method retObjectOrdinalMethod = retObjectOrdinalClass.getMethod("intValue");
+                    // return (int)retObjectOrdinalMethod.invoke(retObjectOrdinal);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOrdinalNumber = java.text.NumberFormat.getInstance().parse(retObjectOrdinal_ToString);
+                    return retObjectOrdinalNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOrdinalError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOrdinal != null ? retObjectOrdinal.getClass() : "null", retObjectOrdinal_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOrdinalError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -374,13 +412,32 @@ public class DataColumn extends MarshalByValueComponent  {
             retObjectAutoIncrementSeed = classInstance.Get("AutoIncrementSeed");
             return (long)retObjectAutoIncrementSeed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAutoIncrementSeedError = true;
             java.lang.String retObjectAutoIncrementSeed_ToString = retObjectAutoIncrementSeed == null ? "null" : retObjectAutoIncrementSeed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAutoIncrementSeedNumber = (java.lang.Number)retObjectAutoIncrementSeed;
-                return retObjectAutoIncrementSeedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAutoIncrementSeed != null ? retObjectAutoIncrementSeed.getClass() : "null", retObjectAutoIncrementSeed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAutoIncrementSeed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAutoIncrementSeedClass = retObjectAutoIncrementSeed.getClass();
+                    // java.lang.reflect.Method retObjectAutoIncrementSeedMethod = retObjectAutoIncrementSeedClass.getMethod("longValue");
+                    // return (long)retObjectAutoIncrementSeedMethod.invoke(retObjectAutoIncrementSeed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAutoIncrementSeedNumber = java.text.NumberFormat.getInstance().parse(retObjectAutoIncrementSeed_ToString);
+                    return retObjectAutoIncrementSeedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAutoIncrementSeedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAutoIncrementSeed != null ? retObjectAutoIncrementSeed.getClass() : "null", retObjectAutoIncrementSeed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAutoIncrementSeedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -405,13 +462,32 @@ public class DataColumn extends MarshalByValueComponent  {
             retObjectAutoIncrementStep = classInstance.Get("AutoIncrementStep");
             return (long)retObjectAutoIncrementStep;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAutoIncrementStepError = true;
             java.lang.String retObjectAutoIncrementStep_ToString = retObjectAutoIncrementStep == null ? "null" : retObjectAutoIncrementStep.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAutoIncrementStepNumber = (java.lang.Number)retObjectAutoIncrementStep;
-                return retObjectAutoIncrementStepNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAutoIncrementStep != null ? retObjectAutoIncrementStep.getClass() : "null", retObjectAutoIncrementStep_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAutoIncrementStep != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAutoIncrementStepClass = retObjectAutoIncrementStep.getClass();
+                    // java.lang.reflect.Method retObjectAutoIncrementStepMethod = retObjectAutoIncrementStepClass.getMethod("longValue");
+                    // return (long)retObjectAutoIncrementStepMethod.invoke(retObjectAutoIncrementStep);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAutoIncrementStepNumber = java.text.NumberFormat.getInstance().parse(retObjectAutoIncrementStep_ToString);
+                    return retObjectAutoIncrementStepNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAutoIncrementStepError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAutoIncrementStep != null ? retObjectAutoIncrementStep.getClass() : "null", retObjectAutoIncrementStep_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAutoIncrementStepError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

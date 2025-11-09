@@ -244,13 +244,32 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             retObjectEnsureCapacity = classInstance.Invoke("EnsureCapacity", capacity);
             return (int)retObjectEnsureCapacity;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEnsureCapacityError = true;
             java.lang.String retObjectEnsureCapacity_ToString = retObjectEnsureCapacity == null ? "null" : retObjectEnsureCapacity.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEnsureCapacityNumber = (java.lang.Number)retObjectEnsureCapacity;
-                return retObjectEnsureCapacityNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEnsureCapacity != null ? retObjectEnsureCapacity.getClass() : "null", retObjectEnsureCapacity_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEnsureCapacity != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEnsureCapacityClass = retObjectEnsureCapacity.getClass();
+                    // java.lang.reflect.Method retObjectEnsureCapacityMethod = retObjectEnsureCapacityClass.getMethod("intValue");
+                    // return (int)retObjectEnsureCapacityMethod.invoke(retObjectEnsureCapacity);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEnsureCapacityNumber = java.text.NumberFormat.getInstance().parse(retObjectEnsureCapacity_ToString);
+                    return retObjectEnsureCapacityNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEnsureCapacityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEnsureCapacity != null ? retObjectEnsureCapacity.getClass() : "null", retObjectEnsureCapacity_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEnsureCapacityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1167,13 +1186,32 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             retObjectCapacity = classInstance.Get("Capacity");
             return (int)retObjectCapacity;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCapacityError = true;
             java.lang.String retObjectCapacity_ToString = retObjectCapacity == null ? "null" : retObjectCapacity.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCapacityNumber = (java.lang.Number)retObjectCapacity;
-                return retObjectCapacityNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null", retObjectCapacity_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCapacity != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCapacityClass = retObjectCapacity.getClass();
+                    // java.lang.reflect.Method retObjectCapacityMethod = retObjectCapacityClass.getMethod("intValue");
+                    // return (int)retObjectCapacityMethod.invoke(retObjectCapacity);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCapacityNumber = java.text.NumberFormat.getInstance().parse(retObjectCapacity_ToString);
+                    return retObjectCapacityNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCapacityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCapacity != null ? retObjectCapacity.getClass() : "null", retObjectCapacity_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCapacityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1198,13 +1236,32 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             retObjectLength = classInstance.Get("Length");
             return (int)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLengthError = true;
             java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
-                return retObjectLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLengthClass = retObjectLength.getClass();
+                    // java.lang.reflect.Method retObjectLengthMethod = retObjectLengthClass.getMethod("intValue");
+                    // return (int)retObjectLengthMethod.invoke(retObjectLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectLength_ToString);
+                    return retObjectLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1229,13 +1286,32 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             retObjectMaxCapacity = classInstance.Get("MaxCapacity");
             return (int)retObjectMaxCapacity;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxCapacityError = true;
             java.lang.String retObjectMaxCapacity_ToString = retObjectMaxCapacity == null ? "null" : retObjectMaxCapacity.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxCapacityNumber = (java.lang.Number)retObjectMaxCapacity;
-                return retObjectMaxCapacityNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCapacity != null ? retObjectMaxCapacity.getClass() : "null", retObjectMaxCapacity_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxCapacity != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxCapacityClass = retObjectMaxCapacity.getClass();
+                    // java.lang.reflect.Method retObjectMaxCapacityMethod = retObjectMaxCapacityClass.getMethod("intValue");
+                    // return (int)retObjectMaxCapacityMethod.invoke(retObjectMaxCapacity);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxCapacityNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxCapacity_ToString);
+                    return retObjectMaxCapacityNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxCapacityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxCapacity != null ? retObjectMaxCapacity.getClass() : "null", retObjectMaxCapacity_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxCapacityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

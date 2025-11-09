@@ -253,13 +253,32 @@ public class ToolBar extends HeaderedItemsControl  {
             retObjectBand = classInstance.Get("Band");
             return (int)retObjectBand;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBandError = true;
             java.lang.String retObjectBand_ToString = retObjectBand == null ? "null" : retObjectBand.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBandNumber = (java.lang.Number)retObjectBand;
-                return retObjectBandNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBand != null ? retObjectBand.getClass() : "null", retObjectBand_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBand != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBandClass = retObjectBand.getClass();
+                    // java.lang.reflect.Method retObjectBandMethod = retObjectBandClass.getMethod("intValue");
+                    // return (int)retObjectBandMethod.invoke(retObjectBand);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBandNumber = java.text.NumberFormat.getInstance().parse(retObjectBand_ToString);
+                    return retObjectBandNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBandError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBand != null ? retObjectBand.getClass() : "null", retObjectBand_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBandError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,13 +303,32 @@ public class ToolBar extends HeaderedItemsControl  {
             retObjectBandIndex = classInstance.Get("BandIndex");
             return (int)retObjectBandIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBandIndexError = true;
             java.lang.String retObjectBandIndex_ToString = retObjectBandIndex == null ? "null" : retObjectBandIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBandIndexNumber = (java.lang.Number)retObjectBandIndex;
-                return retObjectBandIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBandIndex != null ? retObjectBandIndex.getClass() : "null", retObjectBandIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBandIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBandIndexClass = retObjectBandIndex.getClass();
+                    // java.lang.reflect.Method retObjectBandIndexMethod = retObjectBandIndexClass.getMethod("intValue");
+                    // return (int)retObjectBandIndexMethod.invoke(retObjectBandIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBandIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectBandIndex_ToString);
+                    return retObjectBandIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBandIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBandIndex != null ? retObjectBandIndex.getClass() : "null", retObjectBandIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBandIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

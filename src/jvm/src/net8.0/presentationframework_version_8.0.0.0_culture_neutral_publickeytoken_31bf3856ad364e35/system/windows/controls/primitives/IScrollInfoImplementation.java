@@ -358,13 +358,32 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
             retObjectExtentHeight = classInstance.Get("ExtentHeight");
             return (double)retObjectExtentHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportExtentHeightError = true;
             java.lang.String retObjectExtentHeight_ToString = retObjectExtentHeight == null ? "null" : retObjectExtentHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectExtentHeightNumber = (java.lang.Number)retObjectExtentHeight;
-                return retObjectExtentHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null", retObjectExtentHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectExtentHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectExtentHeightClass = retObjectExtentHeight.getClass();
+                    // java.lang.reflect.Method retObjectExtentHeightMethod = retObjectExtentHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectExtentHeightMethod.invoke(retObjectExtentHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectExtentHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectExtentHeight_ToString);
+                    return retObjectExtentHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportExtentHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null", retObjectExtentHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportExtentHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -379,13 +398,32 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
             retObjectExtentWidth = classInstance.Get("ExtentWidth");
             return (double)retObjectExtentWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportExtentWidthError = true;
             java.lang.String retObjectExtentWidth_ToString = retObjectExtentWidth == null ? "null" : retObjectExtentWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectExtentWidthNumber = (java.lang.Number)retObjectExtentWidth;
-                return retObjectExtentWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null", retObjectExtentWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectExtentWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectExtentWidthClass = retObjectExtentWidth.getClass();
+                    // java.lang.reflect.Method retObjectExtentWidthMethod = retObjectExtentWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectExtentWidthMethod.invoke(retObjectExtentWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectExtentWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectExtentWidth_ToString);
+                    return retObjectExtentWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportExtentWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null", retObjectExtentWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportExtentWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -400,13 +438,32 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
             retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
             return (double)retObjectHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportHorizontalOffsetError = true;
             java.lang.String retObjectHorizontalOffset_ToString = retObjectHorizontalOffset == null ? "null" : retObjectHorizontalOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectHorizontalOffsetNumber = (java.lang.Number)retObjectHorizontalOffset;
-                return retObjectHorizontalOffsetNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null", retObjectHorizontalOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectHorizontalOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectHorizontalOffsetClass = retObjectHorizontalOffset.getClass();
+                    // java.lang.reflect.Method retObjectHorizontalOffsetMethod = retObjectHorizontalOffsetClass.getMethod("doubleValue");
+                    // return (double)retObjectHorizontalOffsetMethod.invoke(retObjectHorizontalOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectHorizontalOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectHorizontalOffset_ToString);
+                    return retObjectHorizontalOffsetNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportHorizontalOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null", retObjectHorizontalOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportHorizontalOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -421,13 +478,32 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
             retObjectVerticalOffset = classInstance.Get("VerticalOffset");
             return (double)retObjectVerticalOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVerticalOffsetError = true;
             java.lang.String retObjectVerticalOffset_ToString = retObjectVerticalOffset == null ? "null" : retObjectVerticalOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVerticalOffsetNumber = (java.lang.Number)retObjectVerticalOffset;
-                return retObjectVerticalOffsetNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null", retObjectVerticalOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVerticalOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVerticalOffsetClass = retObjectVerticalOffset.getClass();
+                    // java.lang.reflect.Method retObjectVerticalOffsetMethod = retObjectVerticalOffsetClass.getMethod("doubleValue");
+                    // return (double)retObjectVerticalOffsetMethod.invoke(retObjectVerticalOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVerticalOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectVerticalOffset_ToString);
+                    return retObjectVerticalOffsetNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVerticalOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null", retObjectVerticalOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVerticalOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -442,13 +518,32 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
             retObjectViewportHeight = classInstance.Get("ViewportHeight");
             return (double)retObjectViewportHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportViewportHeightError = true;
             java.lang.String retObjectViewportHeight_ToString = retObjectViewportHeight == null ? "null" : retObjectViewportHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectViewportHeightNumber = (java.lang.Number)retObjectViewportHeight;
-                return retObjectViewportHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectViewportHeight != null ? retObjectViewportHeight.getClass() : "null", retObjectViewportHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectViewportHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectViewportHeightClass = retObjectViewportHeight.getClass();
+                    // java.lang.reflect.Method retObjectViewportHeightMethod = retObjectViewportHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectViewportHeightMethod.invoke(retObjectViewportHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectViewportHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectViewportHeight_ToString);
+                    return retObjectViewportHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportViewportHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectViewportHeight != null ? retObjectViewportHeight.getClass() : "null", retObjectViewportHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportViewportHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -463,13 +558,32 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
             retObjectViewportWidth = classInstance.Get("ViewportWidth");
             return (double)retObjectViewportWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportViewportWidthError = true;
             java.lang.String retObjectViewportWidth_ToString = retObjectViewportWidth == null ? "null" : retObjectViewportWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectViewportWidthNumber = (java.lang.Number)retObjectViewportWidth;
-                return retObjectViewportWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectViewportWidth != null ? retObjectViewportWidth.getClass() : "null", retObjectViewportWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectViewportWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectViewportWidthClass = retObjectViewportWidth.getClass();
+                    // java.lang.reflect.Method retObjectViewportWidthMethod = retObjectViewportWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectViewportWidthMethod.invoke(retObjectViewportWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectViewportWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectViewportWidth_ToString);
+                    return retObjectViewportWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportViewportWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectViewportWidth != null ? retObjectViewportWidth.getClass() : "null", retObjectViewportWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportViewportWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -158,13 +158,32 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
             retObjectDAdvise = classInstance.Invoke("DAdvise", pFormatetc.getJCRefOut(), advf == null ? null : advf.getJCOInstance(), adviseSink == null ? null : adviseSink.getJCOInstance(), connection.getJCRefOut());
             return (int)retObjectDAdvise;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDAdviseError = true;
             java.lang.String retObjectDAdvise_ToString = retObjectDAdvise == null ? "null" : retObjectDAdvise.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDAdviseNumber = (java.lang.Number)retObjectDAdvise;
-                return retObjectDAdviseNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDAdvise != null ? retObjectDAdvise.getClass() : "null", retObjectDAdvise_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDAdvise != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDAdviseClass = retObjectDAdvise.getClass();
+                    // java.lang.reflect.Method retObjectDAdviseMethod = retObjectDAdviseClass.getMethod("intValue");
+                    // return (int)retObjectDAdviseMethod.invoke(retObjectDAdvise);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDAdviseNumber = java.text.NumberFormat.getInstance().parse(retObjectDAdvise_ToString);
+                    return retObjectDAdviseNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDAdviseError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDAdvise != null ? retObjectDAdvise.getClass() : "null", retObjectDAdvise_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDAdviseError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -179,13 +198,32 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
             retObjectEnumDAdvise = classInstance.Invoke("EnumDAdvise", enumAdvise.getJCRefOut());
             return (int)retObjectEnumDAdvise;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEnumDAdviseError = true;
             java.lang.String retObjectEnumDAdvise_ToString = retObjectEnumDAdvise == null ? "null" : retObjectEnumDAdvise.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEnumDAdviseNumber = (java.lang.Number)retObjectEnumDAdvise;
-                return retObjectEnumDAdviseNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEnumDAdvise != null ? retObjectEnumDAdvise.getClass() : "null", retObjectEnumDAdvise_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEnumDAdvise != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEnumDAdviseClass = retObjectEnumDAdvise.getClass();
+                    // java.lang.reflect.Method retObjectEnumDAdviseMethod = retObjectEnumDAdviseClass.getMethod("intValue");
+                    // return (int)retObjectEnumDAdviseMethod.invoke(retObjectEnumDAdvise);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEnumDAdviseNumber = java.text.NumberFormat.getInstance().parse(retObjectEnumDAdvise_ToString);
+                    return retObjectEnumDAdviseNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEnumDAdviseError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEnumDAdvise != null ? retObjectEnumDAdvise.getClass() : "null", retObjectEnumDAdvise_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEnumDAdviseError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,13 +238,32 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
             retObjectGetCanonicalFormatEtc = classInstance.Invoke("GetCanonicalFormatEtc", formatIn.getJCRefOut(), formatOut.getJCRefOut());
             return (int)retObjectGetCanonicalFormatEtc;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCanonicalFormatEtcError = true;
             java.lang.String retObjectGetCanonicalFormatEtc_ToString = retObjectGetCanonicalFormatEtc == null ? "null" : retObjectGetCanonicalFormatEtc.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCanonicalFormatEtcNumber = (java.lang.Number)retObjectGetCanonicalFormatEtc;
-                return retObjectGetCanonicalFormatEtcNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCanonicalFormatEtc != null ? retObjectGetCanonicalFormatEtc.getClass() : "null", retObjectGetCanonicalFormatEtc_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCanonicalFormatEtc != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCanonicalFormatEtcClass = retObjectGetCanonicalFormatEtc.getClass();
+                    // java.lang.reflect.Method retObjectGetCanonicalFormatEtcMethod = retObjectGetCanonicalFormatEtcClass.getMethod("intValue");
+                    // return (int)retObjectGetCanonicalFormatEtcMethod.invoke(retObjectGetCanonicalFormatEtc);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCanonicalFormatEtcNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCanonicalFormatEtc_ToString);
+                    return retObjectGetCanonicalFormatEtcNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCanonicalFormatEtcError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCanonicalFormatEtc != null ? retObjectGetCanonicalFormatEtc.getClass() : "null", retObjectGetCanonicalFormatEtc_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCanonicalFormatEtcError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,13 +278,32 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
             retObjectQueryGetData = classInstance.Invoke("QueryGetData", format.getJCRefOut());
             return (int)retObjectQueryGetData;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportQueryGetDataError = true;
             java.lang.String retObjectQueryGetData_ToString = retObjectQueryGetData == null ? "null" : retObjectQueryGetData.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectQueryGetDataNumber = (java.lang.Number)retObjectQueryGetData;
-                return retObjectQueryGetDataNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectQueryGetData != null ? retObjectQueryGetData.getClass() : "null", retObjectQueryGetData_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectQueryGetData != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectQueryGetDataClass = retObjectQueryGetData.getClass();
+                    // java.lang.reflect.Method retObjectQueryGetDataMethod = retObjectQueryGetDataClass.getMethod("intValue");
+                    // return (int)retObjectQueryGetDataMethod.invoke(retObjectQueryGetData);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectQueryGetDataNumber = java.text.NumberFormat.getInstance().parse(retObjectQueryGetData_ToString);
+                    return retObjectQueryGetDataNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportQueryGetDataError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectQueryGetData != null ? retObjectQueryGetData.getClass() : "null", retObjectQueryGetData_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportQueryGetDataError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

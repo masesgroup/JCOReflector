@@ -216,13 +216,32 @@ public class TextEffect extends Animatable  {
             retObjectPositionCount = classInstance.Get("PositionCount");
             return (int)retObjectPositionCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPositionCountError = true;
             java.lang.String retObjectPositionCount_ToString = retObjectPositionCount == null ? "null" : retObjectPositionCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPositionCountNumber = (java.lang.Number)retObjectPositionCount;
-                return retObjectPositionCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionCount != null ? retObjectPositionCount.getClass() : "null", retObjectPositionCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPositionCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPositionCountClass = retObjectPositionCount.getClass();
+                    // java.lang.reflect.Method retObjectPositionCountMethod = retObjectPositionCountClass.getMethod("intValue");
+                    // return (int)retObjectPositionCountMethod.invoke(retObjectPositionCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPositionCountNumber = java.text.NumberFormat.getInstance().parse(retObjectPositionCount_ToString);
+                    return retObjectPositionCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPositionCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPositionCount != null ? retObjectPositionCount.getClass() : "null", retObjectPositionCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPositionCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,13 +266,32 @@ public class TextEffect extends Animatable  {
             retObjectPositionStart = classInstance.Get("PositionStart");
             return (int)retObjectPositionStart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPositionStartError = true;
             java.lang.String retObjectPositionStart_ToString = retObjectPositionStart == null ? "null" : retObjectPositionStart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPositionStartNumber = (java.lang.Number)retObjectPositionStart;
-                return retObjectPositionStartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPositionStart != null ? retObjectPositionStart.getClass() : "null", retObjectPositionStart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPositionStart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPositionStartClass = retObjectPositionStart.getClass();
+                    // java.lang.reflect.Method retObjectPositionStartMethod = retObjectPositionStartClass.getMethod("intValue");
+                    // return (int)retObjectPositionStartMethod.invoke(retObjectPositionStart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPositionStartNumber = java.text.NumberFormat.getInstance().parse(retObjectPositionStart_ToString);
+                    return retObjectPositionStartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPositionStartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPositionStart != null ? retObjectPositionStart.getClass() : "null", retObjectPositionStart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPositionStartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

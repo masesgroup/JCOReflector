@@ -234,13 +234,32 @@ public class ResolveKeySource extends TaskExtension  {
             retObjectAutoClosePasswordPromptShow = classInstance.Get("AutoClosePasswordPromptShow");
             return (int)retObjectAutoClosePasswordPromptShow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAutoClosePasswordPromptShowError = true;
             java.lang.String retObjectAutoClosePasswordPromptShow_ToString = retObjectAutoClosePasswordPromptShow == null ? "null" : retObjectAutoClosePasswordPromptShow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAutoClosePasswordPromptShowNumber = (java.lang.Number)retObjectAutoClosePasswordPromptShow;
-                return retObjectAutoClosePasswordPromptShowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoClosePasswordPromptShow != null ? retObjectAutoClosePasswordPromptShow.getClass() : "null", retObjectAutoClosePasswordPromptShow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAutoClosePasswordPromptShow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAutoClosePasswordPromptShowClass = retObjectAutoClosePasswordPromptShow.getClass();
+                    // java.lang.reflect.Method retObjectAutoClosePasswordPromptShowMethod = retObjectAutoClosePasswordPromptShowClass.getMethod("intValue");
+                    // return (int)retObjectAutoClosePasswordPromptShowMethod.invoke(retObjectAutoClosePasswordPromptShow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAutoClosePasswordPromptShowNumber = java.text.NumberFormat.getInstance().parse(retObjectAutoClosePasswordPromptShow_ToString);
+                    return retObjectAutoClosePasswordPromptShowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAutoClosePasswordPromptShowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAutoClosePasswordPromptShow != null ? retObjectAutoClosePasswordPromptShow.getClass() : "null", retObjectAutoClosePasswordPromptShow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAutoClosePasswordPromptShowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,13 +284,32 @@ public class ResolveKeySource extends TaskExtension  {
             retObjectAutoClosePasswordPromptTimeout = classInstance.Get("AutoClosePasswordPromptTimeout");
             return (int)retObjectAutoClosePasswordPromptTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAutoClosePasswordPromptTimeoutError = true;
             java.lang.String retObjectAutoClosePasswordPromptTimeout_ToString = retObjectAutoClosePasswordPromptTimeout == null ? "null" : retObjectAutoClosePasswordPromptTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAutoClosePasswordPromptTimeoutNumber = (java.lang.Number)retObjectAutoClosePasswordPromptTimeout;
-                return retObjectAutoClosePasswordPromptTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoClosePasswordPromptTimeout != null ? retObjectAutoClosePasswordPromptTimeout.getClass() : "null", retObjectAutoClosePasswordPromptTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAutoClosePasswordPromptTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAutoClosePasswordPromptTimeoutClass = retObjectAutoClosePasswordPromptTimeout.getClass();
+                    // java.lang.reflect.Method retObjectAutoClosePasswordPromptTimeoutMethod = retObjectAutoClosePasswordPromptTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectAutoClosePasswordPromptTimeoutMethod.invoke(retObjectAutoClosePasswordPromptTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAutoClosePasswordPromptTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectAutoClosePasswordPromptTimeout_ToString);
+                    return retObjectAutoClosePasswordPromptTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAutoClosePasswordPromptTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAutoClosePasswordPromptTimeout != null ? retObjectAutoClosePasswordPromptTimeout.getClass() : "null", retObjectAutoClosePasswordPromptTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAutoClosePasswordPromptTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

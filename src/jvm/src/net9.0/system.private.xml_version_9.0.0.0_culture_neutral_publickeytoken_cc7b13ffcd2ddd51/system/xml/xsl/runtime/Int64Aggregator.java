@@ -230,13 +230,32 @@ public class Int64Aggregator extends ValueType  {
             retObjectAverageResult = classInstance.Get("AverageResult");
             return (long)retObjectAverageResult;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAverageResultError = true;
             java.lang.String retObjectAverageResult_ToString = retObjectAverageResult == null ? "null" : retObjectAverageResult.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAverageResultNumber = (java.lang.Number)retObjectAverageResult;
-                return retObjectAverageResultNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAverageResult != null ? retObjectAverageResult.getClass() : "null", retObjectAverageResult_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAverageResult != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAverageResultClass = retObjectAverageResult.getClass();
+                    // java.lang.reflect.Method retObjectAverageResultMethod = retObjectAverageResultClass.getMethod("longValue");
+                    // return (long)retObjectAverageResultMethod.invoke(retObjectAverageResult);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAverageResultNumber = java.text.NumberFormat.getInstance().parse(retObjectAverageResult_ToString);
+                    return retObjectAverageResultNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAverageResultError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAverageResult != null ? retObjectAverageResult.getClass() : "null", retObjectAverageResult_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAverageResultError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -251,13 +270,32 @@ public class Int64Aggregator extends ValueType  {
             retObjectMaximumResult = classInstance.Get("MaximumResult");
             return (long)retObjectMaximumResult;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumResultError = true;
             java.lang.String retObjectMaximumResult_ToString = retObjectMaximumResult == null ? "null" : retObjectMaximumResult.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumResultNumber = (java.lang.Number)retObjectMaximumResult;
-                return retObjectMaximumResultNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumResult != null ? retObjectMaximumResult.getClass() : "null", retObjectMaximumResult_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumResult != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumResultClass = retObjectMaximumResult.getClass();
+                    // java.lang.reflect.Method retObjectMaximumResultMethod = retObjectMaximumResultClass.getMethod("longValue");
+                    // return (long)retObjectMaximumResultMethod.invoke(retObjectMaximumResult);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumResultNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumResult_ToString);
+                    return retObjectMaximumResultNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumResultError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumResult != null ? retObjectMaximumResult.getClass() : "null", retObjectMaximumResult_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumResultError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -272,13 +310,32 @@ public class Int64Aggregator extends ValueType  {
             retObjectMinimumResult = classInstance.Get("MinimumResult");
             return (long)retObjectMinimumResult;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinimumResultError = true;
             java.lang.String retObjectMinimumResult_ToString = retObjectMinimumResult == null ? "null" : retObjectMinimumResult.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinimumResultNumber = (java.lang.Number)retObjectMinimumResult;
-                return retObjectMinimumResultNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMinimumResult != null ? retObjectMinimumResult.getClass() : "null", retObjectMinimumResult_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinimumResult != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinimumResultClass = retObjectMinimumResult.getClass();
+                    // java.lang.reflect.Method retObjectMinimumResultMethod = retObjectMinimumResultClass.getMethod("longValue");
+                    // return (long)retObjectMinimumResultMethod.invoke(retObjectMinimumResult);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinimumResultNumber = java.text.NumberFormat.getInstance().parse(retObjectMinimumResult_ToString);
+                    return retObjectMinimumResultNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinimumResultError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinimumResult != null ? retObjectMinimumResult.getClass() : "null", retObjectMinimumResult_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinimumResultError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -293,13 +350,32 @@ public class Int64Aggregator extends ValueType  {
             retObjectSumResult = classInstance.Get("SumResult");
             return (long)retObjectSumResult;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSumResultError = true;
             java.lang.String retObjectSumResult_ToString = retObjectSumResult == null ? "null" : retObjectSumResult.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSumResultNumber = (java.lang.Number)retObjectSumResult;
-                return retObjectSumResultNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSumResult != null ? retObjectSumResult.getClass() : "null", retObjectSumResult_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSumResult != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSumResultClass = retObjectSumResult.getClass();
+                    // java.lang.reflect.Method retObjectSumResultMethod = retObjectSumResultClass.getMethod("longValue");
+                    // return (long)retObjectSumResultMethod.invoke(retObjectSumResult);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSumResultNumber = java.text.NumberFormat.getInstance().parse(retObjectSumResult_ToString);
+                    return retObjectSumResultNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSumResultError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSumResult != null ? retObjectSumResult.getClass() : "null", retObjectSumResult_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSumResultError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

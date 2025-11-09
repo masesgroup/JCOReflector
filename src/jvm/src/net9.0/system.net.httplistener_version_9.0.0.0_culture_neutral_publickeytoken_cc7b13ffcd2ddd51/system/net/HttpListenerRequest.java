@@ -307,13 +307,32 @@ public class HttpListenerRequest extends NetObject  {
             retObjectClientCertificateError = classInstance.Get("ClientCertificateError");
             return (int)retObjectClientCertificateError;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportClientCertificateErrorError = true;
             java.lang.String retObjectClientCertificateError_ToString = retObjectClientCertificateError == null ? "null" : retObjectClientCertificateError.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectClientCertificateErrorNumber = (java.lang.Number)retObjectClientCertificateError;
-                return retObjectClientCertificateErrorNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectClientCertificateError != null ? retObjectClientCertificateError.getClass() : "null", retObjectClientCertificateError_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectClientCertificateError != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectClientCertificateErrorClass = retObjectClientCertificateError.getClass();
+                    // java.lang.reflect.Method retObjectClientCertificateErrorMethod = retObjectClientCertificateErrorClass.getMethod("intValue");
+                    // return (int)retObjectClientCertificateErrorMethod.invoke(retObjectClientCertificateError);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectClientCertificateErrorNumber = java.text.NumberFormat.getInstance().parse(retObjectClientCertificateError_ToString);
+                    return retObjectClientCertificateErrorNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportClientCertificateErrorError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectClientCertificateError != null ? retObjectClientCertificateError.getClass() : "null", retObjectClientCertificateError_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportClientCertificateErrorError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -328,13 +347,32 @@ public class HttpListenerRequest extends NetObject  {
             retObjectContentLength64 = classInstance.Get("ContentLength64");
             return (long)retObjectContentLength64;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportContentLength64Error = true;
             java.lang.String retObjectContentLength64_ToString = retObjectContentLength64 == null ? "null" : retObjectContentLength64.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectContentLength64Number = (java.lang.Number)retObjectContentLength64;
-                return retObjectContentLength64Number.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectContentLength64 != null ? retObjectContentLength64.getClass() : "null", retObjectContentLength64_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectContentLength64 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectContentLength64Class = retObjectContentLength64.getClass();
+                    // java.lang.reflect.Method retObjectContentLength64Method = retObjectContentLength64Class.getMethod("longValue");
+                    // return (long)retObjectContentLength64Method.invoke(retObjectContentLength64);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectContentLength64Number = java.text.NumberFormat.getInstance().parse(retObjectContentLength64_ToString);
+                    return retObjectContentLength64Number.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportContentLength64Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectContentLength64 != null ? retObjectContentLength64.getClass() : "null", retObjectContentLength64_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportContentLength64Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -176,13 +176,32 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
             retObjectIndexFromContainer = classInstance.Invoke("IndexFromContainer", container == null ? null : container.getJCOInstance(), returnLocalIndex);
             return (int)retObjectIndexFromContainer;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexFromContainerError = true;
             java.lang.String retObjectIndexFromContainer_ToString = retObjectIndexFromContainer == null ? "null" : retObjectIndexFromContainer.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndexFromContainerNumber = (java.lang.Number)retObjectIndexFromContainer;
-                return retObjectIndexFromContainerNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexFromContainer != null ? retObjectIndexFromContainer.getClass() : "null", retObjectIndexFromContainer_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexFromContainer != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexFromContainerClass = retObjectIndexFromContainer.getClass();
+                    // java.lang.reflect.Method retObjectIndexFromContainerMethod = retObjectIndexFromContainerClass.getMethod("intValue");
+                    // return (int)retObjectIndexFromContainerMethod.invoke(retObjectIndexFromContainer);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexFromContainerNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexFromContainer_ToString);
+                    return retObjectIndexFromContainerNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexFromContainerError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexFromContainer != null ? retObjectIndexFromContainer.getClass() : "null", retObjectIndexFromContainer_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexFromContainerError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
             retObjectIndexFromContainer = classInstance.Invoke("IndexFromContainer", container == null ? null : container.getJCOInstance());
             return (int)retObjectIndexFromContainer;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexFromContainerError = true;
             java.lang.String retObjectIndexFromContainer_ToString = retObjectIndexFromContainer == null ? "null" : retObjectIndexFromContainer.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndexFromContainerNumber = (java.lang.Number)retObjectIndexFromContainer;
-                return retObjectIndexFromContainerNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexFromContainer != null ? retObjectIndexFromContainer.getClass() : "null", retObjectIndexFromContainer_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexFromContainer != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexFromContainerClass = retObjectIndexFromContainer.getClass();
+                    // java.lang.reflect.Method retObjectIndexFromContainerMethod = retObjectIndexFromContainerClass.getMethod("intValue");
+                    // return (int)retObjectIndexFromContainerMethod.invoke(retObjectIndexFromContainer);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexFromContainerNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexFromContainer_ToString);
+                    return retObjectIndexFromContainerNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexFromContainerError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexFromContainer != null ? retObjectIndexFromContainer.getClass() : "null", retObjectIndexFromContainer_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexFromContainerError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

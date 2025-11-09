@@ -162,13 +162,32 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
             retObjectGetSiteId = classInstance.Invoke("GetSiteId");
             return (int)retObjectGetSiteId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetSiteIdError = true;
             java.lang.String retObjectGetSiteId_ToString = retObjectGetSiteId == null ? "null" : retObjectGetSiteId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetSiteIdNumber = (java.lang.Number)retObjectGetSiteId;
-                return retObjectGetSiteIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSiteId != null ? retObjectGetSiteId.getClass() : "null", retObjectGetSiteId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetSiteId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetSiteIdClass = retObjectGetSiteId.getClass();
+                    // java.lang.reflect.Method retObjectGetSiteIdMethod = retObjectGetSiteIdClass.getMethod("intValue");
+                    // return (int)retObjectGetSiteIdMethod.invoke(retObjectGetSiteId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetSiteIdNumber = java.text.NumberFormat.getInstance().parse(retObjectGetSiteId_ToString);
+                    return retObjectGetSiteIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetSiteIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetSiteId != null ? retObjectGetSiteId.getClass() : "null", retObjectGetSiteId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetSiteIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

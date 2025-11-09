@@ -195,13 +195,32 @@ public class ProcessInfo extends NetObject  {
             retObjectPeakMemoryUsed = classInstance.Get("PeakMemoryUsed");
             return (int)retObjectPeakMemoryUsed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPeakMemoryUsedError = true;
             java.lang.String retObjectPeakMemoryUsed_ToString = retObjectPeakMemoryUsed == null ? "null" : retObjectPeakMemoryUsed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPeakMemoryUsedNumber = (java.lang.Number)retObjectPeakMemoryUsed;
-                return retObjectPeakMemoryUsedNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPeakMemoryUsed != null ? retObjectPeakMemoryUsed.getClass() : "null", retObjectPeakMemoryUsed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPeakMemoryUsed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPeakMemoryUsedClass = retObjectPeakMemoryUsed.getClass();
+                    // java.lang.reflect.Method retObjectPeakMemoryUsedMethod = retObjectPeakMemoryUsedClass.getMethod("intValue");
+                    // return (int)retObjectPeakMemoryUsedMethod.invoke(retObjectPeakMemoryUsed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPeakMemoryUsedNumber = java.text.NumberFormat.getInstance().parse(retObjectPeakMemoryUsed_ToString);
+                    return retObjectPeakMemoryUsedNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPeakMemoryUsedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPeakMemoryUsed != null ? retObjectPeakMemoryUsed.getClass() : "null", retObjectPeakMemoryUsed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPeakMemoryUsedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,13 +235,32 @@ public class ProcessInfo extends NetObject  {
             retObjectProcessID = classInstance.Get("ProcessID");
             return (int)retObjectProcessID;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProcessIDError = true;
             java.lang.String retObjectProcessID_ToString = retObjectProcessID == null ? "null" : retObjectProcessID.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProcessIDNumber = (java.lang.Number)retObjectProcessID;
-                return retObjectProcessIDNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProcessID != null ? retObjectProcessID.getClass() : "null", retObjectProcessID_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProcessID != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProcessIDClass = retObjectProcessID.getClass();
+                    // java.lang.reflect.Method retObjectProcessIDMethod = retObjectProcessIDClass.getMethod("intValue");
+                    // return (int)retObjectProcessIDMethod.invoke(retObjectProcessID);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProcessIDNumber = java.text.NumberFormat.getInstance().parse(retObjectProcessID_ToString);
+                    return retObjectProcessIDNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProcessIDError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProcessID != null ? retObjectProcessID.getClass() : "null", retObjectProcessID_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProcessIDError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -237,13 +275,32 @@ public class ProcessInfo extends NetObject  {
             retObjectRequestCount = classInstance.Get("RequestCount");
             return (int)retObjectRequestCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRequestCountError = true;
             java.lang.String retObjectRequestCount_ToString = retObjectRequestCount == null ? "null" : retObjectRequestCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRequestCountNumber = (java.lang.Number)retObjectRequestCount;
-                return retObjectRequestCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestCount != null ? retObjectRequestCount.getClass() : "null", retObjectRequestCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRequestCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRequestCountClass = retObjectRequestCount.getClass();
+                    // java.lang.reflect.Method retObjectRequestCountMethod = retObjectRequestCountClass.getMethod("intValue");
+                    // return (int)retObjectRequestCountMethod.invoke(retObjectRequestCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRequestCountNumber = java.text.NumberFormat.getInstance().parse(retObjectRequestCount_ToString);
+                    return retObjectRequestCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRequestCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRequestCount != null ? retObjectRequestCount.getClass() : "null", retObjectRequestCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRequestCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

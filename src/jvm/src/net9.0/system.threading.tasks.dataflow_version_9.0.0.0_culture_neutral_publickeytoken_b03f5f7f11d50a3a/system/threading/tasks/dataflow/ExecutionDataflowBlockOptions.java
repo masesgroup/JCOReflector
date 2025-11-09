@@ -196,13 +196,32 @@ public class ExecutionDataflowBlockOptions extends DataflowBlockOptions  {
             retObjectMaxDegreeOfParallelism = classInstance.Get("MaxDegreeOfParallelism");
             return (int)retObjectMaxDegreeOfParallelism;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxDegreeOfParallelismError = true;
             java.lang.String retObjectMaxDegreeOfParallelism_ToString = retObjectMaxDegreeOfParallelism == null ? "null" : retObjectMaxDegreeOfParallelism.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxDegreeOfParallelismNumber = (java.lang.Number)retObjectMaxDegreeOfParallelism;
-                return retObjectMaxDegreeOfParallelismNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDegreeOfParallelism != null ? retObjectMaxDegreeOfParallelism.getClass() : "null", retObjectMaxDegreeOfParallelism_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxDegreeOfParallelism != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxDegreeOfParallelismClass = retObjectMaxDegreeOfParallelism.getClass();
+                    // java.lang.reflect.Method retObjectMaxDegreeOfParallelismMethod = retObjectMaxDegreeOfParallelismClass.getMethod("intValue");
+                    // return (int)retObjectMaxDegreeOfParallelismMethod.invoke(retObjectMaxDegreeOfParallelism);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxDegreeOfParallelismNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxDegreeOfParallelism_ToString);
+                    return retObjectMaxDegreeOfParallelismNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxDegreeOfParallelismError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxDegreeOfParallelism != null ? retObjectMaxDegreeOfParallelism.getClass() : "null", retObjectMaxDegreeOfParallelism_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxDegreeOfParallelismError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

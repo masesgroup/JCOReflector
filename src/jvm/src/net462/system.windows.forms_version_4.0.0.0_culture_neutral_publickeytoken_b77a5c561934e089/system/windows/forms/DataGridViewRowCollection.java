@@ -190,13 +190,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectAdd = classInstance.Invoke("Add");
             return (int)retObjectAdd;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddError = true;
             java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
-                return retObjectAddNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdd != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddClass = retObjectAdd.getClass();
+                    // java.lang.reflect.Method retObjectAddMethod = retObjectAddClass.getMethod("intValue");
+                    // return (int)retObjectAddMethod.invoke(retObjectAdd);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddNumber = java.text.NumberFormat.getInstance().parse(retObjectAdd_ToString);
+                    return retObjectAddNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,13 +230,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectAdd = classInstance.Invoke("Add", count);
             return (int)retObjectAdd;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddError = true;
             java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
-                return retObjectAddNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdd != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddClass = retObjectAdd.getClass();
+                    // java.lang.reflect.Method retObjectAddMethod = retObjectAddClass.getMethod("intValue");
+                    // return (int)retObjectAddMethod.invoke(retObjectAdd);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddNumber = java.text.NumberFormat.getInstance().parse(retObjectAdd_ToString);
+                    return retObjectAddNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,13 +270,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectAdd = classInstance.Invoke("Add", (java.lang.Object)toObjectFromArray(values));
             return (int)retObjectAdd;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddError = true;
             java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
-                return retObjectAddNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdd != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddClass = retObjectAdd.getClass();
+                    // java.lang.reflect.Method retObjectAddMethod = retObjectAddClass.getMethod("intValue");
+                    // return (int)retObjectAddMethod.invoke(retObjectAdd);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddNumber = java.text.NumberFormat.getInstance().parse(retObjectAdd_ToString);
+                    return retObjectAddNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -253,13 +310,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectAdd = classInstance.Invoke("Add", dataGridViewRow == null ? null : dataGridViewRow.getJCOInstance());
             return (int)retObjectAdd;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddError = true;
             java.lang.String retObjectAdd_ToString = retObjectAdd == null ? "null" : retObjectAdd.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
-                return retObjectAddNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdd != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddClass = retObjectAdd.getClass();
+                    // java.lang.reflect.Method retObjectAddMethod = retObjectAddClass.getMethod("intValue");
+                    // return (int)retObjectAddMethod.invoke(retObjectAdd);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddNumber = java.text.NumberFormat.getInstance().parse(retObjectAdd_ToString);
+                    return retObjectAddNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdd != null ? retObjectAdd.getClass() : "null", retObjectAdd_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -274,13 +350,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectAddCopies = classInstance.Invoke("AddCopies", indexSource, count);
             return (int)retObjectAddCopies;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddCopiesError = true;
             java.lang.String retObjectAddCopies_ToString = retObjectAddCopies == null ? "null" : retObjectAddCopies.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddCopiesNumber = (java.lang.Number)retObjectAddCopies;
-                return retObjectAddCopiesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAddCopies != null ? retObjectAddCopies.getClass() : "null", retObjectAddCopies_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAddCopies != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddCopiesClass = retObjectAddCopies.getClass();
+                    // java.lang.reflect.Method retObjectAddCopiesMethod = retObjectAddCopiesClass.getMethod("intValue");
+                    // return (int)retObjectAddCopiesMethod.invoke(retObjectAddCopies);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddCopiesNumber = java.text.NumberFormat.getInstance().parse(retObjectAddCopies_ToString);
+                    return retObjectAddCopiesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddCopiesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAddCopies != null ? retObjectAddCopies.getClass() : "null", retObjectAddCopies_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddCopiesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -295,13 +390,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectAddCopy = classInstance.Invoke("AddCopy", indexSource);
             return (int)retObjectAddCopy;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddCopyError = true;
             java.lang.String retObjectAddCopy_ToString = retObjectAddCopy == null ? "null" : retObjectAddCopy.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddCopyNumber = (java.lang.Number)retObjectAddCopy;
-                return retObjectAddCopyNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAddCopy != null ? retObjectAddCopy.getClass() : "null", retObjectAddCopy_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAddCopy != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddCopyClass = retObjectAddCopy.getClass();
+                    // java.lang.reflect.Method retObjectAddCopyMethod = retObjectAddCopyClass.getMethod("intValue");
+                    // return (int)retObjectAddCopyMethod.invoke(retObjectAddCopy);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddCopyNumber = java.text.NumberFormat.getInstance().parse(retObjectAddCopy_ToString);
+                    return retObjectAddCopyNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddCopyError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAddCopy != null ? retObjectAddCopy.getClass() : "null", retObjectAddCopy_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddCopyError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -316,13 +430,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetFirstRow = classInstance.Invoke("GetFirstRow", includeFilter == null ? null : includeFilter.getJCOInstance());
             return (int)retObjectGetFirstRow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetFirstRowError = true;
             java.lang.String retObjectGetFirstRow_ToString = retObjectGetFirstRow == null ? "null" : retObjectGetFirstRow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetFirstRowNumber = (java.lang.Number)retObjectGetFirstRow;
-                return retObjectGetFirstRowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetFirstRow != null ? retObjectGetFirstRow.getClass() : "null", retObjectGetFirstRow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetFirstRow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetFirstRowClass = retObjectGetFirstRow.getClass();
+                    // java.lang.reflect.Method retObjectGetFirstRowMethod = retObjectGetFirstRowClass.getMethod("intValue");
+                    // return (int)retObjectGetFirstRowMethod.invoke(retObjectGetFirstRow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetFirstRowNumber = java.text.NumberFormat.getInstance().parse(retObjectGetFirstRow_ToString);
+                    return retObjectGetFirstRowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetFirstRowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetFirstRow != null ? retObjectGetFirstRow.getClass() : "null", retObjectGetFirstRow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetFirstRowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -337,13 +470,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetFirstRow = classInstance.Invoke("GetFirstRow", includeFilter == null ? null : includeFilter.getJCOInstance(), excludeFilter == null ? null : excludeFilter.getJCOInstance());
             return (int)retObjectGetFirstRow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetFirstRowError = true;
             java.lang.String retObjectGetFirstRow_ToString = retObjectGetFirstRow == null ? "null" : retObjectGetFirstRow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetFirstRowNumber = (java.lang.Number)retObjectGetFirstRow;
-                return retObjectGetFirstRowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetFirstRow != null ? retObjectGetFirstRow.getClass() : "null", retObjectGetFirstRow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetFirstRow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetFirstRowClass = retObjectGetFirstRow.getClass();
+                    // java.lang.reflect.Method retObjectGetFirstRowMethod = retObjectGetFirstRowClass.getMethod("intValue");
+                    // return (int)retObjectGetFirstRowMethod.invoke(retObjectGetFirstRow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetFirstRowNumber = java.text.NumberFormat.getInstance().parse(retObjectGetFirstRow_ToString);
+                    return retObjectGetFirstRowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetFirstRowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetFirstRow != null ? retObjectGetFirstRow.getClass() : "null", retObjectGetFirstRow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetFirstRowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -358,13 +510,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetLastRow = classInstance.Invoke("GetLastRow", includeFilter == null ? null : includeFilter.getJCOInstance());
             return (int)retObjectGetLastRow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetLastRowError = true;
             java.lang.String retObjectGetLastRow_ToString = retObjectGetLastRow == null ? "null" : retObjectGetLastRow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetLastRowNumber = (java.lang.Number)retObjectGetLastRow;
-                return retObjectGetLastRowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLastRow != null ? retObjectGetLastRow.getClass() : "null", retObjectGetLastRow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetLastRow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetLastRowClass = retObjectGetLastRow.getClass();
+                    // java.lang.reflect.Method retObjectGetLastRowMethod = retObjectGetLastRowClass.getMethod("intValue");
+                    // return (int)retObjectGetLastRowMethod.invoke(retObjectGetLastRow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetLastRowNumber = java.text.NumberFormat.getInstance().parse(retObjectGetLastRow_ToString);
+                    return retObjectGetLastRowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetLastRowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetLastRow != null ? retObjectGetLastRow.getClass() : "null", retObjectGetLastRow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetLastRowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -379,13 +550,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetNextRow = classInstance.Invoke("GetNextRow", indexStart, includeFilter == null ? null : includeFilter.getJCOInstance());
             return (int)retObjectGetNextRow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetNextRowError = true;
             java.lang.String retObjectGetNextRow_ToString = retObjectGetNextRow == null ? "null" : retObjectGetNextRow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetNextRowNumber = (java.lang.Number)retObjectGetNextRow;
-                return retObjectGetNextRowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNextRow != null ? retObjectGetNextRow.getClass() : "null", retObjectGetNextRow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetNextRow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetNextRowClass = retObjectGetNextRow.getClass();
+                    // java.lang.reflect.Method retObjectGetNextRowMethod = retObjectGetNextRowClass.getMethod("intValue");
+                    // return (int)retObjectGetNextRowMethod.invoke(retObjectGetNextRow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetNextRowNumber = java.text.NumberFormat.getInstance().parse(retObjectGetNextRow_ToString);
+                    return retObjectGetNextRowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetNextRowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetNextRow != null ? retObjectGetNextRow.getClass() : "null", retObjectGetNextRow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetNextRowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -400,13 +590,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetNextRow = classInstance.Invoke("GetNextRow", indexStart, includeFilter == null ? null : includeFilter.getJCOInstance(), excludeFilter == null ? null : excludeFilter.getJCOInstance());
             return (int)retObjectGetNextRow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetNextRowError = true;
             java.lang.String retObjectGetNextRow_ToString = retObjectGetNextRow == null ? "null" : retObjectGetNextRow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetNextRowNumber = (java.lang.Number)retObjectGetNextRow;
-                return retObjectGetNextRowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNextRow != null ? retObjectGetNextRow.getClass() : "null", retObjectGetNextRow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetNextRow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetNextRowClass = retObjectGetNextRow.getClass();
+                    // java.lang.reflect.Method retObjectGetNextRowMethod = retObjectGetNextRowClass.getMethod("intValue");
+                    // return (int)retObjectGetNextRowMethod.invoke(retObjectGetNextRow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetNextRowNumber = java.text.NumberFormat.getInstance().parse(retObjectGetNextRow_ToString);
+                    return retObjectGetNextRowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetNextRowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetNextRow != null ? retObjectGetNextRow.getClass() : "null", retObjectGetNextRow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetNextRowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -421,13 +630,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetPreviousRow = classInstance.Invoke("GetPreviousRow", indexStart, includeFilter == null ? null : includeFilter.getJCOInstance());
             return (int)retObjectGetPreviousRow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetPreviousRowError = true;
             java.lang.String retObjectGetPreviousRow_ToString = retObjectGetPreviousRow == null ? "null" : retObjectGetPreviousRow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetPreviousRowNumber = (java.lang.Number)retObjectGetPreviousRow;
-                return retObjectGetPreviousRowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreviousRow != null ? retObjectGetPreviousRow.getClass() : "null", retObjectGetPreviousRow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetPreviousRow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetPreviousRowClass = retObjectGetPreviousRow.getClass();
+                    // java.lang.reflect.Method retObjectGetPreviousRowMethod = retObjectGetPreviousRowClass.getMethod("intValue");
+                    // return (int)retObjectGetPreviousRowMethod.invoke(retObjectGetPreviousRow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetPreviousRowNumber = java.text.NumberFormat.getInstance().parse(retObjectGetPreviousRow_ToString);
+                    return retObjectGetPreviousRowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetPreviousRowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetPreviousRow != null ? retObjectGetPreviousRow.getClass() : "null", retObjectGetPreviousRow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetPreviousRowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -442,13 +670,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetPreviousRow = classInstance.Invoke("GetPreviousRow", indexStart, includeFilter == null ? null : includeFilter.getJCOInstance(), excludeFilter == null ? null : excludeFilter.getJCOInstance());
             return (int)retObjectGetPreviousRow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetPreviousRowError = true;
             java.lang.String retObjectGetPreviousRow_ToString = retObjectGetPreviousRow == null ? "null" : retObjectGetPreviousRow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetPreviousRowNumber = (java.lang.Number)retObjectGetPreviousRow;
-                return retObjectGetPreviousRowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPreviousRow != null ? retObjectGetPreviousRow.getClass() : "null", retObjectGetPreviousRow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetPreviousRow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetPreviousRowClass = retObjectGetPreviousRow.getClass();
+                    // java.lang.reflect.Method retObjectGetPreviousRowMethod = retObjectGetPreviousRowClass.getMethod("intValue");
+                    // return (int)retObjectGetPreviousRowMethod.invoke(retObjectGetPreviousRow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetPreviousRowNumber = java.text.NumberFormat.getInstance().parse(retObjectGetPreviousRow_ToString);
+                    return retObjectGetPreviousRowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetPreviousRowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetPreviousRow != null ? retObjectGetPreviousRow.getClass() : "null", retObjectGetPreviousRow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetPreviousRowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -463,13 +710,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetRowCount = classInstance.Invoke("GetRowCount", includeFilter == null ? null : includeFilter.getJCOInstance());
             return (int)retObjectGetRowCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetRowCountError = true;
             java.lang.String retObjectGetRowCount_ToString = retObjectGetRowCount == null ? "null" : retObjectGetRowCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetRowCountNumber = (java.lang.Number)retObjectGetRowCount;
-                return retObjectGetRowCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRowCount != null ? retObjectGetRowCount.getClass() : "null", retObjectGetRowCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetRowCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetRowCountClass = retObjectGetRowCount.getClass();
+                    // java.lang.reflect.Method retObjectGetRowCountMethod = retObjectGetRowCountClass.getMethod("intValue");
+                    // return (int)retObjectGetRowCountMethod.invoke(retObjectGetRowCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetRowCountNumber = java.text.NumberFormat.getInstance().parse(retObjectGetRowCount_ToString);
+                    return retObjectGetRowCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetRowCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetRowCount != null ? retObjectGetRowCount.getClass() : "null", retObjectGetRowCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetRowCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -484,13 +750,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectGetRowsHeight = classInstance.Invoke("GetRowsHeight", includeFilter == null ? null : includeFilter.getJCOInstance());
             return (int)retObjectGetRowsHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetRowsHeightError = true;
             java.lang.String retObjectGetRowsHeight_ToString = retObjectGetRowsHeight == null ? "null" : retObjectGetRowsHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetRowsHeightNumber = (java.lang.Number)retObjectGetRowsHeight;
-                return retObjectGetRowsHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRowsHeight != null ? retObjectGetRowsHeight.getClass() : "null", retObjectGetRowsHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetRowsHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetRowsHeightClass = retObjectGetRowsHeight.getClass();
+                    // java.lang.reflect.Method retObjectGetRowsHeightMethod = retObjectGetRowsHeightClass.getMethod("intValue");
+                    // return (int)retObjectGetRowsHeightMethod.invoke(retObjectGetRowsHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetRowsHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectGetRowsHeight_ToString);
+                    return retObjectGetRowsHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetRowsHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetRowsHeight != null ? retObjectGetRowsHeight.getClass() : "null", retObjectGetRowsHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetRowsHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -505,13 +790,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectIndexOf = classInstance.Invoke("IndexOf", dataGridViewRow == null ? null : dataGridViewRow.getJCOInstance());
             return (int)retObjectIndexOf;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexOfError = true;
             java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
-                return retObjectIndexOfNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexOfClass = retObjectIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectIndexOfMethod = retObjectIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectIndexOfMethod.invoke(retObjectIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexOf_ToString);
+                    return retObjectIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -724,13 +1028,32 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
             retObjectCount = classInstance.Get("Count");
             return (int)retObjectCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCountError = true;
             java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
-                return retObjectCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCountClass = retObjectCount.getClass();
+                    // java.lang.reflect.Method retObjectCountMethod = retObjectCountClass.getMethod("intValue");
+                    // return (int)retObjectCountMethod.invoke(retObjectCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCountNumber = java.text.NumberFormat.getInstance().parse(retObjectCount_ToString);
+                    return retObjectCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

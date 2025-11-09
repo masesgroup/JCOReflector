@@ -372,13 +372,32 @@ public class CompilationSection extends ConfigurationSection  {
             retObjectMaxBatchGeneratedFileSize = classInstance.Get("MaxBatchGeneratedFileSize");
             return (int)retObjectMaxBatchGeneratedFileSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBatchGeneratedFileSizeError = true;
             java.lang.String retObjectMaxBatchGeneratedFileSize_ToString = retObjectMaxBatchGeneratedFileSize == null ? "null" : retObjectMaxBatchGeneratedFileSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBatchGeneratedFileSizeNumber = (java.lang.Number)retObjectMaxBatchGeneratedFileSize;
-                return retObjectMaxBatchGeneratedFileSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchGeneratedFileSize != null ? retObjectMaxBatchGeneratedFileSize.getClass() : "null", retObjectMaxBatchGeneratedFileSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBatchGeneratedFileSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBatchGeneratedFileSizeClass = retObjectMaxBatchGeneratedFileSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxBatchGeneratedFileSizeMethod = retObjectMaxBatchGeneratedFileSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxBatchGeneratedFileSizeMethod.invoke(retObjectMaxBatchGeneratedFileSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBatchGeneratedFileSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBatchGeneratedFileSize_ToString);
+                    return retObjectMaxBatchGeneratedFileSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBatchGeneratedFileSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBatchGeneratedFileSize != null ? retObjectMaxBatchGeneratedFileSize.getClass() : "null", retObjectMaxBatchGeneratedFileSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBatchGeneratedFileSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -403,13 +422,32 @@ public class CompilationSection extends ConfigurationSection  {
             retObjectMaxBatchSize = classInstance.Get("MaxBatchSize");
             return (int)retObjectMaxBatchSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBatchSizeError = true;
             java.lang.String retObjectMaxBatchSize_ToString = retObjectMaxBatchSize == null ? "null" : retObjectMaxBatchSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBatchSizeNumber = (java.lang.Number)retObjectMaxBatchSize;
-                return retObjectMaxBatchSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null", retObjectMaxBatchSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBatchSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBatchSizeClass = retObjectMaxBatchSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxBatchSizeMethod = retObjectMaxBatchSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxBatchSizeMethod.invoke(retObjectMaxBatchSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBatchSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBatchSize_ToString);
+                    return retObjectMaxBatchSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBatchSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null", retObjectMaxBatchSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBatchSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -434,13 +472,32 @@ public class CompilationSection extends ConfigurationSection  {
             retObjectMaxConcurrentCompilations = classInstance.Get("MaxConcurrentCompilations");
             return (int)retObjectMaxConcurrentCompilations;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxConcurrentCompilationsError = true;
             java.lang.String retObjectMaxConcurrentCompilations_ToString = retObjectMaxConcurrentCompilations == null ? "null" : retObjectMaxConcurrentCompilations.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxConcurrentCompilationsNumber = (java.lang.Number)retObjectMaxConcurrentCompilations;
-                return retObjectMaxConcurrentCompilationsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentCompilations != null ? retObjectMaxConcurrentCompilations.getClass() : "null", retObjectMaxConcurrentCompilations_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxConcurrentCompilations != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxConcurrentCompilationsClass = retObjectMaxConcurrentCompilations.getClass();
+                    // java.lang.reflect.Method retObjectMaxConcurrentCompilationsMethod = retObjectMaxConcurrentCompilationsClass.getMethod("intValue");
+                    // return (int)retObjectMaxConcurrentCompilationsMethod.invoke(retObjectMaxConcurrentCompilations);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxConcurrentCompilationsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxConcurrentCompilations_ToString);
+                    return retObjectMaxConcurrentCompilationsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxConcurrentCompilationsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxConcurrentCompilations != null ? retObjectMaxConcurrentCompilations.getClass() : "null", retObjectMaxConcurrentCompilations_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxConcurrentCompilationsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -465,13 +522,32 @@ public class CompilationSection extends ConfigurationSection  {
             retObjectNumRecompilesBeforeAppRestart = classInstance.Get("NumRecompilesBeforeAppRestart");
             return (int)retObjectNumRecompilesBeforeAppRestart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNumRecompilesBeforeAppRestartError = true;
             java.lang.String retObjectNumRecompilesBeforeAppRestart_ToString = retObjectNumRecompilesBeforeAppRestart == null ? "null" : retObjectNumRecompilesBeforeAppRestart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNumRecompilesBeforeAppRestartNumber = (java.lang.Number)retObjectNumRecompilesBeforeAppRestart;
-                return retObjectNumRecompilesBeforeAppRestartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumRecompilesBeforeAppRestart != null ? retObjectNumRecompilesBeforeAppRestart.getClass() : "null", retObjectNumRecompilesBeforeAppRestart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNumRecompilesBeforeAppRestart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNumRecompilesBeforeAppRestartClass = retObjectNumRecompilesBeforeAppRestart.getClass();
+                    // java.lang.reflect.Method retObjectNumRecompilesBeforeAppRestartMethod = retObjectNumRecompilesBeforeAppRestartClass.getMethod("intValue");
+                    // return (int)retObjectNumRecompilesBeforeAppRestartMethod.invoke(retObjectNumRecompilesBeforeAppRestart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNumRecompilesBeforeAppRestartNumber = java.text.NumberFormat.getInstance().parse(retObjectNumRecompilesBeforeAppRestart_ToString);
+                    return retObjectNumRecompilesBeforeAppRestartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNumRecompilesBeforeAppRestartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNumRecompilesBeforeAppRestart != null ? retObjectNumRecompilesBeforeAppRestart.getClass() : "null", retObjectNumRecompilesBeforeAppRestart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNumRecompilesBeforeAppRestartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

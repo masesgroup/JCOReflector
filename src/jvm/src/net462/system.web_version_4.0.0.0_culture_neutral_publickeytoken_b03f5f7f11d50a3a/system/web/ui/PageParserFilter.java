@@ -331,13 +331,32 @@ public class PageParserFilter extends NetObject  {
             retObjectNumberOfControlsAllowed = classInstance.Get("NumberOfControlsAllowed");
             return (int)retObjectNumberOfControlsAllowed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNumberOfControlsAllowedError = true;
             java.lang.String retObjectNumberOfControlsAllowed_ToString = retObjectNumberOfControlsAllowed == null ? "null" : retObjectNumberOfControlsAllowed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNumberOfControlsAllowedNumber = (java.lang.Number)retObjectNumberOfControlsAllowed;
-                return retObjectNumberOfControlsAllowedNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfControlsAllowed != null ? retObjectNumberOfControlsAllowed.getClass() : "null", retObjectNumberOfControlsAllowed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNumberOfControlsAllowed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNumberOfControlsAllowedClass = retObjectNumberOfControlsAllowed.getClass();
+                    // java.lang.reflect.Method retObjectNumberOfControlsAllowedMethod = retObjectNumberOfControlsAllowedClass.getMethod("intValue");
+                    // return (int)retObjectNumberOfControlsAllowedMethod.invoke(retObjectNumberOfControlsAllowed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNumberOfControlsAllowedNumber = java.text.NumberFormat.getInstance().parse(retObjectNumberOfControlsAllowed_ToString);
+                    return retObjectNumberOfControlsAllowedNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNumberOfControlsAllowedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNumberOfControlsAllowed != null ? retObjectNumberOfControlsAllowed.getClass() : "null", retObjectNumberOfControlsAllowed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNumberOfControlsAllowedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -352,13 +371,32 @@ public class PageParserFilter extends NetObject  {
             retObjectNumberOfDirectDependenciesAllowed = classInstance.Get("NumberOfDirectDependenciesAllowed");
             return (int)retObjectNumberOfDirectDependenciesAllowed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNumberOfDirectDependenciesAllowedError = true;
             java.lang.String retObjectNumberOfDirectDependenciesAllowed_ToString = retObjectNumberOfDirectDependenciesAllowed == null ? "null" : retObjectNumberOfDirectDependenciesAllowed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNumberOfDirectDependenciesAllowedNumber = (java.lang.Number)retObjectNumberOfDirectDependenciesAllowed;
-                return retObjectNumberOfDirectDependenciesAllowedNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfDirectDependenciesAllowed != null ? retObjectNumberOfDirectDependenciesAllowed.getClass() : "null", retObjectNumberOfDirectDependenciesAllowed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNumberOfDirectDependenciesAllowed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNumberOfDirectDependenciesAllowedClass = retObjectNumberOfDirectDependenciesAllowed.getClass();
+                    // java.lang.reflect.Method retObjectNumberOfDirectDependenciesAllowedMethod = retObjectNumberOfDirectDependenciesAllowedClass.getMethod("intValue");
+                    // return (int)retObjectNumberOfDirectDependenciesAllowedMethod.invoke(retObjectNumberOfDirectDependenciesAllowed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNumberOfDirectDependenciesAllowedNumber = java.text.NumberFormat.getInstance().parse(retObjectNumberOfDirectDependenciesAllowed_ToString);
+                    return retObjectNumberOfDirectDependenciesAllowedNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNumberOfDirectDependenciesAllowedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNumberOfDirectDependenciesAllowed != null ? retObjectNumberOfDirectDependenciesAllowed.getClass() : "null", retObjectNumberOfDirectDependenciesAllowed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNumberOfDirectDependenciesAllowedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -373,13 +411,32 @@ public class PageParserFilter extends NetObject  {
             retObjectTotalNumberOfDependenciesAllowed = classInstance.Get("TotalNumberOfDependenciesAllowed");
             return (int)retObjectTotalNumberOfDependenciesAllowed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTotalNumberOfDependenciesAllowedError = true;
             java.lang.String retObjectTotalNumberOfDependenciesAllowed_ToString = retObjectTotalNumberOfDependenciesAllowed == null ? "null" : retObjectTotalNumberOfDependenciesAllowed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTotalNumberOfDependenciesAllowedNumber = (java.lang.Number)retObjectTotalNumberOfDependenciesAllowed;
-                return retObjectTotalNumberOfDependenciesAllowedNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalNumberOfDependenciesAllowed != null ? retObjectTotalNumberOfDependenciesAllowed.getClass() : "null", retObjectTotalNumberOfDependenciesAllowed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTotalNumberOfDependenciesAllowed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTotalNumberOfDependenciesAllowedClass = retObjectTotalNumberOfDependenciesAllowed.getClass();
+                    // java.lang.reflect.Method retObjectTotalNumberOfDependenciesAllowedMethod = retObjectTotalNumberOfDependenciesAllowedClass.getMethod("intValue");
+                    // return (int)retObjectTotalNumberOfDependenciesAllowedMethod.invoke(retObjectTotalNumberOfDependenciesAllowed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTotalNumberOfDependenciesAllowedNumber = java.text.NumberFormat.getInstance().parse(retObjectTotalNumberOfDependenciesAllowed_ToString);
+                    return retObjectTotalNumberOfDependenciesAllowedNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTotalNumberOfDependenciesAllowedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTotalNumberOfDependenciesAllowed != null ? retObjectTotalNumberOfDependenciesAllowed.getClass() : "null", retObjectTotalNumberOfDependenciesAllowed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTotalNumberOfDependenciesAllowedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

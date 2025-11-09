@@ -182,13 +182,32 @@ public class ManipulationPivot extends NetObject  {
             retObjectRadius = classInstance.Get("Radius");
             return (double)retObjectRadius;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRadiusError = true;
             java.lang.String retObjectRadius_ToString = retObjectRadius == null ? "null" : retObjectRadius.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRadiusNumber = (java.lang.Number)retObjectRadius;
-                return retObjectRadiusNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRadius != null ? retObjectRadius.getClass() : "null", retObjectRadius_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRadius != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRadiusClass = retObjectRadius.getClass();
+                    // java.lang.reflect.Method retObjectRadiusMethod = retObjectRadiusClass.getMethod("doubleValue");
+                    // return (double)retObjectRadiusMethod.invoke(retObjectRadius);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRadiusNumber = java.text.NumberFormat.getInstance().parse(retObjectRadius_ToString);
+                    return retObjectRadiusNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRadiusError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRadius != null ? retObjectRadius.getClass() : "null", retObjectRadius_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRadiusError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

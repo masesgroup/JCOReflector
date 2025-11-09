@@ -262,13 +262,32 @@ public class LocalClientSecuritySettings extends NetObject  {
             retObjectCookieRenewalThresholdPercentage = classInstance.Get("CookieRenewalThresholdPercentage");
             return (int)retObjectCookieRenewalThresholdPercentage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCookieRenewalThresholdPercentageError = true;
             java.lang.String retObjectCookieRenewalThresholdPercentage_ToString = retObjectCookieRenewalThresholdPercentage == null ? "null" : retObjectCookieRenewalThresholdPercentage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCookieRenewalThresholdPercentageNumber = (java.lang.Number)retObjectCookieRenewalThresholdPercentage;
-                return retObjectCookieRenewalThresholdPercentageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCookieRenewalThresholdPercentage != null ? retObjectCookieRenewalThresholdPercentage.getClass() : "null", retObjectCookieRenewalThresholdPercentage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCookieRenewalThresholdPercentage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCookieRenewalThresholdPercentageClass = retObjectCookieRenewalThresholdPercentage.getClass();
+                    // java.lang.reflect.Method retObjectCookieRenewalThresholdPercentageMethod = retObjectCookieRenewalThresholdPercentageClass.getMethod("intValue");
+                    // return (int)retObjectCookieRenewalThresholdPercentageMethod.invoke(retObjectCookieRenewalThresholdPercentage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCookieRenewalThresholdPercentageNumber = java.text.NumberFormat.getInstance().parse(retObjectCookieRenewalThresholdPercentage_ToString);
+                    return retObjectCookieRenewalThresholdPercentageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCookieRenewalThresholdPercentageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCookieRenewalThresholdPercentage != null ? retObjectCookieRenewalThresholdPercentage.getClass() : "null", retObjectCookieRenewalThresholdPercentage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCookieRenewalThresholdPercentageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -293,13 +312,32 @@ public class LocalClientSecuritySettings extends NetObject  {
             retObjectReplayCacheSize = classInstance.Get("ReplayCacheSize");
             return (int)retObjectReplayCacheSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReplayCacheSizeError = true;
             java.lang.String retObjectReplayCacheSize_ToString = retObjectReplayCacheSize == null ? "null" : retObjectReplayCacheSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReplayCacheSizeNumber = (java.lang.Number)retObjectReplayCacheSize;
-                return retObjectReplayCacheSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReplayCacheSize != null ? retObjectReplayCacheSize.getClass() : "null", retObjectReplayCacheSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReplayCacheSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReplayCacheSizeClass = retObjectReplayCacheSize.getClass();
+                    // java.lang.reflect.Method retObjectReplayCacheSizeMethod = retObjectReplayCacheSizeClass.getMethod("intValue");
+                    // return (int)retObjectReplayCacheSizeMethod.invoke(retObjectReplayCacheSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReplayCacheSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectReplayCacheSize_ToString);
+                    return retObjectReplayCacheSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReplayCacheSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReplayCacheSize != null ? retObjectReplayCacheSize.getClass() : "null", retObjectReplayCacheSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReplayCacheSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

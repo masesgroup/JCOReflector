@@ -591,13 +591,32 @@ public class Roles extends NetObject  {
             retObjectCookieTimeout = classType.Get("CookieTimeout");
             return (int)retObjectCookieTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCookieTimeoutError = true;
             java.lang.String retObjectCookieTimeout_ToString = retObjectCookieTimeout == null ? "null" : retObjectCookieTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCookieTimeoutNumber = (java.lang.Number)retObjectCookieTimeout;
-                return retObjectCookieTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCookieTimeout != null ? retObjectCookieTimeout.getClass() : "null", retObjectCookieTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCookieTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCookieTimeoutClass = retObjectCookieTimeout.getClass();
+                    // java.lang.reflect.Method retObjectCookieTimeoutMethod = retObjectCookieTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectCookieTimeoutMethod.invoke(retObjectCookieTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCookieTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectCookieTimeout_ToString);
+                    return retObjectCookieTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCookieTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCookieTimeout != null ? retObjectCookieTimeout.getClass() : "null", retObjectCookieTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCookieTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -612,13 +631,32 @@ public class Roles extends NetObject  {
             retObjectMaxCachedResults = classType.Get("MaxCachedResults");
             return (int)retObjectMaxCachedResults;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxCachedResultsError = true;
             java.lang.String retObjectMaxCachedResults_ToString = retObjectMaxCachedResults == null ? "null" : retObjectMaxCachedResults.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxCachedResultsNumber = (java.lang.Number)retObjectMaxCachedResults;
-                return retObjectMaxCachedResultsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCachedResults != null ? retObjectMaxCachedResults.getClass() : "null", retObjectMaxCachedResults_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxCachedResults != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxCachedResultsClass = retObjectMaxCachedResults.getClass();
+                    // java.lang.reflect.Method retObjectMaxCachedResultsMethod = retObjectMaxCachedResultsClass.getMethod("intValue");
+                    // return (int)retObjectMaxCachedResultsMethod.invoke(retObjectMaxCachedResults);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxCachedResultsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxCachedResults_ToString);
+                    return retObjectMaxCachedResultsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxCachedResultsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxCachedResults != null ? retObjectMaxCachedResults.getClass() : "null", retObjectMaxCachedResults_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxCachedResultsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

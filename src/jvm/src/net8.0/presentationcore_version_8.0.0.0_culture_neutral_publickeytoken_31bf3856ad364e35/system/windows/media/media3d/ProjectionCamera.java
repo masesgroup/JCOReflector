@@ -197,13 +197,32 @@ public class ProjectionCamera extends Camera  {
             retObjectFarPlaneDistance = classInstance.Get("FarPlaneDistance");
             return (double)retObjectFarPlaneDistance;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFarPlaneDistanceError = true;
             java.lang.String retObjectFarPlaneDistance_ToString = retObjectFarPlaneDistance == null ? "null" : retObjectFarPlaneDistance.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFarPlaneDistanceNumber = (java.lang.Number)retObjectFarPlaneDistance;
-                return retObjectFarPlaneDistanceNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFarPlaneDistance != null ? retObjectFarPlaneDistance.getClass() : "null", retObjectFarPlaneDistance_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFarPlaneDistance != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFarPlaneDistanceClass = retObjectFarPlaneDistance.getClass();
+                    // java.lang.reflect.Method retObjectFarPlaneDistanceMethod = retObjectFarPlaneDistanceClass.getMethod("doubleValue");
+                    // return (double)retObjectFarPlaneDistanceMethod.invoke(retObjectFarPlaneDistance);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFarPlaneDistanceNumber = java.text.NumberFormat.getInstance().parse(retObjectFarPlaneDistance_ToString);
+                    return retObjectFarPlaneDistanceNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFarPlaneDistanceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFarPlaneDistance != null ? retObjectFarPlaneDistance.getClass() : "null", retObjectFarPlaneDistance_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFarPlaneDistanceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,13 +247,32 @@ public class ProjectionCamera extends Camera  {
             retObjectNearPlaneDistance = classInstance.Get("NearPlaneDistance");
             return (double)retObjectNearPlaneDistance;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNearPlaneDistanceError = true;
             java.lang.String retObjectNearPlaneDistance_ToString = retObjectNearPlaneDistance == null ? "null" : retObjectNearPlaneDistance.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNearPlaneDistanceNumber = (java.lang.Number)retObjectNearPlaneDistance;
-                return retObjectNearPlaneDistanceNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectNearPlaneDistance != null ? retObjectNearPlaneDistance.getClass() : "null", retObjectNearPlaneDistance_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNearPlaneDistance != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNearPlaneDistanceClass = retObjectNearPlaneDistance.getClass();
+                    // java.lang.reflect.Method retObjectNearPlaneDistanceMethod = retObjectNearPlaneDistanceClass.getMethod("doubleValue");
+                    // return (double)retObjectNearPlaneDistanceMethod.invoke(retObjectNearPlaneDistance);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNearPlaneDistanceNumber = java.text.NumberFormat.getInstance().parse(retObjectNearPlaneDistance_ToString);
+                    return retObjectNearPlaneDistanceNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNearPlaneDistanceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNearPlaneDistance != null ? retObjectNearPlaneDistance.getClass() : "null", retObjectNearPlaneDistance_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNearPlaneDistanceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

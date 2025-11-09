@@ -277,13 +277,32 @@ public class PasswordBox extends Control  {
             retObjectSelectionOpacity = classInstance.Get("SelectionOpacity");
             return (double)retObjectSelectionOpacity;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSelectionOpacityError = true;
             java.lang.String retObjectSelectionOpacity_ToString = retObjectSelectionOpacity == null ? "null" : retObjectSelectionOpacity.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSelectionOpacityNumber = (java.lang.Number)retObjectSelectionOpacity;
-                return retObjectSelectionOpacityNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionOpacity != null ? retObjectSelectionOpacity.getClass() : "null", retObjectSelectionOpacity_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSelectionOpacity != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSelectionOpacityClass = retObjectSelectionOpacity.getClass();
+                    // java.lang.reflect.Method retObjectSelectionOpacityMethod = retObjectSelectionOpacityClass.getMethod("doubleValue");
+                    // return (double)retObjectSelectionOpacityMethod.invoke(retObjectSelectionOpacity);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSelectionOpacityNumber = java.text.NumberFormat.getInstance().parse(retObjectSelectionOpacity_ToString);
+                    return retObjectSelectionOpacityNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSelectionOpacityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSelectionOpacity != null ? retObjectSelectionOpacity.getClass() : "null", retObjectSelectionOpacity_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSelectionOpacityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,13 +327,32 @@ public class PasswordBox extends Control  {
             retObjectMaxLength = classInstance.Get("MaxLength");
             return (int)retObjectMaxLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxLengthError = true;
             java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
-                return retObjectMaxLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxLengthClass = retObjectMaxLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxLengthMethod = retObjectMaxLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaxLengthMethod.invoke(retObjectMaxLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxLength_ToString);
+                    return retObjectMaxLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

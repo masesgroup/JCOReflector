@@ -392,13 +392,32 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectCurrentReadCount = classInstance.Get("CurrentReadCount");
             return (int)retObjectCurrentReadCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentReadCountError = true;
             java.lang.String retObjectCurrentReadCount_ToString = retObjectCurrentReadCount == null ? "null" : retObjectCurrentReadCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentReadCountNumber = (java.lang.Number)retObjectCurrentReadCount;
-                return retObjectCurrentReadCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentReadCount != null ? retObjectCurrentReadCount.getClass() : "null", retObjectCurrentReadCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentReadCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentReadCountClass = retObjectCurrentReadCount.getClass();
+                    // java.lang.reflect.Method retObjectCurrentReadCountMethod = retObjectCurrentReadCountClass.getMethod("intValue");
+                    // return (int)retObjectCurrentReadCountMethod.invoke(retObjectCurrentReadCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentReadCountNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentReadCount_ToString);
+                    return retObjectCurrentReadCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentReadCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentReadCount != null ? retObjectCurrentReadCount.getClass() : "null", retObjectCurrentReadCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentReadCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -413,13 +432,32 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectRecursiveReadCount = classInstance.Get("RecursiveReadCount");
             return (int)retObjectRecursiveReadCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRecursiveReadCountError = true;
             java.lang.String retObjectRecursiveReadCount_ToString = retObjectRecursiveReadCount == null ? "null" : retObjectRecursiveReadCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRecursiveReadCountNumber = (java.lang.Number)retObjectRecursiveReadCount;
-                return retObjectRecursiveReadCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecursiveReadCount != null ? retObjectRecursiveReadCount.getClass() : "null", retObjectRecursiveReadCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRecursiveReadCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRecursiveReadCountClass = retObjectRecursiveReadCount.getClass();
+                    // java.lang.reflect.Method retObjectRecursiveReadCountMethod = retObjectRecursiveReadCountClass.getMethod("intValue");
+                    // return (int)retObjectRecursiveReadCountMethod.invoke(retObjectRecursiveReadCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRecursiveReadCountNumber = java.text.NumberFormat.getInstance().parse(retObjectRecursiveReadCount_ToString);
+                    return retObjectRecursiveReadCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRecursiveReadCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRecursiveReadCount != null ? retObjectRecursiveReadCount.getClass() : "null", retObjectRecursiveReadCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRecursiveReadCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -434,13 +472,32 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectRecursiveUpgradeCount = classInstance.Get("RecursiveUpgradeCount");
             return (int)retObjectRecursiveUpgradeCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRecursiveUpgradeCountError = true;
             java.lang.String retObjectRecursiveUpgradeCount_ToString = retObjectRecursiveUpgradeCount == null ? "null" : retObjectRecursiveUpgradeCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRecursiveUpgradeCountNumber = (java.lang.Number)retObjectRecursiveUpgradeCount;
-                return retObjectRecursiveUpgradeCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecursiveUpgradeCount != null ? retObjectRecursiveUpgradeCount.getClass() : "null", retObjectRecursiveUpgradeCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRecursiveUpgradeCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRecursiveUpgradeCountClass = retObjectRecursiveUpgradeCount.getClass();
+                    // java.lang.reflect.Method retObjectRecursiveUpgradeCountMethod = retObjectRecursiveUpgradeCountClass.getMethod("intValue");
+                    // return (int)retObjectRecursiveUpgradeCountMethod.invoke(retObjectRecursiveUpgradeCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRecursiveUpgradeCountNumber = java.text.NumberFormat.getInstance().parse(retObjectRecursiveUpgradeCount_ToString);
+                    return retObjectRecursiveUpgradeCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRecursiveUpgradeCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRecursiveUpgradeCount != null ? retObjectRecursiveUpgradeCount.getClass() : "null", retObjectRecursiveUpgradeCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRecursiveUpgradeCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -455,13 +512,32 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectRecursiveWriteCount = classInstance.Get("RecursiveWriteCount");
             return (int)retObjectRecursiveWriteCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRecursiveWriteCountError = true;
             java.lang.String retObjectRecursiveWriteCount_ToString = retObjectRecursiveWriteCount == null ? "null" : retObjectRecursiveWriteCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRecursiveWriteCountNumber = (java.lang.Number)retObjectRecursiveWriteCount;
-                return retObjectRecursiveWriteCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRecursiveWriteCount != null ? retObjectRecursiveWriteCount.getClass() : "null", retObjectRecursiveWriteCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRecursiveWriteCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRecursiveWriteCountClass = retObjectRecursiveWriteCount.getClass();
+                    // java.lang.reflect.Method retObjectRecursiveWriteCountMethod = retObjectRecursiveWriteCountClass.getMethod("intValue");
+                    // return (int)retObjectRecursiveWriteCountMethod.invoke(retObjectRecursiveWriteCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRecursiveWriteCountNumber = java.text.NumberFormat.getInstance().parse(retObjectRecursiveWriteCount_ToString);
+                    return retObjectRecursiveWriteCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRecursiveWriteCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRecursiveWriteCount != null ? retObjectRecursiveWriteCount.getClass() : "null", retObjectRecursiveWriteCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRecursiveWriteCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -476,13 +552,32 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectWaitingReadCount = classInstance.Get("WaitingReadCount");
             return (int)retObjectWaitingReadCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitingReadCountError = true;
             java.lang.String retObjectWaitingReadCount_ToString = retObjectWaitingReadCount == null ? "null" : retObjectWaitingReadCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitingReadCountNumber = (java.lang.Number)retObjectWaitingReadCount;
-                return retObjectWaitingReadCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitingReadCount != null ? retObjectWaitingReadCount.getClass() : "null", retObjectWaitingReadCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitingReadCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitingReadCountClass = retObjectWaitingReadCount.getClass();
+                    // java.lang.reflect.Method retObjectWaitingReadCountMethod = retObjectWaitingReadCountClass.getMethod("intValue");
+                    // return (int)retObjectWaitingReadCountMethod.invoke(retObjectWaitingReadCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitingReadCountNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitingReadCount_ToString);
+                    return retObjectWaitingReadCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitingReadCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitingReadCount != null ? retObjectWaitingReadCount.getClass() : "null", retObjectWaitingReadCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitingReadCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -497,13 +592,32 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectWaitingUpgradeCount = classInstance.Get("WaitingUpgradeCount");
             return (int)retObjectWaitingUpgradeCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitingUpgradeCountError = true;
             java.lang.String retObjectWaitingUpgradeCount_ToString = retObjectWaitingUpgradeCount == null ? "null" : retObjectWaitingUpgradeCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitingUpgradeCountNumber = (java.lang.Number)retObjectWaitingUpgradeCount;
-                return retObjectWaitingUpgradeCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitingUpgradeCount != null ? retObjectWaitingUpgradeCount.getClass() : "null", retObjectWaitingUpgradeCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitingUpgradeCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitingUpgradeCountClass = retObjectWaitingUpgradeCount.getClass();
+                    // java.lang.reflect.Method retObjectWaitingUpgradeCountMethod = retObjectWaitingUpgradeCountClass.getMethod("intValue");
+                    // return (int)retObjectWaitingUpgradeCountMethod.invoke(retObjectWaitingUpgradeCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitingUpgradeCountNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitingUpgradeCount_ToString);
+                    return retObjectWaitingUpgradeCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitingUpgradeCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitingUpgradeCount != null ? retObjectWaitingUpgradeCount.getClass() : "null", retObjectWaitingUpgradeCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitingUpgradeCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -518,13 +632,32 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
             retObjectWaitingWriteCount = classInstance.Get("WaitingWriteCount");
             return (int)retObjectWaitingWriteCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitingWriteCountError = true;
             java.lang.String retObjectWaitingWriteCount_ToString = retObjectWaitingWriteCount == null ? "null" : retObjectWaitingWriteCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitingWriteCountNumber = (java.lang.Number)retObjectWaitingWriteCount;
-                return retObjectWaitingWriteCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitingWriteCount != null ? retObjectWaitingWriteCount.getClass() : "null", retObjectWaitingWriteCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitingWriteCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitingWriteCountClass = retObjectWaitingWriteCount.getClass();
+                    // java.lang.reflect.Method retObjectWaitingWriteCountMethod = retObjectWaitingWriteCountClass.getMethod("intValue");
+                    // return (int)retObjectWaitingWriteCountMethod.invoke(retObjectWaitingWriteCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitingWriteCountNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitingWriteCount_ToString);
+                    return retObjectWaitingWriteCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitingWriteCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitingWriteCount != null ? retObjectWaitingWriteCount.getClass() : "null", retObjectWaitingWriteCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitingWriteCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

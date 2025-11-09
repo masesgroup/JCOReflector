@@ -176,13 +176,32 @@ public class SplitterCancelEventArgs extends CancelEventArgs  {
             retObjectMouseCursorX = classInstance.Get("MouseCursorX");
             return (int)retObjectMouseCursorX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMouseCursorXError = true;
             java.lang.String retObjectMouseCursorX_ToString = retObjectMouseCursorX == null ? "null" : retObjectMouseCursorX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMouseCursorXNumber = (java.lang.Number)retObjectMouseCursorX;
-                return retObjectMouseCursorXNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMouseCursorX != null ? retObjectMouseCursorX.getClass() : "null", retObjectMouseCursorX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMouseCursorX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMouseCursorXClass = retObjectMouseCursorX.getClass();
+                    // java.lang.reflect.Method retObjectMouseCursorXMethod = retObjectMouseCursorXClass.getMethod("intValue");
+                    // return (int)retObjectMouseCursorXMethod.invoke(retObjectMouseCursorX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMouseCursorXNumber = java.text.NumberFormat.getInstance().parse(retObjectMouseCursorX_ToString);
+                    return retObjectMouseCursorXNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMouseCursorXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMouseCursorX != null ? retObjectMouseCursorX.getClass() : "null", retObjectMouseCursorX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMouseCursorXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class SplitterCancelEventArgs extends CancelEventArgs  {
             retObjectMouseCursorY = classInstance.Get("MouseCursorY");
             return (int)retObjectMouseCursorY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMouseCursorYError = true;
             java.lang.String retObjectMouseCursorY_ToString = retObjectMouseCursorY == null ? "null" : retObjectMouseCursorY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMouseCursorYNumber = (java.lang.Number)retObjectMouseCursorY;
-                return retObjectMouseCursorYNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMouseCursorY != null ? retObjectMouseCursorY.getClass() : "null", retObjectMouseCursorY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMouseCursorY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMouseCursorYClass = retObjectMouseCursorY.getClass();
+                    // java.lang.reflect.Method retObjectMouseCursorYMethod = retObjectMouseCursorYClass.getMethod("intValue");
+                    // return (int)retObjectMouseCursorYMethod.invoke(retObjectMouseCursorY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMouseCursorYNumber = java.text.NumberFormat.getInstance().parse(retObjectMouseCursorY_ToString);
+                    return retObjectMouseCursorYNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMouseCursorYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMouseCursorY != null ? retObjectMouseCursorY.getClass() : "null", retObjectMouseCursorY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMouseCursorYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,13 +256,32 @@ public class SplitterCancelEventArgs extends CancelEventArgs  {
             retObjectSplitX = classInstance.Get("SplitX");
             return (int)retObjectSplitX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSplitXError = true;
             java.lang.String retObjectSplitX_ToString = retObjectSplitX == null ? "null" : retObjectSplitX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSplitXNumber = (java.lang.Number)retObjectSplitX;
-                return retObjectSplitXNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitX != null ? retObjectSplitX.getClass() : "null", retObjectSplitX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSplitX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSplitXClass = retObjectSplitX.getClass();
+                    // java.lang.reflect.Method retObjectSplitXMethod = retObjectSplitXClass.getMethod("intValue");
+                    // return (int)retObjectSplitXMethod.invoke(retObjectSplitX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSplitXNumber = java.text.NumberFormat.getInstance().parse(retObjectSplitX_ToString);
+                    return retObjectSplitXNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSplitXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSplitX != null ? retObjectSplitX.getClass() : "null", retObjectSplitX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSplitXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,13 +306,32 @@ public class SplitterCancelEventArgs extends CancelEventArgs  {
             retObjectSplitY = classInstance.Get("SplitY");
             return (int)retObjectSplitY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSplitYError = true;
             java.lang.String retObjectSplitY_ToString = retObjectSplitY == null ? "null" : retObjectSplitY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSplitYNumber = (java.lang.Number)retObjectSplitY;
-                return retObjectSplitYNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitY != null ? retObjectSplitY.getClass() : "null", retObjectSplitY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSplitY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSplitYClass = retObjectSplitY.getClass();
+                    // java.lang.reflect.Method retObjectSplitYMethod = retObjectSplitYClass.getMethod("intValue");
+                    // return (int)retObjectSplitYMethod.invoke(retObjectSplitY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSplitYNumber = java.text.NumberFormat.getInstance().parse(retObjectSplitY_ToString);
+                    return retObjectSplitYNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSplitYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSplitY != null ? retObjectSplitY.getClass() : "null", retObjectSplitY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSplitYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -169,13 +169,32 @@ public class ChineseLunisolarCalendar extends EastAsianLunisolarCalendar  {
             retObjectGetEra = classInstance.Invoke("GetEra", time == null ? null : time.getJCOInstance());
             return (int)retObjectGetEra;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetEraError = true;
             java.lang.String retObjectGetEra_ToString = retObjectGetEra == null ? "null" : retObjectGetEra.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetEraNumber = (java.lang.Number)retObjectGetEra;
-                return retObjectGetEraNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEra != null ? retObjectGetEra.getClass() : "null", retObjectGetEra_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetEra != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetEraClass = retObjectGetEra.getClass();
+                    // java.lang.reflect.Method retObjectGetEraMethod = retObjectGetEraClass.getMethod("intValue");
+                    // return (int)retObjectGetEraMethod.invoke(retObjectGetEra);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetEraNumber = java.text.NumberFormat.getInstance().parse(retObjectGetEra_ToString);
+                    return retObjectGetEraNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetEraError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetEra != null ? retObjectGetEra.getClass() : "null", retObjectGetEra_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetEraError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

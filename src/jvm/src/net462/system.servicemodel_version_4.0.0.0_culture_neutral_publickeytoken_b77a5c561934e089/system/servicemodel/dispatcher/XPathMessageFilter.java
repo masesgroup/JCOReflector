@@ -363,13 +363,32 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
             retObjectNodeQuota = classInstance.Get("NodeQuota");
             return (int)retObjectNodeQuota;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNodeQuotaError = true;
             java.lang.String retObjectNodeQuota_ToString = retObjectNodeQuota == null ? "null" : retObjectNodeQuota.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNodeQuotaNumber = (java.lang.Number)retObjectNodeQuota;
-                return retObjectNodeQuotaNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNodeQuota != null ? retObjectNodeQuota.getClass() : "null", retObjectNodeQuota_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNodeQuota != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNodeQuotaClass = retObjectNodeQuota.getClass();
+                    // java.lang.reflect.Method retObjectNodeQuotaMethod = retObjectNodeQuotaClass.getMethod("intValue");
+                    // return (int)retObjectNodeQuotaMethod.invoke(retObjectNodeQuota);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNodeQuotaNumber = java.text.NumberFormat.getInstance().parse(retObjectNodeQuota_ToString);
+                    return retObjectNodeQuotaNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNodeQuotaError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNodeQuota != null ? retObjectNodeQuota.getClass() : "null", retObjectNodeQuota_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNodeQuotaError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

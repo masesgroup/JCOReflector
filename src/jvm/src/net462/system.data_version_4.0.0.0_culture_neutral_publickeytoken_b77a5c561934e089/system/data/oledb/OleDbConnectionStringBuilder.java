@@ -260,13 +260,32 @@ public class OleDbConnectionStringBuilder extends DbConnectionStringBuilder  {
             retObjectOleDbServices = classInstance.Get("OleDbServices");
             return (int)retObjectOleDbServices;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOleDbServicesError = true;
             java.lang.String retObjectOleDbServices_ToString = retObjectOleDbServices == null ? "null" : retObjectOleDbServices.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOleDbServicesNumber = (java.lang.Number)retObjectOleDbServices;
-                return retObjectOleDbServicesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOleDbServices != null ? retObjectOleDbServices.getClass() : "null", retObjectOleDbServices_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOleDbServices != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOleDbServicesClass = retObjectOleDbServices.getClass();
+                    // java.lang.reflect.Method retObjectOleDbServicesMethod = retObjectOleDbServicesClass.getMethod("intValue");
+                    // return (int)retObjectOleDbServicesMethod.invoke(retObjectOleDbServices);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOleDbServicesNumber = java.text.NumberFormat.getInstance().parse(retObjectOleDbServices_ToString);
+                    return retObjectOleDbServicesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOleDbServicesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOleDbServices != null ? retObjectOleDbServices.getClass() : "null", retObjectOleDbServices_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOleDbServicesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

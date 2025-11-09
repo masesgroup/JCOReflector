@@ -326,13 +326,32 @@ public class SplitContainer extends ContainerControl  {
             retObjectPanel1MinSize = classInstance.Get("Panel1MinSize");
             return (int)retObjectPanel1MinSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPanel1MinSizeError = true;
             java.lang.String retObjectPanel1MinSize_ToString = retObjectPanel1MinSize == null ? "null" : retObjectPanel1MinSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPanel1MinSizeNumber = (java.lang.Number)retObjectPanel1MinSize;
-                return retObjectPanel1MinSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPanel1MinSize != null ? retObjectPanel1MinSize.getClass() : "null", retObjectPanel1MinSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPanel1MinSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPanel1MinSizeClass = retObjectPanel1MinSize.getClass();
+                    // java.lang.reflect.Method retObjectPanel1MinSizeMethod = retObjectPanel1MinSizeClass.getMethod("intValue");
+                    // return (int)retObjectPanel1MinSizeMethod.invoke(retObjectPanel1MinSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPanel1MinSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectPanel1MinSize_ToString);
+                    return retObjectPanel1MinSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPanel1MinSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPanel1MinSize != null ? retObjectPanel1MinSize.getClass() : "null", retObjectPanel1MinSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPanel1MinSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -357,13 +376,32 @@ public class SplitContainer extends ContainerControl  {
             retObjectPanel2MinSize = classInstance.Get("Panel2MinSize");
             return (int)retObjectPanel2MinSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPanel2MinSizeError = true;
             java.lang.String retObjectPanel2MinSize_ToString = retObjectPanel2MinSize == null ? "null" : retObjectPanel2MinSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPanel2MinSizeNumber = (java.lang.Number)retObjectPanel2MinSize;
-                return retObjectPanel2MinSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPanel2MinSize != null ? retObjectPanel2MinSize.getClass() : "null", retObjectPanel2MinSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPanel2MinSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPanel2MinSizeClass = retObjectPanel2MinSize.getClass();
+                    // java.lang.reflect.Method retObjectPanel2MinSizeMethod = retObjectPanel2MinSizeClass.getMethod("intValue");
+                    // return (int)retObjectPanel2MinSizeMethod.invoke(retObjectPanel2MinSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPanel2MinSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectPanel2MinSize_ToString);
+                    return retObjectPanel2MinSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPanel2MinSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPanel2MinSize != null ? retObjectPanel2MinSize.getClass() : "null", retObjectPanel2MinSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPanel2MinSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -388,13 +426,32 @@ public class SplitContainer extends ContainerControl  {
             retObjectSplitterDistance = classInstance.Get("SplitterDistance");
             return (int)retObjectSplitterDistance;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSplitterDistanceError = true;
             java.lang.String retObjectSplitterDistance_ToString = retObjectSplitterDistance == null ? "null" : retObjectSplitterDistance.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSplitterDistanceNumber = (java.lang.Number)retObjectSplitterDistance;
-                return retObjectSplitterDistanceNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitterDistance != null ? retObjectSplitterDistance.getClass() : "null", retObjectSplitterDistance_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSplitterDistance != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSplitterDistanceClass = retObjectSplitterDistance.getClass();
+                    // java.lang.reflect.Method retObjectSplitterDistanceMethod = retObjectSplitterDistanceClass.getMethod("intValue");
+                    // return (int)retObjectSplitterDistanceMethod.invoke(retObjectSplitterDistance);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSplitterDistanceNumber = java.text.NumberFormat.getInstance().parse(retObjectSplitterDistance_ToString);
+                    return retObjectSplitterDistanceNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSplitterDistanceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSplitterDistance != null ? retObjectSplitterDistance.getClass() : "null", retObjectSplitterDistance_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSplitterDistanceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -419,13 +476,32 @@ public class SplitContainer extends ContainerControl  {
             retObjectSplitterIncrement = classInstance.Get("SplitterIncrement");
             return (int)retObjectSplitterIncrement;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSplitterIncrementError = true;
             java.lang.String retObjectSplitterIncrement_ToString = retObjectSplitterIncrement == null ? "null" : retObjectSplitterIncrement.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSplitterIncrementNumber = (java.lang.Number)retObjectSplitterIncrement;
-                return retObjectSplitterIncrementNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitterIncrement != null ? retObjectSplitterIncrement.getClass() : "null", retObjectSplitterIncrement_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSplitterIncrement != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSplitterIncrementClass = retObjectSplitterIncrement.getClass();
+                    // java.lang.reflect.Method retObjectSplitterIncrementMethod = retObjectSplitterIncrementClass.getMethod("intValue");
+                    // return (int)retObjectSplitterIncrementMethod.invoke(retObjectSplitterIncrement);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSplitterIncrementNumber = java.text.NumberFormat.getInstance().parse(retObjectSplitterIncrement_ToString);
+                    return retObjectSplitterIncrementNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSplitterIncrementError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSplitterIncrement != null ? retObjectSplitterIncrement.getClass() : "null", retObjectSplitterIncrement_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSplitterIncrementError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -450,13 +526,32 @@ public class SplitContainer extends ContainerControl  {
             retObjectSplitterWidth = classInstance.Get("SplitterWidth");
             return (int)retObjectSplitterWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSplitterWidthError = true;
             java.lang.String retObjectSplitterWidth_ToString = retObjectSplitterWidth == null ? "null" : retObjectSplitterWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSplitterWidthNumber = (java.lang.Number)retObjectSplitterWidth;
-                return retObjectSplitterWidthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSplitterWidth != null ? retObjectSplitterWidth.getClass() : "null", retObjectSplitterWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSplitterWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSplitterWidthClass = retObjectSplitterWidth.getClass();
+                    // java.lang.reflect.Method retObjectSplitterWidthMethod = retObjectSplitterWidthClass.getMethod("intValue");
+                    // return (int)retObjectSplitterWidthMethod.invoke(retObjectSplitterWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSplitterWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectSplitterWidth_ToString);
+                    return retObjectSplitterWidthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSplitterWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSplitterWidth != null ? retObjectSplitterWidth.getClass() : "null", retObjectSplitterWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSplitterWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

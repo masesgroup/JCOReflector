@@ -221,13 +221,32 @@ public class JSScanner extends NetObject  {
             retObjectGetCurrentLine = classInstance.Invoke("GetCurrentLine");
             return (int)retObjectGetCurrentLine;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCurrentLineError = true;
             java.lang.String retObjectGetCurrentLine_ToString = retObjectGetCurrentLine == null ? "null" : retObjectGetCurrentLine.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCurrentLineNumber = (java.lang.Number)retObjectGetCurrentLine;
-                return retObjectGetCurrentLineNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentLine != null ? retObjectGetCurrentLine.getClass() : "null", retObjectGetCurrentLine_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCurrentLine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCurrentLineClass = retObjectGetCurrentLine.getClass();
+                    // java.lang.reflect.Method retObjectGetCurrentLineMethod = retObjectGetCurrentLineClass.getMethod("intValue");
+                    // return (int)retObjectGetCurrentLineMethod.invoke(retObjectGetCurrentLine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCurrentLineNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCurrentLine_ToString);
+                    return retObjectGetCurrentLineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCurrentLineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCurrentLine != null ? retObjectGetCurrentLine.getClass() : "null", retObjectGetCurrentLine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCurrentLineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,13 +261,32 @@ public class JSScanner extends NetObject  {
             retObjectGetCurrentPosition = classInstance.Invoke("GetCurrentPosition", absolute);
             return (int)retObjectGetCurrentPosition;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCurrentPositionError = true;
             java.lang.String retObjectGetCurrentPosition_ToString = retObjectGetCurrentPosition == null ? "null" : retObjectGetCurrentPosition.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCurrentPositionNumber = (java.lang.Number)retObjectGetCurrentPosition;
-                return retObjectGetCurrentPositionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentPosition != null ? retObjectGetCurrentPosition.getClass() : "null", retObjectGetCurrentPosition_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCurrentPosition != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCurrentPositionClass = retObjectGetCurrentPosition.getClass();
+                    // java.lang.reflect.Method retObjectGetCurrentPositionMethod = retObjectGetCurrentPositionClass.getMethod("intValue");
+                    // return (int)retObjectGetCurrentPositionMethod.invoke(retObjectGetCurrentPosition);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCurrentPositionNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCurrentPosition_ToString);
+                    return retObjectGetCurrentPositionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCurrentPositionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCurrentPosition != null ? retObjectGetCurrentPosition.getClass() : "null", retObjectGetCurrentPosition_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCurrentPositionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -263,13 +301,32 @@ public class JSScanner extends NetObject  {
             retObjectGetStartLinePosition = classInstance.Invoke("GetStartLinePosition");
             return (int)retObjectGetStartLinePosition;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetStartLinePositionError = true;
             java.lang.String retObjectGetStartLinePosition_ToString = retObjectGetStartLinePosition == null ? "null" : retObjectGetStartLinePosition.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetStartLinePositionNumber = (java.lang.Number)retObjectGetStartLinePosition;
-                return retObjectGetStartLinePositionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetStartLinePosition != null ? retObjectGetStartLinePosition.getClass() : "null", retObjectGetStartLinePosition_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetStartLinePosition != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetStartLinePositionClass = retObjectGetStartLinePosition.getClass();
+                    // java.lang.reflect.Method retObjectGetStartLinePositionMethod = retObjectGetStartLinePositionClass.getMethod("intValue");
+                    // return (int)retObjectGetStartLinePositionMethod.invoke(retObjectGetStartLinePosition);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetStartLinePositionNumber = java.text.NumberFormat.getInstance().parse(retObjectGetStartLinePosition_ToString);
+                    return retObjectGetStartLinePositionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetStartLinePositionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetStartLinePosition != null ? retObjectGetStartLinePosition.getClass() : "null", retObjectGetStartLinePosition_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetStartLinePositionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,13 +341,32 @@ public class JSScanner extends NetObject  {
             retObjectSkipMultiLineComment = classInstance.Invoke("SkipMultiLineComment");
             return (int)retObjectSkipMultiLineComment;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSkipMultiLineCommentError = true;
             java.lang.String retObjectSkipMultiLineComment_ToString = retObjectSkipMultiLineComment == null ? "null" : retObjectSkipMultiLineComment.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSkipMultiLineCommentNumber = (java.lang.Number)retObjectSkipMultiLineComment;
-                return retObjectSkipMultiLineCommentNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSkipMultiLineComment != null ? retObjectSkipMultiLineComment.getClass() : "null", retObjectSkipMultiLineComment_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSkipMultiLineComment != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSkipMultiLineCommentClass = retObjectSkipMultiLineComment.getClass();
+                    // java.lang.reflect.Method retObjectSkipMultiLineCommentMethod = retObjectSkipMultiLineCommentClass.getMethod("intValue");
+                    // return (int)retObjectSkipMultiLineCommentMethod.invoke(retObjectSkipMultiLineComment);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSkipMultiLineCommentNumber = java.text.NumberFormat.getInstance().parse(retObjectSkipMultiLineComment_ToString);
+                    return retObjectSkipMultiLineCommentNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSkipMultiLineCommentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSkipMultiLineComment != null ? retObjectSkipMultiLineComment.getClass() : "null", retObjectSkipMultiLineComment_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSkipMultiLineCommentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

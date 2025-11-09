@@ -177,13 +177,32 @@ public class BufferModeSettings extends ConfigurationElement  {
             retObjectMaxBufferSize = classInstance.Get("MaxBufferSize");
             return (int)retObjectMaxBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBufferSizeError = true;
             java.lang.String retObjectMaxBufferSize_ToString = retObjectMaxBufferSize == null ? "null" : retObjectMaxBufferSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBufferSizeNumber = (java.lang.Number)retObjectMaxBufferSize;
-                return retObjectMaxBufferSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null", retObjectMaxBufferSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBufferSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBufferSizeClass = retObjectMaxBufferSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxBufferSizeMethod = retObjectMaxBufferSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxBufferSizeMethod.invoke(retObjectMaxBufferSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBufferSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBufferSize_ToString);
+                    return retObjectMaxBufferSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBufferSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null", retObjectMaxBufferSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBufferSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,13 +227,32 @@ public class BufferModeSettings extends ConfigurationElement  {
             retObjectMaxBufferThreads = classInstance.Get("MaxBufferThreads");
             return (int)retObjectMaxBufferThreads;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBufferThreadsError = true;
             java.lang.String retObjectMaxBufferThreads_ToString = retObjectMaxBufferThreads == null ? "null" : retObjectMaxBufferThreads.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBufferThreadsNumber = (java.lang.Number)retObjectMaxBufferThreads;
-                return retObjectMaxBufferThreadsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBufferThreads != null ? retObjectMaxBufferThreads.getClass() : "null", retObjectMaxBufferThreads_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBufferThreads != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBufferThreadsClass = retObjectMaxBufferThreads.getClass();
+                    // java.lang.reflect.Method retObjectMaxBufferThreadsMethod = retObjectMaxBufferThreadsClass.getMethod("intValue");
+                    // return (int)retObjectMaxBufferThreadsMethod.invoke(retObjectMaxBufferThreads);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBufferThreadsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBufferThreads_ToString);
+                    return retObjectMaxBufferThreadsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBufferThreadsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBufferThreads != null ? retObjectMaxBufferThreads.getClass() : "null", retObjectMaxBufferThreads_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBufferThreadsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,13 +277,32 @@ public class BufferModeSettings extends ConfigurationElement  {
             retObjectMaxFlushSize = classInstance.Get("MaxFlushSize");
             return (int)retObjectMaxFlushSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxFlushSizeError = true;
             java.lang.String retObjectMaxFlushSize_ToString = retObjectMaxFlushSize == null ? "null" : retObjectMaxFlushSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxFlushSizeNumber = (java.lang.Number)retObjectMaxFlushSize;
-                return retObjectMaxFlushSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxFlushSize != null ? retObjectMaxFlushSize.getClass() : "null", retObjectMaxFlushSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxFlushSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxFlushSizeClass = retObjectMaxFlushSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxFlushSizeMethod = retObjectMaxFlushSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxFlushSizeMethod.invoke(retObjectMaxFlushSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxFlushSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxFlushSize_ToString);
+                    return retObjectMaxFlushSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxFlushSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxFlushSize != null ? retObjectMaxFlushSize.getClass() : "null", retObjectMaxFlushSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxFlushSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -270,13 +327,32 @@ public class BufferModeSettings extends ConfigurationElement  {
             retObjectUrgentFlushThreshold = classInstance.Get("UrgentFlushThreshold");
             return (int)retObjectUrgentFlushThreshold;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUrgentFlushThresholdError = true;
             java.lang.String retObjectUrgentFlushThreshold_ToString = retObjectUrgentFlushThreshold == null ? "null" : retObjectUrgentFlushThreshold.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUrgentFlushThresholdNumber = (java.lang.Number)retObjectUrgentFlushThreshold;
-                return retObjectUrgentFlushThresholdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUrgentFlushThreshold != null ? retObjectUrgentFlushThreshold.getClass() : "null", retObjectUrgentFlushThreshold_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUrgentFlushThreshold != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUrgentFlushThresholdClass = retObjectUrgentFlushThreshold.getClass();
+                    // java.lang.reflect.Method retObjectUrgentFlushThresholdMethod = retObjectUrgentFlushThresholdClass.getMethod("intValue");
+                    // return (int)retObjectUrgentFlushThresholdMethod.invoke(retObjectUrgentFlushThreshold);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUrgentFlushThresholdNumber = java.text.NumberFormat.getInstance().parse(retObjectUrgentFlushThreshold_ToString);
+                    return retObjectUrgentFlushThresholdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUrgentFlushThresholdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUrgentFlushThreshold != null ? retObjectUrgentFlushThreshold.getClass() : "null", retObjectUrgentFlushThreshold_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUrgentFlushThresholdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

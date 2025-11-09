@@ -206,13 +206,32 @@ public class HtmlTableCell extends HtmlContainerControl  {
             retObjectColSpan = classInstance.Get("ColSpan");
             return (int)retObjectColSpan;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportColSpanError = true;
             java.lang.String retObjectColSpan_ToString = retObjectColSpan == null ? "null" : retObjectColSpan.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectColSpanNumber = (java.lang.Number)retObjectColSpan;
-                return retObjectColSpanNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColSpan != null ? retObjectColSpan.getClass() : "null", retObjectColSpan_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectColSpan != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectColSpanClass = retObjectColSpan.getClass();
+                    // java.lang.reflect.Method retObjectColSpanMethod = retObjectColSpanClass.getMethod("intValue");
+                    // return (int)retObjectColSpanMethod.invoke(retObjectColSpan);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectColSpanNumber = java.text.NumberFormat.getInstance().parse(retObjectColSpan_ToString);
+                    return retObjectColSpanNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportColSpanError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectColSpan != null ? retObjectColSpan.getClass() : "null", retObjectColSpan_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportColSpanError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -237,13 +256,32 @@ public class HtmlTableCell extends HtmlContainerControl  {
             retObjectRowSpan = classInstance.Get("RowSpan");
             return (int)retObjectRowSpan;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRowSpanError = true;
             java.lang.String retObjectRowSpan_ToString = retObjectRowSpan == null ? "null" : retObjectRowSpan.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRowSpanNumber = (java.lang.Number)retObjectRowSpan;
-                return retObjectRowSpanNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null", retObjectRowSpan_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRowSpan != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRowSpanClass = retObjectRowSpan.getClass();
+                    // java.lang.reflect.Method retObjectRowSpanMethod = retObjectRowSpanClass.getMethod("intValue");
+                    // return (int)retObjectRowSpanMethod.invoke(retObjectRowSpan);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRowSpanNumber = java.text.NumberFormat.getInstance().parse(retObjectRowSpan_ToString);
+                    return retObjectRowSpanNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRowSpanError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null", retObjectRowSpan_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRowSpanError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

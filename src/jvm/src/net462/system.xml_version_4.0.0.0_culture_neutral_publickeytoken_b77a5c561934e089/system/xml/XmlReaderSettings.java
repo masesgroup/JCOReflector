@@ -383,13 +383,32 @@ public class XmlReaderSettings extends NetObject  {
             retObjectLineNumberOffset = classInstance.Get("LineNumberOffset");
             return (int)retObjectLineNumberOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLineNumberOffsetError = true;
             java.lang.String retObjectLineNumberOffset_ToString = retObjectLineNumberOffset == null ? "null" : retObjectLineNumberOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLineNumberOffsetNumber = (java.lang.Number)retObjectLineNumberOffset;
-                return retObjectLineNumberOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumberOffset != null ? retObjectLineNumberOffset.getClass() : "null", retObjectLineNumberOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLineNumberOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLineNumberOffsetClass = retObjectLineNumberOffset.getClass();
+                    // java.lang.reflect.Method retObjectLineNumberOffsetMethod = retObjectLineNumberOffsetClass.getMethod("intValue");
+                    // return (int)retObjectLineNumberOffsetMethod.invoke(retObjectLineNumberOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLineNumberOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectLineNumberOffset_ToString);
+                    return retObjectLineNumberOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLineNumberOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLineNumberOffset != null ? retObjectLineNumberOffset.getClass() : "null", retObjectLineNumberOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLineNumberOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -414,13 +433,32 @@ public class XmlReaderSettings extends NetObject  {
             retObjectLinePositionOffset = classInstance.Get("LinePositionOffset");
             return (int)retObjectLinePositionOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLinePositionOffsetError = true;
             java.lang.String retObjectLinePositionOffset_ToString = retObjectLinePositionOffset == null ? "null" : retObjectLinePositionOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLinePositionOffsetNumber = (java.lang.Number)retObjectLinePositionOffset;
-                return retObjectLinePositionOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinePositionOffset != null ? retObjectLinePositionOffset.getClass() : "null", retObjectLinePositionOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLinePositionOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLinePositionOffsetClass = retObjectLinePositionOffset.getClass();
+                    // java.lang.reflect.Method retObjectLinePositionOffsetMethod = retObjectLinePositionOffsetClass.getMethod("intValue");
+                    // return (int)retObjectLinePositionOffsetMethod.invoke(retObjectLinePositionOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLinePositionOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectLinePositionOffset_ToString);
+                    return retObjectLinePositionOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLinePositionOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLinePositionOffset != null ? retObjectLinePositionOffset.getClass() : "null", retObjectLinePositionOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLinePositionOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -445,13 +483,32 @@ public class XmlReaderSettings extends NetObject  {
             retObjectMaxCharactersFromEntities = classInstance.Get("MaxCharactersFromEntities");
             return (long)retObjectMaxCharactersFromEntities;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxCharactersFromEntitiesError = true;
             java.lang.String retObjectMaxCharactersFromEntities_ToString = retObjectMaxCharactersFromEntities == null ? "null" : retObjectMaxCharactersFromEntities.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxCharactersFromEntitiesNumber = (java.lang.Number)retObjectMaxCharactersFromEntities;
-                return retObjectMaxCharactersFromEntitiesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxCharactersFromEntities != null ? retObjectMaxCharactersFromEntities.getClass() : "null", retObjectMaxCharactersFromEntities_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxCharactersFromEntities != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxCharactersFromEntitiesClass = retObjectMaxCharactersFromEntities.getClass();
+                    // java.lang.reflect.Method retObjectMaxCharactersFromEntitiesMethod = retObjectMaxCharactersFromEntitiesClass.getMethod("longValue");
+                    // return (long)retObjectMaxCharactersFromEntitiesMethod.invoke(retObjectMaxCharactersFromEntities);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxCharactersFromEntitiesNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxCharactersFromEntities_ToString);
+                    return retObjectMaxCharactersFromEntitiesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxCharactersFromEntitiesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxCharactersFromEntities != null ? retObjectMaxCharactersFromEntities.getClass() : "null", retObjectMaxCharactersFromEntities_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxCharactersFromEntitiesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -476,13 +533,32 @@ public class XmlReaderSettings extends NetObject  {
             retObjectMaxCharactersInDocument = classInstance.Get("MaxCharactersInDocument");
             return (long)retObjectMaxCharactersInDocument;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxCharactersInDocumentError = true;
             java.lang.String retObjectMaxCharactersInDocument_ToString = retObjectMaxCharactersInDocument == null ? "null" : retObjectMaxCharactersInDocument.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxCharactersInDocumentNumber = (java.lang.Number)retObjectMaxCharactersInDocument;
-                return retObjectMaxCharactersInDocumentNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxCharactersInDocument != null ? retObjectMaxCharactersInDocument.getClass() : "null", retObjectMaxCharactersInDocument_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxCharactersInDocument != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxCharactersInDocumentClass = retObjectMaxCharactersInDocument.getClass();
+                    // java.lang.reflect.Method retObjectMaxCharactersInDocumentMethod = retObjectMaxCharactersInDocumentClass.getMethod("longValue");
+                    // return (long)retObjectMaxCharactersInDocumentMethod.invoke(retObjectMaxCharactersInDocument);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxCharactersInDocumentNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxCharactersInDocument_ToString);
+                    return retObjectMaxCharactersInDocumentNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxCharactersInDocumentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxCharactersInDocument != null ? retObjectMaxCharactersInDocument.getClass() : "null", retObjectMaxCharactersInDocument_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxCharactersInDocumentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

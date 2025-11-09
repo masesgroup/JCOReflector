@@ -191,13 +191,32 @@ public class QueryContinueDragEventArgs extends EventArgs  {
             retObjectKeyState = classInstance.Get("KeyState");
             return (int)retObjectKeyState;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportKeyStateError = true;
             java.lang.String retObjectKeyState_ToString = retObjectKeyState == null ? "null" : retObjectKeyState.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectKeyStateNumber = (java.lang.Number)retObjectKeyState;
-                return retObjectKeyStateNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyState != null ? retObjectKeyState.getClass() : "null", retObjectKeyState_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectKeyState != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectKeyStateClass = retObjectKeyState.getClass();
+                    // java.lang.reflect.Method retObjectKeyStateMethod = retObjectKeyStateClass.getMethod("intValue");
+                    // return (int)retObjectKeyStateMethod.invoke(retObjectKeyState);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectKeyStateNumber = java.text.NumberFormat.getInstance().parse(retObjectKeyState_ToString);
+                    return retObjectKeyStateNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportKeyStateError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectKeyState != null ? retObjectKeyState.getClass() : "null", retObjectKeyState_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportKeyStateError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

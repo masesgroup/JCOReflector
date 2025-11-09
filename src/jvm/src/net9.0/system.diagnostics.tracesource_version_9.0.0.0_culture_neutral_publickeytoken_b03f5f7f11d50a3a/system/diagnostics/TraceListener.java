@@ -387,13 +387,32 @@ public class TraceListener extends MarshalByRefObject implements AutoCloseable {
             retObjectIndentLevel = classInstance.Get("IndentLevel");
             return (int)retObjectIndentLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndentLevelError = true;
             java.lang.String retObjectIndentLevel_ToString = retObjectIndentLevel == null ? "null" : retObjectIndentLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndentLevelNumber = (java.lang.Number)retObjectIndentLevel;
-                return retObjectIndentLevelNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndentLevel != null ? retObjectIndentLevel.getClass() : "null", retObjectIndentLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndentLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndentLevelClass = retObjectIndentLevel.getClass();
+                    // java.lang.reflect.Method retObjectIndentLevelMethod = retObjectIndentLevelClass.getMethod("intValue");
+                    // return (int)retObjectIndentLevelMethod.invoke(retObjectIndentLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndentLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectIndentLevel_ToString);
+                    return retObjectIndentLevelNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndentLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndentLevel != null ? retObjectIndentLevel.getClass() : "null", retObjectIndentLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndentLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -418,13 +437,32 @@ public class TraceListener extends MarshalByRefObject implements AutoCloseable {
             retObjectIndentSize = classInstance.Get("IndentSize");
             return (int)retObjectIndentSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndentSizeError = true;
             java.lang.String retObjectIndentSize_ToString = retObjectIndentSize == null ? "null" : retObjectIndentSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndentSizeNumber = (java.lang.Number)retObjectIndentSize;
-                return retObjectIndentSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndentSize != null ? retObjectIndentSize.getClass() : "null", retObjectIndentSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndentSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndentSizeClass = retObjectIndentSize.getClass();
+                    // java.lang.reflect.Method retObjectIndentSizeMethod = retObjectIndentSizeClass.getMethod("intValue");
+                    // return (int)retObjectIndentSizeMethod.invoke(retObjectIndentSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndentSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectIndentSize_ToString);
+                    return retObjectIndentSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndentSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndentSize != null ? retObjectIndentSize.getClass() : "null", retObjectIndentSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndentSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

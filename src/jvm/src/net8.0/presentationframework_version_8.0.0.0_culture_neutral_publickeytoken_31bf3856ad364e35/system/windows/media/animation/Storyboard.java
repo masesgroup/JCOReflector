@@ -220,13 +220,32 @@ public class Storyboard extends ParallelTimeline  {
             retObjectGetCurrentGlobalSpeed = classInstance.Invoke("GetCurrentGlobalSpeed");
             return (double)retObjectGetCurrentGlobalSpeed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCurrentGlobalSpeedError = true;
             java.lang.String retObjectGetCurrentGlobalSpeed_ToString = retObjectGetCurrentGlobalSpeed == null ? "null" : retObjectGetCurrentGlobalSpeed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCurrentGlobalSpeedNumber = (java.lang.Number)retObjectGetCurrentGlobalSpeed;
-                return retObjectGetCurrentGlobalSpeedNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetCurrentGlobalSpeed != null ? retObjectGetCurrentGlobalSpeed.getClass() : "null", retObjectGetCurrentGlobalSpeed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCurrentGlobalSpeed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCurrentGlobalSpeedClass = retObjectGetCurrentGlobalSpeed.getClass();
+                    // java.lang.reflect.Method retObjectGetCurrentGlobalSpeedMethod = retObjectGetCurrentGlobalSpeedClass.getMethod("doubleValue");
+                    // return (double)retObjectGetCurrentGlobalSpeedMethod.invoke(retObjectGetCurrentGlobalSpeed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCurrentGlobalSpeedNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCurrentGlobalSpeed_ToString);
+                    return retObjectGetCurrentGlobalSpeedNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCurrentGlobalSpeedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCurrentGlobalSpeed != null ? retObjectGetCurrentGlobalSpeed.getClass() : "null", retObjectGetCurrentGlobalSpeed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCurrentGlobalSpeedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -241,13 +260,32 @@ public class Storyboard extends ParallelTimeline  {
             retObjectGetCurrentProgress = classInstance.Invoke("GetCurrentProgress");
             return (double)retObjectGetCurrentProgress;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCurrentProgressError = true;
             java.lang.String retObjectGetCurrentProgress_ToString = retObjectGetCurrentProgress == null ? "null" : retObjectGetCurrentProgress.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCurrentProgressNumber = (java.lang.Number)retObjectGetCurrentProgress;
-                return retObjectGetCurrentProgressNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetCurrentProgress != null ? retObjectGetCurrentProgress.getClass() : "null", retObjectGetCurrentProgress_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCurrentProgress != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCurrentProgressClass = retObjectGetCurrentProgress.getClass();
+                    // java.lang.reflect.Method retObjectGetCurrentProgressMethod = retObjectGetCurrentProgressClass.getMethod("doubleValue");
+                    // return (double)retObjectGetCurrentProgressMethod.invoke(retObjectGetCurrentProgress);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCurrentProgressNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCurrentProgress_ToString);
+                    return retObjectGetCurrentProgressNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCurrentProgressError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCurrentProgress != null ? retObjectGetCurrentProgress.getClass() : "null", retObjectGetCurrentProgress_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCurrentProgressError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,13 +300,32 @@ public class Storyboard extends ParallelTimeline  {
             retObjectGetCurrentIteration = classInstance.Invoke("GetCurrentIteration");
             return (int)retObjectGetCurrentIteration;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCurrentIterationError = true;
             java.lang.String retObjectGetCurrentIteration_ToString = retObjectGetCurrentIteration == null ? "null" : retObjectGetCurrentIteration.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCurrentIterationNumber = (java.lang.Number)retObjectGetCurrentIteration;
-                return retObjectGetCurrentIterationNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentIteration != null ? retObjectGetCurrentIteration.getClass() : "null", retObjectGetCurrentIteration_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCurrentIteration != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCurrentIterationClass = retObjectGetCurrentIteration.getClass();
+                    // java.lang.reflect.Method retObjectGetCurrentIterationMethod = retObjectGetCurrentIterationClass.getMethod("intValue");
+                    // return (int)retObjectGetCurrentIterationMethod.invoke(retObjectGetCurrentIteration);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCurrentIterationNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCurrentIteration_ToString);
+                    return retObjectGetCurrentIterationNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCurrentIterationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCurrentIteration != null ? retObjectGetCurrentIteration.getClass() : "null", retObjectGetCurrentIteration_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCurrentIterationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

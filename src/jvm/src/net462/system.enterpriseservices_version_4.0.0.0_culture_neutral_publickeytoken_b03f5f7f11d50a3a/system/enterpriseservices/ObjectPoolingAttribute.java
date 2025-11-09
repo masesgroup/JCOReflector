@@ -269,13 +269,32 @@ public class ObjectPoolingAttribute extends Attribute  {
             retObjectCreationTimeout = classInstance.Get("CreationTimeout");
             return (int)retObjectCreationTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCreationTimeoutError = true;
             java.lang.String retObjectCreationTimeout_ToString = retObjectCreationTimeout == null ? "null" : retObjectCreationTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCreationTimeoutNumber = (java.lang.Number)retObjectCreationTimeout;
-                return retObjectCreationTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCreationTimeout != null ? retObjectCreationTimeout.getClass() : "null", retObjectCreationTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCreationTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCreationTimeoutClass = retObjectCreationTimeout.getClass();
+                    // java.lang.reflect.Method retObjectCreationTimeoutMethod = retObjectCreationTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectCreationTimeoutMethod.invoke(retObjectCreationTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCreationTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectCreationTimeout_ToString);
+                    return retObjectCreationTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCreationTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCreationTimeout != null ? retObjectCreationTimeout.getClass() : "null", retObjectCreationTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCreationTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -300,13 +319,32 @@ public class ObjectPoolingAttribute extends Attribute  {
             retObjectMaxPoolSize = classInstance.Get("MaxPoolSize");
             return (int)retObjectMaxPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxPoolSizeError = true;
             java.lang.String retObjectMaxPoolSize_ToString = retObjectMaxPoolSize == null ? "null" : retObjectMaxPoolSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxPoolSizeNumber = (java.lang.Number)retObjectMaxPoolSize;
-                return retObjectMaxPoolSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null", retObjectMaxPoolSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxPoolSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxPoolSizeClass = retObjectMaxPoolSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxPoolSizeMethod = retObjectMaxPoolSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxPoolSizeMethod.invoke(retObjectMaxPoolSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxPoolSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxPoolSize_ToString);
+                    return retObjectMaxPoolSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxPoolSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null", retObjectMaxPoolSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxPoolSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -331,13 +369,32 @@ public class ObjectPoolingAttribute extends Attribute  {
             retObjectMinPoolSize = classInstance.Get("MinPoolSize");
             return (int)retObjectMinPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinPoolSizeError = true;
             java.lang.String retObjectMinPoolSize_ToString = retObjectMinPoolSize == null ? "null" : retObjectMinPoolSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinPoolSizeNumber = (java.lang.Number)retObjectMinPoolSize;
-                return retObjectMinPoolSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinPoolSize != null ? retObjectMinPoolSize.getClass() : "null", retObjectMinPoolSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinPoolSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinPoolSizeClass = retObjectMinPoolSize.getClass();
+                    // java.lang.reflect.Method retObjectMinPoolSizeMethod = retObjectMinPoolSizeClass.getMethod("intValue");
+                    // return (int)retObjectMinPoolSizeMethod.invoke(retObjectMinPoolSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinPoolSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMinPoolSize_ToString);
+                    return retObjectMinPoolSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinPoolSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinPoolSize != null ? retObjectMinPoolSize.getClass() : "null", retObjectMinPoolSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinPoolSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -264,13 +264,32 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
             retObjectMaximumKeyDerivationLabelLength = classInstance.Get("MaximumKeyDerivationLabelLength");
             return (int)retObjectMaximumKeyDerivationLabelLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumKeyDerivationLabelLengthError = true;
             java.lang.String retObjectMaximumKeyDerivationLabelLength_ToString = retObjectMaximumKeyDerivationLabelLength == null ? "null" : retObjectMaximumKeyDerivationLabelLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumKeyDerivationLabelLengthNumber = (java.lang.Number)retObjectMaximumKeyDerivationLabelLength;
-                return retObjectMaximumKeyDerivationLabelLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationLabelLength != null ? retObjectMaximumKeyDerivationLabelLength.getClass() : "null", retObjectMaximumKeyDerivationLabelLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumKeyDerivationLabelLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumKeyDerivationLabelLengthClass = retObjectMaximumKeyDerivationLabelLength.getClass();
+                    // java.lang.reflect.Method retObjectMaximumKeyDerivationLabelLengthMethod = retObjectMaximumKeyDerivationLabelLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaximumKeyDerivationLabelLengthMethod.invoke(retObjectMaximumKeyDerivationLabelLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumKeyDerivationLabelLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumKeyDerivationLabelLength_ToString);
+                    return retObjectMaximumKeyDerivationLabelLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumKeyDerivationLabelLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumKeyDerivationLabelLength != null ? retObjectMaximumKeyDerivationLabelLength.getClass() : "null", retObjectMaximumKeyDerivationLabelLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumKeyDerivationLabelLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -285,13 +304,32 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
             retObjectMaximumKeyDerivationNonceLength = classInstance.Get("MaximumKeyDerivationNonceLength");
             return (int)retObjectMaximumKeyDerivationNonceLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumKeyDerivationNonceLengthError = true;
             java.lang.String retObjectMaximumKeyDerivationNonceLength_ToString = retObjectMaximumKeyDerivationNonceLength == null ? "null" : retObjectMaximumKeyDerivationNonceLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumKeyDerivationNonceLengthNumber = (java.lang.Number)retObjectMaximumKeyDerivationNonceLength;
-                return retObjectMaximumKeyDerivationNonceLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationNonceLength != null ? retObjectMaximumKeyDerivationNonceLength.getClass() : "null", retObjectMaximumKeyDerivationNonceLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumKeyDerivationNonceLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumKeyDerivationNonceLengthClass = retObjectMaximumKeyDerivationNonceLength.getClass();
+                    // java.lang.reflect.Method retObjectMaximumKeyDerivationNonceLengthMethod = retObjectMaximumKeyDerivationNonceLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaximumKeyDerivationNonceLengthMethod.invoke(retObjectMaximumKeyDerivationNonceLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumKeyDerivationNonceLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumKeyDerivationNonceLength_ToString);
+                    return retObjectMaximumKeyDerivationNonceLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumKeyDerivationNonceLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumKeyDerivationNonceLength != null ? retObjectMaximumKeyDerivationNonceLength.getClass() : "null", retObjectMaximumKeyDerivationNonceLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumKeyDerivationNonceLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -306,13 +344,32 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
             retObjectMaximumKeyDerivationOffset = classInstance.Get("MaximumKeyDerivationOffset");
             return (int)retObjectMaximumKeyDerivationOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumKeyDerivationOffsetError = true;
             java.lang.String retObjectMaximumKeyDerivationOffset_ToString = retObjectMaximumKeyDerivationOffset == null ? "null" : retObjectMaximumKeyDerivationOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumKeyDerivationOffsetNumber = (java.lang.Number)retObjectMaximumKeyDerivationOffset;
-                return retObjectMaximumKeyDerivationOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumKeyDerivationOffset != null ? retObjectMaximumKeyDerivationOffset.getClass() : "null", retObjectMaximumKeyDerivationOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumKeyDerivationOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumKeyDerivationOffsetClass = retObjectMaximumKeyDerivationOffset.getClass();
+                    // java.lang.reflect.Method retObjectMaximumKeyDerivationOffsetMethod = retObjectMaximumKeyDerivationOffsetClass.getMethod("intValue");
+                    // return (int)retObjectMaximumKeyDerivationOffsetMethod.invoke(retObjectMaximumKeyDerivationOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumKeyDerivationOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumKeyDerivationOffset_ToString);
+                    return retObjectMaximumKeyDerivationOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumKeyDerivationOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumKeyDerivationOffset != null ? retObjectMaximumKeyDerivationOffset.getClass() : "null", retObjectMaximumKeyDerivationOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumKeyDerivationOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

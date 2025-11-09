@@ -166,13 +166,32 @@ public class DebugMetadataHeader extends NetObject  {
             retObjectIdStartOffset = classInstance.Get("IdStartOffset");
             return (int)retObjectIdStartOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIdStartOffsetError = true;
             java.lang.String retObjectIdStartOffset_ToString = retObjectIdStartOffset == null ? "null" : retObjectIdStartOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIdStartOffsetNumber = (java.lang.Number)retObjectIdStartOffset;
-                return retObjectIdStartOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIdStartOffset != null ? retObjectIdStartOffset.getClass() : "null", retObjectIdStartOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIdStartOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIdStartOffsetClass = retObjectIdStartOffset.getClass();
+                    // java.lang.reflect.Method retObjectIdStartOffsetMethod = retObjectIdStartOffsetClass.getMethod("intValue");
+                    // return (int)retObjectIdStartOffsetMethod.invoke(retObjectIdStartOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIdStartOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectIdStartOffset_ToString);
+                    return retObjectIdStartOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIdStartOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIdStartOffset != null ? retObjectIdStartOffset.getClass() : "null", retObjectIdStartOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIdStartOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

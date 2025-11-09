@@ -216,13 +216,32 @@ public class SpotLight extends PointLightBase  {
             retObjectInnerConeAngle = classInstance.Get("InnerConeAngle");
             return (double)retObjectInnerConeAngle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportInnerConeAngleError = true;
             java.lang.String retObjectInnerConeAngle_ToString = retObjectInnerConeAngle == null ? "null" : retObjectInnerConeAngle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectInnerConeAngleNumber = (java.lang.Number)retObjectInnerConeAngle;
-                return retObjectInnerConeAngleNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInnerConeAngle != null ? retObjectInnerConeAngle.getClass() : "null", retObjectInnerConeAngle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectInnerConeAngle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectInnerConeAngleClass = retObjectInnerConeAngle.getClass();
+                    // java.lang.reflect.Method retObjectInnerConeAngleMethod = retObjectInnerConeAngleClass.getMethod("doubleValue");
+                    // return (double)retObjectInnerConeAngleMethod.invoke(retObjectInnerConeAngle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectInnerConeAngleNumber = java.text.NumberFormat.getInstance().parse(retObjectInnerConeAngle_ToString);
+                    return retObjectInnerConeAngleNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportInnerConeAngleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectInnerConeAngle != null ? retObjectInnerConeAngle.getClass() : "null", retObjectInnerConeAngle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportInnerConeAngleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,13 +266,32 @@ public class SpotLight extends PointLightBase  {
             retObjectOuterConeAngle = classInstance.Get("OuterConeAngle");
             return (double)retObjectOuterConeAngle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOuterConeAngleError = true;
             java.lang.String retObjectOuterConeAngle_ToString = retObjectOuterConeAngle == null ? "null" : retObjectOuterConeAngle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOuterConeAngleNumber = (java.lang.Number)retObjectOuterConeAngle;
-                return retObjectOuterConeAngleNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOuterConeAngle != null ? retObjectOuterConeAngle.getClass() : "null", retObjectOuterConeAngle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOuterConeAngle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOuterConeAngleClass = retObjectOuterConeAngle.getClass();
+                    // java.lang.reflect.Method retObjectOuterConeAngleMethod = retObjectOuterConeAngleClass.getMethod("doubleValue");
+                    // return (double)retObjectOuterConeAngleMethod.invoke(retObjectOuterConeAngle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOuterConeAngleNumber = java.text.NumberFormat.getInstance().parse(retObjectOuterConeAngle_ToString);
+                    return retObjectOuterConeAngleNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOuterConeAngleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOuterConeAngle != null ? retObjectOuterConeAngle.getClass() : "null", retObjectOuterConeAngle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOuterConeAngleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

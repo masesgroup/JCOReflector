@@ -368,13 +368,32 @@ public class HostingEnvironment extends MarshalByRefObject  {
             retObjectMaxConcurrentRequestsPerCPU = classType.Get("MaxConcurrentRequestsPerCPU");
             return (int)retObjectMaxConcurrentRequestsPerCPU;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxConcurrentRequestsPerCPUError = true;
             java.lang.String retObjectMaxConcurrentRequestsPerCPU_ToString = retObjectMaxConcurrentRequestsPerCPU == null ? "null" : retObjectMaxConcurrentRequestsPerCPU.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxConcurrentRequestsPerCPUNumber = (java.lang.Number)retObjectMaxConcurrentRequestsPerCPU;
-                return retObjectMaxConcurrentRequestsPerCPUNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentRequestsPerCPU != null ? retObjectMaxConcurrentRequestsPerCPU.getClass() : "null", retObjectMaxConcurrentRequestsPerCPU_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxConcurrentRequestsPerCPU != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxConcurrentRequestsPerCPUClass = retObjectMaxConcurrentRequestsPerCPU.getClass();
+                    // java.lang.reflect.Method retObjectMaxConcurrentRequestsPerCPUMethod = retObjectMaxConcurrentRequestsPerCPUClass.getMethod("intValue");
+                    // return (int)retObjectMaxConcurrentRequestsPerCPUMethod.invoke(retObjectMaxConcurrentRequestsPerCPU);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxConcurrentRequestsPerCPUNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxConcurrentRequestsPerCPU_ToString);
+                    return retObjectMaxConcurrentRequestsPerCPUNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxConcurrentRequestsPerCPUError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxConcurrentRequestsPerCPU != null ? retObjectMaxConcurrentRequestsPerCPU.getClass() : "null", retObjectMaxConcurrentRequestsPerCPU_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxConcurrentRequestsPerCPUError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -399,13 +418,32 @@ public class HostingEnvironment extends MarshalByRefObject  {
             retObjectMaxConcurrentThreadsPerCPU = classType.Get("MaxConcurrentThreadsPerCPU");
             return (int)retObjectMaxConcurrentThreadsPerCPU;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxConcurrentThreadsPerCPUError = true;
             java.lang.String retObjectMaxConcurrentThreadsPerCPU_ToString = retObjectMaxConcurrentThreadsPerCPU == null ? "null" : retObjectMaxConcurrentThreadsPerCPU.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxConcurrentThreadsPerCPUNumber = (java.lang.Number)retObjectMaxConcurrentThreadsPerCPU;
-                return retObjectMaxConcurrentThreadsPerCPUNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentThreadsPerCPU != null ? retObjectMaxConcurrentThreadsPerCPU.getClass() : "null", retObjectMaxConcurrentThreadsPerCPU_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxConcurrentThreadsPerCPU != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxConcurrentThreadsPerCPUClass = retObjectMaxConcurrentThreadsPerCPU.getClass();
+                    // java.lang.reflect.Method retObjectMaxConcurrentThreadsPerCPUMethod = retObjectMaxConcurrentThreadsPerCPUClass.getMethod("intValue");
+                    // return (int)retObjectMaxConcurrentThreadsPerCPUMethod.invoke(retObjectMaxConcurrentThreadsPerCPU);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxConcurrentThreadsPerCPUNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxConcurrentThreadsPerCPU_ToString);
+                    return retObjectMaxConcurrentThreadsPerCPUNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxConcurrentThreadsPerCPUError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxConcurrentThreadsPerCPU != null ? retObjectMaxConcurrentThreadsPerCPU.getClass() : "null", retObjectMaxConcurrentThreadsPerCPU_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxConcurrentThreadsPerCPUError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

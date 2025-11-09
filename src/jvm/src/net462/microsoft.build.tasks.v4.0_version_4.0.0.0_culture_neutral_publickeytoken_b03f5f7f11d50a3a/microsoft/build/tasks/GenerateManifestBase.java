@@ -180,13 +180,32 @@ public class GenerateManifestBase extends Task  {
             retObjectMaxTargetPath = classInstance.Get("MaxTargetPath");
             return (int)retObjectMaxTargetPath;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxTargetPathError = true;
             java.lang.String retObjectMaxTargetPath_ToString = retObjectMaxTargetPath == null ? "null" : retObjectMaxTargetPath.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxTargetPathNumber = (java.lang.Number)retObjectMaxTargetPath;
-                return retObjectMaxTargetPathNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxTargetPath != null ? retObjectMaxTargetPath.getClass() : "null", retObjectMaxTargetPath_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxTargetPath != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxTargetPathClass = retObjectMaxTargetPath.getClass();
+                    // java.lang.reflect.Method retObjectMaxTargetPathMethod = retObjectMaxTargetPathClass.getMethod("intValue");
+                    // return (int)retObjectMaxTargetPathMethod.invoke(retObjectMaxTargetPath);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxTargetPathNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxTargetPath_ToString);
+                    return retObjectMaxTargetPathNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxTargetPathError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxTargetPath != null ? retObjectMaxTargetPath.getClass() : "null", retObjectMaxTargetPath_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxTargetPathError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

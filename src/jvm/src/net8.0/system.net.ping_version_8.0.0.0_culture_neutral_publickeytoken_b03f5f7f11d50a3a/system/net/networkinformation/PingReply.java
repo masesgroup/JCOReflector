@@ -191,13 +191,32 @@ public class PingReply extends NetObject  {
             retObjectRoundtripTime = classInstance.Get("RoundtripTime");
             return (long)retObjectRoundtripTime;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRoundtripTimeError = true;
             java.lang.String retObjectRoundtripTime_ToString = retObjectRoundtripTime == null ? "null" : retObjectRoundtripTime.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRoundtripTimeNumber = (java.lang.Number)retObjectRoundtripTime;
-                return retObjectRoundtripTimeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRoundtripTime != null ? retObjectRoundtripTime.getClass() : "null", retObjectRoundtripTime_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRoundtripTime != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRoundtripTimeClass = retObjectRoundtripTime.getClass();
+                    // java.lang.reflect.Method retObjectRoundtripTimeMethod = retObjectRoundtripTimeClass.getMethod("longValue");
+                    // return (long)retObjectRoundtripTimeMethod.invoke(retObjectRoundtripTime);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRoundtripTimeNumber = java.text.NumberFormat.getInstance().parse(retObjectRoundtripTime_ToString);
+                    return retObjectRoundtripTimeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRoundtripTimeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRoundtripTime != null ? retObjectRoundtripTime.getClass() : "null", retObjectRoundtripTime_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRoundtripTimeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

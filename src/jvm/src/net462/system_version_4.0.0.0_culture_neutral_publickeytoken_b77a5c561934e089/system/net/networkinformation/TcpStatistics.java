@@ -163,13 +163,32 @@ public class TcpStatistics extends NetObject  {
             retObjectConnectionsAccepted = classInstance.Get("ConnectionsAccepted");
             return (long)retObjectConnectionsAccepted;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportConnectionsAcceptedError = true;
             java.lang.String retObjectConnectionsAccepted_ToString = retObjectConnectionsAccepted == null ? "null" : retObjectConnectionsAccepted.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectConnectionsAcceptedNumber = (java.lang.Number)retObjectConnectionsAccepted;
-                return retObjectConnectionsAcceptedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectConnectionsAccepted != null ? retObjectConnectionsAccepted.getClass() : "null", retObjectConnectionsAccepted_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectConnectionsAccepted != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectConnectionsAcceptedClass = retObjectConnectionsAccepted.getClass();
+                    // java.lang.reflect.Method retObjectConnectionsAcceptedMethod = retObjectConnectionsAcceptedClass.getMethod("longValue");
+                    // return (long)retObjectConnectionsAcceptedMethod.invoke(retObjectConnectionsAccepted);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectConnectionsAcceptedNumber = java.text.NumberFormat.getInstance().parse(retObjectConnectionsAccepted_ToString);
+                    return retObjectConnectionsAcceptedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportConnectionsAcceptedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectConnectionsAccepted != null ? retObjectConnectionsAccepted.getClass() : "null", retObjectConnectionsAccepted_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportConnectionsAcceptedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,13 +203,32 @@ public class TcpStatistics extends NetObject  {
             retObjectConnectionsInitiated = classInstance.Get("ConnectionsInitiated");
             return (long)retObjectConnectionsInitiated;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportConnectionsInitiatedError = true;
             java.lang.String retObjectConnectionsInitiated_ToString = retObjectConnectionsInitiated == null ? "null" : retObjectConnectionsInitiated.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectConnectionsInitiatedNumber = (java.lang.Number)retObjectConnectionsInitiated;
-                return retObjectConnectionsInitiatedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectConnectionsInitiated != null ? retObjectConnectionsInitiated.getClass() : "null", retObjectConnectionsInitiated_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectConnectionsInitiated != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectConnectionsInitiatedClass = retObjectConnectionsInitiated.getClass();
+                    // java.lang.reflect.Method retObjectConnectionsInitiatedMethod = retObjectConnectionsInitiatedClass.getMethod("longValue");
+                    // return (long)retObjectConnectionsInitiatedMethod.invoke(retObjectConnectionsInitiated);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectConnectionsInitiatedNumber = java.text.NumberFormat.getInstance().parse(retObjectConnectionsInitiated_ToString);
+                    return retObjectConnectionsInitiatedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportConnectionsInitiatedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectConnectionsInitiated != null ? retObjectConnectionsInitiated.getClass() : "null", retObjectConnectionsInitiated_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportConnectionsInitiatedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,13 +243,32 @@ public class TcpStatistics extends NetObject  {
             retObjectCumulativeConnections = classInstance.Get("CumulativeConnections");
             return (long)retObjectCumulativeConnections;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCumulativeConnectionsError = true;
             java.lang.String retObjectCumulativeConnections_ToString = retObjectCumulativeConnections == null ? "null" : retObjectCumulativeConnections.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCumulativeConnectionsNumber = (java.lang.Number)retObjectCumulativeConnections;
-                return retObjectCumulativeConnectionsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCumulativeConnections != null ? retObjectCumulativeConnections.getClass() : "null", retObjectCumulativeConnections_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCumulativeConnections != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCumulativeConnectionsClass = retObjectCumulativeConnections.getClass();
+                    // java.lang.reflect.Method retObjectCumulativeConnectionsMethod = retObjectCumulativeConnectionsClass.getMethod("longValue");
+                    // return (long)retObjectCumulativeConnectionsMethod.invoke(retObjectCumulativeConnections);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCumulativeConnectionsNumber = java.text.NumberFormat.getInstance().parse(retObjectCumulativeConnections_ToString);
+                    return retObjectCumulativeConnectionsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCumulativeConnectionsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCumulativeConnections != null ? retObjectCumulativeConnections.getClass() : "null", retObjectCumulativeConnections_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCumulativeConnectionsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,13 +283,32 @@ public class TcpStatistics extends NetObject  {
             retObjectCurrentConnections = classInstance.Get("CurrentConnections");
             return (long)retObjectCurrentConnections;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentConnectionsError = true;
             java.lang.String retObjectCurrentConnections_ToString = retObjectCurrentConnections == null ? "null" : retObjectCurrentConnections.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentConnectionsNumber = (java.lang.Number)retObjectCurrentConnections;
-                return retObjectCurrentConnectionsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCurrentConnections != null ? retObjectCurrentConnections.getClass() : "null", retObjectCurrentConnections_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentConnections != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentConnectionsClass = retObjectCurrentConnections.getClass();
+                    // java.lang.reflect.Method retObjectCurrentConnectionsMethod = retObjectCurrentConnectionsClass.getMethod("longValue");
+                    // return (long)retObjectCurrentConnectionsMethod.invoke(retObjectCurrentConnections);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentConnectionsNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentConnections_ToString);
+                    return retObjectCurrentConnectionsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentConnectionsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentConnections != null ? retObjectCurrentConnections.getClass() : "null", retObjectCurrentConnections_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentConnectionsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,13 +323,32 @@ public class TcpStatistics extends NetObject  {
             retObjectErrorsReceived = classInstance.Get("ErrorsReceived");
             return (long)retObjectErrorsReceived;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportErrorsReceivedError = true;
             java.lang.String retObjectErrorsReceived_ToString = retObjectErrorsReceived == null ? "null" : retObjectErrorsReceived.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectErrorsReceivedNumber = (java.lang.Number)retObjectErrorsReceived;
-                return retObjectErrorsReceivedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectErrorsReceived != null ? retObjectErrorsReceived.getClass() : "null", retObjectErrorsReceived_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectErrorsReceived != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectErrorsReceivedClass = retObjectErrorsReceived.getClass();
+                    // java.lang.reflect.Method retObjectErrorsReceivedMethod = retObjectErrorsReceivedClass.getMethod("longValue");
+                    // return (long)retObjectErrorsReceivedMethod.invoke(retObjectErrorsReceived);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectErrorsReceivedNumber = java.text.NumberFormat.getInstance().parse(retObjectErrorsReceived_ToString);
+                    return retObjectErrorsReceivedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportErrorsReceivedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectErrorsReceived != null ? retObjectErrorsReceived.getClass() : "null", retObjectErrorsReceived_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportErrorsReceivedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,13 +363,32 @@ public class TcpStatistics extends NetObject  {
             retObjectFailedConnectionAttempts = classInstance.Get("FailedConnectionAttempts");
             return (long)retObjectFailedConnectionAttempts;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFailedConnectionAttemptsError = true;
             java.lang.String retObjectFailedConnectionAttempts_ToString = retObjectFailedConnectionAttempts == null ? "null" : retObjectFailedConnectionAttempts.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFailedConnectionAttemptsNumber = (java.lang.Number)retObjectFailedConnectionAttempts;
-                return retObjectFailedConnectionAttemptsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFailedConnectionAttempts != null ? retObjectFailedConnectionAttempts.getClass() : "null", retObjectFailedConnectionAttempts_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFailedConnectionAttempts != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFailedConnectionAttemptsClass = retObjectFailedConnectionAttempts.getClass();
+                    // java.lang.reflect.Method retObjectFailedConnectionAttemptsMethod = retObjectFailedConnectionAttemptsClass.getMethod("longValue");
+                    // return (long)retObjectFailedConnectionAttemptsMethod.invoke(retObjectFailedConnectionAttempts);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFailedConnectionAttemptsNumber = java.text.NumberFormat.getInstance().parse(retObjectFailedConnectionAttempts_ToString);
+                    return retObjectFailedConnectionAttemptsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFailedConnectionAttemptsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFailedConnectionAttempts != null ? retObjectFailedConnectionAttempts.getClass() : "null", retObjectFailedConnectionAttempts_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFailedConnectionAttemptsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -289,13 +403,32 @@ public class TcpStatistics extends NetObject  {
             retObjectMaximumConnections = classInstance.Get("MaximumConnections");
             return (long)retObjectMaximumConnections;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumConnectionsError = true;
             java.lang.String retObjectMaximumConnections_ToString = retObjectMaximumConnections == null ? "null" : retObjectMaximumConnections.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumConnectionsNumber = (java.lang.Number)retObjectMaximumConnections;
-                return retObjectMaximumConnectionsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumConnections != null ? retObjectMaximumConnections.getClass() : "null", retObjectMaximumConnections_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumConnections != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumConnectionsClass = retObjectMaximumConnections.getClass();
+                    // java.lang.reflect.Method retObjectMaximumConnectionsMethod = retObjectMaximumConnectionsClass.getMethod("longValue");
+                    // return (long)retObjectMaximumConnectionsMethod.invoke(retObjectMaximumConnections);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumConnectionsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumConnections_ToString);
+                    return retObjectMaximumConnectionsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumConnectionsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumConnections != null ? retObjectMaximumConnections.getClass() : "null", retObjectMaximumConnections_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumConnectionsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -310,13 +443,32 @@ public class TcpStatistics extends NetObject  {
             retObjectMaximumTransmissionTimeout = classInstance.Get("MaximumTransmissionTimeout");
             return (long)retObjectMaximumTransmissionTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumTransmissionTimeoutError = true;
             java.lang.String retObjectMaximumTransmissionTimeout_ToString = retObjectMaximumTransmissionTimeout == null ? "null" : retObjectMaximumTransmissionTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumTransmissionTimeoutNumber = (java.lang.Number)retObjectMaximumTransmissionTimeout;
-                return retObjectMaximumTransmissionTimeoutNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumTransmissionTimeout != null ? retObjectMaximumTransmissionTimeout.getClass() : "null", retObjectMaximumTransmissionTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumTransmissionTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumTransmissionTimeoutClass = retObjectMaximumTransmissionTimeout.getClass();
+                    // java.lang.reflect.Method retObjectMaximumTransmissionTimeoutMethod = retObjectMaximumTransmissionTimeoutClass.getMethod("longValue");
+                    // return (long)retObjectMaximumTransmissionTimeoutMethod.invoke(retObjectMaximumTransmissionTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumTransmissionTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumTransmissionTimeout_ToString);
+                    return retObjectMaximumTransmissionTimeoutNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumTransmissionTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumTransmissionTimeout != null ? retObjectMaximumTransmissionTimeout.getClass() : "null", retObjectMaximumTransmissionTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumTransmissionTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -331,13 +483,32 @@ public class TcpStatistics extends NetObject  {
             retObjectMinimumTransmissionTimeout = classInstance.Get("MinimumTransmissionTimeout");
             return (long)retObjectMinimumTransmissionTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinimumTransmissionTimeoutError = true;
             java.lang.String retObjectMinimumTransmissionTimeout_ToString = retObjectMinimumTransmissionTimeout == null ? "null" : retObjectMinimumTransmissionTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinimumTransmissionTimeoutNumber = (java.lang.Number)retObjectMinimumTransmissionTimeout;
-                return retObjectMinimumTransmissionTimeoutNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMinimumTransmissionTimeout != null ? retObjectMinimumTransmissionTimeout.getClass() : "null", retObjectMinimumTransmissionTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinimumTransmissionTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinimumTransmissionTimeoutClass = retObjectMinimumTransmissionTimeout.getClass();
+                    // java.lang.reflect.Method retObjectMinimumTransmissionTimeoutMethod = retObjectMinimumTransmissionTimeoutClass.getMethod("longValue");
+                    // return (long)retObjectMinimumTransmissionTimeoutMethod.invoke(retObjectMinimumTransmissionTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinimumTransmissionTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectMinimumTransmissionTimeout_ToString);
+                    return retObjectMinimumTransmissionTimeoutNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinimumTransmissionTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinimumTransmissionTimeout != null ? retObjectMinimumTransmissionTimeout.getClass() : "null", retObjectMinimumTransmissionTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinimumTransmissionTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -352,13 +523,32 @@ public class TcpStatistics extends NetObject  {
             retObjectResetConnections = classInstance.Get("ResetConnections");
             return (long)retObjectResetConnections;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportResetConnectionsError = true;
             java.lang.String retObjectResetConnections_ToString = retObjectResetConnections == null ? "null" : retObjectResetConnections.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectResetConnectionsNumber = (java.lang.Number)retObjectResetConnections;
-                return retObjectResetConnectionsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectResetConnections != null ? retObjectResetConnections.getClass() : "null", retObjectResetConnections_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectResetConnections != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectResetConnectionsClass = retObjectResetConnections.getClass();
+                    // java.lang.reflect.Method retObjectResetConnectionsMethod = retObjectResetConnectionsClass.getMethod("longValue");
+                    // return (long)retObjectResetConnectionsMethod.invoke(retObjectResetConnections);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectResetConnectionsNumber = java.text.NumberFormat.getInstance().parse(retObjectResetConnections_ToString);
+                    return retObjectResetConnectionsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportResetConnectionsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectResetConnections != null ? retObjectResetConnections.getClass() : "null", retObjectResetConnections_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportResetConnectionsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -373,13 +563,32 @@ public class TcpStatistics extends NetObject  {
             retObjectResetsSent = classInstance.Get("ResetsSent");
             return (long)retObjectResetsSent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportResetsSentError = true;
             java.lang.String retObjectResetsSent_ToString = retObjectResetsSent == null ? "null" : retObjectResetsSent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectResetsSentNumber = (java.lang.Number)retObjectResetsSent;
-                return retObjectResetsSentNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectResetsSent != null ? retObjectResetsSent.getClass() : "null", retObjectResetsSent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectResetsSent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectResetsSentClass = retObjectResetsSent.getClass();
+                    // java.lang.reflect.Method retObjectResetsSentMethod = retObjectResetsSentClass.getMethod("longValue");
+                    // return (long)retObjectResetsSentMethod.invoke(retObjectResetsSent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectResetsSentNumber = java.text.NumberFormat.getInstance().parse(retObjectResetsSent_ToString);
+                    return retObjectResetsSentNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportResetsSentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectResetsSent != null ? retObjectResetsSent.getClass() : "null", retObjectResetsSent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportResetsSentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -394,13 +603,32 @@ public class TcpStatistics extends NetObject  {
             retObjectSegmentsReceived = classInstance.Get("SegmentsReceived");
             return (long)retObjectSegmentsReceived;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSegmentsReceivedError = true;
             java.lang.String retObjectSegmentsReceived_ToString = retObjectSegmentsReceived == null ? "null" : retObjectSegmentsReceived.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSegmentsReceivedNumber = (java.lang.Number)retObjectSegmentsReceived;
-                return retObjectSegmentsReceivedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSegmentsReceived != null ? retObjectSegmentsReceived.getClass() : "null", retObjectSegmentsReceived_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSegmentsReceived != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSegmentsReceivedClass = retObjectSegmentsReceived.getClass();
+                    // java.lang.reflect.Method retObjectSegmentsReceivedMethod = retObjectSegmentsReceivedClass.getMethod("longValue");
+                    // return (long)retObjectSegmentsReceivedMethod.invoke(retObjectSegmentsReceived);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSegmentsReceivedNumber = java.text.NumberFormat.getInstance().parse(retObjectSegmentsReceived_ToString);
+                    return retObjectSegmentsReceivedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSegmentsReceivedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSegmentsReceived != null ? retObjectSegmentsReceived.getClass() : "null", retObjectSegmentsReceived_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSegmentsReceivedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -415,13 +643,32 @@ public class TcpStatistics extends NetObject  {
             retObjectSegmentsResent = classInstance.Get("SegmentsResent");
             return (long)retObjectSegmentsResent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSegmentsResentError = true;
             java.lang.String retObjectSegmentsResent_ToString = retObjectSegmentsResent == null ? "null" : retObjectSegmentsResent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSegmentsResentNumber = (java.lang.Number)retObjectSegmentsResent;
-                return retObjectSegmentsResentNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSegmentsResent != null ? retObjectSegmentsResent.getClass() : "null", retObjectSegmentsResent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSegmentsResent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSegmentsResentClass = retObjectSegmentsResent.getClass();
+                    // java.lang.reflect.Method retObjectSegmentsResentMethod = retObjectSegmentsResentClass.getMethod("longValue");
+                    // return (long)retObjectSegmentsResentMethod.invoke(retObjectSegmentsResent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSegmentsResentNumber = java.text.NumberFormat.getInstance().parse(retObjectSegmentsResent_ToString);
+                    return retObjectSegmentsResentNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSegmentsResentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSegmentsResent != null ? retObjectSegmentsResent.getClass() : "null", retObjectSegmentsResent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSegmentsResentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -436,13 +683,32 @@ public class TcpStatistics extends NetObject  {
             retObjectSegmentsSent = classInstance.Get("SegmentsSent");
             return (long)retObjectSegmentsSent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSegmentsSentError = true;
             java.lang.String retObjectSegmentsSent_ToString = retObjectSegmentsSent == null ? "null" : retObjectSegmentsSent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSegmentsSentNumber = (java.lang.Number)retObjectSegmentsSent;
-                return retObjectSegmentsSentNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSegmentsSent != null ? retObjectSegmentsSent.getClass() : "null", retObjectSegmentsSent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSegmentsSent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSegmentsSentClass = retObjectSegmentsSent.getClass();
+                    // java.lang.reflect.Method retObjectSegmentsSentMethod = retObjectSegmentsSentClass.getMethod("longValue");
+                    // return (long)retObjectSegmentsSentMethod.invoke(retObjectSegmentsSent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSegmentsSentNumber = java.text.NumberFormat.getInstance().parse(retObjectSegmentsSent_ToString);
+                    return retObjectSegmentsSentNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSegmentsSentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSegmentsSent != null ? retObjectSegmentsSent.getClass() : "null", retObjectSegmentsSent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSegmentsSentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

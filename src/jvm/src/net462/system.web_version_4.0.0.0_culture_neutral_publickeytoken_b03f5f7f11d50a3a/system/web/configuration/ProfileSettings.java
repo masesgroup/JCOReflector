@@ -197,13 +197,32 @@ public class ProfileSettings extends ConfigurationElement  {
             retObjectMaxLimit = classInstance.Get("MaxLimit");
             return (int)retObjectMaxLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxLimitError = true;
             java.lang.String retObjectMaxLimit_ToString = retObjectMaxLimit == null ? "null" : retObjectMaxLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxLimitNumber = (java.lang.Number)retObjectMaxLimit;
-                return retObjectMaxLimitNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxLimit != null ? retObjectMaxLimit.getClass() : "null", retObjectMaxLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxLimitClass = retObjectMaxLimit.getClass();
+                    // java.lang.reflect.Method retObjectMaxLimitMethod = retObjectMaxLimitClass.getMethod("intValue");
+                    // return (int)retObjectMaxLimitMethod.invoke(retObjectMaxLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxLimit_ToString);
+                    return retObjectMaxLimitNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxLimit != null ? retObjectMaxLimit.getClass() : "null", retObjectMaxLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,13 +247,32 @@ public class ProfileSettings extends ConfigurationElement  {
             retObjectMinInstances = classInstance.Get("MinInstances");
             return (int)retObjectMinInstances;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinInstancesError = true;
             java.lang.String retObjectMinInstances_ToString = retObjectMinInstances == null ? "null" : retObjectMinInstances.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinInstancesNumber = (java.lang.Number)retObjectMinInstances;
-                return retObjectMinInstancesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinInstances != null ? retObjectMinInstances.getClass() : "null", retObjectMinInstances_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinInstances != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinInstancesClass = retObjectMinInstances.getClass();
+                    // java.lang.reflect.Method retObjectMinInstancesMethod = retObjectMinInstancesClass.getMethod("intValue");
+                    // return (int)retObjectMinInstancesMethod.invoke(retObjectMinInstances);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinInstancesNumber = java.text.NumberFormat.getInstance().parse(retObjectMinInstances_ToString);
+                    return retObjectMinInstancesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinInstancesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinInstances != null ? retObjectMinInstances.getClass() : "null", retObjectMinInstances_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinInstancesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

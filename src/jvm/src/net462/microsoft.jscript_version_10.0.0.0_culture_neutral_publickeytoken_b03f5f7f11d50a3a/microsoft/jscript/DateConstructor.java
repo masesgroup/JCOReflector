@@ -163,13 +163,32 @@ public class DateConstructor extends ScriptFunction  {
             retObjectparse = classType.Invoke("parse", str);
             return (double)retObjectparse;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportparseError = true;
             java.lang.String retObjectparse_ToString = retObjectparse == null ? "null" : retObjectparse.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectparseNumber = (java.lang.Number)retObjectparse;
-                return retObjectparseNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectparse != null ? retObjectparse.getClass() : "null", retObjectparse_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectparse != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectparseClass = retObjectparse.getClass();
+                    // java.lang.reflect.Method retObjectparseMethod = retObjectparseClass.getMethod("doubleValue");
+                    // return (double)retObjectparseMethod.invoke(retObjectparse);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectparseNumber = java.text.NumberFormat.getInstance().parse(retObjectparse_ToString);
+                    return retObjectparseNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportparseError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectparse != null ? retObjectparse.getClass() : "null", retObjectparse_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportparseError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,13 +203,32 @@ public class DateConstructor extends ScriptFunction  {
             retObjectUTC = classType.Invoke("UTC", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), date == null ? null : date.getJCOInstance(), hours == null ? null : hours.getJCOInstance(), minutes == null ? null : minutes.getJCOInstance(), seconds == null ? null : seconds.getJCOInstance(), ms == null ? null : ms.getJCOInstance());
             return (double)retObjectUTC;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUTCError = true;
             java.lang.String retObjectUTC_ToString = retObjectUTC == null ? "null" : retObjectUTC.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUTCNumber = (java.lang.Number)retObjectUTC;
-                return retObjectUTCNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUTC != null ? retObjectUTC.getClass() : "null", retObjectUTC_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUTC != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUTCClass = retObjectUTC.getClass();
+                    // java.lang.reflect.Method retObjectUTCMethod = retObjectUTCClass.getMethod("doubleValue");
+                    // return (double)retObjectUTCMethod.invoke(retObjectUTC);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUTCNumber = java.text.NumberFormat.getInstance().parse(retObjectUTC_ToString);
+                    return retObjectUTCNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUTCError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUTC != null ? retObjectUTC.getClass() : "null", retObjectUTC_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUTCError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

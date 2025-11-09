@@ -177,13 +177,32 @@ public class MemoryCacheElement extends ConfigurationElement  {
             retObjectCacheMemoryLimitMegabytes = classInstance.Get("CacheMemoryLimitMegabytes");
             return (int)retObjectCacheMemoryLimitMegabytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCacheMemoryLimitMegabytesError = true;
             java.lang.String retObjectCacheMemoryLimitMegabytes_ToString = retObjectCacheMemoryLimitMegabytes == null ? "null" : retObjectCacheMemoryLimitMegabytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCacheMemoryLimitMegabytesNumber = (java.lang.Number)retObjectCacheMemoryLimitMegabytes;
-                return retObjectCacheMemoryLimitMegabytesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCacheMemoryLimitMegabytes != null ? retObjectCacheMemoryLimitMegabytes.getClass() : "null", retObjectCacheMemoryLimitMegabytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCacheMemoryLimitMegabytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCacheMemoryLimitMegabytesClass = retObjectCacheMemoryLimitMegabytes.getClass();
+                    // java.lang.reflect.Method retObjectCacheMemoryLimitMegabytesMethod = retObjectCacheMemoryLimitMegabytesClass.getMethod("intValue");
+                    // return (int)retObjectCacheMemoryLimitMegabytesMethod.invoke(retObjectCacheMemoryLimitMegabytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCacheMemoryLimitMegabytesNumber = java.text.NumberFormat.getInstance().parse(retObjectCacheMemoryLimitMegabytes_ToString);
+                    return retObjectCacheMemoryLimitMegabytesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCacheMemoryLimitMegabytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCacheMemoryLimitMegabytes != null ? retObjectCacheMemoryLimitMegabytes.getClass() : "null", retObjectCacheMemoryLimitMegabytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCacheMemoryLimitMegabytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,13 +227,32 @@ public class MemoryCacheElement extends ConfigurationElement  {
             retObjectPhysicalMemoryLimitPercentage = classInstance.Get("PhysicalMemoryLimitPercentage");
             return (int)retObjectPhysicalMemoryLimitPercentage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPhysicalMemoryLimitPercentageError = true;
             java.lang.String retObjectPhysicalMemoryLimitPercentage_ToString = retObjectPhysicalMemoryLimitPercentage == null ? "null" : retObjectPhysicalMemoryLimitPercentage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPhysicalMemoryLimitPercentageNumber = (java.lang.Number)retObjectPhysicalMemoryLimitPercentage;
-                return retObjectPhysicalMemoryLimitPercentageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPhysicalMemoryLimitPercentage != null ? retObjectPhysicalMemoryLimitPercentage.getClass() : "null", retObjectPhysicalMemoryLimitPercentage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPhysicalMemoryLimitPercentage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPhysicalMemoryLimitPercentageClass = retObjectPhysicalMemoryLimitPercentage.getClass();
+                    // java.lang.reflect.Method retObjectPhysicalMemoryLimitPercentageMethod = retObjectPhysicalMemoryLimitPercentageClass.getMethod("intValue");
+                    // return (int)retObjectPhysicalMemoryLimitPercentageMethod.invoke(retObjectPhysicalMemoryLimitPercentage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPhysicalMemoryLimitPercentageNumber = java.text.NumberFormat.getInstance().parse(retObjectPhysicalMemoryLimitPercentage_ToString);
+                    return retObjectPhysicalMemoryLimitPercentageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPhysicalMemoryLimitPercentageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPhysicalMemoryLimitPercentage != null ? retObjectPhysicalMemoryLimitPercentage.getClass() : "null", retObjectPhysicalMemoryLimitPercentage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPhysicalMemoryLimitPercentageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

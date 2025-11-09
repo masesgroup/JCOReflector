@@ -235,13 +235,32 @@ public class MembershipProvider extends ProviderBase  {
             retObjectGetNumberOfUsersOnline = classInstance.Invoke("GetNumberOfUsersOnline");
             return (int)retObjectGetNumberOfUsersOnline;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetNumberOfUsersOnlineError = true;
             java.lang.String retObjectGetNumberOfUsersOnline_ToString = retObjectGetNumberOfUsersOnline == null ? "null" : retObjectGetNumberOfUsersOnline.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetNumberOfUsersOnlineNumber = (java.lang.Number)retObjectGetNumberOfUsersOnline;
-                return retObjectGetNumberOfUsersOnlineNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null", retObjectGetNumberOfUsersOnline_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetNumberOfUsersOnline != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetNumberOfUsersOnlineClass = retObjectGetNumberOfUsersOnline.getClass();
+                    // java.lang.reflect.Method retObjectGetNumberOfUsersOnlineMethod = retObjectGetNumberOfUsersOnlineClass.getMethod("intValue");
+                    // return (int)retObjectGetNumberOfUsersOnlineMethod.invoke(retObjectGetNumberOfUsersOnline);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetNumberOfUsersOnlineNumber = java.text.NumberFormat.getInstance().parse(retObjectGetNumberOfUsersOnline_ToString);
+                    return retObjectGetNumberOfUsersOnlineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetNumberOfUsersOnlineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null", retObjectGetNumberOfUsersOnline_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetNumberOfUsersOnlineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -458,13 +477,32 @@ public class MembershipProvider extends ProviderBase  {
             retObjectMaxInvalidPasswordAttempts = classInstance.Get("MaxInvalidPasswordAttempts");
             return (int)retObjectMaxInvalidPasswordAttempts;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxInvalidPasswordAttemptsError = true;
             java.lang.String retObjectMaxInvalidPasswordAttempts_ToString = retObjectMaxInvalidPasswordAttempts == null ? "null" : retObjectMaxInvalidPasswordAttempts.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxInvalidPasswordAttemptsNumber = (java.lang.Number)retObjectMaxInvalidPasswordAttempts;
-                return retObjectMaxInvalidPasswordAttemptsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxInvalidPasswordAttempts != null ? retObjectMaxInvalidPasswordAttempts.getClass() : "null", retObjectMaxInvalidPasswordAttempts_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxInvalidPasswordAttempts != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxInvalidPasswordAttemptsClass = retObjectMaxInvalidPasswordAttempts.getClass();
+                    // java.lang.reflect.Method retObjectMaxInvalidPasswordAttemptsMethod = retObjectMaxInvalidPasswordAttemptsClass.getMethod("intValue");
+                    // return (int)retObjectMaxInvalidPasswordAttemptsMethod.invoke(retObjectMaxInvalidPasswordAttempts);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxInvalidPasswordAttemptsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxInvalidPasswordAttempts_ToString);
+                    return retObjectMaxInvalidPasswordAttemptsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxInvalidPasswordAttemptsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxInvalidPasswordAttempts != null ? retObjectMaxInvalidPasswordAttempts.getClass() : "null", retObjectMaxInvalidPasswordAttempts_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxInvalidPasswordAttemptsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -479,13 +517,32 @@ public class MembershipProvider extends ProviderBase  {
             retObjectMinRequiredNonAlphanumericCharacters = classInstance.Get("MinRequiredNonAlphanumericCharacters");
             return (int)retObjectMinRequiredNonAlphanumericCharacters;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinRequiredNonAlphanumericCharactersError = true;
             java.lang.String retObjectMinRequiredNonAlphanumericCharacters_ToString = retObjectMinRequiredNonAlphanumericCharacters == null ? "null" : retObjectMinRequiredNonAlphanumericCharacters.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinRequiredNonAlphanumericCharactersNumber = (java.lang.Number)retObjectMinRequiredNonAlphanumericCharacters;
-                return retObjectMinRequiredNonAlphanumericCharactersNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredNonAlphanumericCharacters != null ? retObjectMinRequiredNonAlphanumericCharacters.getClass() : "null", retObjectMinRequiredNonAlphanumericCharacters_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinRequiredNonAlphanumericCharacters != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinRequiredNonAlphanumericCharactersClass = retObjectMinRequiredNonAlphanumericCharacters.getClass();
+                    // java.lang.reflect.Method retObjectMinRequiredNonAlphanumericCharactersMethod = retObjectMinRequiredNonAlphanumericCharactersClass.getMethod("intValue");
+                    // return (int)retObjectMinRequiredNonAlphanumericCharactersMethod.invoke(retObjectMinRequiredNonAlphanumericCharacters);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinRequiredNonAlphanumericCharactersNumber = java.text.NumberFormat.getInstance().parse(retObjectMinRequiredNonAlphanumericCharacters_ToString);
+                    return retObjectMinRequiredNonAlphanumericCharactersNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinRequiredNonAlphanumericCharactersError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinRequiredNonAlphanumericCharacters != null ? retObjectMinRequiredNonAlphanumericCharacters.getClass() : "null", retObjectMinRequiredNonAlphanumericCharacters_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinRequiredNonAlphanumericCharactersError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -500,13 +557,32 @@ public class MembershipProvider extends ProviderBase  {
             retObjectMinRequiredPasswordLength = classInstance.Get("MinRequiredPasswordLength");
             return (int)retObjectMinRequiredPasswordLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinRequiredPasswordLengthError = true;
             java.lang.String retObjectMinRequiredPasswordLength_ToString = retObjectMinRequiredPasswordLength == null ? "null" : retObjectMinRequiredPasswordLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinRequiredPasswordLengthNumber = (java.lang.Number)retObjectMinRequiredPasswordLength;
-                return retObjectMinRequiredPasswordLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredPasswordLength != null ? retObjectMinRequiredPasswordLength.getClass() : "null", retObjectMinRequiredPasswordLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinRequiredPasswordLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinRequiredPasswordLengthClass = retObjectMinRequiredPasswordLength.getClass();
+                    // java.lang.reflect.Method retObjectMinRequiredPasswordLengthMethod = retObjectMinRequiredPasswordLengthClass.getMethod("intValue");
+                    // return (int)retObjectMinRequiredPasswordLengthMethod.invoke(retObjectMinRequiredPasswordLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinRequiredPasswordLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMinRequiredPasswordLength_ToString);
+                    return retObjectMinRequiredPasswordLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinRequiredPasswordLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinRequiredPasswordLength != null ? retObjectMinRequiredPasswordLength.getClass() : "null", retObjectMinRequiredPasswordLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinRequiredPasswordLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -521,13 +597,32 @@ public class MembershipProvider extends ProviderBase  {
             retObjectPasswordAttemptWindow = classInstance.Get("PasswordAttemptWindow");
             return (int)retObjectPasswordAttemptWindow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPasswordAttemptWindowError = true;
             java.lang.String retObjectPasswordAttemptWindow_ToString = retObjectPasswordAttemptWindow == null ? "null" : retObjectPasswordAttemptWindow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPasswordAttemptWindowNumber = (java.lang.Number)retObjectPasswordAttemptWindow;
-                return retObjectPasswordAttemptWindowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPasswordAttemptWindow != null ? retObjectPasswordAttemptWindow.getClass() : "null", retObjectPasswordAttemptWindow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPasswordAttemptWindow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPasswordAttemptWindowClass = retObjectPasswordAttemptWindow.getClass();
+                    // java.lang.reflect.Method retObjectPasswordAttemptWindowMethod = retObjectPasswordAttemptWindowClass.getMethod("intValue");
+                    // return (int)retObjectPasswordAttemptWindowMethod.invoke(retObjectPasswordAttemptWindow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPasswordAttemptWindowNumber = java.text.NumberFormat.getInstance().parse(retObjectPasswordAttemptWindow_ToString);
+                    return retObjectPasswordAttemptWindowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPasswordAttemptWindowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPasswordAttemptWindow != null ? retObjectPasswordAttemptWindow.getClass() : "null", retObjectPasswordAttemptWindow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPasswordAttemptWindowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

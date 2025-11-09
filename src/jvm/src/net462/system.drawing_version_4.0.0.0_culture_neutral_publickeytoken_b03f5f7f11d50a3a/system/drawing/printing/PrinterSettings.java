@@ -398,13 +398,32 @@ public class PrinterSettings extends NetObject  {
             retObjectCopies = classInstance.Get("Copies");
             return (short)retObjectCopies;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCopiesError = true;
             java.lang.String retObjectCopies_ToString = retObjectCopies == null ? "null" : retObjectCopies.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCopiesNumber = (java.lang.Number)retObjectCopies;
-                return retObjectCopiesNumber.shortValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectCopies != null ? retObjectCopies.getClass() : "null", retObjectCopies_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCopies != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCopiesClass = retObjectCopies.getClass();
+                    // java.lang.reflect.Method retObjectCopiesMethod = retObjectCopiesClass.getMethod("shortValue");
+                    // return (short)retObjectCopiesMethod.invoke(retObjectCopies);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCopiesNumber = java.text.NumberFormat.getInstance().parse(retObjectCopies_ToString);
+                    return retObjectCopiesNumber.shortValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCopiesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCopies != null ? retObjectCopies.getClass() : "null", retObjectCopies_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCopiesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -429,13 +448,32 @@ public class PrinterSettings extends NetObject  {
             retObjectFromPage = classInstance.Get("FromPage");
             return (int)retObjectFromPage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFromPageError = true;
             java.lang.String retObjectFromPage_ToString = retObjectFromPage == null ? "null" : retObjectFromPage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFromPageNumber = (java.lang.Number)retObjectFromPage;
-                return retObjectFromPageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFromPage != null ? retObjectFromPage.getClass() : "null", retObjectFromPage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFromPage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFromPageClass = retObjectFromPage.getClass();
+                    // java.lang.reflect.Method retObjectFromPageMethod = retObjectFromPageClass.getMethod("intValue");
+                    // return (int)retObjectFromPageMethod.invoke(retObjectFromPage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFromPageNumber = java.text.NumberFormat.getInstance().parse(retObjectFromPage_ToString);
+                    return retObjectFromPageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFromPageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFromPage != null ? retObjectFromPage.getClass() : "null", retObjectFromPage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFromPageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -460,13 +498,32 @@ public class PrinterSettings extends NetObject  {
             retObjectLandscapeAngle = classInstance.Get("LandscapeAngle");
             return (int)retObjectLandscapeAngle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLandscapeAngleError = true;
             java.lang.String retObjectLandscapeAngle_ToString = retObjectLandscapeAngle == null ? "null" : retObjectLandscapeAngle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLandscapeAngleNumber = (java.lang.Number)retObjectLandscapeAngle;
-                return retObjectLandscapeAngleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLandscapeAngle != null ? retObjectLandscapeAngle.getClass() : "null", retObjectLandscapeAngle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLandscapeAngle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLandscapeAngleClass = retObjectLandscapeAngle.getClass();
+                    // java.lang.reflect.Method retObjectLandscapeAngleMethod = retObjectLandscapeAngleClass.getMethod("intValue");
+                    // return (int)retObjectLandscapeAngleMethod.invoke(retObjectLandscapeAngle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLandscapeAngleNumber = java.text.NumberFormat.getInstance().parse(retObjectLandscapeAngle_ToString);
+                    return retObjectLandscapeAngleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLandscapeAngleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLandscapeAngle != null ? retObjectLandscapeAngle.getClass() : "null", retObjectLandscapeAngle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLandscapeAngleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -481,13 +538,32 @@ public class PrinterSettings extends NetObject  {
             retObjectMaximumCopies = classInstance.Get("MaximumCopies");
             return (int)retObjectMaximumCopies;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumCopiesError = true;
             java.lang.String retObjectMaximumCopies_ToString = retObjectMaximumCopies == null ? "null" : retObjectMaximumCopies.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumCopiesNumber = (java.lang.Number)retObjectMaximumCopies;
-                return retObjectMaximumCopiesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumCopies != null ? retObjectMaximumCopies.getClass() : "null", retObjectMaximumCopies_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumCopies != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumCopiesClass = retObjectMaximumCopies.getClass();
+                    // java.lang.reflect.Method retObjectMaximumCopiesMethod = retObjectMaximumCopiesClass.getMethod("intValue");
+                    // return (int)retObjectMaximumCopiesMethod.invoke(retObjectMaximumCopies);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumCopiesNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumCopies_ToString);
+                    return retObjectMaximumCopiesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumCopiesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumCopies != null ? retObjectMaximumCopies.getClass() : "null", retObjectMaximumCopies_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumCopiesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -502,13 +578,32 @@ public class PrinterSettings extends NetObject  {
             retObjectMaximumPage = classInstance.Get("MaximumPage");
             return (int)retObjectMaximumPage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumPageError = true;
             java.lang.String retObjectMaximumPage_ToString = retObjectMaximumPage == null ? "null" : retObjectMaximumPage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumPageNumber = (java.lang.Number)retObjectMaximumPage;
-                return retObjectMaximumPageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumPage != null ? retObjectMaximumPage.getClass() : "null", retObjectMaximumPage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumPage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumPageClass = retObjectMaximumPage.getClass();
+                    // java.lang.reflect.Method retObjectMaximumPageMethod = retObjectMaximumPageClass.getMethod("intValue");
+                    // return (int)retObjectMaximumPageMethod.invoke(retObjectMaximumPage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumPageNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumPage_ToString);
+                    return retObjectMaximumPageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumPageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumPage != null ? retObjectMaximumPage.getClass() : "null", retObjectMaximumPage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumPageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -533,13 +628,32 @@ public class PrinterSettings extends NetObject  {
             retObjectMinimumPage = classInstance.Get("MinimumPage");
             return (int)retObjectMinimumPage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinimumPageError = true;
             java.lang.String retObjectMinimumPage_ToString = retObjectMinimumPage == null ? "null" : retObjectMinimumPage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinimumPageNumber = (java.lang.Number)retObjectMinimumPage;
-                return retObjectMinimumPageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumPage != null ? retObjectMinimumPage.getClass() : "null", retObjectMinimumPage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinimumPage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinimumPageClass = retObjectMinimumPage.getClass();
+                    // java.lang.reflect.Method retObjectMinimumPageMethod = retObjectMinimumPageClass.getMethod("intValue");
+                    // return (int)retObjectMinimumPageMethod.invoke(retObjectMinimumPage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinimumPageNumber = java.text.NumberFormat.getInstance().parse(retObjectMinimumPage_ToString);
+                    return retObjectMinimumPageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinimumPageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinimumPage != null ? retObjectMinimumPage.getClass() : "null", retObjectMinimumPage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinimumPageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -564,13 +678,32 @@ public class PrinterSettings extends NetObject  {
             retObjectToPage = classInstance.Get("ToPage");
             return (int)retObjectToPage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportToPageError = true;
             java.lang.String retObjectToPage_ToString = retObjectToPage == null ? "null" : retObjectToPage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectToPageNumber = (java.lang.Number)retObjectToPage;
-                return retObjectToPageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToPage != null ? retObjectToPage.getClass() : "null", retObjectToPage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectToPage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectToPageClass = retObjectToPage.getClass();
+                    // java.lang.reflect.Method retObjectToPageMethod = retObjectToPageClass.getMethod("intValue");
+                    // return (int)retObjectToPageMethod.invoke(retObjectToPage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectToPageNumber = java.text.NumberFormat.getInstance().parse(retObjectToPage_ToString);
+                    return retObjectToPageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportToPageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectToPage != null ? retObjectToPage.getClass() : "null", retObjectToPage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportToPageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

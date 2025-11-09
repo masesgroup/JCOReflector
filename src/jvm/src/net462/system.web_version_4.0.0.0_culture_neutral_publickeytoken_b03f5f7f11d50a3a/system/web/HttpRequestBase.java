@@ -423,13 +423,32 @@ public class HttpRequestBase extends NetObject  {
             retObjectContentLength = classInstance.Get("ContentLength");
             return (int)retObjectContentLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportContentLengthError = true;
             java.lang.String retObjectContentLength_ToString = retObjectContentLength == null ? "null" : retObjectContentLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectContentLengthNumber = (java.lang.Number)retObjectContentLength;
-                return retObjectContentLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContentLength != null ? retObjectContentLength.getClass() : "null", retObjectContentLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectContentLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectContentLengthClass = retObjectContentLength.getClass();
+                    // java.lang.reflect.Method retObjectContentLengthMethod = retObjectContentLengthClass.getMethod("intValue");
+                    // return (int)retObjectContentLengthMethod.invoke(retObjectContentLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectContentLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectContentLength_ToString);
+                    return retObjectContentLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportContentLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectContentLength != null ? retObjectContentLength.getClass() : "null", retObjectContentLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportContentLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -444,13 +463,32 @@ public class HttpRequestBase extends NetObject  {
             retObjectTotalBytes = classInstance.Get("TotalBytes");
             return (int)retObjectTotalBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTotalBytesError = true;
             java.lang.String retObjectTotalBytes_ToString = retObjectTotalBytes == null ? "null" : retObjectTotalBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTotalBytesNumber = (java.lang.Number)retObjectTotalBytes;
-                return retObjectTotalBytesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTotalBytes != null ? retObjectTotalBytes.getClass() : "null", retObjectTotalBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTotalBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTotalBytesClass = retObjectTotalBytes.getClass();
+                    // java.lang.reflect.Method retObjectTotalBytesMethod = retObjectTotalBytesClass.getMethod("intValue");
+                    // return (int)retObjectTotalBytesMethod.invoke(retObjectTotalBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTotalBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectTotalBytes_ToString);
+                    return retObjectTotalBytesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTotalBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTotalBytes != null ? retObjectTotalBytes.getClass() : "null", retObjectTotalBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTotalBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

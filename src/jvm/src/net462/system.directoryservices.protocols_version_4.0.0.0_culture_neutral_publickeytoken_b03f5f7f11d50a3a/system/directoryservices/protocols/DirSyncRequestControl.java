@@ -259,13 +259,32 @@ public class DirSyncRequestControl extends DirectoryControl  {
             retObjectAttributeCount = classInstance.Get("AttributeCount");
             return (int)retObjectAttributeCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAttributeCountError = true;
             java.lang.String retObjectAttributeCount_ToString = retObjectAttributeCount == null ? "null" : retObjectAttributeCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAttributeCountNumber = (java.lang.Number)retObjectAttributeCount;
-                return retObjectAttributeCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAttributeCount != null ? retObjectAttributeCount.getClass() : "null", retObjectAttributeCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAttributeCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAttributeCountClass = retObjectAttributeCount.getClass();
+                    // java.lang.reflect.Method retObjectAttributeCountMethod = retObjectAttributeCountClass.getMethod("intValue");
+                    // return (int)retObjectAttributeCountMethod.invoke(retObjectAttributeCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAttributeCountNumber = java.text.NumberFormat.getInstance().parse(retObjectAttributeCount_ToString);
+                    return retObjectAttributeCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAttributeCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAttributeCount != null ? retObjectAttributeCount.getClass() : "null", retObjectAttributeCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAttributeCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

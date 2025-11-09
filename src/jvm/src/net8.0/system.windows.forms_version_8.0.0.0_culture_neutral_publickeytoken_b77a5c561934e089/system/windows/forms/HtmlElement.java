@@ -369,13 +369,32 @@ public class HtmlElement extends NetObject  {
             retObjectTabIndex = classInstance.Get("TabIndex");
             return (short)retObjectTabIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTabIndexError = true;
             java.lang.String retObjectTabIndex_ToString = retObjectTabIndex == null ? "null" : retObjectTabIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTabIndexNumber = (java.lang.Number)retObjectTabIndex;
-                return retObjectTabIndexNumber.shortValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null", retObjectTabIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTabIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTabIndexClass = retObjectTabIndex.getClass();
+                    // java.lang.reflect.Method retObjectTabIndexMethod = retObjectTabIndexClass.getMethod("shortValue");
+                    // return (short)retObjectTabIndexMethod.invoke(retObjectTabIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTabIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectTabIndex_ToString);
+                    return retObjectTabIndexNumber.shortValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTabIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null", retObjectTabIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTabIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -400,13 +419,32 @@ public class HtmlElement extends NetObject  {
             retObjectScrollLeft = classInstance.Get("ScrollLeft");
             return (int)retObjectScrollLeft;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportScrollLeftError = true;
             java.lang.String retObjectScrollLeft_ToString = retObjectScrollLeft == null ? "null" : retObjectScrollLeft.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectScrollLeftNumber = (java.lang.Number)retObjectScrollLeft;
-                return retObjectScrollLeftNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScrollLeft != null ? retObjectScrollLeft.getClass() : "null", retObjectScrollLeft_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectScrollLeft != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectScrollLeftClass = retObjectScrollLeft.getClass();
+                    // java.lang.reflect.Method retObjectScrollLeftMethod = retObjectScrollLeftClass.getMethod("intValue");
+                    // return (int)retObjectScrollLeftMethod.invoke(retObjectScrollLeft);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectScrollLeftNumber = java.text.NumberFormat.getInstance().parse(retObjectScrollLeft_ToString);
+                    return retObjectScrollLeftNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportScrollLeftError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectScrollLeft != null ? retObjectScrollLeft.getClass() : "null", retObjectScrollLeft_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportScrollLeftError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -431,13 +469,32 @@ public class HtmlElement extends NetObject  {
             retObjectScrollTop = classInstance.Get("ScrollTop");
             return (int)retObjectScrollTop;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportScrollTopError = true;
             java.lang.String retObjectScrollTop_ToString = retObjectScrollTop == null ? "null" : retObjectScrollTop.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectScrollTopNumber = (java.lang.Number)retObjectScrollTop;
-                return retObjectScrollTopNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectScrollTop != null ? retObjectScrollTop.getClass() : "null", retObjectScrollTop_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectScrollTop != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectScrollTopClass = retObjectScrollTop.getClass();
+                    // java.lang.reflect.Method retObjectScrollTopMethod = retObjectScrollTopClass.getMethod("intValue");
+                    // return (int)retObjectScrollTopMethod.invoke(retObjectScrollTop);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectScrollTopNumber = java.text.NumberFormat.getInstance().parse(retObjectScrollTop_ToString);
+                    return retObjectScrollTopNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportScrollTopError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectScrollTop != null ? retObjectScrollTop.getClass() : "null", retObjectScrollTop_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportScrollTopError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

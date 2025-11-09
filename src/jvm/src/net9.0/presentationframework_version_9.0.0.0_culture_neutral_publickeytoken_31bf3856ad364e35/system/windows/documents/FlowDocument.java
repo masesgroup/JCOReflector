@@ -310,13 +310,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectColumnGap = classInstance.Get("ColumnGap");
             return (double)retObjectColumnGap;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportColumnGapError = true;
             java.lang.String retObjectColumnGap_ToString = retObjectColumnGap == null ? "null" : retObjectColumnGap.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectColumnGapNumber = (java.lang.Number)retObjectColumnGap;
-                return retObjectColumnGapNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnGap != null ? retObjectColumnGap.getClass() : "null", retObjectColumnGap_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectColumnGap != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectColumnGapClass = retObjectColumnGap.getClass();
+                    // java.lang.reflect.Method retObjectColumnGapMethod = retObjectColumnGapClass.getMethod("doubleValue");
+                    // return (double)retObjectColumnGapMethod.invoke(retObjectColumnGap);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectColumnGapNumber = java.text.NumberFormat.getInstance().parse(retObjectColumnGap_ToString);
+                    return retObjectColumnGapNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportColumnGapError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectColumnGap != null ? retObjectColumnGap.getClass() : "null", retObjectColumnGap_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportColumnGapError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -341,13 +360,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectColumnRuleWidth = classInstance.Get("ColumnRuleWidth");
             return (double)retObjectColumnRuleWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportColumnRuleWidthError = true;
             java.lang.String retObjectColumnRuleWidth_ToString = retObjectColumnRuleWidth == null ? "null" : retObjectColumnRuleWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectColumnRuleWidthNumber = (java.lang.Number)retObjectColumnRuleWidth;
-                return retObjectColumnRuleWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnRuleWidth != null ? retObjectColumnRuleWidth.getClass() : "null", retObjectColumnRuleWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectColumnRuleWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectColumnRuleWidthClass = retObjectColumnRuleWidth.getClass();
+                    // java.lang.reflect.Method retObjectColumnRuleWidthMethod = retObjectColumnRuleWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectColumnRuleWidthMethod.invoke(retObjectColumnRuleWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectColumnRuleWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectColumnRuleWidth_ToString);
+                    return retObjectColumnRuleWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportColumnRuleWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectColumnRuleWidth != null ? retObjectColumnRuleWidth.getClass() : "null", retObjectColumnRuleWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportColumnRuleWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -372,13 +410,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectColumnWidth = classInstance.Get("ColumnWidth");
             return (double)retObjectColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportColumnWidthError = true;
             java.lang.String retObjectColumnWidth_ToString = retObjectColumnWidth == null ? "null" : retObjectColumnWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectColumnWidthNumber = (java.lang.Number)retObjectColumnWidth;
-                return retObjectColumnWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null", retObjectColumnWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectColumnWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectColumnWidthClass = retObjectColumnWidth.getClass();
+                    // java.lang.reflect.Method retObjectColumnWidthMethod = retObjectColumnWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectColumnWidthMethod.invoke(retObjectColumnWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectColumnWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectColumnWidth_ToString);
+                    return retObjectColumnWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportColumnWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null", retObjectColumnWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportColumnWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -403,13 +460,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectFontSize = classInstance.Get("FontSize");
             return (double)retObjectFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFontSizeError = true;
             java.lang.String retObjectFontSize_ToString = retObjectFontSize == null ? "null" : retObjectFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFontSizeNumber = (java.lang.Number)retObjectFontSize;
-                return retObjectFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFontSizeClass = retObjectFontSize.getClass();
+                    // java.lang.reflect.Method retObjectFontSizeMethod = retObjectFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectFontSizeMethod.invoke(retObjectFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectFontSize_ToString);
+                    return retObjectFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -434,13 +510,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectLineHeight = classInstance.Get("LineHeight");
             return (double)retObjectLineHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLineHeightError = true;
             java.lang.String retObjectLineHeight_ToString = retObjectLineHeight == null ? "null" : retObjectLineHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLineHeightNumber = (java.lang.Number)retObjectLineHeight;
-                return retObjectLineHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLineHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLineHeightClass = retObjectLineHeight.getClass();
+                    // java.lang.reflect.Method retObjectLineHeightMethod = retObjectLineHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectLineHeightMethod.invoke(retObjectLineHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLineHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectLineHeight_ToString);
+                    return retObjectLineHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLineHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null", retObjectLineHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLineHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -465,13 +560,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectMaxPageHeight = classInstance.Get("MaxPageHeight");
             return (double)retObjectMaxPageHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxPageHeightError = true;
             java.lang.String retObjectMaxPageHeight_ToString = retObjectMaxPageHeight == null ? "null" : retObjectMaxPageHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxPageHeightNumber = (java.lang.Number)retObjectMaxPageHeight;
-                return retObjectMaxPageHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxPageHeight != null ? retObjectMaxPageHeight.getClass() : "null", retObjectMaxPageHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxPageHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxPageHeightClass = retObjectMaxPageHeight.getClass();
+                    // java.lang.reflect.Method retObjectMaxPageHeightMethod = retObjectMaxPageHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectMaxPageHeightMethod.invoke(retObjectMaxPageHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxPageHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxPageHeight_ToString);
+                    return retObjectMaxPageHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxPageHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxPageHeight != null ? retObjectMaxPageHeight.getClass() : "null", retObjectMaxPageHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxPageHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -496,13 +610,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectMaxPageWidth = classInstance.Get("MaxPageWidth");
             return (double)retObjectMaxPageWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxPageWidthError = true;
             java.lang.String retObjectMaxPageWidth_ToString = retObjectMaxPageWidth == null ? "null" : retObjectMaxPageWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxPageWidthNumber = (java.lang.Number)retObjectMaxPageWidth;
-                return retObjectMaxPageWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxPageWidth != null ? retObjectMaxPageWidth.getClass() : "null", retObjectMaxPageWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxPageWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxPageWidthClass = retObjectMaxPageWidth.getClass();
+                    // java.lang.reflect.Method retObjectMaxPageWidthMethod = retObjectMaxPageWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectMaxPageWidthMethod.invoke(retObjectMaxPageWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxPageWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxPageWidth_ToString);
+                    return retObjectMaxPageWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxPageWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxPageWidth != null ? retObjectMaxPageWidth.getClass() : "null", retObjectMaxPageWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxPageWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -527,13 +660,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectMinPageHeight = classInstance.Get("MinPageHeight");
             return (double)retObjectMinPageHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinPageHeightError = true;
             java.lang.String retObjectMinPageHeight_ToString = retObjectMinPageHeight == null ? "null" : retObjectMinPageHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinPageHeightNumber = (java.lang.Number)retObjectMinPageHeight;
-                return retObjectMinPageHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinPageHeight != null ? retObjectMinPageHeight.getClass() : "null", retObjectMinPageHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinPageHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinPageHeightClass = retObjectMinPageHeight.getClass();
+                    // java.lang.reflect.Method retObjectMinPageHeightMethod = retObjectMinPageHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectMinPageHeightMethod.invoke(retObjectMinPageHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinPageHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectMinPageHeight_ToString);
+                    return retObjectMinPageHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinPageHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinPageHeight != null ? retObjectMinPageHeight.getClass() : "null", retObjectMinPageHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinPageHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -558,13 +710,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectMinPageWidth = classInstance.Get("MinPageWidth");
             return (double)retObjectMinPageWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinPageWidthError = true;
             java.lang.String retObjectMinPageWidth_ToString = retObjectMinPageWidth == null ? "null" : retObjectMinPageWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinPageWidthNumber = (java.lang.Number)retObjectMinPageWidth;
-                return retObjectMinPageWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinPageWidth != null ? retObjectMinPageWidth.getClass() : "null", retObjectMinPageWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinPageWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinPageWidthClass = retObjectMinPageWidth.getClass();
+                    // java.lang.reflect.Method retObjectMinPageWidthMethod = retObjectMinPageWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectMinPageWidthMethod.invoke(retObjectMinPageWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinPageWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectMinPageWidth_ToString);
+                    return retObjectMinPageWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinPageWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinPageWidth != null ? retObjectMinPageWidth.getClass() : "null", retObjectMinPageWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinPageWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -589,13 +760,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectPageHeight = classInstance.Get("PageHeight");
             return (double)retObjectPageHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPageHeightError = true;
             java.lang.String retObjectPageHeight_ToString = retObjectPageHeight == null ? "null" : retObjectPageHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPageHeightNumber = (java.lang.Number)retObjectPageHeight;
-                return retObjectPageHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPageHeight != null ? retObjectPageHeight.getClass() : "null", retObjectPageHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPageHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPageHeightClass = retObjectPageHeight.getClass();
+                    // java.lang.reflect.Method retObjectPageHeightMethod = retObjectPageHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectPageHeightMethod.invoke(retObjectPageHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPageHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectPageHeight_ToString);
+                    return retObjectPageHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPageHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPageHeight != null ? retObjectPageHeight.getClass() : "null", retObjectPageHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPageHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -620,13 +810,32 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             retObjectPageWidth = classInstance.Get("PageWidth");
             return (double)retObjectPageWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPageWidthError = true;
             java.lang.String retObjectPageWidth_ToString = retObjectPageWidth == null ? "null" : retObjectPageWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPageWidthNumber = (java.lang.Number)retObjectPageWidth;
-                return retObjectPageWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPageWidth != null ? retObjectPageWidth.getClass() : "null", retObjectPageWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPageWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPageWidthClass = retObjectPageWidth.getClass();
+                    // java.lang.reflect.Method retObjectPageWidthMethod = retObjectPageWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectPageWidthMethod.invoke(retObjectPageWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPageWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectPageWidth_ToString);
+                    return retObjectPageWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPageWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPageWidth != null ? retObjectPageWidth.getClass() : "null", retObjectPageWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPageWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

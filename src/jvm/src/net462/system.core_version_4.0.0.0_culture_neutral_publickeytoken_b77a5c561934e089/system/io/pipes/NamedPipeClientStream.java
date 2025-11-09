@@ -334,13 +334,32 @@ public class NamedPipeClientStream extends PipeStream  {
             retObjectNumberOfServerInstances = classInstance.Get("NumberOfServerInstances");
             return (int)retObjectNumberOfServerInstances;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNumberOfServerInstancesError = true;
             java.lang.String retObjectNumberOfServerInstances_ToString = retObjectNumberOfServerInstances == null ? "null" : retObjectNumberOfServerInstances.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNumberOfServerInstancesNumber = (java.lang.Number)retObjectNumberOfServerInstances;
-                return retObjectNumberOfServerInstancesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberOfServerInstances != null ? retObjectNumberOfServerInstances.getClass() : "null", retObjectNumberOfServerInstances_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNumberOfServerInstances != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNumberOfServerInstancesClass = retObjectNumberOfServerInstances.getClass();
+                    // java.lang.reflect.Method retObjectNumberOfServerInstancesMethod = retObjectNumberOfServerInstancesClass.getMethod("intValue");
+                    // return (int)retObjectNumberOfServerInstancesMethod.invoke(retObjectNumberOfServerInstances);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNumberOfServerInstancesNumber = java.text.NumberFormat.getInstance().parse(retObjectNumberOfServerInstances_ToString);
+                    return retObjectNumberOfServerInstancesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNumberOfServerInstancesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNumberOfServerInstances != null ? retObjectNumberOfServerInstances.getClass() : "null", retObjectNumberOfServerInstances_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNumberOfServerInstancesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

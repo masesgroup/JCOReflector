@@ -161,13 +161,32 @@ public class ISOWeek extends NetObject  {
             retObjectGetWeekOfYear = classType.Invoke("GetWeekOfYear", date == null ? null : date.getJCOInstance());
             return (int)retObjectGetWeekOfYear;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetWeekOfYearError = true;
             java.lang.String retObjectGetWeekOfYear_ToString = retObjectGetWeekOfYear == null ? "null" : retObjectGetWeekOfYear.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetWeekOfYearNumber = (java.lang.Number)retObjectGetWeekOfYear;
-                return retObjectGetWeekOfYearNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetWeekOfYear != null ? retObjectGetWeekOfYear.getClass() : "null", retObjectGetWeekOfYear_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetWeekOfYear != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetWeekOfYearClass = retObjectGetWeekOfYear.getClass();
+                    // java.lang.reflect.Method retObjectGetWeekOfYearMethod = retObjectGetWeekOfYearClass.getMethod("intValue");
+                    // return (int)retObjectGetWeekOfYearMethod.invoke(retObjectGetWeekOfYear);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetWeekOfYearNumber = java.text.NumberFormat.getInstance().parse(retObjectGetWeekOfYear_ToString);
+                    return retObjectGetWeekOfYearNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetWeekOfYearError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetWeekOfYear != null ? retObjectGetWeekOfYear.getClass() : "null", retObjectGetWeekOfYear_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetWeekOfYearError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,13 +201,32 @@ public class ISOWeek extends NetObject  {
             retObjectGetWeeksInYear = classType.Invoke("GetWeeksInYear", year);
             return (int)retObjectGetWeeksInYear;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetWeeksInYearError = true;
             java.lang.String retObjectGetWeeksInYear_ToString = retObjectGetWeeksInYear == null ? "null" : retObjectGetWeeksInYear.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetWeeksInYearNumber = (java.lang.Number)retObjectGetWeeksInYear;
-                return retObjectGetWeeksInYearNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetWeeksInYear != null ? retObjectGetWeeksInYear.getClass() : "null", retObjectGetWeeksInYear_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetWeeksInYear != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetWeeksInYearClass = retObjectGetWeeksInYear.getClass();
+                    // java.lang.reflect.Method retObjectGetWeeksInYearMethod = retObjectGetWeeksInYearClass.getMethod("intValue");
+                    // return (int)retObjectGetWeeksInYearMethod.invoke(retObjectGetWeeksInYear);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetWeeksInYearNumber = java.text.NumberFormat.getInstance().parse(retObjectGetWeeksInYear_ToString);
+                    return retObjectGetWeeksInYearNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetWeeksInYearError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetWeeksInYear != null ? retObjectGetWeeksInYear.getClass() : "null", retObjectGetWeeksInYear_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetWeeksInYearError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,13 +241,32 @@ public class ISOWeek extends NetObject  {
             retObjectGetYear = classType.Invoke("GetYear", date == null ? null : date.getJCOInstance());
             return (int)retObjectGetYear;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetYearError = true;
             java.lang.String retObjectGetYear_ToString = retObjectGetYear == null ? "null" : retObjectGetYear.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetYearNumber = (java.lang.Number)retObjectGetYear;
-                return retObjectGetYearNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetYear != null ? retObjectGetYear.getClass() : "null", retObjectGetYear_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetYear != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetYearClass = retObjectGetYear.getClass();
+                    // java.lang.reflect.Method retObjectGetYearMethod = retObjectGetYearClass.getMethod("intValue");
+                    // return (int)retObjectGetYearMethod.invoke(retObjectGetYear);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetYearNumber = java.text.NumberFormat.getInstance().parse(retObjectGetYear_ToString);
+                    return retObjectGetYearNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetYearError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetYear != null ? retObjectGetYear.getClass() : "null", retObjectGetYear_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetYearError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

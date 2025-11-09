@@ -308,13 +308,32 @@ public class NetworkInterface extends NetObject  {
             retObjectIPv6LoopbackInterfaceIndex = classType.Get("IPv6LoopbackInterfaceIndex");
             return (int)retObjectIPv6LoopbackInterfaceIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIPv6LoopbackInterfaceIndexError = true;
             java.lang.String retObjectIPv6LoopbackInterfaceIndex_ToString = retObjectIPv6LoopbackInterfaceIndex == null ? "null" : retObjectIPv6LoopbackInterfaceIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIPv6LoopbackInterfaceIndexNumber = (java.lang.Number)retObjectIPv6LoopbackInterfaceIndex;
-                return retObjectIPv6LoopbackInterfaceIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIPv6LoopbackInterfaceIndex != null ? retObjectIPv6LoopbackInterfaceIndex.getClass() : "null", retObjectIPv6LoopbackInterfaceIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIPv6LoopbackInterfaceIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIPv6LoopbackInterfaceIndexClass = retObjectIPv6LoopbackInterfaceIndex.getClass();
+                    // java.lang.reflect.Method retObjectIPv6LoopbackInterfaceIndexMethod = retObjectIPv6LoopbackInterfaceIndexClass.getMethod("intValue");
+                    // return (int)retObjectIPv6LoopbackInterfaceIndexMethod.invoke(retObjectIPv6LoopbackInterfaceIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIPv6LoopbackInterfaceIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectIPv6LoopbackInterfaceIndex_ToString);
+                    return retObjectIPv6LoopbackInterfaceIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIPv6LoopbackInterfaceIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIPv6LoopbackInterfaceIndex != null ? retObjectIPv6LoopbackInterfaceIndex.getClass() : "null", retObjectIPv6LoopbackInterfaceIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIPv6LoopbackInterfaceIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -329,13 +348,32 @@ public class NetworkInterface extends NetObject  {
             retObjectLoopbackInterfaceIndex = classType.Get("LoopbackInterfaceIndex");
             return (int)retObjectLoopbackInterfaceIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLoopbackInterfaceIndexError = true;
             java.lang.String retObjectLoopbackInterfaceIndex_ToString = retObjectLoopbackInterfaceIndex == null ? "null" : retObjectLoopbackInterfaceIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLoopbackInterfaceIndexNumber = (java.lang.Number)retObjectLoopbackInterfaceIndex;
-                return retObjectLoopbackInterfaceIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoopbackInterfaceIndex != null ? retObjectLoopbackInterfaceIndex.getClass() : "null", retObjectLoopbackInterfaceIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLoopbackInterfaceIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLoopbackInterfaceIndexClass = retObjectLoopbackInterfaceIndex.getClass();
+                    // java.lang.reflect.Method retObjectLoopbackInterfaceIndexMethod = retObjectLoopbackInterfaceIndexClass.getMethod("intValue");
+                    // return (int)retObjectLoopbackInterfaceIndexMethod.invoke(retObjectLoopbackInterfaceIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLoopbackInterfaceIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectLoopbackInterfaceIndex_ToString);
+                    return retObjectLoopbackInterfaceIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLoopbackInterfaceIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLoopbackInterfaceIndex != null ? retObjectLoopbackInterfaceIndex.getClass() : "null", retObjectLoopbackInterfaceIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLoopbackInterfaceIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -350,13 +388,32 @@ public class NetworkInterface extends NetObject  {
             retObjectSpeed = classInstance.Get("Speed");
             return (long)retObjectSpeed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSpeedError = true;
             java.lang.String retObjectSpeed_ToString = retObjectSpeed == null ? "null" : retObjectSpeed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSpeedNumber = (java.lang.Number)retObjectSpeed;
-                return retObjectSpeedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSpeed != null ? retObjectSpeed.getClass() : "null", retObjectSpeed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSpeed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSpeedClass = retObjectSpeed.getClass();
+                    // java.lang.reflect.Method retObjectSpeedMethod = retObjectSpeedClass.getMethod("longValue");
+                    // return (long)retObjectSpeedMethod.invoke(retObjectSpeed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSpeedNumber = java.text.NumberFormat.getInstance().parse(retObjectSpeed_ToString);
+                    return retObjectSpeedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSpeedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSpeed != null ? retObjectSpeed.getClass() : "null", retObjectSpeed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSpeedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

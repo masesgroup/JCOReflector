@@ -212,13 +212,32 @@ public class MsmqPoisonMessageException extends PoisonMessageException {
             retObjectMessageLookupId = classInstance.Get("MessageLookupId");
             return (long)retObjectMessageLookupId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMessageLookupIdError = true;
             java.lang.String retObjectMessageLookupId_ToString = retObjectMessageLookupId == null ? "null" : retObjectMessageLookupId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMessageLookupIdNumber = (java.lang.Number)retObjectMessageLookupId;
-                return retObjectMessageLookupIdNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMessageLookupId != null ? retObjectMessageLookupId.getClass() : "null", retObjectMessageLookupId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMessageLookupId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMessageLookupIdClass = retObjectMessageLookupId.getClass();
+                    // java.lang.reflect.Method retObjectMessageLookupIdMethod = retObjectMessageLookupIdClass.getMethod("longValue");
+                    // return (long)retObjectMessageLookupIdMethod.invoke(retObjectMessageLookupId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMessageLookupIdNumber = java.text.NumberFormat.getInstance().parse(retObjectMessageLookupId_ToString);
+                    return retObjectMessageLookupIdNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMessageLookupIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMessageLookupId != null ? retObjectMessageLookupId.getClass() : "null", retObjectMessageLookupId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMessageLookupIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

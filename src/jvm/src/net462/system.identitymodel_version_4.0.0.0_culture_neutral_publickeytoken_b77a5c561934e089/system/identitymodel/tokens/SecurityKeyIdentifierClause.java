@@ -231,13 +231,32 @@ public class SecurityKeyIdentifierClause extends NetObject  {
             retObjectDerivationLength = classInstance.Get("DerivationLength");
             return (int)retObjectDerivationLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDerivationLengthError = true;
             java.lang.String retObjectDerivationLength_ToString = retObjectDerivationLength == null ? "null" : retObjectDerivationLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDerivationLengthNumber = (java.lang.Number)retObjectDerivationLength;
-                return retObjectDerivationLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDerivationLength != null ? retObjectDerivationLength.getClass() : "null", retObjectDerivationLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDerivationLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDerivationLengthClass = retObjectDerivationLength.getClass();
+                    // java.lang.reflect.Method retObjectDerivationLengthMethod = retObjectDerivationLengthClass.getMethod("intValue");
+                    // return (int)retObjectDerivationLengthMethod.invoke(retObjectDerivationLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDerivationLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectDerivationLength_ToString);
+                    return retObjectDerivationLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDerivationLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDerivationLength != null ? retObjectDerivationLength.getClass() : "null", retObjectDerivationLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDerivationLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

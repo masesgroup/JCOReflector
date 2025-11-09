@@ -173,13 +173,32 @@ public class TraceEventCache extends NetObject  {
             retObjectProcessId = classInstance.Get("ProcessId");
             return (int)retObjectProcessId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProcessIdError = true;
             java.lang.String retObjectProcessId_ToString = retObjectProcessId == null ? "null" : retObjectProcessId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProcessIdNumber = (java.lang.Number)retObjectProcessId;
-                return retObjectProcessIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProcessId != null ? retObjectProcessId.getClass() : "null", retObjectProcessId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProcessId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProcessIdClass = retObjectProcessId.getClass();
+                    // java.lang.reflect.Method retObjectProcessIdMethod = retObjectProcessIdClass.getMethod("intValue");
+                    // return (int)retObjectProcessIdMethod.invoke(retObjectProcessId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProcessIdNumber = java.text.NumberFormat.getInstance().parse(retObjectProcessId_ToString);
+                    return retObjectProcessIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProcessIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProcessId != null ? retObjectProcessId.getClass() : "null", retObjectProcessId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProcessIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,13 +213,32 @@ public class TraceEventCache extends NetObject  {
             retObjectTimestamp = classInstance.Get("Timestamp");
             return (long)retObjectTimestamp;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTimestampError = true;
             java.lang.String retObjectTimestamp_ToString = retObjectTimestamp == null ? "null" : retObjectTimestamp.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTimestampNumber = (java.lang.Number)retObjectTimestamp;
-                return retObjectTimestampNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null", retObjectTimestamp_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTimestamp != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTimestampClass = retObjectTimestamp.getClass();
+                    // java.lang.reflect.Method retObjectTimestampMethod = retObjectTimestampClass.getMethod("longValue");
+                    // return (long)retObjectTimestampMethod.invoke(retObjectTimestamp);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTimestampNumber = java.text.NumberFormat.getInstance().parse(retObjectTimestamp_ToString);
+                    return retObjectTimestampNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTimestampError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null", retObjectTimestamp_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTimestampError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -181,13 +181,32 @@ public class VisualStyleElement extends NetObject  {
             retObjectPart = classInstance.Get("Part");
             return (int)retObjectPart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPartError = true;
             java.lang.String retObjectPart_ToString = retObjectPart == null ? "null" : retObjectPart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPartNumber = (java.lang.Number)retObjectPart;
-                return retObjectPartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPart != null ? retObjectPart.getClass() : "null", retObjectPart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPartClass = retObjectPart.getClass();
+                    // java.lang.reflect.Method retObjectPartMethod = retObjectPartClass.getMethod("intValue");
+                    // return (int)retObjectPartMethod.invoke(retObjectPart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPartNumber = java.text.NumberFormat.getInstance().parse(retObjectPart_ToString);
+                    return retObjectPartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPart != null ? retObjectPart.getClass() : "null", retObjectPart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,13 +221,32 @@ public class VisualStyleElement extends NetObject  {
             retObjectState = classInstance.Get("State");
             return (int)retObjectState;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStateError = true;
             java.lang.String retObjectState_ToString = retObjectState == null ? "null" : retObjectState.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStateNumber = (java.lang.Number)retObjectState;
-                return retObjectStateNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectState != null ? retObjectState.getClass() : "null", retObjectState_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectState != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStateClass = retObjectState.getClass();
+                    // java.lang.reflect.Method retObjectStateMethod = retObjectStateClass.getMethod("intValue");
+                    // return (int)retObjectStateMethod.invoke(retObjectState);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStateNumber = java.text.NumberFormat.getInstance().parse(retObjectState_ToString);
+                    return retObjectStateNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStateError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectState != null ? retObjectState.getClass() : "null", retObjectState_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStateError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

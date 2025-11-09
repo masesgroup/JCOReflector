@@ -191,13 +191,32 @@ public class CardSpacePolicyElement extends NetObject  {
             retObjectPolicyNoticeVersion = classInstance.Get("PolicyNoticeVersion");
             return (int)retObjectPolicyNoticeVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPolicyNoticeVersionError = true;
             java.lang.String retObjectPolicyNoticeVersion_ToString = retObjectPolicyNoticeVersion == null ? "null" : retObjectPolicyNoticeVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPolicyNoticeVersionNumber = (java.lang.Number)retObjectPolicyNoticeVersion;
-                return retObjectPolicyNoticeVersionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPolicyNoticeVersion != null ? retObjectPolicyNoticeVersion.getClass() : "null", retObjectPolicyNoticeVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPolicyNoticeVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPolicyNoticeVersionClass = retObjectPolicyNoticeVersion.getClass();
+                    // java.lang.reflect.Method retObjectPolicyNoticeVersionMethod = retObjectPolicyNoticeVersionClass.getMethod("intValue");
+                    // return (int)retObjectPolicyNoticeVersionMethod.invoke(retObjectPolicyNoticeVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPolicyNoticeVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectPolicyNoticeVersion_ToString);
+                    return retObjectPolicyNoticeVersionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPolicyNoticeVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPolicyNoticeVersion != null ? retObjectPolicyNoticeVersion.getClass() : "null", retObjectPolicyNoticeVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPolicyNoticeVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -217,13 +217,32 @@ public class Pen extends Animatable  {
             retObjectMiterLimit = classInstance.Get("MiterLimit");
             return (double)retObjectMiterLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMiterLimitError = true;
             java.lang.String retObjectMiterLimit_ToString = retObjectMiterLimit == null ? "null" : retObjectMiterLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMiterLimitNumber = (java.lang.Number)retObjectMiterLimit;
-                return retObjectMiterLimitNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMiterLimit != null ? retObjectMiterLimit.getClass() : "null", retObjectMiterLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMiterLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMiterLimitClass = retObjectMiterLimit.getClass();
+                    // java.lang.reflect.Method retObjectMiterLimitMethod = retObjectMiterLimitClass.getMethod("doubleValue");
+                    // return (double)retObjectMiterLimitMethod.invoke(retObjectMiterLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMiterLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectMiterLimit_ToString);
+                    return retObjectMiterLimitNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMiterLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMiterLimit != null ? retObjectMiterLimit.getClass() : "null", retObjectMiterLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMiterLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -248,13 +267,32 @@ public class Pen extends Animatable  {
             retObjectThickness = classInstance.Get("Thickness");
             return (double)retObjectThickness;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportThicknessError = true;
             java.lang.String retObjectThickness_ToString = retObjectThickness == null ? "null" : retObjectThickness.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectThicknessNumber = (java.lang.Number)retObjectThickness;
-                return retObjectThicknessNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectThickness != null ? retObjectThickness.getClass() : "null", retObjectThickness_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectThickness != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectThicknessClass = retObjectThickness.getClass();
+                    // java.lang.reflect.Method retObjectThicknessMethod = retObjectThicknessClass.getMethod("doubleValue");
+                    // return (double)retObjectThicknessMethod.invoke(retObjectThickness);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectThicknessNumber = java.text.NumberFormat.getInstance().parse(retObjectThickness_ToString);
+                    return retObjectThicknessNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportThicknessError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectThickness != null ? retObjectThickness.getClass() : "null", retObjectThickness_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportThicknessError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

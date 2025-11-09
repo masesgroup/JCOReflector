@@ -168,13 +168,32 @@ public class FieldDefinition extends ValueType  {
             retObjectGetOffset = classInstance.Invoke("GetOffset");
             return (int)retObjectGetOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetOffsetError = true;
             java.lang.String retObjectGetOffset_ToString = retObjectGetOffset == null ? "null" : retObjectGetOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetOffsetNumber = (java.lang.Number)retObjectGetOffset;
-                return retObjectGetOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOffset != null ? retObjectGetOffset.getClass() : "null", retObjectGetOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetOffsetClass = retObjectGetOffset.getClass();
+                    // java.lang.reflect.Method retObjectGetOffsetMethod = retObjectGetOffsetClass.getMethod("intValue");
+                    // return (int)retObjectGetOffsetMethod.invoke(retObjectGetOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectGetOffset_ToString);
+                    return retObjectGetOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetOffset != null ? retObjectGetOffset.getClass() : "null", retObjectGetOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,13 +208,32 @@ public class FieldDefinition extends ValueType  {
             retObjectGetRelativeVirtualAddress = classInstance.Invoke("GetRelativeVirtualAddress");
             return (int)retObjectGetRelativeVirtualAddress;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetRelativeVirtualAddressError = true;
             java.lang.String retObjectGetRelativeVirtualAddress_ToString = retObjectGetRelativeVirtualAddress == null ? "null" : retObjectGetRelativeVirtualAddress.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetRelativeVirtualAddressNumber = (java.lang.Number)retObjectGetRelativeVirtualAddress;
-                return retObjectGetRelativeVirtualAddressNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRelativeVirtualAddress != null ? retObjectGetRelativeVirtualAddress.getClass() : "null", retObjectGetRelativeVirtualAddress_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetRelativeVirtualAddress != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetRelativeVirtualAddressClass = retObjectGetRelativeVirtualAddress.getClass();
+                    // java.lang.reflect.Method retObjectGetRelativeVirtualAddressMethod = retObjectGetRelativeVirtualAddressClass.getMethod("intValue");
+                    // return (int)retObjectGetRelativeVirtualAddressMethod.invoke(retObjectGetRelativeVirtualAddress);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetRelativeVirtualAddressNumber = java.text.NumberFormat.getInstance().parse(retObjectGetRelativeVirtualAddress_ToString);
+                    return retObjectGetRelativeVirtualAddressNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetRelativeVirtualAddressError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetRelativeVirtualAddress != null ? retObjectGetRelativeVirtualAddress.getClass() : "null", retObjectGetRelativeVirtualAddress_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetRelativeVirtualAddressError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

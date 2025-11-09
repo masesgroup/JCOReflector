@@ -188,13 +188,32 @@ public class InputLanguageChangedEventArgs extends EventArgs  {
             retObjectCharSet = classInstance.Get("CharSet");
             return (byte)retObjectCharSet;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCharSetError = true;
             java.lang.String retObjectCharSet_ToString = retObjectCharSet == null ? "null" : retObjectCharSet.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCharSetNumber = (java.lang.Number)retObjectCharSet;
-                return retObjectCharSetNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectCharSet != null ? retObjectCharSet.getClass() : "null", retObjectCharSet_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCharSet != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCharSetClass = retObjectCharSet.getClass();
+                    // java.lang.reflect.Method retObjectCharSetMethod = retObjectCharSetClass.getMethod("byteValue");
+                    // return (byte)retObjectCharSetMethod.invoke(retObjectCharSet);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCharSetNumber = java.text.NumberFormat.getInstance().parse(retObjectCharSet_ToString);
+                    return retObjectCharSetNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCharSetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCharSet != null ? retObjectCharSet.getClass() : "null", retObjectCharSet_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCharSetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -278,13 +278,32 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
             retObjectEditItemIndex = classInstance.Get("EditItemIndex");
             return (int)retObjectEditItemIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEditItemIndexError = true;
             java.lang.String retObjectEditItemIndex_ToString = retObjectEditItemIndex == null ? "null" : retObjectEditItemIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEditItemIndexNumber = (java.lang.Number)retObjectEditItemIndex;
-                return retObjectEditItemIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEditItemIndex != null ? retObjectEditItemIndex.getClass() : "null", retObjectEditItemIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEditItemIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEditItemIndexClass = retObjectEditItemIndex.getClass();
+                    // java.lang.reflect.Method retObjectEditItemIndexMethod = retObjectEditItemIndexClass.getMethod("intValue");
+                    // return (int)retObjectEditItemIndexMethod.invoke(retObjectEditItemIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEditItemIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectEditItemIndex_ToString);
+                    return retObjectEditItemIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEditItemIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEditItemIndex != null ? retObjectEditItemIndex.getClass() : "null", retObjectEditItemIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEditItemIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -309,13 +328,32 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
             retObjectRepeatColumns = classInstance.Get("RepeatColumns");
             return (int)retObjectRepeatColumns;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRepeatColumnsError = true;
             java.lang.String retObjectRepeatColumns_ToString = retObjectRepeatColumns == null ? "null" : retObjectRepeatColumns.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRepeatColumnsNumber = (java.lang.Number)retObjectRepeatColumns;
-                return retObjectRepeatColumnsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null", retObjectRepeatColumns_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRepeatColumns != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRepeatColumnsClass = retObjectRepeatColumns.getClass();
+                    // java.lang.reflect.Method retObjectRepeatColumnsMethod = retObjectRepeatColumnsClass.getMethod("intValue");
+                    // return (int)retObjectRepeatColumnsMethod.invoke(retObjectRepeatColumns);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRepeatColumnsNumber = java.text.NumberFormat.getInstance().parse(retObjectRepeatColumns_ToString);
+                    return retObjectRepeatColumnsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRepeatColumnsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null", retObjectRepeatColumns_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRepeatColumnsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -340,13 +378,32 @@ public class DataList extends BaseDataList implements system.web.ui.INamingConta
             retObjectSelectedIndex = classInstance.Get("SelectedIndex");
             return (int)retObjectSelectedIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSelectedIndexError = true;
             java.lang.String retObjectSelectedIndex_ToString = retObjectSelectedIndex == null ? "null" : retObjectSelectedIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSelectedIndexNumber = (java.lang.Number)retObjectSelectedIndex;
-                return retObjectSelectedIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSelectedIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSelectedIndexClass = retObjectSelectedIndex.getClass();
+                    // java.lang.reflect.Method retObjectSelectedIndexMethod = retObjectSelectedIndexClass.getMethod("intValue");
+                    // return (int)retObjectSelectedIndexMethod.invoke(retObjectSelectedIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSelectedIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectSelectedIndex_ToString);
+                    return retObjectSelectedIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSelectedIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null", retObjectSelectedIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSelectedIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

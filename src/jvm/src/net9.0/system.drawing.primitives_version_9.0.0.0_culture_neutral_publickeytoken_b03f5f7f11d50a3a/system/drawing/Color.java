@@ -179,13 +179,32 @@ public class Color extends ValueType  {
             retObjectToArgb = classInstance.Invoke("ToArgb");
             return (int)retObjectToArgb;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportToArgbError = true;
             java.lang.String retObjectToArgb_ToString = retObjectToArgb == null ? "null" : retObjectToArgb.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectToArgbNumber = (java.lang.Number)retObjectToArgb;
-                return retObjectToArgbNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToArgb != null ? retObjectToArgb.getClass() : "null", retObjectToArgb_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectToArgb != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectToArgbClass = retObjectToArgb.getClass();
+                    // java.lang.reflect.Method retObjectToArgbMethod = retObjectToArgbClass.getMethod("intValue");
+                    // return (int)retObjectToArgbMethod.invoke(retObjectToArgb);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectToArgbNumber = java.text.NumberFormat.getInstance().parse(retObjectToArgb_ToString);
+                    return retObjectToArgbNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportToArgbError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectToArgb != null ? retObjectToArgb.getClass() : "null", retObjectToArgb_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportToArgbError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -410,13 +429,32 @@ public class Color extends ValueType  {
             retObjectA = classInstance.Get("A");
             return (byte)retObjectA;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAError = true;
             java.lang.String retObjectA_ToString = retObjectA == null ? "null" : retObjectA.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectANumber = (java.lang.Number)retObjectA;
-                return retObjectANumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectA != null ? retObjectA.getClass() : "null", retObjectA_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectA != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAClass = retObjectA.getClass();
+                    // java.lang.reflect.Method retObjectAMethod = retObjectAClass.getMethod("byteValue");
+                    // return (byte)retObjectAMethod.invoke(retObjectA);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectANumber = java.text.NumberFormat.getInstance().parse(retObjectA_ToString);
+                    return retObjectANumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectA != null ? retObjectA.getClass() : "null", retObjectA_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -431,13 +469,32 @@ public class Color extends ValueType  {
             retObjectB = classInstance.Get("B");
             return (byte)retObjectB;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBError = true;
             java.lang.String retObjectB_ToString = retObjectB == null ? "null" : retObjectB.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBNumber = (java.lang.Number)retObjectB;
-                return retObjectBNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectB != null ? retObjectB.getClass() : "null", retObjectB_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectB != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBClass = retObjectB.getClass();
+                    // java.lang.reflect.Method retObjectBMethod = retObjectBClass.getMethod("byteValue");
+                    // return (byte)retObjectBMethod.invoke(retObjectB);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBNumber = java.text.NumberFormat.getInstance().parse(retObjectB_ToString);
+                    return retObjectBNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectB != null ? retObjectB.getClass() : "null", retObjectB_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -452,13 +509,32 @@ public class Color extends ValueType  {
             retObjectG = classInstance.Get("G");
             return (byte)retObjectG;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGError = true;
             java.lang.String retObjectG_ToString = retObjectG == null ? "null" : retObjectG.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGNumber = (java.lang.Number)retObjectG;
-                return retObjectGNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectG != null ? retObjectG.getClass() : "null", retObjectG_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectG != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGClass = retObjectG.getClass();
+                    // java.lang.reflect.Method retObjectGMethod = retObjectGClass.getMethod("byteValue");
+                    // return (byte)retObjectGMethod.invoke(retObjectG);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGNumber = java.text.NumberFormat.getInstance().parse(retObjectG_ToString);
+                    return retObjectGNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectG != null ? retObjectG.getClass() : "null", retObjectG_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -473,13 +549,32 @@ public class Color extends ValueType  {
             retObjectR = classInstance.Get("R");
             return (byte)retObjectR;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRError = true;
             java.lang.String retObjectR_ToString = retObjectR == null ? "null" : retObjectR.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRNumber = (java.lang.Number)retObjectR;
-                return retObjectRNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectR != null ? retObjectR.getClass() : "null", retObjectR_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectR != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRClass = retObjectR.getClass();
+                    // java.lang.reflect.Method retObjectRMethod = retObjectRClass.getMethod("byteValue");
+                    // return (byte)retObjectRMethod.invoke(retObjectR);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRNumber = java.text.NumberFormat.getInstance().parse(retObjectR_ToString);
+                    return retObjectRNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectR != null ? retObjectR.getClass() : "null", retObjectR_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

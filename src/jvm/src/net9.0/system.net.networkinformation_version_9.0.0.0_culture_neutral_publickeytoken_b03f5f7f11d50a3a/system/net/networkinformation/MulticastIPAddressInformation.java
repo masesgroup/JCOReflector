@@ -167,13 +167,32 @@ public class MulticastIPAddressInformation extends IPAddressInformation  {
             retObjectAddressPreferredLifetime = classInstance.Get("AddressPreferredLifetime");
             return (long)retObjectAddressPreferredLifetime;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddressPreferredLifetimeError = true;
             java.lang.String retObjectAddressPreferredLifetime_ToString = retObjectAddressPreferredLifetime == null ? "null" : retObjectAddressPreferredLifetime.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddressPreferredLifetimeNumber = (java.lang.Number)retObjectAddressPreferredLifetime;
-                return retObjectAddressPreferredLifetimeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAddressPreferredLifetime != null ? retObjectAddressPreferredLifetime.getClass() : "null", retObjectAddressPreferredLifetime_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAddressPreferredLifetime != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddressPreferredLifetimeClass = retObjectAddressPreferredLifetime.getClass();
+                    // java.lang.reflect.Method retObjectAddressPreferredLifetimeMethod = retObjectAddressPreferredLifetimeClass.getMethod("longValue");
+                    // return (long)retObjectAddressPreferredLifetimeMethod.invoke(retObjectAddressPreferredLifetime);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddressPreferredLifetimeNumber = java.text.NumberFormat.getInstance().parse(retObjectAddressPreferredLifetime_ToString);
+                    return retObjectAddressPreferredLifetimeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddressPreferredLifetimeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAddressPreferredLifetime != null ? retObjectAddressPreferredLifetime.getClass() : "null", retObjectAddressPreferredLifetime_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddressPreferredLifetimeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,13 +207,32 @@ public class MulticastIPAddressInformation extends IPAddressInformation  {
             retObjectAddressValidLifetime = classInstance.Get("AddressValidLifetime");
             return (long)retObjectAddressValidLifetime;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddressValidLifetimeError = true;
             java.lang.String retObjectAddressValidLifetime_ToString = retObjectAddressValidLifetime == null ? "null" : retObjectAddressValidLifetime.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddressValidLifetimeNumber = (java.lang.Number)retObjectAddressValidLifetime;
-                return retObjectAddressValidLifetimeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAddressValidLifetime != null ? retObjectAddressValidLifetime.getClass() : "null", retObjectAddressValidLifetime_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAddressValidLifetime != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddressValidLifetimeClass = retObjectAddressValidLifetime.getClass();
+                    // java.lang.reflect.Method retObjectAddressValidLifetimeMethod = retObjectAddressValidLifetimeClass.getMethod("longValue");
+                    // return (long)retObjectAddressValidLifetimeMethod.invoke(retObjectAddressValidLifetime);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddressValidLifetimeNumber = java.text.NumberFormat.getInstance().parse(retObjectAddressValidLifetime_ToString);
+                    return retObjectAddressValidLifetimeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddressValidLifetimeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAddressValidLifetime != null ? retObjectAddressValidLifetime.getClass() : "null", retObjectAddressValidLifetime_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddressValidLifetimeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -209,13 +247,32 @@ public class MulticastIPAddressInformation extends IPAddressInformation  {
             retObjectDhcpLeaseLifetime = classInstance.Get("DhcpLeaseLifetime");
             return (long)retObjectDhcpLeaseLifetime;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDhcpLeaseLifetimeError = true;
             java.lang.String retObjectDhcpLeaseLifetime_ToString = retObjectDhcpLeaseLifetime == null ? "null" : retObjectDhcpLeaseLifetime.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDhcpLeaseLifetimeNumber = (java.lang.Number)retObjectDhcpLeaseLifetime;
-                return retObjectDhcpLeaseLifetimeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectDhcpLeaseLifetime != null ? retObjectDhcpLeaseLifetime.getClass() : "null", retObjectDhcpLeaseLifetime_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDhcpLeaseLifetime != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDhcpLeaseLifetimeClass = retObjectDhcpLeaseLifetime.getClass();
+                    // java.lang.reflect.Method retObjectDhcpLeaseLifetimeMethod = retObjectDhcpLeaseLifetimeClass.getMethod("longValue");
+                    // return (long)retObjectDhcpLeaseLifetimeMethod.invoke(retObjectDhcpLeaseLifetime);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDhcpLeaseLifetimeNumber = java.text.NumberFormat.getInstance().parse(retObjectDhcpLeaseLifetime_ToString);
+                    return retObjectDhcpLeaseLifetimeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDhcpLeaseLifetimeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDhcpLeaseLifetime != null ? retObjectDhcpLeaseLifetime.getClass() : "null", retObjectDhcpLeaseLifetime_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDhcpLeaseLifetimeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

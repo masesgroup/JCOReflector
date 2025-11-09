@@ -200,13 +200,32 @@ public class MultiView extends Control  {
             retObjectActiveViewIndex = classInstance.Get("ActiveViewIndex");
             return (int)retObjectActiveViewIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportActiveViewIndexError = true;
             java.lang.String retObjectActiveViewIndex_ToString = retObjectActiveViewIndex == null ? "null" : retObjectActiveViewIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectActiveViewIndexNumber = (java.lang.Number)retObjectActiveViewIndex;
-                return retObjectActiveViewIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectActiveViewIndex != null ? retObjectActiveViewIndex.getClass() : "null", retObjectActiveViewIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectActiveViewIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectActiveViewIndexClass = retObjectActiveViewIndex.getClass();
+                    // java.lang.reflect.Method retObjectActiveViewIndexMethod = retObjectActiveViewIndexClass.getMethod("intValue");
+                    // return (int)retObjectActiveViewIndexMethod.invoke(retObjectActiveViewIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectActiveViewIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectActiveViewIndex_ToString);
+                    return retObjectActiveViewIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportActiveViewIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectActiveViewIndex != null ? retObjectActiveViewIndex.getClass() : "null", retObjectActiveViewIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportActiveViewIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

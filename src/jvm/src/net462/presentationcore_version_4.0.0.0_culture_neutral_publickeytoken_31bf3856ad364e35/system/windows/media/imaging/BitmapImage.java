@@ -251,13 +251,32 @@ public class BitmapImage extends BitmapSource  {
             retObjectDecodePixelHeight = classInstance.Get("DecodePixelHeight");
             return (int)retObjectDecodePixelHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDecodePixelHeightError = true;
             java.lang.String retObjectDecodePixelHeight_ToString = retObjectDecodePixelHeight == null ? "null" : retObjectDecodePixelHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDecodePixelHeightNumber = (java.lang.Number)retObjectDecodePixelHeight;
-                return retObjectDecodePixelHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecodePixelHeight != null ? retObjectDecodePixelHeight.getClass() : "null", retObjectDecodePixelHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDecodePixelHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDecodePixelHeightClass = retObjectDecodePixelHeight.getClass();
+                    // java.lang.reflect.Method retObjectDecodePixelHeightMethod = retObjectDecodePixelHeightClass.getMethod("intValue");
+                    // return (int)retObjectDecodePixelHeightMethod.invoke(retObjectDecodePixelHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDecodePixelHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectDecodePixelHeight_ToString);
+                    return retObjectDecodePixelHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDecodePixelHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDecodePixelHeight != null ? retObjectDecodePixelHeight.getClass() : "null", retObjectDecodePixelHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDecodePixelHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,13 +301,32 @@ public class BitmapImage extends BitmapSource  {
             retObjectDecodePixelWidth = classInstance.Get("DecodePixelWidth");
             return (int)retObjectDecodePixelWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDecodePixelWidthError = true;
             java.lang.String retObjectDecodePixelWidth_ToString = retObjectDecodePixelWidth == null ? "null" : retObjectDecodePixelWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDecodePixelWidthNumber = (java.lang.Number)retObjectDecodePixelWidth;
-                return retObjectDecodePixelWidthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecodePixelWidth != null ? retObjectDecodePixelWidth.getClass() : "null", retObjectDecodePixelWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDecodePixelWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDecodePixelWidthClass = retObjectDecodePixelWidth.getClass();
+                    // java.lang.reflect.Method retObjectDecodePixelWidthMethod = retObjectDecodePixelWidthClass.getMethod("intValue");
+                    // return (int)retObjectDecodePixelWidthMethod.invoke(retObjectDecodePixelWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDecodePixelWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectDecodePixelWidth_ToString);
+                    return retObjectDecodePixelWidthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDecodePixelWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDecodePixelWidth != null ? retObjectDecodePixelWidth.getClass() : "null", retObjectDecodePixelWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDecodePixelWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

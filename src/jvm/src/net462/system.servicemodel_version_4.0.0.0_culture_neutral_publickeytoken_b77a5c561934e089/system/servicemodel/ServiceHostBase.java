@@ -170,13 +170,32 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
             retObjectIncrementManualFlowControlLimit = classInstance.Invoke("IncrementManualFlowControlLimit", incrementBy);
             return (int)retObjectIncrementManualFlowControlLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIncrementManualFlowControlLimitError = true;
             java.lang.String retObjectIncrementManualFlowControlLimit_ToString = retObjectIncrementManualFlowControlLimit == null ? "null" : retObjectIncrementManualFlowControlLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIncrementManualFlowControlLimitNumber = (java.lang.Number)retObjectIncrementManualFlowControlLimit;
-                return retObjectIncrementManualFlowControlLimitNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIncrementManualFlowControlLimit != null ? retObjectIncrementManualFlowControlLimit.getClass() : "null", retObjectIncrementManualFlowControlLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIncrementManualFlowControlLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIncrementManualFlowControlLimitClass = retObjectIncrementManualFlowControlLimit.getClass();
+                    // java.lang.reflect.Method retObjectIncrementManualFlowControlLimitMethod = retObjectIncrementManualFlowControlLimitClass.getMethod("intValue");
+                    // return (int)retObjectIncrementManualFlowControlLimitMethod.invoke(retObjectIncrementManualFlowControlLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIncrementManualFlowControlLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectIncrementManualFlowControlLimit_ToString);
+                    return retObjectIncrementManualFlowControlLimitNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIncrementManualFlowControlLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIncrementManualFlowControlLimit != null ? retObjectIncrementManualFlowControlLimit.getClass() : "null", retObjectIncrementManualFlowControlLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIncrementManualFlowControlLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -297,13 +316,32 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
             retObjectManualFlowControlLimit = classInstance.Get("ManualFlowControlLimit");
             return (int)retObjectManualFlowControlLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportManualFlowControlLimitError = true;
             java.lang.String retObjectManualFlowControlLimit_ToString = retObjectManualFlowControlLimit == null ? "null" : retObjectManualFlowControlLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectManualFlowControlLimitNumber = (java.lang.Number)retObjectManualFlowControlLimit;
-                return retObjectManualFlowControlLimitNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectManualFlowControlLimit != null ? retObjectManualFlowControlLimit.getClass() : "null", retObjectManualFlowControlLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectManualFlowControlLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectManualFlowControlLimitClass = retObjectManualFlowControlLimit.getClass();
+                    // java.lang.reflect.Method retObjectManualFlowControlLimitMethod = retObjectManualFlowControlLimitClass.getMethod("intValue");
+                    // return (int)retObjectManualFlowControlLimitMethod.invoke(retObjectManualFlowControlLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectManualFlowControlLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectManualFlowControlLimit_ToString);
+                    return retObjectManualFlowControlLimitNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportManualFlowControlLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectManualFlowControlLimit != null ? retObjectManualFlowControlLimit.getClass() : "null", retObjectManualFlowControlLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportManualFlowControlLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

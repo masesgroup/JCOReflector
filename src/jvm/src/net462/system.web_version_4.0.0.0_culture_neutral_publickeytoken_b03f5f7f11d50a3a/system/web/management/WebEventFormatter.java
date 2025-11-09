@@ -175,13 +175,32 @@ public class WebEventFormatter extends NetObject  {
             retObjectIndentationLevel = classInstance.Get("IndentationLevel");
             return (int)retObjectIndentationLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndentationLevelError = true;
             java.lang.String retObjectIndentationLevel_ToString = retObjectIndentationLevel == null ? "null" : retObjectIndentationLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndentationLevelNumber = (java.lang.Number)retObjectIndentationLevel;
-                return retObjectIndentationLevelNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndentationLevel != null ? retObjectIndentationLevel.getClass() : "null", retObjectIndentationLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndentationLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndentationLevelClass = retObjectIndentationLevel.getClass();
+                    // java.lang.reflect.Method retObjectIndentationLevelMethod = retObjectIndentationLevelClass.getMethod("intValue");
+                    // return (int)retObjectIndentationLevelMethod.invoke(retObjectIndentationLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndentationLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectIndentationLevel_ToString);
+                    return retObjectIndentationLevelNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndentationLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndentationLevel != null ? retObjectIndentationLevel.getClass() : "null", retObjectIndentationLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndentationLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -206,13 +225,32 @@ public class WebEventFormatter extends NetObject  {
             retObjectTabSize = classInstance.Get("TabSize");
             return (int)retObjectTabSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTabSizeError = true;
             java.lang.String retObjectTabSize_ToString = retObjectTabSize == null ? "null" : retObjectTabSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTabSizeNumber = (java.lang.Number)retObjectTabSize;
-                return retObjectTabSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabSize != null ? retObjectTabSize.getClass() : "null", retObjectTabSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTabSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTabSizeClass = retObjectTabSize.getClass();
+                    // java.lang.reflect.Method retObjectTabSizeMethod = retObjectTabSizeClass.getMethod("intValue");
+                    // return (int)retObjectTabSizeMethod.invoke(retObjectTabSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTabSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectTabSize_ToString);
+                    return retObjectTabSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTabSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTabSize != null ? retObjectTabSize.getClass() : "null", retObjectTabSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTabSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

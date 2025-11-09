@@ -223,13 +223,32 @@ public class TickBar extends FrameworkElement  {
             retObjectMaximum = classInstance.Get("Maximum");
             return (double)retObjectMaximum;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumError = true;
             java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
-                return retObjectMaximumNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumClass = retObjectMaximum.getClass();
+                    // java.lang.reflect.Method retObjectMaximumMethod = retObjectMaximumClass.getMethod("doubleValue");
+                    // return (double)retObjectMaximumMethod.invoke(retObjectMaximum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximum_ToString);
+                    return retObjectMaximumNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -254,13 +273,32 @@ public class TickBar extends FrameworkElement  {
             retObjectMinimum = classInstance.Get("Minimum");
             return (double)retObjectMinimum;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinimumError = true;
             java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
-                return retObjectMinimumNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinimum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinimumClass = retObjectMinimum.getClass();
+                    // java.lang.reflect.Method retObjectMinimumMethod = retObjectMinimumClass.getMethod("doubleValue");
+                    // return (double)retObjectMinimumMethod.invoke(retObjectMinimum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinimumNumber = java.text.NumberFormat.getInstance().parse(retObjectMinimum_ToString);
+                    return retObjectMinimumNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinimumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinimumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -285,13 +323,32 @@ public class TickBar extends FrameworkElement  {
             retObjectReservedSpace = classInstance.Get("ReservedSpace");
             return (double)retObjectReservedSpace;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReservedSpaceError = true;
             java.lang.String retObjectReservedSpace_ToString = retObjectReservedSpace == null ? "null" : retObjectReservedSpace.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReservedSpaceNumber = (java.lang.Number)retObjectReservedSpace;
-                return retObjectReservedSpaceNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectReservedSpace != null ? retObjectReservedSpace.getClass() : "null", retObjectReservedSpace_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReservedSpace != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReservedSpaceClass = retObjectReservedSpace.getClass();
+                    // java.lang.reflect.Method retObjectReservedSpaceMethod = retObjectReservedSpaceClass.getMethod("doubleValue");
+                    // return (double)retObjectReservedSpaceMethod.invoke(retObjectReservedSpace);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReservedSpaceNumber = java.text.NumberFormat.getInstance().parse(retObjectReservedSpace_ToString);
+                    return retObjectReservedSpaceNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReservedSpaceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReservedSpace != null ? retObjectReservedSpace.getClass() : "null", retObjectReservedSpace_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReservedSpaceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -316,13 +373,32 @@ public class TickBar extends FrameworkElement  {
             retObjectSelectionEnd = classInstance.Get("SelectionEnd");
             return (double)retObjectSelectionEnd;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSelectionEndError = true;
             java.lang.String retObjectSelectionEnd_ToString = retObjectSelectionEnd == null ? "null" : retObjectSelectionEnd.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSelectionEndNumber = (java.lang.Number)retObjectSelectionEnd;
-                return retObjectSelectionEndNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionEnd != null ? retObjectSelectionEnd.getClass() : "null", retObjectSelectionEnd_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSelectionEnd != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSelectionEndClass = retObjectSelectionEnd.getClass();
+                    // java.lang.reflect.Method retObjectSelectionEndMethod = retObjectSelectionEndClass.getMethod("doubleValue");
+                    // return (double)retObjectSelectionEndMethod.invoke(retObjectSelectionEnd);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSelectionEndNumber = java.text.NumberFormat.getInstance().parse(retObjectSelectionEnd_ToString);
+                    return retObjectSelectionEndNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSelectionEndError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSelectionEnd != null ? retObjectSelectionEnd.getClass() : "null", retObjectSelectionEnd_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSelectionEndError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -347,13 +423,32 @@ public class TickBar extends FrameworkElement  {
             retObjectSelectionStart = classInstance.Get("SelectionStart");
             return (double)retObjectSelectionStart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSelectionStartError = true;
             java.lang.String retObjectSelectionStart_ToString = retObjectSelectionStart == null ? "null" : retObjectSelectionStart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSelectionStartNumber = (java.lang.Number)retObjectSelectionStart;
-                return retObjectSelectionStartNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null", retObjectSelectionStart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSelectionStart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSelectionStartClass = retObjectSelectionStart.getClass();
+                    // java.lang.reflect.Method retObjectSelectionStartMethod = retObjectSelectionStartClass.getMethod("doubleValue");
+                    // return (double)retObjectSelectionStartMethod.invoke(retObjectSelectionStart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSelectionStartNumber = java.text.NumberFormat.getInstance().parse(retObjectSelectionStart_ToString);
+                    return retObjectSelectionStartNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSelectionStartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null", retObjectSelectionStart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSelectionStartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -378,13 +473,32 @@ public class TickBar extends FrameworkElement  {
             retObjectTickFrequency = classInstance.Get("TickFrequency");
             return (double)retObjectTickFrequency;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTickFrequencyError = true;
             java.lang.String retObjectTickFrequency_ToString = retObjectTickFrequency == null ? "null" : retObjectTickFrequency.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTickFrequencyNumber = (java.lang.Number)retObjectTickFrequency;
-                return retObjectTickFrequencyNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTickFrequency != null ? retObjectTickFrequency.getClass() : "null", retObjectTickFrequency_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTickFrequency != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTickFrequencyClass = retObjectTickFrequency.getClass();
+                    // java.lang.reflect.Method retObjectTickFrequencyMethod = retObjectTickFrequencyClass.getMethod("doubleValue");
+                    // return (double)retObjectTickFrequencyMethod.invoke(retObjectTickFrequency);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTickFrequencyNumber = java.text.NumberFormat.getInstance().parse(retObjectTickFrequency_ToString);
+                    return retObjectTickFrequencyNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTickFrequencyError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTickFrequency != null ? retObjectTickFrequency.getClass() : "null", retObjectTickFrequency_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTickFrequencyError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

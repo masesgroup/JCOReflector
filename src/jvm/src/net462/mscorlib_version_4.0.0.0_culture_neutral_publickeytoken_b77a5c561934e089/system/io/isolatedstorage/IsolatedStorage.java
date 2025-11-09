@@ -190,13 +190,32 @@ public class IsolatedStorage extends MarshalByRefObject  {
             retObjectAvailableFreeSpace = classInstance.Get("AvailableFreeSpace");
             return (long)retObjectAvailableFreeSpace;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAvailableFreeSpaceError = true;
             java.lang.String retObjectAvailableFreeSpace_ToString = retObjectAvailableFreeSpace == null ? "null" : retObjectAvailableFreeSpace.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAvailableFreeSpaceNumber = (java.lang.Number)retObjectAvailableFreeSpace;
-                return retObjectAvailableFreeSpaceNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAvailableFreeSpace != null ? retObjectAvailableFreeSpace.getClass() : "null", retObjectAvailableFreeSpace_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAvailableFreeSpace != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAvailableFreeSpaceClass = retObjectAvailableFreeSpace.getClass();
+                    // java.lang.reflect.Method retObjectAvailableFreeSpaceMethod = retObjectAvailableFreeSpaceClass.getMethod("longValue");
+                    // return (long)retObjectAvailableFreeSpaceMethod.invoke(retObjectAvailableFreeSpace);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAvailableFreeSpaceNumber = java.text.NumberFormat.getInstance().parse(retObjectAvailableFreeSpace_ToString);
+                    return retObjectAvailableFreeSpaceNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAvailableFreeSpaceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAvailableFreeSpace != null ? retObjectAvailableFreeSpace.getClass() : "null", retObjectAvailableFreeSpace_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAvailableFreeSpaceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,13 +230,32 @@ public class IsolatedStorage extends MarshalByRefObject  {
             retObjectQuota = classInstance.Get("Quota");
             return (long)retObjectQuota;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportQuotaError = true;
             java.lang.String retObjectQuota_ToString = retObjectQuota == null ? "null" : retObjectQuota.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectQuotaNumber = (java.lang.Number)retObjectQuota;
-                return retObjectQuotaNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectQuota != null ? retObjectQuota.getClass() : "null", retObjectQuota_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectQuota != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectQuotaClass = retObjectQuota.getClass();
+                    // java.lang.reflect.Method retObjectQuotaMethod = retObjectQuotaClass.getMethod("longValue");
+                    // return (long)retObjectQuotaMethod.invoke(retObjectQuota);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectQuotaNumber = java.text.NumberFormat.getInstance().parse(retObjectQuota_ToString);
+                    return retObjectQuotaNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportQuotaError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectQuota != null ? retObjectQuota.getClass() : "null", retObjectQuota_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportQuotaError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,13 +280,32 @@ public class IsolatedStorage extends MarshalByRefObject  {
             retObjectUsedSize = classInstance.Get("UsedSize");
             return (long)retObjectUsedSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUsedSizeError = true;
             java.lang.String retObjectUsedSize_ToString = retObjectUsedSize == null ? "null" : retObjectUsedSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUsedSizeNumber = (java.lang.Number)retObjectUsedSize;
-                return retObjectUsedSizeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUsedSize != null ? retObjectUsedSize.getClass() : "null", retObjectUsedSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUsedSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUsedSizeClass = retObjectUsedSize.getClass();
+                    // java.lang.reflect.Method retObjectUsedSizeMethod = retObjectUsedSizeClass.getMethod("longValue");
+                    // return (long)retObjectUsedSizeMethod.invoke(retObjectUsedSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUsedSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectUsedSize_ToString);
+                    return retObjectUsedSizeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUsedSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUsedSize != null ? retObjectUsedSize.getClass() : "null", retObjectUsedSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUsedSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

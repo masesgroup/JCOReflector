@@ -385,13 +385,32 @@ public class AdamInstance extends DirectoryServer  {
             retObjectLdapPort = classInstance.Get("LdapPort");
             return (int)retObjectLdapPort;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLdapPortError = true;
             java.lang.String retObjectLdapPort_ToString = retObjectLdapPort == null ? "null" : retObjectLdapPort.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLdapPortNumber = (java.lang.Number)retObjectLdapPort;
-                return retObjectLdapPortNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLdapPort != null ? retObjectLdapPort.getClass() : "null", retObjectLdapPort_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLdapPort != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLdapPortClass = retObjectLdapPort.getClass();
+                    // java.lang.reflect.Method retObjectLdapPortMethod = retObjectLdapPortClass.getMethod("intValue");
+                    // return (int)retObjectLdapPortMethod.invoke(retObjectLdapPort);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLdapPortNumber = java.text.NumberFormat.getInstance().parse(retObjectLdapPort_ToString);
+                    return retObjectLdapPortNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLdapPortError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLdapPort != null ? retObjectLdapPort.getClass() : "null", retObjectLdapPort_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLdapPortError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -406,13 +425,32 @@ public class AdamInstance extends DirectoryServer  {
             retObjectSslPort = classInstance.Get("SslPort");
             return (int)retObjectSslPort;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSslPortError = true;
             java.lang.String retObjectSslPort_ToString = retObjectSslPort == null ? "null" : retObjectSslPort.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSslPortNumber = (java.lang.Number)retObjectSslPort;
-                return retObjectSslPortNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSslPort != null ? retObjectSslPort.getClass() : "null", retObjectSslPort_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSslPort != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSslPortClass = retObjectSslPort.getClass();
+                    // java.lang.reflect.Method retObjectSslPortMethod = retObjectSslPortClass.getMethod("intValue");
+                    // return (int)retObjectSslPortMethod.invoke(retObjectSslPort);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSslPortNumber = java.text.NumberFormat.getInstance().parse(retObjectSslPort_ToString);
+                    return retObjectSslPortNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSslPortError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSslPort != null ? retObjectSslPort.getClass() : "null", retObjectSslPort_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSslPortError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

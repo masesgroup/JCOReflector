@@ -199,13 +199,32 @@ public class GridSplitter extends Thumb  {
             retObjectDragIncrement = classInstance.Get("DragIncrement");
             return (double)retObjectDragIncrement;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDragIncrementError = true;
             java.lang.String retObjectDragIncrement_ToString = retObjectDragIncrement == null ? "null" : retObjectDragIncrement.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDragIncrementNumber = (java.lang.Number)retObjectDragIncrement;
-                return retObjectDragIncrementNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDragIncrement != null ? retObjectDragIncrement.getClass() : "null", retObjectDragIncrement_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDragIncrement != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDragIncrementClass = retObjectDragIncrement.getClass();
+                    // java.lang.reflect.Method retObjectDragIncrementMethod = retObjectDragIncrementClass.getMethod("doubleValue");
+                    // return (double)retObjectDragIncrementMethod.invoke(retObjectDragIncrement);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDragIncrementNumber = java.text.NumberFormat.getInstance().parse(retObjectDragIncrement_ToString);
+                    return retObjectDragIncrementNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDragIncrementError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDragIncrement != null ? retObjectDragIncrement.getClass() : "null", retObjectDragIncrement_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDragIncrementError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -230,13 +249,32 @@ public class GridSplitter extends Thumb  {
             retObjectKeyboardIncrement = classInstance.Get("KeyboardIncrement");
             return (double)retObjectKeyboardIncrement;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportKeyboardIncrementError = true;
             java.lang.String retObjectKeyboardIncrement_ToString = retObjectKeyboardIncrement == null ? "null" : retObjectKeyboardIncrement.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectKeyboardIncrementNumber = (java.lang.Number)retObjectKeyboardIncrement;
-                return retObjectKeyboardIncrementNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectKeyboardIncrement != null ? retObjectKeyboardIncrement.getClass() : "null", retObjectKeyboardIncrement_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectKeyboardIncrement != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectKeyboardIncrementClass = retObjectKeyboardIncrement.getClass();
+                    // java.lang.reflect.Method retObjectKeyboardIncrementMethod = retObjectKeyboardIncrementClass.getMethod("doubleValue");
+                    // return (double)retObjectKeyboardIncrementMethod.invoke(retObjectKeyboardIncrement);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectKeyboardIncrementNumber = java.text.NumberFormat.getInstance().parse(retObjectKeyboardIncrement_ToString);
+                    return retObjectKeyboardIncrementNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportKeyboardIncrementError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectKeyboardIncrement != null ? retObjectKeyboardIncrement.getClass() : "null", retObjectKeyboardIncrement_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportKeyboardIncrementError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

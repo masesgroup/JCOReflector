@@ -186,13 +186,32 @@ public class EventMappingSettings extends ConfigurationElement  {
             retObjectEndEventCode = classInstance.Get("EndEventCode");
             return (int)retObjectEndEventCode;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndEventCodeError = true;
             java.lang.String retObjectEndEventCode_ToString = retObjectEndEventCode == null ? "null" : retObjectEndEventCode.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndEventCodeNumber = (java.lang.Number)retObjectEndEventCode;
-                return retObjectEndEventCodeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndEventCode != null ? retObjectEndEventCode.getClass() : "null", retObjectEndEventCode_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndEventCode != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndEventCodeClass = retObjectEndEventCode.getClass();
+                    // java.lang.reflect.Method retObjectEndEventCodeMethod = retObjectEndEventCodeClass.getMethod("intValue");
+                    // return (int)retObjectEndEventCodeMethod.invoke(retObjectEndEventCode);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndEventCodeNumber = java.text.NumberFormat.getInstance().parse(retObjectEndEventCode_ToString);
+                    return retObjectEndEventCodeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndEventCodeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndEventCode != null ? retObjectEndEventCode.getClass() : "null", retObjectEndEventCode_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndEventCodeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,13 +236,32 @@ public class EventMappingSettings extends ConfigurationElement  {
             retObjectStartEventCode = classInstance.Get("StartEventCode");
             return (int)retObjectStartEventCode;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStartEventCodeError = true;
             java.lang.String retObjectStartEventCode_ToString = retObjectStartEventCode == null ? "null" : retObjectStartEventCode.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStartEventCodeNumber = (java.lang.Number)retObjectStartEventCode;
-                return retObjectStartEventCodeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartEventCode != null ? retObjectStartEventCode.getClass() : "null", retObjectStartEventCode_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStartEventCode != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStartEventCodeClass = retObjectStartEventCode.getClass();
+                    // java.lang.reflect.Method retObjectStartEventCodeMethod = retObjectStartEventCodeClass.getMethod("intValue");
+                    // return (int)retObjectStartEventCodeMethod.invoke(retObjectStartEventCode);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStartEventCodeNumber = java.text.NumberFormat.getInstance().parse(retObjectStartEventCode_ToString);
+                    return retObjectStartEventCodeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStartEventCodeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStartEventCode != null ? retObjectStartEventCode.getClass() : "null", retObjectStartEventCode_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStartEventCodeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

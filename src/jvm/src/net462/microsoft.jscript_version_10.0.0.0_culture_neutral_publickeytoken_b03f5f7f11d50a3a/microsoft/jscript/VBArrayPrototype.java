@@ -165,13 +165,32 @@ public class VBArrayPrototype extends JSObject  {
             retObjectdimensions = classType.Invoke("dimensions", thisob == null ? null : thisob.getJCOInstance());
             return (int)retObjectdimensions;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportdimensionsError = true;
             java.lang.String retObjectdimensions_ToString = retObjectdimensions == null ? "null" : retObjectdimensions.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectdimensionsNumber = (java.lang.Number)retObjectdimensions;
-                return retObjectdimensionsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectdimensions != null ? retObjectdimensions.getClass() : "null", retObjectdimensions_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectdimensions != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectdimensionsClass = retObjectdimensions.getClass();
+                    // java.lang.reflect.Method retObjectdimensionsMethod = retObjectdimensionsClass.getMethod("intValue");
+                    // return (int)retObjectdimensionsMethod.invoke(retObjectdimensions);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectdimensionsNumber = java.text.NumberFormat.getInstance().parse(retObjectdimensions_ToString);
+                    return retObjectdimensionsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportdimensionsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectdimensions != null ? retObjectdimensions.getClass() : "null", retObjectdimensions_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportdimensionsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,13 +205,32 @@ public class VBArrayPrototype extends JSObject  {
             retObjectlbound = classType.Invoke("lbound", thisob == null ? null : thisob.getJCOInstance(), dimension == null ? null : dimension.getJCOInstance());
             return (int)retObjectlbound;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportlboundError = true;
             java.lang.String retObjectlbound_ToString = retObjectlbound == null ? "null" : retObjectlbound.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectlboundNumber = (java.lang.Number)retObjectlbound;
-                return retObjectlboundNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectlbound != null ? retObjectlbound.getClass() : "null", retObjectlbound_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectlbound != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectlboundClass = retObjectlbound.getClass();
+                    // java.lang.reflect.Method retObjectlboundMethod = retObjectlboundClass.getMethod("intValue");
+                    // return (int)retObjectlboundMethod.invoke(retObjectlbound);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectlboundNumber = java.text.NumberFormat.getInstance().parse(retObjectlbound_ToString);
+                    return retObjectlboundNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportlboundError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectlbound != null ? retObjectlbound.getClass() : "null", retObjectlbound_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportlboundError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,13 +245,32 @@ public class VBArrayPrototype extends JSObject  {
             retObjectubound = classType.Invoke("ubound", thisob == null ? null : thisob.getJCOInstance(), dimension == null ? null : dimension.getJCOInstance());
             return (int)retObjectubound;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportuboundError = true;
             java.lang.String retObjectubound_ToString = retObjectubound == null ? "null" : retObjectubound.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectuboundNumber = (java.lang.Number)retObjectubound;
-                return retObjectuboundNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectubound != null ? retObjectubound.getClass() : "null", retObjectubound_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectubound != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectuboundClass = retObjectubound.getClass();
+                    // java.lang.reflect.Method retObjectuboundMethod = retObjectuboundClass.getMethod("intValue");
+                    // return (int)retObjectuboundMethod.invoke(retObjectubound);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectuboundNumber = java.text.NumberFormat.getInstance().parse(retObjectubound_ToString);
+                    return retObjectuboundNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportuboundError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectubound != null ? retObjectubound.getClass() : "null", retObjectubound_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportuboundError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

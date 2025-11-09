@@ -168,13 +168,32 @@ public class BindingFailedEventArgs extends EventArgs  {
             retObjectCode = classInstance.Get("Code");
             return (int)retObjectCode;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCodeError = true;
             java.lang.String retObjectCode_ToString = retObjectCode == null ? "null" : retObjectCode.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCodeNumber = (java.lang.Number)retObjectCode;
-                return retObjectCodeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCode != null ? retObjectCode.getClass() : "null", retObjectCode_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCode != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCodeClass = retObjectCode.getClass();
+                    // java.lang.reflect.Method retObjectCodeMethod = retObjectCodeClass.getMethod("intValue");
+                    // return (int)retObjectCodeMethod.invoke(retObjectCode);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCodeNumber = java.text.NumberFormat.getInstance().parse(retObjectCode_ToString);
+                    return retObjectCodeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCodeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCode != null ? retObjectCode.getClass() : "null", retObjectCode_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCodeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

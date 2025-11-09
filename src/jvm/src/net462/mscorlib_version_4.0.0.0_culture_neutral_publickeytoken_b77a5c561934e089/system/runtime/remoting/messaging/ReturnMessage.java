@@ -263,13 +263,32 @@ public class ReturnMessage extends NetObject  {
             retObjectArgCount = classInstance.Get("ArgCount");
             return (int)retObjectArgCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportArgCountError = true;
             java.lang.String retObjectArgCount_ToString = retObjectArgCount == null ? "null" : retObjectArgCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectArgCountNumber = (java.lang.Number)retObjectArgCount;
-                return retObjectArgCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectArgCount != null ? retObjectArgCount.getClass() : "null", retObjectArgCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectArgCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectArgCountClass = retObjectArgCount.getClass();
+                    // java.lang.reflect.Method retObjectArgCountMethod = retObjectArgCountClass.getMethod("intValue");
+                    // return (int)retObjectArgCountMethod.invoke(retObjectArgCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectArgCountNumber = java.text.NumberFormat.getInstance().parse(retObjectArgCount_ToString);
+                    return retObjectArgCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportArgCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectArgCount != null ? retObjectArgCount.getClass() : "null", retObjectArgCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportArgCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,13 +303,32 @@ public class ReturnMessage extends NetObject  {
             retObjectOutArgCount = classInstance.Get("OutArgCount");
             return (int)retObjectOutArgCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOutArgCountError = true;
             java.lang.String retObjectOutArgCount_ToString = retObjectOutArgCount == null ? "null" : retObjectOutArgCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOutArgCountNumber = (java.lang.Number)retObjectOutArgCount;
-                return retObjectOutArgCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOutArgCount != null ? retObjectOutArgCount.getClass() : "null", retObjectOutArgCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOutArgCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOutArgCountClass = retObjectOutArgCount.getClass();
+                    // java.lang.reflect.Method retObjectOutArgCountMethod = retObjectOutArgCountClass.getMethod("intValue");
+                    // return (int)retObjectOutArgCountMethod.invoke(retObjectOutArgCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOutArgCountNumber = java.text.NumberFormat.getInstance().parse(retObjectOutArgCount_ToString);
+                    return retObjectOutArgCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOutArgCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOutArgCount != null ? retObjectOutArgCount.getClass() : "null", retObjectOutArgCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOutArgCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

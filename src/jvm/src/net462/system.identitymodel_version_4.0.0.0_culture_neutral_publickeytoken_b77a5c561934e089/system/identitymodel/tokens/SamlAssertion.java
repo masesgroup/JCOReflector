@@ -250,13 +250,32 @@ public class SamlAssertion extends NetObject  {
             retObjectMajorVersion = classInstance.Get("MajorVersion");
             return (int)retObjectMajorVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMajorVersionError = true;
             java.lang.String retObjectMajorVersion_ToString = retObjectMajorVersion == null ? "null" : retObjectMajorVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMajorVersionNumber = (java.lang.Number)retObjectMajorVersion;
-                return retObjectMajorVersionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null", retObjectMajorVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMajorVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMajorVersionClass = retObjectMajorVersion.getClass();
+                    // java.lang.reflect.Method retObjectMajorVersionMethod = retObjectMajorVersionClass.getMethod("intValue");
+                    // return (int)retObjectMajorVersionMethod.invoke(retObjectMajorVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMajorVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectMajorVersion_ToString);
+                    return retObjectMajorVersionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMajorVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null", retObjectMajorVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMajorVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -271,13 +290,32 @@ public class SamlAssertion extends NetObject  {
             retObjectMinorVersion = classInstance.Get("MinorVersion");
             return (int)retObjectMinorVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinorVersionError = true;
             java.lang.String retObjectMinorVersion_ToString = retObjectMinorVersion == null ? "null" : retObjectMinorVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinorVersionNumber = (java.lang.Number)retObjectMinorVersion;
-                return retObjectMinorVersionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null", retObjectMinorVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinorVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinorVersionClass = retObjectMinorVersion.getClass();
+                    // java.lang.reflect.Method retObjectMinorVersionMethod = retObjectMinorVersionClass.getMethod("intValue");
+                    // return (int)retObjectMinorVersionMethod.invoke(retObjectMinorVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinorVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectMinorVersion_ToString);
+                    return retObjectMinorVersionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinorVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null", retObjectMinorVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinorVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

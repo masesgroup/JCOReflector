@@ -179,13 +179,32 @@ public class StreamPipeWriterOptions extends NetObject  {
             retObjectMinimumBufferSize = classInstance.Get("MinimumBufferSize");
             return (int)retObjectMinimumBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinimumBufferSizeError = true;
             java.lang.String retObjectMinimumBufferSize_ToString = retObjectMinimumBufferSize == null ? "null" : retObjectMinimumBufferSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinimumBufferSizeNumber = (java.lang.Number)retObjectMinimumBufferSize;
-                return retObjectMinimumBufferSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumBufferSize != null ? retObjectMinimumBufferSize.getClass() : "null", retObjectMinimumBufferSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinimumBufferSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinimumBufferSizeClass = retObjectMinimumBufferSize.getClass();
+                    // java.lang.reflect.Method retObjectMinimumBufferSizeMethod = retObjectMinimumBufferSizeClass.getMethod("intValue");
+                    // return (int)retObjectMinimumBufferSizeMethod.invoke(retObjectMinimumBufferSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinimumBufferSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMinimumBufferSize_ToString);
+                    return retObjectMinimumBufferSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinimumBufferSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinimumBufferSize != null ? retObjectMinimumBufferSize.getClass() : "null", retObjectMinimumBufferSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinimumBufferSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

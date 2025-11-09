@@ -166,13 +166,32 @@ public class GCGenerationInfo extends ValueType  {
             retObjectFragmentationAfterBytes = classInstance.Get("FragmentationAfterBytes");
             return (long)retObjectFragmentationAfterBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFragmentationAfterBytesError = true;
             java.lang.String retObjectFragmentationAfterBytes_ToString = retObjectFragmentationAfterBytes == null ? "null" : retObjectFragmentationAfterBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFragmentationAfterBytesNumber = (java.lang.Number)retObjectFragmentationAfterBytes;
-                return retObjectFragmentationAfterBytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFragmentationAfterBytes != null ? retObjectFragmentationAfterBytes.getClass() : "null", retObjectFragmentationAfterBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFragmentationAfterBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFragmentationAfterBytesClass = retObjectFragmentationAfterBytes.getClass();
+                    // java.lang.reflect.Method retObjectFragmentationAfterBytesMethod = retObjectFragmentationAfterBytesClass.getMethod("longValue");
+                    // return (long)retObjectFragmentationAfterBytesMethod.invoke(retObjectFragmentationAfterBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFragmentationAfterBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectFragmentationAfterBytes_ToString);
+                    return retObjectFragmentationAfterBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFragmentationAfterBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFragmentationAfterBytes != null ? retObjectFragmentationAfterBytes.getClass() : "null", retObjectFragmentationAfterBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFragmentationAfterBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,13 +206,32 @@ public class GCGenerationInfo extends ValueType  {
             retObjectFragmentationBeforeBytes = classInstance.Get("FragmentationBeforeBytes");
             return (long)retObjectFragmentationBeforeBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFragmentationBeforeBytesError = true;
             java.lang.String retObjectFragmentationBeforeBytes_ToString = retObjectFragmentationBeforeBytes == null ? "null" : retObjectFragmentationBeforeBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFragmentationBeforeBytesNumber = (java.lang.Number)retObjectFragmentationBeforeBytes;
-                return retObjectFragmentationBeforeBytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectFragmentationBeforeBytes != null ? retObjectFragmentationBeforeBytes.getClass() : "null", retObjectFragmentationBeforeBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFragmentationBeforeBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFragmentationBeforeBytesClass = retObjectFragmentationBeforeBytes.getClass();
+                    // java.lang.reflect.Method retObjectFragmentationBeforeBytesMethod = retObjectFragmentationBeforeBytesClass.getMethod("longValue");
+                    // return (long)retObjectFragmentationBeforeBytesMethod.invoke(retObjectFragmentationBeforeBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFragmentationBeforeBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectFragmentationBeforeBytes_ToString);
+                    return retObjectFragmentationBeforeBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFragmentationBeforeBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFragmentationBeforeBytes != null ? retObjectFragmentationBeforeBytes.getClass() : "null", retObjectFragmentationBeforeBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFragmentationBeforeBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,13 +246,32 @@ public class GCGenerationInfo extends ValueType  {
             retObjectSizeAfterBytes = classInstance.Get("SizeAfterBytes");
             return (long)retObjectSizeAfterBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSizeAfterBytesError = true;
             java.lang.String retObjectSizeAfterBytes_ToString = retObjectSizeAfterBytes == null ? "null" : retObjectSizeAfterBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSizeAfterBytesNumber = (java.lang.Number)retObjectSizeAfterBytes;
-                return retObjectSizeAfterBytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSizeAfterBytes != null ? retObjectSizeAfterBytes.getClass() : "null", retObjectSizeAfterBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSizeAfterBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSizeAfterBytesClass = retObjectSizeAfterBytes.getClass();
+                    // java.lang.reflect.Method retObjectSizeAfterBytesMethod = retObjectSizeAfterBytesClass.getMethod("longValue");
+                    // return (long)retObjectSizeAfterBytesMethod.invoke(retObjectSizeAfterBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSizeAfterBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectSizeAfterBytes_ToString);
+                    return retObjectSizeAfterBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSizeAfterBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSizeAfterBytes != null ? retObjectSizeAfterBytes.getClass() : "null", retObjectSizeAfterBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSizeAfterBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -229,13 +286,32 @@ public class GCGenerationInfo extends ValueType  {
             retObjectSizeBeforeBytes = classInstance.Get("SizeBeforeBytes");
             return (long)retObjectSizeBeforeBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSizeBeforeBytesError = true;
             java.lang.String retObjectSizeBeforeBytes_ToString = retObjectSizeBeforeBytes == null ? "null" : retObjectSizeBeforeBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSizeBeforeBytesNumber = (java.lang.Number)retObjectSizeBeforeBytes;
-                return retObjectSizeBeforeBytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSizeBeforeBytes != null ? retObjectSizeBeforeBytes.getClass() : "null", retObjectSizeBeforeBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSizeBeforeBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSizeBeforeBytesClass = retObjectSizeBeforeBytes.getClass();
+                    // java.lang.reflect.Method retObjectSizeBeforeBytesMethod = retObjectSizeBeforeBytesClass.getMethod("longValue");
+                    // return (long)retObjectSizeBeforeBytesMethod.invoke(retObjectSizeBeforeBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSizeBeforeBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectSizeBeforeBytes_ToString);
+                    return retObjectSizeBeforeBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSizeBeforeBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSizeBeforeBytes != null ? retObjectSizeBeforeBytes.getClass() : "null", retObjectSizeBeforeBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSizeBeforeBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -186,13 +186,32 @@ public class LinkClickedEventArgs extends EventArgs  {
             retObjectLinkLength = classInstance.Get("LinkLength");
             return (int)retObjectLinkLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLinkLengthError = true;
             java.lang.String retObjectLinkLength_ToString = retObjectLinkLength == null ? "null" : retObjectLinkLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLinkLengthNumber = (java.lang.Number)retObjectLinkLength;
-                return retObjectLinkLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinkLength != null ? retObjectLinkLength.getClass() : "null", retObjectLinkLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLinkLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLinkLengthClass = retObjectLinkLength.getClass();
+                    // java.lang.reflect.Method retObjectLinkLengthMethod = retObjectLinkLengthClass.getMethod("intValue");
+                    // return (int)retObjectLinkLengthMethod.invoke(retObjectLinkLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLinkLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectLinkLength_ToString);
+                    return retObjectLinkLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLinkLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLinkLength != null ? retObjectLinkLength.getClass() : "null", retObjectLinkLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLinkLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,13 +226,32 @@ public class LinkClickedEventArgs extends EventArgs  {
             retObjectLinkStart = classInstance.Get("LinkStart");
             return (int)retObjectLinkStart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLinkStartError = true;
             java.lang.String retObjectLinkStart_ToString = retObjectLinkStart == null ? "null" : retObjectLinkStart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLinkStartNumber = (java.lang.Number)retObjectLinkStart;
-                return retObjectLinkStartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLinkStart != null ? retObjectLinkStart.getClass() : "null", retObjectLinkStart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLinkStart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLinkStartClass = retObjectLinkStart.getClass();
+                    // java.lang.reflect.Method retObjectLinkStartMethod = retObjectLinkStartClass.getMethod("intValue");
+                    // return (int)retObjectLinkStartMethod.invoke(retObjectLinkStart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLinkStartNumber = java.text.NumberFormat.getInstance().parse(retObjectLinkStart_ToString);
+                    return retObjectLinkStartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLinkStartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLinkStart != null ? retObjectLinkStart.getClass() : "null", retObjectLinkStart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLinkStartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -558,13 +558,32 @@ public class SqlConnection extends DbConnection implements system.ICloneable {
             retObjectPacketSize = classInstance.Get("PacketSize");
             return (int)retObjectPacketSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPacketSizeError = true;
             java.lang.String retObjectPacketSize_ToString = retObjectPacketSize == null ? "null" : retObjectPacketSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPacketSizeNumber = (java.lang.Number)retObjectPacketSize;
-                return retObjectPacketSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPacketSize != null ? retObjectPacketSize.getClass() : "null", retObjectPacketSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPacketSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPacketSizeClass = retObjectPacketSize.getClass();
+                    // java.lang.reflect.Method retObjectPacketSizeMethod = retObjectPacketSizeClass.getMethod("intValue");
+                    // return (int)retObjectPacketSizeMethod.invoke(retObjectPacketSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPacketSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectPacketSize_ToString);
+                    return retObjectPacketSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPacketSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPacketSize != null ? retObjectPacketSize.getClass() : "null", retObjectPacketSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPacketSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

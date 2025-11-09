@@ -211,13 +211,32 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
             retObjectGetCellAscent = classInstance.Invoke("GetCellAscent", style == null ? null : style.getJCOInstance());
             return (int)retObjectGetCellAscent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCellAscentError = true;
             java.lang.String retObjectGetCellAscent_ToString = retObjectGetCellAscent == null ? "null" : retObjectGetCellAscent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCellAscentNumber = (java.lang.Number)retObjectGetCellAscent;
-                return retObjectGetCellAscentNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCellAscent != null ? retObjectGetCellAscent.getClass() : "null", retObjectGetCellAscent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCellAscent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCellAscentClass = retObjectGetCellAscent.getClass();
+                    // java.lang.reflect.Method retObjectGetCellAscentMethod = retObjectGetCellAscentClass.getMethod("intValue");
+                    // return (int)retObjectGetCellAscentMethod.invoke(retObjectGetCellAscent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCellAscentNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCellAscent_ToString);
+                    return retObjectGetCellAscentNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCellAscentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCellAscent != null ? retObjectGetCellAscent.getClass() : "null", retObjectGetCellAscent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCellAscentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,13 +251,32 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
             retObjectGetCellDescent = classInstance.Invoke("GetCellDescent", style == null ? null : style.getJCOInstance());
             return (int)retObjectGetCellDescent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCellDescentError = true;
             java.lang.String retObjectGetCellDescent_ToString = retObjectGetCellDescent == null ? "null" : retObjectGetCellDescent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCellDescentNumber = (java.lang.Number)retObjectGetCellDescent;
-                return retObjectGetCellDescentNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCellDescent != null ? retObjectGetCellDescent.getClass() : "null", retObjectGetCellDescent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCellDescent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCellDescentClass = retObjectGetCellDescent.getClass();
+                    // java.lang.reflect.Method retObjectGetCellDescentMethod = retObjectGetCellDescentClass.getMethod("intValue");
+                    // return (int)retObjectGetCellDescentMethod.invoke(retObjectGetCellDescent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCellDescentNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCellDescent_ToString);
+                    return retObjectGetCellDescentNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCellDescentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCellDescent != null ? retObjectGetCellDescent.getClass() : "null", retObjectGetCellDescent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCellDescentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -253,13 +291,32 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
             retObjectGetEmHeight = classInstance.Invoke("GetEmHeight", style == null ? null : style.getJCOInstance());
             return (int)retObjectGetEmHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetEmHeightError = true;
             java.lang.String retObjectGetEmHeight_ToString = retObjectGetEmHeight == null ? "null" : retObjectGetEmHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetEmHeightNumber = (java.lang.Number)retObjectGetEmHeight;
-                return retObjectGetEmHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEmHeight != null ? retObjectGetEmHeight.getClass() : "null", retObjectGetEmHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetEmHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetEmHeightClass = retObjectGetEmHeight.getClass();
+                    // java.lang.reflect.Method retObjectGetEmHeightMethod = retObjectGetEmHeightClass.getMethod("intValue");
+                    // return (int)retObjectGetEmHeightMethod.invoke(retObjectGetEmHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetEmHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectGetEmHeight_ToString);
+                    return retObjectGetEmHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetEmHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetEmHeight != null ? retObjectGetEmHeight.getClass() : "null", retObjectGetEmHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetEmHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -274,13 +331,32 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
             retObjectGetLineSpacing = classInstance.Invoke("GetLineSpacing", style == null ? null : style.getJCOInstance());
             return (int)retObjectGetLineSpacing;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetLineSpacingError = true;
             java.lang.String retObjectGetLineSpacing_ToString = retObjectGetLineSpacing == null ? "null" : retObjectGetLineSpacing.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetLineSpacingNumber = (java.lang.Number)retObjectGetLineSpacing;
-                return retObjectGetLineSpacingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLineSpacing != null ? retObjectGetLineSpacing.getClass() : "null", retObjectGetLineSpacing_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetLineSpacing != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetLineSpacingClass = retObjectGetLineSpacing.getClass();
+                    // java.lang.reflect.Method retObjectGetLineSpacingMethod = retObjectGetLineSpacingClass.getMethod("intValue");
+                    // return (int)retObjectGetLineSpacingMethod.invoke(retObjectGetLineSpacing);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetLineSpacingNumber = java.text.NumberFormat.getInstance().parse(retObjectGetLineSpacing_ToString);
+                    return retObjectGetLineSpacingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetLineSpacingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetLineSpacing != null ? retObjectGetLineSpacing.getClass() : "null", retObjectGetLineSpacing_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetLineSpacingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

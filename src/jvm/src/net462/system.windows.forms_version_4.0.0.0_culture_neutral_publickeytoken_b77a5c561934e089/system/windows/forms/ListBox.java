@@ -198,13 +198,32 @@ public class ListBox extends ListControl  {
             retObjectFindString = classInstance.Invoke("FindString", s);
             return (int)retObjectFindString;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFindStringError = true;
             java.lang.String retObjectFindString_ToString = retObjectFindString == null ? "null" : retObjectFindString.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFindStringNumber = (java.lang.Number)retObjectFindString;
-                return retObjectFindStringNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null", retObjectFindString_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFindString != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFindStringClass = retObjectFindString.getClass();
+                    // java.lang.reflect.Method retObjectFindStringMethod = retObjectFindStringClass.getMethod("intValue");
+                    // return (int)retObjectFindStringMethod.invoke(retObjectFindString);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFindStringNumber = java.text.NumberFormat.getInstance().parse(retObjectFindString_ToString);
+                    return retObjectFindStringNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFindStringError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFindString != null ? retObjectFindString.getClass() : "null", retObjectFindString_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFindStringError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -219,13 +238,32 @@ public class ListBox extends ListControl  {
             retObjectFindString = classInstance.Invoke("FindString", s, startIndex);
             return (int)retObjectFindString;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFindStringError = true;
             java.lang.String retObjectFindString_ToString = retObjectFindString == null ? "null" : retObjectFindString.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFindStringNumber = (java.lang.Number)retObjectFindString;
-                return retObjectFindStringNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindString != null ? retObjectFindString.getClass() : "null", retObjectFindString_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFindString != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFindStringClass = retObjectFindString.getClass();
+                    // java.lang.reflect.Method retObjectFindStringMethod = retObjectFindStringClass.getMethod("intValue");
+                    // return (int)retObjectFindStringMethod.invoke(retObjectFindString);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFindStringNumber = java.text.NumberFormat.getInstance().parse(retObjectFindString_ToString);
+                    return retObjectFindStringNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFindStringError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFindString != null ? retObjectFindString.getClass() : "null", retObjectFindString_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFindStringError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -240,13 +278,32 @@ public class ListBox extends ListControl  {
             retObjectFindStringExact = classInstance.Invoke("FindStringExact", s);
             return (int)retObjectFindStringExact;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFindStringExactError = true;
             java.lang.String retObjectFindStringExact_ToString = retObjectFindStringExact == null ? "null" : retObjectFindStringExact.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFindStringExactNumber = (java.lang.Number)retObjectFindStringExact;
-                return retObjectFindStringExactNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null", retObjectFindStringExact_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFindStringExact != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFindStringExactClass = retObjectFindStringExact.getClass();
+                    // java.lang.reflect.Method retObjectFindStringExactMethod = retObjectFindStringExactClass.getMethod("intValue");
+                    // return (int)retObjectFindStringExactMethod.invoke(retObjectFindStringExact);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFindStringExactNumber = java.text.NumberFormat.getInstance().parse(retObjectFindStringExact_ToString);
+                    return retObjectFindStringExactNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFindStringExactError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null", retObjectFindStringExact_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFindStringExactError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,13 +318,32 @@ public class ListBox extends ListControl  {
             retObjectFindStringExact = classInstance.Invoke("FindStringExact", s, startIndex);
             return (int)retObjectFindStringExact;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFindStringExactError = true;
             java.lang.String retObjectFindStringExact_ToString = retObjectFindStringExact == null ? "null" : retObjectFindStringExact.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFindStringExactNumber = (java.lang.Number)retObjectFindStringExact;
-                return retObjectFindStringExactNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null", retObjectFindStringExact_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFindStringExact != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFindStringExactClass = retObjectFindStringExact.getClass();
+                    // java.lang.reflect.Method retObjectFindStringExactMethod = retObjectFindStringExactClass.getMethod("intValue");
+                    // return (int)retObjectFindStringExactMethod.invoke(retObjectFindStringExact);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFindStringExactNumber = java.text.NumberFormat.getInstance().parse(retObjectFindStringExact_ToString);
+                    return retObjectFindStringExactNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFindStringExactError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFindStringExact != null ? retObjectFindStringExact.getClass() : "null", retObjectFindStringExact_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFindStringExactError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,13 +358,32 @@ public class ListBox extends ListControl  {
             retObjectGetItemHeight = classInstance.Invoke("GetItemHeight", index);
             return (int)retObjectGetItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetItemHeightError = true;
             java.lang.String retObjectGetItemHeight_ToString = retObjectGetItemHeight == null ? "null" : retObjectGetItemHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetItemHeightNumber = (java.lang.Number)retObjectGetItemHeight;
-                return retObjectGetItemHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetItemHeight != null ? retObjectGetItemHeight.getClass() : "null", retObjectGetItemHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetItemHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetItemHeightClass = retObjectGetItemHeight.getClass();
+                    // java.lang.reflect.Method retObjectGetItemHeightMethod = retObjectGetItemHeightClass.getMethod("intValue");
+                    // return (int)retObjectGetItemHeightMethod.invoke(retObjectGetItemHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetItemHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectGetItemHeight_ToString);
+                    return retObjectGetItemHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetItemHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetItemHeight != null ? retObjectGetItemHeight.getClass() : "null", retObjectGetItemHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetItemHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -303,13 +398,32 @@ public class ListBox extends ListControl  {
             retObjectIndexFromPoint = classInstance.Invoke("IndexFromPoint", x, y);
             return (int)retObjectIndexFromPoint;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexFromPointError = true;
             java.lang.String retObjectIndexFromPoint_ToString = retObjectIndexFromPoint == null ? "null" : retObjectIndexFromPoint.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndexFromPointNumber = (java.lang.Number)retObjectIndexFromPoint;
-                return retObjectIndexFromPointNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexFromPoint != null ? retObjectIndexFromPoint.getClass() : "null", retObjectIndexFromPoint_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexFromPoint != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexFromPointClass = retObjectIndexFromPoint.getClass();
+                    // java.lang.reflect.Method retObjectIndexFromPointMethod = retObjectIndexFromPointClass.getMethod("intValue");
+                    // return (int)retObjectIndexFromPointMethod.invoke(retObjectIndexFromPoint);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexFromPointNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexFromPoint_ToString);
+                    return retObjectIndexFromPointNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexFromPointError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexFromPoint != null ? retObjectIndexFromPoint.getClass() : "null", retObjectIndexFromPoint_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexFromPointError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -324,13 +438,32 @@ public class ListBox extends ListControl  {
             retObjectIndexFromPoint = classInstance.Invoke("IndexFromPoint", p == null ? null : p.getJCOInstance());
             return (int)retObjectIndexFromPoint;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexFromPointError = true;
             java.lang.String retObjectIndexFromPoint_ToString = retObjectIndexFromPoint == null ? "null" : retObjectIndexFromPoint.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndexFromPointNumber = (java.lang.Number)retObjectIndexFromPoint;
-                return retObjectIndexFromPointNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndexFromPoint != null ? retObjectIndexFromPoint.getClass() : "null", retObjectIndexFromPoint_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexFromPoint != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexFromPointClass = retObjectIndexFromPoint.getClass();
+                    // java.lang.reflect.Method retObjectIndexFromPointMethod = retObjectIndexFromPointClass.getMethod("intValue");
+                    // return (int)retObjectIndexFromPointMethod.invoke(retObjectIndexFromPoint);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexFromPointNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexFromPoint_ToString);
+                    return retObjectIndexFromPointNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexFromPointError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexFromPoint != null ? retObjectIndexFromPoint.getClass() : "null", retObjectIndexFromPoint_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexFromPointError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -602,13 +735,32 @@ public class ListBox extends ListControl  {
             retObjectColumnWidth = classInstance.Get("ColumnWidth");
             return (int)retObjectColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportColumnWidthError = true;
             java.lang.String retObjectColumnWidth_ToString = retObjectColumnWidth == null ? "null" : retObjectColumnWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectColumnWidthNumber = (java.lang.Number)retObjectColumnWidth;
-                return retObjectColumnWidthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null", retObjectColumnWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectColumnWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectColumnWidthClass = retObjectColumnWidth.getClass();
+                    // java.lang.reflect.Method retObjectColumnWidthMethod = retObjectColumnWidthClass.getMethod("intValue");
+                    // return (int)retObjectColumnWidthMethod.invoke(retObjectColumnWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectColumnWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectColumnWidth_ToString);
+                    return retObjectColumnWidthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportColumnWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null", retObjectColumnWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportColumnWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -633,13 +785,32 @@ public class ListBox extends ListControl  {
             retObjectHorizontalExtent = classInstance.Get("HorizontalExtent");
             return (int)retObjectHorizontalExtent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportHorizontalExtentError = true;
             java.lang.String retObjectHorizontalExtent_ToString = retObjectHorizontalExtent == null ? "null" : retObjectHorizontalExtent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectHorizontalExtentNumber = (java.lang.Number)retObjectHorizontalExtent;
-                return retObjectHorizontalExtentNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHorizontalExtent != null ? retObjectHorizontalExtent.getClass() : "null", retObjectHorizontalExtent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectHorizontalExtent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectHorizontalExtentClass = retObjectHorizontalExtent.getClass();
+                    // java.lang.reflect.Method retObjectHorizontalExtentMethod = retObjectHorizontalExtentClass.getMethod("intValue");
+                    // return (int)retObjectHorizontalExtentMethod.invoke(retObjectHorizontalExtent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectHorizontalExtentNumber = java.text.NumberFormat.getInstance().parse(retObjectHorizontalExtent_ToString);
+                    return retObjectHorizontalExtentNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportHorizontalExtentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectHorizontalExtent != null ? retObjectHorizontalExtent.getClass() : "null", retObjectHorizontalExtent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportHorizontalExtentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -664,13 +835,32 @@ public class ListBox extends ListControl  {
             retObjectItemHeight = classInstance.Get("ItemHeight");
             return (int)retObjectItemHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportItemHeightError = true;
             java.lang.String retObjectItemHeight_ToString = retObjectItemHeight == null ? "null" : retObjectItemHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectItemHeightNumber = (java.lang.Number)retObjectItemHeight;
-                return retObjectItemHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectItemHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectItemHeightClass = retObjectItemHeight.getClass();
+                    // java.lang.reflect.Method retObjectItemHeightMethod = retObjectItemHeightClass.getMethod("intValue");
+                    // return (int)retObjectItemHeightMethod.invoke(retObjectItemHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectItemHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectItemHeight_ToString);
+                    return retObjectItemHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportItemHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectItemHeight != null ? retObjectItemHeight.getClass() : "null", retObjectItemHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportItemHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -695,13 +885,32 @@ public class ListBox extends ListControl  {
             retObjectPreferredHeight = classInstance.Get("PreferredHeight");
             return (int)retObjectPreferredHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPreferredHeightError = true;
             java.lang.String retObjectPreferredHeight_ToString = retObjectPreferredHeight == null ? "null" : retObjectPreferredHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPreferredHeightNumber = (java.lang.Number)retObjectPreferredHeight;
-                return retObjectPreferredHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null", retObjectPreferredHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPreferredHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPreferredHeightClass = retObjectPreferredHeight.getClass();
+                    // java.lang.reflect.Method retObjectPreferredHeightMethod = retObjectPreferredHeightClass.getMethod("intValue");
+                    // return (int)retObjectPreferredHeightMethod.invoke(retObjectPreferredHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPreferredHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectPreferredHeight_ToString);
+                    return retObjectPreferredHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPreferredHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null", retObjectPreferredHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPreferredHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -716,13 +925,32 @@ public class ListBox extends ListControl  {
             retObjectTopIndex = classInstance.Get("TopIndex");
             return (int)retObjectTopIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTopIndexError = true;
             java.lang.String retObjectTopIndex_ToString = retObjectTopIndex == null ? "null" : retObjectTopIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTopIndexNumber = (java.lang.Number)retObjectTopIndex;
-                return retObjectTopIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTopIndex != null ? retObjectTopIndex.getClass() : "null", retObjectTopIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTopIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTopIndexClass = retObjectTopIndex.getClass();
+                    // java.lang.reflect.Method retObjectTopIndexMethod = retObjectTopIndexClass.getMethod("intValue");
+                    // return (int)retObjectTopIndexMethod.invoke(retObjectTopIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTopIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectTopIndex_ToString);
+                    return retObjectTopIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTopIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTopIndex != null ? retObjectTopIndex.getClass() : "null", retObjectTopIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTopIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

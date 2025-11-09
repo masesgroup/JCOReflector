@@ -363,13 +363,32 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectCellPadding = classInstance.Get("CellPadding");
             return (int)retObjectCellPadding;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCellPaddingError = true;
             java.lang.String retObjectCellPadding_ToString = retObjectCellPadding == null ? "null" : retObjectCellPadding.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCellPaddingNumber = (java.lang.Number)retObjectCellPadding;
-                return retObjectCellPaddingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCellPadding != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCellPaddingClass = retObjectCellPadding.getClass();
+                    // java.lang.reflect.Method retObjectCellPaddingMethod = retObjectCellPaddingClass.getMethod("intValue");
+                    // return (int)retObjectCellPaddingMethod.invoke(retObjectCellPadding);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCellPaddingNumber = java.text.NumberFormat.getInstance().parse(retObjectCellPadding_ToString);
+                    return retObjectCellPaddingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCellPaddingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null", retObjectCellPadding_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCellPaddingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -394,13 +413,32 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectCellSpacing = classInstance.Get("CellSpacing");
             return (int)retObjectCellSpacing;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCellSpacingError = true;
             java.lang.String retObjectCellSpacing_ToString = retObjectCellSpacing == null ? "null" : retObjectCellSpacing.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCellSpacingNumber = (java.lang.Number)retObjectCellSpacing;
-                return retObjectCellSpacingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCellSpacing != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCellSpacingClass = retObjectCellSpacing.getClass();
+                    // java.lang.reflect.Method retObjectCellSpacingMethod = retObjectCellSpacingClass.getMethod("intValue");
+                    // return (int)retObjectCellSpacingMethod.invoke(retObjectCellSpacing);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCellSpacingNumber = java.text.NumberFormat.getInstance().parse(retObjectCellSpacing_ToString);
+                    return retObjectCellSpacingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCellSpacingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null", retObjectCellSpacing_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCellSpacingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -425,13 +463,32 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectDataItemCount = classInstance.Get("DataItemCount");
             return (int)retObjectDataItemCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDataItemCountError = true;
             java.lang.String retObjectDataItemCount_ToString = retObjectDataItemCount == null ? "null" : retObjectDataItemCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDataItemCountNumber = (java.lang.Number)retObjectDataItemCount;
-                return retObjectDataItemCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataItemCount != null ? retObjectDataItemCount.getClass() : "null", retObjectDataItemCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDataItemCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDataItemCountClass = retObjectDataItemCount.getClass();
+                    // java.lang.reflect.Method retObjectDataItemCountMethod = retObjectDataItemCountClass.getMethod("intValue");
+                    // return (int)retObjectDataItemCountMethod.invoke(retObjectDataItemCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDataItemCountNumber = java.text.NumberFormat.getInstance().parse(retObjectDataItemCount_ToString);
+                    return retObjectDataItemCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDataItemCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDataItemCount != null ? retObjectDataItemCount.getClass() : "null", retObjectDataItemCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDataItemCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -446,13 +503,32 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectDataItemIndex = classInstance.Get("DataItemIndex");
             return (int)retObjectDataItemIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDataItemIndexError = true;
             java.lang.String retObjectDataItemIndex_ToString = retObjectDataItemIndex == null ? "null" : retObjectDataItemIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDataItemIndexNumber = (java.lang.Number)retObjectDataItemIndex;
-                return retObjectDataItemIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null", retObjectDataItemIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDataItemIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDataItemIndexClass = retObjectDataItemIndex.getClass();
+                    // java.lang.reflect.Method retObjectDataItemIndexMethod = retObjectDataItemIndexClass.getMethod("intValue");
+                    // return (int)retObjectDataItemIndexMethod.invoke(retObjectDataItemIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDataItemIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectDataItemIndex_ToString);
+                    return retObjectDataItemIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDataItemIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null", retObjectDataItemIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDataItemIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -467,13 +543,32 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectPageCount = classInstance.Get("PageCount");
             return (int)retObjectPageCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPageCountError = true;
             java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
-                return retObjectPageCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPageCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPageCountClass = retObjectPageCount.getClass();
+                    // java.lang.reflect.Method retObjectPageCountMethod = retObjectPageCountClass.getMethod("intValue");
+                    // return (int)retObjectPageCountMethod.invoke(retObjectPageCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPageCountNumber = java.text.NumberFormat.getInstance().parse(retObjectPageCount_ToString);
+                    return retObjectPageCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPageCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPageCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -488,13 +583,32 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
             retObjectPageIndex = classInstance.Get("PageIndex");
             return (int)retObjectPageIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPageIndexError = true;
             java.lang.String retObjectPageIndex_ToString = retObjectPageIndex == null ? "null" : retObjectPageIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPageIndexNumber = (java.lang.Number)retObjectPageIndex;
-                return retObjectPageIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageIndex != null ? retObjectPageIndex.getClass() : "null", retObjectPageIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPageIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPageIndexClass = retObjectPageIndex.getClass();
+                    // java.lang.reflect.Method retObjectPageIndexMethod = retObjectPageIndexClass.getMethod("intValue");
+                    // return (int)retObjectPageIndexMethod.invoke(retObjectPageIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPageIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectPageIndex_ToString);
+                    return retObjectPageIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPageIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPageIndex != null ? retObjectPageIndex.getClass() : "null", retObjectPageIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPageIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

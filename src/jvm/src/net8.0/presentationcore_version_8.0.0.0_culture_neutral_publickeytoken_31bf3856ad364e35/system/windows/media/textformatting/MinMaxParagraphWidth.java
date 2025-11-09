@@ -181,13 +181,32 @@ public class MinMaxParagraphWidth extends ValueType  {
             retObjectMaxWidth = classInstance.Get("MaxWidth");
             return (double)retObjectMaxWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxWidthError = true;
             java.lang.String retObjectMaxWidth_ToString = retObjectMaxWidth == null ? "null" : retObjectMaxWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxWidthNumber = (java.lang.Number)retObjectMaxWidth;
-                return retObjectMaxWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxWidth != null ? retObjectMaxWidth.getClass() : "null", retObjectMaxWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxWidthClass = retObjectMaxWidth.getClass();
+                    // java.lang.reflect.Method retObjectMaxWidthMethod = retObjectMaxWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectMaxWidthMethod.invoke(retObjectMaxWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxWidth_ToString);
+                    return retObjectMaxWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxWidth != null ? retObjectMaxWidth.getClass() : "null", retObjectMaxWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,13 +221,32 @@ public class MinMaxParagraphWidth extends ValueType  {
             retObjectMinWidth = classInstance.Get("MinWidth");
             return (double)retObjectMinWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinWidthError = true;
             java.lang.String retObjectMinWidth_ToString = retObjectMinWidth == null ? "null" : retObjectMinWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinWidthNumber = (java.lang.Number)retObjectMinWidth;
-                return retObjectMinWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinWidth != null ? retObjectMinWidth.getClass() : "null", retObjectMinWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinWidthClass = retObjectMinWidth.getClass();
+                    // java.lang.reflect.Method retObjectMinWidthMethod = retObjectMinWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectMinWidthMethod.invoke(retObjectMinWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectMinWidth_ToString);
+                    return retObjectMinWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinWidth != null ? retObjectMinWidth.getClass() : "null", retObjectMinWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

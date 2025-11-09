@@ -314,13 +314,32 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
             retObjectFontSize = classInstance.Get("FontSize");
             return (double)retObjectFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFontSizeError = true;
             java.lang.String retObjectFontSize_ToString = retObjectFontSize == null ? "null" : retObjectFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFontSizeNumber = (java.lang.Number)retObjectFontSize;
-                return retObjectFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFontSizeClass = retObjectFontSize.getClass();
+                    // java.lang.reflect.Method retObjectFontSizeMethod = retObjectFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectFontSizeMethod.invoke(retObjectFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectFontSize_ToString);
+                    return retObjectFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFontSize != null ? retObjectFontSize.getClass() : "null", retObjectFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -345,13 +364,32 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
             retObjectWindowHeight = classInstance.Get("WindowHeight");
             return (double)retObjectWindowHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWindowHeightError = true;
             java.lang.String retObjectWindowHeight_ToString = retObjectWindowHeight == null ? "null" : retObjectWindowHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWindowHeightNumber = (java.lang.Number)retObjectWindowHeight;
-                return retObjectWindowHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWindowHeight != null ? retObjectWindowHeight.getClass() : "null", retObjectWindowHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWindowHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWindowHeightClass = retObjectWindowHeight.getClass();
+                    // java.lang.reflect.Method retObjectWindowHeightMethod = retObjectWindowHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectWindowHeightMethod.invoke(retObjectWindowHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWindowHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectWindowHeight_ToString);
+                    return retObjectWindowHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWindowHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWindowHeight != null ? retObjectWindowHeight.getClass() : "null", retObjectWindowHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWindowHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -376,13 +414,32 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
             retObjectWindowWidth = classInstance.Get("WindowWidth");
             return (double)retObjectWindowWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWindowWidthError = true;
             java.lang.String retObjectWindowWidth_ToString = retObjectWindowWidth == null ? "null" : retObjectWindowWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWindowWidthNumber = (java.lang.Number)retObjectWindowWidth;
-                return retObjectWindowWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectWindowWidth != null ? retObjectWindowWidth.getClass() : "null", retObjectWindowWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWindowWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWindowWidthClass = retObjectWindowWidth.getClass();
+                    // java.lang.reflect.Method retObjectWindowWidthMethod = retObjectWindowWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectWindowWidthMethod.invoke(retObjectWindowWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWindowWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectWindowWidth_ToString);
+                    return retObjectWindowWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWindowWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWindowWidth != null ? retObjectWindowWidth.getClass() : "null", retObjectWindowWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWindowWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

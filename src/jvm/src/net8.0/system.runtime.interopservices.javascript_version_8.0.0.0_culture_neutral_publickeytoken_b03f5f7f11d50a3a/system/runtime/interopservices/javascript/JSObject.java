@@ -213,13 +213,32 @@ public class JSObject extends NetObject implements AutoCloseable {
             retObjectGetPropertyAsDouble = classInstance.Invoke("GetPropertyAsDouble", propertyName);
             return (double)retObjectGetPropertyAsDouble;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetPropertyAsDoubleError = true;
             java.lang.String retObjectGetPropertyAsDouble_ToString = retObjectGetPropertyAsDouble == null ? "null" : retObjectGetPropertyAsDouble.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetPropertyAsDoubleNumber = (java.lang.Number)retObjectGetPropertyAsDouble;
-                return retObjectGetPropertyAsDoubleNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetPropertyAsDouble != null ? retObjectGetPropertyAsDouble.getClass() : "null", retObjectGetPropertyAsDouble_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetPropertyAsDouble != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetPropertyAsDoubleClass = retObjectGetPropertyAsDouble.getClass();
+                    // java.lang.reflect.Method retObjectGetPropertyAsDoubleMethod = retObjectGetPropertyAsDoubleClass.getMethod("doubleValue");
+                    // return (double)retObjectGetPropertyAsDoubleMethod.invoke(retObjectGetPropertyAsDouble);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetPropertyAsDoubleNumber = java.text.NumberFormat.getInstance().parse(retObjectGetPropertyAsDouble_ToString);
+                    return retObjectGetPropertyAsDoubleNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetPropertyAsDoubleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetPropertyAsDouble != null ? retObjectGetPropertyAsDouble.getClass() : "null", retObjectGetPropertyAsDouble_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetPropertyAsDoubleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,13 +253,32 @@ public class JSObject extends NetObject implements AutoCloseable {
             retObjectGetPropertyAsInt32 = classInstance.Invoke("GetPropertyAsInt32", propertyName);
             return (int)retObjectGetPropertyAsInt32;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetPropertyAsInt32Error = true;
             java.lang.String retObjectGetPropertyAsInt32_ToString = retObjectGetPropertyAsInt32 == null ? "null" : retObjectGetPropertyAsInt32.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetPropertyAsInt32Number = (java.lang.Number)retObjectGetPropertyAsInt32;
-                return retObjectGetPropertyAsInt32Number.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPropertyAsInt32 != null ? retObjectGetPropertyAsInt32.getClass() : "null", retObjectGetPropertyAsInt32_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetPropertyAsInt32 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetPropertyAsInt32Class = retObjectGetPropertyAsInt32.getClass();
+                    // java.lang.reflect.Method retObjectGetPropertyAsInt32Method = retObjectGetPropertyAsInt32Class.getMethod("intValue");
+                    // return (int)retObjectGetPropertyAsInt32Method.invoke(retObjectGetPropertyAsInt32);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetPropertyAsInt32Number = java.text.NumberFormat.getInstance().parse(retObjectGetPropertyAsInt32_ToString);
+                    return retObjectGetPropertyAsInt32Number.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetPropertyAsInt32Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetPropertyAsInt32 != null ? retObjectGetPropertyAsInt32.getClass() : "null", retObjectGetPropertyAsInt32_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetPropertyAsInt32Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

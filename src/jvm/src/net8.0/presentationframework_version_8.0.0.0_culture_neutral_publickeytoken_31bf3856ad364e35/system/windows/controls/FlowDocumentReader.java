@@ -494,13 +494,32 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectMaxZoom = classInstance.Get("MaxZoom");
             return (double)retObjectMaxZoom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxZoomError = true;
             java.lang.String retObjectMaxZoom_ToString = retObjectMaxZoom == null ? "null" : retObjectMaxZoom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxZoomNumber = (java.lang.Number)retObjectMaxZoom;
-                return retObjectMaxZoomNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMaxZoom != null ? retObjectMaxZoom.getClass() : "null", retObjectMaxZoom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxZoom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxZoomClass = retObjectMaxZoom.getClass();
+                    // java.lang.reflect.Method retObjectMaxZoomMethod = retObjectMaxZoomClass.getMethod("doubleValue");
+                    // return (double)retObjectMaxZoomMethod.invoke(retObjectMaxZoom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxZoomNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxZoom_ToString);
+                    return retObjectMaxZoomNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxZoomError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxZoom != null ? retObjectMaxZoom.getClass() : "null", retObjectMaxZoom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxZoomError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -525,13 +544,32 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectMinZoom = classInstance.Get("MinZoom");
             return (double)retObjectMinZoom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinZoomError = true;
             java.lang.String retObjectMinZoom_ToString = retObjectMinZoom == null ? "null" : retObjectMinZoom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinZoomNumber = (java.lang.Number)retObjectMinZoom;
-                return retObjectMinZoomNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMinZoom != null ? retObjectMinZoom.getClass() : "null", retObjectMinZoom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinZoom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinZoomClass = retObjectMinZoom.getClass();
+                    // java.lang.reflect.Method retObjectMinZoomMethod = retObjectMinZoomClass.getMethod("doubleValue");
+                    // return (double)retObjectMinZoomMethod.invoke(retObjectMinZoom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinZoomNumber = java.text.NumberFormat.getInstance().parse(retObjectMinZoom_ToString);
+                    return retObjectMinZoomNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinZoomError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinZoom != null ? retObjectMinZoom.getClass() : "null", retObjectMinZoom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinZoomError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -556,13 +594,32 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectSelectionOpacity = classInstance.Get("SelectionOpacity");
             return (double)retObjectSelectionOpacity;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSelectionOpacityError = true;
             java.lang.String retObjectSelectionOpacity_ToString = retObjectSelectionOpacity == null ? "null" : retObjectSelectionOpacity.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSelectionOpacityNumber = (java.lang.Number)retObjectSelectionOpacity;
-                return retObjectSelectionOpacityNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSelectionOpacity != null ? retObjectSelectionOpacity.getClass() : "null", retObjectSelectionOpacity_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSelectionOpacity != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSelectionOpacityClass = retObjectSelectionOpacity.getClass();
+                    // java.lang.reflect.Method retObjectSelectionOpacityMethod = retObjectSelectionOpacityClass.getMethod("doubleValue");
+                    // return (double)retObjectSelectionOpacityMethod.invoke(retObjectSelectionOpacity);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSelectionOpacityNumber = java.text.NumberFormat.getInstance().parse(retObjectSelectionOpacity_ToString);
+                    return retObjectSelectionOpacityNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSelectionOpacityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSelectionOpacity != null ? retObjectSelectionOpacity.getClass() : "null", retObjectSelectionOpacity_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSelectionOpacityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -587,13 +644,32 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectZoom = classInstance.Get("Zoom");
             return (double)retObjectZoom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportZoomError = true;
             java.lang.String retObjectZoom_ToString = retObjectZoom == null ? "null" : retObjectZoom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectZoomNumber = (java.lang.Number)retObjectZoom;
-                return retObjectZoomNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectZoom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectZoomClass = retObjectZoom.getClass();
+                    // java.lang.reflect.Method retObjectZoomMethod = retObjectZoomClass.getMethod("doubleValue");
+                    // return (double)retObjectZoomMethod.invoke(retObjectZoom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectZoomNumber = java.text.NumberFormat.getInstance().parse(retObjectZoom_ToString);
+                    return retObjectZoomNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportZoomError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectZoom != null ? retObjectZoom.getClass() : "null", retObjectZoom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportZoomError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -618,13 +694,32 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectZoomIncrement = classInstance.Get("ZoomIncrement");
             return (double)retObjectZoomIncrement;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportZoomIncrementError = true;
             java.lang.String retObjectZoomIncrement_ToString = retObjectZoomIncrement == null ? "null" : retObjectZoomIncrement.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectZoomIncrementNumber = (java.lang.Number)retObjectZoomIncrement;
-                return retObjectZoomIncrementNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectZoomIncrement != null ? retObjectZoomIncrement.getClass() : "null", retObjectZoomIncrement_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectZoomIncrement != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectZoomIncrementClass = retObjectZoomIncrement.getClass();
+                    // java.lang.reflect.Method retObjectZoomIncrementMethod = retObjectZoomIncrementClass.getMethod("doubleValue");
+                    // return (double)retObjectZoomIncrementMethod.invoke(retObjectZoomIncrement);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectZoomIncrementNumber = java.text.NumberFormat.getInstance().parse(retObjectZoomIncrement_ToString);
+                    return retObjectZoomIncrementNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportZoomIncrementError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectZoomIncrement != null ? retObjectZoomIncrement.getClass() : "null", retObjectZoomIncrement_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportZoomIncrementError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -649,13 +744,32 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectPageCount = classInstance.Get("PageCount");
             return (int)retObjectPageCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPageCountError = true;
             java.lang.String retObjectPageCount_ToString = retObjectPageCount == null ? "null" : retObjectPageCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
-                return retObjectPageCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPageCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPageCountClass = retObjectPageCount.getClass();
+                    // java.lang.reflect.Method retObjectPageCountMethod = retObjectPageCountClass.getMethod("intValue");
+                    // return (int)retObjectPageCountMethod.invoke(retObjectPageCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPageCountNumber = java.text.NumberFormat.getInstance().parse(retObjectPageCount_ToString);
+                    return retObjectPageCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPageCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPageCount != null ? retObjectPageCount.getClass() : "null", retObjectPageCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPageCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -670,13 +784,32 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             retObjectPageNumber = classInstance.Get("PageNumber");
             return (int)retObjectPageNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPageNumberError = true;
             java.lang.String retObjectPageNumber_ToString = retObjectPageNumber == null ? "null" : retObjectPageNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPageNumberNumber = (java.lang.Number)retObjectPageNumber;
-                return retObjectPageNumberNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null", retObjectPageNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPageNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPageNumberClass = retObjectPageNumber.getClass();
+                    // java.lang.reflect.Method retObjectPageNumberMethod = retObjectPageNumberClass.getMethod("intValue");
+                    // return (int)retObjectPageNumberMethod.invoke(retObjectPageNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPageNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectPageNumber_ToString);
+                    return retObjectPageNumberNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPageNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null", retObjectPageNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPageNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -219,13 +219,32 @@ public class HttpException extends ExternalException {
             retObjectGetHttpCode = classInstance.Invoke("GetHttpCode");
             return (int)retObjectGetHttpCode;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetHttpCodeError = true;
             java.lang.String retObjectGetHttpCode_ToString = retObjectGetHttpCode == null ? "null" : retObjectGetHttpCode.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetHttpCodeNumber = (java.lang.Number)retObjectGetHttpCode;
-                return retObjectGetHttpCodeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHttpCode != null ? retObjectGetHttpCode.getClass() : "null", retObjectGetHttpCode_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetHttpCode != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetHttpCodeClass = retObjectGetHttpCode.getClass();
+                    // java.lang.reflect.Method retObjectGetHttpCodeMethod = retObjectGetHttpCodeClass.getMethod("intValue");
+                    // return (int)retObjectGetHttpCodeMethod.invoke(retObjectGetHttpCode);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetHttpCodeNumber = java.text.NumberFormat.getInstance().parse(retObjectGetHttpCode_ToString);
+                    return retObjectGetHttpCodeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetHttpCodeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetHttpCode != null ? retObjectGetHttpCode.getClass() : "null", retObjectGetHttpCode_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetHttpCodeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -283,13 +302,32 @@ public class HttpException extends ExternalException {
             retObjectWebEventCode = classInstance.Get("WebEventCode");
             return (int)retObjectWebEventCode;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWebEventCodeError = true;
             java.lang.String retObjectWebEventCode_ToString = retObjectWebEventCode == null ? "null" : retObjectWebEventCode.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWebEventCodeNumber = (java.lang.Number)retObjectWebEventCode;
-                return retObjectWebEventCodeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWebEventCode != null ? retObjectWebEventCode.getClass() : "null", retObjectWebEventCode_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWebEventCode != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWebEventCodeClass = retObjectWebEventCode.getClass();
+                    // java.lang.reflect.Method retObjectWebEventCodeMethod = retObjectWebEventCodeClass.getMethod("intValue");
+                    // return (int)retObjectWebEventCodeMethod.invoke(retObjectWebEventCode);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWebEventCodeNumber = java.text.NumberFormat.getInstance().parse(retObjectWebEventCode_ToString);
+                    return retObjectWebEventCodeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWebEventCodeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWebEventCode != null ? retObjectWebEventCode.getClass() : "null", retObjectWebEventCode_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWebEventCodeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

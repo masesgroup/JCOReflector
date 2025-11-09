@@ -166,13 +166,32 @@ public class ProgressEventArgs extends ManagementEventArgs  {
             retObjectCurrent = classInstance.Get("Current");
             return (int)retObjectCurrent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentError = true;
             java.lang.String retObjectCurrent_ToString = retObjectCurrent == null ? "null" : retObjectCurrent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentNumber = (java.lang.Number)retObjectCurrent;
-                return retObjectCurrentNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrent != null ? retObjectCurrent.getClass() : "null", retObjectCurrent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentClass = retObjectCurrent.getClass();
+                    // java.lang.reflect.Method retObjectCurrentMethod = retObjectCurrentClass.getMethod("intValue");
+                    // return (int)retObjectCurrentMethod.invoke(retObjectCurrent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrent_ToString);
+                    return retObjectCurrentNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrent != null ? retObjectCurrent.getClass() : "null", retObjectCurrent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,13 +206,32 @@ public class ProgressEventArgs extends ManagementEventArgs  {
             retObjectUpperBound = classInstance.Get("UpperBound");
             return (int)retObjectUpperBound;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUpperBoundError = true;
             java.lang.String retObjectUpperBound_ToString = retObjectUpperBound == null ? "null" : retObjectUpperBound.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUpperBoundNumber = (java.lang.Number)retObjectUpperBound;
-                return retObjectUpperBoundNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUpperBound != null ? retObjectUpperBound.getClass() : "null", retObjectUpperBound_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUpperBound != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUpperBoundClass = retObjectUpperBound.getClass();
+                    // java.lang.reflect.Method retObjectUpperBoundMethod = retObjectUpperBoundClass.getMethod("intValue");
+                    // return (int)retObjectUpperBoundMethod.invoke(retObjectUpperBound);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUpperBoundNumber = java.text.NumberFormat.getInstance().parse(retObjectUpperBound_ToString);
+                    return retObjectUpperBoundNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUpperBoundError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUpperBound != null ? retObjectUpperBound.getClass() : "null", retObjectUpperBound_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUpperBoundError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

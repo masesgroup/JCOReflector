@@ -335,13 +335,32 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
             retObjectColumnNumberOfTaskNode = classInstance.Get("ColumnNumberOfTaskNode");
             return (int)retObjectColumnNumberOfTaskNode;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportColumnNumberOfTaskNodeError = true;
             java.lang.String retObjectColumnNumberOfTaskNode_ToString = retObjectColumnNumberOfTaskNode == null ? "null" : retObjectColumnNumberOfTaskNode.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectColumnNumberOfTaskNodeNumber = (java.lang.Number)retObjectColumnNumberOfTaskNode;
-                return retObjectColumnNumberOfTaskNodeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnNumberOfTaskNode != null ? retObjectColumnNumberOfTaskNode.getClass() : "null", retObjectColumnNumberOfTaskNode_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectColumnNumberOfTaskNode != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectColumnNumberOfTaskNodeClass = retObjectColumnNumberOfTaskNode.getClass();
+                    // java.lang.reflect.Method retObjectColumnNumberOfTaskNodeMethod = retObjectColumnNumberOfTaskNodeClass.getMethod("intValue");
+                    // return (int)retObjectColumnNumberOfTaskNodeMethod.invoke(retObjectColumnNumberOfTaskNode);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectColumnNumberOfTaskNodeNumber = java.text.NumberFormat.getInstance().parse(retObjectColumnNumberOfTaskNode_ToString);
+                    return retObjectColumnNumberOfTaskNodeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportColumnNumberOfTaskNodeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectColumnNumberOfTaskNode != null ? retObjectColumnNumberOfTaskNode.getClass() : "null", retObjectColumnNumberOfTaskNode_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportColumnNumberOfTaskNodeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -356,13 +375,32 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
             retObjectLineNumberOfTaskNode = classInstance.Get("LineNumberOfTaskNode");
             return (int)retObjectLineNumberOfTaskNode;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLineNumberOfTaskNodeError = true;
             java.lang.String retObjectLineNumberOfTaskNode_ToString = retObjectLineNumberOfTaskNode == null ? "null" : retObjectLineNumberOfTaskNode.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLineNumberOfTaskNodeNumber = (java.lang.Number)retObjectLineNumberOfTaskNode;
-                return retObjectLineNumberOfTaskNodeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumberOfTaskNode != null ? retObjectLineNumberOfTaskNode.getClass() : "null", retObjectLineNumberOfTaskNode_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLineNumberOfTaskNode != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLineNumberOfTaskNodeClass = retObjectLineNumberOfTaskNode.getClass();
+                    // java.lang.reflect.Method retObjectLineNumberOfTaskNodeMethod = retObjectLineNumberOfTaskNodeClass.getMethod("intValue");
+                    // return (int)retObjectLineNumberOfTaskNodeMethod.invoke(retObjectLineNumberOfTaskNode);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLineNumberOfTaskNodeNumber = java.text.NumberFormat.getInstance().parse(retObjectLineNumberOfTaskNode_ToString);
+                    return retObjectLineNumberOfTaskNodeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLineNumberOfTaskNodeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLineNumberOfTaskNode != null ? retObjectLineNumberOfTaskNode.getClass() : "null", retObjectLineNumberOfTaskNode_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLineNumberOfTaskNodeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

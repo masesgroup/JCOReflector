@@ -148,13 +148,32 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
             retObjectGetBlobLength = classInstance.Invoke("GetBlobLength");
             return (int)retObjectGetBlobLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetBlobLengthError = true;
             java.lang.String retObjectGetBlobLength_ToString = retObjectGetBlobLength == null ? "null" : retObjectGetBlobLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetBlobLengthNumber = (java.lang.Number)retObjectGetBlobLength;
-                return retObjectGetBlobLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetBlobLength != null ? retObjectGetBlobLength.getClass() : "null", retObjectGetBlobLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetBlobLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetBlobLengthClass = retObjectGetBlobLength.getClass();
+                    // java.lang.reflect.Method retObjectGetBlobLengthMethod = retObjectGetBlobLengthClass.getMethod("intValue");
+                    // return (int)retObjectGetBlobLengthMethod.invoke(retObjectGetBlobLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetBlobLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectGetBlobLength_ToString);
+                    return retObjectGetBlobLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetBlobLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetBlobLength != null ? retObjectGetBlobLength.getClass() : "null", retObjectGetBlobLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetBlobLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -169,13 +188,32 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
             retObjectGetId = classInstance.Invoke("GetId");
             return (int)retObjectGetId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetIdError = true;
             java.lang.String retObjectGetId_ToString = retObjectGetId == null ? "null" : retObjectGetId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetIdNumber = (java.lang.Number)retObjectGetId;
-                return retObjectGetIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetId != null ? retObjectGetId.getClass() : "null", retObjectGetId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetIdClass = retObjectGetId.getClass();
+                    // java.lang.reflect.Method retObjectGetIdMethod = retObjectGetIdClass.getMethod("intValue");
+                    // return (int)retObjectGetIdMethod.invoke(retObjectGetId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetIdNumber = java.text.NumberFormat.getInstance().parse(retObjectGetId_ToString);
+                    return retObjectGetIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetId != null ? retObjectGetId.getClass() : "null", retObjectGetId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

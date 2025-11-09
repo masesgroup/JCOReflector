@@ -174,13 +174,32 @@ public class EventWrittenEventArgs extends EventArgs  {
             retObjectVersion = classInstance.Get("Version");
             return (byte)retObjectVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVersionError = true;
             java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
-                return retObjectVersionNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVersionClass = retObjectVersion.getClass();
+                    // java.lang.reflect.Method retObjectVersionMethod = retObjectVersionClass.getMethod("byteValue");
+                    // return (byte)retObjectVersionMethod.invoke(retObjectVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectVersion_ToString);
+                    return retObjectVersionNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,13 +214,32 @@ public class EventWrittenEventArgs extends EventArgs  {
             retObjectEventId = classInstance.Get("EventId");
             return (int)retObjectEventId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEventIdError = true;
             java.lang.String retObjectEventId_ToString = retObjectEventId == null ? "null" : retObjectEventId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEventIdNumber = (java.lang.Number)retObjectEventId;
-                return retObjectEventIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEventId != null ? retObjectEventId.getClass() : "null", retObjectEventId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEventId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEventIdClass = retObjectEventId.getClass();
+                    // java.lang.reflect.Method retObjectEventIdMethod = retObjectEventIdClass.getMethod("intValue");
+                    // return (int)retObjectEventIdMethod.invoke(retObjectEventId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEventIdNumber = java.text.NumberFormat.getInstance().parse(retObjectEventId_ToString);
+                    return retObjectEventIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEventIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEventId != null ? retObjectEventId.getClass() : "null", retObjectEventId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEventIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

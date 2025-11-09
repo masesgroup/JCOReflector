@@ -264,13 +264,32 @@ public class NumericUpDown extends UpDownBase  {
             retObjectDecimalPlaces = classInstance.Get("DecimalPlaces");
             return (int)retObjectDecimalPlaces;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDecimalPlacesError = true;
             java.lang.String retObjectDecimalPlaces_ToString = retObjectDecimalPlaces == null ? "null" : retObjectDecimalPlaces.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDecimalPlacesNumber = (java.lang.Number)retObjectDecimalPlaces;
-                return retObjectDecimalPlacesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDecimalPlaces != null ? retObjectDecimalPlaces.getClass() : "null", retObjectDecimalPlaces_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDecimalPlaces != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDecimalPlacesClass = retObjectDecimalPlaces.getClass();
+                    // java.lang.reflect.Method retObjectDecimalPlacesMethod = retObjectDecimalPlacesClass.getMethod("intValue");
+                    // return (int)retObjectDecimalPlacesMethod.invoke(retObjectDecimalPlaces);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDecimalPlacesNumber = java.text.NumberFormat.getInstance().parse(retObjectDecimalPlaces_ToString);
+                    return retObjectDecimalPlacesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDecimalPlacesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDecimalPlaces != null ? retObjectDecimalPlaces.getClass() : "null", retObjectDecimalPlaces_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDecimalPlacesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

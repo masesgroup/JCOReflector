@@ -176,13 +176,32 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
             retObjectBuildVersion = classInstance.Get("BuildVersion");
             return (byte)retObjectBuildVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBuildVersionError = true;
             java.lang.String retObjectBuildVersion_ToString = retObjectBuildVersion == null ? "null" : retObjectBuildVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBuildVersionNumber = (java.lang.Number)retObjectBuildVersion;
-                return retObjectBuildVersionNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectBuildVersion != null ? retObjectBuildVersion.getClass() : "null", retObjectBuildVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBuildVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBuildVersionClass = retObjectBuildVersion.getClass();
+                    // java.lang.reflect.Method retObjectBuildVersionMethod = retObjectBuildVersionClass.getMethod("byteValue");
+                    // return (byte)retObjectBuildVersionMethod.invoke(retObjectBuildVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBuildVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectBuildVersion_ToString);
+                    return retObjectBuildVersionNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBuildVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBuildVersion != null ? retObjectBuildVersion.getClass() : "null", retObjectBuildVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBuildVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
             retObjectMajorVersion = classInstance.Get("MajorVersion");
             return (byte)retObjectMajorVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMajorVersionError = true;
             java.lang.String retObjectMajorVersion_ToString = retObjectMajorVersion == null ? "null" : retObjectMajorVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMajorVersionNumber = (java.lang.Number)retObjectMajorVersion;
-                return retObjectMajorVersionNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null", retObjectMajorVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMajorVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMajorVersionClass = retObjectMajorVersion.getClass();
+                    // java.lang.reflect.Method retObjectMajorVersionMethod = retObjectMajorVersionClass.getMethod("byteValue");
+                    // return (byte)retObjectMajorVersionMethod.invoke(retObjectMajorVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMajorVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectMajorVersion_ToString);
+                    return retObjectMajorVersionNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMajorVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null", retObjectMajorVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMajorVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,13 +256,32 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
             retObjectMinorVersion = classInstance.Get("MinorVersion");
             return (byte)retObjectMinorVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinorVersionError = true;
             java.lang.String retObjectMinorVersion_ToString = retObjectMinorVersion == null ? "null" : retObjectMinorVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinorVersionNumber = (java.lang.Number)retObjectMinorVersion;
-                return retObjectMinorVersionNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null", retObjectMinorVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinorVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinorVersionClass = retObjectMinorVersion.getClass();
+                    // java.lang.reflect.Method retObjectMinorVersionMethod = retObjectMinorVersionClass.getMethod("byteValue");
+                    // return (byte)retObjectMinorVersionMethod.invoke(retObjectMinorVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinorVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectMinorVersion_ToString);
+                    return retObjectMinorVersionNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinorVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null", retObjectMinorVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinorVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,13 +296,32 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
             retObjectRevisionVersion = classInstance.Get("RevisionVersion");
             return (byte)retObjectRevisionVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRevisionVersionError = true;
             java.lang.String retObjectRevisionVersion_ToString = retObjectRevisionVersion == null ? "null" : retObjectRevisionVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRevisionVersionNumber = (java.lang.Number)retObjectRevisionVersion;
-                return retObjectRevisionVersionNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectRevisionVersion != null ? retObjectRevisionVersion.getClass() : "null", retObjectRevisionVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRevisionVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRevisionVersionClass = retObjectRevisionVersion.getClass();
+                    // java.lang.reflect.Method retObjectRevisionVersionMethod = retObjectRevisionVersionClass.getMethod("byteValue");
+                    // return (byte)retObjectRevisionVersionMethod.invoke(retObjectRevisionVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRevisionVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectRevisionVersion_ToString);
+                    return retObjectRevisionVersionNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRevisionVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRevisionVersion != null ? retObjectRevisionVersion.getClass() : "null", retObjectRevisionVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRevisionVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

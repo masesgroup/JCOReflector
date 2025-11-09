@@ -215,13 +215,32 @@ public class VerifyNameControl extends DirectoryControl  {
             retObjectFlag = classInstance.Get("Flag");
             return (int)retObjectFlag;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFlagError = true;
             java.lang.String retObjectFlag_ToString = retObjectFlag == null ? "null" : retObjectFlag.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFlagNumber = (java.lang.Number)retObjectFlag;
-                return retObjectFlagNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFlag != null ? retObjectFlag.getClass() : "null", retObjectFlag_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFlag != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFlagClass = retObjectFlag.getClass();
+                    // java.lang.reflect.Method retObjectFlagMethod = retObjectFlagClass.getMethod("intValue");
+                    // return (int)retObjectFlagMethod.invoke(retObjectFlag);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFlagNumber = java.text.NumberFormat.getInstance().parse(retObjectFlag_ToString);
+                    return retObjectFlagNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFlagError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFlag != null ? retObjectFlag.getClass() : "null", retObjectFlag_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFlagError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

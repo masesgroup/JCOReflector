@@ -449,13 +449,32 @@ public class FontDialog extends CommonDialog  {
             retObjectMaxSize = classInstance.Get("MaxSize");
             return (int)retObjectMaxSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxSizeError = true;
             java.lang.String retObjectMaxSize_ToString = retObjectMaxSize == null ? "null" : retObjectMaxSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxSizeNumber = (java.lang.Number)retObjectMaxSize;
-                return retObjectMaxSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null", retObjectMaxSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxSizeClass = retObjectMaxSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxSizeMethod = retObjectMaxSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxSizeMethod.invoke(retObjectMaxSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxSize_ToString);
+                    return retObjectMaxSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null", retObjectMaxSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -480,13 +499,32 @@ public class FontDialog extends CommonDialog  {
             retObjectMinSize = classInstance.Get("MinSize");
             return (int)retObjectMinSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinSizeError = true;
             java.lang.String retObjectMinSize_ToString = retObjectMinSize == null ? "null" : retObjectMinSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinSizeNumber = (java.lang.Number)retObjectMinSize;
-                return retObjectMinSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinSize != null ? retObjectMinSize.getClass() : "null", retObjectMinSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinSizeClass = retObjectMinSize.getClass();
+                    // java.lang.reflect.Method retObjectMinSizeMethod = retObjectMinSizeClass.getMethod("intValue");
+                    // return (int)retObjectMinSizeMethod.invoke(retObjectMinSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMinSize_ToString);
+                    return retObjectMinSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinSize != null ? retObjectMinSize.getClass() : "null", retObjectMinSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

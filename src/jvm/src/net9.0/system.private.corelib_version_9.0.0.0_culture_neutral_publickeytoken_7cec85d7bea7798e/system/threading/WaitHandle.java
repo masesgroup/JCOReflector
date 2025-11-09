@@ -345,13 +345,32 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout, exitContext);
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitAnyError = true;
             java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
-                return retObjectWaitAnyNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitAny != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitAnyClass = retObjectWaitAny.getClass();
+                    // java.lang.reflect.Method retObjectWaitAnyMethod = retObjectWaitAnyClass.getMethod("intValue");
+                    // return (int)retObjectWaitAnyMethod.invoke(retObjectWaitAny);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitAnyNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitAny_ToString);
+                    return retObjectWaitAnyNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitAnyError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitAnyError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -366,13 +385,32 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout);
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitAnyError = true;
             java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
-                return retObjectWaitAnyNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitAny != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitAnyClass = retObjectWaitAny.getClass();
+                    // java.lang.reflect.Method retObjectWaitAnyMethod = retObjectWaitAnyClass.getMethod("intValue");
+                    // return (int)retObjectWaitAnyMethod.invoke(retObjectWaitAny);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitAnyNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitAny_ToString);
+                    return retObjectWaitAnyNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitAnyError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitAnyError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -387,13 +425,32 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance(), exitContext);
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitAnyError = true;
             java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
-                return retObjectWaitAnyNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitAny != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitAnyClass = retObjectWaitAny.getClass();
+                    // java.lang.reflect.Method retObjectWaitAnyMethod = retObjectWaitAnyClass.getMethod("intValue");
+                    // return (int)retObjectWaitAnyMethod.invoke(retObjectWaitAny);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitAnyNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitAny_ToString);
+                    return retObjectWaitAnyNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitAnyError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitAnyError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -408,13 +465,32 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitAnyError = true;
             java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
-                return retObjectWaitAnyNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitAny != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitAnyClass = retObjectWaitAny.getClass();
+                    // java.lang.reflect.Method retObjectWaitAnyMethod = retObjectWaitAnyClass.getMethod("intValue");
+                    // return (int)retObjectWaitAnyMethod.invoke(retObjectWaitAny);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitAnyNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitAny_ToString);
+                    return retObjectWaitAnyNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitAnyError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitAnyError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -429,13 +505,32 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             retObjectWaitAny = classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(waitHandles));
             return (int)retObjectWaitAny;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitAnyError = true;
             java.lang.String retObjectWaitAny_ToString = retObjectWaitAny == null ? "null" : retObjectWaitAny.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitAnyNumber = (java.lang.Number)retObjectWaitAny;
-                return retObjectWaitAnyNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitAny != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitAnyClass = retObjectWaitAny.getClass();
+                    // java.lang.reflect.Method retObjectWaitAnyMethod = retObjectWaitAnyClass.getMethod("intValue");
+                    // return (int)retObjectWaitAnyMethod.invoke(retObjectWaitAny);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitAnyNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitAny_ToString);
+                    return retObjectWaitAnyNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitAnyError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitAny != null ? retObjectWaitAny.getClass() : "null", retObjectWaitAny_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitAnyError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

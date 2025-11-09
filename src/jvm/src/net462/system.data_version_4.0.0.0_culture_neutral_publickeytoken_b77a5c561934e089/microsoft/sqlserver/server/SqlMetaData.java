@@ -352,13 +352,32 @@ public class SqlMetaData extends NetObject  {
             retObjectAdjust = classInstance.Invoke("Adjust", value);
             return (byte)retObjectAdjust;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAdjustError = true;
             java.lang.String retObjectAdjust_ToString = retObjectAdjust == null ? "null" : retObjectAdjust.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
-                return retObjectAdjustNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdjust != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAdjustClass = retObjectAdjust.getClass();
+                    // java.lang.reflect.Method retObjectAdjustMethod = retObjectAdjustClass.getMethod("byteValue");
+                    // return (byte)retObjectAdjustMethod.invoke(retObjectAdjust);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAdjustNumber = java.text.NumberFormat.getInstance().parse(retObjectAdjust_ToString);
+                    return retObjectAdjustNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAdjustError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAdjustError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -456,13 +475,32 @@ public class SqlMetaData extends NetObject  {
             retObjectAdjust = classInstance.Invoke("Adjust", value);
             return (double)retObjectAdjust;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAdjustError = true;
             java.lang.String retObjectAdjust_ToString = retObjectAdjust == null ? "null" : retObjectAdjust.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
-                return retObjectAdjustNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdjust != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAdjustClass = retObjectAdjust.getClass();
+                    // java.lang.reflect.Method retObjectAdjustMethod = retObjectAdjustClass.getMethod("doubleValue");
+                    // return (double)retObjectAdjustMethod.invoke(retObjectAdjust);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAdjustNumber = java.text.NumberFormat.getInstance().parse(retObjectAdjust_ToString);
+                    return retObjectAdjustNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAdjustError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAdjustError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -477,13 +515,32 @@ public class SqlMetaData extends NetObject  {
             retObjectAdjust = classInstance.Invoke("Adjust", value);
             return (short)retObjectAdjust;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAdjustError = true;
             java.lang.String retObjectAdjust_ToString = retObjectAdjust == null ? "null" : retObjectAdjust.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
-                return retObjectAdjustNumber.shortValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdjust != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAdjustClass = retObjectAdjust.getClass();
+                    // java.lang.reflect.Method retObjectAdjustMethod = retObjectAdjustClass.getMethod("shortValue");
+                    // return (short)retObjectAdjustMethod.invoke(retObjectAdjust);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAdjustNumber = java.text.NumberFormat.getInstance().parse(retObjectAdjust_ToString);
+                    return retObjectAdjustNumber.shortValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAdjustError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAdjustError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -498,13 +555,32 @@ public class SqlMetaData extends NetObject  {
             retObjectAdjust = classInstance.Invoke("Adjust", value);
             return (int)retObjectAdjust;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAdjustError = true;
             java.lang.String retObjectAdjust_ToString = retObjectAdjust == null ? "null" : retObjectAdjust.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
-                return retObjectAdjustNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdjust != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAdjustClass = retObjectAdjust.getClass();
+                    // java.lang.reflect.Method retObjectAdjustMethod = retObjectAdjustClass.getMethod("intValue");
+                    // return (int)retObjectAdjustMethod.invoke(retObjectAdjust);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAdjustNumber = java.text.NumberFormat.getInstance().parse(retObjectAdjust_ToString);
+                    return retObjectAdjustNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAdjustError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAdjustError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -519,13 +595,32 @@ public class SqlMetaData extends NetObject  {
             retObjectAdjust = classInstance.Invoke("Adjust", value);
             return (long)retObjectAdjust;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAdjustError = true;
             java.lang.String retObjectAdjust_ToString = retObjectAdjust == null ? "null" : retObjectAdjust.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
-                return retObjectAdjustNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAdjust != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAdjustClass = retObjectAdjust.getClass();
+                    // java.lang.reflect.Method retObjectAdjustMethod = retObjectAdjustClass.getMethod("longValue");
+                    // return (long)retObjectAdjustMethod.invoke(retObjectAdjust);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAdjustNumber = java.text.NumberFormat.getInstance().parse(retObjectAdjust_ToString);
+                    return retObjectAdjustNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAdjustError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAdjust != null ? retObjectAdjust.getClass() : "null", retObjectAdjust_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAdjustError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -946,13 +1041,32 @@ public class SqlMetaData extends NetObject  {
             retObjectPrecision = classInstance.Get("Precision");
             return (byte)retObjectPrecision;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPrecisionError = true;
             java.lang.String retObjectPrecision_ToString = retObjectPrecision == null ? "null" : retObjectPrecision.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPrecisionNumber = (java.lang.Number)retObjectPrecision;
-                return retObjectPrecisionNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPrecision != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPrecisionClass = retObjectPrecision.getClass();
+                    // java.lang.reflect.Method retObjectPrecisionMethod = retObjectPrecisionClass.getMethod("byteValue");
+                    // return (byte)retObjectPrecisionMethod.invoke(retObjectPrecision);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPrecisionNumber = java.text.NumberFormat.getInstance().parse(retObjectPrecision_ToString);
+                    return retObjectPrecisionNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPrecisionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPrecision != null ? retObjectPrecision.getClass() : "null", retObjectPrecision_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPrecisionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -967,13 +1081,32 @@ public class SqlMetaData extends NetObject  {
             retObjectScale = classInstance.Get("Scale");
             return (byte)retObjectScale;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportScaleError = true;
             java.lang.String retObjectScale_ToString = retObjectScale == null ? "null" : retObjectScale.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectScaleNumber = (java.lang.Number)retObjectScale;
-                return retObjectScaleNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectScale != null ? retObjectScale.getClass() : "null", retObjectScale_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectScale != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectScaleClass = retObjectScale.getClass();
+                    // java.lang.reflect.Method retObjectScaleMethod = retObjectScaleClass.getMethod("byteValue");
+                    // return (byte)retObjectScaleMethod.invoke(retObjectScale);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectScaleNumber = java.text.NumberFormat.getInstance().parse(retObjectScale_ToString);
+                    return retObjectScaleNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportScaleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectScale != null ? retObjectScale.getClass() : "null", retObjectScale_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportScaleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -988,13 +1121,32 @@ public class SqlMetaData extends NetObject  {
             retObjectSortOrdinal = classInstance.Get("SortOrdinal");
             return (int)retObjectSortOrdinal;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSortOrdinalError = true;
             java.lang.String retObjectSortOrdinal_ToString = retObjectSortOrdinal == null ? "null" : retObjectSortOrdinal.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSortOrdinalNumber = (java.lang.Number)retObjectSortOrdinal;
-                return retObjectSortOrdinalNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSortOrdinal != null ? retObjectSortOrdinal.getClass() : "null", retObjectSortOrdinal_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSortOrdinal != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSortOrdinalClass = retObjectSortOrdinal.getClass();
+                    // java.lang.reflect.Method retObjectSortOrdinalMethod = retObjectSortOrdinalClass.getMethod("intValue");
+                    // return (int)retObjectSortOrdinalMethod.invoke(retObjectSortOrdinal);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSortOrdinalNumber = java.text.NumberFormat.getInstance().parse(retObjectSortOrdinal_ToString);
+                    return retObjectSortOrdinalNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSortOrdinalError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSortOrdinal != null ? retObjectSortOrdinal.getClass() : "null", retObjectSortOrdinal_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSortOrdinalError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1009,13 +1161,32 @@ public class SqlMetaData extends NetObject  {
             retObjectLocaleId = classInstance.Get("LocaleId");
             return (long)retObjectLocaleId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLocaleIdError = true;
             java.lang.String retObjectLocaleId_ToString = retObjectLocaleId == null ? "null" : retObjectLocaleId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLocaleIdNumber = (java.lang.Number)retObjectLocaleId;
-                return retObjectLocaleIdNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLocaleId != null ? retObjectLocaleId.getClass() : "null", retObjectLocaleId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLocaleId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLocaleIdClass = retObjectLocaleId.getClass();
+                    // java.lang.reflect.Method retObjectLocaleIdMethod = retObjectLocaleIdClass.getMethod("longValue");
+                    // return (long)retObjectLocaleIdMethod.invoke(retObjectLocaleId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLocaleIdNumber = java.text.NumberFormat.getInstance().parse(retObjectLocaleId_ToString);
+                    return retObjectLocaleIdNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLocaleIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLocaleId != null ? retObjectLocaleId.getClass() : "null", retObjectLocaleId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLocaleIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1030,13 +1201,32 @@ public class SqlMetaData extends NetObject  {
             retObjectMax = classType.Get("Max");
             return (long)retObjectMax;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxError = true;
             java.lang.String retObjectMax_ToString = retObjectMax == null ? "null" : retObjectMax.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxNumber = (java.lang.Number)retObjectMax;
-                return retObjectMaxNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMax != null ? retObjectMax.getClass() : "null", retObjectMax_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMax != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxClass = retObjectMax.getClass();
+                    // java.lang.reflect.Method retObjectMaxMethod = retObjectMaxClass.getMethod("longValue");
+                    // return (long)retObjectMaxMethod.invoke(retObjectMax);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxNumber = java.text.NumberFormat.getInstance().parse(retObjectMax_ToString);
+                    return retObjectMaxNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMax != null ? retObjectMax.getClass() : "null", retObjectMax_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1051,13 +1241,32 @@ public class SqlMetaData extends NetObject  {
             retObjectMaxLength = classInstance.Get("MaxLength");
             return (long)retObjectMaxLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxLengthError = true;
             java.lang.String retObjectMaxLength_ToString = retObjectMaxLength == null ? "null" : retObjectMaxLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxLengthNumber = (java.lang.Number)retObjectMaxLength;
-                return retObjectMaxLengthNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxLengthClass = retObjectMaxLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxLengthMethod = retObjectMaxLengthClass.getMethod("longValue");
+                    // return (long)retObjectMaxLengthMethod.invoke(retObjectMaxLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxLength_ToString);
+                    return retObjectMaxLengthNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null", retObjectMaxLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

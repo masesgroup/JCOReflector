@@ -168,13 +168,32 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
             retObjectCipherStrength = classInstance.Get("CipherStrength");
             return (int)retObjectCipherStrength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCipherStrengthError = true;
             java.lang.String retObjectCipherStrength_ToString = retObjectCipherStrength == null ? "null" : retObjectCipherStrength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCipherStrengthNumber = (java.lang.Number)retObjectCipherStrength;
-                return retObjectCipherStrengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCipherStrength != null ? retObjectCipherStrength.getClass() : "null", retObjectCipherStrength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCipherStrength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCipherStrengthClass = retObjectCipherStrength.getClass();
+                    // java.lang.reflect.Method retObjectCipherStrengthMethod = retObjectCipherStrengthClass.getMethod("intValue");
+                    // return (int)retObjectCipherStrengthMethod.invoke(retObjectCipherStrength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCipherStrengthNumber = java.text.NumberFormat.getInstance().parse(retObjectCipherStrength_ToString);
+                    return retObjectCipherStrengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCipherStrengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCipherStrength != null ? retObjectCipherStrength.getClass() : "null", retObjectCipherStrength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCipherStrengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,13 +208,32 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
             retObjectExchangeStrength = classInstance.Get("ExchangeStrength");
             return (int)retObjectExchangeStrength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportExchangeStrengthError = true;
             java.lang.String retObjectExchangeStrength_ToString = retObjectExchangeStrength == null ? "null" : retObjectExchangeStrength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectExchangeStrengthNumber = (java.lang.Number)retObjectExchangeStrength;
-                return retObjectExchangeStrengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExchangeStrength != null ? retObjectExchangeStrength.getClass() : "null", retObjectExchangeStrength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectExchangeStrength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectExchangeStrengthClass = retObjectExchangeStrength.getClass();
+                    // java.lang.reflect.Method retObjectExchangeStrengthMethod = retObjectExchangeStrengthClass.getMethod("intValue");
+                    // return (int)retObjectExchangeStrengthMethod.invoke(retObjectExchangeStrength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectExchangeStrengthNumber = java.text.NumberFormat.getInstance().parse(retObjectExchangeStrength_ToString);
+                    return retObjectExchangeStrengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportExchangeStrengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectExchangeStrength != null ? retObjectExchangeStrength.getClass() : "null", retObjectExchangeStrength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportExchangeStrengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -210,13 +248,32 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
             retObjectHashStrength = classInstance.Get("HashStrength");
             return (int)retObjectHashStrength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportHashStrengthError = true;
             java.lang.String retObjectHashStrength_ToString = retObjectHashStrength == null ? "null" : retObjectHashStrength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectHashStrengthNumber = (java.lang.Number)retObjectHashStrength;
-                return retObjectHashStrengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHashStrength != null ? retObjectHashStrength.getClass() : "null", retObjectHashStrength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectHashStrength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectHashStrengthClass = retObjectHashStrength.getClass();
+                    // java.lang.reflect.Method retObjectHashStrengthMethod = retObjectHashStrengthClass.getMethod("intValue");
+                    // return (int)retObjectHashStrengthMethod.invoke(retObjectHashStrength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectHashStrengthNumber = java.text.NumberFormat.getInstance().parse(retObjectHashStrength_ToString);
+                    return retObjectHashStrengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportHashStrengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectHashStrength != null ? retObjectHashStrength.getClass() : "null", retObjectHashStrength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportHashStrengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,13 +288,32 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
             retObjectKeyExchangeAlgorithm = classInstance.Get("KeyExchangeAlgorithm");
             return (int)retObjectKeyExchangeAlgorithm;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportKeyExchangeAlgorithmError = true;
             java.lang.String retObjectKeyExchangeAlgorithm_ToString = retObjectKeyExchangeAlgorithm == null ? "null" : retObjectKeyExchangeAlgorithm.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectKeyExchangeAlgorithmNumber = (java.lang.Number)retObjectKeyExchangeAlgorithm;
-                return retObjectKeyExchangeAlgorithmNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeyExchangeAlgorithm != null ? retObjectKeyExchangeAlgorithm.getClass() : "null", retObjectKeyExchangeAlgorithm_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectKeyExchangeAlgorithm != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectKeyExchangeAlgorithmClass = retObjectKeyExchangeAlgorithm.getClass();
+                    // java.lang.reflect.Method retObjectKeyExchangeAlgorithmMethod = retObjectKeyExchangeAlgorithmClass.getMethod("intValue");
+                    // return (int)retObjectKeyExchangeAlgorithmMethod.invoke(retObjectKeyExchangeAlgorithm);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectKeyExchangeAlgorithmNumber = java.text.NumberFormat.getInstance().parse(retObjectKeyExchangeAlgorithm_ToString);
+                    return retObjectKeyExchangeAlgorithmNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportKeyExchangeAlgorithmError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectKeyExchangeAlgorithm != null ? retObjectKeyExchangeAlgorithm.getClass() : "null", retObjectKeyExchangeAlgorithm_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportKeyExchangeAlgorithmError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -249,13 +249,32 @@ public class ClockController extends DispatcherObject  {
             retObjectSpeedRatio = classInstance.Get("SpeedRatio");
             return (double)retObjectSpeedRatio;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSpeedRatioError = true;
             java.lang.String retObjectSpeedRatio_ToString = retObjectSpeedRatio == null ? "null" : retObjectSpeedRatio.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSpeedRatioNumber = (java.lang.Number)retObjectSpeedRatio;
-                return retObjectSpeedRatioNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null", retObjectSpeedRatio_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSpeedRatio != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSpeedRatioClass = retObjectSpeedRatio.getClass();
+                    // java.lang.reflect.Method retObjectSpeedRatioMethod = retObjectSpeedRatioClass.getMethod("doubleValue");
+                    // return (double)retObjectSpeedRatioMethod.invoke(retObjectSpeedRatio);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSpeedRatioNumber = java.text.NumberFormat.getInstance().parse(retObjectSpeedRatio_ToString);
+                    return retObjectSpeedRatioNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSpeedRatioError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null", retObjectSpeedRatio_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSpeedRatioError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

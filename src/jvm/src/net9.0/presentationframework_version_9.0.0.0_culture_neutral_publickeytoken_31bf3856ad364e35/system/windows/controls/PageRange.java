@@ -201,13 +201,32 @@ public class PageRange extends ValueType  {
             retObjectPageFrom = classInstance.Get("PageFrom");
             return (int)retObjectPageFrom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPageFromError = true;
             java.lang.String retObjectPageFrom_ToString = retObjectPageFrom == null ? "null" : retObjectPageFrom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPageFromNumber = (java.lang.Number)retObjectPageFrom;
-                return retObjectPageFromNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageFrom != null ? retObjectPageFrom.getClass() : "null", retObjectPageFrom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPageFrom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPageFromClass = retObjectPageFrom.getClass();
+                    // java.lang.reflect.Method retObjectPageFromMethod = retObjectPageFromClass.getMethod("intValue");
+                    // return (int)retObjectPageFromMethod.invoke(retObjectPageFrom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPageFromNumber = java.text.NumberFormat.getInstance().parse(retObjectPageFrom_ToString);
+                    return retObjectPageFromNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPageFromError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPageFrom != null ? retObjectPageFrom.getClass() : "null", retObjectPageFrom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPageFromError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,13 +251,32 @@ public class PageRange extends ValueType  {
             retObjectPageTo = classInstance.Get("PageTo");
             return (int)retObjectPageTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPageToError = true;
             java.lang.String retObjectPageTo_ToString = retObjectPageTo == null ? "null" : retObjectPageTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPageToNumber = (java.lang.Number)retObjectPageTo;
-                return retObjectPageToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPageTo != null ? retObjectPageTo.getClass() : "null", retObjectPageTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPageTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPageToClass = retObjectPageTo.getClass();
+                    // java.lang.reflect.Method retObjectPageToMethod = retObjectPageToClass.getMethod("intValue");
+                    // return (int)retObjectPageToMethod.invoke(retObjectPageTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPageToNumber = java.text.NumberFormat.getInstance().parse(retObjectPageTo_ToString);
+                    return retObjectPageToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPageToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPageTo != null ? retObjectPageTo.getClass() : "null", retObjectPageTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPageToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

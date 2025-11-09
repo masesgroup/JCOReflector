@@ -205,13 +205,32 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
             retObjectSelectionCount = classInstance.Get("SelectionCount");
             return (int)retObjectSelectionCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSelectionCountError = true;
             java.lang.String retObjectSelectionCount_ToString = retObjectSelectionCount == null ? "null" : retObjectSelectionCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSelectionCountNumber = (java.lang.Number)retObjectSelectionCount;
-                return retObjectSelectionCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSelectionCount != null ? retObjectSelectionCount.getClass() : "null", retObjectSelectionCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSelectionCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSelectionCountClass = retObjectSelectionCount.getClass();
+                    // java.lang.reflect.Method retObjectSelectionCountMethod = retObjectSelectionCountClass.getMethod("intValue");
+                    // return (int)retObjectSelectionCountMethod.invoke(retObjectSelectionCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSelectionCountNumber = java.text.NumberFormat.getInstance().parse(retObjectSelectionCount_ToString);
+                    return retObjectSelectionCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSelectionCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSelectionCount != null ? retObjectSelectionCount.getClass() : "null", retObjectSelectionCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSelectionCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

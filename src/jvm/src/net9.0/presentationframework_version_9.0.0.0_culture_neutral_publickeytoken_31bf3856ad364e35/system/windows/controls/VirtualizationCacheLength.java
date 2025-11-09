@@ -201,13 +201,32 @@ public class VirtualizationCacheLength extends ValueType  {
             retObjectCacheAfterViewport = classInstance.Get("CacheAfterViewport");
             return (double)retObjectCacheAfterViewport;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCacheAfterViewportError = true;
             java.lang.String retObjectCacheAfterViewport_ToString = retObjectCacheAfterViewport == null ? "null" : retObjectCacheAfterViewport.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCacheAfterViewportNumber = (java.lang.Number)retObjectCacheAfterViewport;
-                return retObjectCacheAfterViewportNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCacheAfterViewport != null ? retObjectCacheAfterViewport.getClass() : "null", retObjectCacheAfterViewport_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCacheAfterViewport != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCacheAfterViewportClass = retObjectCacheAfterViewport.getClass();
+                    // java.lang.reflect.Method retObjectCacheAfterViewportMethod = retObjectCacheAfterViewportClass.getMethod("doubleValue");
+                    // return (double)retObjectCacheAfterViewportMethod.invoke(retObjectCacheAfterViewport);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCacheAfterViewportNumber = java.text.NumberFormat.getInstance().parse(retObjectCacheAfterViewport_ToString);
+                    return retObjectCacheAfterViewportNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCacheAfterViewportError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCacheAfterViewport != null ? retObjectCacheAfterViewport.getClass() : "null", retObjectCacheAfterViewport_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCacheAfterViewportError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,13 +241,32 @@ public class VirtualizationCacheLength extends ValueType  {
             retObjectCacheBeforeViewport = classInstance.Get("CacheBeforeViewport");
             return (double)retObjectCacheBeforeViewport;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCacheBeforeViewportError = true;
             java.lang.String retObjectCacheBeforeViewport_ToString = retObjectCacheBeforeViewport == null ? "null" : retObjectCacheBeforeViewport.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCacheBeforeViewportNumber = (java.lang.Number)retObjectCacheBeforeViewport;
-                return retObjectCacheBeforeViewportNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCacheBeforeViewport != null ? retObjectCacheBeforeViewport.getClass() : "null", retObjectCacheBeforeViewport_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCacheBeforeViewport != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCacheBeforeViewportClass = retObjectCacheBeforeViewport.getClass();
+                    // java.lang.reflect.Method retObjectCacheBeforeViewportMethod = retObjectCacheBeforeViewportClass.getMethod("doubleValue");
+                    // return (double)retObjectCacheBeforeViewportMethod.invoke(retObjectCacheBeforeViewport);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCacheBeforeViewportNumber = java.text.NumberFormat.getInstance().parse(retObjectCacheBeforeViewport_ToString);
+                    return retObjectCacheBeforeViewportNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCacheBeforeViewportError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCacheBeforeViewport != null ? retObjectCacheBeforeViewport.getClass() : "null", retObjectCacheBeforeViewport_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCacheBeforeViewportError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

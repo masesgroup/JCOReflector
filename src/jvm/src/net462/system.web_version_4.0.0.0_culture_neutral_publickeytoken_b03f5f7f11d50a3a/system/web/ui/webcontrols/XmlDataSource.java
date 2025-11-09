@@ -257,13 +257,32 @@ public class XmlDataSource extends HierarchicalDataSourceControl  {
             retObjectCacheDuration = classInstance.Get("CacheDuration");
             return (int)retObjectCacheDuration;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCacheDurationError = true;
             java.lang.String retObjectCacheDuration_ToString = retObjectCacheDuration == null ? "null" : retObjectCacheDuration.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCacheDurationNumber = (java.lang.Number)retObjectCacheDuration;
-                return retObjectCacheDurationNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCacheDuration != null ? retObjectCacheDuration.getClass() : "null", retObjectCacheDuration_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCacheDuration != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCacheDurationClass = retObjectCacheDuration.getClass();
+                    // java.lang.reflect.Method retObjectCacheDurationMethod = retObjectCacheDurationClass.getMethod("intValue");
+                    // return (int)retObjectCacheDurationMethod.invoke(retObjectCacheDuration);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCacheDurationNumber = java.text.NumberFormat.getInstance().parse(retObjectCacheDuration_ToString);
+                    return retObjectCacheDurationNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCacheDurationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCacheDuration != null ? retObjectCacheDuration.getClass() : "null", retObjectCacheDuration_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCacheDurationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

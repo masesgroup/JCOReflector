@@ -190,13 +190,32 @@ public class VlvResponseControl extends DirectoryControl  {
             retObjectContentCount = classInstance.Get("ContentCount");
             return (int)retObjectContentCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportContentCountError = true;
             java.lang.String retObjectContentCount_ToString = retObjectContentCount == null ? "null" : retObjectContentCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectContentCountNumber = (java.lang.Number)retObjectContentCount;
-                return retObjectContentCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectContentCount != null ? retObjectContentCount.getClass() : "null", retObjectContentCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectContentCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectContentCountClass = retObjectContentCount.getClass();
+                    // java.lang.reflect.Method retObjectContentCountMethod = retObjectContentCountClass.getMethod("intValue");
+                    // return (int)retObjectContentCountMethod.invoke(retObjectContentCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectContentCountNumber = java.text.NumberFormat.getInstance().parse(retObjectContentCount_ToString);
+                    return retObjectContentCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportContentCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectContentCount != null ? retObjectContentCount.getClass() : "null", retObjectContentCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportContentCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,13 +230,32 @@ public class VlvResponseControl extends DirectoryControl  {
             retObjectTargetPosition = classInstance.Get("TargetPosition");
             return (int)retObjectTargetPosition;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTargetPositionError = true;
             java.lang.String retObjectTargetPosition_ToString = retObjectTargetPosition == null ? "null" : retObjectTargetPosition.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTargetPositionNumber = (java.lang.Number)retObjectTargetPosition;
-                return retObjectTargetPositionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTargetPosition != null ? retObjectTargetPosition.getClass() : "null", retObjectTargetPosition_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTargetPosition != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTargetPositionClass = retObjectTargetPosition.getClass();
+                    // java.lang.reflect.Method retObjectTargetPositionMethod = retObjectTargetPositionClass.getMethod("intValue");
+                    // return (int)retObjectTargetPositionMethod.invoke(retObjectTargetPosition);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTargetPositionNumber = java.text.NumberFormat.getInstance().parse(retObjectTargetPosition_ToString);
+                    return retObjectTargetPositionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTargetPositionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTargetPosition != null ? retObjectTargetPosition.getClass() : "null", retObjectTargetPosition_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTargetPositionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

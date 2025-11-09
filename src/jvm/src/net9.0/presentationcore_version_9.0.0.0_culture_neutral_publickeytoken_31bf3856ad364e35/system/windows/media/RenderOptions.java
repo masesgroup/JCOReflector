@@ -165,13 +165,32 @@ public class RenderOptions extends NetObject  {
             retObjectGetCacheInvalidationThresholdMaximum = classType.Invoke("GetCacheInvalidationThresholdMaximum", target == null ? null : target.getJCOInstance());
             return (double)retObjectGetCacheInvalidationThresholdMaximum;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCacheInvalidationThresholdMaximumError = true;
             java.lang.String retObjectGetCacheInvalidationThresholdMaximum_ToString = retObjectGetCacheInvalidationThresholdMaximum == null ? "null" : retObjectGetCacheInvalidationThresholdMaximum.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCacheInvalidationThresholdMaximumNumber = (java.lang.Number)retObjectGetCacheInvalidationThresholdMaximum;
-                return retObjectGetCacheInvalidationThresholdMaximumNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetCacheInvalidationThresholdMaximum != null ? retObjectGetCacheInvalidationThresholdMaximum.getClass() : "null", retObjectGetCacheInvalidationThresholdMaximum_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCacheInvalidationThresholdMaximum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCacheInvalidationThresholdMaximumClass = retObjectGetCacheInvalidationThresholdMaximum.getClass();
+                    // java.lang.reflect.Method retObjectGetCacheInvalidationThresholdMaximumMethod = retObjectGetCacheInvalidationThresholdMaximumClass.getMethod("doubleValue");
+                    // return (double)retObjectGetCacheInvalidationThresholdMaximumMethod.invoke(retObjectGetCacheInvalidationThresholdMaximum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCacheInvalidationThresholdMaximumNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCacheInvalidationThresholdMaximum_ToString);
+                    return retObjectGetCacheInvalidationThresholdMaximumNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCacheInvalidationThresholdMaximumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCacheInvalidationThresholdMaximum != null ? retObjectGetCacheInvalidationThresholdMaximum.getClass() : "null", retObjectGetCacheInvalidationThresholdMaximum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCacheInvalidationThresholdMaximumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,13 +205,32 @@ public class RenderOptions extends NetObject  {
             retObjectGetCacheInvalidationThresholdMinimum = classType.Invoke("GetCacheInvalidationThresholdMinimum", target == null ? null : target.getJCOInstance());
             return (double)retObjectGetCacheInvalidationThresholdMinimum;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCacheInvalidationThresholdMinimumError = true;
             java.lang.String retObjectGetCacheInvalidationThresholdMinimum_ToString = retObjectGetCacheInvalidationThresholdMinimum == null ? "null" : retObjectGetCacheInvalidationThresholdMinimum.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCacheInvalidationThresholdMinimumNumber = (java.lang.Number)retObjectGetCacheInvalidationThresholdMinimum;
-                return retObjectGetCacheInvalidationThresholdMinimumNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetCacheInvalidationThresholdMinimum != null ? retObjectGetCacheInvalidationThresholdMinimum.getClass() : "null", retObjectGetCacheInvalidationThresholdMinimum_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCacheInvalidationThresholdMinimum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCacheInvalidationThresholdMinimumClass = retObjectGetCacheInvalidationThresholdMinimum.getClass();
+                    // java.lang.reflect.Method retObjectGetCacheInvalidationThresholdMinimumMethod = retObjectGetCacheInvalidationThresholdMinimumClass.getMethod("doubleValue");
+                    // return (double)retObjectGetCacheInvalidationThresholdMinimumMethod.invoke(retObjectGetCacheInvalidationThresholdMinimum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCacheInvalidationThresholdMinimumNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCacheInvalidationThresholdMinimum_ToString);
+                    return retObjectGetCacheInvalidationThresholdMinimumNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCacheInvalidationThresholdMinimumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCacheInvalidationThresholdMinimum != null ? retObjectGetCacheInvalidationThresholdMinimum.getClass() : "null", retObjectGetCacheInvalidationThresholdMinimum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCacheInvalidationThresholdMinimumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

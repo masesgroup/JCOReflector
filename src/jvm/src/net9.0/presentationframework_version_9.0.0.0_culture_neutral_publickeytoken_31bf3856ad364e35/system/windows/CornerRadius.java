@@ -201,13 +201,32 @@ public class CornerRadius extends ValueType  {
             retObjectBottomLeft = classInstance.Get("BottomLeft");
             return (double)retObjectBottomLeft;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBottomLeftError = true;
             java.lang.String retObjectBottomLeft_ToString = retObjectBottomLeft == null ? "null" : retObjectBottomLeft.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBottomLeftNumber = (java.lang.Number)retObjectBottomLeft;
-                return retObjectBottomLeftNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBottomLeft != null ? retObjectBottomLeft.getClass() : "null", retObjectBottomLeft_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBottomLeft != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBottomLeftClass = retObjectBottomLeft.getClass();
+                    // java.lang.reflect.Method retObjectBottomLeftMethod = retObjectBottomLeftClass.getMethod("doubleValue");
+                    // return (double)retObjectBottomLeftMethod.invoke(retObjectBottomLeft);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBottomLeftNumber = java.text.NumberFormat.getInstance().parse(retObjectBottomLeft_ToString);
+                    return retObjectBottomLeftNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBottomLeftError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBottomLeft != null ? retObjectBottomLeft.getClass() : "null", retObjectBottomLeft_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBottomLeftError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,13 +251,32 @@ public class CornerRadius extends ValueType  {
             retObjectBottomRight = classInstance.Get("BottomRight");
             return (double)retObjectBottomRight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBottomRightError = true;
             java.lang.String retObjectBottomRight_ToString = retObjectBottomRight == null ? "null" : retObjectBottomRight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBottomRightNumber = (java.lang.Number)retObjectBottomRight;
-                return retObjectBottomRightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBottomRight != null ? retObjectBottomRight.getClass() : "null", retObjectBottomRight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBottomRight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBottomRightClass = retObjectBottomRight.getClass();
+                    // java.lang.reflect.Method retObjectBottomRightMethod = retObjectBottomRightClass.getMethod("doubleValue");
+                    // return (double)retObjectBottomRightMethod.invoke(retObjectBottomRight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBottomRightNumber = java.text.NumberFormat.getInstance().parse(retObjectBottomRight_ToString);
+                    return retObjectBottomRightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBottomRightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBottomRight != null ? retObjectBottomRight.getClass() : "null", retObjectBottomRight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBottomRightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -263,13 +301,32 @@ public class CornerRadius extends ValueType  {
             retObjectTopLeft = classInstance.Get("TopLeft");
             return (double)retObjectTopLeft;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTopLeftError = true;
             java.lang.String retObjectTopLeft_ToString = retObjectTopLeft == null ? "null" : retObjectTopLeft.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTopLeftNumber = (java.lang.Number)retObjectTopLeft;
-                return retObjectTopLeftNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTopLeft != null ? retObjectTopLeft.getClass() : "null", retObjectTopLeft_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTopLeft != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTopLeftClass = retObjectTopLeft.getClass();
+                    // java.lang.reflect.Method retObjectTopLeftMethod = retObjectTopLeftClass.getMethod("doubleValue");
+                    // return (double)retObjectTopLeftMethod.invoke(retObjectTopLeft);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTopLeftNumber = java.text.NumberFormat.getInstance().parse(retObjectTopLeft_ToString);
+                    return retObjectTopLeftNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTopLeftError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTopLeft != null ? retObjectTopLeft.getClass() : "null", retObjectTopLeft_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTopLeftError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -294,13 +351,32 @@ public class CornerRadius extends ValueType  {
             retObjectTopRight = classInstance.Get("TopRight");
             return (double)retObjectTopRight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTopRightError = true;
             java.lang.String retObjectTopRight_ToString = retObjectTopRight == null ? "null" : retObjectTopRight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTopRightNumber = (java.lang.Number)retObjectTopRight;
-                return retObjectTopRightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTopRight != null ? retObjectTopRight.getClass() : "null", retObjectTopRight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTopRight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTopRightClass = retObjectTopRight.getClass();
+                    // java.lang.reflect.Method retObjectTopRightMethod = retObjectTopRightClass.getMethod("doubleValue");
+                    // return (double)retObjectTopRightMethod.invoke(retObjectTopRight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTopRightNumber = java.text.NumberFormat.getInstance().parse(retObjectTopRight_ToString);
+                    return retObjectTopRightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTopRightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTopRight != null ? retObjectTopRight.getClass() : "null", retObjectTopRight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTopRightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

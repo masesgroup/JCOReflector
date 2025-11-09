@@ -598,13 +598,32 @@ public class XmlTextWriter extends XmlWriter  {
             retObjectIndentation = classInstance.Get("Indentation");
             return (int)retObjectIndentation;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIndentationError = true;
             java.lang.String retObjectIndentation_ToString = retObjectIndentation == null ? "null" : retObjectIndentation.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIndentationNumber = (java.lang.Number)retObjectIndentation;
-                return retObjectIndentationNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIndentation != null ? retObjectIndentation.getClass() : "null", retObjectIndentation_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndentation != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndentationClass = retObjectIndentation.getClass();
+                    // java.lang.reflect.Method retObjectIndentationMethod = retObjectIndentationClass.getMethod("intValue");
+                    // return (int)retObjectIndentationMethod.invoke(retObjectIndentation);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndentationNumber = java.text.NumberFormat.getInstance().parse(retObjectIndentation_ToString);
+                    return retObjectIndentationNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndentationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndentation != null ? retObjectIndentation.getClass() : "null", retObjectIndentation_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndentationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

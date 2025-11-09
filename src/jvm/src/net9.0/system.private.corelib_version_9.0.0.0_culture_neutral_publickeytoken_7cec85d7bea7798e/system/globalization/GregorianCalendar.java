@@ -224,13 +224,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetDayOfMonth = classInstance.Invoke("GetDayOfMonth", time == null ? null : time.getJCOInstance());
             return (int)retObjectGetDayOfMonth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDayOfMonthError = true;
             java.lang.String retObjectGetDayOfMonth_ToString = retObjectGetDayOfMonth == null ? "null" : retObjectGetDayOfMonth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDayOfMonthNumber = (java.lang.Number)retObjectGetDayOfMonth;
-                return retObjectGetDayOfMonthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDayOfMonth != null ? retObjectGetDayOfMonth.getClass() : "null", retObjectGetDayOfMonth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDayOfMonth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDayOfMonthClass = retObjectGetDayOfMonth.getClass();
+                    // java.lang.reflect.Method retObjectGetDayOfMonthMethod = retObjectGetDayOfMonthClass.getMethod("intValue");
+                    // return (int)retObjectGetDayOfMonthMethod.invoke(retObjectGetDayOfMonth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDayOfMonthNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDayOfMonth_ToString);
+                    return retObjectGetDayOfMonthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDayOfMonthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDayOfMonth != null ? retObjectGetDayOfMonth.getClass() : "null", retObjectGetDayOfMonth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDayOfMonthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,13 +264,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetDayOfYear = classInstance.Invoke("GetDayOfYear", time == null ? null : time.getJCOInstance());
             return (int)retObjectGetDayOfYear;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDayOfYearError = true;
             java.lang.String retObjectGetDayOfYear_ToString = retObjectGetDayOfYear == null ? "null" : retObjectGetDayOfYear.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDayOfYearNumber = (java.lang.Number)retObjectGetDayOfYear;
-                return retObjectGetDayOfYearNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDayOfYear != null ? retObjectGetDayOfYear.getClass() : "null", retObjectGetDayOfYear_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDayOfYear != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDayOfYearClass = retObjectGetDayOfYear.getClass();
+                    // java.lang.reflect.Method retObjectGetDayOfYearMethod = retObjectGetDayOfYearClass.getMethod("intValue");
+                    // return (int)retObjectGetDayOfYearMethod.invoke(retObjectGetDayOfYear);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDayOfYearNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDayOfYear_ToString);
+                    return retObjectGetDayOfYearNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDayOfYearError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDayOfYear != null ? retObjectGetDayOfYear.getClass() : "null", retObjectGetDayOfYear_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDayOfYearError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,13 +304,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetDaysInMonth = classInstance.Invoke("GetDaysInMonth", year, month, era);
             return (int)retObjectGetDaysInMonth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDaysInMonthError = true;
             java.lang.String retObjectGetDaysInMonth_ToString = retObjectGetDaysInMonth == null ? "null" : retObjectGetDaysInMonth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDaysInMonthNumber = (java.lang.Number)retObjectGetDaysInMonth;
-                return retObjectGetDaysInMonthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDaysInMonth != null ? retObjectGetDaysInMonth.getClass() : "null", retObjectGetDaysInMonth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDaysInMonth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDaysInMonthClass = retObjectGetDaysInMonth.getClass();
+                    // java.lang.reflect.Method retObjectGetDaysInMonthMethod = retObjectGetDaysInMonthClass.getMethod("intValue");
+                    // return (int)retObjectGetDaysInMonthMethod.invoke(retObjectGetDaysInMonth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDaysInMonthNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDaysInMonth_ToString);
+                    return retObjectGetDaysInMonthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDaysInMonthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDaysInMonth != null ? retObjectGetDaysInMonth.getClass() : "null", retObjectGetDaysInMonth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDaysInMonthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -287,13 +344,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetDaysInYear = classInstance.Invoke("GetDaysInYear", year, era);
             return (int)retObjectGetDaysInYear;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDaysInYearError = true;
             java.lang.String retObjectGetDaysInYear_ToString = retObjectGetDaysInYear == null ? "null" : retObjectGetDaysInYear.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDaysInYearNumber = (java.lang.Number)retObjectGetDaysInYear;
-                return retObjectGetDaysInYearNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDaysInYear != null ? retObjectGetDaysInYear.getClass() : "null", retObjectGetDaysInYear_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDaysInYear != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDaysInYearClass = retObjectGetDaysInYear.getClass();
+                    // java.lang.reflect.Method retObjectGetDaysInYearMethod = retObjectGetDaysInYearClass.getMethod("intValue");
+                    // return (int)retObjectGetDaysInYearMethod.invoke(retObjectGetDaysInYear);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDaysInYearNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDaysInYear_ToString);
+                    return retObjectGetDaysInYearNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDaysInYearError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDaysInYear != null ? retObjectGetDaysInYear.getClass() : "null", retObjectGetDaysInYear_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDaysInYearError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,13 +384,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetEra = classInstance.Invoke("GetEra", time == null ? null : time.getJCOInstance());
             return (int)retObjectGetEra;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetEraError = true;
             java.lang.String retObjectGetEra_ToString = retObjectGetEra == null ? "null" : retObjectGetEra.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetEraNumber = (java.lang.Number)retObjectGetEra;
-                return retObjectGetEraNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEra != null ? retObjectGetEra.getClass() : "null", retObjectGetEra_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetEra != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetEraClass = retObjectGetEra.getClass();
+                    // java.lang.reflect.Method retObjectGetEraMethod = retObjectGetEraClass.getMethod("intValue");
+                    // return (int)retObjectGetEraMethod.invoke(retObjectGetEra);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetEraNumber = java.text.NumberFormat.getInstance().parse(retObjectGetEra_ToString);
+                    return retObjectGetEraNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetEraError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetEra != null ? retObjectGetEra.getClass() : "null", retObjectGetEra_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetEraError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -329,13 +424,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetLeapMonth = classInstance.Invoke("GetLeapMonth", year, era);
             return (int)retObjectGetLeapMonth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetLeapMonthError = true;
             java.lang.String retObjectGetLeapMonth_ToString = retObjectGetLeapMonth == null ? "null" : retObjectGetLeapMonth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetLeapMonthNumber = (java.lang.Number)retObjectGetLeapMonth;
-                return retObjectGetLeapMonthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLeapMonth != null ? retObjectGetLeapMonth.getClass() : "null", retObjectGetLeapMonth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetLeapMonth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetLeapMonthClass = retObjectGetLeapMonth.getClass();
+                    // java.lang.reflect.Method retObjectGetLeapMonthMethod = retObjectGetLeapMonthClass.getMethod("intValue");
+                    // return (int)retObjectGetLeapMonthMethod.invoke(retObjectGetLeapMonth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetLeapMonthNumber = java.text.NumberFormat.getInstance().parse(retObjectGetLeapMonth_ToString);
+                    return retObjectGetLeapMonthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetLeapMonthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetLeapMonth != null ? retObjectGetLeapMonth.getClass() : "null", retObjectGetLeapMonth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetLeapMonthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -350,13 +464,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetMonth = classInstance.Invoke("GetMonth", time == null ? null : time.getJCOInstance());
             return (int)retObjectGetMonth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetMonthError = true;
             java.lang.String retObjectGetMonth_ToString = retObjectGetMonth == null ? "null" : retObjectGetMonth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetMonthNumber = (java.lang.Number)retObjectGetMonth;
-                return retObjectGetMonthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMonth != null ? retObjectGetMonth.getClass() : "null", retObjectGetMonth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetMonth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetMonthClass = retObjectGetMonth.getClass();
+                    // java.lang.reflect.Method retObjectGetMonthMethod = retObjectGetMonthClass.getMethod("intValue");
+                    // return (int)retObjectGetMonthMethod.invoke(retObjectGetMonth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetMonthNumber = java.text.NumberFormat.getInstance().parse(retObjectGetMonth_ToString);
+                    return retObjectGetMonthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetMonthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetMonth != null ? retObjectGetMonth.getClass() : "null", retObjectGetMonth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetMonthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -371,13 +504,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetMonthsInYear = classInstance.Invoke("GetMonthsInYear", year, era);
             return (int)retObjectGetMonthsInYear;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetMonthsInYearError = true;
             java.lang.String retObjectGetMonthsInYear_ToString = retObjectGetMonthsInYear == null ? "null" : retObjectGetMonthsInYear.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetMonthsInYearNumber = (java.lang.Number)retObjectGetMonthsInYear;
-                return retObjectGetMonthsInYearNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMonthsInYear != null ? retObjectGetMonthsInYear.getClass() : "null", retObjectGetMonthsInYear_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetMonthsInYear != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetMonthsInYearClass = retObjectGetMonthsInYear.getClass();
+                    // java.lang.reflect.Method retObjectGetMonthsInYearMethod = retObjectGetMonthsInYearClass.getMethod("intValue");
+                    // return (int)retObjectGetMonthsInYearMethod.invoke(retObjectGetMonthsInYear);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetMonthsInYearNumber = java.text.NumberFormat.getInstance().parse(retObjectGetMonthsInYear_ToString);
+                    return retObjectGetMonthsInYearNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetMonthsInYearError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetMonthsInYear != null ? retObjectGetMonthsInYear.getClass() : "null", retObjectGetMonthsInYear_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetMonthsInYearError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -392,13 +544,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectGetYear = classInstance.Invoke("GetYear", time == null ? null : time.getJCOInstance());
             return (int)retObjectGetYear;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetYearError = true;
             java.lang.String retObjectGetYear_ToString = retObjectGetYear == null ? "null" : retObjectGetYear.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetYearNumber = (java.lang.Number)retObjectGetYear;
-                return retObjectGetYearNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetYear != null ? retObjectGetYear.getClass() : "null", retObjectGetYear_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetYear != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetYearClass = retObjectGetYear.getClass();
+                    // java.lang.reflect.Method retObjectGetYearMethod = retObjectGetYearClass.getMethod("intValue");
+                    // return (int)retObjectGetYearMethod.invoke(retObjectGetYear);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetYearNumber = java.text.NumberFormat.getInstance().parse(retObjectGetYear_ToString);
+                    return retObjectGetYearNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetYearError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetYear != null ? retObjectGetYear.getClass() : "null", retObjectGetYear_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetYearError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -413,13 +584,32 @@ public class GregorianCalendar extends Calendar  {
             retObjectToFourDigitYear = classInstance.Invoke("ToFourDigitYear", year);
             return (int)retObjectToFourDigitYear;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportToFourDigitYearError = true;
             java.lang.String retObjectToFourDigitYear_ToString = retObjectToFourDigitYear == null ? "null" : retObjectToFourDigitYear.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectToFourDigitYearNumber = (java.lang.Number)retObjectToFourDigitYear;
-                return retObjectToFourDigitYearNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToFourDigitYear != null ? retObjectToFourDigitYear.getClass() : "null", retObjectToFourDigitYear_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectToFourDigitYear != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectToFourDigitYearClass = retObjectToFourDigitYear.getClass();
+                    // java.lang.reflect.Method retObjectToFourDigitYearMethod = retObjectToFourDigitYearClass.getMethod("intValue");
+                    // return (int)retObjectToFourDigitYearMethod.invoke(retObjectToFourDigitYear);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectToFourDigitYearNumber = java.text.NumberFormat.getInstance().parse(retObjectToFourDigitYear_ToString);
+                    return retObjectToFourDigitYearNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportToFourDigitYearError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectToFourDigitYear != null ? retObjectToFourDigitYear.getClass() : "null", retObjectToFourDigitYear_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportToFourDigitYearError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -172,13 +172,32 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxArrayLength = classInstance.Get("MaxArrayLength");
             return (int)retObjectMaxArrayLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxArrayLengthError = true;
             java.lang.String retObjectMaxArrayLength_ToString = retObjectMaxArrayLength == null ? "null" : retObjectMaxArrayLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxArrayLengthNumber = (java.lang.Number)retObjectMaxArrayLength;
-                return retObjectMaxArrayLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxArrayLength != null ? retObjectMaxArrayLength.getClass() : "null", retObjectMaxArrayLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxArrayLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxArrayLengthClass = retObjectMaxArrayLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxArrayLengthMethod = retObjectMaxArrayLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaxArrayLengthMethod.invoke(retObjectMaxArrayLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxArrayLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxArrayLength_ToString);
+                    return retObjectMaxArrayLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxArrayLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxArrayLength != null ? retObjectMaxArrayLength.getClass() : "null", retObjectMaxArrayLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxArrayLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,13 +222,32 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxBytesPerRead = classInstance.Get("MaxBytesPerRead");
             return (int)retObjectMaxBytesPerRead;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBytesPerReadError = true;
             java.lang.String retObjectMaxBytesPerRead_ToString = retObjectMaxBytesPerRead == null ? "null" : retObjectMaxBytesPerRead.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBytesPerReadNumber = (java.lang.Number)retObjectMaxBytesPerRead;
-                return retObjectMaxBytesPerReadNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBytesPerRead != null ? retObjectMaxBytesPerRead.getClass() : "null", retObjectMaxBytesPerRead_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBytesPerRead != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBytesPerReadClass = retObjectMaxBytesPerRead.getClass();
+                    // java.lang.reflect.Method retObjectMaxBytesPerReadMethod = retObjectMaxBytesPerReadClass.getMethod("intValue");
+                    // return (int)retObjectMaxBytesPerReadMethod.invoke(retObjectMaxBytesPerRead);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBytesPerReadNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBytesPerRead_ToString);
+                    return retObjectMaxBytesPerReadNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBytesPerReadError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBytesPerRead != null ? retObjectMaxBytesPerRead.getClass() : "null", retObjectMaxBytesPerRead_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBytesPerReadError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,13 +272,32 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxDepth = classInstance.Get("MaxDepth");
             return (int)retObjectMaxDepth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxDepthError = true;
             java.lang.String retObjectMaxDepth_ToString = retObjectMaxDepth == null ? "null" : retObjectMaxDepth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxDepthNumber = (java.lang.Number)retObjectMaxDepth;
-                return retObjectMaxDepthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null", retObjectMaxDepth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxDepth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxDepthClass = retObjectMaxDepth.getClass();
+                    // java.lang.reflect.Method retObjectMaxDepthMethod = retObjectMaxDepthClass.getMethod("intValue");
+                    // return (int)retObjectMaxDepthMethod.invoke(retObjectMaxDepth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxDepthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxDepth_ToString);
+                    return retObjectMaxDepthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxDepthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxDepth != null ? retObjectMaxDepth.getClass() : "null", retObjectMaxDepth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxDepthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,13 +322,32 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxNameTableCharCount = classInstance.Get("MaxNameTableCharCount");
             return (int)retObjectMaxNameTableCharCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxNameTableCharCountError = true;
             java.lang.String retObjectMaxNameTableCharCount_ToString = retObjectMaxNameTableCharCount == null ? "null" : retObjectMaxNameTableCharCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxNameTableCharCountNumber = (java.lang.Number)retObjectMaxNameTableCharCount;
-                return retObjectMaxNameTableCharCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxNameTableCharCount != null ? retObjectMaxNameTableCharCount.getClass() : "null", retObjectMaxNameTableCharCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxNameTableCharCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxNameTableCharCountClass = retObjectMaxNameTableCharCount.getClass();
+                    // java.lang.reflect.Method retObjectMaxNameTableCharCountMethod = retObjectMaxNameTableCharCountClass.getMethod("intValue");
+                    // return (int)retObjectMaxNameTableCharCountMethod.invoke(retObjectMaxNameTableCharCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxNameTableCharCountNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxNameTableCharCount_ToString);
+                    return retObjectMaxNameTableCharCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxNameTableCharCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxNameTableCharCount != null ? retObjectMaxNameTableCharCount.getClass() : "null", retObjectMaxNameTableCharCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxNameTableCharCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -296,13 +372,32 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             retObjectMaxStringContentLength = classInstance.Get("MaxStringContentLength");
             return (int)retObjectMaxStringContentLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxStringContentLengthError = true;
             java.lang.String retObjectMaxStringContentLength_ToString = retObjectMaxStringContentLength == null ? "null" : retObjectMaxStringContentLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxStringContentLengthNumber = (java.lang.Number)retObjectMaxStringContentLength;
-                return retObjectMaxStringContentLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxStringContentLength != null ? retObjectMaxStringContentLength.getClass() : "null", retObjectMaxStringContentLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxStringContentLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxStringContentLengthClass = retObjectMaxStringContentLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxStringContentLengthMethod = retObjectMaxStringContentLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaxStringContentLengthMethod.invoke(retObjectMaxStringContentLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxStringContentLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxStringContentLength_ToString);
+                    return retObjectMaxStringContentLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxStringContentLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxStringContentLength != null ? retObjectMaxStringContentLength.getClass() : "null", retObjectMaxStringContentLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxStringContentLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

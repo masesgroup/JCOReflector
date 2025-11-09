@@ -197,13 +197,32 @@ public class MtomMessageEncodingElement extends BindingElementExtensionElement  
             retObjectMaxBufferSize = classInstance.Get("MaxBufferSize");
             return (int)retObjectMaxBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBufferSizeError = true;
             java.lang.String retObjectMaxBufferSize_ToString = retObjectMaxBufferSize == null ? "null" : retObjectMaxBufferSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBufferSizeNumber = (java.lang.Number)retObjectMaxBufferSize;
-                return retObjectMaxBufferSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null", retObjectMaxBufferSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBufferSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBufferSizeClass = retObjectMaxBufferSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxBufferSizeMethod = retObjectMaxBufferSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxBufferSizeMethod.invoke(retObjectMaxBufferSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBufferSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBufferSize_ToString);
+                    return retObjectMaxBufferSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBufferSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null", retObjectMaxBufferSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBufferSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,13 +247,32 @@ public class MtomMessageEncodingElement extends BindingElementExtensionElement  
             retObjectMaxReadPoolSize = classInstance.Get("MaxReadPoolSize");
             return (int)retObjectMaxReadPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxReadPoolSizeError = true;
             java.lang.String retObjectMaxReadPoolSize_ToString = retObjectMaxReadPoolSize == null ? "null" : retObjectMaxReadPoolSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxReadPoolSizeNumber = (java.lang.Number)retObjectMaxReadPoolSize;
-                return retObjectMaxReadPoolSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxReadPoolSize != null ? retObjectMaxReadPoolSize.getClass() : "null", retObjectMaxReadPoolSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxReadPoolSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxReadPoolSizeClass = retObjectMaxReadPoolSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxReadPoolSizeMethod = retObjectMaxReadPoolSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxReadPoolSizeMethod.invoke(retObjectMaxReadPoolSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxReadPoolSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxReadPoolSize_ToString);
+                    return retObjectMaxReadPoolSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxReadPoolSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxReadPoolSize != null ? retObjectMaxReadPoolSize.getClass() : "null", retObjectMaxReadPoolSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxReadPoolSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -259,13 +297,32 @@ public class MtomMessageEncodingElement extends BindingElementExtensionElement  
             retObjectMaxWritePoolSize = classInstance.Get("MaxWritePoolSize");
             return (int)retObjectMaxWritePoolSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxWritePoolSizeError = true;
             java.lang.String retObjectMaxWritePoolSize_ToString = retObjectMaxWritePoolSize == null ? "null" : retObjectMaxWritePoolSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxWritePoolSizeNumber = (java.lang.Number)retObjectMaxWritePoolSize;
-                return retObjectMaxWritePoolSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxWritePoolSize != null ? retObjectMaxWritePoolSize.getClass() : "null", retObjectMaxWritePoolSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxWritePoolSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxWritePoolSizeClass = retObjectMaxWritePoolSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxWritePoolSizeMethod = retObjectMaxWritePoolSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxWritePoolSizeMethod.invoke(retObjectMaxWritePoolSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxWritePoolSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxWritePoolSize_ToString);
+                    return retObjectMaxWritePoolSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxWritePoolSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxWritePoolSize != null ? retObjectMaxWritePoolSize.getClass() : "null", retObjectMaxWritePoolSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxWritePoolSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

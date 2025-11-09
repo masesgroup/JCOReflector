@@ -281,13 +281,32 @@ public class MetafileHeader extends NetObject  {
             retObjectEmfPlusHeaderSize = classInstance.Get("EmfPlusHeaderSize");
             return (int)retObjectEmfPlusHeaderSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEmfPlusHeaderSizeError = true;
             java.lang.String retObjectEmfPlusHeaderSize_ToString = retObjectEmfPlusHeaderSize == null ? "null" : retObjectEmfPlusHeaderSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEmfPlusHeaderSizeNumber = (java.lang.Number)retObjectEmfPlusHeaderSize;
-                return retObjectEmfPlusHeaderSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEmfPlusHeaderSize != null ? retObjectEmfPlusHeaderSize.getClass() : "null", retObjectEmfPlusHeaderSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEmfPlusHeaderSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEmfPlusHeaderSizeClass = retObjectEmfPlusHeaderSize.getClass();
+                    // java.lang.reflect.Method retObjectEmfPlusHeaderSizeMethod = retObjectEmfPlusHeaderSizeClass.getMethod("intValue");
+                    // return (int)retObjectEmfPlusHeaderSizeMethod.invoke(retObjectEmfPlusHeaderSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEmfPlusHeaderSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectEmfPlusHeaderSize_ToString);
+                    return retObjectEmfPlusHeaderSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEmfPlusHeaderSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEmfPlusHeaderSize != null ? retObjectEmfPlusHeaderSize.getClass() : "null", retObjectEmfPlusHeaderSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEmfPlusHeaderSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,13 +321,32 @@ public class MetafileHeader extends NetObject  {
             retObjectLogicalDpiX = classInstance.Get("LogicalDpiX");
             return (int)retObjectLogicalDpiX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLogicalDpiXError = true;
             java.lang.String retObjectLogicalDpiX_ToString = retObjectLogicalDpiX == null ? "null" : retObjectLogicalDpiX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLogicalDpiXNumber = (java.lang.Number)retObjectLogicalDpiX;
-                return retObjectLogicalDpiXNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLogicalDpiX != null ? retObjectLogicalDpiX.getClass() : "null", retObjectLogicalDpiX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLogicalDpiX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLogicalDpiXClass = retObjectLogicalDpiX.getClass();
+                    // java.lang.reflect.Method retObjectLogicalDpiXMethod = retObjectLogicalDpiXClass.getMethod("intValue");
+                    // return (int)retObjectLogicalDpiXMethod.invoke(retObjectLogicalDpiX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLogicalDpiXNumber = java.text.NumberFormat.getInstance().parse(retObjectLogicalDpiX_ToString);
+                    return retObjectLogicalDpiXNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLogicalDpiXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLogicalDpiX != null ? retObjectLogicalDpiX.getClass() : "null", retObjectLogicalDpiX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLogicalDpiXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -323,13 +361,32 @@ public class MetafileHeader extends NetObject  {
             retObjectLogicalDpiY = classInstance.Get("LogicalDpiY");
             return (int)retObjectLogicalDpiY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLogicalDpiYError = true;
             java.lang.String retObjectLogicalDpiY_ToString = retObjectLogicalDpiY == null ? "null" : retObjectLogicalDpiY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLogicalDpiYNumber = (java.lang.Number)retObjectLogicalDpiY;
-                return retObjectLogicalDpiYNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLogicalDpiY != null ? retObjectLogicalDpiY.getClass() : "null", retObjectLogicalDpiY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLogicalDpiY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLogicalDpiYClass = retObjectLogicalDpiY.getClass();
+                    // java.lang.reflect.Method retObjectLogicalDpiYMethod = retObjectLogicalDpiYClass.getMethod("intValue");
+                    // return (int)retObjectLogicalDpiYMethod.invoke(retObjectLogicalDpiY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLogicalDpiYNumber = java.text.NumberFormat.getInstance().parse(retObjectLogicalDpiY_ToString);
+                    return retObjectLogicalDpiYNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLogicalDpiYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLogicalDpiY != null ? retObjectLogicalDpiY.getClass() : "null", retObjectLogicalDpiY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLogicalDpiYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -344,13 +401,32 @@ public class MetafileHeader extends NetObject  {
             retObjectMetafileSize = classInstance.Get("MetafileSize");
             return (int)retObjectMetafileSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMetafileSizeError = true;
             java.lang.String retObjectMetafileSize_ToString = retObjectMetafileSize == null ? "null" : retObjectMetafileSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMetafileSizeNumber = (java.lang.Number)retObjectMetafileSize;
-                return retObjectMetafileSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMetafileSize != null ? retObjectMetafileSize.getClass() : "null", retObjectMetafileSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMetafileSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMetafileSizeClass = retObjectMetafileSize.getClass();
+                    // java.lang.reflect.Method retObjectMetafileSizeMethod = retObjectMetafileSizeClass.getMethod("intValue");
+                    // return (int)retObjectMetafileSizeMethod.invoke(retObjectMetafileSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMetafileSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMetafileSize_ToString);
+                    return retObjectMetafileSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMetafileSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMetafileSize != null ? retObjectMetafileSize.getClass() : "null", retObjectMetafileSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMetafileSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -365,13 +441,32 @@ public class MetafileHeader extends NetObject  {
             retObjectVersion = classInstance.Get("Version");
             return (int)retObjectVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVersionError = true;
             java.lang.String retObjectVersion_ToString = retObjectVersion == null ? "null" : retObjectVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
-                return retObjectVersionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVersionClass = retObjectVersion.getClass();
+                    // java.lang.reflect.Method retObjectVersionMethod = retObjectVersionClass.getMethod("intValue");
+                    // return (int)retObjectVersionMethod.invoke(retObjectVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectVersion_ToString);
+                    return retObjectVersionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVersion != null ? retObjectVersion.getClass() : "null", retObjectVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

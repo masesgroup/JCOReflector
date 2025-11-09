@@ -811,13 +811,32 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
             retObjectBytesPending = classInstance.Get("BytesPending");
             return (int)retObjectBytesPending;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBytesPendingError = true;
             java.lang.String retObjectBytesPending_ToString = retObjectBytesPending == null ? "null" : retObjectBytesPending.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBytesPendingNumber = (java.lang.Number)retObjectBytesPending;
-                return retObjectBytesPendingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBytesPending != null ? retObjectBytesPending.getClass() : "null", retObjectBytesPending_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBytesPending != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBytesPendingClass = retObjectBytesPending.getClass();
+                    // java.lang.reflect.Method retObjectBytesPendingMethod = retObjectBytesPendingClass.getMethod("intValue");
+                    // return (int)retObjectBytesPendingMethod.invoke(retObjectBytesPending);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBytesPendingNumber = java.text.NumberFormat.getInstance().parse(retObjectBytesPending_ToString);
+                    return retObjectBytesPendingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBytesPendingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBytesPending != null ? retObjectBytesPending.getClass() : "null", retObjectBytesPending_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBytesPendingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -842,13 +861,32 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
             retObjectCurrentDepth = classInstance.Get("CurrentDepth");
             return (int)retObjectCurrentDepth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentDepthError = true;
             java.lang.String retObjectCurrentDepth_ToString = retObjectCurrentDepth == null ? "null" : retObjectCurrentDepth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentDepthNumber = (java.lang.Number)retObjectCurrentDepth;
-                return retObjectCurrentDepthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentDepth != null ? retObjectCurrentDepth.getClass() : "null", retObjectCurrentDepth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentDepth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentDepthClass = retObjectCurrentDepth.getClass();
+                    // java.lang.reflect.Method retObjectCurrentDepthMethod = retObjectCurrentDepthClass.getMethod("intValue");
+                    // return (int)retObjectCurrentDepthMethod.invoke(retObjectCurrentDepth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentDepthNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentDepth_ToString);
+                    return retObjectCurrentDepthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentDepthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentDepth != null ? retObjectCurrentDepth.getClass() : "null", retObjectCurrentDepth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentDepthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -863,13 +901,32 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
             retObjectBytesCommitted = classInstance.Get("BytesCommitted");
             return (long)retObjectBytesCommitted;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBytesCommittedError = true;
             java.lang.String retObjectBytesCommitted_ToString = retObjectBytesCommitted == null ? "null" : retObjectBytesCommitted.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBytesCommittedNumber = (java.lang.Number)retObjectBytesCommitted;
-                return retObjectBytesCommittedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesCommitted != null ? retObjectBytesCommitted.getClass() : "null", retObjectBytesCommitted_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBytesCommitted != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBytesCommittedClass = retObjectBytesCommitted.getClass();
+                    // java.lang.reflect.Method retObjectBytesCommittedMethod = retObjectBytesCommittedClass.getMethod("longValue");
+                    // return (long)retObjectBytesCommittedMethod.invoke(retObjectBytesCommitted);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBytesCommittedNumber = java.text.NumberFormat.getInstance().parse(retObjectBytesCommitted_ToString);
+                    return retObjectBytesCommittedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBytesCommittedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBytesCommitted != null ? retObjectBytesCommitted.getClass() : "null", retObjectBytesCommitted_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBytesCommittedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

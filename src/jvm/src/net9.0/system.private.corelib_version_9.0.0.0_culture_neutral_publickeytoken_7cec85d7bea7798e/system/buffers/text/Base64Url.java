@@ -160,13 +160,32 @@ public class Base64Url extends NetObject  {
             retObjectGetEncodedLength = classType.Invoke("GetEncodedLength", bytesLength);
             return (int)retObjectGetEncodedLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetEncodedLengthError = true;
             java.lang.String retObjectGetEncodedLength_ToString = retObjectGetEncodedLength == null ? "null" : retObjectGetEncodedLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetEncodedLengthNumber = (java.lang.Number)retObjectGetEncodedLength;
-                return retObjectGetEncodedLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetEncodedLength != null ? retObjectGetEncodedLength.getClass() : "null", retObjectGetEncodedLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetEncodedLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetEncodedLengthClass = retObjectGetEncodedLength.getClass();
+                    // java.lang.reflect.Method retObjectGetEncodedLengthMethod = retObjectGetEncodedLengthClass.getMethod("intValue");
+                    // return (int)retObjectGetEncodedLengthMethod.invoke(retObjectGetEncodedLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetEncodedLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectGetEncodedLength_ToString);
+                    return retObjectGetEncodedLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetEncodedLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetEncodedLength != null ? retObjectGetEncodedLength.getClass() : "null", retObjectGetEncodedLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetEncodedLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,13 +200,32 @@ public class Base64Url extends NetObject  {
             retObjectGetMaxDecodedLength = classType.Invoke("GetMaxDecodedLength", base64Length);
             return (int)retObjectGetMaxDecodedLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetMaxDecodedLengthError = true;
             java.lang.String retObjectGetMaxDecodedLength_ToString = retObjectGetMaxDecodedLength == null ? "null" : retObjectGetMaxDecodedLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetMaxDecodedLengthNumber = (java.lang.Number)retObjectGetMaxDecodedLength;
-                return retObjectGetMaxDecodedLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMaxDecodedLength != null ? retObjectGetMaxDecodedLength.getClass() : "null", retObjectGetMaxDecodedLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetMaxDecodedLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetMaxDecodedLengthClass = retObjectGetMaxDecodedLength.getClass();
+                    // java.lang.reflect.Method retObjectGetMaxDecodedLengthMethod = retObjectGetMaxDecodedLengthClass.getMethod("intValue");
+                    // return (int)retObjectGetMaxDecodedLengthMethod.invoke(retObjectGetMaxDecodedLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetMaxDecodedLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectGetMaxDecodedLength_ToString);
+                    return retObjectGetMaxDecodedLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetMaxDecodedLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetMaxDecodedLength != null ? retObjectGetMaxDecodedLength.getClass() : "null", retObjectGetMaxDecodedLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetMaxDecodedLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -248,13 +248,32 @@ public class Paragraph extends Block  {
             retObjectTextIndent = classInstance.Get("TextIndent");
             return (double)retObjectTextIndent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTextIndentError = true;
             java.lang.String retObjectTextIndent_ToString = retObjectTextIndent == null ? "null" : retObjectTextIndent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTextIndentNumber = (java.lang.Number)retObjectTextIndent;
-                return retObjectTextIndentNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectTextIndent != null ? retObjectTextIndent.getClass() : "null", retObjectTextIndent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTextIndent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTextIndentClass = retObjectTextIndent.getClass();
+                    // java.lang.reflect.Method retObjectTextIndentMethod = retObjectTextIndentClass.getMethod("doubleValue");
+                    // return (double)retObjectTextIndentMethod.invoke(retObjectTextIndent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTextIndentNumber = java.text.NumberFormat.getInstance().parse(retObjectTextIndent_ToString);
+                    return retObjectTextIndentNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTextIndentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTextIndent != null ? retObjectTextIndent.getClass() : "null", retObjectTextIndent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTextIndentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -279,13 +298,32 @@ public class Paragraph extends Block  {
             retObjectMinOrphanLines = classInstance.Get("MinOrphanLines");
             return (int)retObjectMinOrphanLines;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinOrphanLinesError = true;
             java.lang.String retObjectMinOrphanLines_ToString = retObjectMinOrphanLines == null ? "null" : retObjectMinOrphanLines.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinOrphanLinesNumber = (java.lang.Number)retObjectMinOrphanLines;
-                return retObjectMinOrphanLinesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinOrphanLines != null ? retObjectMinOrphanLines.getClass() : "null", retObjectMinOrphanLines_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinOrphanLines != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinOrphanLinesClass = retObjectMinOrphanLines.getClass();
+                    // java.lang.reflect.Method retObjectMinOrphanLinesMethod = retObjectMinOrphanLinesClass.getMethod("intValue");
+                    // return (int)retObjectMinOrphanLinesMethod.invoke(retObjectMinOrphanLines);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinOrphanLinesNumber = java.text.NumberFormat.getInstance().parse(retObjectMinOrphanLines_ToString);
+                    return retObjectMinOrphanLinesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinOrphanLinesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinOrphanLines != null ? retObjectMinOrphanLines.getClass() : "null", retObjectMinOrphanLines_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinOrphanLinesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -310,13 +348,32 @@ public class Paragraph extends Block  {
             retObjectMinWidowLines = classInstance.Get("MinWidowLines");
             return (int)retObjectMinWidowLines;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinWidowLinesError = true;
             java.lang.String retObjectMinWidowLines_ToString = retObjectMinWidowLines == null ? "null" : retObjectMinWidowLines.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinWidowLinesNumber = (java.lang.Number)retObjectMinWidowLines;
-                return retObjectMinWidowLinesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinWidowLines != null ? retObjectMinWidowLines.getClass() : "null", retObjectMinWidowLines_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinWidowLines != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinWidowLinesClass = retObjectMinWidowLines.getClass();
+                    // java.lang.reflect.Method retObjectMinWidowLinesMethod = retObjectMinWidowLinesClass.getMethod("intValue");
+                    // return (int)retObjectMinWidowLinesMethod.invoke(retObjectMinWidowLines);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinWidowLinesNumber = java.text.NumberFormat.getInstance().parse(retObjectMinWidowLines_ToString);
+                    return retObjectMinWidowLinesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinWidowLinesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinWidowLines != null ? retObjectMinWidowLines.getClass() : "null", retObjectMinWidowLines_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinWidowLinesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

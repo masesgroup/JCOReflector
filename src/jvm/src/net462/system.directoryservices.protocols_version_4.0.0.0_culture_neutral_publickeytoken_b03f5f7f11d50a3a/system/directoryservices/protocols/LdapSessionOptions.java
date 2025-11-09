@@ -360,13 +360,32 @@ public class LdapSessionOptions extends NetObject  {
             retObjectPingLimit = classInstance.Get("PingLimit");
             return (int)retObjectPingLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPingLimitError = true;
             java.lang.String retObjectPingLimit_ToString = retObjectPingLimit == null ? "null" : retObjectPingLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPingLimitNumber = (java.lang.Number)retObjectPingLimit;
-                return retObjectPingLimitNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPingLimit != null ? retObjectPingLimit.getClass() : "null", retObjectPingLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPingLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPingLimitClass = retObjectPingLimit.getClass();
+                    // java.lang.reflect.Method retObjectPingLimitMethod = retObjectPingLimitClass.getMethod("intValue");
+                    // return (int)retObjectPingLimitMethod.invoke(retObjectPingLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPingLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectPingLimit_ToString);
+                    return retObjectPingLimitNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPingLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPingLimit != null ? retObjectPingLimit.getClass() : "null", retObjectPingLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPingLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -391,13 +410,32 @@ public class LdapSessionOptions extends NetObject  {
             retObjectProtocolVersion = classInstance.Get("ProtocolVersion");
             return (int)retObjectProtocolVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProtocolVersionError = true;
             java.lang.String retObjectProtocolVersion_ToString = retObjectProtocolVersion == null ? "null" : retObjectProtocolVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProtocolVersionNumber = (java.lang.Number)retObjectProtocolVersion;
-                return retObjectProtocolVersionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProtocolVersion != null ? retObjectProtocolVersion.getClass() : "null", retObjectProtocolVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProtocolVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProtocolVersionClass = retObjectProtocolVersion.getClass();
+                    // java.lang.reflect.Method retObjectProtocolVersionMethod = retObjectProtocolVersionClass.getMethod("intValue");
+                    // return (int)retObjectProtocolVersionMethod.invoke(retObjectProtocolVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProtocolVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectProtocolVersion_ToString);
+                    return retObjectProtocolVersionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProtocolVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProtocolVersion != null ? retObjectProtocolVersion.getClass() : "null", retObjectProtocolVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProtocolVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -422,13 +460,32 @@ public class LdapSessionOptions extends NetObject  {
             retObjectReferralHopLimit = classInstance.Get("ReferralHopLimit");
             return (int)retObjectReferralHopLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReferralHopLimitError = true;
             java.lang.String retObjectReferralHopLimit_ToString = retObjectReferralHopLimit == null ? "null" : retObjectReferralHopLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReferralHopLimitNumber = (java.lang.Number)retObjectReferralHopLimit;
-                return retObjectReferralHopLimitNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReferralHopLimit != null ? retObjectReferralHopLimit.getClass() : "null", retObjectReferralHopLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReferralHopLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReferralHopLimitClass = retObjectReferralHopLimit.getClass();
+                    // java.lang.reflect.Method retObjectReferralHopLimitMethod = retObjectReferralHopLimitClass.getMethod("intValue");
+                    // return (int)retObjectReferralHopLimitMethod.invoke(retObjectReferralHopLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReferralHopLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectReferralHopLimit_ToString);
+                    return retObjectReferralHopLimitNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReferralHopLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReferralHopLimit != null ? retObjectReferralHopLimit.getClass() : "null", retObjectReferralHopLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReferralHopLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -453,13 +510,32 @@ public class LdapSessionOptions extends NetObject  {
             retObjectSspiFlag = classInstance.Get("SspiFlag");
             return (int)retObjectSspiFlag;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSspiFlagError = true;
             java.lang.String retObjectSspiFlag_ToString = retObjectSspiFlag == null ? "null" : retObjectSspiFlag.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSspiFlagNumber = (java.lang.Number)retObjectSspiFlag;
-                return retObjectSspiFlagNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSspiFlag != null ? retObjectSspiFlag.getClass() : "null", retObjectSspiFlag_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSspiFlag != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSspiFlagClass = retObjectSspiFlag.getClass();
+                    // java.lang.reflect.Method retObjectSspiFlagMethod = retObjectSspiFlagClass.getMethod("intValue");
+                    // return (int)retObjectSspiFlagMethod.invoke(retObjectSspiFlag);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSspiFlagNumber = java.text.NumberFormat.getInstance().parse(retObjectSspiFlag_ToString);
+                    return retObjectSspiFlagNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSspiFlagError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSspiFlag != null ? retObjectSspiFlag.getClass() : "null", retObjectSspiFlag_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSspiFlagError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

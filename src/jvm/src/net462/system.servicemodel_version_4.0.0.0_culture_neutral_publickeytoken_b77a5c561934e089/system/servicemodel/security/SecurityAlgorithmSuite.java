@@ -318,13 +318,32 @@ public class SecurityAlgorithmSuite extends NetObject  {
             retObjectDefaultEncryptionKeyDerivationLength = classInstance.Get("DefaultEncryptionKeyDerivationLength");
             return (int)retObjectDefaultEncryptionKeyDerivationLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDefaultEncryptionKeyDerivationLengthError = true;
             java.lang.String retObjectDefaultEncryptionKeyDerivationLength_ToString = retObjectDefaultEncryptionKeyDerivationLength == null ? "null" : retObjectDefaultEncryptionKeyDerivationLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDefaultEncryptionKeyDerivationLengthNumber = (java.lang.Number)retObjectDefaultEncryptionKeyDerivationLength;
-                return retObjectDefaultEncryptionKeyDerivationLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultEncryptionKeyDerivationLength != null ? retObjectDefaultEncryptionKeyDerivationLength.getClass() : "null", retObjectDefaultEncryptionKeyDerivationLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDefaultEncryptionKeyDerivationLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDefaultEncryptionKeyDerivationLengthClass = retObjectDefaultEncryptionKeyDerivationLength.getClass();
+                    // java.lang.reflect.Method retObjectDefaultEncryptionKeyDerivationLengthMethod = retObjectDefaultEncryptionKeyDerivationLengthClass.getMethod("intValue");
+                    // return (int)retObjectDefaultEncryptionKeyDerivationLengthMethod.invoke(retObjectDefaultEncryptionKeyDerivationLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDefaultEncryptionKeyDerivationLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectDefaultEncryptionKeyDerivationLength_ToString);
+                    return retObjectDefaultEncryptionKeyDerivationLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDefaultEncryptionKeyDerivationLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDefaultEncryptionKeyDerivationLength != null ? retObjectDefaultEncryptionKeyDerivationLength.getClass() : "null", retObjectDefaultEncryptionKeyDerivationLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDefaultEncryptionKeyDerivationLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -339,13 +358,32 @@ public class SecurityAlgorithmSuite extends NetObject  {
             retObjectDefaultSignatureKeyDerivationLength = classInstance.Get("DefaultSignatureKeyDerivationLength");
             return (int)retObjectDefaultSignatureKeyDerivationLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDefaultSignatureKeyDerivationLengthError = true;
             java.lang.String retObjectDefaultSignatureKeyDerivationLength_ToString = retObjectDefaultSignatureKeyDerivationLength == null ? "null" : retObjectDefaultSignatureKeyDerivationLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDefaultSignatureKeyDerivationLengthNumber = (java.lang.Number)retObjectDefaultSignatureKeyDerivationLength;
-                return retObjectDefaultSignatureKeyDerivationLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultSignatureKeyDerivationLength != null ? retObjectDefaultSignatureKeyDerivationLength.getClass() : "null", retObjectDefaultSignatureKeyDerivationLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDefaultSignatureKeyDerivationLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDefaultSignatureKeyDerivationLengthClass = retObjectDefaultSignatureKeyDerivationLength.getClass();
+                    // java.lang.reflect.Method retObjectDefaultSignatureKeyDerivationLengthMethod = retObjectDefaultSignatureKeyDerivationLengthClass.getMethod("intValue");
+                    // return (int)retObjectDefaultSignatureKeyDerivationLengthMethod.invoke(retObjectDefaultSignatureKeyDerivationLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDefaultSignatureKeyDerivationLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectDefaultSignatureKeyDerivationLength_ToString);
+                    return retObjectDefaultSignatureKeyDerivationLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDefaultSignatureKeyDerivationLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDefaultSignatureKeyDerivationLength != null ? retObjectDefaultSignatureKeyDerivationLength.getClass() : "null", retObjectDefaultSignatureKeyDerivationLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDefaultSignatureKeyDerivationLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -360,13 +398,32 @@ public class SecurityAlgorithmSuite extends NetObject  {
             retObjectDefaultSymmetricKeyLength = classInstance.Get("DefaultSymmetricKeyLength");
             return (int)retObjectDefaultSymmetricKeyLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDefaultSymmetricKeyLengthError = true;
             java.lang.String retObjectDefaultSymmetricKeyLength_ToString = retObjectDefaultSymmetricKeyLength == null ? "null" : retObjectDefaultSymmetricKeyLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDefaultSymmetricKeyLengthNumber = (java.lang.Number)retObjectDefaultSymmetricKeyLength;
-                return retObjectDefaultSymmetricKeyLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultSymmetricKeyLength != null ? retObjectDefaultSymmetricKeyLength.getClass() : "null", retObjectDefaultSymmetricKeyLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDefaultSymmetricKeyLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDefaultSymmetricKeyLengthClass = retObjectDefaultSymmetricKeyLength.getClass();
+                    // java.lang.reflect.Method retObjectDefaultSymmetricKeyLengthMethod = retObjectDefaultSymmetricKeyLengthClass.getMethod("intValue");
+                    // return (int)retObjectDefaultSymmetricKeyLengthMethod.invoke(retObjectDefaultSymmetricKeyLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDefaultSymmetricKeyLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectDefaultSymmetricKeyLength_ToString);
+                    return retObjectDefaultSymmetricKeyLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDefaultSymmetricKeyLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDefaultSymmetricKeyLength != null ? retObjectDefaultSymmetricKeyLength.getClass() : "null", retObjectDefaultSymmetricKeyLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDefaultSymmetricKeyLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

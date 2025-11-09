@@ -167,13 +167,32 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
             retObjectDeviceDpiNew = classInstance.Get("DeviceDpiNew");
             return (int)retObjectDeviceDpiNew;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDeviceDpiNewError = true;
             java.lang.String retObjectDeviceDpiNew_ToString = retObjectDeviceDpiNew == null ? "null" : retObjectDeviceDpiNew.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDeviceDpiNewNumber = (java.lang.Number)retObjectDeviceDpiNew;
-                return retObjectDeviceDpiNewNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpiNew != null ? retObjectDeviceDpiNew.getClass() : "null", retObjectDeviceDpiNew_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDeviceDpiNew != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDeviceDpiNewClass = retObjectDeviceDpiNew.getClass();
+                    // java.lang.reflect.Method retObjectDeviceDpiNewMethod = retObjectDeviceDpiNewClass.getMethod("intValue");
+                    // return (int)retObjectDeviceDpiNewMethod.invoke(retObjectDeviceDpiNew);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDeviceDpiNewNumber = java.text.NumberFormat.getInstance().parse(retObjectDeviceDpiNew_ToString);
+                    return retObjectDeviceDpiNewNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDeviceDpiNewError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDeviceDpiNew != null ? retObjectDeviceDpiNew.getClass() : "null", retObjectDeviceDpiNew_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDeviceDpiNewError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,13 +217,32 @@ public class DpiChangedEventArgs extends CancelEventArgs  {
             retObjectDeviceDpiOld = classInstance.Get("DeviceDpiOld");
             return (int)retObjectDeviceDpiOld;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDeviceDpiOldError = true;
             java.lang.String retObjectDeviceDpiOld_ToString = retObjectDeviceDpiOld == null ? "null" : retObjectDeviceDpiOld.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDeviceDpiOldNumber = (java.lang.Number)retObjectDeviceDpiOld;
-                return retObjectDeviceDpiOldNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeviceDpiOld != null ? retObjectDeviceDpiOld.getClass() : "null", retObjectDeviceDpiOld_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDeviceDpiOld != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDeviceDpiOldClass = retObjectDeviceDpiOld.getClass();
+                    // java.lang.reflect.Method retObjectDeviceDpiOldMethod = retObjectDeviceDpiOldClass.getMethod("intValue");
+                    // return (int)retObjectDeviceDpiOldMethod.invoke(retObjectDeviceDpiOld);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDeviceDpiOldNumber = java.text.NumberFormat.getInstance().parse(retObjectDeviceDpiOld_ToString);
+                    return retObjectDeviceDpiOldNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDeviceDpiOldError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDeviceDpiOld != null ? retObjectDeviceDpiOld.getClass() : "null", retObjectDeviceDpiOld_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDeviceDpiOldError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

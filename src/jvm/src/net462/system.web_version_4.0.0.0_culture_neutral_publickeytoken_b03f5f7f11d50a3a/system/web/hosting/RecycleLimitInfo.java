@@ -200,13 +200,32 @@ public class RecycleLimitInfo extends NetObject  {
             retObjectCurrentPrivateBytes = classInstance.Get("CurrentPrivateBytes");
             return (long)retObjectCurrentPrivateBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentPrivateBytesError = true;
             java.lang.String retObjectCurrentPrivateBytes_ToString = retObjectCurrentPrivateBytes == null ? "null" : retObjectCurrentPrivateBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentPrivateBytesNumber = (java.lang.Number)retObjectCurrentPrivateBytes;
-                return retObjectCurrentPrivateBytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCurrentPrivateBytes != null ? retObjectCurrentPrivateBytes.getClass() : "null", retObjectCurrentPrivateBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentPrivateBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentPrivateBytesClass = retObjectCurrentPrivateBytes.getClass();
+                    // java.lang.reflect.Method retObjectCurrentPrivateBytesMethod = retObjectCurrentPrivateBytesClass.getMethod("longValue");
+                    // return (long)retObjectCurrentPrivateBytesMethod.invoke(retObjectCurrentPrivateBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentPrivateBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentPrivateBytes_ToString);
+                    return retObjectCurrentPrivateBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentPrivateBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentPrivateBytes != null ? retObjectCurrentPrivateBytes.getClass() : "null", retObjectCurrentPrivateBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentPrivateBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,13 +240,32 @@ public class RecycleLimitInfo extends NetObject  {
             retObjectRecycleLimit = classInstance.Get("RecycleLimit");
             return (long)retObjectRecycleLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRecycleLimitError = true;
             java.lang.String retObjectRecycleLimit_ToString = retObjectRecycleLimit == null ? "null" : retObjectRecycleLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRecycleLimitNumber = (java.lang.Number)retObjectRecycleLimit;
-                return retObjectRecycleLimitNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectRecycleLimit != null ? retObjectRecycleLimit.getClass() : "null", retObjectRecycleLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRecycleLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRecycleLimitClass = retObjectRecycleLimit.getClass();
+                    // java.lang.reflect.Method retObjectRecycleLimitMethod = retObjectRecycleLimitClass.getMethod("longValue");
+                    // return (long)retObjectRecycleLimitMethod.invoke(retObjectRecycleLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRecycleLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectRecycleLimit_ToString);
+                    return retObjectRecycleLimitNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRecycleLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRecycleLimit != null ? retObjectRecycleLimit.getClass() : "null", retObjectRecycleLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRecycleLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

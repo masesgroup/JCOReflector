@@ -208,13 +208,32 @@ public class ZipArchiveEntry extends NetObject  {
             retObjectExternalAttributes = classInstance.Get("ExternalAttributes");
             return (int)retObjectExternalAttributes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportExternalAttributesError = true;
             java.lang.String retObjectExternalAttributes_ToString = retObjectExternalAttributes == null ? "null" : retObjectExternalAttributes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectExternalAttributesNumber = (java.lang.Number)retObjectExternalAttributes;
-                return retObjectExternalAttributesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExternalAttributes != null ? retObjectExternalAttributes.getClass() : "null", retObjectExternalAttributes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectExternalAttributes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectExternalAttributesClass = retObjectExternalAttributes.getClass();
+                    // java.lang.reflect.Method retObjectExternalAttributesMethod = retObjectExternalAttributesClass.getMethod("intValue");
+                    // return (int)retObjectExternalAttributesMethod.invoke(retObjectExternalAttributes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectExternalAttributesNumber = java.text.NumberFormat.getInstance().parse(retObjectExternalAttributes_ToString);
+                    return retObjectExternalAttributesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportExternalAttributesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectExternalAttributes != null ? retObjectExternalAttributes.getClass() : "null", retObjectExternalAttributes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportExternalAttributesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,13 +258,32 @@ public class ZipArchiveEntry extends NetObject  {
             retObjectCompressedLength = classInstance.Get("CompressedLength");
             return (long)retObjectCompressedLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCompressedLengthError = true;
             java.lang.String retObjectCompressedLength_ToString = retObjectCompressedLength == null ? "null" : retObjectCompressedLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCompressedLengthNumber = (java.lang.Number)retObjectCompressedLength;
-                return retObjectCompressedLengthNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCompressedLength != null ? retObjectCompressedLength.getClass() : "null", retObjectCompressedLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCompressedLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCompressedLengthClass = retObjectCompressedLength.getClass();
+                    // java.lang.reflect.Method retObjectCompressedLengthMethod = retObjectCompressedLengthClass.getMethod("longValue");
+                    // return (long)retObjectCompressedLengthMethod.invoke(retObjectCompressedLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCompressedLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectCompressedLength_ToString);
+                    return retObjectCompressedLengthNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCompressedLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCompressedLength != null ? retObjectCompressedLength.getClass() : "null", retObjectCompressedLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCompressedLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -260,13 +298,32 @@ public class ZipArchiveEntry extends NetObject  {
             retObjectLength = classInstance.Get("Length");
             return (long)retObjectLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLengthError = true;
             java.lang.String retObjectLength_ToString = retObjectLength == null ? "null" : retObjectLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLengthNumber = (java.lang.Number)retObjectLength;
-                return retObjectLengthNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLengthClass = retObjectLength.getClass();
+                    // java.lang.reflect.Method retObjectLengthMethod = retObjectLengthClass.getMethod("longValue");
+                    // return (long)retObjectLengthMethod.invoke(retObjectLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectLength_ToString);
+                    return retObjectLengthNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLength != null ? retObjectLength.getClass() : "null", retObjectLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

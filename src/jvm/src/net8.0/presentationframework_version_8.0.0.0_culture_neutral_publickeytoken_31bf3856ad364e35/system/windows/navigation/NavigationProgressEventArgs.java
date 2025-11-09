@@ -167,13 +167,32 @@ public class NavigationProgressEventArgs extends EventArgs  {
             retObjectBytesRead = classInstance.Get("BytesRead");
             return (long)retObjectBytesRead;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBytesReadError = true;
             java.lang.String retObjectBytesRead_ToString = retObjectBytesRead == null ? "null" : retObjectBytesRead.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBytesReadNumber = (java.lang.Number)retObjectBytesRead;
-                return retObjectBytesReadNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesRead != null ? retObjectBytesRead.getClass() : "null", retObjectBytesRead_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBytesRead != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBytesReadClass = retObjectBytesRead.getClass();
+                    // java.lang.reflect.Method retObjectBytesReadMethod = retObjectBytesReadClass.getMethod("longValue");
+                    // return (long)retObjectBytesReadMethod.invoke(retObjectBytesRead);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBytesReadNumber = java.text.NumberFormat.getInstance().parse(retObjectBytesRead_ToString);
+                    return retObjectBytesReadNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBytesReadError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBytesRead != null ? retObjectBytesRead.getClass() : "null", retObjectBytesRead_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBytesReadError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,13 +207,32 @@ public class NavigationProgressEventArgs extends EventArgs  {
             retObjectMaxBytes = classInstance.Get("MaxBytes");
             return (long)retObjectMaxBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBytesError = true;
             java.lang.String retObjectMaxBytes_ToString = retObjectMaxBytes == null ? "null" : retObjectMaxBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBytesNumber = (java.lang.Number)retObjectMaxBytes;
-                return retObjectMaxBytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxBytes != null ? retObjectMaxBytes.getClass() : "null", retObjectMaxBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBytesClass = retObjectMaxBytes.getClass();
+                    // java.lang.reflect.Method retObjectMaxBytesMethod = retObjectMaxBytesClass.getMethod("longValue");
+                    // return (long)retObjectMaxBytesMethod.invoke(retObjectMaxBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBytes_ToString);
+                    return retObjectMaxBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBytes != null ? retObjectMaxBytes.getClass() : "null", retObjectMaxBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

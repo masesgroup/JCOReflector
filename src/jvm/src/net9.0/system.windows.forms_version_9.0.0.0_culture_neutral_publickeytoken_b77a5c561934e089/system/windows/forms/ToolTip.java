@@ -478,13 +478,32 @@ public class ToolTip extends Component  {
             retObjectAutomaticDelay = classInstance.Get("AutomaticDelay");
             return (int)retObjectAutomaticDelay;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAutomaticDelayError = true;
             java.lang.String retObjectAutomaticDelay_ToString = retObjectAutomaticDelay == null ? "null" : retObjectAutomaticDelay.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAutomaticDelayNumber = (java.lang.Number)retObjectAutomaticDelay;
-                return retObjectAutomaticDelayNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutomaticDelay != null ? retObjectAutomaticDelay.getClass() : "null", retObjectAutomaticDelay_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAutomaticDelay != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAutomaticDelayClass = retObjectAutomaticDelay.getClass();
+                    // java.lang.reflect.Method retObjectAutomaticDelayMethod = retObjectAutomaticDelayClass.getMethod("intValue");
+                    // return (int)retObjectAutomaticDelayMethod.invoke(retObjectAutomaticDelay);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAutomaticDelayNumber = java.text.NumberFormat.getInstance().parse(retObjectAutomaticDelay_ToString);
+                    return retObjectAutomaticDelayNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAutomaticDelayError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAutomaticDelay != null ? retObjectAutomaticDelay.getClass() : "null", retObjectAutomaticDelay_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAutomaticDelayError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -509,13 +528,32 @@ public class ToolTip extends Component  {
             retObjectAutoPopDelay = classInstance.Get("AutoPopDelay");
             return (int)retObjectAutoPopDelay;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAutoPopDelayError = true;
             java.lang.String retObjectAutoPopDelay_ToString = retObjectAutoPopDelay == null ? "null" : retObjectAutoPopDelay.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAutoPopDelayNumber = (java.lang.Number)retObjectAutoPopDelay;
-                return retObjectAutoPopDelayNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAutoPopDelay != null ? retObjectAutoPopDelay.getClass() : "null", retObjectAutoPopDelay_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAutoPopDelay != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAutoPopDelayClass = retObjectAutoPopDelay.getClass();
+                    // java.lang.reflect.Method retObjectAutoPopDelayMethod = retObjectAutoPopDelayClass.getMethod("intValue");
+                    // return (int)retObjectAutoPopDelayMethod.invoke(retObjectAutoPopDelay);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAutoPopDelayNumber = java.text.NumberFormat.getInstance().parse(retObjectAutoPopDelay_ToString);
+                    return retObjectAutoPopDelayNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAutoPopDelayError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAutoPopDelay != null ? retObjectAutoPopDelay.getClass() : "null", retObjectAutoPopDelay_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAutoPopDelayError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -540,13 +578,32 @@ public class ToolTip extends Component  {
             retObjectInitialDelay = classInstance.Get("InitialDelay");
             return (int)retObjectInitialDelay;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportInitialDelayError = true;
             java.lang.String retObjectInitialDelay_ToString = retObjectInitialDelay == null ? "null" : retObjectInitialDelay.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectInitialDelayNumber = (java.lang.Number)retObjectInitialDelay;
-                return retObjectInitialDelayNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectInitialDelay != null ? retObjectInitialDelay.getClass() : "null", retObjectInitialDelay_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectInitialDelay != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectInitialDelayClass = retObjectInitialDelay.getClass();
+                    // java.lang.reflect.Method retObjectInitialDelayMethod = retObjectInitialDelayClass.getMethod("intValue");
+                    // return (int)retObjectInitialDelayMethod.invoke(retObjectInitialDelay);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectInitialDelayNumber = java.text.NumberFormat.getInstance().parse(retObjectInitialDelay_ToString);
+                    return retObjectInitialDelayNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportInitialDelayError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectInitialDelay != null ? retObjectInitialDelay.getClass() : "null", retObjectInitialDelay_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportInitialDelayError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -571,13 +628,32 @@ public class ToolTip extends Component  {
             retObjectReshowDelay = classInstance.Get("ReshowDelay");
             return (int)retObjectReshowDelay;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReshowDelayError = true;
             java.lang.String retObjectReshowDelay_ToString = retObjectReshowDelay == null ? "null" : retObjectReshowDelay.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReshowDelayNumber = (java.lang.Number)retObjectReshowDelay;
-                return retObjectReshowDelayNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReshowDelay != null ? retObjectReshowDelay.getClass() : "null", retObjectReshowDelay_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReshowDelay != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReshowDelayClass = retObjectReshowDelay.getClass();
+                    // java.lang.reflect.Method retObjectReshowDelayMethod = retObjectReshowDelayClass.getMethod("intValue");
+                    // return (int)retObjectReshowDelayMethod.invoke(retObjectReshowDelay);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReshowDelayNumber = java.text.NumberFormat.getInstance().parse(retObjectReshowDelay_ToString);
+                    return retObjectReshowDelayNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReshowDelayError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReshowDelay != null ? retObjectReshowDelay.getClass() : "null", retObjectReshowDelay_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReshowDelayError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

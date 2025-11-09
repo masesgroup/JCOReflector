@@ -220,13 +220,32 @@ public class ListBox extends ListControl implements system.web.ui.IPostBackDataH
             retObjectRows = classInstance.Get("Rows");
             return (int)retObjectRows;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRowsError = true;
             java.lang.String retObjectRows_ToString = retObjectRows == null ? "null" : retObjectRows.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRowsNumber = (java.lang.Number)retObjectRows;
-                return retObjectRowsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRows != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRowsClass = retObjectRows.getClass();
+                    // java.lang.reflect.Method retObjectRowsMethod = retObjectRowsClass.getMethod("intValue");
+                    // return (int)retObjectRowsMethod.invoke(retObjectRows);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRowsNumber = java.text.NumberFormat.getInstance().parse(retObjectRows_ToString);
+                    return retObjectRowsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRowsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRows != null ? retObjectRows.getClass() : "null", retObjectRows_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRowsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1522,13 +1522,32 @@ public class MessageQueue extends Component  {
             retObjectBasePriority = classInstance.Get("BasePriority");
             return (short)retObjectBasePriority;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBasePriorityError = true;
             java.lang.String retObjectBasePriority_ToString = retObjectBasePriority == null ? "null" : retObjectBasePriority.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBasePriorityNumber = (java.lang.Number)retObjectBasePriority;
-                return retObjectBasePriorityNumber.shortValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null", retObjectBasePriority_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBasePriority != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBasePriorityClass = retObjectBasePriority.getClass();
+                    // java.lang.reflect.Method retObjectBasePriorityMethod = retObjectBasePriorityClass.getMethod("shortValue");
+                    // return (short)retObjectBasePriorityMethod.invoke(retObjectBasePriority);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBasePriorityNumber = java.text.NumberFormat.getInstance().parse(retObjectBasePriority_ToString);
+                    return retObjectBasePriorityNumber.shortValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBasePriorityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null", retObjectBasePriority_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBasePriorityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1553,13 +1572,32 @@ public class MessageQueue extends Component  {
             retObjectMaximumJournalSize = classInstance.Get("MaximumJournalSize");
             return (long)retObjectMaximumJournalSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumJournalSizeError = true;
             java.lang.String retObjectMaximumJournalSize_ToString = retObjectMaximumJournalSize == null ? "null" : retObjectMaximumJournalSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumJournalSizeNumber = (java.lang.Number)retObjectMaximumJournalSize;
-                return retObjectMaximumJournalSizeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumJournalSize != null ? retObjectMaximumJournalSize.getClass() : "null", retObjectMaximumJournalSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumJournalSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumJournalSizeClass = retObjectMaximumJournalSize.getClass();
+                    // java.lang.reflect.Method retObjectMaximumJournalSizeMethod = retObjectMaximumJournalSizeClass.getMethod("longValue");
+                    // return (long)retObjectMaximumJournalSizeMethod.invoke(retObjectMaximumJournalSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumJournalSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumJournalSize_ToString);
+                    return retObjectMaximumJournalSizeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumJournalSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumJournalSize != null ? retObjectMaximumJournalSize.getClass() : "null", retObjectMaximumJournalSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumJournalSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1584,13 +1622,32 @@ public class MessageQueue extends Component  {
             retObjectMaximumQueueSize = classInstance.Get("MaximumQueueSize");
             return (long)retObjectMaximumQueueSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumQueueSizeError = true;
             java.lang.String retObjectMaximumQueueSize_ToString = retObjectMaximumQueueSize == null ? "null" : retObjectMaximumQueueSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumQueueSizeNumber = (java.lang.Number)retObjectMaximumQueueSize;
-                return retObjectMaximumQueueSizeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumQueueSize != null ? retObjectMaximumQueueSize.getClass() : "null", retObjectMaximumQueueSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumQueueSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumQueueSizeClass = retObjectMaximumQueueSize.getClass();
+                    // java.lang.reflect.Method retObjectMaximumQueueSizeMethod = retObjectMaximumQueueSizeClass.getMethod("longValue");
+                    // return (long)retObjectMaximumQueueSizeMethod.invoke(retObjectMaximumQueueSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumQueueSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumQueueSize_ToString);
+                    return retObjectMaximumQueueSizeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumQueueSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumQueueSize != null ? retObjectMaximumQueueSize.getClass() : "null", retObjectMaximumQueueSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumQueueSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -183,13 +183,32 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
             retObjectGetLocalPort = classInstance.Invoke("GetLocalPort");
             return (int)retObjectGetLocalPort;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetLocalPortError = true;
             java.lang.String retObjectGetLocalPort_ToString = retObjectGetLocalPort == null ? "null" : retObjectGetLocalPort.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetLocalPortNumber = (java.lang.Number)retObjectGetLocalPort;
-                return retObjectGetLocalPortNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetLocalPort != null ? retObjectGetLocalPort.getClass() : "null", retObjectGetLocalPort_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetLocalPort != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetLocalPortClass = retObjectGetLocalPort.getClass();
+                    // java.lang.reflect.Method retObjectGetLocalPortMethod = retObjectGetLocalPortClass.getMethod("intValue");
+                    // return (int)retObjectGetLocalPortMethod.invoke(retObjectGetLocalPort);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetLocalPortNumber = java.text.NumberFormat.getInstance().parse(retObjectGetLocalPort_ToString);
+                    return retObjectGetLocalPortNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetLocalPortError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetLocalPort != null ? retObjectGetLocalPort.getClass() : "null", retObjectGetLocalPort_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetLocalPortError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,13 +223,32 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
             retObjectGetRemotePort = classInstance.Invoke("GetRemotePort");
             return (int)retObjectGetRemotePort;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetRemotePortError = true;
             java.lang.String retObjectGetRemotePort_ToString = retObjectGetRemotePort == null ? "null" : retObjectGetRemotePort.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetRemotePortNumber = (java.lang.Number)retObjectGetRemotePort;
-                return retObjectGetRemotePortNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetRemotePort != null ? retObjectGetRemotePort.getClass() : "null", retObjectGetRemotePort_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetRemotePort != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetRemotePortClass = retObjectGetRemotePort.getClass();
+                    // java.lang.reflect.Method retObjectGetRemotePortMethod = retObjectGetRemotePortClass.getMethod("intValue");
+                    // return (int)retObjectGetRemotePortMethod.invoke(retObjectGetRemotePort);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetRemotePortNumber = java.text.NumberFormat.getInstance().parse(retObjectGetRemotePort_ToString);
+                    return retObjectGetRemotePortNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetRemotePortError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetRemotePort != null ? retObjectGetRemotePort.getClass() : "null", retObjectGetRemotePort_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetRemotePortError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

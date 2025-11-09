@@ -172,13 +172,32 @@ public class BounceEase extends EasingFunctionBase  {
             retObjectBounciness = classInstance.Get("Bounciness");
             return (double)retObjectBounciness;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBouncinessError = true;
             java.lang.String retObjectBounciness_ToString = retObjectBounciness == null ? "null" : retObjectBounciness.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBouncinessNumber = (java.lang.Number)retObjectBounciness;
-                return retObjectBouncinessNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBounciness != null ? retObjectBounciness.getClass() : "null", retObjectBounciness_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBounciness != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBouncinessClass = retObjectBounciness.getClass();
+                    // java.lang.reflect.Method retObjectBouncinessMethod = retObjectBouncinessClass.getMethod("doubleValue");
+                    // return (double)retObjectBouncinessMethod.invoke(retObjectBounciness);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBouncinessNumber = java.text.NumberFormat.getInstance().parse(retObjectBounciness_ToString);
+                    return retObjectBouncinessNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBouncinessError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBounciness != null ? retObjectBounciness.getClass() : "null", retObjectBounciness_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBouncinessError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,13 +222,32 @@ public class BounceEase extends EasingFunctionBase  {
             retObjectBounces = classInstance.Get("Bounces");
             return (int)retObjectBounces;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBouncesError = true;
             java.lang.String retObjectBounces_ToString = retObjectBounces == null ? "null" : retObjectBounces.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBouncesNumber = (java.lang.Number)retObjectBounces;
-                return retObjectBouncesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBounces != null ? retObjectBounces.getClass() : "null", retObjectBounces_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBounces != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBouncesClass = retObjectBounces.getClass();
+                    // java.lang.reflect.Method retObjectBouncesMethod = retObjectBouncesClass.getMethod("intValue");
+                    // return (int)retObjectBouncesMethod.invoke(retObjectBounces);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBouncesNumber = java.text.NumberFormat.getInstance().parse(retObjectBounces_ToString);
+                    return retObjectBouncesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBouncesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBounces != null ? retObjectBounces.getClass() : "null", retObjectBounces_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBouncesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

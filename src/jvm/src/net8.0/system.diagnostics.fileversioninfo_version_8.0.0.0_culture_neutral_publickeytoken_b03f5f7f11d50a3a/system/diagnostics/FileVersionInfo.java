@@ -251,13 +251,32 @@ public class FileVersionInfo extends NetObject  {
             retObjectFileBuildPart = classInstance.Get("FileBuildPart");
             return (int)retObjectFileBuildPart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFileBuildPartError = true;
             java.lang.String retObjectFileBuildPart_ToString = retObjectFileBuildPart == null ? "null" : retObjectFileBuildPart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFileBuildPartNumber = (java.lang.Number)retObjectFileBuildPart;
-                return retObjectFileBuildPartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFileBuildPart != null ? retObjectFileBuildPart.getClass() : "null", retObjectFileBuildPart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFileBuildPart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFileBuildPartClass = retObjectFileBuildPart.getClass();
+                    // java.lang.reflect.Method retObjectFileBuildPartMethod = retObjectFileBuildPartClass.getMethod("intValue");
+                    // return (int)retObjectFileBuildPartMethod.invoke(retObjectFileBuildPart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFileBuildPartNumber = java.text.NumberFormat.getInstance().parse(retObjectFileBuildPart_ToString);
+                    return retObjectFileBuildPartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFileBuildPartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFileBuildPart != null ? retObjectFileBuildPart.getClass() : "null", retObjectFileBuildPart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFileBuildPartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -272,13 +291,32 @@ public class FileVersionInfo extends NetObject  {
             retObjectFileMajorPart = classInstance.Get("FileMajorPart");
             return (int)retObjectFileMajorPart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFileMajorPartError = true;
             java.lang.String retObjectFileMajorPart_ToString = retObjectFileMajorPart == null ? "null" : retObjectFileMajorPart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFileMajorPartNumber = (java.lang.Number)retObjectFileMajorPart;
-                return retObjectFileMajorPartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFileMajorPart != null ? retObjectFileMajorPart.getClass() : "null", retObjectFileMajorPart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFileMajorPart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFileMajorPartClass = retObjectFileMajorPart.getClass();
+                    // java.lang.reflect.Method retObjectFileMajorPartMethod = retObjectFileMajorPartClass.getMethod("intValue");
+                    // return (int)retObjectFileMajorPartMethod.invoke(retObjectFileMajorPart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFileMajorPartNumber = java.text.NumberFormat.getInstance().parse(retObjectFileMajorPart_ToString);
+                    return retObjectFileMajorPartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFileMajorPartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFileMajorPart != null ? retObjectFileMajorPart.getClass() : "null", retObjectFileMajorPart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFileMajorPartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -293,13 +331,32 @@ public class FileVersionInfo extends NetObject  {
             retObjectFileMinorPart = classInstance.Get("FileMinorPart");
             return (int)retObjectFileMinorPart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFileMinorPartError = true;
             java.lang.String retObjectFileMinorPart_ToString = retObjectFileMinorPart == null ? "null" : retObjectFileMinorPart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFileMinorPartNumber = (java.lang.Number)retObjectFileMinorPart;
-                return retObjectFileMinorPartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFileMinorPart != null ? retObjectFileMinorPart.getClass() : "null", retObjectFileMinorPart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFileMinorPart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFileMinorPartClass = retObjectFileMinorPart.getClass();
+                    // java.lang.reflect.Method retObjectFileMinorPartMethod = retObjectFileMinorPartClass.getMethod("intValue");
+                    // return (int)retObjectFileMinorPartMethod.invoke(retObjectFileMinorPart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFileMinorPartNumber = java.text.NumberFormat.getInstance().parse(retObjectFileMinorPart_ToString);
+                    return retObjectFileMinorPartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFileMinorPartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFileMinorPart != null ? retObjectFileMinorPart.getClass() : "null", retObjectFileMinorPart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFileMinorPartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -314,13 +371,32 @@ public class FileVersionInfo extends NetObject  {
             retObjectFilePrivatePart = classInstance.Get("FilePrivatePart");
             return (int)retObjectFilePrivatePart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFilePrivatePartError = true;
             java.lang.String retObjectFilePrivatePart_ToString = retObjectFilePrivatePart == null ? "null" : retObjectFilePrivatePart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFilePrivatePartNumber = (java.lang.Number)retObjectFilePrivatePart;
-                return retObjectFilePrivatePartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFilePrivatePart != null ? retObjectFilePrivatePart.getClass() : "null", retObjectFilePrivatePart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFilePrivatePart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFilePrivatePartClass = retObjectFilePrivatePart.getClass();
+                    // java.lang.reflect.Method retObjectFilePrivatePartMethod = retObjectFilePrivatePartClass.getMethod("intValue");
+                    // return (int)retObjectFilePrivatePartMethod.invoke(retObjectFilePrivatePart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFilePrivatePartNumber = java.text.NumberFormat.getInstance().parse(retObjectFilePrivatePart_ToString);
+                    return retObjectFilePrivatePartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFilePrivatePartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFilePrivatePart != null ? retObjectFilePrivatePart.getClass() : "null", retObjectFilePrivatePart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFilePrivatePartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -335,13 +411,32 @@ public class FileVersionInfo extends NetObject  {
             retObjectProductBuildPart = classInstance.Get("ProductBuildPart");
             return (int)retObjectProductBuildPart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProductBuildPartError = true;
             java.lang.String retObjectProductBuildPart_ToString = retObjectProductBuildPart == null ? "null" : retObjectProductBuildPart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProductBuildPartNumber = (java.lang.Number)retObjectProductBuildPart;
-                return retObjectProductBuildPartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProductBuildPart != null ? retObjectProductBuildPart.getClass() : "null", retObjectProductBuildPart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProductBuildPart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProductBuildPartClass = retObjectProductBuildPart.getClass();
+                    // java.lang.reflect.Method retObjectProductBuildPartMethod = retObjectProductBuildPartClass.getMethod("intValue");
+                    // return (int)retObjectProductBuildPartMethod.invoke(retObjectProductBuildPart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProductBuildPartNumber = java.text.NumberFormat.getInstance().parse(retObjectProductBuildPart_ToString);
+                    return retObjectProductBuildPartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProductBuildPartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProductBuildPart != null ? retObjectProductBuildPart.getClass() : "null", retObjectProductBuildPart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProductBuildPartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -356,13 +451,32 @@ public class FileVersionInfo extends NetObject  {
             retObjectProductMajorPart = classInstance.Get("ProductMajorPart");
             return (int)retObjectProductMajorPart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProductMajorPartError = true;
             java.lang.String retObjectProductMajorPart_ToString = retObjectProductMajorPart == null ? "null" : retObjectProductMajorPart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProductMajorPartNumber = (java.lang.Number)retObjectProductMajorPart;
-                return retObjectProductMajorPartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProductMajorPart != null ? retObjectProductMajorPart.getClass() : "null", retObjectProductMajorPart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProductMajorPart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProductMajorPartClass = retObjectProductMajorPart.getClass();
+                    // java.lang.reflect.Method retObjectProductMajorPartMethod = retObjectProductMajorPartClass.getMethod("intValue");
+                    // return (int)retObjectProductMajorPartMethod.invoke(retObjectProductMajorPart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProductMajorPartNumber = java.text.NumberFormat.getInstance().parse(retObjectProductMajorPart_ToString);
+                    return retObjectProductMajorPartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProductMajorPartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProductMajorPart != null ? retObjectProductMajorPart.getClass() : "null", retObjectProductMajorPart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProductMajorPartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -377,13 +491,32 @@ public class FileVersionInfo extends NetObject  {
             retObjectProductMinorPart = classInstance.Get("ProductMinorPart");
             return (int)retObjectProductMinorPart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProductMinorPartError = true;
             java.lang.String retObjectProductMinorPart_ToString = retObjectProductMinorPart == null ? "null" : retObjectProductMinorPart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProductMinorPartNumber = (java.lang.Number)retObjectProductMinorPart;
-                return retObjectProductMinorPartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProductMinorPart != null ? retObjectProductMinorPart.getClass() : "null", retObjectProductMinorPart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProductMinorPart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProductMinorPartClass = retObjectProductMinorPart.getClass();
+                    // java.lang.reflect.Method retObjectProductMinorPartMethod = retObjectProductMinorPartClass.getMethod("intValue");
+                    // return (int)retObjectProductMinorPartMethod.invoke(retObjectProductMinorPart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProductMinorPartNumber = java.text.NumberFormat.getInstance().parse(retObjectProductMinorPart_ToString);
+                    return retObjectProductMinorPartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProductMinorPartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProductMinorPart != null ? retObjectProductMinorPart.getClass() : "null", retObjectProductMinorPart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProductMinorPartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -398,13 +531,32 @@ public class FileVersionInfo extends NetObject  {
             retObjectProductPrivatePart = classInstance.Get("ProductPrivatePart");
             return (int)retObjectProductPrivatePart;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportProductPrivatePartError = true;
             java.lang.String retObjectProductPrivatePart_ToString = retObjectProductPrivatePart == null ? "null" : retObjectProductPrivatePart.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectProductPrivatePartNumber = (java.lang.Number)retObjectProductPrivatePart;
-                return retObjectProductPrivatePartNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectProductPrivatePart != null ? retObjectProductPrivatePart.getClass() : "null", retObjectProductPrivatePart_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectProductPrivatePart != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectProductPrivatePartClass = retObjectProductPrivatePart.getClass();
+                    // java.lang.reflect.Method retObjectProductPrivatePartMethod = retObjectProductPrivatePartClass.getMethod("intValue");
+                    // return (int)retObjectProductPrivatePartMethod.invoke(retObjectProductPrivatePart);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectProductPrivatePartNumber = java.text.NumberFormat.getInstance().parse(retObjectProductPrivatePart_ToString);
+                    return retObjectProductPrivatePartNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportProductPrivatePartError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectProductPrivatePart != null ? retObjectProductPrivatePart.getClass() : "null", retObjectProductPrivatePart_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportProductPrivatePartError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

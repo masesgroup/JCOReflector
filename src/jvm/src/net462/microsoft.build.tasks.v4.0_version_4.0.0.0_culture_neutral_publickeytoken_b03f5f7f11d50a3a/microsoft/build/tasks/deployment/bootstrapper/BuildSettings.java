@@ -245,13 +245,32 @@ public class BuildSettings extends NetObject  {
             retObjectFallbackLCID = classInstance.Get("FallbackLCID");
             return (int)retObjectFallbackLCID;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFallbackLCIDError = true;
             java.lang.String retObjectFallbackLCID_ToString = retObjectFallbackLCID == null ? "null" : retObjectFallbackLCID.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFallbackLCIDNumber = (java.lang.Number)retObjectFallbackLCID;
-                return retObjectFallbackLCIDNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFallbackLCID != null ? retObjectFallbackLCID.getClass() : "null", retObjectFallbackLCID_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFallbackLCID != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFallbackLCIDClass = retObjectFallbackLCID.getClass();
+                    // java.lang.reflect.Method retObjectFallbackLCIDMethod = retObjectFallbackLCIDClass.getMethod("intValue");
+                    // return (int)retObjectFallbackLCIDMethod.invoke(retObjectFallbackLCID);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFallbackLCIDNumber = java.text.NumberFormat.getInstance().parse(retObjectFallbackLCID_ToString);
+                    return retObjectFallbackLCIDNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFallbackLCIDError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFallbackLCID != null ? retObjectFallbackLCID.getClass() : "null", retObjectFallbackLCID_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFallbackLCIDError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -276,13 +295,32 @@ public class BuildSettings extends NetObject  {
             retObjectLCID = classInstance.Get("LCID");
             return (int)retObjectLCID;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLCIDError = true;
             java.lang.String retObjectLCID_ToString = retObjectLCID == null ? "null" : retObjectLCID.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLCIDNumber = (java.lang.Number)retObjectLCID;
-                return retObjectLCIDNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLCID != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLCIDClass = retObjectLCID.getClass();
+                    // java.lang.reflect.Method retObjectLCIDMethod = retObjectLCIDClass.getMethod("intValue");
+                    // return (int)retObjectLCIDMethod.invoke(retObjectLCID);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLCIDNumber = java.text.NumberFormat.getInstance().parse(retObjectLCID_ToString);
+                    return retObjectLCIDNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLCIDError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLCID != null ? retObjectLCID.getClass() : "null", retObjectLCID_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLCIDError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

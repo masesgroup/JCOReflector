@@ -188,13 +188,32 @@ public class TransportBindingElement extends BindingElement  {
             retObjectMaxBufferPoolSize = classInstance.Get("MaxBufferPoolSize");
             return (long)retObjectMaxBufferPoolSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBufferPoolSizeError = true;
             java.lang.String retObjectMaxBufferPoolSize_ToString = retObjectMaxBufferPoolSize == null ? "null" : retObjectMaxBufferPoolSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBufferPoolSizeNumber = (java.lang.Number)retObjectMaxBufferPoolSize;
-                return retObjectMaxBufferPoolSizeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxBufferPoolSize != null ? retObjectMaxBufferPoolSize.getClass() : "null", retObjectMaxBufferPoolSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBufferPoolSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBufferPoolSizeClass = retObjectMaxBufferPoolSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxBufferPoolSizeMethod = retObjectMaxBufferPoolSizeClass.getMethod("longValue");
+                    // return (long)retObjectMaxBufferPoolSizeMethod.invoke(retObjectMaxBufferPoolSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBufferPoolSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBufferPoolSize_ToString);
+                    return retObjectMaxBufferPoolSizeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBufferPoolSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBufferPoolSize != null ? retObjectMaxBufferPoolSize.getClass() : "null", retObjectMaxBufferPoolSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBufferPoolSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -219,13 +238,32 @@ public class TransportBindingElement extends BindingElement  {
             retObjectMaxReceivedMessageSize = classInstance.Get("MaxReceivedMessageSize");
             return (long)retObjectMaxReceivedMessageSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxReceivedMessageSizeError = true;
             java.lang.String retObjectMaxReceivedMessageSize_ToString = retObjectMaxReceivedMessageSize == null ? "null" : retObjectMaxReceivedMessageSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxReceivedMessageSizeNumber = (java.lang.Number)retObjectMaxReceivedMessageSize;
-                return retObjectMaxReceivedMessageSizeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaxReceivedMessageSize != null ? retObjectMaxReceivedMessageSize.getClass() : "null", retObjectMaxReceivedMessageSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxReceivedMessageSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxReceivedMessageSizeClass = retObjectMaxReceivedMessageSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxReceivedMessageSizeMethod = retObjectMaxReceivedMessageSizeClass.getMethod("longValue");
+                    // return (long)retObjectMaxReceivedMessageSizeMethod.invoke(retObjectMaxReceivedMessageSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxReceivedMessageSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxReceivedMessageSize_ToString);
+                    return retObjectMaxReceivedMessageSizeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxReceivedMessageSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxReceivedMessageSize != null ? retObjectMaxReceivedMessageSize.getClass() : "null", retObjectMaxReceivedMessageSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxReceivedMessageSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

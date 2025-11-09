@@ -416,13 +416,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectAppRequestQueueLimit = classInstance.Get("AppRequestQueueLimit");
             return (int)retObjectAppRequestQueueLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAppRequestQueueLimitError = true;
             java.lang.String retObjectAppRequestQueueLimit_ToString = retObjectAppRequestQueueLimit == null ? "null" : retObjectAppRequestQueueLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAppRequestQueueLimitNumber = (java.lang.Number)retObjectAppRequestQueueLimit;
-                return retObjectAppRequestQueueLimitNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAppRequestQueueLimit != null ? retObjectAppRequestQueueLimit.getClass() : "null", retObjectAppRequestQueueLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAppRequestQueueLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAppRequestQueueLimitClass = retObjectAppRequestQueueLimit.getClass();
+                    // java.lang.reflect.Method retObjectAppRequestQueueLimitMethod = retObjectAppRequestQueueLimitClass.getMethod("intValue");
+                    // return (int)retObjectAppRequestQueueLimitMethod.invoke(retObjectAppRequestQueueLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAppRequestQueueLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectAppRequestQueueLimit_ToString);
+                    return retObjectAppRequestQueueLimitNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAppRequestQueueLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAppRequestQueueLimit != null ? retObjectAppRequestQueueLimit.getClass() : "null", retObjectAppRequestQueueLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAppRequestQueueLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -447,13 +466,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectMaxQueryStringLength = classInstance.Get("MaxQueryStringLength");
             return (int)retObjectMaxQueryStringLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxQueryStringLengthError = true;
             java.lang.String retObjectMaxQueryStringLength_ToString = retObjectMaxQueryStringLength == null ? "null" : retObjectMaxQueryStringLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxQueryStringLengthNumber = (java.lang.Number)retObjectMaxQueryStringLength;
-                return retObjectMaxQueryStringLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxQueryStringLength != null ? retObjectMaxQueryStringLength.getClass() : "null", retObjectMaxQueryStringLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxQueryStringLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxQueryStringLengthClass = retObjectMaxQueryStringLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxQueryStringLengthMethod = retObjectMaxQueryStringLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaxQueryStringLengthMethod.invoke(retObjectMaxQueryStringLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxQueryStringLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxQueryStringLength_ToString);
+                    return retObjectMaxQueryStringLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxQueryStringLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxQueryStringLength != null ? retObjectMaxQueryStringLength.getClass() : "null", retObjectMaxQueryStringLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxQueryStringLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -478,13 +516,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectMaxRequestLength = classInstance.Get("MaxRequestLength");
             return (int)retObjectMaxRequestLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxRequestLengthError = true;
             java.lang.String retObjectMaxRequestLength_ToString = retObjectMaxRequestLength == null ? "null" : retObjectMaxRequestLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxRequestLengthNumber = (java.lang.Number)retObjectMaxRequestLength;
-                return retObjectMaxRequestLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxRequestLength != null ? retObjectMaxRequestLength.getClass() : "null", retObjectMaxRequestLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxRequestLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxRequestLengthClass = retObjectMaxRequestLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxRequestLengthMethod = retObjectMaxRequestLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaxRequestLengthMethod.invoke(retObjectMaxRequestLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxRequestLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxRequestLength_ToString);
+                    return retObjectMaxRequestLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxRequestLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxRequestLength != null ? retObjectMaxRequestLength.getClass() : "null", retObjectMaxRequestLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxRequestLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -509,13 +566,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectMaxUrlLength = classInstance.Get("MaxUrlLength");
             return (int)retObjectMaxUrlLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxUrlLengthError = true;
             java.lang.String retObjectMaxUrlLength_ToString = retObjectMaxUrlLength == null ? "null" : retObjectMaxUrlLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxUrlLengthNumber = (java.lang.Number)retObjectMaxUrlLength;
-                return retObjectMaxUrlLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxUrlLength != null ? retObjectMaxUrlLength.getClass() : "null", retObjectMaxUrlLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxUrlLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxUrlLengthClass = retObjectMaxUrlLength.getClass();
+                    // java.lang.reflect.Method retObjectMaxUrlLengthMethod = retObjectMaxUrlLengthClass.getMethod("intValue");
+                    // return (int)retObjectMaxUrlLengthMethod.invoke(retObjectMaxUrlLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxUrlLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxUrlLength_ToString);
+                    return retObjectMaxUrlLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxUrlLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxUrlLength != null ? retObjectMaxUrlLength.getClass() : "null", retObjectMaxUrlLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxUrlLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -540,13 +616,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectMaxWaitChangeNotification = classInstance.Get("MaxWaitChangeNotification");
             return (int)retObjectMaxWaitChangeNotification;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxWaitChangeNotificationError = true;
             java.lang.String retObjectMaxWaitChangeNotification_ToString = retObjectMaxWaitChangeNotification == null ? "null" : retObjectMaxWaitChangeNotification.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxWaitChangeNotificationNumber = (java.lang.Number)retObjectMaxWaitChangeNotification;
-                return retObjectMaxWaitChangeNotificationNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxWaitChangeNotification != null ? retObjectMaxWaitChangeNotification.getClass() : "null", retObjectMaxWaitChangeNotification_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxWaitChangeNotification != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxWaitChangeNotificationClass = retObjectMaxWaitChangeNotification.getClass();
+                    // java.lang.reflect.Method retObjectMaxWaitChangeNotificationMethod = retObjectMaxWaitChangeNotificationClass.getMethod("intValue");
+                    // return (int)retObjectMaxWaitChangeNotificationMethod.invoke(retObjectMaxWaitChangeNotification);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxWaitChangeNotificationNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxWaitChangeNotification_ToString);
+                    return retObjectMaxWaitChangeNotificationNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxWaitChangeNotificationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxWaitChangeNotification != null ? retObjectMaxWaitChangeNotification.getClass() : "null", retObjectMaxWaitChangeNotification_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxWaitChangeNotificationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -571,13 +666,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectMinFreeThreads = classInstance.Get("MinFreeThreads");
             return (int)retObjectMinFreeThreads;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinFreeThreadsError = true;
             java.lang.String retObjectMinFreeThreads_ToString = retObjectMinFreeThreads == null ? "null" : retObjectMinFreeThreads.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinFreeThreadsNumber = (java.lang.Number)retObjectMinFreeThreads;
-                return retObjectMinFreeThreadsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinFreeThreads != null ? retObjectMinFreeThreads.getClass() : "null", retObjectMinFreeThreads_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinFreeThreads != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinFreeThreadsClass = retObjectMinFreeThreads.getClass();
+                    // java.lang.reflect.Method retObjectMinFreeThreadsMethod = retObjectMinFreeThreadsClass.getMethod("intValue");
+                    // return (int)retObjectMinFreeThreadsMethod.invoke(retObjectMinFreeThreads);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinFreeThreadsNumber = java.text.NumberFormat.getInstance().parse(retObjectMinFreeThreads_ToString);
+                    return retObjectMinFreeThreadsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinFreeThreadsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinFreeThreads != null ? retObjectMinFreeThreads.getClass() : "null", retObjectMinFreeThreads_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinFreeThreadsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -602,13 +716,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectMinLocalRequestFreeThreads = classInstance.Get("MinLocalRequestFreeThreads");
             return (int)retObjectMinLocalRequestFreeThreads;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinLocalRequestFreeThreadsError = true;
             java.lang.String retObjectMinLocalRequestFreeThreads_ToString = retObjectMinLocalRequestFreeThreads == null ? "null" : retObjectMinLocalRequestFreeThreads.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinLocalRequestFreeThreadsNumber = (java.lang.Number)retObjectMinLocalRequestFreeThreads;
-                return retObjectMinLocalRequestFreeThreadsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinLocalRequestFreeThreads != null ? retObjectMinLocalRequestFreeThreads.getClass() : "null", retObjectMinLocalRequestFreeThreads_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinLocalRequestFreeThreads != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinLocalRequestFreeThreadsClass = retObjectMinLocalRequestFreeThreads.getClass();
+                    // java.lang.reflect.Method retObjectMinLocalRequestFreeThreadsMethod = retObjectMinLocalRequestFreeThreadsClass.getMethod("intValue");
+                    // return (int)retObjectMinLocalRequestFreeThreadsMethod.invoke(retObjectMinLocalRequestFreeThreads);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinLocalRequestFreeThreadsNumber = java.text.NumberFormat.getInstance().parse(retObjectMinLocalRequestFreeThreads_ToString);
+                    return retObjectMinLocalRequestFreeThreadsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinLocalRequestFreeThreadsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinLocalRequestFreeThreads != null ? retObjectMinLocalRequestFreeThreads.getClass() : "null", retObjectMinLocalRequestFreeThreads_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinLocalRequestFreeThreadsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -633,13 +766,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectRequestLengthDiskThreshold = classInstance.Get("RequestLengthDiskThreshold");
             return (int)retObjectRequestLengthDiskThreshold;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRequestLengthDiskThresholdError = true;
             java.lang.String retObjectRequestLengthDiskThreshold_ToString = retObjectRequestLengthDiskThreshold == null ? "null" : retObjectRequestLengthDiskThreshold.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRequestLengthDiskThresholdNumber = (java.lang.Number)retObjectRequestLengthDiskThreshold;
-                return retObjectRequestLengthDiskThresholdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRequestLengthDiskThreshold != null ? retObjectRequestLengthDiskThreshold.getClass() : "null", retObjectRequestLengthDiskThreshold_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRequestLengthDiskThreshold != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRequestLengthDiskThresholdClass = retObjectRequestLengthDiskThreshold.getClass();
+                    // java.lang.reflect.Method retObjectRequestLengthDiskThresholdMethod = retObjectRequestLengthDiskThresholdClass.getMethod("intValue");
+                    // return (int)retObjectRequestLengthDiskThresholdMethod.invoke(retObjectRequestLengthDiskThreshold);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRequestLengthDiskThresholdNumber = java.text.NumberFormat.getInstance().parse(retObjectRequestLengthDiskThreshold_ToString);
+                    return retObjectRequestLengthDiskThresholdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRequestLengthDiskThresholdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRequestLengthDiskThreshold != null ? retObjectRequestLengthDiskThreshold.getClass() : "null", retObjectRequestLengthDiskThreshold_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRequestLengthDiskThresholdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -664,13 +816,32 @@ public class HttpRuntimeSection extends ConfigurationSection  {
             retObjectWaitChangeNotification = classInstance.Get("WaitChangeNotification");
             return (int)retObjectWaitChangeNotification;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWaitChangeNotificationError = true;
             java.lang.String retObjectWaitChangeNotification_ToString = retObjectWaitChangeNotification == null ? "null" : retObjectWaitChangeNotification.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWaitChangeNotificationNumber = (java.lang.Number)retObjectWaitChangeNotification;
-                return retObjectWaitChangeNotificationNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWaitChangeNotification != null ? retObjectWaitChangeNotification.getClass() : "null", retObjectWaitChangeNotification_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWaitChangeNotification != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWaitChangeNotificationClass = retObjectWaitChangeNotification.getClass();
+                    // java.lang.reflect.Method retObjectWaitChangeNotificationMethod = retObjectWaitChangeNotificationClass.getMethod("intValue");
+                    // return (int)retObjectWaitChangeNotificationMethod.invoke(retObjectWaitChangeNotification);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWaitChangeNotificationNumber = java.text.NumberFormat.getInstance().parse(retObjectWaitChangeNotification_ToString);
+                    return retObjectWaitChangeNotificationNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWaitChangeNotificationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWaitChangeNotification != null ? retObjectWaitChangeNotification.getClass() : "null", retObjectWaitChangeNotification_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWaitChangeNotificationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

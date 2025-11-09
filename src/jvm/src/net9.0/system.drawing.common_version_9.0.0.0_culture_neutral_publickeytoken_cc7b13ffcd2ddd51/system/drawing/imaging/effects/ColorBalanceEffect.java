@@ -176,13 +176,32 @@ public class ColorBalanceEffect extends Effect  {
             retObjectCyanRed = classInstance.Get("CyanRed");
             return (int)retObjectCyanRed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCyanRedError = true;
             java.lang.String retObjectCyanRed_ToString = retObjectCyanRed == null ? "null" : retObjectCyanRed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCyanRedNumber = (java.lang.Number)retObjectCyanRed;
-                return retObjectCyanRedNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCyanRed != null ? retObjectCyanRed.getClass() : "null", retObjectCyanRed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCyanRed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCyanRedClass = retObjectCyanRed.getClass();
+                    // java.lang.reflect.Method retObjectCyanRedMethod = retObjectCyanRedClass.getMethod("intValue");
+                    // return (int)retObjectCyanRedMethod.invoke(retObjectCyanRed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCyanRedNumber = java.text.NumberFormat.getInstance().parse(retObjectCyanRed_ToString);
+                    return retObjectCyanRedNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCyanRedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCyanRed != null ? retObjectCyanRed.getClass() : "null", retObjectCyanRed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCyanRedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class ColorBalanceEffect extends Effect  {
             retObjectMagentaGreen = classInstance.Get("MagentaGreen");
             return (int)retObjectMagentaGreen;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMagentaGreenError = true;
             java.lang.String retObjectMagentaGreen_ToString = retObjectMagentaGreen == null ? "null" : retObjectMagentaGreen.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMagentaGreenNumber = (java.lang.Number)retObjectMagentaGreen;
-                return retObjectMagentaGreenNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMagentaGreen != null ? retObjectMagentaGreen.getClass() : "null", retObjectMagentaGreen_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMagentaGreen != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMagentaGreenClass = retObjectMagentaGreen.getClass();
+                    // java.lang.reflect.Method retObjectMagentaGreenMethod = retObjectMagentaGreenClass.getMethod("intValue");
+                    // return (int)retObjectMagentaGreenMethod.invoke(retObjectMagentaGreen);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMagentaGreenNumber = java.text.NumberFormat.getInstance().parse(retObjectMagentaGreen_ToString);
+                    return retObjectMagentaGreenNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMagentaGreenError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMagentaGreen != null ? retObjectMagentaGreen.getClass() : "null", retObjectMagentaGreen_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMagentaGreenError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,13 +256,32 @@ public class ColorBalanceEffect extends Effect  {
             retObjectYellowBlue = classInstance.Get("YellowBlue");
             return (int)retObjectYellowBlue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportYellowBlueError = true;
             java.lang.String retObjectYellowBlue_ToString = retObjectYellowBlue == null ? "null" : retObjectYellowBlue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectYellowBlueNumber = (java.lang.Number)retObjectYellowBlue;
-                return retObjectYellowBlueNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectYellowBlue != null ? retObjectYellowBlue.getClass() : "null", retObjectYellowBlue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectYellowBlue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectYellowBlueClass = retObjectYellowBlue.getClass();
+                    // java.lang.reflect.Method retObjectYellowBlueMethod = retObjectYellowBlueClass.getMethod("intValue");
+                    // return (int)retObjectYellowBlueMethod.invoke(retObjectYellowBlue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectYellowBlueNumber = java.text.NumberFormat.getInstance().parse(retObjectYellowBlue_ToString);
+                    return retObjectYellowBlueNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportYellowBlueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectYellowBlue != null ? retObjectYellowBlue.getClass() : "null", retObjectYellowBlue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportYellowBlueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

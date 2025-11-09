@@ -180,13 +180,32 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
             retObjectGetZIndex = classType.Invoke("GetZIndex", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetZIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetZIndexError = true;
             java.lang.String retObjectGetZIndex_ToString = retObjectGetZIndex == null ? "null" : retObjectGetZIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetZIndexNumber = (java.lang.Number)retObjectGetZIndex;
-                return retObjectGetZIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetZIndex != null ? retObjectGetZIndex.getClass() : "null", retObjectGetZIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetZIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetZIndexClass = retObjectGetZIndex.getClass();
+                    // java.lang.reflect.Method retObjectGetZIndexMethod = retObjectGetZIndexClass.getMethod("intValue");
+                    // return (int)retObjectGetZIndexMethod.invoke(retObjectGetZIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetZIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectGetZIndex_ToString);
+                    return retObjectGetZIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetZIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetZIndex != null ? retObjectGetZIndex.getClass() : "null", retObjectGetZIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetZIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

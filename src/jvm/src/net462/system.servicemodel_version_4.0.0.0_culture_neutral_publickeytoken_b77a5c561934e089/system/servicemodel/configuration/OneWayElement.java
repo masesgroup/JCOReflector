@@ -219,13 +219,32 @@ public class OneWayElement extends BindingElementExtensionElement  {
             retObjectMaxAcceptedChannels = classInstance.Get("MaxAcceptedChannels");
             return (int)retObjectMaxAcceptedChannels;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxAcceptedChannelsError = true;
             java.lang.String retObjectMaxAcceptedChannels_ToString = retObjectMaxAcceptedChannels == null ? "null" : retObjectMaxAcceptedChannels.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxAcceptedChannelsNumber = (java.lang.Number)retObjectMaxAcceptedChannels;
-                return retObjectMaxAcceptedChannelsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxAcceptedChannels != null ? retObjectMaxAcceptedChannels.getClass() : "null", retObjectMaxAcceptedChannels_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxAcceptedChannels != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxAcceptedChannelsClass = retObjectMaxAcceptedChannels.getClass();
+                    // java.lang.reflect.Method retObjectMaxAcceptedChannelsMethod = retObjectMaxAcceptedChannelsClass.getMethod("intValue");
+                    // return (int)retObjectMaxAcceptedChannelsMethod.invoke(retObjectMaxAcceptedChannels);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxAcceptedChannelsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxAcceptedChannels_ToString);
+                    return retObjectMaxAcceptedChannelsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxAcceptedChannelsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxAcceptedChannels != null ? retObjectMaxAcceptedChannels.getClass() : "null", retObjectMaxAcceptedChannels_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxAcceptedChannelsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -657,13 +657,32 @@ public class EventLog extends Component  {
             retObjectMinimumRetentionDays = classInstance.Get("MinimumRetentionDays");
             return (int)retObjectMinimumRetentionDays;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinimumRetentionDaysError = true;
             java.lang.String retObjectMinimumRetentionDays_ToString = retObjectMinimumRetentionDays == null ? "null" : retObjectMinimumRetentionDays.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinimumRetentionDaysNumber = (java.lang.Number)retObjectMinimumRetentionDays;
-                return retObjectMinimumRetentionDaysNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumRetentionDays != null ? retObjectMinimumRetentionDays.getClass() : "null", retObjectMinimumRetentionDays_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinimumRetentionDays != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinimumRetentionDaysClass = retObjectMinimumRetentionDays.getClass();
+                    // java.lang.reflect.Method retObjectMinimumRetentionDaysMethod = retObjectMinimumRetentionDaysClass.getMethod("intValue");
+                    // return (int)retObjectMinimumRetentionDaysMethod.invoke(retObjectMinimumRetentionDays);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinimumRetentionDaysNumber = java.text.NumberFormat.getInstance().parse(retObjectMinimumRetentionDays_ToString);
+                    return retObjectMinimumRetentionDaysNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinimumRetentionDaysError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinimumRetentionDays != null ? retObjectMinimumRetentionDays.getClass() : "null", retObjectMinimumRetentionDays_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinimumRetentionDaysError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -678,13 +697,32 @@ public class EventLog extends Component  {
             retObjectMaximumKilobytes = classInstance.Get("MaximumKilobytes");
             return (long)retObjectMaximumKilobytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumKilobytesError = true;
             java.lang.String retObjectMaximumKilobytes_ToString = retObjectMaximumKilobytes == null ? "null" : retObjectMaximumKilobytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumKilobytesNumber = (java.lang.Number)retObjectMaximumKilobytes;
-                return retObjectMaximumKilobytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectMaximumKilobytes != null ? retObjectMaximumKilobytes.getClass() : "null", retObjectMaximumKilobytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumKilobytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumKilobytesClass = retObjectMaximumKilobytes.getClass();
+                    // java.lang.reflect.Method retObjectMaximumKilobytesMethod = retObjectMaximumKilobytesClass.getMethod("longValue");
+                    // return (long)retObjectMaximumKilobytesMethod.invoke(retObjectMaximumKilobytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumKilobytesNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumKilobytes_ToString);
+                    return retObjectMaximumKilobytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumKilobytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumKilobytes != null ? retObjectMaximumKilobytes.getClass() : "null", retObjectMaximumKilobytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumKilobytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

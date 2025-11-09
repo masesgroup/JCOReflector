@@ -217,13 +217,32 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
             retObjectTitleImageIndex = classInstance.Get("TitleImageIndex");
             return (int)retObjectTitleImageIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTitleImageIndexError = true;
             java.lang.String retObjectTitleImageIndex_ToString = retObjectTitleImageIndex == null ? "null" : retObjectTitleImageIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTitleImageIndexNumber = (java.lang.Number)retObjectTitleImageIndex;
-                return retObjectTitleImageIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTitleImageIndex != null ? retObjectTitleImageIndex.getClass() : "null", retObjectTitleImageIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTitleImageIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTitleImageIndexClass = retObjectTitleImageIndex.getClass();
+                    // java.lang.reflect.Method retObjectTitleImageIndexMethod = retObjectTitleImageIndexClass.getMethod("intValue");
+                    // return (int)retObjectTitleImageIndexMethod.invoke(retObjectTitleImageIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTitleImageIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectTitleImageIndex_ToString);
+                    return retObjectTitleImageIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTitleImageIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTitleImageIndex != null ? retObjectTitleImageIndex.getClass() : "null", retObjectTitleImageIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTitleImageIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

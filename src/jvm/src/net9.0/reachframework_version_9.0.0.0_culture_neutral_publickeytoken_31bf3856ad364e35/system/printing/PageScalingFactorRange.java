@@ -165,13 +165,32 @@ public class PageScalingFactorRange extends NetObject  {
             retObjectMaximumScale = classInstance.Get("MaximumScale");
             return (int)retObjectMaximumScale;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumScaleError = true;
             java.lang.String retObjectMaximumScale_ToString = retObjectMaximumScale == null ? "null" : retObjectMaximumScale.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumScaleNumber = (java.lang.Number)retObjectMaximumScale;
-                return retObjectMaximumScaleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumScale != null ? retObjectMaximumScale.getClass() : "null", retObjectMaximumScale_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumScale != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumScaleClass = retObjectMaximumScale.getClass();
+                    // java.lang.reflect.Method retObjectMaximumScaleMethod = retObjectMaximumScaleClass.getMethod("intValue");
+                    // return (int)retObjectMaximumScaleMethod.invoke(retObjectMaximumScale);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumScaleNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumScale_ToString);
+                    return retObjectMaximumScaleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumScaleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumScale != null ? retObjectMaximumScale.getClass() : "null", retObjectMaximumScale_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumScaleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,13 +205,32 @@ public class PageScalingFactorRange extends NetObject  {
             retObjectMinimumScale = classInstance.Get("MinimumScale");
             return (int)retObjectMinimumScale;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinimumScaleError = true;
             java.lang.String retObjectMinimumScale_ToString = retObjectMinimumScale == null ? "null" : retObjectMinimumScale.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinimumScaleNumber = (java.lang.Number)retObjectMinimumScale;
-                return retObjectMinimumScaleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimumScale != null ? retObjectMinimumScale.getClass() : "null", retObjectMinimumScale_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinimumScale != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinimumScaleClass = retObjectMinimumScale.getClass();
+                    // java.lang.reflect.Method retObjectMinimumScaleMethod = retObjectMinimumScaleClass.getMethod("intValue");
+                    // return (int)retObjectMinimumScaleMethod.invoke(retObjectMinimumScale);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinimumScaleNumber = java.text.NumberFormat.getInstance().parse(retObjectMinimumScale_ToString);
+                    return retObjectMinimumScaleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinimumScaleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinimumScale != null ? retObjectMinimumScale.getClass() : "null", retObjectMinimumScale_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinimumScaleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

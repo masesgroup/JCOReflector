@@ -256,13 +256,32 @@ public class CodeTypeReference extends CodeObject  {
             retObjectArrayRank = classInstance.Get("ArrayRank");
             return (int)retObjectArrayRank;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportArrayRankError = true;
             java.lang.String retObjectArrayRank_ToString = retObjectArrayRank == null ? "null" : retObjectArrayRank.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectArrayRankNumber = (java.lang.Number)retObjectArrayRank;
-                return retObjectArrayRankNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectArrayRank != null ? retObjectArrayRank.getClass() : "null", retObjectArrayRank_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectArrayRank != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectArrayRankClass = retObjectArrayRank.getClass();
+                    // java.lang.reflect.Method retObjectArrayRankMethod = retObjectArrayRankClass.getMethod("intValue");
+                    // return (int)retObjectArrayRankMethod.invoke(retObjectArrayRank);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectArrayRankNumber = java.text.NumberFormat.getInstance().parse(retObjectArrayRank_ToString);
+                    return retObjectArrayRankNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportArrayRankError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectArrayRank != null ? retObjectArrayRank.getClass() : "null", retObjectArrayRank_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportArrayRankError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

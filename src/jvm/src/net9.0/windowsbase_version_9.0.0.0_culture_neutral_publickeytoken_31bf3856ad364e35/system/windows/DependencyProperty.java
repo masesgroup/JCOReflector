@@ -458,13 +458,32 @@ public class DependencyProperty extends NetObject  {
             retObjectGlobalIndex = classInstance.Get("GlobalIndex");
             return (int)retObjectGlobalIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGlobalIndexError = true;
             java.lang.String retObjectGlobalIndex_ToString = retObjectGlobalIndex == null ? "null" : retObjectGlobalIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGlobalIndexNumber = (java.lang.Number)retObjectGlobalIndex;
-                return retObjectGlobalIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGlobalIndex != null ? retObjectGlobalIndex.getClass() : "null", retObjectGlobalIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGlobalIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGlobalIndexClass = retObjectGlobalIndex.getClass();
+                    // java.lang.reflect.Method retObjectGlobalIndexMethod = retObjectGlobalIndexClass.getMethod("intValue");
+                    // return (int)retObjectGlobalIndexMethod.invoke(retObjectGlobalIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGlobalIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectGlobalIndex_ToString);
+                    return retObjectGlobalIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGlobalIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGlobalIndex != null ? retObjectGlobalIndex.getClass() : "null", retObjectGlobalIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGlobalIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -197,13 +197,32 @@ public class BitVector32 extends ValueType  {
             retObjectCreateMask = classType.Invoke("CreateMask");
             return (int)retObjectCreateMask;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCreateMaskError = true;
             java.lang.String retObjectCreateMask_ToString = retObjectCreateMask == null ? "null" : retObjectCreateMask.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCreateMaskNumber = (java.lang.Number)retObjectCreateMask;
-                return retObjectCreateMaskNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCreateMask != null ? retObjectCreateMask.getClass() : "null", retObjectCreateMask_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCreateMask != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCreateMaskClass = retObjectCreateMask.getClass();
+                    // java.lang.reflect.Method retObjectCreateMaskMethod = retObjectCreateMaskClass.getMethod("intValue");
+                    // return (int)retObjectCreateMaskMethod.invoke(retObjectCreateMask);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCreateMaskNumber = java.text.NumberFormat.getInstance().parse(retObjectCreateMask_ToString);
+                    return retObjectCreateMaskNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCreateMaskError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCreateMask != null ? retObjectCreateMask.getClass() : "null", retObjectCreateMask_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCreateMaskError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,13 +237,32 @@ public class BitVector32 extends ValueType  {
             retObjectCreateMask = classType.Invoke("CreateMask", previous);
             return (int)retObjectCreateMask;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCreateMaskError = true;
             java.lang.String retObjectCreateMask_ToString = retObjectCreateMask == null ? "null" : retObjectCreateMask.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCreateMaskNumber = (java.lang.Number)retObjectCreateMask;
-                return retObjectCreateMaskNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCreateMask != null ? retObjectCreateMask.getClass() : "null", retObjectCreateMask_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCreateMask != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCreateMaskClass = retObjectCreateMask.getClass();
+                    // java.lang.reflect.Method retObjectCreateMaskMethod = retObjectCreateMaskClass.getMethod("intValue");
+                    // return (int)retObjectCreateMaskMethod.invoke(retObjectCreateMask);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCreateMaskNumber = java.text.NumberFormat.getInstance().parse(retObjectCreateMask_ToString);
+                    return retObjectCreateMaskNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCreateMaskError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCreateMask != null ? retObjectCreateMask.getClass() : "null", retObjectCreateMask_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCreateMaskError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -257,13 +295,32 @@ public class BitVector32 extends ValueType  {
             retObjectData = classInstance.Get("Data");
             return (int)retObjectData;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDataError = true;
             java.lang.String retObjectData_ToString = retObjectData == null ? "null" : retObjectData.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDataNumber = (java.lang.Number)retObjectData;
-                return retObjectDataNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectData != null ? retObjectData.getClass() : "null", retObjectData_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectData != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDataClass = retObjectData.getClass();
+                    // java.lang.reflect.Method retObjectDataMethod = retObjectDataClass.getMethod("intValue");
+                    // return (int)retObjectDataMethod.invoke(retObjectData);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDataNumber = java.text.NumberFormat.getInstance().parse(retObjectData_ToString);
+                    return retObjectDataNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDataError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectData != null ? retObjectData.getClass() : "null", retObjectData_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDataError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

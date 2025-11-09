@@ -172,13 +172,32 @@ public class SpotLocation extends NetObject  {
             retObjectStartX = classInstance.Get("StartX");
             return (double)retObjectStartX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStartXError = true;
             java.lang.String retObjectStartX_ToString = retObjectStartX == null ? "null" : retObjectStartX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStartXNumber = (java.lang.Number)retObjectStartX;
-                return retObjectStartXNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStartX != null ? retObjectStartX.getClass() : "null", retObjectStartX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStartX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStartXClass = retObjectStartX.getClass();
+                    // java.lang.reflect.Method retObjectStartXMethod = retObjectStartXClass.getMethod("doubleValue");
+                    // return (double)retObjectStartXMethod.invoke(retObjectStartX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStartXNumber = java.text.NumberFormat.getInstance().parse(retObjectStartX_ToString);
+                    return retObjectStartXNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStartXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStartX != null ? retObjectStartX.getClass() : "null", retObjectStartX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStartXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,13 +222,32 @@ public class SpotLocation extends NetObject  {
             retObjectStartY = classInstance.Get("StartY");
             return (double)retObjectStartY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStartYError = true;
             java.lang.String retObjectStartY_ToString = retObjectStartY == null ? "null" : retObjectStartY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStartYNumber = (java.lang.Number)retObjectStartY;
-                return retObjectStartYNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStartY != null ? retObjectStartY.getClass() : "null", retObjectStartY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStartY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStartYClass = retObjectStartY.getClass();
+                    // java.lang.reflect.Method retObjectStartYMethod = retObjectStartYClass.getMethod("doubleValue");
+                    // return (double)retObjectStartYMethod.invoke(retObjectStartY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStartYNumber = java.text.NumberFormat.getInstance().parse(retObjectStartY_ToString);
+                    return retObjectStartYNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStartYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStartY != null ? retObjectStartY.getClass() : "null", retObjectStartY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStartYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -229,13 +229,32 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectAddParticipant = classInstance.Invoke("AddParticipant");
             return (long)retObjectAddParticipant;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddParticipantError = true;
             java.lang.String retObjectAddParticipant_ToString = retObjectAddParticipant == null ? "null" : retObjectAddParticipant.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddParticipantNumber = (java.lang.Number)retObjectAddParticipant;
-                return retObjectAddParticipantNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAddParticipant != null ? retObjectAddParticipant.getClass() : "null", retObjectAddParticipant_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAddParticipant != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddParticipantClass = retObjectAddParticipant.getClass();
+                    // java.lang.reflect.Method retObjectAddParticipantMethod = retObjectAddParticipantClass.getMethod("longValue");
+                    // return (long)retObjectAddParticipantMethod.invoke(retObjectAddParticipant);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddParticipantNumber = java.text.NumberFormat.getInstance().parse(retObjectAddParticipant_ToString);
+                    return retObjectAddParticipantNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddParticipantError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAddParticipant != null ? retObjectAddParticipant.getClass() : "null", retObjectAddParticipant_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddParticipantError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -250,13 +269,32 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectAddParticipants = classInstance.Invoke("AddParticipants", participantCount);
             return (long)retObjectAddParticipants;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAddParticipantsError = true;
             java.lang.String retObjectAddParticipants_ToString = retObjectAddParticipants == null ? "null" : retObjectAddParticipants.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAddParticipantsNumber = (java.lang.Number)retObjectAddParticipants;
-                return retObjectAddParticipantsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectAddParticipants != null ? retObjectAddParticipants.getClass() : "null", retObjectAddParticipants_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAddParticipants != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAddParticipantsClass = retObjectAddParticipants.getClass();
+                    // java.lang.reflect.Method retObjectAddParticipantsMethod = retObjectAddParticipantsClass.getMethod("longValue");
+                    // return (long)retObjectAddParticipantsMethod.invoke(retObjectAddParticipants);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAddParticipantsNumber = java.text.NumberFormat.getInstance().parse(retObjectAddParticipants_ToString);
+                    return retObjectAddParticipantsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAddParticipantsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAddParticipants != null ? retObjectAddParticipants.getClass() : "null", retObjectAddParticipants_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAddParticipantsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -338,13 +376,32 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectParticipantCount = classInstance.Get("ParticipantCount");
             return (int)retObjectParticipantCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportParticipantCountError = true;
             java.lang.String retObjectParticipantCount_ToString = retObjectParticipantCount == null ? "null" : retObjectParticipantCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectParticipantCountNumber = (java.lang.Number)retObjectParticipantCount;
-                return retObjectParticipantCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectParticipantCount != null ? retObjectParticipantCount.getClass() : "null", retObjectParticipantCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectParticipantCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectParticipantCountClass = retObjectParticipantCount.getClass();
+                    // java.lang.reflect.Method retObjectParticipantCountMethod = retObjectParticipantCountClass.getMethod("intValue");
+                    // return (int)retObjectParticipantCountMethod.invoke(retObjectParticipantCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectParticipantCountNumber = java.text.NumberFormat.getInstance().parse(retObjectParticipantCount_ToString);
+                    return retObjectParticipantCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportParticipantCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectParticipantCount != null ? retObjectParticipantCount.getClass() : "null", retObjectParticipantCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportParticipantCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -359,13 +416,32 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectParticipantsRemaining = classInstance.Get("ParticipantsRemaining");
             return (int)retObjectParticipantsRemaining;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportParticipantsRemainingError = true;
             java.lang.String retObjectParticipantsRemaining_ToString = retObjectParticipantsRemaining == null ? "null" : retObjectParticipantsRemaining.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectParticipantsRemainingNumber = (java.lang.Number)retObjectParticipantsRemaining;
-                return retObjectParticipantsRemainingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectParticipantsRemaining != null ? retObjectParticipantsRemaining.getClass() : "null", retObjectParticipantsRemaining_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectParticipantsRemaining != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectParticipantsRemainingClass = retObjectParticipantsRemaining.getClass();
+                    // java.lang.reflect.Method retObjectParticipantsRemainingMethod = retObjectParticipantsRemainingClass.getMethod("intValue");
+                    // return (int)retObjectParticipantsRemainingMethod.invoke(retObjectParticipantsRemaining);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectParticipantsRemainingNumber = java.text.NumberFormat.getInstance().parse(retObjectParticipantsRemaining_ToString);
+                    return retObjectParticipantsRemainingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportParticipantsRemainingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectParticipantsRemaining != null ? retObjectParticipantsRemaining.getClass() : "null", retObjectParticipantsRemaining_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportParticipantsRemainingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -380,13 +456,32 @@ public class Barrier extends NetObject implements AutoCloseable {
             retObjectCurrentPhaseNumber = classInstance.Get("CurrentPhaseNumber");
             return (long)retObjectCurrentPhaseNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentPhaseNumberError = true;
             java.lang.String retObjectCurrentPhaseNumber_ToString = retObjectCurrentPhaseNumber == null ? "null" : retObjectCurrentPhaseNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentPhaseNumberNumber = (java.lang.Number)retObjectCurrentPhaseNumber;
-                return retObjectCurrentPhaseNumberNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCurrentPhaseNumber != null ? retObjectCurrentPhaseNumber.getClass() : "null", retObjectCurrentPhaseNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentPhaseNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentPhaseNumberClass = retObjectCurrentPhaseNumber.getClass();
+                    // java.lang.reflect.Method retObjectCurrentPhaseNumberMethod = retObjectCurrentPhaseNumberClass.getMethod("longValue");
+                    // return (long)retObjectCurrentPhaseNumberMethod.invoke(retObjectCurrentPhaseNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentPhaseNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentPhaseNumber_ToString);
+                    return retObjectCurrentPhaseNumberNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentPhaseNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentPhaseNumber != null ? retObjectCurrentPhaseNumber.getClass() : "null", retObjectCurrentPhaseNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentPhaseNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

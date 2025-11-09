@@ -278,13 +278,32 @@ public class HttpClientCertificate extends NameValueCollection  {
             retObjectCertEncoding = classInstance.Get("CertEncoding");
             return (int)retObjectCertEncoding;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCertEncodingError = true;
             java.lang.String retObjectCertEncoding_ToString = retObjectCertEncoding == null ? "null" : retObjectCertEncoding.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCertEncodingNumber = (java.lang.Number)retObjectCertEncoding;
-                return retObjectCertEncodingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCertEncoding != null ? retObjectCertEncoding.getClass() : "null", retObjectCertEncoding_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCertEncoding != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCertEncodingClass = retObjectCertEncoding.getClass();
+                    // java.lang.reflect.Method retObjectCertEncodingMethod = retObjectCertEncodingClass.getMethod("intValue");
+                    // return (int)retObjectCertEncodingMethod.invoke(retObjectCertEncoding);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCertEncodingNumber = java.text.NumberFormat.getInstance().parse(retObjectCertEncoding_ToString);
+                    return retObjectCertEncodingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCertEncodingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCertEncoding != null ? retObjectCertEncoding.getClass() : "null", retObjectCertEncoding_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCertEncodingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -299,13 +318,32 @@ public class HttpClientCertificate extends NameValueCollection  {
             retObjectFlags = classInstance.Get("Flags");
             return (int)retObjectFlags;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFlagsError = true;
             java.lang.String retObjectFlags_ToString = retObjectFlags == null ? "null" : retObjectFlags.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFlagsNumber = (java.lang.Number)retObjectFlags;
-                return retObjectFlagsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFlags != null ? retObjectFlags.getClass() : "null", retObjectFlags_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFlags != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFlagsClass = retObjectFlags.getClass();
+                    // java.lang.reflect.Method retObjectFlagsMethod = retObjectFlagsClass.getMethod("intValue");
+                    // return (int)retObjectFlagsMethod.invoke(retObjectFlags);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFlagsNumber = java.text.NumberFormat.getInstance().parse(retObjectFlags_ToString);
+                    return retObjectFlagsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFlagsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFlags != null ? retObjectFlags.getClass() : "null", retObjectFlags_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFlagsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -320,13 +358,32 @@ public class HttpClientCertificate extends NameValueCollection  {
             retObjectKeySize = classInstance.Get("KeySize");
             return (int)retObjectKeySize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportKeySizeError = true;
             java.lang.String retObjectKeySize_ToString = retObjectKeySize == null ? "null" : retObjectKeySize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectKeySizeNumber = (java.lang.Number)retObjectKeySize;
-                return retObjectKeySizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeySize != null ? retObjectKeySize.getClass() : "null", retObjectKeySize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectKeySize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectKeySizeClass = retObjectKeySize.getClass();
+                    // java.lang.reflect.Method retObjectKeySizeMethod = retObjectKeySizeClass.getMethod("intValue");
+                    // return (int)retObjectKeySizeMethod.invoke(retObjectKeySize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectKeySizeNumber = java.text.NumberFormat.getInstance().parse(retObjectKeySize_ToString);
+                    return retObjectKeySizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportKeySizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectKeySize != null ? retObjectKeySize.getClass() : "null", retObjectKeySize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportKeySizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -341,13 +398,32 @@ public class HttpClientCertificate extends NameValueCollection  {
             retObjectSecretKeySize = classInstance.Get("SecretKeySize");
             return (int)retObjectSecretKeySize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSecretKeySizeError = true;
             java.lang.String retObjectSecretKeySize_ToString = retObjectSecretKeySize == null ? "null" : retObjectSecretKeySize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSecretKeySizeNumber = (java.lang.Number)retObjectSecretKeySize;
-                return retObjectSecretKeySizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSecretKeySize != null ? retObjectSecretKeySize.getClass() : "null", retObjectSecretKeySize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSecretKeySize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSecretKeySizeClass = retObjectSecretKeySize.getClass();
+                    // java.lang.reflect.Method retObjectSecretKeySizeMethod = retObjectSecretKeySizeClass.getMethod("intValue");
+                    // return (int)retObjectSecretKeySizeMethod.invoke(retObjectSecretKeySize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSecretKeySizeNumber = java.text.NumberFormat.getInstance().parse(retObjectSecretKeySize_ToString);
+                    return retObjectSecretKeySizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSecretKeySizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSecretKeySize != null ? retObjectSecretKeySize.getClass() : "null", retObjectSecretKeySize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSecretKeySizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

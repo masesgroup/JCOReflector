@@ -194,13 +194,32 @@ public class UpdateCheckInfo extends NetObject  {
             retObjectUpdateSizeBytes = classInstance.Get("UpdateSizeBytes");
             return (long)retObjectUpdateSizeBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUpdateSizeBytesError = true;
             java.lang.String retObjectUpdateSizeBytes_ToString = retObjectUpdateSizeBytes == null ? "null" : retObjectUpdateSizeBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUpdateSizeBytesNumber = (java.lang.Number)retObjectUpdateSizeBytes;
-                return retObjectUpdateSizeBytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUpdateSizeBytes != null ? retObjectUpdateSizeBytes.getClass() : "null", retObjectUpdateSizeBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUpdateSizeBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUpdateSizeBytesClass = retObjectUpdateSizeBytes.getClass();
+                    // java.lang.reflect.Method retObjectUpdateSizeBytesMethod = retObjectUpdateSizeBytesClass.getMethod("longValue");
+                    // return (long)retObjectUpdateSizeBytesMethod.invoke(retObjectUpdateSizeBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUpdateSizeBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectUpdateSizeBytes_ToString);
+                    return retObjectUpdateSizeBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUpdateSizeBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUpdateSizeBytes != null ? retObjectUpdateSizeBytes.getClass() : "null", retObjectUpdateSizeBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUpdateSizeBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

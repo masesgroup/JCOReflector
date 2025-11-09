@@ -200,13 +200,32 @@ public class WizardNavigationEventArgs extends EventArgs  {
             retObjectCurrentStepIndex = classInstance.Get("CurrentStepIndex");
             return (int)retObjectCurrentStepIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentStepIndexError = true;
             java.lang.String retObjectCurrentStepIndex_ToString = retObjectCurrentStepIndex == null ? "null" : retObjectCurrentStepIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentStepIndexNumber = (java.lang.Number)retObjectCurrentStepIndex;
-                return retObjectCurrentStepIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentStepIndex != null ? retObjectCurrentStepIndex.getClass() : "null", retObjectCurrentStepIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentStepIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentStepIndexClass = retObjectCurrentStepIndex.getClass();
+                    // java.lang.reflect.Method retObjectCurrentStepIndexMethod = retObjectCurrentStepIndexClass.getMethod("intValue");
+                    // return (int)retObjectCurrentStepIndexMethod.invoke(retObjectCurrentStepIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentStepIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentStepIndex_ToString);
+                    return retObjectCurrentStepIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentStepIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentStepIndex != null ? retObjectCurrentStepIndex.getClass() : "null", retObjectCurrentStepIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentStepIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,13 +240,32 @@ public class WizardNavigationEventArgs extends EventArgs  {
             retObjectNextStepIndex = classInstance.Get("NextStepIndex");
             return (int)retObjectNextStepIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNextStepIndexError = true;
             java.lang.String retObjectNextStepIndex_ToString = retObjectNextStepIndex == null ? "null" : retObjectNextStepIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNextStepIndexNumber = (java.lang.Number)retObjectNextStepIndex;
-                return retObjectNextStepIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNextStepIndex != null ? retObjectNextStepIndex.getClass() : "null", retObjectNextStepIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNextStepIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNextStepIndexClass = retObjectNextStepIndex.getClass();
+                    // java.lang.reflect.Method retObjectNextStepIndexMethod = retObjectNextStepIndexClass.getMethod("intValue");
+                    // return (int)retObjectNextStepIndexMethod.invoke(retObjectNextStepIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNextStepIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectNextStepIndex_ToString);
+                    return retObjectNextStepIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNextStepIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNextStepIndex != null ? retObjectNextStepIndex.getClass() : "null", retObjectNextStepIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNextStepIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

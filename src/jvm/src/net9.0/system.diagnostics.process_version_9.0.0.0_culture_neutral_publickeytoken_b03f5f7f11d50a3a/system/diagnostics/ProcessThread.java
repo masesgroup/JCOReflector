@@ -205,13 +205,32 @@ public class ProcessThread extends Component  {
             retObjectBasePriority = classInstance.Get("BasePriority");
             return (int)retObjectBasePriority;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBasePriorityError = true;
             java.lang.String retObjectBasePriority_ToString = retObjectBasePriority == null ? "null" : retObjectBasePriority.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBasePriorityNumber = (java.lang.Number)retObjectBasePriority;
-                return retObjectBasePriorityNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null", retObjectBasePriority_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBasePriority != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBasePriorityClass = retObjectBasePriority.getClass();
+                    // java.lang.reflect.Method retObjectBasePriorityMethod = retObjectBasePriorityClass.getMethod("intValue");
+                    // return (int)retObjectBasePriorityMethod.invoke(retObjectBasePriority);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBasePriorityNumber = java.text.NumberFormat.getInstance().parse(retObjectBasePriority_ToString);
+                    return retObjectBasePriorityNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBasePriorityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null", retObjectBasePriority_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBasePriorityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,13 +245,32 @@ public class ProcessThread extends Component  {
             retObjectCurrentPriority = classInstance.Get("CurrentPriority");
             return (int)retObjectCurrentPriority;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentPriorityError = true;
             java.lang.String retObjectCurrentPriority_ToString = retObjectCurrentPriority == null ? "null" : retObjectCurrentPriority.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentPriorityNumber = (java.lang.Number)retObjectCurrentPriority;
-                return retObjectCurrentPriorityNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentPriority != null ? retObjectCurrentPriority.getClass() : "null", retObjectCurrentPriority_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentPriority != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentPriorityClass = retObjectCurrentPriority.getClass();
+                    // java.lang.reflect.Method retObjectCurrentPriorityMethod = retObjectCurrentPriorityClass.getMethod("intValue");
+                    // return (int)retObjectCurrentPriorityMethod.invoke(retObjectCurrentPriority);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentPriorityNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentPriority_ToString);
+                    return retObjectCurrentPriorityNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentPriorityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentPriority != null ? retObjectCurrentPriority.getClass() : "null", retObjectCurrentPriority_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentPriorityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,13 +285,32 @@ public class ProcessThread extends Component  {
             retObjectId = classInstance.Get("Id");
             return (int)retObjectId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIdError = true;
             java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
-                return retObjectIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIdClass = retObjectId.getClass();
+                    // java.lang.reflect.Method retObjectIdMethod = retObjectIdClass.getMethod("intValue");
+                    // return (int)retObjectIdMethod.invoke(retObjectId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIdNumber = java.text.NumberFormat.getInstance().parse(retObjectId_ToString);
+                    return retObjectIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

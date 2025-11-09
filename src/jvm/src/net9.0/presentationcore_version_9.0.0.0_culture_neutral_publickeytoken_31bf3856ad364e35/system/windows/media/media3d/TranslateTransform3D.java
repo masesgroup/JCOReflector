@@ -225,13 +225,32 @@ public class TranslateTransform3D extends AffineTransform3D  {
             retObjectOffsetX = classInstance.Get("OffsetX");
             return (double)retObjectOffsetX;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetXError = true;
             java.lang.String retObjectOffsetX_ToString = retObjectOffsetX == null ? "null" : retObjectOffsetX.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetXNumber = (java.lang.Number)retObjectOffsetX;
-                return retObjectOffsetXNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null", retObjectOffsetX_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffsetX != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetXClass = retObjectOffsetX.getClass();
+                    // java.lang.reflect.Method retObjectOffsetXMethod = retObjectOffsetXClass.getMethod("doubleValue");
+                    // return (double)retObjectOffsetXMethod.invoke(retObjectOffsetX);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetXNumber = java.text.NumberFormat.getInstance().parse(retObjectOffsetX_ToString);
+                    return retObjectOffsetXNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetXError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null", retObjectOffsetX_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetXError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -256,13 +275,32 @@ public class TranslateTransform3D extends AffineTransform3D  {
             retObjectOffsetY = classInstance.Get("OffsetY");
             return (double)retObjectOffsetY;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetYError = true;
             java.lang.String retObjectOffsetY_ToString = retObjectOffsetY == null ? "null" : retObjectOffsetY.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetYNumber = (java.lang.Number)retObjectOffsetY;
-                return retObjectOffsetYNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null", retObjectOffsetY_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffsetY != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetYClass = retObjectOffsetY.getClass();
+                    // java.lang.reflect.Method retObjectOffsetYMethod = retObjectOffsetYClass.getMethod("doubleValue");
+                    // return (double)retObjectOffsetYMethod.invoke(retObjectOffsetY);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetYNumber = java.text.NumberFormat.getInstance().parse(retObjectOffsetY_ToString);
+                    return retObjectOffsetYNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetYError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null", retObjectOffsetY_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetYError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -287,13 +325,32 @@ public class TranslateTransform3D extends AffineTransform3D  {
             retObjectOffsetZ = classInstance.Get("OffsetZ");
             return (double)retObjectOffsetZ;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetZError = true;
             java.lang.String retObjectOffsetZ_ToString = retObjectOffsetZ == null ? "null" : retObjectOffsetZ.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetZNumber = (java.lang.Number)retObjectOffsetZ;
-                return retObjectOffsetZNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffsetZ != null ? retObjectOffsetZ.getClass() : "null", retObjectOffsetZ_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffsetZ != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetZClass = retObjectOffsetZ.getClass();
+                    // java.lang.reflect.Method retObjectOffsetZMethod = retObjectOffsetZClass.getMethod("doubleValue");
+                    // return (double)retObjectOffsetZMethod.invoke(retObjectOffsetZ);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetZNumber = java.text.NumberFormat.getInstance().parse(retObjectOffsetZ_ToString);
+                    return retObjectOffsetZNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetZError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffsetZ != null ? retObjectOffsetZ.getClass() : "null", retObjectOffsetZ_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetZError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

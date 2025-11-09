@@ -163,13 +163,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectBytesReceived = classInstance.Get("BytesReceived");
             return (long)retObjectBytesReceived;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBytesReceivedError = true;
             java.lang.String retObjectBytesReceived_ToString = retObjectBytesReceived == null ? "null" : retObjectBytesReceived.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBytesReceivedNumber = (java.lang.Number)retObjectBytesReceived;
-                return retObjectBytesReceivedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesReceived != null ? retObjectBytesReceived.getClass() : "null", retObjectBytesReceived_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBytesReceived != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBytesReceivedClass = retObjectBytesReceived.getClass();
+                    // java.lang.reflect.Method retObjectBytesReceivedMethod = retObjectBytesReceivedClass.getMethod("longValue");
+                    // return (long)retObjectBytesReceivedMethod.invoke(retObjectBytesReceived);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBytesReceivedNumber = java.text.NumberFormat.getInstance().parse(retObjectBytesReceived_ToString);
+                    return retObjectBytesReceivedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBytesReceivedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBytesReceived != null ? retObjectBytesReceived.getClass() : "null", retObjectBytesReceived_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBytesReceivedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,13 +203,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectBytesSent = classInstance.Get("BytesSent");
             return (long)retObjectBytesSent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBytesSentError = true;
             java.lang.String retObjectBytesSent_ToString = retObjectBytesSent == null ? "null" : retObjectBytesSent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBytesSentNumber = (java.lang.Number)retObjectBytesSent;
-                return retObjectBytesSentNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectBytesSent != null ? retObjectBytesSent.getClass() : "null", retObjectBytesSent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBytesSent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBytesSentClass = retObjectBytesSent.getClass();
+                    // java.lang.reflect.Method retObjectBytesSentMethod = retObjectBytesSentClass.getMethod("longValue");
+                    // return (long)retObjectBytesSentMethod.invoke(retObjectBytesSent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBytesSentNumber = java.text.NumberFormat.getInstance().parse(retObjectBytesSent_ToString);
+                    return retObjectBytesSentNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBytesSentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBytesSent != null ? retObjectBytesSent.getClass() : "null", retObjectBytesSent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBytesSentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,13 +243,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectIncomingPacketsDiscarded = classInstance.Get("IncomingPacketsDiscarded");
             return (long)retObjectIncomingPacketsDiscarded;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIncomingPacketsDiscardedError = true;
             java.lang.String retObjectIncomingPacketsDiscarded_ToString = retObjectIncomingPacketsDiscarded == null ? "null" : retObjectIncomingPacketsDiscarded.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIncomingPacketsDiscardedNumber = (java.lang.Number)retObjectIncomingPacketsDiscarded;
-                return retObjectIncomingPacketsDiscardedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncomingPacketsDiscarded != null ? retObjectIncomingPacketsDiscarded.getClass() : "null", retObjectIncomingPacketsDiscarded_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIncomingPacketsDiscarded != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIncomingPacketsDiscardedClass = retObjectIncomingPacketsDiscarded.getClass();
+                    // java.lang.reflect.Method retObjectIncomingPacketsDiscardedMethod = retObjectIncomingPacketsDiscardedClass.getMethod("longValue");
+                    // return (long)retObjectIncomingPacketsDiscardedMethod.invoke(retObjectIncomingPacketsDiscarded);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIncomingPacketsDiscardedNumber = java.text.NumberFormat.getInstance().parse(retObjectIncomingPacketsDiscarded_ToString);
+                    return retObjectIncomingPacketsDiscardedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIncomingPacketsDiscardedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIncomingPacketsDiscarded != null ? retObjectIncomingPacketsDiscarded.getClass() : "null", retObjectIncomingPacketsDiscarded_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIncomingPacketsDiscardedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,13 +283,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectIncomingPacketsWithErrors = classInstance.Get("IncomingPacketsWithErrors");
             return (long)retObjectIncomingPacketsWithErrors;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIncomingPacketsWithErrorsError = true;
             java.lang.String retObjectIncomingPacketsWithErrors_ToString = retObjectIncomingPacketsWithErrors == null ? "null" : retObjectIncomingPacketsWithErrors.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIncomingPacketsWithErrorsNumber = (java.lang.Number)retObjectIncomingPacketsWithErrors;
-                return retObjectIncomingPacketsWithErrorsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncomingPacketsWithErrors != null ? retObjectIncomingPacketsWithErrors.getClass() : "null", retObjectIncomingPacketsWithErrors_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIncomingPacketsWithErrors != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIncomingPacketsWithErrorsClass = retObjectIncomingPacketsWithErrors.getClass();
+                    // java.lang.reflect.Method retObjectIncomingPacketsWithErrorsMethod = retObjectIncomingPacketsWithErrorsClass.getMethod("longValue");
+                    // return (long)retObjectIncomingPacketsWithErrorsMethod.invoke(retObjectIncomingPacketsWithErrors);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIncomingPacketsWithErrorsNumber = java.text.NumberFormat.getInstance().parse(retObjectIncomingPacketsWithErrors_ToString);
+                    return retObjectIncomingPacketsWithErrorsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIncomingPacketsWithErrorsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIncomingPacketsWithErrors != null ? retObjectIncomingPacketsWithErrors.getClass() : "null", retObjectIncomingPacketsWithErrors_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIncomingPacketsWithErrorsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,13 +323,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectIncomingUnknownProtocolPackets = classInstance.Get("IncomingUnknownProtocolPackets");
             return (long)retObjectIncomingUnknownProtocolPackets;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIncomingUnknownProtocolPacketsError = true;
             java.lang.String retObjectIncomingUnknownProtocolPackets_ToString = retObjectIncomingUnknownProtocolPackets == null ? "null" : retObjectIncomingUnknownProtocolPackets.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIncomingUnknownProtocolPacketsNumber = (java.lang.Number)retObjectIncomingUnknownProtocolPackets;
-                return retObjectIncomingUnknownProtocolPacketsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectIncomingUnknownProtocolPackets != null ? retObjectIncomingUnknownProtocolPackets.getClass() : "null", retObjectIncomingUnknownProtocolPackets_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIncomingUnknownProtocolPackets != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIncomingUnknownProtocolPacketsClass = retObjectIncomingUnknownProtocolPackets.getClass();
+                    // java.lang.reflect.Method retObjectIncomingUnknownProtocolPacketsMethod = retObjectIncomingUnknownProtocolPacketsClass.getMethod("longValue");
+                    // return (long)retObjectIncomingUnknownProtocolPacketsMethod.invoke(retObjectIncomingUnknownProtocolPackets);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIncomingUnknownProtocolPacketsNumber = java.text.NumberFormat.getInstance().parse(retObjectIncomingUnknownProtocolPackets_ToString);
+                    return retObjectIncomingUnknownProtocolPacketsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIncomingUnknownProtocolPacketsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIncomingUnknownProtocolPackets != null ? retObjectIncomingUnknownProtocolPackets.getClass() : "null", retObjectIncomingUnknownProtocolPackets_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIncomingUnknownProtocolPacketsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,13 +363,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectNonUnicastPacketsReceived = classInstance.Get("NonUnicastPacketsReceived");
             return (long)retObjectNonUnicastPacketsReceived;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNonUnicastPacketsReceivedError = true;
             java.lang.String retObjectNonUnicastPacketsReceived_ToString = retObjectNonUnicastPacketsReceived == null ? "null" : retObjectNonUnicastPacketsReceived.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNonUnicastPacketsReceivedNumber = (java.lang.Number)retObjectNonUnicastPacketsReceived;
-                return retObjectNonUnicastPacketsReceivedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectNonUnicastPacketsReceived != null ? retObjectNonUnicastPacketsReceived.getClass() : "null", retObjectNonUnicastPacketsReceived_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNonUnicastPacketsReceived != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNonUnicastPacketsReceivedClass = retObjectNonUnicastPacketsReceived.getClass();
+                    // java.lang.reflect.Method retObjectNonUnicastPacketsReceivedMethod = retObjectNonUnicastPacketsReceivedClass.getMethod("longValue");
+                    // return (long)retObjectNonUnicastPacketsReceivedMethod.invoke(retObjectNonUnicastPacketsReceived);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNonUnicastPacketsReceivedNumber = java.text.NumberFormat.getInstance().parse(retObjectNonUnicastPacketsReceived_ToString);
+                    return retObjectNonUnicastPacketsReceivedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNonUnicastPacketsReceivedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNonUnicastPacketsReceived != null ? retObjectNonUnicastPacketsReceived.getClass() : "null", retObjectNonUnicastPacketsReceived_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNonUnicastPacketsReceivedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -289,13 +403,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectNonUnicastPacketsSent = classInstance.Get("NonUnicastPacketsSent");
             return (long)retObjectNonUnicastPacketsSent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNonUnicastPacketsSentError = true;
             java.lang.String retObjectNonUnicastPacketsSent_ToString = retObjectNonUnicastPacketsSent == null ? "null" : retObjectNonUnicastPacketsSent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNonUnicastPacketsSentNumber = (java.lang.Number)retObjectNonUnicastPacketsSent;
-                return retObjectNonUnicastPacketsSentNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectNonUnicastPacketsSent != null ? retObjectNonUnicastPacketsSent.getClass() : "null", retObjectNonUnicastPacketsSent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNonUnicastPacketsSent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNonUnicastPacketsSentClass = retObjectNonUnicastPacketsSent.getClass();
+                    // java.lang.reflect.Method retObjectNonUnicastPacketsSentMethod = retObjectNonUnicastPacketsSentClass.getMethod("longValue");
+                    // return (long)retObjectNonUnicastPacketsSentMethod.invoke(retObjectNonUnicastPacketsSent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNonUnicastPacketsSentNumber = java.text.NumberFormat.getInstance().parse(retObjectNonUnicastPacketsSent_ToString);
+                    return retObjectNonUnicastPacketsSentNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNonUnicastPacketsSentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNonUnicastPacketsSent != null ? retObjectNonUnicastPacketsSent.getClass() : "null", retObjectNonUnicastPacketsSent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNonUnicastPacketsSentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -310,13 +443,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectOutgoingPacketsDiscarded = classInstance.Get("OutgoingPacketsDiscarded");
             return (long)retObjectOutgoingPacketsDiscarded;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOutgoingPacketsDiscardedError = true;
             java.lang.String retObjectOutgoingPacketsDiscarded_ToString = retObjectOutgoingPacketsDiscarded == null ? "null" : retObjectOutgoingPacketsDiscarded.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOutgoingPacketsDiscardedNumber = (java.lang.Number)retObjectOutgoingPacketsDiscarded;
-                return retObjectOutgoingPacketsDiscardedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOutgoingPacketsDiscarded != null ? retObjectOutgoingPacketsDiscarded.getClass() : "null", retObjectOutgoingPacketsDiscarded_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOutgoingPacketsDiscarded != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOutgoingPacketsDiscardedClass = retObjectOutgoingPacketsDiscarded.getClass();
+                    // java.lang.reflect.Method retObjectOutgoingPacketsDiscardedMethod = retObjectOutgoingPacketsDiscardedClass.getMethod("longValue");
+                    // return (long)retObjectOutgoingPacketsDiscardedMethod.invoke(retObjectOutgoingPacketsDiscarded);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOutgoingPacketsDiscardedNumber = java.text.NumberFormat.getInstance().parse(retObjectOutgoingPacketsDiscarded_ToString);
+                    return retObjectOutgoingPacketsDiscardedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOutgoingPacketsDiscardedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOutgoingPacketsDiscarded != null ? retObjectOutgoingPacketsDiscarded.getClass() : "null", retObjectOutgoingPacketsDiscarded_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOutgoingPacketsDiscardedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -331,13 +483,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectOutgoingPacketsWithErrors = classInstance.Get("OutgoingPacketsWithErrors");
             return (long)retObjectOutgoingPacketsWithErrors;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOutgoingPacketsWithErrorsError = true;
             java.lang.String retObjectOutgoingPacketsWithErrors_ToString = retObjectOutgoingPacketsWithErrors == null ? "null" : retObjectOutgoingPacketsWithErrors.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOutgoingPacketsWithErrorsNumber = (java.lang.Number)retObjectOutgoingPacketsWithErrors;
-                return retObjectOutgoingPacketsWithErrorsNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOutgoingPacketsWithErrors != null ? retObjectOutgoingPacketsWithErrors.getClass() : "null", retObjectOutgoingPacketsWithErrors_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOutgoingPacketsWithErrors != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOutgoingPacketsWithErrorsClass = retObjectOutgoingPacketsWithErrors.getClass();
+                    // java.lang.reflect.Method retObjectOutgoingPacketsWithErrorsMethod = retObjectOutgoingPacketsWithErrorsClass.getMethod("longValue");
+                    // return (long)retObjectOutgoingPacketsWithErrorsMethod.invoke(retObjectOutgoingPacketsWithErrors);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOutgoingPacketsWithErrorsNumber = java.text.NumberFormat.getInstance().parse(retObjectOutgoingPacketsWithErrors_ToString);
+                    return retObjectOutgoingPacketsWithErrorsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOutgoingPacketsWithErrorsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOutgoingPacketsWithErrors != null ? retObjectOutgoingPacketsWithErrors.getClass() : "null", retObjectOutgoingPacketsWithErrors_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOutgoingPacketsWithErrorsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -352,13 +523,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectOutputQueueLength = classInstance.Get("OutputQueueLength");
             return (long)retObjectOutputQueueLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOutputQueueLengthError = true;
             java.lang.String retObjectOutputQueueLength_ToString = retObjectOutputQueueLength == null ? "null" : retObjectOutputQueueLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOutputQueueLengthNumber = (java.lang.Number)retObjectOutputQueueLength;
-                return retObjectOutputQueueLengthNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectOutputQueueLength != null ? retObjectOutputQueueLength.getClass() : "null", retObjectOutputQueueLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOutputQueueLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOutputQueueLengthClass = retObjectOutputQueueLength.getClass();
+                    // java.lang.reflect.Method retObjectOutputQueueLengthMethod = retObjectOutputQueueLengthClass.getMethod("longValue");
+                    // return (long)retObjectOutputQueueLengthMethod.invoke(retObjectOutputQueueLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOutputQueueLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectOutputQueueLength_ToString);
+                    return retObjectOutputQueueLengthNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOutputQueueLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOutputQueueLength != null ? retObjectOutputQueueLength.getClass() : "null", retObjectOutputQueueLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOutputQueueLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -373,13 +563,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectUnicastPacketsReceived = classInstance.Get("UnicastPacketsReceived");
             return (long)retObjectUnicastPacketsReceived;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUnicastPacketsReceivedError = true;
             java.lang.String retObjectUnicastPacketsReceived_ToString = retObjectUnicastPacketsReceived == null ? "null" : retObjectUnicastPacketsReceived.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUnicastPacketsReceivedNumber = (java.lang.Number)retObjectUnicastPacketsReceived;
-                return retObjectUnicastPacketsReceivedNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUnicastPacketsReceived != null ? retObjectUnicastPacketsReceived.getClass() : "null", retObjectUnicastPacketsReceived_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUnicastPacketsReceived != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUnicastPacketsReceivedClass = retObjectUnicastPacketsReceived.getClass();
+                    // java.lang.reflect.Method retObjectUnicastPacketsReceivedMethod = retObjectUnicastPacketsReceivedClass.getMethod("longValue");
+                    // return (long)retObjectUnicastPacketsReceivedMethod.invoke(retObjectUnicastPacketsReceived);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUnicastPacketsReceivedNumber = java.text.NumberFormat.getInstance().parse(retObjectUnicastPacketsReceived_ToString);
+                    return retObjectUnicastPacketsReceivedNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUnicastPacketsReceivedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUnicastPacketsReceived != null ? retObjectUnicastPacketsReceived.getClass() : "null", retObjectUnicastPacketsReceived_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUnicastPacketsReceivedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -394,13 +603,32 @@ public class IPv4InterfaceStatistics extends NetObject  {
             retObjectUnicastPacketsSent = classInstance.Get("UnicastPacketsSent");
             return (long)retObjectUnicastPacketsSent;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUnicastPacketsSentError = true;
             java.lang.String retObjectUnicastPacketsSent_ToString = retObjectUnicastPacketsSent == null ? "null" : retObjectUnicastPacketsSent.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUnicastPacketsSentNumber = (java.lang.Number)retObjectUnicastPacketsSent;
-                return retObjectUnicastPacketsSentNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectUnicastPacketsSent != null ? retObjectUnicastPacketsSent.getClass() : "null", retObjectUnicastPacketsSent_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUnicastPacketsSent != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUnicastPacketsSentClass = retObjectUnicastPacketsSent.getClass();
+                    // java.lang.reflect.Method retObjectUnicastPacketsSentMethod = retObjectUnicastPacketsSentClass.getMethod("longValue");
+                    // return (long)retObjectUnicastPacketsSentMethod.invoke(retObjectUnicastPacketsSent);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUnicastPacketsSentNumber = java.text.NumberFormat.getInstance().parse(retObjectUnicastPacketsSent_ToString);
+                    return retObjectUnicastPacketsSentNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUnicastPacketsSentError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUnicastPacketsSent != null ? retObjectUnicastPacketsSent.getClass() : "null", retObjectUnicastPacketsSent_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUnicastPacketsSentError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

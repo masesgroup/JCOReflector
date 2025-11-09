@@ -166,13 +166,32 @@ public class ContextMenuEventArgs extends RoutedEventArgs  {
             retObjectCursorLeft = classInstance.Get("CursorLeft");
             return (double)retObjectCursorLeft;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCursorLeftError = true;
             java.lang.String retObjectCursorLeft_ToString = retObjectCursorLeft == null ? "null" : retObjectCursorLeft.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCursorLeftNumber = (java.lang.Number)retObjectCursorLeft;
-                return retObjectCursorLeftNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCursorLeft != null ? retObjectCursorLeft.getClass() : "null", retObjectCursorLeft_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCursorLeft != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCursorLeftClass = retObjectCursorLeft.getClass();
+                    // java.lang.reflect.Method retObjectCursorLeftMethod = retObjectCursorLeftClass.getMethod("doubleValue");
+                    // return (double)retObjectCursorLeftMethod.invoke(retObjectCursorLeft);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCursorLeftNumber = java.text.NumberFormat.getInstance().parse(retObjectCursorLeft_ToString);
+                    return retObjectCursorLeftNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCursorLeftError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCursorLeft != null ? retObjectCursorLeft.getClass() : "null", retObjectCursorLeft_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCursorLeftError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,13 +206,32 @@ public class ContextMenuEventArgs extends RoutedEventArgs  {
             retObjectCursorTop = classInstance.Get("CursorTop");
             return (double)retObjectCursorTop;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCursorTopError = true;
             java.lang.String retObjectCursorTop_ToString = retObjectCursorTop == null ? "null" : retObjectCursorTop.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCursorTopNumber = (java.lang.Number)retObjectCursorTop;
-                return retObjectCursorTopNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCursorTop != null ? retObjectCursorTop.getClass() : "null", retObjectCursorTop_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCursorTop != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCursorTopClass = retObjectCursorTop.getClass();
+                    // java.lang.reflect.Method retObjectCursorTopMethod = retObjectCursorTopClass.getMethod("doubleValue");
+                    // return (double)retObjectCursorTopMethod.invoke(retObjectCursorTop);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCursorTopNumber = java.text.NumberFormat.getInstance().parse(retObjectCursorTop_ToString);
+                    return retObjectCursorTopNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCursorTopError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCursorTop != null ? retObjectCursorTop.getClass() : "null", retObjectCursorTop_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCursorTopError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

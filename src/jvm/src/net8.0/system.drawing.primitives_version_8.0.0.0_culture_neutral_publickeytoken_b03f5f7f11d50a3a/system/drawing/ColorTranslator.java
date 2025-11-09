@@ -160,13 +160,32 @@ public class ColorTranslator extends NetObject  {
             retObjectToOle = classType.Invoke("ToOle", c == null ? null : c.getJCOInstance());
             return (int)retObjectToOle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportToOleError = true;
             java.lang.String retObjectToOle_ToString = retObjectToOle == null ? "null" : retObjectToOle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectToOleNumber = (java.lang.Number)retObjectToOle;
-                return retObjectToOleNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToOle != null ? retObjectToOle.getClass() : "null", retObjectToOle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectToOle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectToOleClass = retObjectToOle.getClass();
+                    // java.lang.reflect.Method retObjectToOleMethod = retObjectToOleClass.getMethod("intValue");
+                    // return (int)retObjectToOleMethod.invoke(retObjectToOle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectToOleNumber = java.text.NumberFormat.getInstance().parse(retObjectToOle_ToString);
+                    return retObjectToOleNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportToOleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectToOle != null ? retObjectToOle.getClass() : "null", retObjectToOle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportToOleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,13 +200,32 @@ public class ColorTranslator extends NetObject  {
             retObjectToWin32 = classType.Invoke("ToWin32", c == null ? null : c.getJCOInstance());
             return (int)retObjectToWin32;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportToWin32Error = true;
             java.lang.String retObjectToWin32_ToString = retObjectToWin32 == null ? "null" : retObjectToWin32.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectToWin32Number = (java.lang.Number)retObjectToWin32;
-                return retObjectToWin32Number.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectToWin32 != null ? retObjectToWin32.getClass() : "null", retObjectToWin32_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectToWin32 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectToWin32Class = retObjectToWin32.getClass();
+                    // java.lang.reflect.Method retObjectToWin32Method = retObjectToWin32Class.getMethod("intValue");
+                    // return (int)retObjectToWin32Method.invoke(retObjectToWin32);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectToWin32Number = java.text.NumberFormat.getInstance().parse(retObjectToWin32_ToString);
+                    return retObjectToWin32Number.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportToWin32Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectToWin32 != null ? retObjectToWin32.getClass() : "null", retObjectToWin32_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportToWin32Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

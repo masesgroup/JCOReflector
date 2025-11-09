@@ -160,13 +160,32 @@ public class CharUnicodeInfo extends NetObject  {
             retObjectGetNumericValue = classType.Invoke("GetNumericValue", ch);
             return (double)retObjectGetNumericValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetNumericValueError = true;
             java.lang.String retObjectGetNumericValue_ToString = retObjectGetNumericValue == null ? "null" : retObjectGetNumericValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetNumericValueNumber = (java.lang.Number)retObjectGetNumericValue;
-                return retObjectGetNumericValueNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetNumericValue != null ? retObjectGetNumericValue.getClass() : "null", retObjectGetNumericValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetNumericValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetNumericValueClass = retObjectGetNumericValue.getClass();
+                    // java.lang.reflect.Method retObjectGetNumericValueMethod = retObjectGetNumericValueClass.getMethod("doubleValue");
+                    // return (double)retObjectGetNumericValueMethod.invoke(retObjectGetNumericValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetNumericValueNumber = java.text.NumberFormat.getInstance().parse(retObjectGetNumericValue_ToString);
+                    return retObjectGetNumericValueNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetNumericValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetNumericValue != null ? retObjectGetNumericValue.getClass() : "null", retObjectGetNumericValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetNumericValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,13 +200,32 @@ public class CharUnicodeInfo extends NetObject  {
             retObjectGetNumericValue = classType.Invoke("GetNumericValue", s, index);
             return (double)retObjectGetNumericValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetNumericValueError = true;
             java.lang.String retObjectGetNumericValue_ToString = retObjectGetNumericValue == null ? "null" : retObjectGetNumericValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetNumericValueNumber = (java.lang.Number)retObjectGetNumericValue;
-                return retObjectGetNumericValueNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetNumericValue != null ? retObjectGetNumericValue.getClass() : "null", retObjectGetNumericValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetNumericValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetNumericValueClass = retObjectGetNumericValue.getClass();
+                    // java.lang.reflect.Method retObjectGetNumericValueMethod = retObjectGetNumericValueClass.getMethod("doubleValue");
+                    // return (double)retObjectGetNumericValueMethod.invoke(retObjectGetNumericValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetNumericValueNumber = java.text.NumberFormat.getInstance().parse(retObjectGetNumericValue_ToString);
+                    return retObjectGetNumericValueNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetNumericValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetNumericValue != null ? retObjectGetNumericValue.getClass() : "null", retObjectGetNumericValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetNumericValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,13 +240,32 @@ public class CharUnicodeInfo extends NetObject  {
             retObjectGetDecimalDigitValue = classType.Invoke("GetDecimalDigitValue", ch);
             return (int)retObjectGetDecimalDigitValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDecimalDigitValueError = true;
             java.lang.String retObjectGetDecimalDigitValue_ToString = retObjectGetDecimalDigitValue == null ? "null" : retObjectGetDecimalDigitValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDecimalDigitValueNumber = (java.lang.Number)retObjectGetDecimalDigitValue;
-                return retObjectGetDecimalDigitValueNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDecimalDigitValue != null ? retObjectGetDecimalDigitValue.getClass() : "null", retObjectGetDecimalDigitValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDecimalDigitValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDecimalDigitValueClass = retObjectGetDecimalDigitValue.getClass();
+                    // java.lang.reflect.Method retObjectGetDecimalDigitValueMethod = retObjectGetDecimalDigitValueClass.getMethod("intValue");
+                    // return (int)retObjectGetDecimalDigitValueMethod.invoke(retObjectGetDecimalDigitValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDecimalDigitValueNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDecimalDigitValue_ToString);
+                    return retObjectGetDecimalDigitValueNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDecimalDigitValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDecimalDigitValue != null ? retObjectGetDecimalDigitValue.getClass() : "null", retObjectGetDecimalDigitValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDecimalDigitValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -223,13 +280,32 @@ public class CharUnicodeInfo extends NetObject  {
             retObjectGetDecimalDigitValue = classType.Invoke("GetDecimalDigitValue", s, index);
             return (int)retObjectGetDecimalDigitValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDecimalDigitValueError = true;
             java.lang.String retObjectGetDecimalDigitValue_ToString = retObjectGetDecimalDigitValue == null ? "null" : retObjectGetDecimalDigitValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDecimalDigitValueNumber = (java.lang.Number)retObjectGetDecimalDigitValue;
-                return retObjectGetDecimalDigitValueNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDecimalDigitValue != null ? retObjectGetDecimalDigitValue.getClass() : "null", retObjectGetDecimalDigitValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDecimalDigitValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDecimalDigitValueClass = retObjectGetDecimalDigitValue.getClass();
+                    // java.lang.reflect.Method retObjectGetDecimalDigitValueMethod = retObjectGetDecimalDigitValueClass.getMethod("intValue");
+                    // return (int)retObjectGetDecimalDigitValueMethod.invoke(retObjectGetDecimalDigitValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDecimalDigitValueNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDecimalDigitValue_ToString);
+                    return retObjectGetDecimalDigitValueNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDecimalDigitValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDecimalDigitValue != null ? retObjectGetDecimalDigitValue.getClass() : "null", retObjectGetDecimalDigitValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDecimalDigitValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -244,13 +320,32 @@ public class CharUnicodeInfo extends NetObject  {
             retObjectGetDigitValue = classType.Invoke("GetDigitValue", ch);
             return (int)retObjectGetDigitValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDigitValueError = true;
             java.lang.String retObjectGetDigitValue_ToString = retObjectGetDigitValue == null ? "null" : retObjectGetDigitValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDigitValueNumber = (java.lang.Number)retObjectGetDigitValue;
-                return retObjectGetDigitValueNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDigitValue != null ? retObjectGetDigitValue.getClass() : "null", retObjectGetDigitValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDigitValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDigitValueClass = retObjectGetDigitValue.getClass();
+                    // java.lang.reflect.Method retObjectGetDigitValueMethod = retObjectGetDigitValueClass.getMethod("intValue");
+                    // return (int)retObjectGetDigitValueMethod.invoke(retObjectGetDigitValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDigitValueNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDigitValue_ToString);
+                    return retObjectGetDigitValueNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDigitValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDigitValue != null ? retObjectGetDigitValue.getClass() : "null", retObjectGetDigitValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDigitValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,13 +360,32 @@ public class CharUnicodeInfo extends NetObject  {
             retObjectGetDigitValue = classType.Invoke("GetDigitValue", s, index);
             return (int)retObjectGetDigitValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDigitValueError = true;
             java.lang.String retObjectGetDigitValue_ToString = retObjectGetDigitValue == null ? "null" : retObjectGetDigitValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDigitValueNumber = (java.lang.Number)retObjectGetDigitValue;
-                return retObjectGetDigitValueNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetDigitValue != null ? retObjectGetDigitValue.getClass() : "null", retObjectGetDigitValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDigitValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDigitValueClass = retObjectGetDigitValue.getClass();
+                    // java.lang.reflect.Method retObjectGetDigitValueMethod = retObjectGetDigitValueClass.getMethod("intValue");
+                    // return (int)retObjectGetDigitValueMethod.invoke(retObjectGetDigitValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDigitValueNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDigitValue_ToString);
+                    return retObjectGetDigitValueNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDigitValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDigitValue != null ? retObjectGetDigitValue.getClass() : "null", retObjectGetDigitValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDigitValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

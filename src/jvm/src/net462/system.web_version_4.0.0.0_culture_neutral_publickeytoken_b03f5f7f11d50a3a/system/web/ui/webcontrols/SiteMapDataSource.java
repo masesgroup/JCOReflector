@@ -285,13 +285,32 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
             retObjectStartingNodeOffset = classInstance.Get("StartingNodeOffset");
             return (int)retObjectStartingNodeOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStartingNodeOffsetError = true;
             java.lang.String retObjectStartingNodeOffset_ToString = retObjectStartingNodeOffset == null ? "null" : retObjectStartingNodeOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStartingNodeOffsetNumber = (java.lang.Number)retObjectStartingNodeOffset;
-                return retObjectStartingNodeOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStartingNodeOffset != null ? retObjectStartingNodeOffset.getClass() : "null", retObjectStartingNodeOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStartingNodeOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStartingNodeOffsetClass = retObjectStartingNodeOffset.getClass();
+                    // java.lang.reflect.Method retObjectStartingNodeOffsetMethod = retObjectStartingNodeOffsetClass.getMethod("intValue");
+                    // return (int)retObjectStartingNodeOffsetMethod.invoke(retObjectStartingNodeOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStartingNodeOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectStartingNodeOffset_ToString);
+                    return retObjectStartingNodeOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStartingNodeOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStartingNodeOffset != null ? retObjectStartingNodeOffset.getClass() : "null", retObjectStartingNodeOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStartingNodeOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

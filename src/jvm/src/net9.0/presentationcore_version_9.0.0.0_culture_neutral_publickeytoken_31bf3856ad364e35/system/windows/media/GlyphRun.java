@@ -186,13 +186,32 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
             retObjectGetDistanceFromCaretCharacterHit = classInstance.Invoke("GetDistanceFromCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
             return (double)retObjectGetDistanceFromCaretCharacterHit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetDistanceFromCaretCharacterHitError = true;
             java.lang.String retObjectGetDistanceFromCaretCharacterHit_ToString = retObjectGetDistanceFromCaretCharacterHit == null ? "null" : retObjectGetDistanceFromCaretCharacterHit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetDistanceFromCaretCharacterHitNumber = (java.lang.Number)retObjectGetDistanceFromCaretCharacterHit;
-                return retObjectGetDistanceFromCaretCharacterHitNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetDistanceFromCaretCharacterHit != null ? retObjectGetDistanceFromCaretCharacterHit.getClass() : "null", retObjectGetDistanceFromCaretCharacterHit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetDistanceFromCaretCharacterHit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetDistanceFromCaretCharacterHitClass = retObjectGetDistanceFromCaretCharacterHit.getClass();
+                    // java.lang.reflect.Method retObjectGetDistanceFromCaretCharacterHitMethod = retObjectGetDistanceFromCaretCharacterHitClass.getMethod("doubleValue");
+                    // return (double)retObjectGetDistanceFromCaretCharacterHitMethod.invoke(retObjectGetDistanceFromCaretCharacterHit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetDistanceFromCaretCharacterHitNumber = java.text.NumberFormat.getInstance().parse(retObjectGetDistanceFromCaretCharacterHit_ToString);
+                    return retObjectGetDistanceFromCaretCharacterHitNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetDistanceFromCaretCharacterHitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetDistanceFromCaretCharacterHit != null ? retObjectGetDistanceFromCaretCharacterHit.getClass() : "null", retObjectGetDistanceFromCaretCharacterHit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetDistanceFromCaretCharacterHitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -357,13 +376,32 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
             retObjectFontRenderingEmSize = classInstance.Get("FontRenderingEmSize");
             return (double)retObjectFontRenderingEmSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFontRenderingEmSizeError = true;
             java.lang.String retObjectFontRenderingEmSize_ToString = retObjectFontRenderingEmSize == null ? "null" : retObjectFontRenderingEmSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFontRenderingEmSizeNumber = (java.lang.Number)retObjectFontRenderingEmSize;
-                return retObjectFontRenderingEmSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null", retObjectFontRenderingEmSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFontRenderingEmSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFontRenderingEmSizeClass = retObjectFontRenderingEmSize.getClass();
+                    // java.lang.reflect.Method retObjectFontRenderingEmSizeMethod = retObjectFontRenderingEmSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectFontRenderingEmSizeMethod.invoke(retObjectFontRenderingEmSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFontRenderingEmSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectFontRenderingEmSize_ToString);
+                    return retObjectFontRenderingEmSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFontRenderingEmSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null", retObjectFontRenderingEmSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFontRenderingEmSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -388,13 +426,32 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
             retObjectBidiLevel = classInstance.Get("BidiLevel");
             return (int)retObjectBidiLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBidiLevelError = true;
             java.lang.String retObjectBidiLevel_ToString = retObjectBidiLevel == null ? "null" : retObjectBidiLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBidiLevelNumber = (java.lang.Number)retObjectBidiLevel;
-                return retObjectBidiLevelNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBidiLevel != null ? retObjectBidiLevel.getClass() : "null", retObjectBidiLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBidiLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBidiLevelClass = retObjectBidiLevel.getClass();
+                    // java.lang.reflect.Method retObjectBidiLevelMethod = retObjectBidiLevelClass.getMethod("intValue");
+                    // return (int)retObjectBidiLevelMethod.invoke(retObjectBidiLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBidiLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectBidiLevel_ToString);
+                    return retObjectBidiLevelNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBidiLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBidiLevel != null ? retObjectBidiLevel.getClass() : "null", retObjectBidiLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBidiLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

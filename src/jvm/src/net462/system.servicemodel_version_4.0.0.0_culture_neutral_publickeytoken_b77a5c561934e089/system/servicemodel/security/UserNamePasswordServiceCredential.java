@@ -217,13 +217,32 @@ public class UserNamePasswordServiceCredential extends NetObject  {
             retObjectMaxCachedLogonTokens = classInstance.Get("MaxCachedLogonTokens");
             return (int)retObjectMaxCachedLogonTokens;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxCachedLogonTokensError = true;
             java.lang.String retObjectMaxCachedLogonTokens_ToString = retObjectMaxCachedLogonTokens == null ? "null" : retObjectMaxCachedLogonTokens.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxCachedLogonTokensNumber = (java.lang.Number)retObjectMaxCachedLogonTokens;
-                return retObjectMaxCachedLogonTokensNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxCachedLogonTokens != null ? retObjectMaxCachedLogonTokens.getClass() : "null", retObjectMaxCachedLogonTokens_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxCachedLogonTokens != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxCachedLogonTokensClass = retObjectMaxCachedLogonTokens.getClass();
+                    // java.lang.reflect.Method retObjectMaxCachedLogonTokensMethod = retObjectMaxCachedLogonTokensClass.getMethod("intValue");
+                    // return (int)retObjectMaxCachedLogonTokensMethod.invoke(retObjectMaxCachedLogonTokens);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxCachedLogonTokensNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxCachedLogonTokens_ToString);
+                    return retObjectMaxCachedLogonTokensNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxCachedLogonTokensError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxCachedLogonTokens != null ? retObjectMaxCachedLogonTokens.getClass() : "null", retObjectMaxCachedLogonTokens_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxCachedLogonTokensError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -172,13 +172,32 @@ public class InertiaExpansionBehavior extends NetObject  {
             retObjectDesiredDeceleration = classInstance.Get("DesiredDeceleration");
             return (double)retObjectDesiredDeceleration;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDesiredDecelerationError = true;
             java.lang.String retObjectDesiredDeceleration_ToString = retObjectDesiredDeceleration == null ? "null" : retObjectDesiredDeceleration.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDesiredDecelerationNumber = (java.lang.Number)retObjectDesiredDeceleration;
-                return retObjectDesiredDecelerationNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null", retObjectDesiredDeceleration_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDesiredDeceleration != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDesiredDecelerationClass = retObjectDesiredDeceleration.getClass();
+                    // java.lang.reflect.Method retObjectDesiredDecelerationMethod = retObjectDesiredDecelerationClass.getMethod("doubleValue");
+                    // return (double)retObjectDesiredDecelerationMethod.invoke(retObjectDesiredDeceleration);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDesiredDecelerationNumber = java.text.NumberFormat.getInstance().parse(retObjectDesiredDeceleration_ToString);
+                    return retObjectDesiredDecelerationNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDesiredDecelerationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null", retObjectDesiredDeceleration_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDesiredDecelerationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,13 +222,32 @@ public class InertiaExpansionBehavior extends NetObject  {
             retObjectInitialRadius = classInstance.Get("InitialRadius");
             return (double)retObjectInitialRadius;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportInitialRadiusError = true;
             java.lang.String retObjectInitialRadius_ToString = retObjectInitialRadius == null ? "null" : retObjectInitialRadius.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectInitialRadiusNumber = (java.lang.Number)retObjectInitialRadius;
-                return retObjectInitialRadiusNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectInitialRadius != null ? retObjectInitialRadius.getClass() : "null", retObjectInitialRadius_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectInitialRadius != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectInitialRadiusClass = retObjectInitialRadius.getClass();
+                    // java.lang.reflect.Method retObjectInitialRadiusMethod = retObjectInitialRadiusClass.getMethod("doubleValue");
+                    // return (double)retObjectInitialRadiusMethod.invoke(retObjectInitialRadius);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectInitialRadiusNumber = java.text.NumberFormat.getInstance().parse(retObjectInitialRadius_ToString);
+                    return retObjectInitialRadiusNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportInitialRadiusError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectInitialRadius != null ? retObjectInitialRadius.getClass() : "null", retObjectInitialRadius_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportInitialRadiusError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -174,13 +174,32 @@ public class PackUriHelper extends NetObject  {
             retObjectComparePackUri = classType.Invoke("ComparePackUri", firstPackUri == null ? null : firstPackUri.getJCOInstance(), secondPackUri == null ? null : secondPackUri.getJCOInstance());
             return (int)retObjectComparePackUri;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportComparePackUriError = true;
             java.lang.String retObjectComparePackUri_ToString = retObjectComparePackUri == null ? "null" : retObjectComparePackUri.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectComparePackUriNumber = (java.lang.Number)retObjectComparePackUri;
-                return retObjectComparePackUriNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectComparePackUri != null ? retObjectComparePackUri.getClass() : "null", retObjectComparePackUri_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectComparePackUri != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectComparePackUriClass = retObjectComparePackUri.getClass();
+                    // java.lang.reflect.Method retObjectComparePackUriMethod = retObjectComparePackUriClass.getMethod("intValue");
+                    // return (int)retObjectComparePackUriMethod.invoke(retObjectComparePackUri);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectComparePackUriNumber = java.text.NumberFormat.getInstance().parse(retObjectComparePackUri_ToString);
+                    return retObjectComparePackUriNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportComparePackUriError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectComparePackUri != null ? retObjectComparePackUri.getClass() : "null", retObjectComparePackUri_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportComparePackUriError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,13 +214,32 @@ public class PackUriHelper extends NetObject  {
             retObjectComparePartUri = classType.Invoke("ComparePartUri", firstPartUri == null ? null : firstPartUri.getJCOInstance(), secondPartUri == null ? null : secondPartUri.getJCOInstance());
             return (int)retObjectComparePartUri;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportComparePartUriError = true;
             java.lang.String retObjectComparePartUri_ToString = retObjectComparePartUri == null ? "null" : retObjectComparePartUri.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectComparePartUriNumber = (java.lang.Number)retObjectComparePartUri;
-                return retObjectComparePartUriNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectComparePartUri != null ? retObjectComparePartUri.getClass() : "null", retObjectComparePartUri_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectComparePartUri != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectComparePartUriClass = retObjectComparePartUri.getClass();
+                    // java.lang.reflect.Method retObjectComparePartUriMethod = retObjectComparePartUriClass.getMethod("intValue");
+                    // return (int)retObjectComparePartUriMethod.invoke(retObjectComparePartUri);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectComparePartUriNumber = java.text.NumberFormat.getInstance().parse(retObjectComparePartUri_ToString);
+                    return retObjectComparePartUriNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportComparePartUriError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectComparePartUri != null ? retObjectComparePartUri.getClass() : "null", retObjectComparePartUri_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportComparePartUriError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

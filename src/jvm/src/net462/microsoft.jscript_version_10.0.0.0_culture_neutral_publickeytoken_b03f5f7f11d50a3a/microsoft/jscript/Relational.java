@@ -172,13 +172,32 @@ public class Relational extends BinaryOp  {
             retObjectEvaluateRelational = classInstance.Invoke("EvaluateRelational", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
             return (double)retObjectEvaluateRelational;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEvaluateRelationalError = true;
             java.lang.String retObjectEvaluateRelational_ToString = retObjectEvaluateRelational == null ? "null" : retObjectEvaluateRelational.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEvaluateRelationalNumber = (java.lang.Number)retObjectEvaluateRelational;
-                return retObjectEvaluateRelationalNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectEvaluateRelational != null ? retObjectEvaluateRelational.getClass() : "null", retObjectEvaluateRelational_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEvaluateRelational != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEvaluateRelationalClass = retObjectEvaluateRelational.getClass();
+                    // java.lang.reflect.Method retObjectEvaluateRelationalMethod = retObjectEvaluateRelationalClass.getMethod("doubleValue");
+                    // return (double)retObjectEvaluateRelationalMethod.invoke(retObjectEvaluateRelational);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEvaluateRelationalNumber = java.text.NumberFormat.getInstance().parse(retObjectEvaluateRelational_ToString);
+                    return retObjectEvaluateRelationalNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEvaluateRelationalError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEvaluateRelational != null ? retObjectEvaluateRelational.getClass() : "null", retObjectEvaluateRelational_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEvaluateRelationalError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -193,13 +212,32 @@ public class Relational extends BinaryOp  {
             retObjectJScriptCompare = classType.Invoke("JScriptCompare", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
             return (double)retObjectJScriptCompare;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportJScriptCompareError = true;
             java.lang.String retObjectJScriptCompare_ToString = retObjectJScriptCompare == null ? "null" : retObjectJScriptCompare.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectJScriptCompareNumber = (java.lang.Number)retObjectJScriptCompare;
-                return retObjectJScriptCompareNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectJScriptCompare != null ? retObjectJScriptCompare.getClass() : "null", retObjectJScriptCompare_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectJScriptCompare != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectJScriptCompareClass = retObjectJScriptCompare.getClass();
+                    // java.lang.reflect.Method retObjectJScriptCompareMethod = retObjectJScriptCompareClass.getMethod("doubleValue");
+                    // return (double)retObjectJScriptCompareMethod.invoke(retObjectJScriptCompare);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectJScriptCompareNumber = java.text.NumberFormat.getInstance().parse(retObjectJScriptCompare_ToString);
+                    return retObjectJScriptCompareNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportJScriptCompareError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectJScriptCompare != null ? retObjectJScriptCompare.getClass() : "null", retObjectJScriptCompare_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportJScriptCompareError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

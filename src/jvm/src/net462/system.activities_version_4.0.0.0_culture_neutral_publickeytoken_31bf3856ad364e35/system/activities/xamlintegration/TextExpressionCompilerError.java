@@ -189,13 +189,32 @@ public class TextExpressionCompilerError extends NetObject  {
             retObjectSourceLineNumber = classInstance.Get("SourceLineNumber");
             return (int)retObjectSourceLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSourceLineNumberError = true;
             java.lang.String retObjectSourceLineNumber_ToString = retObjectSourceLineNumber == null ? "null" : retObjectSourceLineNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSourceLineNumberNumber = (java.lang.Number)retObjectSourceLineNumber;
-                return retObjectSourceLineNumberNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSourceLineNumber != null ? retObjectSourceLineNumber.getClass() : "null", retObjectSourceLineNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSourceLineNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSourceLineNumberClass = retObjectSourceLineNumber.getClass();
+                    // java.lang.reflect.Method retObjectSourceLineNumberMethod = retObjectSourceLineNumberClass.getMethod("intValue");
+                    // return (int)retObjectSourceLineNumberMethod.invoke(retObjectSourceLineNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSourceLineNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectSourceLineNumber_ToString);
+                    return retObjectSourceLineNumberNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSourceLineNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSourceLineNumber != null ? retObjectSourceLineNumber.getClass() : "null", retObjectSourceLineNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSourceLineNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

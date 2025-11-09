@@ -168,13 +168,32 @@ public class DbCommand extends Component  {
             retObjectExecuteNonQuery = classInstance.Invoke("ExecuteNonQuery");
             return (int)retObjectExecuteNonQuery;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportExecuteNonQueryError = true;
             java.lang.String retObjectExecuteNonQuery_ToString = retObjectExecuteNonQuery == null ? "null" : retObjectExecuteNonQuery.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectExecuteNonQueryNumber = (java.lang.Number)retObjectExecuteNonQuery;
-                return retObjectExecuteNonQueryNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectExecuteNonQuery != null ? retObjectExecuteNonQuery.getClass() : "null", retObjectExecuteNonQuery_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectExecuteNonQuery != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectExecuteNonQueryClass = retObjectExecuteNonQuery.getClass();
+                    // java.lang.reflect.Method retObjectExecuteNonQueryMethod = retObjectExecuteNonQueryClass.getMethod("intValue");
+                    // return (int)retObjectExecuteNonQueryMethod.invoke(retObjectExecuteNonQuery);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectExecuteNonQueryNumber = java.text.NumberFormat.getInstance().parse(retObjectExecuteNonQuery_ToString);
+                    return retObjectExecuteNonQueryNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportExecuteNonQueryError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectExecuteNonQuery != null ? retObjectExecuteNonQuery.getClass() : "null", retObjectExecuteNonQuery_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportExecuteNonQueryError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -297,13 +316,32 @@ public class DbCommand extends Component  {
             retObjectCommandTimeout = classInstance.Get("CommandTimeout");
             return (int)retObjectCommandTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCommandTimeoutError = true;
             java.lang.String retObjectCommandTimeout_ToString = retObjectCommandTimeout == null ? "null" : retObjectCommandTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCommandTimeoutNumber = (java.lang.Number)retObjectCommandTimeout;
-                return retObjectCommandTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCommandTimeout != null ? retObjectCommandTimeout.getClass() : "null", retObjectCommandTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCommandTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCommandTimeoutClass = retObjectCommandTimeout.getClass();
+                    // java.lang.reflect.Method retObjectCommandTimeoutMethod = retObjectCommandTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectCommandTimeoutMethod.invoke(retObjectCommandTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCommandTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectCommandTimeout_ToString);
+                    return retObjectCommandTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCommandTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCommandTimeout != null ? retObjectCommandTimeout.getClass() : "null", retObjectCommandTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCommandTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

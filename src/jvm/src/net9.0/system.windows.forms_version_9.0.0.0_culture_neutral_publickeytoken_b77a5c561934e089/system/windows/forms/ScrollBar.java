@@ -221,13 +221,32 @@ public class ScrollBar extends Control  {
             retObjectLargeChange = classInstance.Get("LargeChange");
             return (int)retObjectLargeChange;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLargeChangeError = true;
             java.lang.String retObjectLargeChange_ToString = retObjectLargeChange == null ? "null" : retObjectLargeChange.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLargeChangeNumber = (java.lang.Number)retObjectLargeChange;
-                return retObjectLargeChangeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLargeChange != null ? retObjectLargeChange.getClass() : "null", retObjectLargeChange_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLargeChange != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLargeChangeClass = retObjectLargeChange.getClass();
+                    // java.lang.reflect.Method retObjectLargeChangeMethod = retObjectLargeChangeClass.getMethod("intValue");
+                    // return (int)retObjectLargeChangeMethod.invoke(retObjectLargeChange);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLargeChangeNumber = java.text.NumberFormat.getInstance().parse(retObjectLargeChange_ToString);
+                    return retObjectLargeChangeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLargeChangeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLargeChange != null ? retObjectLargeChange.getClass() : "null", retObjectLargeChange_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLargeChangeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,13 +271,32 @@ public class ScrollBar extends Control  {
             retObjectMaximum = classInstance.Get("Maximum");
             return (int)retObjectMaximum;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumError = true;
             java.lang.String retObjectMaximum_ToString = retObjectMaximum == null ? "null" : retObjectMaximum.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumNumber = (java.lang.Number)retObjectMaximum;
-                return retObjectMaximumNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumClass = retObjectMaximum.getClass();
+                    // java.lang.reflect.Method retObjectMaximumMethod = retObjectMaximumClass.getMethod("intValue");
+                    // return (int)retObjectMaximumMethod.invoke(retObjectMaximum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximum_ToString);
+                    return retObjectMaximumNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximum != null ? retObjectMaximum.getClass() : "null", retObjectMaximum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -283,13 +321,32 @@ public class ScrollBar extends Control  {
             retObjectMinimum = classInstance.Get("Minimum");
             return (int)retObjectMinimum;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinimumError = true;
             java.lang.String retObjectMinimum_ToString = retObjectMinimum == null ? "null" : retObjectMinimum.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinimumNumber = (java.lang.Number)retObjectMinimum;
-                return retObjectMinimumNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinimum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinimumClass = retObjectMinimum.getClass();
+                    // java.lang.reflect.Method retObjectMinimumMethod = retObjectMinimumClass.getMethod("intValue");
+                    // return (int)retObjectMinimumMethod.invoke(retObjectMinimum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinimumNumber = java.text.NumberFormat.getInstance().parse(retObjectMinimum_ToString);
+                    return retObjectMinimumNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinimumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinimum != null ? retObjectMinimum.getClass() : "null", retObjectMinimum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinimumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -314,13 +371,32 @@ public class ScrollBar extends Control  {
             retObjectSmallChange = classInstance.Get("SmallChange");
             return (int)retObjectSmallChange;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSmallChangeError = true;
             java.lang.String retObjectSmallChange_ToString = retObjectSmallChange == null ? "null" : retObjectSmallChange.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSmallChangeNumber = (java.lang.Number)retObjectSmallChange;
-                return retObjectSmallChangeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSmallChange != null ? retObjectSmallChange.getClass() : "null", retObjectSmallChange_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSmallChange != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSmallChangeClass = retObjectSmallChange.getClass();
+                    // java.lang.reflect.Method retObjectSmallChangeMethod = retObjectSmallChangeClass.getMethod("intValue");
+                    // return (int)retObjectSmallChangeMethod.invoke(retObjectSmallChange);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSmallChangeNumber = java.text.NumberFormat.getInstance().parse(retObjectSmallChange_ToString);
+                    return retObjectSmallChangeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSmallChangeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSmallChange != null ? retObjectSmallChange.getClass() : "null", retObjectSmallChange_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSmallChangeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -345,13 +421,32 @@ public class ScrollBar extends Control  {
             retObjectValue = classInstance.Get("Value");
             return (int)retObjectValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportValueError = true;
             java.lang.String retObjectValue_ToString = retObjectValue == null ? "null" : retObjectValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectValueNumber = (java.lang.Number)retObjectValue;
-                return retObjectValueNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectValueClass = retObjectValue.getClass();
+                    // java.lang.reflect.Method retObjectValueMethod = retObjectValueClass.getMethod("intValue");
+                    // return (int)retObjectValueMethod.invoke(retObjectValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectValueNumber = java.text.NumberFormat.getInstance().parse(retObjectValue_ToString);
+                    return retObjectValueNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectValue != null ? retObjectValue.getClass() : "null", retObjectValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

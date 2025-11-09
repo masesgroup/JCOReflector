@@ -397,13 +397,32 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
             retObjectMaxPendingReceives = classInstance.Get("MaxPendingReceives");
             return (int)retObjectMaxPendingReceives;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxPendingReceivesError = true;
             java.lang.String retObjectMaxPendingReceives_ToString = retObjectMaxPendingReceives == null ? "null" : retObjectMaxPendingReceives.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxPendingReceivesNumber = (java.lang.Number)retObjectMaxPendingReceives;
-                return retObjectMaxPendingReceivesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingReceives != null ? retObjectMaxPendingReceives.getClass() : "null", retObjectMaxPendingReceives_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxPendingReceives != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxPendingReceivesClass = retObjectMaxPendingReceives.getClass();
+                    // java.lang.reflect.Method retObjectMaxPendingReceivesMethod = retObjectMaxPendingReceivesClass.getMethod("intValue");
+                    // return (int)retObjectMaxPendingReceivesMethod.invoke(retObjectMaxPendingReceives);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxPendingReceivesNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxPendingReceives_ToString);
+                    return retObjectMaxPendingReceivesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxPendingReceivesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxPendingReceives != null ? retObjectMaxPendingReceives.getClass() : "null", retObjectMaxPendingReceives_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxPendingReceivesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -428,13 +447,32 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
             retObjectMaxTransactedBatchSize = classInstance.Get("MaxTransactedBatchSize");
             return (int)retObjectMaxTransactedBatchSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxTransactedBatchSizeError = true;
             java.lang.String retObjectMaxTransactedBatchSize_ToString = retObjectMaxTransactedBatchSize == null ? "null" : retObjectMaxTransactedBatchSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxTransactedBatchSizeNumber = (java.lang.Number)retObjectMaxTransactedBatchSize;
-                return retObjectMaxTransactedBatchSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxTransactedBatchSize != null ? retObjectMaxTransactedBatchSize.getClass() : "null", retObjectMaxTransactedBatchSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxTransactedBatchSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxTransactedBatchSizeClass = retObjectMaxTransactedBatchSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxTransactedBatchSizeMethod = retObjectMaxTransactedBatchSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxTransactedBatchSizeMethod.invoke(retObjectMaxTransactedBatchSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxTransactedBatchSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxTransactedBatchSize_ToString);
+                    return retObjectMaxTransactedBatchSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxTransactedBatchSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxTransactedBatchSize != null ? retObjectMaxTransactedBatchSize.getClass() : "null", retObjectMaxTransactedBatchSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxTransactedBatchSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

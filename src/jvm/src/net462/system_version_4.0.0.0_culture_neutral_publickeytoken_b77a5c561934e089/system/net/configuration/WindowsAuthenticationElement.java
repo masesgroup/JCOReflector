@@ -172,13 +172,32 @@ public class WindowsAuthenticationElement extends ConfigurationElement  {
             retObjectDefaultCredentialsHandleCacheSize = classInstance.Get("DefaultCredentialsHandleCacheSize");
             return (int)retObjectDefaultCredentialsHandleCacheSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDefaultCredentialsHandleCacheSizeError = true;
             java.lang.String retObjectDefaultCredentialsHandleCacheSize_ToString = retObjectDefaultCredentialsHandleCacheSize == null ? "null" : retObjectDefaultCredentialsHandleCacheSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDefaultCredentialsHandleCacheSizeNumber = (java.lang.Number)retObjectDefaultCredentialsHandleCacheSize;
-                return retObjectDefaultCredentialsHandleCacheSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDefaultCredentialsHandleCacheSize != null ? retObjectDefaultCredentialsHandleCacheSize.getClass() : "null", retObjectDefaultCredentialsHandleCacheSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDefaultCredentialsHandleCacheSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDefaultCredentialsHandleCacheSizeClass = retObjectDefaultCredentialsHandleCacheSize.getClass();
+                    // java.lang.reflect.Method retObjectDefaultCredentialsHandleCacheSizeMethod = retObjectDefaultCredentialsHandleCacheSizeClass.getMethod("intValue");
+                    // return (int)retObjectDefaultCredentialsHandleCacheSizeMethod.invoke(retObjectDefaultCredentialsHandleCacheSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDefaultCredentialsHandleCacheSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectDefaultCredentialsHandleCacheSize_ToString);
+                    return retObjectDefaultCredentialsHandleCacheSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDefaultCredentialsHandleCacheSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDefaultCredentialsHandleCacheSize != null ? retObjectDefaultCredentialsHandleCacheSize.getClass() : "null", retObjectDefaultCredentialsHandleCacheSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDefaultCredentialsHandleCacheSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

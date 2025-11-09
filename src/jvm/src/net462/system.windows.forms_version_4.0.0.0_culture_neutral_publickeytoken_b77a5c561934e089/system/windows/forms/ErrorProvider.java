@@ -214,13 +214,32 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
             retObjectGetIconPadding = classInstance.Invoke("GetIconPadding", control == null ? null : control.getJCOInstance());
             return (int)retObjectGetIconPadding;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetIconPaddingError = true;
             java.lang.String retObjectGetIconPadding_ToString = retObjectGetIconPadding == null ? "null" : retObjectGetIconPadding.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetIconPaddingNumber = (java.lang.Number)retObjectGetIconPadding;
-                return retObjectGetIconPaddingNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetIconPadding != null ? retObjectGetIconPadding.getClass() : "null", retObjectGetIconPadding_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetIconPadding != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetIconPaddingClass = retObjectGetIconPadding.getClass();
+                    // java.lang.reflect.Method retObjectGetIconPaddingMethod = retObjectGetIconPaddingClass.getMethod("intValue");
+                    // return (int)retObjectGetIconPaddingMethod.invoke(retObjectGetIconPadding);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetIconPaddingNumber = java.text.NumberFormat.getInstance().parse(retObjectGetIconPadding_ToString);
+                    return retObjectGetIconPaddingNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetIconPaddingError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetIconPadding != null ? retObjectGetIconPadding.getClass() : "null", retObjectGetIconPadding_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetIconPaddingError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -370,13 +389,32 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
             retObjectBlinkRate = classInstance.Get("BlinkRate");
             return (int)retObjectBlinkRate;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBlinkRateError = true;
             java.lang.String retObjectBlinkRate_ToString = retObjectBlinkRate == null ? "null" : retObjectBlinkRate.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBlinkRateNumber = (java.lang.Number)retObjectBlinkRate;
-                return retObjectBlinkRateNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBlinkRate != null ? retObjectBlinkRate.getClass() : "null", retObjectBlinkRate_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBlinkRate != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBlinkRateClass = retObjectBlinkRate.getClass();
+                    // java.lang.reflect.Method retObjectBlinkRateMethod = retObjectBlinkRateClass.getMethod("intValue");
+                    // return (int)retObjectBlinkRateMethod.invoke(retObjectBlinkRate);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBlinkRateNumber = java.text.NumberFormat.getInstance().parse(retObjectBlinkRate_ToString);
+                    return retObjectBlinkRateNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBlinkRateError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBlinkRate != null ? retObjectBlinkRate.getClass() : "null", retObjectBlinkRate_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBlinkRateError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

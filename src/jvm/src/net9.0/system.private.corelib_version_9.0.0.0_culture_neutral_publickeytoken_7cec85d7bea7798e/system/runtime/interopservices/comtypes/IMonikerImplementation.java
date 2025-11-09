@@ -158,13 +158,32 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             retObjectIsDirty = classInstance.Invoke("IsDirty");
             return (int)retObjectIsDirty;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIsDirtyError = true;
             java.lang.String retObjectIsDirty_ToString = retObjectIsDirty == null ? "null" : retObjectIsDirty.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIsDirtyNumber = (java.lang.Number)retObjectIsDirty;
-                return retObjectIsDirtyNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null", retObjectIsDirty_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIsDirty != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIsDirtyClass = retObjectIsDirty.getClass();
+                    // java.lang.reflect.Method retObjectIsDirtyMethod = retObjectIsDirtyClass.getMethod("intValue");
+                    // return (int)retObjectIsDirtyMethod.invoke(retObjectIsDirty);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIsDirtyNumber = java.text.NumberFormat.getInstance().parse(retObjectIsDirty_ToString);
+                    return retObjectIsDirtyNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIsDirtyError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIsDirty != null ? retObjectIsDirty.getClass() : "null", retObjectIsDirty_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIsDirtyError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -179,13 +198,32 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             retObjectIsEqual = classInstance.Invoke("IsEqual", pmkOtherMoniker == null ? null : pmkOtherMoniker.getJCOInstance());
             return (int)retObjectIsEqual;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIsEqualError = true;
             java.lang.String retObjectIsEqual_ToString = retObjectIsEqual == null ? "null" : retObjectIsEqual.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIsEqualNumber = (java.lang.Number)retObjectIsEqual;
-                return retObjectIsEqualNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsEqual != null ? retObjectIsEqual.getClass() : "null", retObjectIsEqual_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIsEqual != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIsEqualClass = retObjectIsEqual.getClass();
+                    // java.lang.reflect.Method retObjectIsEqualMethod = retObjectIsEqualClass.getMethod("intValue");
+                    // return (int)retObjectIsEqualMethod.invoke(retObjectIsEqual);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIsEqualNumber = java.text.NumberFormat.getInstance().parse(retObjectIsEqual_ToString);
+                    return retObjectIsEqualNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIsEqualError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIsEqual != null ? retObjectIsEqual.getClass() : "null", retObjectIsEqual_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIsEqualError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,13 +238,32 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             retObjectIsRunning = classInstance.Invoke("IsRunning", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pmkNewlyRunning == null ? null : pmkNewlyRunning.getJCOInstance());
             return (int)retObjectIsRunning;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIsRunningError = true;
             java.lang.String retObjectIsRunning_ToString = retObjectIsRunning == null ? "null" : retObjectIsRunning.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIsRunningNumber = (java.lang.Number)retObjectIsRunning;
-                return retObjectIsRunningNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null", retObjectIsRunning_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIsRunning != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIsRunningClass = retObjectIsRunning.getClass();
+                    // java.lang.reflect.Method retObjectIsRunningMethod = retObjectIsRunningClass.getMethod("intValue");
+                    // return (int)retObjectIsRunningMethod.invoke(retObjectIsRunning);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIsRunningNumber = java.text.NumberFormat.getInstance().parse(retObjectIsRunning_ToString);
+                    return retObjectIsRunningNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIsRunningError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIsRunning != null ? retObjectIsRunning.getClass() : "null", retObjectIsRunning_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIsRunningError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,13 +278,32 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             retObjectIsSystemMoniker = classInstance.Invoke("IsSystemMoniker", pdwMksys.getJCRefOut());
             return (int)retObjectIsSystemMoniker;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIsSystemMonikerError = true;
             java.lang.String retObjectIsSystemMoniker_ToString = retObjectIsSystemMoniker == null ? "null" : retObjectIsSystemMoniker.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIsSystemMonikerNumber = (java.lang.Number)retObjectIsSystemMoniker;
-                return retObjectIsSystemMonikerNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIsSystemMoniker != null ? retObjectIsSystemMoniker.getClass() : "null", retObjectIsSystemMoniker_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIsSystemMoniker != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIsSystemMonikerClass = retObjectIsSystemMoniker.getClass();
+                    // java.lang.reflect.Method retObjectIsSystemMonikerMethod = retObjectIsSystemMonikerClass.getMethod("intValue");
+                    // return (int)retObjectIsSystemMonikerMethod.invoke(retObjectIsSystemMoniker);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIsSystemMonikerNumber = java.text.NumberFormat.getInstance().parse(retObjectIsSystemMoniker_ToString);
+                    return retObjectIsSystemMonikerNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIsSystemMonikerError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIsSystemMoniker != null ? retObjectIsSystemMoniker.getClass() : "null", retObjectIsSystemMoniker_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIsSystemMonikerError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -253,13 +253,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectCryptPutHost = classType.Invoke("CryptPutHost", strHost);
             return (int)retObjectCryptPutHost;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCryptPutHostError = true;
             java.lang.String retObjectCryptPutHost_ToString = retObjectCryptPutHost == null ? "null" : retObjectCryptPutHost.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCryptPutHostNumber = (java.lang.Number)retObjectCryptPutHost;
-                return retObjectCryptPutHostNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCryptPutHost != null ? retObjectCryptPutHost.getClass() : "null", retObjectCryptPutHost_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCryptPutHost != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCryptPutHostClass = retObjectCryptPutHost.getClass();
+                    // java.lang.reflect.Method retObjectCryptPutHostMethod = retObjectCryptPutHostClass.getMethod("intValue");
+                    // return (int)retObjectCryptPutHostMethod.invoke(retObjectCryptPutHost);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCryptPutHostNumber = java.text.NumberFormat.getInstance().parse(retObjectCryptPutHost_ToString);
+                    return retObjectCryptPutHostNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCryptPutHostError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCryptPutHost != null ? retObjectCryptPutHost.getClass() : "null", retObjectCryptPutHost_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCryptPutHostError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -274,13 +293,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectCryptPutSite = classType.Invoke("CryptPutSite", strSite);
             return (int)retObjectCryptPutSite;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCryptPutSiteError = true;
             java.lang.String retObjectCryptPutSite_ToString = retObjectCryptPutSite == null ? "null" : retObjectCryptPutSite.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCryptPutSiteNumber = (java.lang.Number)retObjectCryptPutSite;
-                return retObjectCryptPutSiteNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCryptPutSite != null ? retObjectCryptPutSite.getClass() : "null", retObjectCryptPutSite_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCryptPutSite != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCryptPutSiteClass = retObjectCryptPutSite.getClass();
+                    // java.lang.reflect.Method retObjectCryptPutSiteMethod = retObjectCryptPutSiteClass.getMethod("intValue");
+                    // return (int)retObjectCryptPutSiteMethod.invoke(retObjectCryptPutSite);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCryptPutSiteNumber = java.text.NumberFormat.getInstance().parse(retObjectCryptPutSite_ToString);
+                    return retObjectCryptPutSiteNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCryptPutSiteError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCryptPutSite != null ? retObjectCryptPutSite.getClass() : "null", retObjectCryptPutSite_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCryptPutSiteError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -295,13 +333,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectLoginUser = classInstance.Invoke("LoginUser");
             return (int)retObjectLoginUser;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLoginUserError = true;
             java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
-                return retObjectLoginUserNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLoginUser != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLoginUserClass = retObjectLoginUser.getClass();
+                    // java.lang.reflect.Method retObjectLoginUserMethod = retObjectLoginUserClass.getMethod("intValue");
+                    // return (int)retObjectLoginUserMethod.invoke(retObjectLoginUser);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLoginUserNumber = java.text.NumberFormat.getInstance().parse(retObjectLoginUser_ToString);
+                    return retObjectLoginUserNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLoginUserError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLoginUserError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -316,13 +373,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectLoginUser = classInstance.Invoke("LoginUser", strReturnUrl);
             return (int)retObjectLoginUser;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLoginUserError = true;
             java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
-                return retObjectLoginUserNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLoginUser != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLoginUserClass = retObjectLoginUser.getClass();
+                    // java.lang.reflect.Method retObjectLoginUserMethod = retObjectLoginUserClass.getMethod("intValue");
+                    // return (int)retObjectLoginUserMethod.invoke(retObjectLoginUser);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLoginUserNumber = java.text.NumberFormat.getInstance().parse(retObjectLoginUser_ToString);
+                    return retObjectLoginUserNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLoginUserError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLoginUserError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -337,13 +413,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectLoginUser = classInstance.Invoke("LoginUser", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, fUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
             return (int)retObjectLoginUser;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLoginUserError = true;
             java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
-                return retObjectLoginUserNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLoginUser != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLoginUserClass = retObjectLoginUser.getClass();
+                    // java.lang.reflect.Method retObjectLoginUserMethod = retObjectLoginUserClass.getMethod("intValue");
+                    // return (int)retObjectLoginUserMethod.invoke(retObjectLoginUser);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLoginUserNumber = java.text.NumberFormat.getInstance().parse(retObjectLoginUser_ToString);
+                    return retObjectLoginUserNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLoginUserError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLoginUserError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -358,13 +453,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectLoginUser = classInstance.Invoke("LoginUser", szRetURL, iTimeWindow, fForceLogin, szCOBrandArgs, iLangID, strNameSpace, iKPP, iUseSecureAuth, oExtraParams == null ? null : oExtraParams.getJCOInstance());
             return (int)retObjectLoginUser;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLoginUserError = true;
             java.lang.String retObjectLoginUser_ToString = retObjectLoginUser == null ? "null" : retObjectLoginUser.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLoginUserNumber = (java.lang.Number)retObjectLoginUser;
-                return retObjectLoginUserNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLoginUser != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLoginUserClass = retObjectLoginUser.getClass();
+                    // java.lang.reflect.Method retObjectLoginUserMethod = retObjectLoginUserClass.getMethod("intValue");
+                    // return (int)retObjectLoginUserMethod.invoke(retObjectLoginUser);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLoginUserNumber = java.text.NumberFormat.getInstance().parse(retObjectLoginUser_ToString);
+                    return retObjectLoginUserNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLoginUserError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLoginUser != null ? retObjectLoginUser.getClass() : "null", retObjectLoginUser_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLoginUserError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -919,13 +1033,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectError = classInstance.Get("Error");
             return (int)retObjectError;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportErrorError = true;
             java.lang.String retObjectError_ToString = retObjectError == null ? "null" : retObjectError.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectErrorNumber = (java.lang.Number)retObjectError;
-                return retObjectErrorNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectError != null ? retObjectError.getClass() : "null", retObjectError_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectError != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectErrorClass = retObjectError.getClass();
+                    // java.lang.reflect.Method retObjectErrorMethod = retObjectErrorClass.getMethod("intValue");
+                    // return (int)retObjectErrorMethod.invoke(retObjectError);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectErrorNumber = java.text.NumberFormat.getInstance().parse(retObjectError_ToString);
+                    return retObjectErrorNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportErrorError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectError != null ? retObjectError.getClass() : "null", retObjectError_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportErrorError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -940,13 +1073,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectTicketAge = classInstance.Get("TicketAge");
             return (int)retObjectTicketAge;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTicketAgeError = true;
             java.lang.String retObjectTicketAge_ToString = retObjectTicketAge == null ? "null" : retObjectTicketAge.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTicketAgeNumber = (java.lang.Number)retObjectTicketAge;
-                return retObjectTicketAgeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTicketAge != null ? retObjectTicketAge.getClass() : "null", retObjectTicketAge_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTicketAge != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTicketAgeClass = retObjectTicketAge.getClass();
+                    // java.lang.reflect.Method retObjectTicketAgeMethod = retObjectTicketAgeClass.getMethod("intValue");
+                    // return (int)retObjectTicketAgeMethod.invoke(retObjectTicketAge);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTicketAgeNumber = java.text.NumberFormat.getInstance().parse(retObjectTicketAge_ToString);
+                    return retObjectTicketAgeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTicketAgeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTicketAge != null ? retObjectTicketAge.getClass() : "null", retObjectTicketAge_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTicketAgeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -961,13 +1113,32 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             retObjectTimeSinceSignIn = classInstance.Get("TimeSinceSignIn");
             return (int)retObjectTimeSinceSignIn;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTimeSinceSignInError = true;
             java.lang.String retObjectTimeSinceSignIn_ToString = retObjectTimeSinceSignIn == null ? "null" : retObjectTimeSinceSignIn.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTimeSinceSignInNumber = (java.lang.Number)retObjectTimeSinceSignIn;
-                return retObjectTimeSinceSignInNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTimeSinceSignIn != null ? retObjectTimeSinceSignIn.getClass() : "null", retObjectTimeSinceSignIn_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTimeSinceSignIn != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTimeSinceSignInClass = retObjectTimeSinceSignIn.getClass();
+                    // java.lang.reflect.Method retObjectTimeSinceSignInMethod = retObjectTimeSinceSignInClass.getMethod("intValue");
+                    // return (int)retObjectTimeSinceSignInMethod.invoke(retObjectTimeSinceSignIn);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTimeSinceSignInNumber = java.text.NumberFormat.getInstance().parse(retObjectTimeSinceSignIn_ToString);
+                    return retObjectTimeSinceSignInNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTimeSinceSignInError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTimeSinceSignIn != null ? retObjectTimeSinceSignIn.getClass() : "null", retObjectTimeSinceSignIn_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTimeSinceSignInError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

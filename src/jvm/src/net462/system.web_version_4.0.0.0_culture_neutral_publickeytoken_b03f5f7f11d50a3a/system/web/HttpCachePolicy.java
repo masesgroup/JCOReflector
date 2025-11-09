@@ -295,13 +295,32 @@ public class HttpCachePolicy extends NetObject  {
             retObjectGetOmitVaryStar = classInstance.Invoke("GetOmitVaryStar");
             return (int)retObjectGetOmitVaryStar;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetOmitVaryStarError = true;
             java.lang.String retObjectGetOmitVaryStar_ToString = retObjectGetOmitVaryStar == null ? "null" : retObjectGetOmitVaryStar.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetOmitVaryStarNumber = (java.lang.Number)retObjectGetOmitVaryStar;
-                return retObjectGetOmitVaryStarNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetOmitVaryStar != null ? retObjectGetOmitVaryStar.getClass() : "null", retObjectGetOmitVaryStar_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetOmitVaryStar != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetOmitVaryStarClass = retObjectGetOmitVaryStar.getClass();
+                    // java.lang.reflect.Method retObjectGetOmitVaryStarMethod = retObjectGetOmitVaryStarClass.getMethod("intValue");
+                    // return (int)retObjectGetOmitVaryStarMethod.invoke(retObjectGetOmitVaryStar);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetOmitVaryStarNumber = java.text.NumberFormat.getInstance().parse(retObjectGetOmitVaryStar_ToString);
+                    return retObjectGetOmitVaryStarNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetOmitVaryStarError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetOmitVaryStar != null ? retObjectGetOmitVaryStar.getClass() : "null", retObjectGetOmitVaryStar_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetOmitVaryStarError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

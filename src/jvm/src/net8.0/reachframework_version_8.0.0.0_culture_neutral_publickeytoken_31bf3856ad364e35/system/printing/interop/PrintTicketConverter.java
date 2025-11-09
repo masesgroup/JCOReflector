@@ -307,13 +307,32 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
             retObjectMaxPrintSchemaVersion = classType.Get("MaxPrintSchemaVersion");
             return (int)retObjectMaxPrintSchemaVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxPrintSchemaVersionError = true;
             java.lang.String retObjectMaxPrintSchemaVersion_ToString = retObjectMaxPrintSchemaVersion == null ? "null" : retObjectMaxPrintSchemaVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxPrintSchemaVersionNumber = (java.lang.Number)retObjectMaxPrintSchemaVersion;
-                return retObjectMaxPrintSchemaVersionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPrintSchemaVersion != null ? retObjectMaxPrintSchemaVersion.getClass() : "null", retObjectMaxPrintSchemaVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxPrintSchemaVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxPrintSchemaVersionClass = retObjectMaxPrintSchemaVersion.getClass();
+                    // java.lang.reflect.Method retObjectMaxPrintSchemaVersionMethod = retObjectMaxPrintSchemaVersionClass.getMethod("intValue");
+                    // return (int)retObjectMaxPrintSchemaVersionMethod.invoke(retObjectMaxPrintSchemaVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxPrintSchemaVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxPrintSchemaVersion_ToString);
+                    return retObjectMaxPrintSchemaVersionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxPrintSchemaVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxPrintSchemaVersion != null ? retObjectMaxPrintSchemaVersion.getClass() : "null", retObjectMaxPrintSchemaVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxPrintSchemaVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

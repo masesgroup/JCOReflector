@@ -160,13 +160,32 @@ public class TextSource extends NetObject  {
             retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex = classInstance.Invoke("GetTextEffectCharacterIndexFromTextSourceCharacterIndex", textSourceCharacterIndex);
             return (int)retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetTextEffectCharacterIndexFromTextSourceCharacterIndexError = true;
             java.lang.String retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex_ToString = retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex == null ? "null" : retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexNumber = (java.lang.Number)retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex;
-                return retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex != null ? retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex.getClass() : "null", retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexClass = retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex.getClass();
+                    // java.lang.reflect.Method retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexMethod = retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexClass.getMethod("intValue");
+                    // return (int)retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexMethod.invoke(retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex_ToString);
+                    return retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetTextEffectCharacterIndexFromTextSourceCharacterIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex != null ? retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex.getClass() : "null", retObjectGetTextEffectCharacterIndexFromTextSourceCharacterIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetTextEffectCharacterIndexFromTextSourceCharacterIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,13 +219,32 @@ public class TextSource extends NetObject  {
             retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
             return (double)retObjectPixelsPerDip;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPixelsPerDipError = true;
             java.lang.String retObjectPixelsPerDip_ToString = retObjectPixelsPerDip == null ? "null" : retObjectPixelsPerDip.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPixelsPerDipNumber = (java.lang.Number)retObjectPixelsPerDip;
-                return retObjectPixelsPerDipNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPixelsPerDip != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPixelsPerDipClass = retObjectPixelsPerDip.getClass();
+                    // java.lang.reflect.Method retObjectPixelsPerDipMethod = retObjectPixelsPerDipClass.getMethod("doubleValue");
+                    // return (double)retObjectPixelsPerDipMethod.invoke(retObjectPixelsPerDip);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPixelsPerDipNumber = java.text.NumberFormat.getInstance().parse(retObjectPixelsPerDip_ToString);
+                    return retObjectPixelsPerDipNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPixelsPerDipError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPixelsPerDipError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

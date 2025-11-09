@@ -177,13 +177,32 @@ public class PackagingProgressEventArgs extends EventArgs  {
             retObjectNumberCompleted = classInstance.Get("NumberCompleted");
             return (int)retObjectNumberCompleted;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNumberCompletedError = true;
             java.lang.String retObjectNumberCompleted_ToString = retObjectNumberCompleted == null ? "null" : retObjectNumberCompleted.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNumberCompletedNumber = (java.lang.Number)retObjectNumberCompleted;
-                return retObjectNumberCompletedNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNumberCompleted != null ? retObjectNumberCompleted.getClass() : "null", retObjectNumberCompleted_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNumberCompleted != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNumberCompletedClass = retObjectNumberCompleted.getClass();
+                    // java.lang.reflect.Method retObjectNumberCompletedMethod = retObjectNumberCompletedClass.getMethod("intValue");
+                    // return (int)retObjectNumberCompletedMethod.invoke(retObjectNumberCompleted);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNumberCompletedNumber = java.text.NumberFormat.getInstance().parse(retObjectNumberCompleted_ToString);
+                    return retObjectNumberCompletedNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNumberCompletedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNumberCompleted != null ? retObjectNumberCompleted.getClass() : "null", retObjectNumberCompleted_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNumberCompletedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

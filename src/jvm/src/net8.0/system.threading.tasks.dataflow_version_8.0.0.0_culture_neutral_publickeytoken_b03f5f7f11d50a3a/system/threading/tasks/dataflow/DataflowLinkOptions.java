@@ -219,13 +219,32 @@ public class DataflowLinkOptions extends NetObject  {
             retObjectMaxMessages = classInstance.Get("MaxMessages");
             return (int)retObjectMaxMessages;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxMessagesError = true;
             java.lang.String retObjectMaxMessages_ToString = retObjectMaxMessages == null ? "null" : retObjectMaxMessages.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxMessagesNumber = (java.lang.Number)retObjectMaxMessages;
-                return retObjectMaxMessagesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxMessages != null ? retObjectMaxMessages.getClass() : "null", retObjectMaxMessages_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxMessages != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxMessagesClass = retObjectMaxMessages.getClass();
+                    // java.lang.reflect.Method retObjectMaxMessagesMethod = retObjectMaxMessagesClass.getMethod("intValue");
+                    // return (int)retObjectMaxMessagesMethod.invoke(retObjectMaxMessages);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxMessagesNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxMessages_ToString);
+                    return retObjectMaxMessagesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxMessagesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxMessages != null ? retObjectMaxMessages.getClass() : "null", retObjectMaxMessages_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxMessagesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

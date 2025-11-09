@@ -455,13 +455,32 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectGetCiphertextLengthCbc = classInstance.Invoke("GetCiphertextLengthCbc", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance());
             return (int)retObjectGetCiphertextLengthCbc;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCiphertextLengthCbcError = true;
             java.lang.String retObjectGetCiphertextLengthCbc_ToString = retObjectGetCiphertextLengthCbc == null ? "null" : retObjectGetCiphertextLengthCbc.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCiphertextLengthCbcNumber = (java.lang.Number)retObjectGetCiphertextLengthCbc;
-                return retObjectGetCiphertextLengthCbcNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthCbc != null ? retObjectGetCiphertextLengthCbc.getClass() : "null", retObjectGetCiphertextLengthCbc_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCiphertextLengthCbc != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCiphertextLengthCbcClass = retObjectGetCiphertextLengthCbc.getClass();
+                    // java.lang.reflect.Method retObjectGetCiphertextLengthCbcMethod = retObjectGetCiphertextLengthCbcClass.getMethod("intValue");
+                    // return (int)retObjectGetCiphertextLengthCbcMethod.invoke(retObjectGetCiphertextLengthCbc);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCiphertextLengthCbcNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCiphertextLengthCbc_ToString);
+                    return retObjectGetCiphertextLengthCbcNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCiphertextLengthCbcError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCiphertextLengthCbc != null ? retObjectGetCiphertextLengthCbc.getClass() : "null", retObjectGetCiphertextLengthCbc_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCiphertextLengthCbcError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -476,13 +495,32 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectGetCiphertextLengthCfb = classInstance.Invoke("GetCiphertextLengthCfb", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance(), feedbackSizeInBits);
             return (int)retObjectGetCiphertextLengthCfb;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCiphertextLengthCfbError = true;
             java.lang.String retObjectGetCiphertextLengthCfb_ToString = retObjectGetCiphertextLengthCfb == null ? "null" : retObjectGetCiphertextLengthCfb.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCiphertextLengthCfbNumber = (java.lang.Number)retObjectGetCiphertextLengthCfb;
-                return retObjectGetCiphertextLengthCfbNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthCfb != null ? retObjectGetCiphertextLengthCfb.getClass() : "null", retObjectGetCiphertextLengthCfb_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCiphertextLengthCfb != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCiphertextLengthCfbClass = retObjectGetCiphertextLengthCfb.getClass();
+                    // java.lang.reflect.Method retObjectGetCiphertextLengthCfbMethod = retObjectGetCiphertextLengthCfbClass.getMethod("intValue");
+                    // return (int)retObjectGetCiphertextLengthCfbMethod.invoke(retObjectGetCiphertextLengthCfb);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCiphertextLengthCfbNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCiphertextLengthCfb_ToString);
+                    return retObjectGetCiphertextLengthCfbNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCiphertextLengthCfbError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCiphertextLengthCfb != null ? retObjectGetCiphertextLengthCfb.getClass() : "null", retObjectGetCiphertextLengthCfb_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCiphertextLengthCfbError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -497,13 +535,32 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectGetCiphertextLengthEcb = classInstance.Invoke("GetCiphertextLengthEcb", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance());
             return (int)retObjectGetCiphertextLengthEcb;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCiphertextLengthEcbError = true;
             java.lang.String retObjectGetCiphertextLengthEcb_ToString = retObjectGetCiphertextLengthEcb == null ? "null" : retObjectGetCiphertextLengthEcb.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCiphertextLengthEcbNumber = (java.lang.Number)retObjectGetCiphertextLengthEcb;
-                return retObjectGetCiphertextLengthEcbNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthEcb != null ? retObjectGetCiphertextLengthEcb.getClass() : "null", retObjectGetCiphertextLengthEcb_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCiphertextLengthEcb != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCiphertextLengthEcbClass = retObjectGetCiphertextLengthEcb.getClass();
+                    // java.lang.reflect.Method retObjectGetCiphertextLengthEcbMethod = retObjectGetCiphertextLengthEcbClass.getMethod("intValue");
+                    // return (int)retObjectGetCiphertextLengthEcbMethod.invoke(retObjectGetCiphertextLengthEcb);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCiphertextLengthEcbNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCiphertextLengthEcb_ToString);
+                    return retObjectGetCiphertextLengthEcbNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCiphertextLengthEcbError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCiphertextLengthEcb != null ? retObjectGetCiphertextLengthEcb.getClass() : "null", retObjectGetCiphertextLengthEcb_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCiphertextLengthEcbError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -761,13 +818,32 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectBlockSize = classInstance.Get("BlockSize");
             return (int)retObjectBlockSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBlockSizeError = true;
             java.lang.String retObjectBlockSize_ToString = retObjectBlockSize == null ? "null" : retObjectBlockSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBlockSizeNumber = (java.lang.Number)retObjectBlockSize;
-                return retObjectBlockSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBlockSize != null ? retObjectBlockSize.getClass() : "null", retObjectBlockSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBlockSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBlockSizeClass = retObjectBlockSize.getClass();
+                    // java.lang.reflect.Method retObjectBlockSizeMethod = retObjectBlockSizeClass.getMethod("intValue");
+                    // return (int)retObjectBlockSizeMethod.invoke(retObjectBlockSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBlockSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectBlockSize_ToString);
+                    return retObjectBlockSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBlockSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBlockSize != null ? retObjectBlockSize.getClass() : "null", retObjectBlockSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBlockSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -792,13 +868,32 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectFeedbackSize = classInstance.Get("FeedbackSize");
             return (int)retObjectFeedbackSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFeedbackSizeError = true;
             java.lang.String retObjectFeedbackSize_ToString = retObjectFeedbackSize == null ? "null" : retObjectFeedbackSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFeedbackSizeNumber = (java.lang.Number)retObjectFeedbackSize;
-                return retObjectFeedbackSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFeedbackSize != null ? retObjectFeedbackSize.getClass() : "null", retObjectFeedbackSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFeedbackSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFeedbackSizeClass = retObjectFeedbackSize.getClass();
+                    // java.lang.reflect.Method retObjectFeedbackSizeMethod = retObjectFeedbackSizeClass.getMethod("intValue");
+                    // return (int)retObjectFeedbackSizeMethod.invoke(retObjectFeedbackSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFeedbackSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectFeedbackSize_ToString);
+                    return retObjectFeedbackSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFeedbackSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFeedbackSize != null ? retObjectFeedbackSize.getClass() : "null", retObjectFeedbackSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFeedbackSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -823,13 +918,32 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
             retObjectKeySize = classInstance.Get("KeySize");
             return (int)retObjectKeySize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportKeySizeError = true;
             java.lang.String retObjectKeySize_ToString = retObjectKeySize == null ? "null" : retObjectKeySize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectKeySizeNumber = (java.lang.Number)retObjectKeySize;
-                return retObjectKeySizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectKeySize != null ? retObjectKeySize.getClass() : "null", retObjectKeySize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectKeySize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectKeySizeClass = retObjectKeySize.getClass();
+                    // java.lang.reflect.Method retObjectKeySizeMethod = retObjectKeySizeClass.getMethod("intValue");
+                    // return (int)retObjectKeySizeMethod.invoke(retObjectKeySize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectKeySizeNumber = java.text.NumberFormat.getInstance().parse(retObjectKeySize_ToString);
+                    return retObjectKeySizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportKeySizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectKeySize != null ? retObjectKeySize.getClass() : "null", retObjectKeySize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportKeySizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -476,13 +476,32 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
             retObjectBatchSize = classInstance.Get("BatchSize");
             return (int)retObjectBatchSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBatchSizeError = true;
             java.lang.String retObjectBatchSize_ToString = retObjectBatchSize == null ? "null" : retObjectBatchSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBatchSizeNumber = (java.lang.Number)retObjectBatchSize;
-                return retObjectBatchSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBatchSize != null ? retObjectBatchSize.getClass() : "null", retObjectBatchSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBatchSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBatchSizeClass = retObjectBatchSize.getClass();
+                    // java.lang.reflect.Method retObjectBatchSizeMethod = retObjectBatchSizeClass.getMethod("intValue");
+                    // return (int)retObjectBatchSizeMethod.invoke(retObjectBatchSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBatchSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectBatchSize_ToString);
+                    return retObjectBatchSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBatchSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBatchSize != null ? retObjectBatchSize.getClass() : "null", retObjectBatchSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBatchSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -507,13 +526,32 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
             retObjectBulkCopyTimeout = classInstance.Get("BulkCopyTimeout");
             return (int)retObjectBulkCopyTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBulkCopyTimeoutError = true;
             java.lang.String retObjectBulkCopyTimeout_ToString = retObjectBulkCopyTimeout == null ? "null" : retObjectBulkCopyTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBulkCopyTimeoutNumber = (java.lang.Number)retObjectBulkCopyTimeout;
-                return retObjectBulkCopyTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBulkCopyTimeout != null ? retObjectBulkCopyTimeout.getClass() : "null", retObjectBulkCopyTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBulkCopyTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBulkCopyTimeoutClass = retObjectBulkCopyTimeout.getClass();
+                    // java.lang.reflect.Method retObjectBulkCopyTimeoutMethod = retObjectBulkCopyTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectBulkCopyTimeoutMethod.invoke(retObjectBulkCopyTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBulkCopyTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectBulkCopyTimeout_ToString);
+                    return retObjectBulkCopyTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBulkCopyTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBulkCopyTimeout != null ? retObjectBulkCopyTimeout.getClass() : "null", retObjectBulkCopyTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBulkCopyTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -538,13 +576,32 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
             retObjectNotifyAfter = classInstance.Get("NotifyAfter");
             return (int)retObjectNotifyAfter;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNotifyAfterError = true;
             java.lang.String retObjectNotifyAfter_ToString = retObjectNotifyAfter == null ? "null" : retObjectNotifyAfter.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNotifyAfterNumber = (java.lang.Number)retObjectNotifyAfter;
-                return retObjectNotifyAfterNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNotifyAfter != null ? retObjectNotifyAfter.getClass() : "null", retObjectNotifyAfter_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNotifyAfter != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNotifyAfterClass = retObjectNotifyAfter.getClass();
+                    // java.lang.reflect.Method retObjectNotifyAfterMethod = retObjectNotifyAfterClass.getMethod("intValue");
+                    // return (int)retObjectNotifyAfterMethod.invoke(retObjectNotifyAfter);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNotifyAfterNumber = java.text.NumberFormat.getInstance().parse(retObjectNotifyAfter_ToString);
+                    return retObjectNotifyAfterNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNotifyAfterError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNotifyAfter != null ? retObjectNotifyAfter.getClass() : "null", retObjectNotifyAfter_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNotifyAfterError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

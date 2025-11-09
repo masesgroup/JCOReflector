@@ -291,13 +291,32 @@ public class StringInfo extends NetObject  {
             retObjectLengthInTextElements = classInstance.Get("LengthInTextElements");
             return (int)retObjectLengthInTextElements;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLengthInTextElementsError = true;
             java.lang.String retObjectLengthInTextElements_ToString = retObjectLengthInTextElements == null ? "null" : retObjectLengthInTextElements.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLengthInTextElementsNumber = (java.lang.Number)retObjectLengthInTextElements;
-                return retObjectLengthInTextElementsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLengthInTextElements != null ? retObjectLengthInTextElements.getClass() : "null", retObjectLengthInTextElements_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLengthInTextElements != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLengthInTextElementsClass = retObjectLengthInTextElements.getClass();
+                    // java.lang.reflect.Method retObjectLengthInTextElementsMethod = retObjectLengthInTextElementsClass.getMethod("intValue");
+                    // return (int)retObjectLengthInTextElementsMethod.invoke(retObjectLengthInTextElements);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLengthInTextElementsNumber = java.text.NumberFormat.getInstance().parse(retObjectLengthInTextElements_ToString);
+                    return retObjectLengthInTextElementsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLengthInTextElementsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLengthInTextElements != null ? retObjectLengthInTextElements.getClass() : "null", retObjectLengthInTextElements_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLengthInTextElementsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

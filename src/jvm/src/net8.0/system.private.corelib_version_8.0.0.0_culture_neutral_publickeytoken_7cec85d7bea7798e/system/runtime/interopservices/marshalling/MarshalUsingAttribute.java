@@ -182,13 +182,32 @@ public class MarshalUsingAttribute extends Attribute  {
             retObjectConstantElementCount = classInstance.Get("ConstantElementCount");
             return (int)retObjectConstantElementCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportConstantElementCountError = true;
             java.lang.String retObjectConstantElementCount_ToString = retObjectConstantElementCount == null ? "null" : retObjectConstantElementCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectConstantElementCountNumber = (java.lang.Number)retObjectConstantElementCount;
-                return retObjectConstantElementCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConstantElementCount != null ? retObjectConstantElementCount.getClass() : "null", retObjectConstantElementCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectConstantElementCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectConstantElementCountClass = retObjectConstantElementCount.getClass();
+                    // java.lang.reflect.Method retObjectConstantElementCountMethod = retObjectConstantElementCountClass.getMethod("intValue");
+                    // return (int)retObjectConstantElementCountMethod.invoke(retObjectConstantElementCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectConstantElementCountNumber = java.text.NumberFormat.getInstance().parse(retObjectConstantElementCount_ToString);
+                    return retObjectConstantElementCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportConstantElementCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectConstantElementCount != null ? retObjectConstantElementCount.getClass() : "null", retObjectConstantElementCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportConstantElementCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -213,13 +232,32 @@ public class MarshalUsingAttribute extends Attribute  {
             retObjectElementIndirectionDepth = classInstance.Get("ElementIndirectionDepth");
             return (int)retObjectElementIndirectionDepth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportElementIndirectionDepthError = true;
             java.lang.String retObjectElementIndirectionDepth_ToString = retObjectElementIndirectionDepth == null ? "null" : retObjectElementIndirectionDepth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectElementIndirectionDepthNumber = (java.lang.Number)retObjectElementIndirectionDepth;
-                return retObjectElementIndirectionDepthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectElementIndirectionDepth != null ? retObjectElementIndirectionDepth.getClass() : "null", retObjectElementIndirectionDepth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectElementIndirectionDepth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectElementIndirectionDepthClass = retObjectElementIndirectionDepth.getClass();
+                    // java.lang.reflect.Method retObjectElementIndirectionDepthMethod = retObjectElementIndirectionDepthClass.getMethod("intValue");
+                    // return (int)retObjectElementIndirectionDepthMethod.invoke(retObjectElementIndirectionDepth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectElementIndirectionDepthNumber = java.text.NumberFormat.getInstance().parse(retObjectElementIndirectionDepth_ToString);
+                    return retObjectElementIndirectionDepthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportElementIndirectionDepthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectElementIndirectionDepth != null ? retObjectElementIndirectionDepth.getClass() : "null", retObjectElementIndirectionDepth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportElementIndirectionDepthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

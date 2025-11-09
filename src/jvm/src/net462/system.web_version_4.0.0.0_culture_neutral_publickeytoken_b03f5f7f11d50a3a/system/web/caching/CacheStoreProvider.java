@@ -181,13 +181,32 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
             retObjectTrim = classInstance.Invoke("Trim", percent);
             return (long)retObjectTrim;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTrimError = true;
             java.lang.String retObjectTrim_ToString = retObjectTrim == null ? "null" : retObjectTrim.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTrimNumber = (java.lang.Number)retObjectTrim;
-                return retObjectTrimNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTrim != null ? retObjectTrim.getClass() : "null", retObjectTrim_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTrim != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTrimClass = retObjectTrim.getClass();
+                    // java.lang.reflect.Method retObjectTrimMethod = retObjectTrimClass.getMethod("longValue");
+                    // return (long)retObjectTrimMethod.invoke(retObjectTrim);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTrimNumber = java.text.NumberFormat.getInstance().parse(retObjectTrim_ToString);
+                    return retObjectTrimNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTrimError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTrim != null ? retObjectTrim.getClass() : "null", retObjectTrim_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTrimError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -334,13 +353,32 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
             retObjectItemCount = classInstance.Get("ItemCount");
             return (long)retObjectItemCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportItemCountError = true;
             java.lang.String retObjectItemCount_ToString = retObjectItemCount == null ? "null" : retObjectItemCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectItemCountNumber = (java.lang.Number)retObjectItemCount;
-                return retObjectItemCountNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectItemCount != null ? retObjectItemCount.getClass() : "null", retObjectItemCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectItemCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectItemCountClass = retObjectItemCount.getClass();
+                    // java.lang.reflect.Method retObjectItemCountMethod = retObjectItemCountClass.getMethod("longValue");
+                    // return (long)retObjectItemCountMethod.invoke(retObjectItemCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectItemCountNumber = java.text.NumberFormat.getInstance().parse(retObjectItemCount_ToString);
+                    return retObjectItemCountNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportItemCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectItemCount != null ? retObjectItemCount.getClass() : "null", retObjectItemCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportItemCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -355,13 +393,32 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
             retObjectSizeInBytes = classInstance.Get("SizeInBytes");
             return (long)retObjectSizeInBytes;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSizeInBytesError = true;
             java.lang.String retObjectSizeInBytes_ToString = retObjectSizeInBytes == null ? "null" : retObjectSizeInBytes.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSizeInBytesNumber = (java.lang.Number)retObjectSizeInBytes;
-                return retObjectSizeInBytesNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSizeInBytes != null ? retObjectSizeInBytes.getClass() : "null", retObjectSizeInBytes_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSizeInBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSizeInBytesClass = retObjectSizeInBytes.getClass();
+                    // java.lang.reflect.Method retObjectSizeInBytesMethod = retObjectSizeInBytesClass.getMethod("longValue");
+                    // return (long)retObjectSizeInBytesMethod.invoke(retObjectSizeInBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSizeInBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectSizeInBytes_ToString);
+                    return retObjectSizeInBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSizeInBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSizeInBytes != null ? retObjectSizeInBytes.getClass() : "null", retObjectSizeInBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSizeInBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

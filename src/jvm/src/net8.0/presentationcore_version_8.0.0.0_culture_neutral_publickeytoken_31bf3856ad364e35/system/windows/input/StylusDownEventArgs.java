@@ -177,13 +177,32 @@ public class StylusDownEventArgs extends StylusEventArgs  {
             retObjectTapCount = classInstance.Get("TapCount");
             return (int)retObjectTapCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTapCountError = true;
             java.lang.String retObjectTapCount_ToString = retObjectTapCount == null ? "null" : retObjectTapCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTapCountNumber = (java.lang.Number)retObjectTapCount;
-                return retObjectTapCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTapCount != null ? retObjectTapCount.getClass() : "null", retObjectTapCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTapCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTapCountClass = retObjectTapCount.getClass();
+                    // java.lang.reflect.Method retObjectTapCountMethod = retObjectTapCountClass.getMethod("intValue");
+                    // return (int)retObjectTapCountMethod.invoke(retObjectTapCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTapCountNumber = java.text.NumberFormat.getInstance().parse(retObjectTapCount_ToString);
+                    return retObjectTapCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTapCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTapCount != null ? retObjectTapCount.getClass() : "null", retObjectTapCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTapCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

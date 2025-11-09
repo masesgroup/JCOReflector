@@ -176,13 +176,32 @@ public class LevelsEffect extends Effect  {
             retObjectHighlight = classInstance.Get("Highlight");
             return (int)retObjectHighlight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportHighlightError = true;
             java.lang.String retObjectHighlight_ToString = retObjectHighlight == null ? "null" : retObjectHighlight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectHighlightNumber = (java.lang.Number)retObjectHighlight;
-                return retObjectHighlightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectHighlight != null ? retObjectHighlight.getClass() : "null", retObjectHighlight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectHighlight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectHighlightClass = retObjectHighlight.getClass();
+                    // java.lang.reflect.Method retObjectHighlightMethod = retObjectHighlightClass.getMethod("intValue");
+                    // return (int)retObjectHighlightMethod.invoke(retObjectHighlight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectHighlightNumber = java.text.NumberFormat.getInstance().parse(retObjectHighlight_ToString);
+                    return retObjectHighlightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportHighlightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectHighlight != null ? retObjectHighlight.getClass() : "null", retObjectHighlight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportHighlightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class LevelsEffect extends Effect  {
             retObjectMidtone = classInstance.Get("Midtone");
             return (int)retObjectMidtone;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMidtoneError = true;
             java.lang.String retObjectMidtone_ToString = retObjectMidtone == null ? "null" : retObjectMidtone.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMidtoneNumber = (java.lang.Number)retObjectMidtone;
-                return retObjectMidtoneNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMidtone != null ? retObjectMidtone.getClass() : "null", retObjectMidtone_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMidtone != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMidtoneClass = retObjectMidtone.getClass();
+                    // java.lang.reflect.Method retObjectMidtoneMethod = retObjectMidtoneClass.getMethod("intValue");
+                    // return (int)retObjectMidtoneMethod.invoke(retObjectMidtone);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMidtoneNumber = java.text.NumberFormat.getInstance().parse(retObjectMidtone_ToString);
+                    return retObjectMidtoneNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMidtoneError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMidtone != null ? retObjectMidtone.getClass() : "null", retObjectMidtone_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMidtoneError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,13 +256,32 @@ public class LevelsEffect extends Effect  {
             retObjectShadow = classInstance.Get("Shadow");
             return (int)retObjectShadow;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportShadowError = true;
             java.lang.String retObjectShadow_ToString = retObjectShadow == null ? "null" : retObjectShadow.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectShadowNumber = (java.lang.Number)retObjectShadow;
-                return retObjectShadowNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectShadow != null ? retObjectShadow.getClass() : "null", retObjectShadow_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectShadow != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectShadowClass = retObjectShadow.getClass();
+                    // java.lang.reflect.Method retObjectShadowMethod = retObjectShadowClass.getMethod("intValue");
+                    // return (int)retObjectShadowMethod.invoke(retObjectShadow);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectShadowNumber = java.text.NumberFormat.getInstance().parse(retObjectShadow_ToString);
+                    return retObjectShadowNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportShadowError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectShadow != null ? retObjectShadow.getClass() : "null", retObjectShadow_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportShadowError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -420,13 +420,32 @@ public class ThreadPool extends NetObject  {
             retObjectThreadCount = classType.Get("ThreadCount");
             return (int)retObjectThreadCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportThreadCountError = true;
             java.lang.String retObjectThreadCount_ToString = retObjectThreadCount == null ? "null" : retObjectThreadCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectThreadCountNumber = (java.lang.Number)retObjectThreadCount;
-                return retObjectThreadCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectThreadCount != null ? retObjectThreadCount.getClass() : "null", retObjectThreadCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectThreadCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectThreadCountClass = retObjectThreadCount.getClass();
+                    // java.lang.reflect.Method retObjectThreadCountMethod = retObjectThreadCountClass.getMethod("intValue");
+                    // return (int)retObjectThreadCountMethod.invoke(retObjectThreadCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectThreadCountNumber = java.text.NumberFormat.getInstance().parse(retObjectThreadCount_ToString);
+                    return retObjectThreadCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportThreadCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectThreadCount != null ? retObjectThreadCount.getClass() : "null", retObjectThreadCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportThreadCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -441,13 +460,32 @@ public class ThreadPool extends NetObject  {
             retObjectCompletedWorkItemCount = classType.Get("CompletedWorkItemCount");
             return (long)retObjectCompletedWorkItemCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCompletedWorkItemCountError = true;
             java.lang.String retObjectCompletedWorkItemCount_ToString = retObjectCompletedWorkItemCount == null ? "null" : retObjectCompletedWorkItemCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCompletedWorkItemCountNumber = (java.lang.Number)retObjectCompletedWorkItemCount;
-                return retObjectCompletedWorkItemCountNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCompletedWorkItemCount != null ? retObjectCompletedWorkItemCount.getClass() : "null", retObjectCompletedWorkItemCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCompletedWorkItemCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCompletedWorkItemCountClass = retObjectCompletedWorkItemCount.getClass();
+                    // java.lang.reflect.Method retObjectCompletedWorkItemCountMethod = retObjectCompletedWorkItemCountClass.getMethod("longValue");
+                    // return (long)retObjectCompletedWorkItemCountMethod.invoke(retObjectCompletedWorkItemCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCompletedWorkItemCountNumber = java.text.NumberFormat.getInstance().parse(retObjectCompletedWorkItemCount_ToString);
+                    return retObjectCompletedWorkItemCountNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCompletedWorkItemCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCompletedWorkItemCount != null ? retObjectCompletedWorkItemCount.getClass() : "null", retObjectCompletedWorkItemCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCompletedWorkItemCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -462,13 +500,32 @@ public class ThreadPool extends NetObject  {
             retObjectPendingWorkItemCount = classType.Get("PendingWorkItemCount");
             return (long)retObjectPendingWorkItemCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPendingWorkItemCountError = true;
             java.lang.String retObjectPendingWorkItemCount_ToString = retObjectPendingWorkItemCount == null ? "null" : retObjectPendingWorkItemCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPendingWorkItemCountNumber = (java.lang.Number)retObjectPendingWorkItemCount;
-                return retObjectPendingWorkItemCountNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPendingWorkItemCount != null ? retObjectPendingWorkItemCount.getClass() : "null", retObjectPendingWorkItemCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPendingWorkItemCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPendingWorkItemCountClass = retObjectPendingWorkItemCount.getClass();
+                    // java.lang.reflect.Method retObjectPendingWorkItemCountMethod = retObjectPendingWorkItemCountClass.getMethod("longValue");
+                    // return (long)retObjectPendingWorkItemCountMethod.invoke(retObjectPendingWorkItemCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPendingWorkItemCountNumber = java.text.NumberFormat.getInstance().parse(retObjectPendingWorkItemCount_ToString);
+                    return retObjectPendingWorkItemCountNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPendingWorkItemCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPendingWorkItemCount != null ? retObjectPendingWorkItemCount.getClass() : "null", retObjectPendingWorkItemCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPendingWorkItemCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

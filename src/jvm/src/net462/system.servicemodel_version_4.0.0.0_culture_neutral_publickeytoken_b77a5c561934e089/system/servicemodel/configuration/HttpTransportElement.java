@@ -346,13 +346,32 @@ public class HttpTransportElement extends TransportElement  {
             retObjectMaxBufferSize = classInstance.Get("MaxBufferSize");
             return (int)retObjectMaxBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBufferSizeError = true;
             java.lang.String retObjectMaxBufferSize_ToString = retObjectMaxBufferSize == null ? "null" : retObjectMaxBufferSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBufferSizeNumber = (java.lang.Number)retObjectMaxBufferSize;
-                return retObjectMaxBufferSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null", retObjectMaxBufferSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBufferSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBufferSizeClass = retObjectMaxBufferSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxBufferSizeMethod = retObjectMaxBufferSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxBufferSizeMethod.invoke(retObjectMaxBufferSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBufferSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBufferSize_ToString);
+                    return retObjectMaxBufferSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBufferSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null", retObjectMaxBufferSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBufferSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -377,13 +396,32 @@ public class HttpTransportElement extends TransportElement  {
             retObjectMaxPendingAccepts = classInstance.Get("MaxPendingAccepts");
             return (int)retObjectMaxPendingAccepts;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxPendingAcceptsError = true;
             java.lang.String retObjectMaxPendingAccepts_ToString = retObjectMaxPendingAccepts == null ? "null" : retObjectMaxPendingAccepts.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxPendingAcceptsNumber = (java.lang.Number)retObjectMaxPendingAccepts;
-                return retObjectMaxPendingAcceptsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingAccepts != null ? retObjectMaxPendingAccepts.getClass() : "null", retObjectMaxPendingAccepts_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxPendingAccepts != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxPendingAcceptsClass = retObjectMaxPendingAccepts.getClass();
+                    // java.lang.reflect.Method retObjectMaxPendingAcceptsMethod = retObjectMaxPendingAcceptsClass.getMethod("intValue");
+                    // return (int)retObjectMaxPendingAcceptsMethod.invoke(retObjectMaxPendingAccepts);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxPendingAcceptsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxPendingAccepts_ToString);
+                    return retObjectMaxPendingAcceptsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxPendingAcceptsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxPendingAccepts != null ? retObjectMaxPendingAccepts.getClass() : "null", retObjectMaxPendingAccepts_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxPendingAcceptsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

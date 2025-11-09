@@ -170,13 +170,32 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
             retObjectMaxargs = classInstance.Get("Maxargs");
             return (int)retObjectMaxargs;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxargsError = true;
             java.lang.String retObjectMaxargs_ToString = retObjectMaxargs == null ? "null" : retObjectMaxargs.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxargsNumber = (java.lang.Number)retObjectMaxargs;
-                return retObjectMaxargsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxargs != null ? retObjectMaxargs.getClass() : "null", retObjectMaxargs_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxargs != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxargsClass = retObjectMaxargs.getClass();
+                    // java.lang.reflect.Method retObjectMaxargsMethod = retObjectMaxargsClass.getMethod("intValue");
+                    // return (int)retObjectMaxargsMethod.invoke(retObjectMaxargs);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxargsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxargs_ToString);
+                    return retObjectMaxargsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxargsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxargs != null ? retObjectMaxargs.getClass() : "null", retObjectMaxargs_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxargsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -191,13 +210,32 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
             retObjectMinargs = classInstance.Get("Minargs");
             return (int)retObjectMinargs;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMinargsError = true;
             java.lang.String retObjectMinargs_ToString = retObjectMinargs == null ? "null" : retObjectMinargs.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMinargsNumber = (java.lang.Number)retObjectMinargs;
-                return retObjectMinargsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMinargs != null ? retObjectMinargs.getClass() : "null", retObjectMinargs_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMinargs != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinargsClass = retObjectMinargs.getClass();
+                    // java.lang.reflect.Method retObjectMinargsMethod = retObjectMinargsClass.getMethod("intValue");
+                    // return (int)retObjectMinargsMethod.invoke(retObjectMinargs);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinargsNumber = java.text.NumberFormat.getInstance().parse(retObjectMinargs_ToString);
+                    return retObjectMinargsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinargsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMinargs != null ? retObjectMinargs.getClass() : "null", retObjectMinargs_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinargsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -171,13 +171,32 @@ public class QuicReceiveWindowSizes extends NetObject  {
             retObjectConnection = classInstance.Get("Connection");
             return (int)retObjectConnection;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportConnectionError = true;
             java.lang.String retObjectConnection_ToString = retObjectConnection == null ? "null" : retObjectConnection.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectConnectionNumber = (java.lang.Number)retObjectConnection;
-                return retObjectConnectionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectConnection != null ? retObjectConnection.getClass() : "null", retObjectConnection_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectConnection != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectConnectionClass = retObjectConnection.getClass();
+                    // java.lang.reflect.Method retObjectConnectionMethod = retObjectConnectionClass.getMethod("intValue");
+                    // return (int)retObjectConnectionMethod.invoke(retObjectConnection);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectConnectionNumber = java.text.NumberFormat.getInstance().parse(retObjectConnection_ToString);
+                    return retObjectConnectionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportConnectionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectConnection != null ? retObjectConnection.getClass() : "null", retObjectConnection_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportConnectionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,13 +221,32 @@ public class QuicReceiveWindowSizes extends NetObject  {
             retObjectLocallyInitiatedBidirectionalStream = classInstance.Get("LocallyInitiatedBidirectionalStream");
             return (int)retObjectLocallyInitiatedBidirectionalStream;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLocallyInitiatedBidirectionalStreamError = true;
             java.lang.String retObjectLocallyInitiatedBidirectionalStream_ToString = retObjectLocallyInitiatedBidirectionalStream == null ? "null" : retObjectLocallyInitiatedBidirectionalStream.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLocallyInitiatedBidirectionalStreamNumber = (java.lang.Number)retObjectLocallyInitiatedBidirectionalStream;
-                return retObjectLocallyInitiatedBidirectionalStreamNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLocallyInitiatedBidirectionalStream != null ? retObjectLocallyInitiatedBidirectionalStream.getClass() : "null", retObjectLocallyInitiatedBidirectionalStream_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLocallyInitiatedBidirectionalStream != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLocallyInitiatedBidirectionalStreamClass = retObjectLocallyInitiatedBidirectionalStream.getClass();
+                    // java.lang.reflect.Method retObjectLocallyInitiatedBidirectionalStreamMethod = retObjectLocallyInitiatedBidirectionalStreamClass.getMethod("intValue");
+                    // return (int)retObjectLocallyInitiatedBidirectionalStreamMethod.invoke(retObjectLocallyInitiatedBidirectionalStream);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLocallyInitiatedBidirectionalStreamNumber = java.text.NumberFormat.getInstance().parse(retObjectLocallyInitiatedBidirectionalStream_ToString);
+                    return retObjectLocallyInitiatedBidirectionalStreamNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLocallyInitiatedBidirectionalStreamError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLocallyInitiatedBidirectionalStream != null ? retObjectLocallyInitiatedBidirectionalStream.getClass() : "null", retObjectLocallyInitiatedBidirectionalStream_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLocallyInitiatedBidirectionalStreamError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -233,13 +271,32 @@ public class QuicReceiveWindowSizes extends NetObject  {
             retObjectRemotelyInitiatedBidirectionalStream = classInstance.Get("RemotelyInitiatedBidirectionalStream");
             return (int)retObjectRemotelyInitiatedBidirectionalStream;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRemotelyInitiatedBidirectionalStreamError = true;
             java.lang.String retObjectRemotelyInitiatedBidirectionalStream_ToString = retObjectRemotelyInitiatedBidirectionalStream == null ? "null" : retObjectRemotelyInitiatedBidirectionalStream.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRemotelyInitiatedBidirectionalStreamNumber = (java.lang.Number)retObjectRemotelyInitiatedBidirectionalStream;
-                return retObjectRemotelyInitiatedBidirectionalStreamNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRemotelyInitiatedBidirectionalStream != null ? retObjectRemotelyInitiatedBidirectionalStream.getClass() : "null", retObjectRemotelyInitiatedBidirectionalStream_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRemotelyInitiatedBidirectionalStream != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRemotelyInitiatedBidirectionalStreamClass = retObjectRemotelyInitiatedBidirectionalStream.getClass();
+                    // java.lang.reflect.Method retObjectRemotelyInitiatedBidirectionalStreamMethod = retObjectRemotelyInitiatedBidirectionalStreamClass.getMethod("intValue");
+                    // return (int)retObjectRemotelyInitiatedBidirectionalStreamMethod.invoke(retObjectRemotelyInitiatedBidirectionalStream);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRemotelyInitiatedBidirectionalStreamNumber = java.text.NumberFormat.getInstance().parse(retObjectRemotelyInitiatedBidirectionalStream_ToString);
+                    return retObjectRemotelyInitiatedBidirectionalStreamNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRemotelyInitiatedBidirectionalStreamError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRemotelyInitiatedBidirectionalStream != null ? retObjectRemotelyInitiatedBidirectionalStream.getClass() : "null", retObjectRemotelyInitiatedBidirectionalStream_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRemotelyInitiatedBidirectionalStreamError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,13 +321,32 @@ public class QuicReceiveWindowSizes extends NetObject  {
             retObjectUnidirectionalStream = classInstance.Get("UnidirectionalStream");
             return (int)retObjectUnidirectionalStream;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUnidirectionalStreamError = true;
             java.lang.String retObjectUnidirectionalStream_ToString = retObjectUnidirectionalStream == null ? "null" : retObjectUnidirectionalStream.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUnidirectionalStreamNumber = (java.lang.Number)retObjectUnidirectionalStream;
-                return retObjectUnidirectionalStreamNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectUnidirectionalStream != null ? retObjectUnidirectionalStream.getClass() : "null", retObjectUnidirectionalStream_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUnidirectionalStream != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUnidirectionalStreamClass = retObjectUnidirectionalStream.getClass();
+                    // java.lang.reflect.Method retObjectUnidirectionalStreamMethod = retObjectUnidirectionalStreamClass.getMethod("intValue");
+                    // return (int)retObjectUnidirectionalStreamMethod.invoke(retObjectUnidirectionalStream);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUnidirectionalStreamNumber = java.text.NumberFormat.getInstance().parse(retObjectUnidirectionalStream_ToString);
+                    return retObjectUnidirectionalStreamNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUnidirectionalStreamError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUnidirectionalStream != null ? retObjectUnidirectionalStream.getClass() : "null", retObjectUnidirectionalStream_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUnidirectionalStreamError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

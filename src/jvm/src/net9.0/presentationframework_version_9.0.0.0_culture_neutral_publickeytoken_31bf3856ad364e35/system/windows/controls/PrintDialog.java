@@ -270,13 +270,32 @@ public class PrintDialog extends NetObject  {
             retObjectPrintableAreaHeight = classInstance.Get("PrintableAreaHeight");
             return (double)retObjectPrintableAreaHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPrintableAreaHeightError = true;
             java.lang.String retObjectPrintableAreaHeight_ToString = retObjectPrintableAreaHeight == null ? "null" : retObjectPrintableAreaHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPrintableAreaHeightNumber = (java.lang.Number)retObjectPrintableAreaHeight;
-                return retObjectPrintableAreaHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPrintableAreaHeight != null ? retObjectPrintableAreaHeight.getClass() : "null", retObjectPrintableAreaHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPrintableAreaHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPrintableAreaHeightClass = retObjectPrintableAreaHeight.getClass();
+                    // java.lang.reflect.Method retObjectPrintableAreaHeightMethod = retObjectPrintableAreaHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectPrintableAreaHeightMethod.invoke(retObjectPrintableAreaHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPrintableAreaHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectPrintableAreaHeight_ToString);
+                    return retObjectPrintableAreaHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPrintableAreaHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPrintableAreaHeight != null ? retObjectPrintableAreaHeight.getClass() : "null", retObjectPrintableAreaHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPrintableAreaHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -291,13 +310,32 @@ public class PrintDialog extends NetObject  {
             retObjectPrintableAreaWidth = classInstance.Get("PrintableAreaWidth");
             return (double)retObjectPrintableAreaWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPrintableAreaWidthError = true;
             java.lang.String retObjectPrintableAreaWidth_ToString = retObjectPrintableAreaWidth == null ? "null" : retObjectPrintableAreaWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPrintableAreaWidthNumber = (java.lang.Number)retObjectPrintableAreaWidth;
-                return retObjectPrintableAreaWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPrintableAreaWidth != null ? retObjectPrintableAreaWidth.getClass() : "null", retObjectPrintableAreaWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPrintableAreaWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPrintableAreaWidthClass = retObjectPrintableAreaWidth.getClass();
+                    // java.lang.reflect.Method retObjectPrintableAreaWidthMethod = retObjectPrintableAreaWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectPrintableAreaWidthMethod.invoke(retObjectPrintableAreaWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPrintableAreaWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectPrintableAreaWidth_ToString);
+                    return retObjectPrintableAreaWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPrintableAreaWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPrintableAreaWidth != null ? retObjectPrintableAreaWidth.getClass() : "null", retObjectPrintableAreaWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPrintableAreaWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

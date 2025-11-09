@@ -222,13 +222,32 @@ public class DirectoryVirtualListView extends NetObject  {
             retObjectAfterCount = classInstance.Get("AfterCount");
             return (int)retObjectAfterCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAfterCountError = true;
             java.lang.String retObjectAfterCount_ToString = retObjectAfterCount == null ? "null" : retObjectAfterCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAfterCountNumber = (java.lang.Number)retObjectAfterCount;
-                return retObjectAfterCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAfterCount != null ? retObjectAfterCount.getClass() : "null", retObjectAfterCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAfterCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAfterCountClass = retObjectAfterCount.getClass();
+                    // java.lang.reflect.Method retObjectAfterCountMethod = retObjectAfterCountClass.getMethod("intValue");
+                    // return (int)retObjectAfterCountMethod.invoke(retObjectAfterCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAfterCountNumber = java.text.NumberFormat.getInstance().parse(retObjectAfterCount_ToString);
+                    return retObjectAfterCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAfterCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAfterCount != null ? retObjectAfterCount.getClass() : "null", retObjectAfterCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAfterCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -253,13 +272,32 @@ public class DirectoryVirtualListView extends NetObject  {
             retObjectApproximateTotal = classInstance.Get("ApproximateTotal");
             return (int)retObjectApproximateTotal;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportApproximateTotalError = true;
             java.lang.String retObjectApproximateTotal_ToString = retObjectApproximateTotal == null ? "null" : retObjectApproximateTotal.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectApproximateTotalNumber = (java.lang.Number)retObjectApproximateTotal;
-                return retObjectApproximateTotalNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectApproximateTotal != null ? retObjectApproximateTotal.getClass() : "null", retObjectApproximateTotal_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectApproximateTotal != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectApproximateTotalClass = retObjectApproximateTotal.getClass();
+                    // java.lang.reflect.Method retObjectApproximateTotalMethod = retObjectApproximateTotalClass.getMethod("intValue");
+                    // return (int)retObjectApproximateTotalMethod.invoke(retObjectApproximateTotal);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectApproximateTotalNumber = java.text.NumberFormat.getInstance().parse(retObjectApproximateTotal_ToString);
+                    return retObjectApproximateTotalNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportApproximateTotalError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectApproximateTotal != null ? retObjectApproximateTotal.getClass() : "null", retObjectApproximateTotal_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportApproximateTotalError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,13 +322,32 @@ public class DirectoryVirtualListView extends NetObject  {
             retObjectBeforeCount = classInstance.Get("BeforeCount");
             return (int)retObjectBeforeCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBeforeCountError = true;
             java.lang.String retObjectBeforeCount_ToString = retObjectBeforeCount == null ? "null" : retObjectBeforeCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBeforeCountNumber = (java.lang.Number)retObjectBeforeCount;
-                return retObjectBeforeCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBeforeCount != null ? retObjectBeforeCount.getClass() : "null", retObjectBeforeCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBeforeCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBeforeCountClass = retObjectBeforeCount.getClass();
+                    // java.lang.reflect.Method retObjectBeforeCountMethod = retObjectBeforeCountClass.getMethod("intValue");
+                    // return (int)retObjectBeforeCountMethod.invoke(retObjectBeforeCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBeforeCountNumber = java.text.NumberFormat.getInstance().parse(retObjectBeforeCount_ToString);
+                    return retObjectBeforeCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBeforeCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBeforeCount != null ? retObjectBeforeCount.getClass() : "null", retObjectBeforeCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBeforeCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -315,13 +372,32 @@ public class DirectoryVirtualListView extends NetObject  {
             retObjectOffset = classInstance.Get("Offset");
             return (int)retObjectOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffsetError = true;
             java.lang.String retObjectOffset_ToString = retObjectOffset == null ? "null" : retObjectOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffsetNumber = (java.lang.Number)retObjectOffset;
-                return retObjectOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffsetClass = retObjectOffset.getClass();
+                    // java.lang.reflect.Method retObjectOffsetMethod = retObjectOffsetClass.getMethod("intValue");
+                    // return (int)retObjectOffsetMethod.invoke(retObjectOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectOffset_ToString);
+                    return retObjectOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffset != null ? retObjectOffset.getClass() : "null", retObjectOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -346,13 +422,32 @@ public class DirectoryVirtualListView extends NetObject  {
             retObjectTargetPercentage = classInstance.Get("TargetPercentage");
             return (int)retObjectTargetPercentage;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTargetPercentageError = true;
             java.lang.String retObjectTargetPercentage_ToString = retObjectTargetPercentage == null ? "null" : retObjectTargetPercentage.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTargetPercentageNumber = (java.lang.Number)retObjectTargetPercentage;
-                return retObjectTargetPercentageNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTargetPercentage != null ? retObjectTargetPercentage.getClass() : "null", retObjectTargetPercentage_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTargetPercentage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTargetPercentageClass = retObjectTargetPercentage.getClass();
+                    // java.lang.reflect.Method retObjectTargetPercentageMethod = retObjectTargetPercentageClass.getMethod("intValue");
+                    // return (int)retObjectTargetPercentageMethod.invoke(retObjectTargetPercentage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTargetPercentageNumber = java.text.NumberFormat.getInstance().parse(retObjectTargetPercentage_ToString);
+                    return retObjectTargetPercentageNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTargetPercentageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTargetPercentage != null ? retObjectTargetPercentage.getClass() : "null", retObjectTargetPercentage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTargetPercentageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

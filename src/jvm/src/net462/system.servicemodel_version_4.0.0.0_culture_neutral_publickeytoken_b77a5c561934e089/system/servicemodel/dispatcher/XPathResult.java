@@ -177,13 +177,32 @@ public class XPathResult extends NetObject implements AutoCloseable {
             retObjectGetResultAsNumber = classInstance.Invoke("GetResultAsNumber");
             return (double)retObjectGetResultAsNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetResultAsNumberError = true;
             java.lang.String retObjectGetResultAsNumber_ToString = retObjectGetResultAsNumber == null ? "null" : retObjectGetResultAsNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetResultAsNumberNumber = (java.lang.Number)retObjectGetResultAsNumber;
-                return retObjectGetResultAsNumberNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetResultAsNumber != null ? retObjectGetResultAsNumber.getClass() : "null", retObjectGetResultAsNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetResultAsNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetResultAsNumberClass = retObjectGetResultAsNumber.getClass();
+                    // java.lang.reflect.Method retObjectGetResultAsNumberMethod = retObjectGetResultAsNumberClass.getMethod("doubleValue");
+                    // return (double)retObjectGetResultAsNumberMethod.invoke(retObjectGetResultAsNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetResultAsNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectGetResultAsNumber_ToString);
+                    return retObjectGetResultAsNumberNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetResultAsNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetResultAsNumber != null ? retObjectGetResultAsNumber.getClass() : "null", retObjectGetResultAsNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetResultAsNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -163,13 +163,32 @@ public class ProfileProvider extends SettingsProvider  {
             retObjectDeleteInactiveProfiles = classInstance.Invoke("DeleteInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectDeleteInactiveProfiles;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDeleteInactiveProfilesError = true;
             java.lang.String retObjectDeleteInactiveProfiles_ToString = retObjectDeleteInactiveProfiles == null ? "null" : retObjectDeleteInactiveProfiles.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDeleteInactiveProfilesNumber = (java.lang.Number)retObjectDeleteInactiveProfiles;
-                return retObjectDeleteInactiveProfilesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteInactiveProfiles != null ? retObjectDeleteInactiveProfiles.getClass() : "null", retObjectDeleteInactiveProfiles_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDeleteInactiveProfiles != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDeleteInactiveProfilesClass = retObjectDeleteInactiveProfiles.getClass();
+                    // java.lang.reflect.Method retObjectDeleteInactiveProfilesMethod = retObjectDeleteInactiveProfilesClass.getMethod("intValue");
+                    // return (int)retObjectDeleteInactiveProfilesMethod.invoke(retObjectDeleteInactiveProfiles);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDeleteInactiveProfilesNumber = java.text.NumberFormat.getInstance().parse(retObjectDeleteInactiveProfiles_ToString);
+                    return retObjectDeleteInactiveProfilesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDeleteInactiveProfilesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDeleteInactiveProfiles != null ? retObjectDeleteInactiveProfiles.getClass() : "null", retObjectDeleteInactiveProfiles_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDeleteInactiveProfilesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,13 +203,32 @@ public class ProfileProvider extends SettingsProvider  {
             retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", (java.lang.Object)usernames);
             return (int)retObjectDeleteProfiles;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDeleteProfilesError = true;
             java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
-                return retObjectDeleteProfilesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDeleteProfiles != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDeleteProfilesClass = retObjectDeleteProfiles.getClass();
+                    // java.lang.reflect.Method retObjectDeleteProfilesMethod = retObjectDeleteProfilesClass.getMethod("intValue");
+                    // return (int)retObjectDeleteProfilesMethod.invoke(retObjectDeleteProfiles);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDeleteProfilesNumber = java.text.NumberFormat.getInstance().parse(retObjectDeleteProfiles_ToString);
+                    return retObjectDeleteProfilesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDeleteProfilesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDeleteProfilesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,13 +243,32 @@ public class ProfileProvider extends SettingsProvider  {
             retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
             return (int)retObjectDeleteProfiles;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDeleteProfilesError = true;
             java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
-                return retObjectDeleteProfilesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDeleteProfiles != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDeleteProfilesClass = retObjectDeleteProfiles.getClass();
+                    // java.lang.reflect.Method retObjectDeleteProfilesMethod = retObjectDeleteProfilesClass.getMethod("intValue");
+                    // return (int)retObjectDeleteProfilesMethod.invoke(retObjectDeleteProfiles);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDeleteProfilesNumber = java.text.NumberFormat.getInstance().parse(retObjectDeleteProfiles_ToString);
+                    return retObjectDeleteProfilesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDeleteProfilesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDeleteProfilesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,13 +283,32 @@ public class ProfileProvider extends SettingsProvider  {
             retObjectDeleteProfiles = classInstance.Invoke("DeleteProfiles", profiles == null ? null : profiles.getJCOInstance());
             return (int)retObjectDeleteProfiles;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDeleteProfilesError = true;
             java.lang.String retObjectDeleteProfiles_ToString = retObjectDeleteProfiles == null ? "null" : retObjectDeleteProfiles.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDeleteProfilesNumber = (java.lang.Number)retObjectDeleteProfiles;
-                return retObjectDeleteProfilesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDeleteProfiles != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDeleteProfilesClass = retObjectDeleteProfiles.getClass();
+                    // java.lang.reflect.Method retObjectDeleteProfilesMethod = retObjectDeleteProfilesClass.getMethod("intValue");
+                    // return (int)retObjectDeleteProfilesMethod.invoke(retObjectDeleteProfiles);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDeleteProfilesNumber = java.text.NumberFormat.getInstance().parse(retObjectDeleteProfiles_ToString);
+                    return retObjectDeleteProfilesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDeleteProfilesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDeleteProfiles != null ? retObjectDeleteProfiles.getClass() : "null", retObjectDeleteProfiles_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDeleteProfilesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -247,13 +323,32 @@ public class ProfileProvider extends SettingsProvider  {
             retObjectGetNumberOfInactiveProfiles = classInstance.Invoke("GetNumberOfInactiveProfiles", authenticationOption == null ? null : authenticationOption.getJCOInstance(), userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectGetNumberOfInactiveProfiles;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetNumberOfInactiveProfilesError = true;
             java.lang.String retObjectGetNumberOfInactiveProfiles_ToString = retObjectGetNumberOfInactiveProfiles == null ? "null" : retObjectGetNumberOfInactiveProfiles.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetNumberOfInactiveProfilesNumber = (java.lang.Number)retObjectGetNumberOfInactiveProfiles;
-                return retObjectGetNumberOfInactiveProfilesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfInactiveProfiles != null ? retObjectGetNumberOfInactiveProfiles.getClass() : "null", retObjectGetNumberOfInactiveProfiles_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetNumberOfInactiveProfiles != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetNumberOfInactiveProfilesClass = retObjectGetNumberOfInactiveProfiles.getClass();
+                    // java.lang.reflect.Method retObjectGetNumberOfInactiveProfilesMethod = retObjectGetNumberOfInactiveProfilesClass.getMethod("intValue");
+                    // return (int)retObjectGetNumberOfInactiveProfilesMethod.invoke(retObjectGetNumberOfInactiveProfiles);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetNumberOfInactiveProfilesNumber = java.text.NumberFormat.getInstance().parse(retObjectGetNumberOfInactiveProfiles_ToString);
+                    return retObjectGetNumberOfInactiveProfilesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetNumberOfInactiveProfilesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetNumberOfInactiveProfiles != null ? retObjectGetNumberOfInactiveProfiles.getClass() : "null", retObjectGetNumberOfInactiveProfiles_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetNumberOfInactiveProfilesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

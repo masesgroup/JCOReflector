@@ -376,13 +376,32 @@ public class FtpWebRequest extends WebRequest  {
             retObjectReadWriteTimeout = classInstance.Get("ReadWriteTimeout");
             return (int)retObjectReadWriteTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReadWriteTimeoutError = true;
             java.lang.String retObjectReadWriteTimeout_ToString = retObjectReadWriteTimeout == null ? "null" : retObjectReadWriteTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReadWriteTimeoutNumber = (java.lang.Number)retObjectReadWriteTimeout;
-                return retObjectReadWriteTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadWriteTimeout != null ? retObjectReadWriteTimeout.getClass() : "null", retObjectReadWriteTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReadWriteTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReadWriteTimeoutClass = retObjectReadWriteTimeout.getClass();
+                    // java.lang.reflect.Method retObjectReadWriteTimeoutMethod = retObjectReadWriteTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectReadWriteTimeoutMethod.invoke(retObjectReadWriteTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReadWriteTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectReadWriteTimeout_ToString);
+                    return retObjectReadWriteTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReadWriteTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReadWriteTimeout != null ? retObjectReadWriteTimeout.getClass() : "null", retObjectReadWriteTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReadWriteTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -407,13 +426,32 @@ public class FtpWebRequest extends WebRequest  {
             retObjectContentOffset = classInstance.Get("ContentOffset");
             return (long)retObjectContentOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportContentOffsetError = true;
             java.lang.String retObjectContentOffset_ToString = retObjectContentOffset == null ? "null" : retObjectContentOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectContentOffsetNumber = (java.lang.Number)retObjectContentOffset;
-                return retObjectContentOffsetNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectContentOffset != null ? retObjectContentOffset.getClass() : "null", retObjectContentOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectContentOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectContentOffsetClass = retObjectContentOffset.getClass();
+                    // java.lang.reflect.Method retObjectContentOffsetMethod = retObjectContentOffsetClass.getMethod("longValue");
+                    // return (long)retObjectContentOffsetMethod.invoke(retObjectContentOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectContentOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectContentOffset_ToString);
+                    return retObjectContentOffsetNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportContentOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectContentOffset != null ? retObjectContentOffset.getClass() : "null", retObjectContentOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportContentOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

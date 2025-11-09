@@ -691,13 +691,32 @@ public class DataGrid extends Control  {
             retObjectCurrentRowIndex = classInstance.Get("CurrentRowIndex");
             return (int)retObjectCurrentRowIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentRowIndexError = true;
             java.lang.String retObjectCurrentRowIndex_ToString = retObjectCurrentRowIndex == null ? "null" : retObjectCurrentRowIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentRowIndexNumber = (java.lang.Number)retObjectCurrentRowIndex;
-                return retObjectCurrentRowIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentRowIndex != null ? retObjectCurrentRowIndex.getClass() : "null", retObjectCurrentRowIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentRowIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentRowIndexClass = retObjectCurrentRowIndex.getClass();
+                    // java.lang.reflect.Method retObjectCurrentRowIndexMethod = retObjectCurrentRowIndexClass.getMethod("intValue");
+                    // return (int)retObjectCurrentRowIndexMethod.invoke(retObjectCurrentRowIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentRowIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentRowIndex_ToString);
+                    return retObjectCurrentRowIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentRowIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentRowIndex != null ? retObjectCurrentRowIndex.getClass() : "null", retObjectCurrentRowIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentRowIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -722,13 +741,32 @@ public class DataGrid extends Control  {
             retObjectFirstVisibleColumn = classInstance.Get("FirstVisibleColumn");
             return (int)retObjectFirstVisibleColumn;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFirstVisibleColumnError = true;
             java.lang.String retObjectFirstVisibleColumn_ToString = retObjectFirstVisibleColumn == null ? "null" : retObjectFirstVisibleColumn.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFirstVisibleColumnNumber = (java.lang.Number)retObjectFirstVisibleColumn;
-                return retObjectFirstVisibleColumnNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstVisibleColumn != null ? retObjectFirstVisibleColumn.getClass() : "null", retObjectFirstVisibleColumn_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFirstVisibleColumn != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFirstVisibleColumnClass = retObjectFirstVisibleColumn.getClass();
+                    // java.lang.reflect.Method retObjectFirstVisibleColumnMethod = retObjectFirstVisibleColumnClass.getMethod("intValue");
+                    // return (int)retObjectFirstVisibleColumnMethod.invoke(retObjectFirstVisibleColumn);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFirstVisibleColumnNumber = java.text.NumberFormat.getInstance().parse(retObjectFirstVisibleColumn_ToString);
+                    return retObjectFirstVisibleColumnNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFirstVisibleColumnError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFirstVisibleColumn != null ? retObjectFirstVisibleColumn.getClass() : "null", retObjectFirstVisibleColumn_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFirstVisibleColumnError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -743,13 +781,32 @@ public class DataGrid extends Control  {
             retObjectPreferredColumnWidth = classInstance.Get("PreferredColumnWidth");
             return (int)retObjectPreferredColumnWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPreferredColumnWidthError = true;
             java.lang.String retObjectPreferredColumnWidth_ToString = retObjectPreferredColumnWidth == null ? "null" : retObjectPreferredColumnWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPreferredColumnWidthNumber = (java.lang.Number)retObjectPreferredColumnWidth;
-                return retObjectPreferredColumnWidthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredColumnWidth != null ? retObjectPreferredColumnWidth.getClass() : "null", retObjectPreferredColumnWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPreferredColumnWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPreferredColumnWidthClass = retObjectPreferredColumnWidth.getClass();
+                    // java.lang.reflect.Method retObjectPreferredColumnWidthMethod = retObjectPreferredColumnWidthClass.getMethod("intValue");
+                    // return (int)retObjectPreferredColumnWidthMethod.invoke(retObjectPreferredColumnWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPreferredColumnWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectPreferredColumnWidth_ToString);
+                    return retObjectPreferredColumnWidthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPreferredColumnWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPreferredColumnWidth != null ? retObjectPreferredColumnWidth.getClass() : "null", retObjectPreferredColumnWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPreferredColumnWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -774,13 +831,32 @@ public class DataGrid extends Control  {
             retObjectPreferredRowHeight = classInstance.Get("PreferredRowHeight");
             return (int)retObjectPreferredRowHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPreferredRowHeightError = true;
             java.lang.String retObjectPreferredRowHeight_ToString = retObjectPreferredRowHeight == null ? "null" : retObjectPreferredRowHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPreferredRowHeightNumber = (java.lang.Number)retObjectPreferredRowHeight;
-                return retObjectPreferredRowHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPreferredRowHeight != null ? retObjectPreferredRowHeight.getClass() : "null", retObjectPreferredRowHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPreferredRowHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPreferredRowHeightClass = retObjectPreferredRowHeight.getClass();
+                    // java.lang.reflect.Method retObjectPreferredRowHeightMethod = retObjectPreferredRowHeightClass.getMethod("intValue");
+                    // return (int)retObjectPreferredRowHeightMethod.invoke(retObjectPreferredRowHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPreferredRowHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectPreferredRowHeight_ToString);
+                    return retObjectPreferredRowHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPreferredRowHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPreferredRowHeight != null ? retObjectPreferredRowHeight.getClass() : "null", retObjectPreferredRowHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPreferredRowHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -805,13 +881,32 @@ public class DataGrid extends Control  {
             retObjectRowHeaderWidth = classInstance.Get("RowHeaderWidth");
             return (int)retObjectRowHeaderWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRowHeaderWidthError = true;
             java.lang.String retObjectRowHeaderWidth_ToString = retObjectRowHeaderWidth == null ? "null" : retObjectRowHeaderWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRowHeaderWidthNumber = (java.lang.Number)retObjectRowHeaderWidth;
-                return retObjectRowHeaderWidthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null", retObjectRowHeaderWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRowHeaderWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRowHeaderWidthClass = retObjectRowHeaderWidth.getClass();
+                    // java.lang.reflect.Method retObjectRowHeaderWidthMethod = retObjectRowHeaderWidthClass.getMethod("intValue");
+                    // return (int)retObjectRowHeaderWidthMethod.invoke(retObjectRowHeaderWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRowHeaderWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectRowHeaderWidth_ToString);
+                    return retObjectRowHeaderWidthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRowHeaderWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null", retObjectRowHeaderWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRowHeaderWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -836,13 +931,32 @@ public class DataGrid extends Control  {
             retObjectVisibleColumnCount = classInstance.Get("VisibleColumnCount");
             return (int)retObjectVisibleColumnCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVisibleColumnCountError = true;
             java.lang.String retObjectVisibleColumnCount_ToString = retObjectVisibleColumnCount == null ? "null" : retObjectVisibleColumnCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVisibleColumnCountNumber = (java.lang.Number)retObjectVisibleColumnCount;
-                return retObjectVisibleColumnCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVisibleColumnCount != null ? retObjectVisibleColumnCount.getClass() : "null", retObjectVisibleColumnCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVisibleColumnCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVisibleColumnCountClass = retObjectVisibleColumnCount.getClass();
+                    // java.lang.reflect.Method retObjectVisibleColumnCountMethod = retObjectVisibleColumnCountClass.getMethod("intValue");
+                    // return (int)retObjectVisibleColumnCountMethod.invoke(retObjectVisibleColumnCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVisibleColumnCountNumber = java.text.NumberFormat.getInstance().parse(retObjectVisibleColumnCount_ToString);
+                    return retObjectVisibleColumnCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVisibleColumnCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVisibleColumnCount != null ? retObjectVisibleColumnCount.getClass() : "null", retObjectVisibleColumnCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVisibleColumnCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -857,13 +971,32 @@ public class DataGrid extends Control  {
             retObjectVisibleRowCount = classInstance.Get("VisibleRowCount");
             return (int)retObjectVisibleRowCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVisibleRowCountError = true;
             java.lang.String retObjectVisibleRowCount_ToString = retObjectVisibleRowCount == null ? "null" : retObjectVisibleRowCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVisibleRowCountNumber = (java.lang.Number)retObjectVisibleRowCount;
-                return retObjectVisibleRowCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVisibleRowCount != null ? retObjectVisibleRowCount.getClass() : "null", retObjectVisibleRowCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVisibleRowCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVisibleRowCountClass = retObjectVisibleRowCount.getClass();
+                    // java.lang.reflect.Method retObjectVisibleRowCountMethod = retObjectVisibleRowCountClass.getMethod("intValue");
+                    // return (int)retObjectVisibleRowCountMethod.invoke(retObjectVisibleRowCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVisibleRowCountNumber = java.text.NumberFormat.getInstance().parse(retObjectVisibleRowCount_ToString);
+                    return retObjectVisibleRowCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVisibleRowCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVisibleRowCount != null ? retObjectVisibleRowCount.getClass() : "null", retObjectVisibleRowCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVisibleRowCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

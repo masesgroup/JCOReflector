@@ -167,13 +167,32 @@ public class CodeViewDebugDirectoryData extends ValueType  {
             retObjectAge = classInstance.Get("Age");
             return (int)retObjectAge;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAgeError = true;
             java.lang.String retObjectAge_ToString = retObjectAge == null ? "null" : retObjectAge.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAgeNumber = (java.lang.Number)retObjectAge;
-                return retObjectAgeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAge != null ? retObjectAge.getClass() : "null", retObjectAge_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAge != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAgeClass = retObjectAge.getClass();
+                    // java.lang.reflect.Method retObjectAgeMethod = retObjectAgeClass.getMethod("intValue");
+                    // return (int)retObjectAgeMethod.invoke(retObjectAge);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAgeNumber = java.text.NumberFormat.getInstance().parse(retObjectAge_ToString);
+                    return retObjectAgeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAgeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAge != null ? retObjectAge.getClass() : "null", retObjectAge_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAgeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

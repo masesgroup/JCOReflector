@@ -177,13 +177,32 @@ public class BlackSaturationCurveEffect extends ColorCurveEffect  {
             retObjectBlackSaturation = classInstance.Get("BlackSaturation");
             return (int)retObjectBlackSaturation;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBlackSaturationError = true;
             java.lang.String retObjectBlackSaturation_ToString = retObjectBlackSaturation == null ? "null" : retObjectBlackSaturation.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBlackSaturationNumber = (java.lang.Number)retObjectBlackSaturation;
-                return retObjectBlackSaturationNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBlackSaturation != null ? retObjectBlackSaturation.getClass() : "null", retObjectBlackSaturation_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBlackSaturation != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBlackSaturationClass = retObjectBlackSaturation.getClass();
+                    // java.lang.reflect.Method retObjectBlackSaturationMethod = retObjectBlackSaturationClass.getMethod("intValue");
+                    // return (int)retObjectBlackSaturationMethod.invoke(retObjectBlackSaturation);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBlackSaturationNumber = java.text.NumberFormat.getInstance().parse(retObjectBlackSaturation_ToString);
+                    return retObjectBlackSaturationNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBlackSaturationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBlackSaturation != null ? retObjectBlackSaturation.getClass() : "null", retObjectBlackSaturation_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBlackSaturationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -171,13 +171,32 @@ public class Shape extends FrameworkElement  {
             retObjectStrokeDashOffset = classInstance.Get("StrokeDashOffset");
             return (double)retObjectStrokeDashOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStrokeDashOffsetError = true;
             java.lang.String retObjectStrokeDashOffset_ToString = retObjectStrokeDashOffset == null ? "null" : retObjectStrokeDashOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStrokeDashOffsetNumber = (java.lang.Number)retObjectStrokeDashOffset;
-                return retObjectStrokeDashOffsetNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrokeDashOffset != null ? retObjectStrokeDashOffset.getClass() : "null", retObjectStrokeDashOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStrokeDashOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStrokeDashOffsetClass = retObjectStrokeDashOffset.getClass();
+                    // java.lang.reflect.Method retObjectStrokeDashOffsetMethod = retObjectStrokeDashOffsetClass.getMethod("doubleValue");
+                    // return (double)retObjectStrokeDashOffsetMethod.invoke(retObjectStrokeDashOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStrokeDashOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectStrokeDashOffset_ToString);
+                    return retObjectStrokeDashOffsetNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStrokeDashOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStrokeDashOffset != null ? retObjectStrokeDashOffset.getClass() : "null", retObjectStrokeDashOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStrokeDashOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,13 +221,32 @@ public class Shape extends FrameworkElement  {
             retObjectStrokeMiterLimit = classInstance.Get("StrokeMiterLimit");
             return (double)retObjectStrokeMiterLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStrokeMiterLimitError = true;
             java.lang.String retObjectStrokeMiterLimit_ToString = retObjectStrokeMiterLimit == null ? "null" : retObjectStrokeMiterLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStrokeMiterLimitNumber = (java.lang.Number)retObjectStrokeMiterLimit;
-                return retObjectStrokeMiterLimitNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrokeMiterLimit != null ? retObjectStrokeMiterLimit.getClass() : "null", retObjectStrokeMiterLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStrokeMiterLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStrokeMiterLimitClass = retObjectStrokeMiterLimit.getClass();
+                    // java.lang.reflect.Method retObjectStrokeMiterLimitMethod = retObjectStrokeMiterLimitClass.getMethod("doubleValue");
+                    // return (double)retObjectStrokeMiterLimitMethod.invoke(retObjectStrokeMiterLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStrokeMiterLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectStrokeMiterLimit_ToString);
+                    return retObjectStrokeMiterLimitNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStrokeMiterLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStrokeMiterLimit != null ? retObjectStrokeMiterLimit.getClass() : "null", retObjectStrokeMiterLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStrokeMiterLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -233,13 +271,32 @@ public class Shape extends FrameworkElement  {
             retObjectStrokeThickness = classInstance.Get("StrokeThickness");
             return (double)retObjectStrokeThickness;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStrokeThicknessError = true;
             java.lang.String retObjectStrokeThickness_ToString = retObjectStrokeThickness == null ? "null" : retObjectStrokeThickness.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStrokeThicknessNumber = (java.lang.Number)retObjectStrokeThickness;
-                return retObjectStrokeThicknessNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrokeThickness != null ? retObjectStrokeThickness.getClass() : "null", retObjectStrokeThickness_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStrokeThickness != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStrokeThicknessClass = retObjectStrokeThickness.getClass();
+                    // java.lang.reflect.Method retObjectStrokeThicknessMethod = retObjectStrokeThicknessClass.getMethod("doubleValue");
+                    // return (double)retObjectStrokeThicknessMethod.invoke(retObjectStrokeThickness);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStrokeThicknessNumber = java.text.NumberFormat.getInstance().parse(retObjectStrokeThickness_ToString);
+                    return retObjectStrokeThicknessNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStrokeThicknessError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStrokeThickness != null ? retObjectStrokeThickness.getClass() : "null", retObjectStrokeThickness_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStrokeThicknessError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -213,13 +213,32 @@ public class Asn1Tag extends ValueType  {
             retObjectCalculateEncodedSize = classInstance.Invoke("CalculateEncodedSize");
             return (int)retObjectCalculateEncodedSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCalculateEncodedSizeError = true;
             java.lang.String retObjectCalculateEncodedSize_ToString = retObjectCalculateEncodedSize == null ? "null" : retObjectCalculateEncodedSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCalculateEncodedSizeNumber = (java.lang.Number)retObjectCalculateEncodedSize;
-                return retObjectCalculateEncodedSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCalculateEncodedSize != null ? retObjectCalculateEncodedSize.getClass() : "null", retObjectCalculateEncodedSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCalculateEncodedSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCalculateEncodedSizeClass = retObjectCalculateEncodedSize.getClass();
+                    // java.lang.reflect.Method retObjectCalculateEncodedSizeMethod = retObjectCalculateEncodedSizeClass.getMethod("intValue");
+                    // return (int)retObjectCalculateEncodedSizeMethod.invoke(retObjectCalculateEncodedSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCalculateEncodedSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectCalculateEncodedSize_ToString);
+                    return retObjectCalculateEncodedSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCalculateEncodedSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCalculateEncodedSize != null ? retObjectCalculateEncodedSize.getClass() : "null", retObjectCalculateEncodedSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCalculateEncodedSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,13 +301,32 @@ public class Asn1Tag extends ValueType  {
             retObjectTagValue = classInstance.Get("TagValue");
             return (int)retObjectTagValue;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTagValueError = true;
             java.lang.String retObjectTagValue_ToString = retObjectTagValue == null ? "null" : retObjectTagValue.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTagValueNumber = (java.lang.Number)retObjectTagValue;
-                return retObjectTagValueNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTagValue != null ? retObjectTagValue.getClass() : "null", retObjectTagValue_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTagValue != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTagValueClass = retObjectTagValue.getClass();
+                    // java.lang.reflect.Method retObjectTagValueMethod = retObjectTagValueClass.getMethod("intValue");
+                    // return (int)retObjectTagValueMethod.invoke(retObjectTagValue);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTagValueNumber = java.text.NumberFormat.getInstance().parse(retObjectTagValue_ToString);
+                    return retObjectTagValueNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTagValueError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTagValue != null ? retObjectTagValue.getClass() : "null", retObjectTagValue_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTagValueError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -168,13 +168,32 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexWeight1 = classInstance.Get("VertexWeight1");
             return (double)retObjectVertexWeight1;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVertexWeight1Error = true;
             java.lang.String retObjectVertexWeight1_ToString = retObjectVertexWeight1 == null ? "null" : retObjectVertexWeight1.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVertexWeight1Number = (java.lang.Number)retObjectVertexWeight1;
-                return retObjectVertexWeight1Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight1 != null ? retObjectVertexWeight1.getClass() : "null", retObjectVertexWeight1_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVertexWeight1 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVertexWeight1Class = retObjectVertexWeight1.getClass();
+                    // java.lang.reflect.Method retObjectVertexWeight1Method = retObjectVertexWeight1Class.getMethod("doubleValue");
+                    // return (double)retObjectVertexWeight1Method.invoke(retObjectVertexWeight1);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVertexWeight1Number = java.text.NumberFormat.getInstance().parse(retObjectVertexWeight1_ToString);
+                    return retObjectVertexWeight1Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVertexWeight1Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVertexWeight1 != null ? retObjectVertexWeight1.getClass() : "null", retObjectVertexWeight1_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVertexWeight1Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,13 +208,32 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexWeight2 = classInstance.Get("VertexWeight2");
             return (double)retObjectVertexWeight2;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVertexWeight2Error = true;
             java.lang.String retObjectVertexWeight2_ToString = retObjectVertexWeight2 == null ? "null" : retObjectVertexWeight2.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVertexWeight2Number = (java.lang.Number)retObjectVertexWeight2;
-                return retObjectVertexWeight2Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight2 != null ? retObjectVertexWeight2.getClass() : "null", retObjectVertexWeight2_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVertexWeight2 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVertexWeight2Class = retObjectVertexWeight2.getClass();
+                    // java.lang.reflect.Method retObjectVertexWeight2Method = retObjectVertexWeight2Class.getMethod("doubleValue");
+                    // return (double)retObjectVertexWeight2Method.invoke(retObjectVertexWeight2);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVertexWeight2Number = java.text.NumberFormat.getInstance().parse(retObjectVertexWeight2_ToString);
+                    return retObjectVertexWeight2Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVertexWeight2Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVertexWeight2 != null ? retObjectVertexWeight2.getClass() : "null", retObjectVertexWeight2_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVertexWeight2Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -210,13 +248,32 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexWeight3 = classInstance.Get("VertexWeight3");
             return (double)retObjectVertexWeight3;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVertexWeight3Error = true;
             java.lang.String retObjectVertexWeight3_ToString = retObjectVertexWeight3 == null ? "null" : retObjectVertexWeight3.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVertexWeight3Number = (java.lang.Number)retObjectVertexWeight3;
-                return retObjectVertexWeight3Number.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVertexWeight3 != null ? retObjectVertexWeight3.getClass() : "null", retObjectVertexWeight3_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVertexWeight3 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVertexWeight3Class = retObjectVertexWeight3.getClass();
+                    // java.lang.reflect.Method retObjectVertexWeight3Method = retObjectVertexWeight3Class.getMethod("doubleValue");
+                    // return (double)retObjectVertexWeight3Method.invoke(retObjectVertexWeight3);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVertexWeight3Number = java.text.NumberFormat.getInstance().parse(retObjectVertexWeight3_ToString);
+                    return retObjectVertexWeight3Number.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVertexWeight3Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVertexWeight3 != null ? retObjectVertexWeight3.getClass() : "null", retObjectVertexWeight3_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVertexWeight3Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,13 +288,32 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexIndex1 = classInstance.Get("VertexIndex1");
             return (int)retObjectVertexIndex1;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVertexIndex1Error = true;
             java.lang.String retObjectVertexIndex1_ToString = retObjectVertexIndex1 == null ? "null" : retObjectVertexIndex1.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVertexIndex1Number = (java.lang.Number)retObjectVertexIndex1;
-                return retObjectVertexIndex1Number.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex1 != null ? retObjectVertexIndex1.getClass() : "null", retObjectVertexIndex1_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVertexIndex1 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVertexIndex1Class = retObjectVertexIndex1.getClass();
+                    // java.lang.reflect.Method retObjectVertexIndex1Method = retObjectVertexIndex1Class.getMethod("intValue");
+                    // return (int)retObjectVertexIndex1Method.invoke(retObjectVertexIndex1);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVertexIndex1Number = java.text.NumberFormat.getInstance().parse(retObjectVertexIndex1_ToString);
+                    return retObjectVertexIndex1Number.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVertexIndex1Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVertexIndex1 != null ? retObjectVertexIndex1.getClass() : "null", retObjectVertexIndex1_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVertexIndex1Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,13 +328,32 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexIndex2 = classInstance.Get("VertexIndex2");
             return (int)retObjectVertexIndex2;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVertexIndex2Error = true;
             java.lang.String retObjectVertexIndex2_ToString = retObjectVertexIndex2 == null ? "null" : retObjectVertexIndex2.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVertexIndex2Number = (java.lang.Number)retObjectVertexIndex2;
-                return retObjectVertexIndex2Number.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex2 != null ? retObjectVertexIndex2.getClass() : "null", retObjectVertexIndex2_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVertexIndex2 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVertexIndex2Class = retObjectVertexIndex2.getClass();
+                    // java.lang.reflect.Method retObjectVertexIndex2Method = retObjectVertexIndex2Class.getMethod("intValue");
+                    // return (int)retObjectVertexIndex2Method.invoke(retObjectVertexIndex2);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVertexIndex2Number = java.text.NumberFormat.getInstance().parse(retObjectVertexIndex2_ToString);
+                    return retObjectVertexIndex2Number.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVertexIndex2Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVertexIndex2 != null ? retObjectVertexIndex2.getClass() : "null", retObjectVertexIndex2_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVertexIndex2Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -273,13 +368,32 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             retObjectVertexIndex3 = classInstance.Get("VertexIndex3");
             return (int)retObjectVertexIndex3;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVertexIndex3Error = true;
             java.lang.String retObjectVertexIndex3_ToString = retObjectVertexIndex3 == null ? "null" : retObjectVertexIndex3.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVertexIndex3Number = (java.lang.Number)retObjectVertexIndex3;
-                return retObjectVertexIndex3Number.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectVertexIndex3 != null ? retObjectVertexIndex3.getClass() : "null", retObjectVertexIndex3_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVertexIndex3 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVertexIndex3Class = retObjectVertexIndex3.getClass();
+                    // java.lang.reflect.Method retObjectVertexIndex3Method = retObjectVertexIndex3Class.getMethod("intValue");
+                    // return (int)retObjectVertexIndex3Method.invoke(retObjectVertexIndex3);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVertexIndex3Number = java.text.NumberFormat.getInstance().parse(retObjectVertexIndex3_ToString);
+                    return retObjectVertexIndex3Number.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVertexIndex3Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVertexIndex3 != null ? retObjectVertexIndex3.getClass() : "null", retObjectVertexIndex3_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVertexIndex3Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

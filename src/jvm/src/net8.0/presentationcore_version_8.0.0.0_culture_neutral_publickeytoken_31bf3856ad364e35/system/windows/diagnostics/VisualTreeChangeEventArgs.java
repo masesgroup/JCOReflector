@@ -178,13 +178,32 @@ public class VisualTreeChangeEventArgs extends EventArgs  {
             retObjectChildIndex = classInstance.Get("ChildIndex");
             return (int)retObjectChildIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportChildIndexError = true;
             java.lang.String retObjectChildIndex_ToString = retObjectChildIndex == null ? "null" : retObjectChildIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectChildIndexNumber = (java.lang.Number)retObjectChildIndex;
-                return retObjectChildIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectChildIndex != null ? retObjectChildIndex.getClass() : "null", retObjectChildIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectChildIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectChildIndexClass = retObjectChildIndex.getClass();
+                    // java.lang.reflect.Method retObjectChildIndexMethod = retObjectChildIndexClass.getMethod("intValue");
+                    // return (int)retObjectChildIndexMethod.invoke(retObjectChildIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectChildIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectChildIndex_ToString);
+                    return retObjectChildIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportChildIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectChildIndex != null ? retObjectChildIndex.getClass() : "null", retObjectChildIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportChildIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

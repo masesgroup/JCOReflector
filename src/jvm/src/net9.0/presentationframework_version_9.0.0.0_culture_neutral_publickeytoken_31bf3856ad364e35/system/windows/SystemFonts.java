@@ -168,13 +168,32 @@ public class SystemFonts extends NetObject  {
             retObjectCaptionFontSize = classType.Get("CaptionFontSize");
             return (double)retObjectCaptionFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCaptionFontSizeError = true;
             java.lang.String retObjectCaptionFontSize_ToString = retObjectCaptionFontSize == null ? "null" : retObjectCaptionFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCaptionFontSizeNumber = (java.lang.Number)retObjectCaptionFontSize;
-                return retObjectCaptionFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCaptionFontSize != null ? retObjectCaptionFontSize.getClass() : "null", retObjectCaptionFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCaptionFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCaptionFontSizeClass = retObjectCaptionFontSize.getClass();
+                    // java.lang.reflect.Method retObjectCaptionFontSizeMethod = retObjectCaptionFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectCaptionFontSizeMethod.invoke(retObjectCaptionFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCaptionFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectCaptionFontSize_ToString);
+                    return retObjectCaptionFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCaptionFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCaptionFontSize != null ? retObjectCaptionFontSize.getClass() : "null", retObjectCaptionFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCaptionFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,13 +208,32 @@ public class SystemFonts extends NetObject  {
             retObjectIconFontSize = classType.Get("IconFontSize");
             return (double)retObjectIconFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIconFontSizeError = true;
             java.lang.String retObjectIconFontSize_ToString = retObjectIconFontSize == null ? "null" : retObjectIconFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIconFontSizeNumber = (java.lang.Number)retObjectIconFontSize;
-                return retObjectIconFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectIconFontSize != null ? retObjectIconFontSize.getClass() : "null", retObjectIconFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIconFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIconFontSizeClass = retObjectIconFontSize.getClass();
+                    // java.lang.reflect.Method retObjectIconFontSizeMethod = retObjectIconFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectIconFontSizeMethod.invoke(retObjectIconFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIconFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectIconFontSize_ToString);
+                    return retObjectIconFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIconFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIconFontSize != null ? retObjectIconFontSize.getClass() : "null", retObjectIconFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIconFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -210,13 +248,32 @@ public class SystemFonts extends NetObject  {
             retObjectMenuFontSize = classType.Get("MenuFontSize");
             return (double)retObjectMenuFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMenuFontSizeError = true;
             java.lang.String retObjectMenuFontSize_ToString = retObjectMenuFontSize == null ? "null" : retObjectMenuFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMenuFontSizeNumber = (java.lang.Number)retObjectMenuFontSize;
-                return retObjectMenuFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMenuFontSize != null ? retObjectMenuFontSize.getClass() : "null", retObjectMenuFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMenuFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMenuFontSizeClass = retObjectMenuFontSize.getClass();
+                    // java.lang.reflect.Method retObjectMenuFontSizeMethod = retObjectMenuFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectMenuFontSizeMethod.invoke(retObjectMenuFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMenuFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMenuFontSize_ToString);
+                    return retObjectMenuFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMenuFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMenuFontSize != null ? retObjectMenuFontSize.getClass() : "null", retObjectMenuFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMenuFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,13 +288,32 @@ public class SystemFonts extends NetObject  {
             retObjectMessageFontSize = classType.Get("MessageFontSize");
             return (double)retObjectMessageFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMessageFontSizeError = true;
             java.lang.String retObjectMessageFontSize_ToString = retObjectMessageFontSize == null ? "null" : retObjectMessageFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMessageFontSizeNumber = (java.lang.Number)retObjectMessageFontSize;
-                return retObjectMessageFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectMessageFontSize != null ? retObjectMessageFontSize.getClass() : "null", retObjectMessageFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMessageFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMessageFontSizeClass = retObjectMessageFontSize.getClass();
+                    // java.lang.reflect.Method retObjectMessageFontSizeMethod = retObjectMessageFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectMessageFontSizeMethod.invoke(retObjectMessageFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMessageFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMessageFontSize_ToString);
+                    return retObjectMessageFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMessageFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMessageFontSize != null ? retObjectMessageFontSize.getClass() : "null", retObjectMessageFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMessageFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,13 +328,32 @@ public class SystemFonts extends NetObject  {
             retObjectSmallCaptionFontSize = classType.Get("SmallCaptionFontSize");
             return (double)retObjectSmallCaptionFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSmallCaptionFontSizeError = true;
             java.lang.String retObjectSmallCaptionFontSize_ToString = retObjectSmallCaptionFontSize == null ? "null" : retObjectSmallCaptionFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSmallCaptionFontSizeNumber = (java.lang.Number)retObjectSmallCaptionFontSize;
-                return retObjectSmallCaptionFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmallCaptionFontSize != null ? retObjectSmallCaptionFontSize.getClass() : "null", retObjectSmallCaptionFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSmallCaptionFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSmallCaptionFontSizeClass = retObjectSmallCaptionFontSize.getClass();
+                    // java.lang.reflect.Method retObjectSmallCaptionFontSizeMethod = retObjectSmallCaptionFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectSmallCaptionFontSizeMethod.invoke(retObjectSmallCaptionFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSmallCaptionFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectSmallCaptionFontSize_ToString);
+                    return retObjectSmallCaptionFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSmallCaptionFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSmallCaptionFontSize != null ? retObjectSmallCaptionFontSize.getClass() : "null", retObjectSmallCaptionFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSmallCaptionFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -273,13 +368,32 @@ public class SystemFonts extends NetObject  {
             retObjectStatusFontSize = classType.Get("StatusFontSize");
             return (double)retObjectStatusFontSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStatusFontSizeError = true;
             java.lang.String retObjectStatusFontSize_ToString = retObjectStatusFontSize == null ? "null" : retObjectStatusFontSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStatusFontSizeNumber = (java.lang.Number)retObjectStatusFontSize;
-                return retObjectStatusFontSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStatusFontSize != null ? retObjectStatusFontSize.getClass() : "null", retObjectStatusFontSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStatusFontSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStatusFontSizeClass = retObjectStatusFontSize.getClass();
+                    // java.lang.reflect.Method retObjectStatusFontSizeMethod = retObjectStatusFontSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectStatusFontSizeMethod.invoke(retObjectStatusFontSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStatusFontSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectStatusFontSize_ToString);
+                    return retObjectStatusFontSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStatusFontSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStatusFontSize != null ? retObjectStatusFontSize.getClass() : "null", retObjectStatusFontSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStatusFontSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

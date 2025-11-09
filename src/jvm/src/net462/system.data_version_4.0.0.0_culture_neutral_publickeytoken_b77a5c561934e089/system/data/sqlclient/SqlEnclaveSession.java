@@ -198,13 +198,32 @@ public class SqlEnclaveSession extends NetObject  {
             retObjectSessionId = classInstance.Get("SessionId");
             return (long)retObjectSessionId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSessionIdError = true;
             java.lang.String retObjectSessionId_ToString = retObjectSessionId == null ? "null" : retObjectSessionId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSessionIdNumber = (java.lang.Number)retObjectSessionId;
-                return retObjectSessionIdNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectSessionId != null ? retObjectSessionId.getClass() : "null", retObjectSessionId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSessionId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSessionIdClass = retObjectSessionId.getClass();
+                    // java.lang.reflect.Method retObjectSessionIdMethod = retObjectSessionIdClass.getMethod("longValue");
+                    // return (long)retObjectSessionIdMethod.invoke(retObjectSessionId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSessionIdNumber = java.text.NumberFormat.getInstance().parse(retObjectSessionId_ToString);
+                    return retObjectSessionIdNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSessionIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSessionId != null ? retObjectSessionId.getClass() : "null", retObjectSessionId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSessionIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

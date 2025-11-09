@@ -173,13 +173,32 @@ public class BrotliEncoder extends ValueType implements AutoCloseable {
             retObjectGetMaxCompressedLength = classType.Invoke("GetMaxCompressedLength", inputSize);
             return (int)retObjectGetMaxCompressedLength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetMaxCompressedLengthError = true;
             java.lang.String retObjectGetMaxCompressedLength_ToString = retObjectGetMaxCompressedLength == null ? "null" : retObjectGetMaxCompressedLength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetMaxCompressedLengthNumber = (java.lang.Number)retObjectGetMaxCompressedLength;
-                return retObjectGetMaxCompressedLengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetMaxCompressedLength != null ? retObjectGetMaxCompressedLength.getClass() : "null", retObjectGetMaxCompressedLength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetMaxCompressedLength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetMaxCompressedLengthClass = retObjectGetMaxCompressedLength.getClass();
+                    // java.lang.reflect.Method retObjectGetMaxCompressedLengthMethod = retObjectGetMaxCompressedLengthClass.getMethod("intValue");
+                    // return (int)retObjectGetMaxCompressedLengthMethod.invoke(retObjectGetMaxCompressedLength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetMaxCompressedLengthNumber = java.text.NumberFormat.getInstance().parse(retObjectGetMaxCompressedLength_ToString);
+                    return retObjectGetMaxCompressedLengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetMaxCompressedLengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetMaxCompressedLength != null ? retObjectGetMaxCompressedLength.getClass() : "null", retObjectGetMaxCompressedLength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetMaxCompressedLengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

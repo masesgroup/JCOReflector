@@ -168,13 +168,32 @@ public class PersonalizationProvider extends ProviderBase  {
             retObjectGetCountOfState = classInstance.Invoke("GetCountOfState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance());
             return (int)retObjectGetCountOfState;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCountOfStateError = true;
             java.lang.String retObjectGetCountOfState_ToString = retObjectGetCountOfState == null ? "null" : retObjectGetCountOfState.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCountOfStateNumber = (java.lang.Number)retObjectGetCountOfState;
-                return retObjectGetCountOfStateNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null", retObjectGetCountOfState_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCountOfState != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCountOfStateClass = retObjectGetCountOfState.getClass();
+                    // java.lang.reflect.Method retObjectGetCountOfStateMethod = retObjectGetCountOfStateClass.getMethod("intValue");
+                    // return (int)retObjectGetCountOfStateMethod.invoke(retObjectGetCountOfState);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCountOfStateNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCountOfState_ToString);
+                    return retObjectGetCountOfStateNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCountOfStateError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCountOfState != null ? retObjectGetCountOfState.getClass() : "null", retObjectGetCountOfState_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCountOfStateError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,13 +208,32 @@ public class PersonalizationProvider extends ProviderBase  {
             retObjectResetState = classInstance.Invoke("ResetState", scope == null ? null : scope.getJCOInstance(), paths, usernames);
             return (int)retObjectResetState;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportResetStateError = true;
             java.lang.String retObjectResetState_ToString = retObjectResetState == null ? "null" : retObjectResetState.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectResetStateNumber = (java.lang.Number)retObjectResetState;
-                return retObjectResetStateNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectResetState != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectResetStateClass = retObjectResetState.getClass();
+                    // java.lang.reflect.Method retObjectResetStateMethod = retObjectResetStateClass.getMethod("intValue");
+                    // return (int)retObjectResetStateMethod.invoke(retObjectResetState);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectResetStateNumber = java.text.NumberFormat.getInstance().parse(retObjectResetState_ToString);
+                    return retObjectResetStateNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportResetStateError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportResetStateError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -210,13 +248,32 @@ public class PersonalizationProvider extends ProviderBase  {
             retObjectResetState = classInstance.Invoke("ResetState", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
             return (int)retObjectResetState;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportResetStateError = true;
             java.lang.String retObjectResetState_ToString = retObjectResetState == null ? "null" : retObjectResetState.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectResetStateNumber = (java.lang.Number)retObjectResetState;
-                return retObjectResetStateNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectResetState != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectResetStateClass = retObjectResetState.getClass();
+                    // java.lang.reflect.Method retObjectResetStateMethod = retObjectResetStateClass.getMethod("intValue");
+                    // return (int)retObjectResetStateMethod.invoke(retObjectResetState);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectResetStateNumber = java.text.NumberFormat.getInstance().parse(retObjectResetState_ToString);
+                    return retObjectResetStateNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportResetStateError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectResetState != null ? retObjectResetState.getClass() : "null", retObjectResetState_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportResetStateError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -231,13 +288,32 @@ public class PersonalizationProvider extends ProviderBase  {
             retObjectResetUserState = classInstance.Invoke("ResetUserState", path, userInactiveSinceDate == null ? null : userInactiveSinceDate.getJCOInstance());
             return (int)retObjectResetUserState;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportResetUserStateError = true;
             java.lang.String retObjectResetUserState_ToString = retObjectResetUserState == null ? "null" : retObjectResetUserState.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectResetUserStateNumber = (java.lang.Number)retObjectResetUserState;
-                return retObjectResetUserStateNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectResetUserState != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectResetUserStateClass = retObjectResetUserState.getClass();
+                    // java.lang.reflect.Method retObjectResetUserStateMethod = retObjectResetUserStateClass.getMethod("intValue");
+                    // return (int)retObjectResetUserStateMethod.invoke(retObjectResetUserState);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectResetUserStateNumber = java.text.NumberFormat.getInstance().parse(retObjectResetUserState_ToString);
+                    return retObjectResetUserStateNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportResetUserStateError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectResetUserState != null ? retObjectResetUserState.getClass() : "null", retObjectResetUserState_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportResetUserStateError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

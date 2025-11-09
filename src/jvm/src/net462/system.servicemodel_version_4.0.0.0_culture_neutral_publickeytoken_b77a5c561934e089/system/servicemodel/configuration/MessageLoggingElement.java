@@ -293,13 +293,32 @@ public class MessageLoggingElement extends ConfigurationElement  {
             retObjectMaxMessagesToLog = classInstance.Get("MaxMessagesToLog");
             return (int)retObjectMaxMessagesToLog;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxMessagesToLogError = true;
             java.lang.String retObjectMaxMessagesToLog_ToString = retObjectMaxMessagesToLog == null ? "null" : retObjectMaxMessagesToLog.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxMessagesToLogNumber = (java.lang.Number)retObjectMaxMessagesToLog;
-                return retObjectMaxMessagesToLogNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxMessagesToLog != null ? retObjectMaxMessagesToLog.getClass() : "null", retObjectMaxMessagesToLog_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxMessagesToLog != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxMessagesToLogClass = retObjectMaxMessagesToLog.getClass();
+                    // java.lang.reflect.Method retObjectMaxMessagesToLogMethod = retObjectMaxMessagesToLogClass.getMethod("intValue");
+                    // return (int)retObjectMaxMessagesToLogMethod.invoke(retObjectMaxMessagesToLog);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxMessagesToLogNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxMessagesToLog_ToString);
+                    return retObjectMaxMessagesToLogNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxMessagesToLogError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxMessagesToLog != null ? retObjectMaxMessagesToLog.getClass() : "null", retObjectMaxMessagesToLog_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxMessagesToLogError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -324,13 +343,32 @@ public class MessageLoggingElement extends ConfigurationElement  {
             retObjectMaxSizeOfMessageToLog = classInstance.Get("MaxSizeOfMessageToLog");
             return (int)retObjectMaxSizeOfMessageToLog;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxSizeOfMessageToLogError = true;
             java.lang.String retObjectMaxSizeOfMessageToLog_ToString = retObjectMaxSizeOfMessageToLog == null ? "null" : retObjectMaxSizeOfMessageToLog.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxSizeOfMessageToLogNumber = (java.lang.Number)retObjectMaxSizeOfMessageToLog;
-                return retObjectMaxSizeOfMessageToLogNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxSizeOfMessageToLog != null ? retObjectMaxSizeOfMessageToLog.getClass() : "null", retObjectMaxSizeOfMessageToLog_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxSizeOfMessageToLog != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxSizeOfMessageToLogClass = retObjectMaxSizeOfMessageToLog.getClass();
+                    // java.lang.reflect.Method retObjectMaxSizeOfMessageToLogMethod = retObjectMaxSizeOfMessageToLogClass.getMethod("intValue");
+                    // return (int)retObjectMaxSizeOfMessageToLogMethod.invoke(retObjectMaxSizeOfMessageToLog);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxSizeOfMessageToLogNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxSizeOfMessageToLog_ToString);
+                    return retObjectMaxSizeOfMessageToLogNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxSizeOfMessageToLogError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxSizeOfMessageToLog != null ? retObjectMaxSizeOfMessageToLog.getClass() : "null", retObjectMaxSizeOfMessageToLog_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxSizeOfMessageToLogError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

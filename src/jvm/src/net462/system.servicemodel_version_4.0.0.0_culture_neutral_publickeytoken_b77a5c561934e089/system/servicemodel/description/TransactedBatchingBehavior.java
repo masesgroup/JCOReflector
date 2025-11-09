@@ -217,13 +217,32 @@ public class TransactedBatchingBehavior extends NetObject implements system.serv
             retObjectMaxBatchSize = classInstance.Get("MaxBatchSize");
             return (int)retObjectMaxBatchSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxBatchSizeError = true;
             java.lang.String retObjectMaxBatchSize_ToString = retObjectMaxBatchSize == null ? "null" : retObjectMaxBatchSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxBatchSizeNumber = (java.lang.Number)retObjectMaxBatchSize;
-                return retObjectMaxBatchSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null", retObjectMaxBatchSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxBatchSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxBatchSizeClass = retObjectMaxBatchSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxBatchSizeMethod = retObjectMaxBatchSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxBatchSizeMethod.invoke(retObjectMaxBatchSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxBatchSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxBatchSize_ToString);
+                    return retObjectMaxBatchSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxBatchSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxBatchSize != null ? retObjectMaxBatchSize.getClass() : "null", retObjectMaxBatchSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxBatchSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

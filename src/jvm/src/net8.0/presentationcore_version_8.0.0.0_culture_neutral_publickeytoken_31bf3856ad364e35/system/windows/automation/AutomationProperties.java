@@ -220,13 +220,32 @@ public class AutomationProperties extends NetObject  {
             retObjectGetPositionInSet = classType.Invoke("GetPositionInSet", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetPositionInSet;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetPositionInSetError = true;
             java.lang.String retObjectGetPositionInSet_ToString = retObjectGetPositionInSet == null ? "null" : retObjectGetPositionInSet.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetPositionInSetNumber = (java.lang.Number)retObjectGetPositionInSet;
-                return retObjectGetPositionInSetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetPositionInSet != null ? retObjectGetPositionInSet.getClass() : "null", retObjectGetPositionInSet_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetPositionInSet != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetPositionInSetClass = retObjectGetPositionInSet.getClass();
+                    // java.lang.reflect.Method retObjectGetPositionInSetMethod = retObjectGetPositionInSetClass.getMethod("intValue");
+                    // return (int)retObjectGetPositionInSetMethod.invoke(retObjectGetPositionInSet);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetPositionInSetNumber = java.text.NumberFormat.getInstance().parse(retObjectGetPositionInSet_ToString);
+                    return retObjectGetPositionInSetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetPositionInSetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetPositionInSet != null ? retObjectGetPositionInSet.getClass() : "null", retObjectGetPositionInSet_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetPositionInSetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -241,13 +260,32 @@ public class AutomationProperties extends NetObject  {
             retObjectGetSizeOfSet = classType.Invoke("GetSizeOfSet", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetSizeOfSet;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetSizeOfSetError = true;
             java.lang.String retObjectGetSizeOfSet_ToString = retObjectGetSizeOfSet == null ? "null" : retObjectGetSizeOfSet.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetSizeOfSetNumber = (java.lang.Number)retObjectGetSizeOfSet;
-                return retObjectGetSizeOfSetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetSizeOfSet != null ? retObjectGetSizeOfSet.getClass() : "null", retObjectGetSizeOfSet_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetSizeOfSet != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetSizeOfSetClass = retObjectGetSizeOfSet.getClass();
+                    // java.lang.reflect.Method retObjectGetSizeOfSetMethod = retObjectGetSizeOfSetClass.getMethod("intValue");
+                    // return (int)retObjectGetSizeOfSetMethod.invoke(retObjectGetSizeOfSet);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetSizeOfSetNumber = java.text.NumberFormat.getInstance().parse(retObjectGetSizeOfSet_ToString);
+                    return retObjectGetSizeOfSetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetSizeOfSetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetSizeOfSet != null ? retObjectGetSizeOfSet.getClass() : "null", retObjectGetSizeOfSet_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetSizeOfSetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

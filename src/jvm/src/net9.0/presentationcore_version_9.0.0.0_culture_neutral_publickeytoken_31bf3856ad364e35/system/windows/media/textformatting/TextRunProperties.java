@@ -171,13 +171,32 @@ public class TextRunProperties extends NetObject  {
             retObjectFontHintingEmSize = classInstance.Get("FontHintingEmSize");
             return (double)retObjectFontHintingEmSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFontHintingEmSizeError = true;
             java.lang.String retObjectFontHintingEmSize_ToString = retObjectFontHintingEmSize == null ? "null" : retObjectFontHintingEmSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFontHintingEmSizeNumber = (java.lang.Number)retObjectFontHintingEmSize;
-                return retObjectFontHintingEmSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontHintingEmSize != null ? retObjectFontHintingEmSize.getClass() : "null", retObjectFontHintingEmSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFontHintingEmSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFontHintingEmSizeClass = retObjectFontHintingEmSize.getClass();
+                    // java.lang.reflect.Method retObjectFontHintingEmSizeMethod = retObjectFontHintingEmSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectFontHintingEmSizeMethod.invoke(retObjectFontHintingEmSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFontHintingEmSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectFontHintingEmSize_ToString);
+                    return retObjectFontHintingEmSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFontHintingEmSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFontHintingEmSize != null ? retObjectFontHintingEmSize.getClass() : "null", retObjectFontHintingEmSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFontHintingEmSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -192,13 +211,32 @@ public class TextRunProperties extends NetObject  {
             retObjectFontRenderingEmSize = classInstance.Get("FontRenderingEmSize");
             return (double)retObjectFontRenderingEmSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFontRenderingEmSizeError = true;
             java.lang.String retObjectFontRenderingEmSize_ToString = retObjectFontRenderingEmSize == null ? "null" : retObjectFontRenderingEmSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFontRenderingEmSizeNumber = (java.lang.Number)retObjectFontRenderingEmSize;
-                return retObjectFontRenderingEmSizeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null", retObjectFontRenderingEmSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFontRenderingEmSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFontRenderingEmSizeClass = retObjectFontRenderingEmSize.getClass();
+                    // java.lang.reflect.Method retObjectFontRenderingEmSizeMethod = retObjectFontRenderingEmSizeClass.getMethod("doubleValue");
+                    // return (double)retObjectFontRenderingEmSizeMethod.invoke(retObjectFontRenderingEmSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFontRenderingEmSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectFontRenderingEmSize_ToString);
+                    return retObjectFontRenderingEmSizeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFontRenderingEmSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null", retObjectFontRenderingEmSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFontRenderingEmSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -213,13 +251,32 @@ public class TextRunProperties extends NetObject  {
             retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
             return (double)retObjectPixelsPerDip;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPixelsPerDipError = true;
             java.lang.String retObjectPixelsPerDip_ToString = retObjectPixelsPerDip == null ? "null" : retObjectPixelsPerDip.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPixelsPerDipNumber = (java.lang.Number)retObjectPixelsPerDip;
-                return retObjectPixelsPerDipNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPixelsPerDip != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPixelsPerDipClass = retObjectPixelsPerDip.getClass();
+                    // java.lang.reflect.Method retObjectPixelsPerDipMethod = retObjectPixelsPerDipClass.getMethod("doubleValue");
+                    // return (double)retObjectPixelsPerDipMethod.invoke(retObjectPixelsPerDip);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPixelsPerDipNumber = java.text.NumberFormat.getInstance().parse(retObjectPixelsPerDip_ToString);
+                    return retObjectPixelsPerDipNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPixelsPerDipError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null", retObjectPixelsPerDip_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPixelsPerDipError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

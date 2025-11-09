@@ -179,13 +179,32 @@ public class TaskScheduler extends NetObject  {
             retObjectId = classInstance.Get("Id");
             return (int)retObjectId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIdError = true;
             java.lang.String retObjectId_ToString = retObjectId == null ? "null" : retObjectId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIdNumber = (java.lang.Number)retObjectId;
-                return retObjectIdNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIdClass = retObjectId.getClass();
+                    // java.lang.reflect.Method retObjectIdMethod = retObjectIdClass.getMethod("intValue");
+                    // return (int)retObjectIdMethod.invoke(retObjectId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIdNumber = java.text.NumberFormat.getInstance().parse(retObjectId_ToString);
+                    return retObjectIdNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectId != null ? retObjectId.getClass() : "null", retObjectId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,13 +219,32 @@ public class TaskScheduler extends NetObject  {
             retObjectMaximumConcurrencyLevel = classInstance.Get("MaximumConcurrencyLevel");
             return (int)retObjectMaximumConcurrencyLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumConcurrencyLevelError = true;
             java.lang.String retObjectMaximumConcurrencyLevel_ToString = retObjectMaximumConcurrencyLevel == null ? "null" : retObjectMaximumConcurrencyLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumConcurrencyLevelNumber = (java.lang.Number)retObjectMaximumConcurrencyLevel;
-                return retObjectMaximumConcurrencyLevelNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumConcurrencyLevel != null ? retObjectMaximumConcurrencyLevel.getClass() : "null", retObjectMaximumConcurrencyLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumConcurrencyLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumConcurrencyLevelClass = retObjectMaximumConcurrencyLevel.getClass();
+                    // java.lang.reflect.Method retObjectMaximumConcurrencyLevelMethod = retObjectMaximumConcurrencyLevelClass.getMethod("intValue");
+                    // return (int)retObjectMaximumConcurrencyLevelMethod.invoke(retObjectMaximumConcurrencyLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumConcurrencyLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumConcurrencyLevel_ToString);
+                    return retObjectMaximumConcurrencyLevelNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumConcurrencyLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumConcurrencyLevel != null ? retObjectMaximumConcurrencyLevel.getClass() : "null", retObjectMaximumConcurrencyLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumConcurrencyLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

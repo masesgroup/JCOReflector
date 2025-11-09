@@ -228,13 +228,32 @@ public class ScriptFunction extends JSObject  {
             retObjectlength = classInstance.Get("length");
             return (int)retObjectlength;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportlengthError = true;
             java.lang.String retObjectlength_ToString = retObjectlength == null ? "null" : retObjectlength.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectlengthNumber = (java.lang.Number)retObjectlength;
-                return retObjectlengthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectlength != null ? retObjectlength.getClass() : "null", retObjectlength_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectlength != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectlengthClass = retObjectlength.getClass();
+                    // java.lang.reflect.Method retObjectlengthMethod = retObjectlengthClass.getMethod("intValue");
+                    // return (int)retObjectlengthMethod.invoke(retObjectlength);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectlengthNumber = java.text.NumberFormat.getInstance().parse(retObjectlength_ToString);
+                    return retObjectlengthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportlengthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectlength != null ? retObjectlength.getClass() : "null", retObjectlength_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportlengthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

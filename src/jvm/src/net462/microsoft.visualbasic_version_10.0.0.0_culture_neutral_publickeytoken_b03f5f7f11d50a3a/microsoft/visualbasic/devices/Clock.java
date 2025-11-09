@@ -172,13 +172,32 @@ public class Clock extends NetObject  {
             retObjectTickCount = classInstance.Get("TickCount");
             return (int)retObjectTickCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTickCountError = true;
             java.lang.String retObjectTickCount_ToString = retObjectTickCount == null ? "null" : retObjectTickCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTickCountNumber = (java.lang.Number)retObjectTickCount;
-                return retObjectTickCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTickCount != null ? retObjectTickCount.getClass() : "null", retObjectTickCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTickCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTickCountClass = retObjectTickCount.getClass();
+                    // java.lang.reflect.Method retObjectTickCountMethod = retObjectTickCountClass.getMethod("intValue");
+                    // return (int)retObjectTickCountMethod.invoke(retObjectTickCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTickCountNumber = java.text.NumberFormat.getInstance().parse(retObjectTickCount_ToString);
+                    return retObjectTickCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTickCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTickCount != null ? retObjectTickCount.getClass() : "null", retObjectTickCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTickCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

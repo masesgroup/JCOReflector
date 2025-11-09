@@ -199,13 +199,32 @@ public class LowPhysicalMemoryInfo extends NetObject  {
             retObjectCurrentPercentUsed = classInstance.Get("CurrentPercentUsed");
             return (int)retObjectCurrentPercentUsed;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCurrentPercentUsedError = true;
             java.lang.String retObjectCurrentPercentUsed_ToString = retObjectCurrentPercentUsed == null ? "null" : retObjectCurrentPercentUsed.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCurrentPercentUsedNumber = (java.lang.Number)retObjectCurrentPercentUsed;
-                return retObjectCurrentPercentUsedNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectCurrentPercentUsed != null ? retObjectCurrentPercentUsed.getClass() : "null", retObjectCurrentPercentUsed_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCurrentPercentUsed != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCurrentPercentUsedClass = retObjectCurrentPercentUsed.getClass();
+                    // java.lang.reflect.Method retObjectCurrentPercentUsedMethod = retObjectCurrentPercentUsedClass.getMethod("intValue");
+                    // return (int)retObjectCurrentPercentUsedMethod.invoke(retObjectCurrentPercentUsed);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCurrentPercentUsedNumber = java.text.NumberFormat.getInstance().parse(retObjectCurrentPercentUsed_ToString);
+                    return retObjectCurrentPercentUsedNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCurrentPercentUsedError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCurrentPercentUsed != null ? retObjectCurrentPercentUsed.getClass() : "null", retObjectCurrentPercentUsed_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCurrentPercentUsedError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -220,13 +239,32 @@ public class LowPhysicalMemoryInfo extends NetObject  {
             retObjectPercentLimit = classInstance.Get("PercentLimit");
             return (int)retObjectPercentLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPercentLimitError = true;
             java.lang.String retObjectPercentLimit_ToString = retObjectPercentLimit == null ? "null" : retObjectPercentLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPercentLimitNumber = (java.lang.Number)retObjectPercentLimit;
-                return retObjectPercentLimitNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPercentLimit != null ? retObjectPercentLimit.getClass() : "null", retObjectPercentLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPercentLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPercentLimitClass = retObjectPercentLimit.getClass();
+                    // java.lang.reflect.Method retObjectPercentLimitMethod = retObjectPercentLimitClass.getMethod("intValue");
+                    // return (int)retObjectPercentLimitMethod.invoke(retObjectPercentLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPercentLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectPercentLimit_ToString);
+                    return retObjectPercentLimitNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPercentLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPercentLimit != null ? retObjectPercentLimit.getClass() : "null", retObjectPercentLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPercentLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

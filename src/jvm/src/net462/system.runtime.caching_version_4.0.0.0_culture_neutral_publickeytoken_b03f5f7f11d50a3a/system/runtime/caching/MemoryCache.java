@@ -219,13 +219,32 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectGetCount = classInstance.Invoke("GetCount", regionName);
             return (long)retObjectGetCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCountError = true;
             java.lang.String retObjectGetCount_ToString = retObjectGetCount == null ? "null" : retObjectGetCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetCountNumber = (java.lang.Number)retObjectGetCount;
-                return retObjectGetCountNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetCount != null ? retObjectGetCount.getClass() : "null", retObjectGetCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCountClass = retObjectGetCount.getClass();
+                    // java.lang.reflect.Method retObjectGetCountMethod = retObjectGetCountClass.getMethod("longValue");
+                    // return (long)retObjectGetCountMethod.invoke(retObjectGetCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCountNumber = java.text.NumberFormat.getInstance().parse(retObjectGetCount_ToString);
+                    return retObjectGetCountNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetCount != null ? retObjectGetCount.getClass() : "null", retObjectGetCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -240,13 +259,32 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectGetLastSize = classInstance.Invoke("GetLastSize", regionName);
             return (long)retObjectGetLastSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetLastSizeError = true;
             java.lang.String retObjectGetLastSize_ToString = retObjectGetLastSize == null ? "null" : retObjectGetLastSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetLastSizeNumber = (java.lang.Number)retObjectGetLastSize;
-                return retObjectGetLastSizeNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetLastSize != null ? retObjectGetLastSize.getClass() : "null", retObjectGetLastSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetLastSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetLastSizeClass = retObjectGetLastSize.getClass();
+                    // java.lang.reflect.Method retObjectGetLastSizeMethod = retObjectGetLastSizeClass.getMethod("longValue");
+                    // return (long)retObjectGetLastSizeMethod.invoke(retObjectGetLastSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetLastSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectGetLastSize_ToString);
+                    return retObjectGetLastSizeNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetLastSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetLastSize != null ? retObjectGetLastSize.getClass() : "null", retObjectGetLastSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetLastSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -261,13 +299,32 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectTrim = classInstance.Invoke("Trim", percent);
             return (long)retObjectTrim;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTrimError = true;
             java.lang.String retObjectTrim_ToString = retObjectTrim == null ? "null" : retObjectTrim.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTrimNumber = (java.lang.Number)retObjectTrim;
-                return retObjectTrimNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectTrim != null ? retObjectTrim.getClass() : "null", retObjectTrim_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTrim != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTrimClass = retObjectTrim.getClass();
+                    // java.lang.reflect.Method retObjectTrimMethod = retObjectTrimClass.getMethod("longValue");
+                    // return (long)retObjectTrimMethod.invoke(retObjectTrim);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTrimNumber = java.text.NumberFormat.getInstance().parse(retObjectTrim_ToString);
+                    return retObjectTrimNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTrimError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTrim != null ? retObjectTrim.getClass() : "null", retObjectTrim_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTrimError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -444,13 +501,32 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectCacheMemoryLimit = classInstance.Get("CacheMemoryLimit");
             return (long)retObjectCacheMemoryLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCacheMemoryLimitError = true;
             java.lang.String retObjectCacheMemoryLimit_ToString = retObjectCacheMemoryLimit == null ? "null" : retObjectCacheMemoryLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCacheMemoryLimitNumber = (java.lang.Number)retObjectCacheMemoryLimit;
-                return retObjectCacheMemoryLimitNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectCacheMemoryLimit != null ? retObjectCacheMemoryLimit.getClass() : "null", retObjectCacheMemoryLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCacheMemoryLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCacheMemoryLimitClass = retObjectCacheMemoryLimit.getClass();
+                    // java.lang.reflect.Method retObjectCacheMemoryLimitMethod = retObjectCacheMemoryLimitClass.getMethod("longValue");
+                    // return (long)retObjectCacheMemoryLimitMethod.invoke(retObjectCacheMemoryLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCacheMemoryLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectCacheMemoryLimit_ToString);
+                    return retObjectCacheMemoryLimitNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCacheMemoryLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCacheMemoryLimit != null ? retObjectCacheMemoryLimit.getClass() : "null", retObjectCacheMemoryLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCacheMemoryLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -465,13 +541,32 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             retObjectPhysicalMemoryLimit = classInstance.Get("PhysicalMemoryLimit");
             return (long)retObjectPhysicalMemoryLimit;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPhysicalMemoryLimitError = true;
             java.lang.String retObjectPhysicalMemoryLimit_ToString = retObjectPhysicalMemoryLimit == null ? "null" : retObjectPhysicalMemoryLimit.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPhysicalMemoryLimitNumber = (java.lang.Number)retObjectPhysicalMemoryLimit;
-                return retObjectPhysicalMemoryLimitNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectPhysicalMemoryLimit != null ? retObjectPhysicalMemoryLimit.getClass() : "null", retObjectPhysicalMemoryLimit_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPhysicalMemoryLimit != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPhysicalMemoryLimitClass = retObjectPhysicalMemoryLimit.getClass();
+                    // java.lang.reflect.Method retObjectPhysicalMemoryLimitMethod = retObjectPhysicalMemoryLimitClass.getMethod("longValue");
+                    // return (long)retObjectPhysicalMemoryLimitMethod.invoke(retObjectPhysicalMemoryLimit);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPhysicalMemoryLimitNumber = java.text.NumberFormat.getInstance().parse(retObjectPhysicalMemoryLimit_ToString);
+                    return retObjectPhysicalMemoryLimitNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPhysicalMemoryLimitError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPhysicalMemoryLimit != null ? retObjectPhysicalMemoryLimit.getClass() : "null", retObjectPhysicalMemoryLimit_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPhysicalMemoryLimitError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

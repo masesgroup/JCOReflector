@@ -366,13 +366,32 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectAlphaDataDiscardLevel = classInstance.Get("AlphaDataDiscardLevel");
             return (byte)retObjectAlphaDataDiscardLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAlphaDataDiscardLevelError = true;
             java.lang.String retObjectAlphaDataDiscardLevel_ToString = retObjectAlphaDataDiscardLevel == null ? "null" : retObjectAlphaDataDiscardLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAlphaDataDiscardLevelNumber = (java.lang.Number)retObjectAlphaDataDiscardLevel;
-                return retObjectAlphaDataDiscardLevelNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectAlphaDataDiscardLevel != null ? retObjectAlphaDataDiscardLevel.getClass() : "null", retObjectAlphaDataDiscardLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAlphaDataDiscardLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAlphaDataDiscardLevelClass = retObjectAlphaDataDiscardLevel.getClass();
+                    // java.lang.reflect.Method retObjectAlphaDataDiscardLevelMethod = retObjectAlphaDataDiscardLevelClass.getMethod("byteValue");
+                    // return (byte)retObjectAlphaDataDiscardLevelMethod.invoke(retObjectAlphaDataDiscardLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAlphaDataDiscardLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectAlphaDataDiscardLevel_ToString);
+                    return retObjectAlphaDataDiscardLevelNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAlphaDataDiscardLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAlphaDataDiscardLevel != null ? retObjectAlphaDataDiscardLevel.getClass() : "null", retObjectAlphaDataDiscardLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAlphaDataDiscardLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -397,13 +416,32 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectAlphaQualityLevel = classInstance.Get("AlphaQualityLevel");
             return (byte)retObjectAlphaQualityLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAlphaQualityLevelError = true;
             java.lang.String retObjectAlphaQualityLevel_ToString = retObjectAlphaQualityLevel == null ? "null" : retObjectAlphaQualityLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAlphaQualityLevelNumber = (java.lang.Number)retObjectAlphaQualityLevel;
-                return retObjectAlphaQualityLevelNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectAlphaQualityLevel != null ? retObjectAlphaQualityLevel.getClass() : "null", retObjectAlphaQualityLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAlphaQualityLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAlphaQualityLevelClass = retObjectAlphaQualityLevel.getClass();
+                    // java.lang.reflect.Method retObjectAlphaQualityLevelMethod = retObjectAlphaQualityLevelClass.getMethod("byteValue");
+                    // return (byte)retObjectAlphaQualityLevelMethod.invoke(retObjectAlphaQualityLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAlphaQualityLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectAlphaQualityLevel_ToString);
+                    return retObjectAlphaQualityLevelNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAlphaQualityLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAlphaQualityLevel != null ? retObjectAlphaQualityLevel.getClass() : "null", retObjectAlphaQualityLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAlphaQualityLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -428,13 +466,32 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectImageDataDiscardLevel = classInstance.Get("ImageDataDiscardLevel");
             return (byte)retObjectImageDataDiscardLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportImageDataDiscardLevelError = true;
             java.lang.String retObjectImageDataDiscardLevel_ToString = retObjectImageDataDiscardLevel == null ? "null" : retObjectImageDataDiscardLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectImageDataDiscardLevelNumber = (java.lang.Number)retObjectImageDataDiscardLevel;
-                return retObjectImageDataDiscardLevelNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectImageDataDiscardLevel != null ? retObjectImageDataDiscardLevel.getClass() : "null", retObjectImageDataDiscardLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectImageDataDiscardLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectImageDataDiscardLevelClass = retObjectImageDataDiscardLevel.getClass();
+                    // java.lang.reflect.Method retObjectImageDataDiscardLevelMethod = retObjectImageDataDiscardLevelClass.getMethod("byteValue");
+                    // return (byte)retObjectImageDataDiscardLevelMethod.invoke(retObjectImageDataDiscardLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectImageDataDiscardLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectImageDataDiscardLevel_ToString);
+                    return retObjectImageDataDiscardLevelNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportImageDataDiscardLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectImageDataDiscardLevel != null ? retObjectImageDataDiscardLevel.getClass() : "null", retObjectImageDataDiscardLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportImageDataDiscardLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -459,13 +516,32 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectOverlapLevel = classInstance.Get("OverlapLevel");
             return (byte)retObjectOverlapLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOverlapLevelError = true;
             java.lang.String retObjectOverlapLevel_ToString = retObjectOverlapLevel == null ? "null" : retObjectOverlapLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOverlapLevelNumber = (java.lang.Number)retObjectOverlapLevel;
-                return retObjectOverlapLevelNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectOverlapLevel != null ? retObjectOverlapLevel.getClass() : "null", retObjectOverlapLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOverlapLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOverlapLevelClass = retObjectOverlapLevel.getClass();
+                    // java.lang.reflect.Method retObjectOverlapLevelMethod = retObjectOverlapLevelClass.getMethod("byteValue");
+                    // return (byte)retObjectOverlapLevelMethod.invoke(retObjectOverlapLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOverlapLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectOverlapLevel_ToString);
+                    return retObjectOverlapLevelNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOverlapLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOverlapLevel != null ? retObjectOverlapLevel.getClass() : "null", retObjectOverlapLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOverlapLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -490,13 +566,32 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectQualityLevel = classInstance.Get("QualityLevel");
             return (byte)retObjectQualityLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportQualityLevelError = true;
             java.lang.String retObjectQualityLevel_ToString = retObjectQualityLevel == null ? "null" : retObjectQualityLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectQualityLevelNumber = (java.lang.Number)retObjectQualityLevel;
-                return retObjectQualityLevelNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectQualityLevel != null ? retObjectQualityLevel.getClass() : "null", retObjectQualityLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectQualityLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectQualityLevelClass = retObjectQualityLevel.getClass();
+                    // java.lang.reflect.Method retObjectQualityLevelMethod = retObjectQualityLevelClass.getMethod("byteValue");
+                    // return (byte)retObjectQualityLevelMethod.invoke(retObjectQualityLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectQualityLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectQualityLevel_ToString);
+                    return retObjectQualityLevelNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportQualityLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectQualityLevel != null ? retObjectQualityLevel.getClass() : "null", retObjectQualityLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportQualityLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -521,13 +616,32 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectSubsamplingLevel = classInstance.Get("SubsamplingLevel");
             return (byte)retObjectSubsamplingLevel;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSubsamplingLevelError = true;
             java.lang.String retObjectSubsamplingLevel_ToString = retObjectSubsamplingLevel == null ? "null" : retObjectSubsamplingLevel.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSubsamplingLevelNumber = (java.lang.Number)retObjectSubsamplingLevel;
-                return retObjectSubsamplingLevelNumber.byteValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, into java.lang.Number", retObjectSubsamplingLevel != null ? retObjectSubsamplingLevel.getClass() : "null", retObjectSubsamplingLevel_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSubsamplingLevel != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSubsamplingLevelClass = retObjectSubsamplingLevel.getClass();
+                    // java.lang.reflect.Method retObjectSubsamplingLevelMethod = retObjectSubsamplingLevelClass.getMethod("byteValue");
+                    // return (byte)retObjectSubsamplingLevelMethod.invoke(retObjectSubsamplingLevel);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSubsamplingLevelNumber = java.text.NumberFormat.getInstance().parse(retObjectSubsamplingLevel_ToString);
+                    return retObjectSubsamplingLevelNumber.byteValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSubsamplingLevelError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into byte and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSubsamplingLevel != null ? retObjectSubsamplingLevel.getClass() : "null", retObjectSubsamplingLevel_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSubsamplingLevelError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -552,13 +666,32 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectHorizontalTileSlices = classInstance.Get("HorizontalTileSlices");
             return (short)retObjectHorizontalTileSlices;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportHorizontalTileSlicesError = true;
             java.lang.String retObjectHorizontalTileSlices_ToString = retObjectHorizontalTileSlices == null ? "null" : retObjectHorizontalTileSlices.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectHorizontalTileSlicesNumber = (java.lang.Number)retObjectHorizontalTileSlices;
-                return retObjectHorizontalTileSlicesNumber.shortValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectHorizontalTileSlices != null ? retObjectHorizontalTileSlices.getClass() : "null", retObjectHorizontalTileSlices_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectHorizontalTileSlices != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectHorizontalTileSlicesClass = retObjectHorizontalTileSlices.getClass();
+                    // java.lang.reflect.Method retObjectHorizontalTileSlicesMethod = retObjectHorizontalTileSlicesClass.getMethod("shortValue");
+                    // return (short)retObjectHorizontalTileSlicesMethod.invoke(retObjectHorizontalTileSlices);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectHorizontalTileSlicesNumber = java.text.NumberFormat.getInstance().parse(retObjectHorizontalTileSlices_ToString);
+                    return retObjectHorizontalTileSlicesNumber.shortValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportHorizontalTileSlicesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectHorizontalTileSlices != null ? retObjectHorizontalTileSlices.getClass() : "null", retObjectHorizontalTileSlices_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportHorizontalTileSlicesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -583,13 +716,32 @@ public class WmpBitmapEncoder extends BitmapEncoder  {
             retObjectVerticalTileSlices = classInstance.Get("VerticalTileSlices");
             return (short)retObjectVerticalTileSlices;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVerticalTileSlicesError = true;
             java.lang.String retObjectVerticalTileSlices_ToString = retObjectVerticalTileSlices == null ? "null" : retObjectVerticalTileSlices.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVerticalTileSlicesNumber = (java.lang.Number)retObjectVerticalTileSlices;
-                return retObjectVerticalTileSlicesNumber.shortValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectVerticalTileSlices != null ? retObjectVerticalTileSlices.getClass() : "null", retObjectVerticalTileSlices_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVerticalTileSlices != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVerticalTileSlicesClass = retObjectVerticalTileSlices.getClass();
+                    // java.lang.reflect.Method retObjectVerticalTileSlicesMethod = retObjectVerticalTileSlicesClass.getMethod("shortValue");
+                    // return (short)retObjectVerticalTileSlicesMethod.invoke(retObjectVerticalTileSlices);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVerticalTileSlicesNumber = java.text.NumberFormat.getInstance().parse(retObjectVerticalTileSlices_ToString);
+                    return retObjectVerticalTileSlicesNumber.shortValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVerticalTileSlicesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVerticalTileSlices != null ? retObjectVerticalTileSlices.getClass() : "null", retObjectVerticalTileSlices_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVerticalTileSlicesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

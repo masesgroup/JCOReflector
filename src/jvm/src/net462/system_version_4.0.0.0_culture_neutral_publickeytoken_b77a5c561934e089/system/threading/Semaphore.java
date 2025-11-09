@@ -233,13 +233,32 @@ public class Semaphore extends WaitHandle  {
             retObjectRelease = classInstance.Invoke("Release");
             return (int)retObjectRelease;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReleaseError = true;
             java.lang.String retObjectRelease_ToString = retObjectRelease == null ? "null" : retObjectRelease.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReleaseNumber = (java.lang.Number)retObjectRelease;
-                return retObjectReleaseNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null", retObjectRelease_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRelease != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReleaseClass = retObjectRelease.getClass();
+                    // java.lang.reflect.Method retObjectReleaseMethod = retObjectReleaseClass.getMethod("intValue");
+                    // return (int)retObjectReleaseMethod.invoke(retObjectRelease);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReleaseNumber = java.text.NumberFormat.getInstance().parse(retObjectRelease_ToString);
+                    return retObjectReleaseNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReleaseError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRelease != null ? retObjectRelease.getClass() : "null", retObjectRelease_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReleaseError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -254,13 +273,32 @@ public class Semaphore extends WaitHandle  {
             retObjectRelease = classInstance.Invoke("Release", releaseCount);
             return (int)retObjectRelease;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReleaseError = true;
             java.lang.String retObjectRelease_ToString = retObjectRelease == null ? "null" : retObjectRelease.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReleaseNumber = (java.lang.Number)retObjectRelease;
-                return retObjectReleaseNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRelease != null ? retObjectRelease.getClass() : "null", retObjectRelease_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRelease != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReleaseClass = retObjectRelease.getClass();
+                    // java.lang.reflect.Method retObjectReleaseMethod = retObjectReleaseClass.getMethod("intValue");
+                    // return (int)retObjectReleaseMethod.invoke(retObjectRelease);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReleaseNumber = java.text.NumberFormat.getInstance().parse(retObjectRelease_ToString);
+                    return retObjectReleaseNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReleaseError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRelease != null ? retObjectRelease.getClass() : "null", retObjectRelease_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReleaseError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

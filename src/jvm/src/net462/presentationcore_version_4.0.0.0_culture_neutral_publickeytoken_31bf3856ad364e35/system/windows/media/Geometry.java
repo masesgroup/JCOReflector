@@ -299,13 +299,32 @@ public class Geometry extends Animatable implements system.IFormattable {
             retObjectGetArea = classInstance.Invoke("GetArea");
             return (double)retObjectGetArea;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetAreaError = true;
             java.lang.String retObjectGetArea_ToString = retObjectGetArea == null ? "null" : retObjectGetArea.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetAreaNumber = (java.lang.Number)retObjectGetArea;
-                return retObjectGetAreaNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetArea != null ? retObjectGetArea.getClass() : "null", retObjectGetArea_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetArea != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetAreaClass = retObjectGetArea.getClass();
+                    // java.lang.reflect.Method retObjectGetAreaMethod = retObjectGetAreaClass.getMethod("doubleValue");
+                    // return (double)retObjectGetAreaMethod.invoke(retObjectGetArea);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetAreaNumber = java.text.NumberFormat.getInstance().parse(retObjectGetArea_ToString);
+                    return retObjectGetAreaNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetAreaError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetArea != null ? retObjectGetArea.getClass() : "null", retObjectGetArea_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetAreaError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -320,13 +339,32 @@ public class Geometry extends Animatable implements system.IFormattable {
             retObjectGetArea = classInstance.Invoke("GetArea", tolerance, type == null ? null : type.getJCOInstance());
             return (double)retObjectGetArea;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetAreaError = true;
             java.lang.String retObjectGetArea_ToString = retObjectGetArea == null ? "null" : retObjectGetArea.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetAreaNumber = (java.lang.Number)retObjectGetArea;
-                return retObjectGetAreaNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectGetArea != null ? retObjectGetArea.getClass() : "null", retObjectGetArea_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetArea != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetAreaClass = retObjectGetArea.getClass();
+                    // java.lang.reflect.Method retObjectGetAreaMethod = retObjectGetAreaClass.getMethod("doubleValue");
+                    // return (double)retObjectGetAreaMethod.invoke(retObjectGetArea);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetAreaNumber = java.text.NumberFormat.getInstance().parse(retObjectGetArea_ToString);
+                    return retObjectGetAreaNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetAreaError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetArea != null ? retObjectGetArea.getClass() : "null", retObjectGetArea_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetAreaError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -623,13 +661,32 @@ public class Geometry extends Animatable implements system.IFormattable {
             retObjectStandardFlatteningTolerance = classType.Get("StandardFlatteningTolerance");
             return (double)retObjectStandardFlatteningTolerance;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStandardFlatteningToleranceError = true;
             java.lang.String retObjectStandardFlatteningTolerance_ToString = retObjectStandardFlatteningTolerance == null ? "null" : retObjectStandardFlatteningTolerance.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStandardFlatteningToleranceNumber = (java.lang.Number)retObjectStandardFlatteningTolerance;
-                return retObjectStandardFlatteningToleranceNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStandardFlatteningTolerance != null ? retObjectStandardFlatteningTolerance.getClass() : "null", retObjectStandardFlatteningTolerance_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStandardFlatteningTolerance != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStandardFlatteningToleranceClass = retObjectStandardFlatteningTolerance.getClass();
+                    // java.lang.reflect.Method retObjectStandardFlatteningToleranceMethod = retObjectStandardFlatteningToleranceClass.getMethod("doubleValue");
+                    // return (double)retObjectStandardFlatteningToleranceMethod.invoke(retObjectStandardFlatteningTolerance);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStandardFlatteningToleranceNumber = java.text.NumberFormat.getInstance().parse(retObjectStandardFlatteningTolerance_ToString);
+                    return retObjectStandardFlatteningToleranceNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStandardFlatteningToleranceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStandardFlatteningTolerance != null ? retObjectStandardFlatteningTolerance.getClass() : "null", retObjectStandardFlatteningTolerance_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStandardFlatteningToleranceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

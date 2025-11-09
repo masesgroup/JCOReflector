@@ -167,13 +167,32 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetHeapMetadataOffset = classType.Invoke("GetHeapMetadataOffset", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
             return (int)retObjectGetHeapMetadataOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetHeapMetadataOffsetError = true;
             java.lang.String retObjectGetHeapMetadataOffset_ToString = retObjectGetHeapMetadataOffset == null ? "null" : retObjectGetHeapMetadataOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetHeapMetadataOffsetNumber = (java.lang.Number)retObjectGetHeapMetadataOffset;
-                return retObjectGetHeapMetadataOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapMetadataOffset != null ? retObjectGetHeapMetadataOffset.getClass() : "null", retObjectGetHeapMetadataOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetHeapMetadataOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetHeapMetadataOffsetClass = retObjectGetHeapMetadataOffset.getClass();
+                    // java.lang.reflect.Method retObjectGetHeapMetadataOffsetMethod = retObjectGetHeapMetadataOffsetClass.getMethod("intValue");
+                    // return (int)retObjectGetHeapMetadataOffsetMethod.invoke(retObjectGetHeapMetadataOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetHeapMetadataOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectGetHeapMetadataOffset_ToString);
+                    return retObjectGetHeapMetadataOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetHeapMetadataOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetHeapMetadataOffset != null ? retObjectGetHeapMetadataOffset.getClass() : "null", retObjectGetHeapMetadataOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetHeapMetadataOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,13 +207,32 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetHeapSize = classType.Invoke("GetHeapSize", reader == null ? null : reader.getJCOInstance(), heapIndex == null ? null : heapIndex.getJCOInstance());
             return (int)retObjectGetHeapSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetHeapSizeError = true;
             java.lang.String retObjectGetHeapSize_ToString = retObjectGetHeapSize == null ? "null" : retObjectGetHeapSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetHeapSizeNumber = (java.lang.Number)retObjectGetHeapSize;
-                return retObjectGetHeapSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetHeapSize != null ? retObjectGetHeapSize.getClass() : "null", retObjectGetHeapSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetHeapSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetHeapSizeClass = retObjectGetHeapSize.getClass();
+                    // java.lang.reflect.Method retObjectGetHeapSizeMethod = retObjectGetHeapSizeClass.getMethod("intValue");
+                    // return (int)retObjectGetHeapSizeMethod.invoke(retObjectGetHeapSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetHeapSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectGetHeapSize_ToString);
+                    return retObjectGetHeapSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetHeapSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetHeapSize != null ? retObjectGetHeapSize.getClass() : "null", retObjectGetHeapSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetHeapSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -209,13 +247,32 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetTableMetadataOffset = classType.Invoke("GetTableMetadataOffset", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
             return (int)retObjectGetTableMetadataOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetTableMetadataOffsetError = true;
             java.lang.String retObjectGetTableMetadataOffset_ToString = retObjectGetTableMetadataOffset == null ? "null" : retObjectGetTableMetadataOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetTableMetadataOffsetNumber = (java.lang.Number)retObjectGetTableMetadataOffset;
-                return retObjectGetTableMetadataOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTableMetadataOffset != null ? retObjectGetTableMetadataOffset.getClass() : "null", retObjectGetTableMetadataOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetTableMetadataOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetTableMetadataOffsetClass = retObjectGetTableMetadataOffset.getClass();
+                    // java.lang.reflect.Method retObjectGetTableMetadataOffsetMethod = retObjectGetTableMetadataOffsetClass.getMethod("intValue");
+                    // return (int)retObjectGetTableMetadataOffsetMethod.invoke(retObjectGetTableMetadataOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetTableMetadataOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectGetTableMetadataOffset_ToString);
+                    return retObjectGetTableMetadataOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetTableMetadataOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetTableMetadataOffset != null ? retObjectGetTableMetadataOffset.getClass() : "null", retObjectGetTableMetadataOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetTableMetadataOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -230,13 +287,32 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetTableRowCount = classType.Invoke("GetTableRowCount", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
             return (int)retObjectGetTableRowCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetTableRowCountError = true;
             java.lang.String retObjectGetTableRowCount_ToString = retObjectGetTableRowCount == null ? "null" : retObjectGetTableRowCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetTableRowCountNumber = (java.lang.Number)retObjectGetTableRowCount;
-                return retObjectGetTableRowCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTableRowCount != null ? retObjectGetTableRowCount.getClass() : "null", retObjectGetTableRowCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetTableRowCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetTableRowCountClass = retObjectGetTableRowCount.getClass();
+                    // java.lang.reflect.Method retObjectGetTableRowCountMethod = retObjectGetTableRowCountClass.getMethod("intValue");
+                    // return (int)retObjectGetTableRowCountMethod.invoke(retObjectGetTableRowCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetTableRowCountNumber = java.text.NumberFormat.getInstance().parse(retObjectGetTableRowCount_ToString);
+                    return retObjectGetTableRowCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetTableRowCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetTableRowCount != null ? retObjectGetTableRowCount.getClass() : "null", retObjectGetTableRowCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetTableRowCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -251,13 +327,32 @@ public class MetadataReaderExtensions extends NetObject  {
             retObjectGetTableRowSize = classType.Invoke("GetTableRowSize", reader == null ? null : reader.getJCOInstance(), tableIndex == null ? null : tableIndex.getJCOInstance());
             return (int)retObjectGetTableRowSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetTableRowSizeError = true;
             java.lang.String retObjectGetTableRowSize_ToString = retObjectGetTableRowSize == null ? "null" : retObjectGetTableRowSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetTableRowSizeNumber = (java.lang.Number)retObjectGetTableRowSize;
-                return retObjectGetTableRowSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetTableRowSize != null ? retObjectGetTableRowSize.getClass() : "null", retObjectGetTableRowSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetTableRowSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetTableRowSizeClass = retObjectGetTableRowSize.getClass();
+                    // java.lang.reflect.Method retObjectGetTableRowSizeMethod = retObjectGetTableRowSizeClass.getMethod("intValue");
+                    // return (int)retObjectGetTableRowSizeMethod.invoke(retObjectGetTableRowSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetTableRowSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectGetTableRowSize_ToString);
+                    return retObjectGetTableRowSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetTableRowSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetTableRowSize != null ? retObjectGetTableRowSize.getClass() : "null", retObjectGetTableRowSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetTableRowSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

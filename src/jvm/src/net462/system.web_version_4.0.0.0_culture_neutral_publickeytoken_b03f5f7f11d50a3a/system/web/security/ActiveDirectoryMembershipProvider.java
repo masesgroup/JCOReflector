@@ -244,13 +244,32 @@ public class ActiveDirectoryMembershipProvider extends MembershipProvider  {
             retObjectGetNumberOfUsersOnline = classInstance.Invoke("GetNumberOfUsersOnline");
             return (int)retObjectGetNumberOfUsersOnline;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetNumberOfUsersOnlineError = true;
             java.lang.String retObjectGetNumberOfUsersOnline_ToString = retObjectGetNumberOfUsersOnline == null ? "null" : retObjectGetNumberOfUsersOnline.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetNumberOfUsersOnlineNumber = (java.lang.Number)retObjectGetNumberOfUsersOnline;
-                return retObjectGetNumberOfUsersOnlineNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null", retObjectGetNumberOfUsersOnline_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetNumberOfUsersOnline != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetNumberOfUsersOnlineClass = retObjectGetNumberOfUsersOnline.getClass();
+                    // java.lang.reflect.Method retObjectGetNumberOfUsersOnlineMethod = retObjectGetNumberOfUsersOnlineClass.getMethod("intValue");
+                    // return (int)retObjectGetNumberOfUsersOnlineMethod.invoke(retObjectGetNumberOfUsersOnline);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetNumberOfUsersOnlineNumber = java.text.NumberFormat.getInstance().parse(retObjectGetNumberOfUsersOnline_ToString);
+                    return retObjectGetNumberOfUsersOnlineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetNumberOfUsersOnlineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetNumberOfUsersOnline != null ? retObjectGetNumberOfUsersOnline.getClass() : "null", retObjectGetNumberOfUsersOnline_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetNumberOfUsersOnlineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -449,13 +468,32 @@ public class ActiveDirectoryMembershipProvider extends MembershipProvider  {
             retObjectPasswordAnswerAttemptLockoutDuration = classInstance.Get("PasswordAnswerAttemptLockoutDuration");
             return (int)retObjectPasswordAnswerAttemptLockoutDuration;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPasswordAnswerAttemptLockoutDurationError = true;
             java.lang.String retObjectPasswordAnswerAttemptLockoutDuration_ToString = retObjectPasswordAnswerAttemptLockoutDuration == null ? "null" : retObjectPasswordAnswerAttemptLockoutDuration.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPasswordAnswerAttemptLockoutDurationNumber = (java.lang.Number)retObjectPasswordAnswerAttemptLockoutDuration;
-                return retObjectPasswordAnswerAttemptLockoutDurationNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPasswordAnswerAttemptLockoutDuration != null ? retObjectPasswordAnswerAttemptLockoutDuration.getClass() : "null", retObjectPasswordAnswerAttemptLockoutDuration_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPasswordAnswerAttemptLockoutDuration != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPasswordAnswerAttemptLockoutDurationClass = retObjectPasswordAnswerAttemptLockoutDuration.getClass();
+                    // java.lang.reflect.Method retObjectPasswordAnswerAttemptLockoutDurationMethod = retObjectPasswordAnswerAttemptLockoutDurationClass.getMethod("intValue");
+                    // return (int)retObjectPasswordAnswerAttemptLockoutDurationMethod.invoke(retObjectPasswordAnswerAttemptLockoutDuration);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPasswordAnswerAttemptLockoutDurationNumber = java.text.NumberFormat.getInstance().parse(retObjectPasswordAnswerAttemptLockoutDuration_ToString);
+                    return retObjectPasswordAnswerAttemptLockoutDurationNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPasswordAnswerAttemptLockoutDurationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPasswordAnswerAttemptLockoutDuration != null ? retObjectPasswordAnswerAttemptLockoutDuration.getClass() : "null", retObjectPasswordAnswerAttemptLockoutDuration_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPasswordAnswerAttemptLockoutDurationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

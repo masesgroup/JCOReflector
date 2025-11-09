@@ -421,13 +421,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectEndReceive = classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance(), errorCode.getJCRefOut());
             return (int)retObjectEndReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndReceiveError = true;
             java.lang.String retObjectEndReceive_ToString = retObjectEndReceive == null ? "null" : retObjectEndReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndReceiveNumber = (java.lang.Number)retObjectEndReceive;
-                return retObjectEndReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceive != null ? retObjectEndReceive.getClass() : "null", retObjectEndReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndReceiveClass = retObjectEndReceive.getClass();
+                    // java.lang.reflect.Method retObjectEndReceiveMethod = retObjectEndReceiveClass.getMethod("intValue");
+                    // return (int)retObjectEndReceiveMethod.invoke(retObjectEndReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectEndReceive_ToString);
+                    return retObjectEndReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndReceive != null ? retObjectEndReceive.getClass() : "null", retObjectEndReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -442,13 +461,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectEndReceive = classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance());
             return (int)retObjectEndReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndReceiveError = true;
             java.lang.String retObjectEndReceive_ToString = retObjectEndReceive == null ? "null" : retObjectEndReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndReceiveNumber = (java.lang.Number)retObjectEndReceive;
-                return retObjectEndReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceive != null ? retObjectEndReceive.getClass() : "null", retObjectEndReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndReceiveClass = retObjectEndReceive.getClass();
+                    // java.lang.reflect.Method retObjectEndReceiveMethod = retObjectEndReceiveClass.getMethod("intValue");
+                    // return (int)retObjectEndReceiveMethod.invoke(retObjectEndReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectEndReceive_ToString);
+                    return retObjectEndReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndReceive != null ? retObjectEndReceive.getClass() : "null", retObjectEndReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -463,13 +501,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectEndReceiveFrom = classInstance.Invoke("EndReceiveFrom", asyncResult == null ? null : asyncResult.getJCOInstance(), endPoint.getJCRefOut());
             return (int)retObjectEndReceiveFrom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndReceiveFromError = true;
             java.lang.String retObjectEndReceiveFrom_ToString = retObjectEndReceiveFrom == null ? "null" : retObjectEndReceiveFrom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndReceiveFromNumber = (java.lang.Number)retObjectEndReceiveFrom;
-                return retObjectEndReceiveFromNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceiveFrom != null ? retObjectEndReceiveFrom.getClass() : "null", retObjectEndReceiveFrom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndReceiveFrom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndReceiveFromClass = retObjectEndReceiveFrom.getClass();
+                    // java.lang.reflect.Method retObjectEndReceiveFromMethod = retObjectEndReceiveFromClass.getMethod("intValue");
+                    // return (int)retObjectEndReceiveFromMethod.invoke(retObjectEndReceiveFrom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndReceiveFromNumber = java.text.NumberFormat.getInstance().parse(retObjectEndReceiveFrom_ToString);
+                    return retObjectEndReceiveFromNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndReceiveFromError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndReceiveFrom != null ? retObjectEndReceiveFrom.getClass() : "null", retObjectEndReceiveFrom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndReceiveFromError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -484,13 +541,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectEndReceiveMessageFrom = classInstance.Invoke("EndReceiveMessageFrom", asyncResult == null ? null : asyncResult.getJCOInstance(), socketFlags.getJCRefOut(), endPoint.getJCRefOut(), ipPacketInformation.getJCRefOut());
             return (int)retObjectEndReceiveMessageFrom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndReceiveMessageFromError = true;
             java.lang.String retObjectEndReceiveMessageFrom_ToString = retObjectEndReceiveMessageFrom == null ? "null" : retObjectEndReceiveMessageFrom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndReceiveMessageFromNumber = (java.lang.Number)retObjectEndReceiveMessageFrom;
-                return retObjectEndReceiveMessageFromNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndReceiveMessageFrom != null ? retObjectEndReceiveMessageFrom.getClass() : "null", retObjectEndReceiveMessageFrom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndReceiveMessageFrom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndReceiveMessageFromClass = retObjectEndReceiveMessageFrom.getClass();
+                    // java.lang.reflect.Method retObjectEndReceiveMessageFromMethod = retObjectEndReceiveMessageFromClass.getMethod("intValue");
+                    // return (int)retObjectEndReceiveMessageFromMethod.invoke(retObjectEndReceiveMessageFrom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndReceiveMessageFromNumber = java.text.NumberFormat.getInstance().parse(retObjectEndReceiveMessageFrom_ToString);
+                    return retObjectEndReceiveMessageFromNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndReceiveMessageFromError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndReceiveMessageFrom != null ? retObjectEndReceiveMessageFrom.getClass() : "null", retObjectEndReceiveMessageFrom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndReceiveMessageFromError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -505,13 +581,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectEndSend = classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance(), errorCode.getJCRefOut());
             return (int)retObjectEndSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndSendError = true;
             java.lang.String retObjectEndSend_ToString = retObjectEndSend == null ? "null" : retObjectEndSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndSendNumber = (java.lang.Number)retObjectEndSend;
-                return retObjectEndSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndSend != null ? retObjectEndSend.getClass() : "null", retObjectEndSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndSendClass = retObjectEndSend.getClass();
+                    // java.lang.reflect.Method retObjectEndSendMethod = retObjectEndSendClass.getMethod("intValue");
+                    // return (int)retObjectEndSendMethod.invoke(retObjectEndSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndSendNumber = java.text.NumberFormat.getInstance().parse(retObjectEndSend_ToString);
+                    return retObjectEndSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndSend != null ? retObjectEndSend.getClass() : "null", retObjectEndSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -526,13 +621,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectEndSend = classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance());
             return (int)retObjectEndSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndSendError = true;
             java.lang.String retObjectEndSend_ToString = retObjectEndSend == null ? "null" : retObjectEndSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndSendNumber = (java.lang.Number)retObjectEndSend;
-                return retObjectEndSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndSend != null ? retObjectEndSend.getClass() : "null", retObjectEndSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndSendClass = retObjectEndSend.getClass();
+                    // java.lang.reflect.Method retObjectEndSendMethod = retObjectEndSendClass.getMethod("intValue");
+                    // return (int)retObjectEndSendMethod.invoke(retObjectEndSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndSendNumber = java.text.NumberFormat.getInstance().parse(retObjectEndSend_ToString);
+                    return retObjectEndSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndSend != null ? retObjectEndSend.getClass() : "null", retObjectEndSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -547,13 +661,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectEndSendTo = classInstance.Invoke("EndSendTo", asyncResult == null ? null : asyncResult.getJCOInstance());
             return (int)retObjectEndSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndSendToError = true;
             java.lang.String retObjectEndSendTo_ToString = retObjectEndSendTo == null ? "null" : retObjectEndSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndSendToNumber = (java.lang.Number)retObjectEndSendTo;
-                return retObjectEndSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndSendTo != null ? retObjectEndSendTo.getClass() : "null", retObjectEndSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndSendToClass = retObjectEndSendTo.getClass();
+                    // java.lang.reflect.Method retObjectEndSendToMethod = retObjectEndSendToClass.getMethod("intValue");
+                    // return (int)retObjectEndSendToMethod.invoke(retObjectEndSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectEndSendTo_ToString);
+                    return retObjectEndSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndSendTo != null ? retObjectEndSendTo.getClass() : "null", retObjectEndSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -568,13 +701,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectIOControl = classInstance.Invoke("IOControl", ioControlCode, optionInValue, optionOutValue);
             return (int)retObjectIOControl;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIOControlError = true;
             java.lang.String retObjectIOControl_ToString = retObjectIOControl == null ? "null" : retObjectIOControl.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIOControlNumber = (java.lang.Number)retObjectIOControl;
-                return retObjectIOControlNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIOControl != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIOControlClass = retObjectIOControl.getClass();
+                    // java.lang.reflect.Method retObjectIOControlMethod = retObjectIOControlClass.getMethod("intValue");
+                    // return (int)retObjectIOControlMethod.invoke(retObjectIOControl);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIOControlNumber = java.text.NumberFormat.getInstance().parse(retObjectIOControl_ToString);
+                    return retObjectIOControlNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIOControlError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIOControlError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -589,13 +741,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectIOControl = classInstance.Invoke("IOControl", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
             return (int)retObjectIOControl;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIOControlError = true;
             java.lang.String retObjectIOControl_ToString = retObjectIOControl == null ? "null" : retObjectIOControl.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIOControlNumber = (java.lang.Number)retObjectIOControl;
-                return retObjectIOControlNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIOControl != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIOControlClass = retObjectIOControl.getClass();
+                    // java.lang.reflect.Method retObjectIOControlMethod = retObjectIOControlClass.getMethod("intValue");
+                    // return (int)retObjectIOControlMethod.invoke(retObjectIOControl);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIOControlNumber = java.text.NumberFormat.getInstance().parse(retObjectIOControl_ToString);
+                    return retObjectIOControlNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIOControlError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIOControlError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -610,13 +781,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectIOControl = classInstance.Invoke("IOControl", ioControlCode == null ? null : ioControlCode.getJCOInstance(), optionInValue, optionOutValue);
             return (int)retObjectIOControl;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIOControlError = true;
             java.lang.String retObjectIOControl_ToString = retObjectIOControl == null ? "null" : retObjectIOControl.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIOControlNumber = (java.lang.Number)retObjectIOControl;
-                return retObjectIOControlNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIOControl != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIOControlClass = retObjectIOControl.getClass();
+                    // java.lang.reflect.Method retObjectIOControlMethod = retObjectIOControlClass.getMethod("intValue");
+                    // return (int)retObjectIOControlMethod.invoke(retObjectIOControl);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIOControlNumber = java.text.NumberFormat.getInstance().parse(retObjectIOControl_ToString);
+                    return retObjectIOControlNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIOControlError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIOControlError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -631,13 +821,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectIOControl = classInstance.Invoke("IOControl", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
             return (int)retObjectIOControl;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportIOControlError = true;
             java.lang.String retObjectIOControl_ToString = retObjectIOControl == null ? "null" : retObjectIOControl.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectIOControlNumber = (java.lang.Number)retObjectIOControl;
-                return retObjectIOControlNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIOControl != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIOControlClass = retObjectIOControl.getClass();
+                    // java.lang.reflect.Method retObjectIOControlMethod = retObjectIOControlClass.getMethod("intValue");
+                    // return (int)retObjectIOControlMethod.invoke(retObjectIOControl);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIOControlNumber = java.text.NumberFormat.getInstance().parse(retObjectIOControl_ToString);
+                    return retObjectIOControlNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIOControlError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIOControl != null ? retObjectIOControl.getClass() : "null", retObjectIOControl_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIOControlError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -652,13 +861,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -673,13 +901,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance());
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -694,13 +941,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -715,13 +981,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance());
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -736,13 +1021,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -757,13 +1061,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", buffer, socketFlags == null ? null : socketFlags.getJCOInstance());
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -778,13 +1101,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -799,13 +1141,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", (java.lang.Object)buffer);
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -820,13 +1181,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceive = classInstance.Invoke("Receive", (java.lang.Object)dupParam0.getJCRefOut());
             return (int)retObjectReceive;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
             java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveNumber = (java.lang.Number)retObjectReceive;
-                return retObjectReceiveNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -841,13 +1221,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceiveFrom = classInstance.Invoke("ReceiveFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
             return (int)retObjectReceiveFrom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveFromError = true;
             java.lang.String retObjectReceiveFrom_ToString = retObjectReceiveFrom == null ? "null" : retObjectReceiveFrom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveFromNumber = (java.lang.Number)retObjectReceiveFrom;
-                return retObjectReceiveFromNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceiveFrom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveFromClass = retObjectReceiveFrom.getClass();
+                    // java.lang.reflect.Method retObjectReceiveFromMethod = retObjectReceiveFromClass.getMethod("intValue");
+                    // return (int)retObjectReceiveFromMethod.invoke(retObjectReceiveFrom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveFromNumber = java.text.NumberFormat.getInstance().parse(retObjectReceiveFrom_ToString);
+                    return retObjectReceiveFromNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveFromError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveFromError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -862,13 +1261,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceiveFrom = classInstance.Invoke("ReceiveFrom", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
             return (int)retObjectReceiveFrom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveFromError = true;
             java.lang.String retObjectReceiveFrom_ToString = retObjectReceiveFrom == null ? "null" : retObjectReceiveFrom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveFromNumber = (java.lang.Number)retObjectReceiveFrom;
-                return retObjectReceiveFromNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceiveFrom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveFromClass = retObjectReceiveFrom.getClass();
+                    // java.lang.reflect.Method retObjectReceiveFromMethod = retObjectReceiveFromClass.getMethod("intValue");
+                    // return (int)retObjectReceiveFromMethod.invoke(retObjectReceiveFrom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveFromNumber = java.text.NumberFormat.getInstance().parse(retObjectReceiveFrom_ToString);
+                    return retObjectReceiveFromNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveFromError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveFromError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -883,13 +1301,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceiveFrom = classInstance.Invoke("ReceiveFrom", buffer, remoteEP.getJCRefOut());
             return (int)retObjectReceiveFrom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveFromError = true;
             java.lang.String retObjectReceiveFrom_ToString = retObjectReceiveFrom == null ? "null" : retObjectReceiveFrom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveFromNumber = (java.lang.Number)retObjectReceiveFrom;
-                return retObjectReceiveFromNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceiveFrom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveFromClass = retObjectReceiveFrom.getClass();
+                    // java.lang.reflect.Method retObjectReceiveFromMethod = retObjectReceiveFromClass.getMethod("intValue");
+                    // return (int)retObjectReceiveFromMethod.invoke(retObjectReceiveFrom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveFromNumber = java.text.NumberFormat.getInstance().parse(retObjectReceiveFrom_ToString);
+                    return retObjectReceiveFromNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveFromError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveFromError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -904,13 +1341,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceiveFrom = classInstance.Invoke("ReceiveFrom", buffer, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP.getJCRefOut());
             return (int)retObjectReceiveFrom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveFromError = true;
             java.lang.String retObjectReceiveFrom_ToString = retObjectReceiveFrom == null ? "null" : retObjectReceiveFrom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveFromNumber = (java.lang.Number)retObjectReceiveFrom;
-                return retObjectReceiveFromNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceiveFrom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveFromClass = retObjectReceiveFrom.getClass();
+                    // java.lang.reflect.Method retObjectReceiveFromMethod = retObjectReceiveFromClass.getMethod("intValue");
+                    // return (int)retObjectReceiveFromMethod.invoke(retObjectReceiveFrom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveFromNumber = java.text.NumberFormat.getInstance().parse(retObjectReceiveFrom_ToString);
+                    return retObjectReceiveFromNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveFromError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceiveFrom != null ? retObjectReceiveFrom.getClass() : "null", retObjectReceiveFrom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveFromError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -925,13 +1381,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceiveMessageFrom = classInstance.Invoke("ReceiveMessageFrom", buffer, offset, size, socketFlags.getJCRefOut(), remoteEP.getJCRefOut(), ipPacketInformation.getJCRefOut());
             return (int)retObjectReceiveMessageFrom;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveMessageFromError = true;
             java.lang.String retObjectReceiveMessageFrom_ToString = retObjectReceiveMessageFrom == null ? "null" : retObjectReceiveMessageFrom.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveMessageFromNumber = (java.lang.Number)retObjectReceiveMessageFrom;
-                return retObjectReceiveMessageFromNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveMessageFrom != null ? retObjectReceiveMessageFrom.getClass() : "null", retObjectReceiveMessageFrom_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceiveMessageFrom != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveMessageFromClass = retObjectReceiveMessageFrom.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMessageFromMethod = retObjectReceiveMessageFromClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMessageFromMethod.invoke(retObjectReceiveMessageFrom);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveMessageFromNumber = java.text.NumberFormat.getInstance().parse(retObjectReceiveMessageFrom_ToString);
+                    return retObjectReceiveMessageFromNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveMessageFromError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceiveMessageFrom != null ? retObjectReceiveMessageFrom.getClass() : "null", retObjectReceiveMessageFrom_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveMessageFromError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -946,13 +1421,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -967,13 +1461,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -988,13 +1501,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1009,13 +1541,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1030,13 +1581,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1051,13 +1621,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", buffer, socketFlags == null ? null : socketFlags.getJCOInstance());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1072,13 +1661,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1093,13 +1701,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", (java.lang.Object)buffer);
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1114,13 +1741,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSend = classInstance.Invoke("Send", (java.lang.Object)dupParam0.getJCRefOut());
             return (int)retObjectSend;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
             java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendNumber = (java.lang.Number)retObjectSend;
-                return retObjectSendNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1135,13 +1781,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTo = classInstance.Invoke("SendTo", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
             return (int)retObjectSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendToError = true;
             java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
-                return retObjectSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendToClass = retObjectSendTo.getClass();
+                    // java.lang.reflect.Method retObjectSendToMethod = retObjectSendToClass.getMethod("intValue");
+                    // return (int)retObjectSendToMethod.invoke(retObjectSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTo_ToString);
+                    return retObjectSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1156,13 +1821,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTo = classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
             return (int)retObjectSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendToError = true;
             java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
-                return retObjectSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendToClass = retObjectSendTo.getClass();
+                    // java.lang.reflect.Method retObjectSendToMethod = retObjectSendToClass.getMethod("intValue");
+                    // return (int)retObjectSendToMethod.invoke(retObjectSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTo_ToString);
+                    return retObjectSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1177,13 +1861,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTo = classInstance.Invoke("SendTo", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
             return (int)retObjectSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendToError = true;
             java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
-                return retObjectSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendToClass = retObjectSendTo.getClass();
+                    // java.lang.reflect.Method retObjectSendToMethod = retObjectSendToClass.getMethod("intValue");
+                    // return (int)retObjectSendToMethod.invoke(retObjectSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTo_ToString);
+                    return retObjectSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1198,13 +1901,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTo = classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
             return (int)retObjectSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendToError = true;
             java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
-                return retObjectSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendToClass = retObjectSendTo.getClass();
+                    // java.lang.reflect.Method retObjectSendToMethod = retObjectSendToClass.getMethod("intValue");
+                    // return (int)retObjectSendToMethod.invoke(retObjectSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTo_ToString);
+                    return retObjectSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1219,13 +1941,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTo = classInstance.Invoke("SendTo", buffer, remoteEP == null ? null : remoteEP.getJCOInstance());
             return (int)retObjectSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendToError = true;
             java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
-                return retObjectSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendToClass = retObjectSendTo.getClass();
+                    // java.lang.reflect.Method retObjectSendToMethod = retObjectSendToClass.getMethod("intValue");
+                    // return (int)retObjectSendToMethod.invoke(retObjectSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTo_ToString);
+                    return retObjectSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1240,13 +1981,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTo = classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return (int)retObjectSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendToError = true;
             java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
-                return retObjectSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendToClass = retObjectSendTo.getClass();
+                    // java.lang.reflect.Method retObjectSendToMethod = retObjectSendToClass.getMethod("intValue");
+                    // return (int)retObjectSendToMethod.invoke(retObjectSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTo_ToString);
+                    return retObjectSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1261,13 +2021,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTo = classInstance.Invoke("SendTo", buffer, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
             return (int)retObjectSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendToError = true;
             java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
-                return retObjectSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendToClass = retObjectSendTo.getClass();
+                    // java.lang.reflect.Method retObjectSendToMethod = retObjectSendToClass.getMethod("intValue");
+                    // return (int)retObjectSendToMethod.invoke(retObjectSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTo_ToString);
+                    return retObjectSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1282,13 +2061,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTo = classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             return (int)retObjectSendTo;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendToError = true;
             java.lang.String retObjectSendTo_ToString = retObjectSendTo == null ? "null" : retObjectSendTo.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendToNumber = (java.lang.Number)retObjectSendTo;
-                return retObjectSendToNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTo != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendToClass = retObjectSendTo.getClass();
+                    // java.lang.reflect.Method retObjectSendToMethod = retObjectSendToClass.getMethod("intValue");
+                    // return (int)retObjectSendToMethod.invoke(retObjectSendTo);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendToNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTo_ToString);
+                    return retObjectSendToNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendToError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTo != null ? retObjectSendTo.getClass() : "null", retObjectSendTo_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendToError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2455,13 +3253,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectTtl = classInstance.Get("Ttl");
             return (short)retObjectTtl;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTtlError = true;
             java.lang.String retObjectTtl_ToString = retObjectTtl == null ? "null" : retObjectTtl.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTtlNumber = (java.lang.Number)retObjectTtl;
-                return retObjectTtlNumber.shortValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, into java.lang.Number", retObjectTtl != null ? retObjectTtl.getClass() : "null", retObjectTtl_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTtl != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTtlClass = retObjectTtl.getClass();
+                    // java.lang.reflect.Method retObjectTtlMethod = retObjectTtlClass.getMethod("shortValue");
+                    // return (short)retObjectTtlMethod.invoke(retObjectTtl);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTtlNumber = java.text.NumberFormat.getInstance().parse(retObjectTtl_ToString);
+                    return retObjectTtlNumber.shortValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTtlError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into short and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTtl != null ? retObjectTtl.getClass() : "null", retObjectTtl_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTtlError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2486,13 +3303,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectAvailable = classInstance.Get("Available");
             return (int)retObjectAvailable;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAvailableError = true;
             java.lang.String retObjectAvailable_ToString = retObjectAvailable == null ? "null" : retObjectAvailable.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAvailableNumber = (java.lang.Number)retObjectAvailable;
-                return retObjectAvailableNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAvailable != null ? retObjectAvailable.getClass() : "null", retObjectAvailable_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAvailable != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAvailableClass = retObjectAvailable.getClass();
+                    // java.lang.reflect.Method retObjectAvailableMethod = retObjectAvailableClass.getMethod("intValue");
+                    // return (int)retObjectAvailableMethod.invoke(retObjectAvailable);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAvailableNumber = java.text.NumberFormat.getInstance().parse(retObjectAvailable_ToString);
+                    return retObjectAvailableNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAvailableError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAvailable != null ? retObjectAvailable.getClass() : "null", retObjectAvailable_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAvailableError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2507,13 +3343,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceiveBufferSize = classInstance.Get("ReceiveBufferSize");
             return (int)retObjectReceiveBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveBufferSizeError = true;
             java.lang.String retObjectReceiveBufferSize_ToString = retObjectReceiveBufferSize == null ? "null" : retObjectReceiveBufferSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveBufferSizeNumber = (java.lang.Number)retObjectReceiveBufferSize;
-                return retObjectReceiveBufferSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceiveBufferSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveBufferSizeClass = retObjectReceiveBufferSize.getClass();
+                    // java.lang.reflect.Method retObjectReceiveBufferSizeMethod = retObjectReceiveBufferSizeClass.getMethod("intValue");
+                    // return (int)retObjectReceiveBufferSizeMethod.invoke(retObjectReceiveBufferSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveBufferSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectReceiveBufferSize_ToString);
+                    return retObjectReceiveBufferSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveBufferSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceiveBufferSize != null ? retObjectReceiveBufferSize.getClass() : "null", retObjectReceiveBufferSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveBufferSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2538,13 +3393,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectReceiveTimeout = classInstance.Get("ReceiveTimeout");
             return (int)retObjectReceiveTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveTimeoutError = true;
             java.lang.String retObjectReceiveTimeout_ToString = retObjectReceiveTimeout == null ? "null" : retObjectReceiveTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReceiveTimeoutNumber = (java.lang.Number)retObjectReceiveTimeout;
-                return retObjectReceiveTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReceiveTimeout != null ? retObjectReceiveTimeout.getClass() : "null", retObjectReceiveTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceiveTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveTimeoutClass = retObjectReceiveTimeout.getClass();
+                    // java.lang.reflect.Method retObjectReceiveTimeoutMethod = retObjectReceiveTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectReceiveTimeoutMethod.invoke(retObjectReceiveTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectReceiveTimeout_ToString);
+                    return retObjectReceiveTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceiveTimeout != null ? retObjectReceiveTimeout.getClass() : "null", retObjectReceiveTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2569,13 +3443,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendBufferSize = classInstance.Get("SendBufferSize");
             return (int)retObjectSendBufferSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendBufferSizeError = true;
             java.lang.String retObjectSendBufferSize_ToString = retObjectSendBufferSize == null ? "null" : retObjectSendBufferSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendBufferSizeNumber = (java.lang.Number)retObjectSendBufferSize;
-                return retObjectSendBufferSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null", retObjectSendBufferSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendBufferSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendBufferSizeClass = retObjectSendBufferSize.getClass();
+                    // java.lang.reflect.Method retObjectSendBufferSizeMethod = retObjectSendBufferSizeClass.getMethod("intValue");
+                    // return (int)retObjectSendBufferSizeMethod.invoke(retObjectSendBufferSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendBufferSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectSendBufferSize_ToString);
+                    return retObjectSendBufferSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendBufferSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendBufferSize != null ? retObjectSendBufferSize.getClass() : "null", retObjectSendBufferSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendBufferSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2600,13 +3493,32 @@ public class Socket extends NetObject implements AutoCloseable {
             retObjectSendTimeout = classInstance.Get("SendTimeout");
             return (int)retObjectSendTimeout;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSendTimeoutError = true;
             java.lang.String retObjectSendTimeout_ToString = retObjectSendTimeout == null ? "null" : retObjectSendTimeout.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSendTimeoutNumber = (java.lang.Number)retObjectSendTimeout;
-                return retObjectSendTimeoutNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSendTimeout != null ? retObjectSendTimeout.getClass() : "null", retObjectSendTimeout_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSendTimeout != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendTimeoutClass = retObjectSendTimeout.getClass();
+                    // java.lang.reflect.Method retObjectSendTimeoutMethod = retObjectSendTimeoutClass.getMethod("intValue");
+                    // return (int)retObjectSendTimeoutMethod.invoke(retObjectSendTimeout);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendTimeoutNumber = java.text.NumberFormat.getInstance().parse(retObjectSendTimeout_ToString);
+                    return retObjectSendTimeoutNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendTimeoutError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSendTimeout != null ? retObjectSendTimeout.getClass() : "null", retObjectSendTimeout_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendTimeoutError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

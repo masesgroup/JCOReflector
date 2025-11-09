@@ -183,13 +183,32 @@ public class ServiceThrottlingElement extends BehaviorExtensionElement  {
             retObjectMaxConcurrentCalls = classInstance.Get("MaxConcurrentCalls");
             return (int)retObjectMaxConcurrentCalls;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxConcurrentCallsError = true;
             java.lang.String retObjectMaxConcurrentCalls_ToString = retObjectMaxConcurrentCalls == null ? "null" : retObjectMaxConcurrentCalls.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxConcurrentCallsNumber = (java.lang.Number)retObjectMaxConcurrentCalls;
-                return retObjectMaxConcurrentCallsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentCalls != null ? retObjectMaxConcurrentCalls.getClass() : "null", retObjectMaxConcurrentCalls_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxConcurrentCalls != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxConcurrentCallsClass = retObjectMaxConcurrentCalls.getClass();
+                    // java.lang.reflect.Method retObjectMaxConcurrentCallsMethod = retObjectMaxConcurrentCallsClass.getMethod("intValue");
+                    // return (int)retObjectMaxConcurrentCallsMethod.invoke(retObjectMaxConcurrentCalls);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxConcurrentCallsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxConcurrentCalls_ToString);
+                    return retObjectMaxConcurrentCallsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxConcurrentCallsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxConcurrentCalls != null ? retObjectMaxConcurrentCalls.getClass() : "null", retObjectMaxConcurrentCalls_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxConcurrentCallsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -214,13 +233,32 @@ public class ServiceThrottlingElement extends BehaviorExtensionElement  {
             retObjectMaxConcurrentInstances = classInstance.Get("MaxConcurrentInstances");
             return (int)retObjectMaxConcurrentInstances;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxConcurrentInstancesError = true;
             java.lang.String retObjectMaxConcurrentInstances_ToString = retObjectMaxConcurrentInstances == null ? "null" : retObjectMaxConcurrentInstances.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxConcurrentInstancesNumber = (java.lang.Number)retObjectMaxConcurrentInstances;
-                return retObjectMaxConcurrentInstancesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentInstances != null ? retObjectMaxConcurrentInstances.getClass() : "null", retObjectMaxConcurrentInstances_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxConcurrentInstances != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxConcurrentInstancesClass = retObjectMaxConcurrentInstances.getClass();
+                    // java.lang.reflect.Method retObjectMaxConcurrentInstancesMethod = retObjectMaxConcurrentInstancesClass.getMethod("intValue");
+                    // return (int)retObjectMaxConcurrentInstancesMethod.invoke(retObjectMaxConcurrentInstances);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxConcurrentInstancesNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxConcurrentInstances_ToString);
+                    return retObjectMaxConcurrentInstancesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxConcurrentInstancesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxConcurrentInstances != null ? retObjectMaxConcurrentInstances.getClass() : "null", retObjectMaxConcurrentInstances_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxConcurrentInstancesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,13 +283,32 @@ public class ServiceThrottlingElement extends BehaviorExtensionElement  {
             retObjectMaxConcurrentSessions = classInstance.Get("MaxConcurrentSessions");
             return (int)retObjectMaxConcurrentSessions;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxConcurrentSessionsError = true;
             java.lang.String retObjectMaxConcurrentSessions_ToString = retObjectMaxConcurrentSessions == null ? "null" : retObjectMaxConcurrentSessions.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxConcurrentSessionsNumber = (java.lang.Number)retObjectMaxConcurrentSessions;
-                return retObjectMaxConcurrentSessionsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentSessions != null ? retObjectMaxConcurrentSessions.getClass() : "null", retObjectMaxConcurrentSessions_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxConcurrentSessions != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxConcurrentSessionsClass = retObjectMaxConcurrentSessions.getClass();
+                    // java.lang.reflect.Method retObjectMaxConcurrentSessionsMethod = retObjectMaxConcurrentSessionsClass.getMethod("intValue");
+                    // return (int)retObjectMaxConcurrentSessionsMethod.invoke(retObjectMaxConcurrentSessions);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxConcurrentSessionsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxConcurrentSessions_ToString);
+                    return retObjectMaxConcurrentSessionsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxConcurrentSessionsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxConcurrentSessions != null ? retObjectMaxConcurrentSessions.getClass() : "null", retObjectMaxConcurrentSessions_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxConcurrentSessionsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

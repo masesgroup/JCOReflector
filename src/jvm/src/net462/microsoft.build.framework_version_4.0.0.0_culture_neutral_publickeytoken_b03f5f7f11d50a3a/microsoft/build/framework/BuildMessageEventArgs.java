@@ -228,13 +228,32 @@ public class BuildMessageEventArgs extends LazyFormattedBuildEventArgs  {
             retObjectColumnNumber = classInstance.Get("ColumnNumber");
             return (int)retObjectColumnNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportColumnNumberError = true;
             java.lang.String retObjectColumnNumber_ToString = retObjectColumnNumber == null ? "null" : retObjectColumnNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectColumnNumberNumber = (java.lang.Number)retObjectColumnNumber;
-                return retObjectColumnNumberNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectColumnNumber != null ? retObjectColumnNumber.getClass() : "null", retObjectColumnNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectColumnNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectColumnNumberClass = retObjectColumnNumber.getClass();
+                    // java.lang.reflect.Method retObjectColumnNumberMethod = retObjectColumnNumberClass.getMethod("intValue");
+                    // return (int)retObjectColumnNumberMethod.invoke(retObjectColumnNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectColumnNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectColumnNumber_ToString);
+                    return retObjectColumnNumberNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportColumnNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectColumnNumber != null ? retObjectColumnNumber.getClass() : "null", retObjectColumnNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportColumnNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,13 +268,32 @@ public class BuildMessageEventArgs extends LazyFormattedBuildEventArgs  {
             retObjectEndColumnNumber = classInstance.Get("EndColumnNumber");
             return (int)retObjectEndColumnNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndColumnNumberError = true;
             java.lang.String retObjectEndColumnNumber_ToString = retObjectEndColumnNumber == null ? "null" : retObjectEndColumnNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndColumnNumberNumber = (java.lang.Number)retObjectEndColumnNumber;
-                return retObjectEndColumnNumberNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndColumnNumber != null ? retObjectEndColumnNumber.getClass() : "null", retObjectEndColumnNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndColumnNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndColumnNumberClass = retObjectEndColumnNumber.getClass();
+                    // java.lang.reflect.Method retObjectEndColumnNumberMethod = retObjectEndColumnNumberClass.getMethod("intValue");
+                    // return (int)retObjectEndColumnNumberMethod.invoke(retObjectEndColumnNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndColumnNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectEndColumnNumber_ToString);
+                    return retObjectEndColumnNumberNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndColumnNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndColumnNumber != null ? retObjectEndColumnNumber.getClass() : "null", retObjectEndColumnNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndColumnNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -270,13 +308,32 @@ public class BuildMessageEventArgs extends LazyFormattedBuildEventArgs  {
             retObjectEndLineNumber = classInstance.Get("EndLineNumber");
             return (int)retObjectEndLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportEndLineNumberError = true;
             java.lang.String retObjectEndLineNumber_ToString = retObjectEndLineNumber == null ? "null" : retObjectEndLineNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectEndLineNumberNumber = (java.lang.Number)retObjectEndLineNumber;
-                return retObjectEndLineNumberNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectEndLineNumber != null ? retObjectEndLineNumber.getClass() : "null", retObjectEndLineNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectEndLineNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectEndLineNumberClass = retObjectEndLineNumber.getClass();
+                    // java.lang.reflect.Method retObjectEndLineNumberMethod = retObjectEndLineNumberClass.getMethod("intValue");
+                    // return (int)retObjectEndLineNumberMethod.invoke(retObjectEndLineNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectEndLineNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectEndLineNumber_ToString);
+                    return retObjectEndLineNumberNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportEndLineNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectEndLineNumber != null ? retObjectEndLineNumber.getClass() : "null", retObjectEndLineNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportEndLineNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -291,13 +348,32 @@ public class BuildMessageEventArgs extends LazyFormattedBuildEventArgs  {
             retObjectLineNumber = classInstance.Get("LineNumber");
             return (int)retObjectLineNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLineNumberError = true;
             java.lang.String retObjectLineNumber_ToString = retObjectLineNumber == null ? "null" : retObjectLineNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
-                return retObjectLineNumberNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLineNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLineNumberClass = retObjectLineNumber.getClass();
+                    // java.lang.reflect.Method retObjectLineNumberMethod = retObjectLineNumberClass.getMethod("intValue");
+                    // return (int)retObjectLineNumberMethod.invoke(retObjectLineNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLineNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectLineNumber_ToString);
+                    return retObjectLineNumberNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLineNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null", retObjectLineNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLineNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

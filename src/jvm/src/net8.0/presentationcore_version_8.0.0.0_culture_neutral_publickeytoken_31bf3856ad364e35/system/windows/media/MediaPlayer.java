@@ -331,13 +331,32 @@ public class MediaPlayer extends Animatable  {
             retObjectBalance = classInstance.Get("Balance");
             return (double)retObjectBalance;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBalanceError = true;
             java.lang.String retObjectBalance_ToString = retObjectBalance == null ? "null" : retObjectBalance.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBalanceNumber = (java.lang.Number)retObjectBalance;
-                return retObjectBalanceNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBalance != null ? retObjectBalance.getClass() : "null", retObjectBalance_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBalance != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBalanceClass = retObjectBalance.getClass();
+                    // java.lang.reflect.Method retObjectBalanceMethod = retObjectBalanceClass.getMethod("doubleValue");
+                    // return (double)retObjectBalanceMethod.invoke(retObjectBalance);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBalanceNumber = java.text.NumberFormat.getInstance().parse(retObjectBalance_ToString);
+                    return retObjectBalanceNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBalanceError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBalance != null ? retObjectBalance.getClass() : "null", retObjectBalance_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBalanceError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -362,13 +381,32 @@ public class MediaPlayer extends Animatable  {
             retObjectBufferingProgress = classInstance.Get("BufferingProgress");
             return (double)retObjectBufferingProgress;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBufferingProgressError = true;
             java.lang.String retObjectBufferingProgress_ToString = retObjectBufferingProgress == null ? "null" : retObjectBufferingProgress.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBufferingProgressNumber = (java.lang.Number)retObjectBufferingProgress;
-                return retObjectBufferingProgressNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBufferingProgress != null ? retObjectBufferingProgress.getClass() : "null", retObjectBufferingProgress_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBufferingProgress != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBufferingProgressClass = retObjectBufferingProgress.getClass();
+                    // java.lang.reflect.Method retObjectBufferingProgressMethod = retObjectBufferingProgressClass.getMethod("doubleValue");
+                    // return (double)retObjectBufferingProgressMethod.invoke(retObjectBufferingProgress);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBufferingProgressNumber = java.text.NumberFormat.getInstance().parse(retObjectBufferingProgress_ToString);
+                    return retObjectBufferingProgressNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBufferingProgressError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBufferingProgress != null ? retObjectBufferingProgress.getClass() : "null", retObjectBufferingProgress_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBufferingProgressError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -383,13 +421,32 @@ public class MediaPlayer extends Animatable  {
             retObjectDownloadProgress = classInstance.Get("DownloadProgress");
             return (double)retObjectDownloadProgress;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDownloadProgressError = true;
             java.lang.String retObjectDownloadProgress_ToString = retObjectDownloadProgress == null ? "null" : retObjectDownloadProgress.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDownloadProgressNumber = (java.lang.Number)retObjectDownloadProgress;
-                return retObjectDownloadProgressNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectDownloadProgress != null ? retObjectDownloadProgress.getClass() : "null", retObjectDownloadProgress_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDownloadProgress != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDownloadProgressClass = retObjectDownloadProgress.getClass();
+                    // java.lang.reflect.Method retObjectDownloadProgressMethod = retObjectDownloadProgressClass.getMethod("doubleValue");
+                    // return (double)retObjectDownloadProgressMethod.invoke(retObjectDownloadProgress);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDownloadProgressNumber = java.text.NumberFormat.getInstance().parse(retObjectDownloadProgress_ToString);
+                    return retObjectDownloadProgressNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDownloadProgressError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDownloadProgress != null ? retObjectDownloadProgress.getClass() : "null", retObjectDownloadProgress_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDownloadProgressError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -404,13 +461,32 @@ public class MediaPlayer extends Animatable  {
             retObjectSpeedRatio = classInstance.Get("SpeedRatio");
             return (double)retObjectSpeedRatio;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSpeedRatioError = true;
             java.lang.String retObjectSpeedRatio_ToString = retObjectSpeedRatio == null ? "null" : retObjectSpeedRatio.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSpeedRatioNumber = (java.lang.Number)retObjectSpeedRatio;
-                return retObjectSpeedRatioNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null", retObjectSpeedRatio_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSpeedRatio != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSpeedRatioClass = retObjectSpeedRatio.getClass();
+                    // java.lang.reflect.Method retObjectSpeedRatioMethod = retObjectSpeedRatioClass.getMethod("doubleValue");
+                    // return (double)retObjectSpeedRatioMethod.invoke(retObjectSpeedRatio);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSpeedRatioNumber = java.text.NumberFormat.getInstance().parse(retObjectSpeedRatio_ToString);
+                    return retObjectSpeedRatioNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSpeedRatioError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null", retObjectSpeedRatio_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSpeedRatioError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -435,13 +511,32 @@ public class MediaPlayer extends Animatable  {
             retObjectVolume = classInstance.Get("Volume");
             return (double)retObjectVolume;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportVolumeError = true;
             java.lang.String retObjectVolume_ToString = retObjectVolume == null ? "null" : retObjectVolume.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectVolumeNumber = (java.lang.Number)retObjectVolume;
-                return retObjectVolumeNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectVolume != null ? retObjectVolume.getClass() : "null", retObjectVolume_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectVolume != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectVolumeClass = retObjectVolume.getClass();
+                    // java.lang.reflect.Method retObjectVolumeMethod = retObjectVolumeClass.getMethod("doubleValue");
+                    // return (double)retObjectVolumeMethod.invoke(retObjectVolume);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectVolumeNumber = java.text.NumberFormat.getInstance().parse(retObjectVolume_ToString);
+                    return retObjectVolumeNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportVolumeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectVolume != null ? retObjectVolume.getClass() : "null", retObjectVolume_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportVolumeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -466,13 +561,32 @@ public class MediaPlayer extends Animatable  {
             retObjectNaturalVideoHeight = classInstance.Get("NaturalVideoHeight");
             return (int)retObjectNaturalVideoHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNaturalVideoHeightError = true;
             java.lang.String retObjectNaturalVideoHeight_ToString = retObjectNaturalVideoHeight == null ? "null" : retObjectNaturalVideoHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNaturalVideoHeightNumber = (java.lang.Number)retObjectNaturalVideoHeight;
-                return retObjectNaturalVideoHeightNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNaturalVideoHeight != null ? retObjectNaturalVideoHeight.getClass() : "null", retObjectNaturalVideoHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNaturalVideoHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNaturalVideoHeightClass = retObjectNaturalVideoHeight.getClass();
+                    // java.lang.reflect.Method retObjectNaturalVideoHeightMethod = retObjectNaturalVideoHeightClass.getMethod("intValue");
+                    // return (int)retObjectNaturalVideoHeightMethod.invoke(retObjectNaturalVideoHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNaturalVideoHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectNaturalVideoHeight_ToString);
+                    return retObjectNaturalVideoHeightNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNaturalVideoHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNaturalVideoHeight != null ? retObjectNaturalVideoHeight.getClass() : "null", retObjectNaturalVideoHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNaturalVideoHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -487,13 +601,32 @@ public class MediaPlayer extends Animatable  {
             retObjectNaturalVideoWidth = classInstance.Get("NaturalVideoWidth");
             return (int)retObjectNaturalVideoWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportNaturalVideoWidthError = true;
             java.lang.String retObjectNaturalVideoWidth_ToString = retObjectNaturalVideoWidth == null ? "null" : retObjectNaturalVideoWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectNaturalVideoWidthNumber = (java.lang.Number)retObjectNaturalVideoWidth;
-                return retObjectNaturalVideoWidthNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectNaturalVideoWidth != null ? retObjectNaturalVideoWidth.getClass() : "null", retObjectNaturalVideoWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectNaturalVideoWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectNaturalVideoWidthClass = retObjectNaturalVideoWidth.getClass();
+                    // java.lang.reflect.Method retObjectNaturalVideoWidthMethod = retObjectNaturalVideoWidthClass.getMethod("intValue");
+                    // return (int)retObjectNaturalVideoWidthMethod.invoke(retObjectNaturalVideoWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectNaturalVideoWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectNaturalVideoWidth_ToString);
+                    return retObjectNaturalVideoWidthNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportNaturalVideoWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectNaturalVideoWidth != null ? retObjectNaturalVideoWidth.getClass() : "null", retObjectNaturalVideoWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportNaturalVideoWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

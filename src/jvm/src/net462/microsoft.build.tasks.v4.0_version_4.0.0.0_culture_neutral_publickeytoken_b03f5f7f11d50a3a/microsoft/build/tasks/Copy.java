@@ -270,13 +270,32 @@ public class Copy extends TaskExtension  {
             retObjectRetries = classInstance.Get("Retries");
             return (int)retObjectRetries;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRetriesError = true;
             java.lang.String retObjectRetries_ToString = retObjectRetries == null ? "null" : retObjectRetries.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRetriesNumber = (java.lang.Number)retObjectRetries;
-                return retObjectRetriesNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRetries != null ? retObjectRetries.getClass() : "null", retObjectRetries_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRetries != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRetriesClass = retObjectRetries.getClass();
+                    // java.lang.reflect.Method retObjectRetriesMethod = retObjectRetriesClass.getMethod("intValue");
+                    // return (int)retObjectRetriesMethod.invoke(retObjectRetries);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRetriesNumber = java.text.NumberFormat.getInstance().parse(retObjectRetries_ToString);
+                    return retObjectRetriesNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRetriesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRetries != null ? retObjectRetries.getClass() : "null", retObjectRetries_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRetriesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -301,13 +320,32 @@ public class Copy extends TaskExtension  {
             retObjectRetryDelayMilliseconds = classInstance.Get("RetryDelayMilliseconds");
             return (int)retObjectRetryDelayMilliseconds;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportRetryDelayMillisecondsError = true;
             java.lang.String retObjectRetryDelayMilliseconds_ToString = retObjectRetryDelayMilliseconds == null ? "null" : retObjectRetryDelayMilliseconds.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectRetryDelayMillisecondsNumber = (java.lang.Number)retObjectRetryDelayMilliseconds;
-                return retObjectRetryDelayMillisecondsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectRetryDelayMilliseconds != null ? retObjectRetryDelayMilliseconds.getClass() : "null", retObjectRetryDelayMilliseconds_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRetryDelayMilliseconds != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectRetryDelayMillisecondsClass = retObjectRetryDelayMilliseconds.getClass();
+                    // java.lang.reflect.Method retObjectRetryDelayMillisecondsMethod = retObjectRetryDelayMillisecondsClass.getMethod("intValue");
+                    // return (int)retObjectRetryDelayMillisecondsMethod.invoke(retObjectRetryDelayMilliseconds);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectRetryDelayMillisecondsNumber = java.text.NumberFormat.getInstance().parse(retObjectRetryDelayMilliseconds_ToString);
+                    return retObjectRetryDelayMillisecondsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportRetryDelayMillisecondsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRetryDelayMilliseconds != null ? retObjectRetryDelayMilliseconds.getClass() : "null", retObjectRetryDelayMilliseconds_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportRetryDelayMillisecondsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

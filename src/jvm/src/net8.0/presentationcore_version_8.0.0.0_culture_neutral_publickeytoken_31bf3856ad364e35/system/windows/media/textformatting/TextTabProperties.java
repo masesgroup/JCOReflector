@@ -176,13 +176,32 @@ public class TextTabProperties extends NetObject  {
             retObjectLocation = classInstance.Get("Location");
             return (double)retObjectLocation;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLocationError = true;
             java.lang.String retObjectLocation_ToString = retObjectLocation == null ? "null" : retObjectLocation.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLocationNumber = (java.lang.Number)retObjectLocation;
-                return retObjectLocationNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLocation != null ? retObjectLocation.getClass() : "null", retObjectLocation_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLocation != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLocationClass = retObjectLocation.getClass();
+                    // java.lang.reflect.Method retObjectLocationMethod = retObjectLocationClass.getMethod("doubleValue");
+                    // return (double)retObjectLocationMethod.invoke(retObjectLocation);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLocationNumber = java.text.NumberFormat.getInstance().parse(retObjectLocation_ToString);
+                    return retObjectLocationNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLocationError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLocation != null ? retObjectLocation.getClass() : "null", retObjectLocation_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLocationError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class TextTabProperties extends NetObject  {
             retObjectAligningCharacter = classInstance.Get("AligningCharacter");
             return (int)retObjectAligningCharacter;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAligningCharacterError = true;
             java.lang.String retObjectAligningCharacter_ToString = retObjectAligningCharacter == null ? "null" : retObjectAligningCharacter.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAligningCharacterNumber = (java.lang.Number)retObjectAligningCharacter;
-                return retObjectAligningCharacterNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAligningCharacter != null ? retObjectAligningCharacter.getClass() : "null", retObjectAligningCharacter_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAligningCharacter != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAligningCharacterClass = retObjectAligningCharacter.getClass();
+                    // java.lang.reflect.Method retObjectAligningCharacterMethod = retObjectAligningCharacterClass.getMethod("intValue");
+                    // return (int)retObjectAligningCharacterMethod.invoke(retObjectAligningCharacter);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAligningCharacterNumber = java.text.NumberFormat.getInstance().parse(retObjectAligningCharacter_ToString);
+                    return retObjectAligningCharacterNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAligningCharacterError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAligningCharacter != null ? retObjectAligningCharacter.getClass() : "null", retObjectAligningCharacter_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAligningCharacterError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,13 +256,32 @@ public class TextTabProperties extends NetObject  {
             retObjectTabLeader = classInstance.Get("TabLeader");
             return (int)retObjectTabLeader;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportTabLeaderError = true;
             java.lang.String retObjectTabLeader_ToString = retObjectTabLeader == null ? "null" : retObjectTabLeader.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectTabLeaderNumber = (java.lang.Number)retObjectTabLeader;
-                return retObjectTabLeaderNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectTabLeader != null ? retObjectTabLeader.getClass() : "null", retObjectTabLeader_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectTabLeader != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectTabLeaderClass = retObjectTabLeader.getClass();
+                    // java.lang.reflect.Method retObjectTabLeaderMethod = retObjectTabLeaderClass.getMethod("intValue");
+                    // return (int)retObjectTabLeaderMethod.invoke(retObjectTabLeader);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectTabLeaderNumber = java.text.NumberFormat.getInstance().parse(retObjectTabLeader_ToString);
+                    return retObjectTabLeaderNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportTabLeaderError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectTabLeader != null ? retObjectTabLeader.getClass() : "null", retObjectTabLeader_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportTabLeaderError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

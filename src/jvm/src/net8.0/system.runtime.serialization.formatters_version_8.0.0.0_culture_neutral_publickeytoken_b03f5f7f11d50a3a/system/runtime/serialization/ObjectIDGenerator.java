@@ -167,13 +167,32 @@ public class ObjectIDGenerator extends NetObject  {
             retObjectGetId = classInstance.Invoke("GetId", obj == null ? null : obj.getJCOInstance(), firstTime.getJCRefOut());
             return (long)retObjectGetId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetIdError = true;
             java.lang.String retObjectGetId_ToString = retObjectGetId == null ? "null" : retObjectGetId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetIdNumber = (java.lang.Number)retObjectGetId;
-                return retObjectGetIdNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectGetId != null ? retObjectGetId.getClass() : "null", retObjectGetId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetIdClass = retObjectGetId.getClass();
+                    // java.lang.reflect.Method retObjectGetIdMethod = retObjectGetIdClass.getMethod("longValue");
+                    // return (long)retObjectGetIdMethod.invoke(retObjectGetId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetIdNumber = java.text.NumberFormat.getInstance().parse(retObjectGetId_ToString);
+                    return retObjectGetIdNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetId != null ? retObjectGetId.getClass() : "null", retObjectGetId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,13 +207,32 @@ public class ObjectIDGenerator extends NetObject  {
             retObjectHasId = classInstance.Invoke("HasId", obj == null ? null : obj.getJCOInstance(), firstTime.getJCRefOut());
             return (long)retObjectHasId;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportHasIdError = true;
             java.lang.String retObjectHasId_ToString = retObjectHasId == null ? "null" : retObjectHasId.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectHasIdNumber = (java.lang.Number)retObjectHasId;
-                return retObjectHasIdNumber.longValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, into java.lang.Number", retObjectHasId != null ? retObjectHasId.getClass() : "null", retObjectHasId_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectHasId != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectHasIdClass = retObjectHasId.getClass();
+                    // java.lang.reflect.Method retObjectHasIdMethod = retObjectHasIdClass.getMethod("longValue");
+                    // return (long)retObjectHasIdMethod.invoke(retObjectHasId);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectHasIdNumber = java.text.NumberFormat.getInstance().parse(retObjectHasId_ToString);
+                    return retObjectHasIdNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportHasIdError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectHasId != null ? retObjectHasId.getClass() : "null", retObjectHasId_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportHasIdError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

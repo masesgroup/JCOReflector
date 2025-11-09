@@ -211,13 +211,32 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
             retObjectDestinationOrdinal = classInstance.Get("DestinationOrdinal");
             return (int)retObjectDestinationOrdinal;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDestinationOrdinalError = true;
             java.lang.String retObjectDestinationOrdinal_ToString = retObjectDestinationOrdinal == null ? "null" : retObjectDestinationOrdinal.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDestinationOrdinalNumber = (java.lang.Number)retObjectDestinationOrdinal;
-                return retObjectDestinationOrdinalNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDestinationOrdinal != null ? retObjectDestinationOrdinal.getClass() : "null", retObjectDestinationOrdinal_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDestinationOrdinal != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDestinationOrdinalClass = retObjectDestinationOrdinal.getClass();
+                    // java.lang.reflect.Method retObjectDestinationOrdinalMethod = retObjectDestinationOrdinalClass.getMethod("intValue");
+                    // return (int)retObjectDestinationOrdinalMethod.invoke(retObjectDestinationOrdinal);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDestinationOrdinalNumber = java.text.NumberFormat.getInstance().parse(retObjectDestinationOrdinal_ToString);
+                    return retObjectDestinationOrdinalNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDestinationOrdinalError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDestinationOrdinal != null ? retObjectDestinationOrdinal.getClass() : "null", retObjectDestinationOrdinal_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDestinationOrdinalError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,13 +261,32 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
             retObjectSourceOrdinal = classInstance.Get("SourceOrdinal");
             return (int)retObjectSourceOrdinal;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSourceOrdinalError = true;
             java.lang.String retObjectSourceOrdinal_ToString = retObjectSourceOrdinal == null ? "null" : retObjectSourceOrdinal.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSourceOrdinalNumber = (java.lang.Number)retObjectSourceOrdinal;
-                return retObjectSourceOrdinalNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectSourceOrdinal != null ? retObjectSourceOrdinal.getClass() : "null", retObjectSourceOrdinal_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSourceOrdinal != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSourceOrdinalClass = retObjectSourceOrdinal.getClass();
+                    // java.lang.reflect.Method retObjectSourceOrdinalMethod = retObjectSourceOrdinalClass.getMethod("intValue");
+                    // return (int)retObjectSourceOrdinalMethod.invoke(retObjectSourceOrdinal);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSourceOrdinalNumber = java.text.NumberFormat.getInstance().parse(retObjectSourceOrdinal_ToString);
+                    return retObjectSourceOrdinalNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSourceOrdinalError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSourceOrdinal != null ? retObjectSourceOrdinal.getClass() : "null", retObjectSourceOrdinal_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSourceOrdinalError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

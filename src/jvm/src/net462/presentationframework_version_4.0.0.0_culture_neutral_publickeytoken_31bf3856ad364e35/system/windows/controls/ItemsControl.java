@@ -226,13 +226,32 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
             retObjectGetAlternationIndex = classType.Invoke("GetAlternationIndex", element == null ? null : element.getJCOInstance());
             return (int)retObjectGetAlternationIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportGetAlternationIndexError = true;
             java.lang.String retObjectGetAlternationIndex_ToString = retObjectGetAlternationIndex == null ? "null" : retObjectGetAlternationIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectGetAlternationIndexNumber = (java.lang.Number)retObjectGetAlternationIndex;
-                return retObjectGetAlternationIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectGetAlternationIndex != null ? retObjectGetAlternationIndex.getClass() : "null", retObjectGetAlternationIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetAlternationIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetAlternationIndexClass = retObjectGetAlternationIndex.getClass();
+                    // java.lang.reflect.Method retObjectGetAlternationIndexMethod = retObjectGetAlternationIndexClass.getMethod("intValue");
+                    // return (int)retObjectGetAlternationIndexMethod.invoke(retObjectGetAlternationIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetAlternationIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectGetAlternationIndex_ToString);
+                    return retObjectGetAlternationIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetAlternationIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetAlternationIndex != null ? retObjectGetAlternationIndex.getClass() : "null", retObjectGetAlternationIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetAlternationIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -470,13 +489,32 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
             retObjectAlternationCount = classInstance.Get("AlternationCount");
             return (int)retObjectAlternationCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportAlternationCountError = true;
             java.lang.String retObjectAlternationCount_ToString = retObjectAlternationCount == null ? "null" : retObjectAlternationCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectAlternationCountNumber = (java.lang.Number)retObjectAlternationCount;
-                return retObjectAlternationCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectAlternationCount != null ? retObjectAlternationCount.getClass() : "null", retObjectAlternationCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAlternationCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAlternationCountClass = retObjectAlternationCount.getClass();
+                    // java.lang.reflect.Method retObjectAlternationCountMethod = retObjectAlternationCountClass.getMethod("intValue");
+                    // return (int)retObjectAlternationCountMethod.invoke(retObjectAlternationCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAlternationCountNumber = java.text.NumberFormat.getInstance().parse(retObjectAlternationCount_ToString);
+                    return retObjectAlternationCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAlternationCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAlternationCount != null ? retObjectAlternationCount.getClass() : "null", retObjectAlternationCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAlternationCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

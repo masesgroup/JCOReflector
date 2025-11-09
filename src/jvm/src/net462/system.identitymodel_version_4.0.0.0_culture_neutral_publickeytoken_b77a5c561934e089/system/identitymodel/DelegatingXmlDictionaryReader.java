@@ -265,13 +265,32 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
             retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64", buffer, index, count);
             return (int)retObjectReadContentAsBase64;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReadContentAsBase64Error = true;
             java.lang.String retObjectReadContentAsBase64_ToString = retObjectReadContentAsBase64 == null ? "null" : retObjectReadContentAsBase64.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReadContentAsBase64Number = (java.lang.Number)retObjectReadContentAsBase64;
-                return retObjectReadContentAsBase64Number.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null", retObjectReadContentAsBase64_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReadContentAsBase64 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReadContentAsBase64Class = retObjectReadContentAsBase64.getClass();
+                    // java.lang.reflect.Method retObjectReadContentAsBase64Method = retObjectReadContentAsBase64Class.getMethod("intValue");
+                    // return (int)retObjectReadContentAsBase64Method.invoke(retObjectReadContentAsBase64);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReadContentAsBase64Number = java.text.NumberFormat.getInstance().parse(retObjectReadContentAsBase64_ToString);
+                    return retObjectReadContentAsBase64Number.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReadContentAsBase64Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null", retObjectReadContentAsBase64_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReadContentAsBase64Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -286,13 +305,32 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
             retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return (int)retObjectReadContentAsBase64;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReadContentAsBase64Error = true;
             java.lang.String retObjectReadContentAsBase64_ToString = retObjectReadContentAsBase64 == null ? "null" : retObjectReadContentAsBase64.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReadContentAsBase64Number = (java.lang.Number)retObjectReadContentAsBase64;
-                return retObjectReadContentAsBase64Number.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null", retObjectReadContentAsBase64_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReadContentAsBase64 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReadContentAsBase64Class = retObjectReadContentAsBase64.getClass();
+                    // java.lang.reflect.Method retObjectReadContentAsBase64Method = retObjectReadContentAsBase64Class.getMethod("intValue");
+                    // return (int)retObjectReadContentAsBase64Method.invoke(retObjectReadContentAsBase64);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReadContentAsBase64Number = java.text.NumberFormat.getInstance().parse(retObjectReadContentAsBase64_ToString);
+                    return retObjectReadContentAsBase64Number.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReadContentAsBase64Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null", retObjectReadContentAsBase64_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReadContentAsBase64Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -307,13 +345,32 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
             retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex", buffer, index, count);
             return (int)retObjectReadContentAsBinHex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReadContentAsBinHexError = true;
             java.lang.String retObjectReadContentAsBinHex_ToString = retObjectReadContentAsBinHex == null ? "null" : retObjectReadContentAsBinHex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReadContentAsBinHexNumber = (java.lang.Number)retObjectReadContentAsBinHex;
-                return retObjectReadContentAsBinHexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null", retObjectReadContentAsBinHex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReadContentAsBinHex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReadContentAsBinHexClass = retObjectReadContentAsBinHex.getClass();
+                    // java.lang.reflect.Method retObjectReadContentAsBinHexMethod = retObjectReadContentAsBinHexClass.getMethod("intValue");
+                    // return (int)retObjectReadContentAsBinHexMethod.invoke(retObjectReadContentAsBinHex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReadContentAsBinHexNumber = java.text.NumberFormat.getInstance().parse(retObjectReadContentAsBinHex_ToString);
+                    return retObjectReadContentAsBinHexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReadContentAsBinHexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null", retObjectReadContentAsBinHex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReadContentAsBinHexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -328,13 +385,32 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
             retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return (int)retObjectReadContentAsBinHex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReadContentAsBinHexError = true;
             java.lang.String retObjectReadContentAsBinHex_ToString = retObjectReadContentAsBinHex == null ? "null" : retObjectReadContentAsBinHex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReadContentAsBinHexNumber = (java.lang.Number)retObjectReadContentAsBinHex;
-                return retObjectReadContentAsBinHexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null", retObjectReadContentAsBinHex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReadContentAsBinHex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReadContentAsBinHexClass = retObjectReadContentAsBinHex.getClass();
+                    // java.lang.reflect.Method retObjectReadContentAsBinHexMethod = retObjectReadContentAsBinHexClass.getMethod("intValue");
+                    // return (int)retObjectReadContentAsBinHexMethod.invoke(retObjectReadContentAsBinHex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReadContentAsBinHexNumber = java.text.NumberFormat.getInstance().parse(retObjectReadContentAsBinHex_ToString);
+                    return retObjectReadContentAsBinHexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReadContentAsBinHexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null", retObjectReadContentAsBinHex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReadContentAsBinHexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -349,13 +425,32 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
             retObjectReadValueChunk = classInstance.Invoke("ReadValueChunk", buffer, index, count);
             return (int)retObjectReadValueChunk;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReadValueChunkError = true;
             java.lang.String retObjectReadValueChunk_ToString = retObjectReadValueChunk == null ? "null" : retObjectReadValueChunk.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReadValueChunkNumber = (java.lang.Number)retObjectReadValueChunk;
-                return retObjectReadValueChunkNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadValueChunk != null ? retObjectReadValueChunk.getClass() : "null", retObjectReadValueChunk_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReadValueChunk != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReadValueChunkClass = retObjectReadValueChunk.getClass();
+                    // java.lang.reflect.Method retObjectReadValueChunkMethod = retObjectReadValueChunkClass.getMethod("intValue");
+                    // return (int)retObjectReadValueChunkMethod.invoke(retObjectReadValueChunk);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReadValueChunkNumber = java.text.NumberFormat.getInstance().parse(retObjectReadValueChunk_ToString);
+                    return retObjectReadValueChunkNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReadValueChunkError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReadValueChunk != null ? retObjectReadValueChunk.getClass() : "null", retObjectReadValueChunk_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReadValueChunkError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -370,13 +465,32 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
             retObjectReadValueChunk = classInstance.Invoke("ReadValueChunk", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return (int)retObjectReadValueChunk;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReadValueChunkError = true;
             java.lang.String retObjectReadValueChunk_ToString = retObjectReadValueChunk == null ? "null" : retObjectReadValueChunk.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReadValueChunkNumber = (java.lang.Number)retObjectReadValueChunk;
-                return retObjectReadValueChunkNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectReadValueChunk != null ? retObjectReadValueChunk.getClass() : "null", retObjectReadValueChunk_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReadValueChunk != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReadValueChunkClass = retObjectReadValueChunk.getClass();
+                    // java.lang.reflect.Method retObjectReadValueChunkMethod = retObjectReadValueChunkClass.getMethod("intValue");
+                    // return (int)retObjectReadValueChunkMethod.invoke(retObjectReadValueChunk);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReadValueChunkNumber = java.text.NumberFormat.getInstance().parse(retObjectReadValueChunk_ToString);
+                    return retObjectReadValueChunkNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReadValueChunkError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReadValueChunk != null ? retObjectReadValueChunk.getClass() : "null", retObjectReadValueChunk_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReadValueChunkError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

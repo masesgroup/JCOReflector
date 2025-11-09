@@ -184,13 +184,32 @@ public class WSFederationHttpBindingElement extends WSHttpBindingBaseElement  {
             retObjectPrivacyNoticeVersion = classInstance.Get("PrivacyNoticeVersion");
             return (int)retObjectPrivacyNoticeVersion;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPrivacyNoticeVersionError = true;
             java.lang.String retObjectPrivacyNoticeVersion_ToString = retObjectPrivacyNoticeVersion == null ? "null" : retObjectPrivacyNoticeVersion.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPrivacyNoticeVersionNumber = (java.lang.Number)retObjectPrivacyNoticeVersion;
-                return retObjectPrivacyNoticeVersionNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPrivacyNoticeVersion != null ? retObjectPrivacyNoticeVersion.getClass() : "null", retObjectPrivacyNoticeVersion_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPrivacyNoticeVersion != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPrivacyNoticeVersionClass = retObjectPrivacyNoticeVersion.getClass();
+                    // java.lang.reflect.Method retObjectPrivacyNoticeVersionMethod = retObjectPrivacyNoticeVersionClass.getMethod("intValue");
+                    // return (int)retObjectPrivacyNoticeVersionMethod.invoke(retObjectPrivacyNoticeVersion);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPrivacyNoticeVersionNumber = java.text.NumberFormat.getInstance().parse(retObjectPrivacyNoticeVersion_ToString);
+                    return retObjectPrivacyNoticeVersionNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPrivacyNoticeVersionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPrivacyNoticeVersion != null ? retObjectPrivacyNoticeVersion.getClass() : "null", retObjectPrivacyNoticeVersion_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPrivacyNoticeVersionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -247,13 +247,32 @@ public class X509BasicConstraintsExtension extends X509Extension  {
             retObjectPathLengthConstraint = classInstance.Get("PathLengthConstraint");
             return (int)retObjectPathLengthConstraint;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportPathLengthConstraintError = true;
             java.lang.String retObjectPathLengthConstraint_ToString = retObjectPathLengthConstraint == null ? "null" : retObjectPathLengthConstraint.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectPathLengthConstraintNumber = (java.lang.Number)retObjectPathLengthConstraint;
-                return retObjectPathLengthConstraintNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectPathLengthConstraint != null ? retObjectPathLengthConstraint.getClass() : "null", retObjectPathLengthConstraint_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectPathLengthConstraint != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectPathLengthConstraintClass = retObjectPathLengthConstraint.getClass();
+                    // java.lang.reflect.Method retObjectPathLengthConstraintMethod = retObjectPathLengthConstraintClass.getMethod("intValue");
+                    // return (int)retObjectPathLengthConstraintMethod.invoke(retObjectPathLengthConstraint);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectPathLengthConstraintNumber = java.text.NumberFormat.getInstance().parse(retObjectPathLengthConstraint_ToString);
+                    return retObjectPathLengthConstraintNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportPathLengthConstraintError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectPathLengthConstraint != null ? retObjectPathLengthConstraint.getClass() : "null", retObjectPathLengthConstraint_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportPathLengthConstraintError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

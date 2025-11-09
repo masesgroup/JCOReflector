@@ -176,13 +176,32 @@ public class OutputMessageCollection extends NetObjectEnumerable  {
             retObjectErrorCount = classInstance.Get("ErrorCount");
             return (int)retObjectErrorCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportErrorCountError = true;
             java.lang.String retObjectErrorCount_ToString = retObjectErrorCount == null ? "null" : retObjectErrorCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectErrorCountNumber = (java.lang.Number)retObjectErrorCount;
-                return retObjectErrorCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectErrorCount != null ? retObjectErrorCount.getClass() : "null", retObjectErrorCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectErrorCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectErrorCountClass = retObjectErrorCount.getClass();
+                    // java.lang.reflect.Method retObjectErrorCountMethod = retObjectErrorCountClass.getMethod("intValue");
+                    // return (int)retObjectErrorCountMethod.invoke(retObjectErrorCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectErrorCountNumber = java.text.NumberFormat.getInstance().parse(retObjectErrorCount_ToString);
+                    return retObjectErrorCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportErrorCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectErrorCount != null ? retObjectErrorCount.getClass() : "null", retObjectErrorCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportErrorCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,13 +216,32 @@ public class OutputMessageCollection extends NetObjectEnumerable  {
             retObjectWarningCount = classInstance.Get("WarningCount");
             return (int)retObjectWarningCount;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportWarningCountError = true;
             java.lang.String retObjectWarningCount_ToString = retObjectWarningCount == null ? "null" : retObjectWarningCount.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectWarningCountNumber = (java.lang.Number)retObjectWarningCount;
-                return retObjectWarningCountNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectWarningCount != null ? retObjectWarningCount.getClass() : "null", retObjectWarningCount_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectWarningCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectWarningCountClass = retObjectWarningCount.getClass();
+                    // java.lang.reflect.Method retObjectWarningCountMethod = retObjectWarningCountClass.getMethod("intValue");
+                    // return (int)retObjectWarningCountMethod.invoke(retObjectWarningCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectWarningCountNumber = java.text.NumberFormat.getInstance().parse(retObjectWarningCount_ToString);
+                    return retObjectWarningCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportWarningCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectWarningCount != null ? retObjectWarningCount.getClass() : "null", retObjectWarningCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportWarningCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

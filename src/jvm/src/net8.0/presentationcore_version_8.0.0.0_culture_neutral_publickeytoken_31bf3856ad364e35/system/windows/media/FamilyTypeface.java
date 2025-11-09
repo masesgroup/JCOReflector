@@ -190,13 +190,32 @@ public class FamilyTypeface extends NetObject  {
             retObjectCapsHeight = classInstance.Get("CapsHeight");
             return (double)retObjectCapsHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportCapsHeightError = true;
             java.lang.String retObjectCapsHeight_ToString = retObjectCapsHeight == null ? "null" : retObjectCapsHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectCapsHeightNumber = (java.lang.Number)retObjectCapsHeight;
-                return retObjectCapsHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectCapsHeight != null ? retObjectCapsHeight.getClass() : "null", retObjectCapsHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCapsHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCapsHeightClass = retObjectCapsHeight.getClass();
+                    // java.lang.reflect.Method retObjectCapsHeightMethod = retObjectCapsHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectCapsHeightMethod.invoke(retObjectCapsHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCapsHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectCapsHeight_ToString);
+                    return retObjectCapsHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCapsHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCapsHeight != null ? retObjectCapsHeight.getClass() : "null", retObjectCapsHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCapsHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,13 +240,32 @@ public class FamilyTypeface extends NetObject  {
             retObjectStrikethroughPosition = classInstance.Get("StrikethroughPosition");
             return (double)retObjectStrikethroughPosition;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStrikethroughPositionError = true;
             java.lang.String retObjectStrikethroughPosition_ToString = retObjectStrikethroughPosition == null ? "null" : retObjectStrikethroughPosition.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStrikethroughPositionNumber = (java.lang.Number)retObjectStrikethroughPosition;
-                return retObjectStrikethroughPositionNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughPosition != null ? retObjectStrikethroughPosition.getClass() : "null", retObjectStrikethroughPosition_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStrikethroughPosition != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStrikethroughPositionClass = retObjectStrikethroughPosition.getClass();
+                    // java.lang.reflect.Method retObjectStrikethroughPositionMethod = retObjectStrikethroughPositionClass.getMethod("doubleValue");
+                    // return (double)retObjectStrikethroughPositionMethod.invoke(retObjectStrikethroughPosition);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStrikethroughPositionNumber = java.text.NumberFormat.getInstance().parse(retObjectStrikethroughPosition_ToString);
+                    return retObjectStrikethroughPositionNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStrikethroughPositionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStrikethroughPosition != null ? retObjectStrikethroughPosition.getClass() : "null", retObjectStrikethroughPosition_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStrikethroughPositionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,13 +290,32 @@ public class FamilyTypeface extends NetObject  {
             retObjectStrikethroughThickness = classInstance.Get("StrikethroughThickness");
             return (double)retObjectStrikethroughThickness;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStrikethroughThicknessError = true;
             java.lang.String retObjectStrikethroughThickness_ToString = retObjectStrikethroughThickness == null ? "null" : retObjectStrikethroughThickness.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStrikethroughThicknessNumber = (java.lang.Number)retObjectStrikethroughThickness;
-                return retObjectStrikethroughThicknessNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectStrikethroughThickness != null ? retObjectStrikethroughThickness.getClass() : "null", retObjectStrikethroughThickness_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStrikethroughThickness != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStrikethroughThicknessClass = retObjectStrikethroughThickness.getClass();
+                    // java.lang.reflect.Method retObjectStrikethroughThicknessMethod = retObjectStrikethroughThicknessClass.getMethod("doubleValue");
+                    // return (double)retObjectStrikethroughThicknessMethod.invoke(retObjectStrikethroughThickness);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStrikethroughThicknessNumber = java.text.NumberFormat.getInstance().parse(retObjectStrikethroughThickness_ToString);
+                    return retObjectStrikethroughThicknessNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStrikethroughThicknessError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStrikethroughThickness != null ? retObjectStrikethroughThickness.getClass() : "null", retObjectStrikethroughThickness_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStrikethroughThicknessError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -283,13 +340,32 @@ public class FamilyTypeface extends NetObject  {
             retObjectUnderlinePosition = classInstance.Get("UnderlinePosition");
             return (double)retObjectUnderlinePosition;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUnderlinePositionError = true;
             java.lang.String retObjectUnderlinePosition_ToString = retObjectUnderlinePosition == null ? "null" : retObjectUnderlinePosition.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUnderlinePositionNumber = (java.lang.Number)retObjectUnderlinePosition;
-                return retObjectUnderlinePositionNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUnderlinePosition != null ? retObjectUnderlinePosition.getClass() : "null", retObjectUnderlinePosition_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUnderlinePosition != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUnderlinePositionClass = retObjectUnderlinePosition.getClass();
+                    // java.lang.reflect.Method retObjectUnderlinePositionMethod = retObjectUnderlinePositionClass.getMethod("doubleValue");
+                    // return (double)retObjectUnderlinePositionMethod.invoke(retObjectUnderlinePosition);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUnderlinePositionNumber = java.text.NumberFormat.getInstance().parse(retObjectUnderlinePosition_ToString);
+                    return retObjectUnderlinePositionNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUnderlinePositionError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUnderlinePosition != null ? retObjectUnderlinePosition.getClass() : "null", retObjectUnderlinePosition_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUnderlinePositionError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -314,13 +390,32 @@ public class FamilyTypeface extends NetObject  {
             retObjectUnderlineThickness = classInstance.Get("UnderlineThickness");
             return (double)retObjectUnderlineThickness;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportUnderlineThicknessError = true;
             java.lang.String retObjectUnderlineThickness_ToString = retObjectUnderlineThickness == null ? "null" : retObjectUnderlineThickness.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectUnderlineThicknessNumber = (java.lang.Number)retObjectUnderlineThickness;
-                return retObjectUnderlineThicknessNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectUnderlineThickness != null ? retObjectUnderlineThickness.getClass() : "null", retObjectUnderlineThickness_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectUnderlineThickness != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectUnderlineThicknessClass = retObjectUnderlineThickness.getClass();
+                    // java.lang.reflect.Method retObjectUnderlineThicknessMethod = retObjectUnderlineThicknessClass.getMethod("doubleValue");
+                    // return (double)retObjectUnderlineThicknessMethod.invoke(retObjectUnderlineThickness);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectUnderlineThicknessNumber = java.text.NumberFormat.getInstance().parse(retObjectUnderlineThickness_ToString);
+                    return retObjectUnderlineThicknessNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportUnderlineThicknessError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectUnderlineThickness != null ? retObjectUnderlineThickness.getClass() : "null", retObjectUnderlineThickness_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportUnderlineThicknessError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -345,13 +440,32 @@ public class FamilyTypeface extends NetObject  {
             retObjectXHeight = classInstance.Get("XHeight");
             return (double)retObjectXHeight;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportXHeightError = true;
             java.lang.String retObjectXHeight_ToString = retObjectXHeight == null ? "null" : retObjectXHeight.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectXHeightNumber = (java.lang.Number)retObjectXHeight;
-                return retObjectXHeightNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectXHeight != null ? retObjectXHeight.getClass() : "null", retObjectXHeight_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectXHeight != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectXHeightClass = retObjectXHeight.getClass();
+                    // java.lang.reflect.Method retObjectXHeightMethod = retObjectXHeightClass.getMethod("doubleValue");
+                    // return (double)retObjectXHeightMethod.invoke(retObjectXHeight);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectXHeightNumber = java.text.NumberFormat.getInstance().parse(retObjectXHeight_ToString);
+                    return retObjectXHeightNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportXHeightError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectXHeight != null ? retObjectXHeight.getClass() : "null", retObjectXHeight_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportXHeightError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

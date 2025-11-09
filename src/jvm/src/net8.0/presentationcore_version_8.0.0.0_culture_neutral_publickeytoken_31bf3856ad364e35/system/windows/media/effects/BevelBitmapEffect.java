@@ -204,13 +204,32 @@ public class BevelBitmapEffect extends BitmapEffect  {
             retObjectBevelWidth = classInstance.Get("BevelWidth");
             return (double)retObjectBevelWidth;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBevelWidthError = true;
             java.lang.String retObjectBevelWidth_ToString = retObjectBevelWidth == null ? "null" : retObjectBevelWidth.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBevelWidthNumber = (java.lang.Number)retObjectBevelWidth;
-                return retObjectBevelWidthNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectBevelWidth != null ? retObjectBevelWidth.getClass() : "null", retObjectBevelWidth_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBevelWidth != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBevelWidthClass = retObjectBevelWidth.getClass();
+                    // java.lang.reflect.Method retObjectBevelWidthMethod = retObjectBevelWidthClass.getMethod("doubleValue");
+                    // return (double)retObjectBevelWidthMethod.invoke(retObjectBevelWidth);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBevelWidthNumber = java.text.NumberFormat.getInstance().parse(retObjectBevelWidth_ToString);
+                    return retObjectBevelWidthNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBevelWidthError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBevelWidth != null ? retObjectBevelWidth.getClass() : "null", retObjectBevelWidth_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBevelWidthError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -235,13 +254,32 @@ public class BevelBitmapEffect extends BitmapEffect  {
             retObjectLightAngle = classInstance.Get("LightAngle");
             return (double)retObjectLightAngle;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLightAngleError = true;
             java.lang.String retObjectLightAngle_ToString = retObjectLightAngle == null ? "null" : retObjectLightAngle.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLightAngleNumber = (java.lang.Number)retObjectLightAngle;
-                return retObjectLightAngleNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectLightAngle != null ? retObjectLightAngle.getClass() : "null", retObjectLightAngle_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLightAngle != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLightAngleClass = retObjectLightAngle.getClass();
+                    // java.lang.reflect.Method retObjectLightAngleMethod = retObjectLightAngleClass.getMethod("doubleValue");
+                    // return (double)retObjectLightAngleMethod.invoke(retObjectLightAngle);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLightAngleNumber = java.text.NumberFormat.getInstance().parse(retObjectLightAngle_ToString);
+                    return retObjectLightAngleNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLightAngleError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLightAngle != null ? retObjectLightAngle.getClass() : "null", retObjectLightAngle_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLightAngleError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,13 +304,32 @@ public class BevelBitmapEffect extends BitmapEffect  {
             retObjectRelief = classInstance.Get("Relief");
             return (double)retObjectRelief;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportReliefError = true;
             java.lang.String retObjectRelief_ToString = retObjectRelief == null ? "null" : retObjectRelief.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectReliefNumber = (java.lang.Number)retObjectRelief;
-                return retObjectReliefNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectRelief != null ? retObjectRelief.getClass() : "null", retObjectRelief_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectRelief != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReliefClass = retObjectRelief.getClass();
+                    // java.lang.reflect.Method retObjectReliefMethod = retObjectReliefClass.getMethod("doubleValue");
+                    // return (double)retObjectReliefMethod.invoke(retObjectRelief);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReliefNumber = java.text.NumberFormat.getInstance().parse(retObjectRelief_ToString);
+                    return retObjectReliefNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReliefError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectRelief != null ? retObjectRelief.getClass() : "null", retObjectRelief_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReliefError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -297,13 +354,32 @@ public class BevelBitmapEffect extends BitmapEffect  {
             retObjectSmoothness = classInstance.Get("Smoothness");
             return (double)retObjectSmoothness;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportSmoothnessError = true;
             java.lang.String retObjectSmoothness_ToString = retObjectSmoothness == null ? "null" : retObjectSmoothness.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectSmoothnessNumber = (java.lang.Number)retObjectSmoothness;
-                return retObjectSmoothnessNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectSmoothness != null ? retObjectSmoothness.getClass() : "null", retObjectSmoothness_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSmoothness != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSmoothnessClass = retObjectSmoothness.getClass();
+                    // java.lang.reflect.Method retObjectSmoothnessMethod = retObjectSmoothnessClass.getMethod("doubleValue");
+                    // return (double)retObjectSmoothnessMethod.invoke(retObjectSmoothness);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSmoothnessNumber = java.text.NumberFormat.getInstance().parse(retObjectSmoothness_ToString);
+                    return retObjectSmoothnessNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSmoothnessError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSmoothness != null ? retObjectSmoothness.getClass() : "null", retObjectSmoothness_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSmoothnessError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

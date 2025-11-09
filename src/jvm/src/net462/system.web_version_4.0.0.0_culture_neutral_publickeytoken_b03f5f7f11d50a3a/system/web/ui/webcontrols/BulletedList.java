@@ -212,13 +212,32 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
             retObjectFirstBulletNumber = classInstance.Get("FirstBulletNumber");
             return (int)retObjectFirstBulletNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFirstBulletNumberError = true;
             java.lang.String retObjectFirstBulletNumber_ToString = retObjectFirstBulletNumber == null ? "null" : retObjectFirstBulletNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFirstBulletNumberNumber = (java.lang.Number)retObjectFirstBulletNumber;
-                return retObjectFirstBulletNumberNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFirstBulletNumber != null ? retObjectFirstBulletNumber.getClass() : "null", retObjectFirstBulletNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFirstBulletNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFirstBulletNumberClass = retObjectFirstBulletNumber.getClass();
+                    // java.lang.reflect.Method retObjectFirstBulletNumberMethod = retObjectFirstBulletNumberClass.getMethod("intValue");
+                    // return (int)retObjectFirstBulletNumberMethod.invoke(retObjectFirstBulletNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFirstBulletNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectFirstBulletNumber_ToString);
+                    return retObjectFirstBulletNumberNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFirstBulletNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFirstBulletNumber != null ? retObjectFirstBulletNumber.getClass() : "null", retObjectFirstBulletNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFirstBulletNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

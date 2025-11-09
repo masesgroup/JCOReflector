@@ -392,13 +392,32 @@ public class FileDialog extends CommonDialog  {
             retObjectFilterIndex = classInstance.Get("FilterIndex");
             return (int)retObjectFilterIndex;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportFilterIndexError = true;
             java.lang.String retObjectFilterIndex_ToString = retObjectFilterIndex == null ? "null" : retObjectFilterIndex.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectFilterIndexNumber = (java.lang.Number)retObjectFilterIndex;
-                return retObjectFilterIndexNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectFilterIndex != null ? retObjectFilterIndex.getClass() : "null", retObjectFilterIndex_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectFilterIndex != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectFilterIndexClass = retObjectFilterIndex.getClass();
+                    // java.lang.reflect.Method retObjectFilterIndexMethod = retObjectFilterIndexClass.getMethod("intValue");
+                    // return (int)retObjectFilterIndexMethod.invoke(retObjectFilterIndex);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectFilterIndexNumber = java.text.NumberFormat.getInstance().parse(retObjectFilterIndex_ToString);
+                    return retObjectFilterIndexNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportFilterIndexError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectFilterIndex != null ? retObjectFilterIndex.getClass() : "null", retObjectFilterIndex_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportFilterIndexError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

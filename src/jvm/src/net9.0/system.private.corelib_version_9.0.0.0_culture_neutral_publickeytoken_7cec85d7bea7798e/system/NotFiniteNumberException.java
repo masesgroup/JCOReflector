@@ -222,13 +222,32 @@ public class NotFiniteNumberException extends ArithmeticException {
             retObjectOffendingNumber = classInstance.Get("OffendingNumber");
             return (double)retObjectOffendingNumber;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportOffendingNumberError = true;
             java.lang.String retObjectOffendingNumber_ToString = retObjectOffendingNumber == null ? "null" : retObjectOffendingNumber.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectOffendingNumberNumber = (java.lang.Number)retObjectOffendingNumber;
-                return retObjectOffendingNumberNumber.doubleValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, into java.lang.Number", retObjectOffendingNumber != null ? retObjectOffendingNumber.getClass() : "null", retObjectOffendingNumber_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectOffendingNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectOffendingNumberClass = retObjectOffendingNumber.getClass();
+                    // java.lang.reflect.Method retObjectOffendingNumberMethod = retObjectOffendingNumberClass.getMethod("doubleValue");
+                    // return (double)retObjectOffendingNumberMethod.invoke(retObjectOffendingNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectOffendingNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectOffendingNumber_ToString);
+                    return retObjectOffendingNumberNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportOffendingNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectOffendingNumber != null ? retObjectOffendingNumber.getClass() : "null", retObjectOffendingNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportOffendingNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

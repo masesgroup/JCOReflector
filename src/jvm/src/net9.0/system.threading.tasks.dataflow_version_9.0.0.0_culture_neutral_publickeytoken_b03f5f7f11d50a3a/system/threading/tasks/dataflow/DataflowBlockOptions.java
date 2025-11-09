@@ -197,13 +197,32 @@ public class DataflowBlockOptions extends NetObject  {
             retObjectBoundedCapacity = classInstance.Get("BoundedCapacity");
             return (int)retObjectBoundedCapacity;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportBoundedCapacityError = true;
             java.lang.String retObjectBoundedCapacity_ToString = retObjectBoundedCapacity == null ? "null" : retObjectBoundedCapacity.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectBoundedCapacityNumber = (java.lang.Number)retObjectBoundedCapacity;
-                return retObjectBoundedCapacityNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectBoundedCapacity != null ? retObjectBoundedCapacity.getClass() : "null", retObjectBoundedCapacity_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBoundedCapacity != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBoundedCapacityClass = retObjectBoundedCapacity.getClass();
+                    // java.lang.reflect.Method retObjectBoundedCapacityMethod = retObjectBoundedCapacityClass.getMethod("intValue");
+                    // return (int)retObjectBoundedCapacityMethod.invoke(retObjectBoundedCapacity);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBoundedCapacityNumber = java.text.NumberFormat.getInstance().parse(retObjectBoundedCapacity_ToString);
+                    return retObjectBoundedCapacityNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBoundedCapacityError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBoundedCapacity != null ? retObjectBoundedCapacity.getClass() : "null", retObjectBoundedCapacity_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBoundedCapacityError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,13 +247,32 @@ public class DataflowBlockOptions extends NetObject  {
             retObjectMaxMessagesPerTask = classInstance.Get("MaxMessagesPerTask");
             return (int)retObjectMaxMessagesPerTask;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxMessagesPerTaskError = true;
             java.lang.String retObjectMaxMessagesPerTask_ToString = retObjectMaxMessagesPerTask == null ? "null" : retObjectMaxMessagesPerTask.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxMessagesPerTaskNumber = (java.lang.Number)retObjectMaxMessagesPerTask;
-                return retObjectMaxMessagesPerTaskNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxMessagesPerTask != null ? retObjectMaxMessagesPerTask.getClass() : "null", retObjectMaxMessagesPerTask_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxMessagesPerTask != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxMessagesPerTaskClass = retObjectMaxMessagesPerTask.getClass();
+                    // java.lang.reflect.Method retObjectMaxMessagesPerTaskMethod = retObjectMaxMessagesPerTaskClass.getMethod("intValue");
+                    // return (int)retObjectMaxMessagesPerTaskMethod.invoke(retObjectMaxMessagesPerTask);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxMessagesPerTaskNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxMessagesPerTask_ToString);
+                    return retObjectMaxMessagesPerTaskNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxMessagesPerTaskError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxMessagesPerTask != null ? retObjectMaxMessagesPerTask.getClass() : "null", retObjectMaxMessagesPerTask_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxMessagesPerTaskError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

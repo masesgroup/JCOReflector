@@ -173,13 +173,32 @@ public class FactorySettingsElement extends ConfigurationElement  {
             retObjectMaxItemsInCache = classInstance.Get("MaxItemsInCache");
             return (int)retObjectMaxItemsInCache;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxItemsInCacheError = true;
             java.lang.String retObjectMaxItemsInCache_ToString = retObjectMaxItemsInCache == null ? "null" : retObjectMaxItemsInCache.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxItemsInCacheNumber = (java.lang.Number)retObjectMaxItemsInCache;
-                return retObjectMaxItemsInCacheNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxItemsInCache != null ? retObjectMaxItemsInCache.getClass() : "null", retObjectMaxItemsInCache_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxItemsInCache != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxItemsInCacheClass = retObjectMaxItemsInCache.getClass();
+                    // java.lang.reflect.Method retObjectMaxItemsInCacheMethod = retObjectMaxItemsInCacheClass.getMethod("intValue");
+                    // return (int)retObjectMaxItemsInCacheMethod.invoke(retObjectMaxItemsInCache);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxItemsInCacheNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxItemsInCache_ToString);
+                    return retObjectMaxItemsInCacheNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxItemsInCacheError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxItemsInCache != null ? retObjectMaxItemsInCache.getClass() : "null", retObjectMaxItemsInCache_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxItemsInCacheError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -366,13 +366,32 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectDisappearAfter = classInstance.Get("DisappearAfter");
             return (int)retObjectDisappearAfter;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDisappearAfterError = true;
             java.lang.String retObjectDisappearAfter_ToString = retObjectDisappearAfter == null ? "null" : retObjectDisappearAfter.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDisappearAfterNumber = (java.lang.Number)retObjectDisappearAfter;
-                return retObjectDisappearAfterNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDisappearAfter != null ? retObjectDisappearAfter.getClass() : "null", retObjectDisappearAfter_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDisappearAfter != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDisappearAfterClass = retObjectDisappearAfter.getClass();
+                    // java.lang.reflect.Method retObjectDisappearAfterMethod = retObjectDisappearAfterClass.getMethod("intValue");
+                    // return (int)retObjectDisappearAfterMethod.invoke(retObjectDisappearAfter);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDisappearAfterNumber = java.text.NumberFormat.getInstance().parse(retObjectDisappearAfter_ToString);
+                    return retObjectDisappearAfterNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDisappearAfterError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDisappearAfter != null ? retObjectDisappearAfter.getClass() : "null", retObjectDisappearAfter_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDisappearAfterError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -397,13 +416,32 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectDynamicHorizontalOffset = classInstance.Get("DynamicHorizontalOffset");
             return (int)retObjectDynamicHorizontalOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDynamicHorizontalOffsetError = true;
             java.lang.String retObjectDynamicHorizontalOffset_ToString = retObjectDynamicHorizontalOffset == null ? "null" : retObjectDynamicHorizontalOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDynamicHorizontalOffsetNumber = (java.lang.Number)retObjectDynamicHorizontalOffset;
-                return retObjectDynamicHorizontalOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDynamicHorizontalOffset != null ? retObjectDynamicHorizontalOffset.getClass() : "null", retObjectDynamicHorizontalOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDynamicHorizontalOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDynamicHorizontalOffsetClass = retObjectDynamicHorizontalOffset.getClass();
+                    // java.lang.reflect.Method retObjectDynamicHorizontalOffsetMethod = retObjectDynamicHorizontalOffsetClass.getMethod("intValue");
+                    // return (int)retObjectDynamicHorizontalOffsetMethod.invoke(retObjectDynamicHorizontalOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDynamicHorizontalOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectDynamicHorizontalOffset_ToString);
+                    return retObjectDynamicHorizontalOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDynamicHorizontalOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDynamicHorizontalOffset != null ? retObjectDynamicHorizontalOffset.getClass() : "null", retObjectDynamicHorizontalOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDynamicHorizontalOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -428,13 +466,32 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectDynamicVerticalOffset = classInstance.Get("DynamicVerticalOffset");
             return (int)retObjectDynamicVerticalOffset;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportDynamicVerticalOffsetError = true;
             java.lang.String retObjectDynamicVerticalOffset_ToString = retObjectDynamicVerticalOffset == null ? "null" : retObjectDynamicVerticalOffset.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectDynamicVerticalOffsetNumber = (java.lang.Number)retObjectDynamicVerticalOffset;
-                return retObjectDynamicVerticalOffsetNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectDynamicVerticalOffset != null ? retObjectDynamicVerticalOffset.getClass() : "null", retObjectDynamicVerticalOffset_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectDynamicVerticalOffset != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectDynamicVerticalOffsetClass = retObjectDynamicVerticalOffset.getClass();
+                    // java.lang.reflect.Method retObjectDynamicVerticalOffsetMethod = retObjectDynamicVerticalOffsetClass.getMethod("intValue");
+                    // return (int)retObjectDynamicVerticalOffsetMethod.invoke(retObjectDynamicVerticalOffset);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectDynamicVerticalOffsetNumber = java.text.NumberFormat.getInstance().parse(retObjectDynamicVerticalOffset_ToString);
+                    return retObjectDynamicVerticalOffsetNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportDynamicVerticalOffsetError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectDynamicVerticalOffset != null ? retObjectDynamicVerticalOffset.getClass() : "null", retObjectDynamicVerticalOffset_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportDynamicVerticalOffsetError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -459,13 +516,32 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectMaximumDynamicDisplayLevels = classInstance.Get("MaximumDynamicDisplayLevels");
             return (int)retObjectMaximumDynamicDisplayLevels;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaximumDynamicDisplayLevelsError = true;
             java.lang.String retObjectMaximumDynamicDisplayLevels_ToString = retObjectMaximumDynamicDisplayLevels == null ? "null" : retObjectMaximumDynamicDisplayLevels.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaximumDynamicDisplayLevelsNumber = (java.lang.Number)retObjectMaximumDynamicDisplayLevels;
-                return retObjectMaximumDynamicDisplayLevelsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaximumDynamicDisplayLevels != null ? retObjectMaximumDynamicDisplayLevels.getClass() : "null", retObjectMaximumDynamicDisplayLevels_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaximumDynamicDisplayLevels != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaximumDynamicDisplayLevelsClass = retObjectMaximumDynamicDisplayLevels.getClass();
+                    // java.lang.reflect.Method retObjectMaximumDynamicDisplayLevelsMethod = retObjectMaximumDynamicDisplayLevelsClass.getMethod("intValue");
+                    // return (int)retObjectMaximumDynamicDisplayLevelsMethod.invoke(retObjectMaximumDynamicDisplayLevels);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaximumDynamicDisplayLevelsNumber = java.text.NumberFormat.getInstance().parse(retObjectMaximumDynamicDisplayLevels_ToString);
+                    return retObjectMaximumDynamicDisplayLevelsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaximumDynamicDisplayLevelsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaximumDynamicDisplayLevels != null ? retObjectMaximumDynamicDisplayLevels.getClass() : "null", retObjectMaximumDynamicDisplayLevels_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaximumDynamicDisplayLevelsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -490,13 +566,32 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             retObjectStaticDisplayLevels = classInstance.Get("StaticDisplayLevels");
             return (int)retObjectStaticDisplayLevels;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportStaticDisplayLevelsError = true;
             java.lang.String retObjectStaticDisplayLevels_ToString = retObjectStaticDisplayLevels == null ? "null" : retObjectStaticDisplayLevels.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectStaticDisplayLevelsNumber = (java.lang.Number)retObjectStaticDisplayLevels;
-                return retObjectStaticDisplayLevelsNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectStaticDisplayLevels != null ? retObjectStaticDisplayLevels.getClass() : "null", retObjectStaticDisplayLevels_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectStaticDisplayLevels != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectStaticDisplayLevelsClass = retObjectStaticDisplayLevels.getClass();
+                    // java.lang.reflect.Method retObjectStaticDisplayLevelsMethod = retObjectStaticDisplayLevelsClass.getMethod("intValue");
+                    // return (int)retObjectStaticDisplayLevelsMethod.invoke(retObjectStaticDisplayLevels);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectStaticDisplayLevelsNumber = java.text.NumberFormat.getInstance().parse(retObjectStaticDisplayLevels_ToString);
+                    return retObjectStaticDisplayLevelsNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportStaticDisplayLevelsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectStaticDisplayLevels != null ? retObjectStaticDisplayLevels.getClass() : "null", retObjectStaticDisplayLevels_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportStaticDisplayLevelsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

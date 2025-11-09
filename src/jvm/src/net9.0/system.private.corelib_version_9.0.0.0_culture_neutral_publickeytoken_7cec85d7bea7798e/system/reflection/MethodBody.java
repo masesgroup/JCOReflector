@@ -202,13 +202,32 @@ public class MethodBody extends NetObject  {
             retObjectLocalSignatureMetadataToken = classInstance.Get("LocalSignatureMetadataToken");
             return (int)retObjectLocalSignatureMetadataToken;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportLocalSignatureMetadataTokenError = true;
             java.lang.String retObjectLocalSignatureMetadataToken_ToString = retObjectLocalSignatureMetadataToken == null ? "null" : retObjectLocalSignatureMetadataToken.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectLocalSignatureMetadataTokenNumber = (java.lang.Number)retObjectLocalSignatureMetadataToken;
-                return retObjectLocalSignatureMetadataTokenNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectLocalSignatureMetadataToken != null ? retObjectLocalSignatureMetadataToken.getClass() : "null", retObjectLocalSignatureMetadataToken_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLocalSignatureMetadataToken != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLocalSignatureMetadataTokenClass = retObjectLocalSignatureMetadataToken.getClass();
+                    // java.lang.reflect.Method retObjectLocalSignatureMetadataTokenMethod = retObjectLocalSignatureMetadataTokenClass.getMethod("intValue");
+                    // return (int)retObjectLocalSignatureMetadataTokenMethod.invoke(retObjectLocalSignatureMetadataToken);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLocalSignatureMetadataTokenNumber = java.text.NumberFormat.getInstance().parse(retObjectLocalSignatureMetadataToken_ToString);
+                    return retObjectLocalSignatureMetadataTokenNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLocalSignatureMetadataTokenError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLocalSignatureMetadataToken != null ? retObjectLocalSignatureMetadataToken.getClass() : "null", retObjectLocalSignatureMetadataToken_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLocalSignatureMetadataTokenError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -223,13 +242,32 @@ public class MethodBody extends NetObject  {
             retObjectMaxStackSize = classInstance.Get("MaxStackSize");
             return (int)retObjectMaxStackSize;
         } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxStackSizeError = true;
             java.lang.String retObjectMaxStackSize_ToString = retObjectMaxStackSize == null ? "null" : retObjectMaxStackSize.toString();
-            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
             try {
-                java.lang.Number retObjectMaxStackSizeNumber = (java.lang.Number)retObjectMaxStackSize;
-                return retObjectMaxStackSizeNumber.intValue();
-            } catch (java.lang.ClassCastException cceInner) {
-                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, into java.lang.Number", retObjectMaxStackSize != null ? retObjectMaxStackSize.getClass() : "null", retObjectMaxStackSize_ToString), cce);
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMaxStackSize != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxStackSizeClass = retObjectMaxStackSize.getClass();
+                    // java.lang.reflect.Method retObjectMaxStackSizeMethod = retObjectMaxStackSizeClass.getMethod("intValue");
+                    // return (int)retObjectMaxStackSizeMethod.invoke(retObjectMaxStackSize);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxStackSizeNumber = java.text.NumberFormat.getInstance().parse(retObjectMaxStackSize_ToString);
+                    return retObjectMaxStackSizeNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxStackSizeError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMaxStackSize != null ? retObjectMaxStackSize.getClass() : "null", retObjectMaxStackSize_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxStackSizeError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
             }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

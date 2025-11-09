@@ -68,7 +68,7 @@ object HelloNETSocket {
         })
         // start threads
         threadServer.Start()
-        Thread.Sleep(5000)
+        Thread.Sleep(2000)
         threadClient.Start()
         // let it communicate
         Thread.Sleep(5000)
@@ -76,8 +76,8 @@ object HelloNETSocket {
         HelloNETSocketClient.run = false
         Thread.Sleep(1000)
         // wait for thread join, if not, close the test
-        threadServer.Join(5000)
-        threadClient.Join(5000)
+        threadServer.Join(2000)
+        threadClient.Join(2000)
         // close the application
         Environment.Exit(0)
         return

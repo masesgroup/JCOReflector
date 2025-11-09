@@ -94,7 +94,7 @@ public class HelloNETSocketClient {
                     // Send the data through the socket.
                     sender.Send(msg);
                     // Receive the response from the remote device.
-                    while (sender.getAvailable() == 0 && !(run && exit));
+                    while (sender.getAvailable() == 0 && !(run && exit)) { java.lang.Thread.sleep(1); };
                     Console.WriteLine("CLIENT: Client bytes received " + sender.getAvailable());
                     if (asyncMode) {
                         // define the async event object

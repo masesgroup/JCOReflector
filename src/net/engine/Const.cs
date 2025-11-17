@@ -122,6 +122,9 @@ namespace MASES.JCOReflector.Engine
 #if NET8_0 || NET9_0 || NET10_0
                 ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceType", null);
 #endif
+#if NET10_0
+                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Java.JavaMarshal", new string[] { "Initialize" });
+#endif
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");
                 DirectMappablePrimitives.Add("short", "java.util.concurrent.atomic.AtomicReference<java.lang.Short>");

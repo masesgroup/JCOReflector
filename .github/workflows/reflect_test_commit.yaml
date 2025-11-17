@@ -102,6 +102,12 @@ jobs:
         with: 
           fetch-depth: '1'
 
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: dotnet build --no-incremental --configuration Release --framework ${{ matrix.framework }} /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
@@ -235,14 +241,12 @@ jobs:
         os: [ 'windows-2022' ]
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
+            jdk_version: [ 11, 17 ]
 
     runs-on: ${{ matrix.os }}
     env:
@@ -341,14 +345,12 @@ jobs:
         os: [ 'windows-2022' ]
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
+            jdk_version: [ 11, 17 ]
 
     runs-on: ${{ matrix.os }}
     env:
@@ -473,14 +475,12 @@ jobs:
         os: [ 'ubuntu-latest', 'macos-latest' ]
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
+            jdk_version: [ 11, 17 ]
 
     runs-on: ${{ matrix.os }}
     env:
@@ -586,14 +586,12 @@ jobs:
         os: [ 'ubuntu-latest' ]
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
+            jdk_version: [ 11, 17 ]
 
     runs-on: ${{ matrix.os }}
     env:
@@ -713,14 +711,12 @@ jobs:
         os: [ 'macos-latest' ]
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
+            jdk_version: [ 11, 17 ]
 
     runs-on: ${{ matrix.os }}
     env:

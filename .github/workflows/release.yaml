@@ -32,6 +32,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v5
 
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: dotnet build --no-incremental --framework ${{ matrix.framework }} --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
@@ -85,6 +91,11 @@ jobs:
       - uses: actions/checkout@v5
         with: 
           submodules: 'true'
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            10.x
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI

@@ -112,14 +112,14 @@ namespace MASES.JCOReflector.Engine
                 ExportingAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
                 ExportingAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
                 ExportingAvoidanceMap.Add("System.Threading.Interlocked", new string[] { "Decrement", "Increment"
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
                                                                                          , "Read"
 #endif
                 });
-#if NET7_0 || NET8_0 || NET9_0
+#if NET7_0 || NET8_0 || NET9_0 || NET10_0
                 ExportingAvoidanceMap.Add("System.Runtime.InteropServices.JavaScript.JSMarshalerArgument", new string[] { "ToManaged" });
 #endif
-#if NET8_0 || NET9_0
+#if NET8_0 || NET9_0 || NET10_0
                 ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceType", null);
 #endif
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
@@ -171,7 +171,7 @@ namespace MASES.JCOReflector.Engine
             public const string JCOBridgeEmbeddedFile = "JCOBridge.zip";
             public const string JCOReflectorOptionsFile = "JCOReflectorOptions.java";
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
             public static string[] JCOBridgeFiles = new string[]
             {
                 Path.Combine("linux-arm", "J2CBridgeHostActivator.so"),
@@ -179,7 +179,7 @@ namespace MASES.JCOReflector.Engine
                 Path.Combine("linux-x64", "J2CBridgeHostActivator.so"),
                 Path.Combine("osx-arm64", "J2CBridgeHostActivator.dylib"),
                 Path.Combine("osx-x64", "J2CBridgeHostActivator.dylib"),
-#if !(NET8_0 || NET9_0)
+#if !(NET8_0 || NET9_0 || NET10_0)
                 Path.Combine("win-arm", "J2CBridgeHostActivator.dll"),
 #endif
                 Path.Combine("win-arm64", "J2CBridgeHostActivator.dll"),
@@ -217,6 +217,9 @@ namespace MASES.JCOReflector.Engine
 #elif NET9_0
                 "Microsoft.NET9.App.runtimeconfig.json",
                 "Microsoft.WindowsDesktop9.App.runtimeconfig.json",
+#elif NET10_0
+                "Microsoft.NET10.App.runtimeconfig.json",
+                "Microsoft.WindowsDesktop10.App.runtimeconfig.json",
 #else
 #error Unable to identify .NET engine
 #endif
@@ -283,6 +286,10 @@ namespace MASES.JCOReflector.Engine
             public const string Runtime = ".NET 9";
             public const string RuntimeName = ".NETCoreApp";
             public const string RuntimeFolder = "net9.0";
+#elif NET10_0
+            public const string Runtime = ".NET 10";
+            public const string RuntimeName = ".NETCoreApp";
+            public const string RuntimeFolder = "net10.0";
 #elif NETFRAMEWORK
             public const string Runtime = ".NET Framework";
             public const string RuntimeName = ".NETFramework";
@@ -694,6 +701,8 @@ namespace MASES.JCOReflector.Engine
             public const string REPORT_FILE_TO_WRITE = "net8.0.md";
 #elif NET9_0
             public const string REPORT_FILE_TO_WRITE = "net9.0.md";
+#elif NET10_0
+            public const string REPORT_FILE_TO_WRITE = "net10.0.md";
 #elif NETFRAMEWORK
             public const string REPORT_FILE_TO_WRITE = "net462.md";
 #else

@@ -81,6 +81,7 @@
 <th style="text-align: center;">.NET Framework</th>
 <th style="text-align: center;">.NET 8</th>
 <th style="text-align: center;">.NET 9</th>
+<th style="text-align: center;">.NET 10</th>
 </tr>
 </thead>
 <tbody>
@@ -88,6 +89,7 @@
 <td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 <td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 <td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net9.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net9.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net10.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net10.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 </tr>
 </tbody>
 </table>
@@ -306,8 +308,9 @@ In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these l
 <p>Within the folder bin you will find three subfolders:</p>
 <ul>
 <li><strong>net462</strong> (available only on Windows platform)</li>
-<li><strong>net6.0</strong> (available on .NET 6 supported platforms)</li>
 <li><strong>net8.0</strong> (available on .NET 8 supported platforms)</li>
+<li><strong>net9.0</strong> (available on .NET 9 supported platforms)</li>
+<li><strong>net10.0</strong> (available on .NET 10 supported platforms)</li>
 </ul>
 <p>in each subfolder will be available two executables:</p>
 <ul>
@@ -317,7 +320,7 @@ In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these l
 <p><img src="images/jcoreflector.png" alt="JCOReflector" title="JCOReflector screenshot">
 <img src="images/jcoreflector2.png" alt="JCOReflector" title="JCOReflector screenshot"></p>
 <h2 id="reflected-assemblies">Reflected Assemblies</h2>
-<p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>6</strong> (<em>net6.0</em>) and <strong>8</strong> (<em>net8.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
+<p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>8</strong> (<em>net8.0</em>), <strong>9</strong> (<em>net9.0</em>) and <strong>10</strong> (<em>net10.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
 <h3 id="statistics">Statistics</h3>
 <table>
 <thead>
@@ -325,13 +328,15 @@ In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these l
 <th style="text-align: center;">.NET Framework</th>
 <th style="text-align: center;">.NET 8</th>
 <th style="text-align: center;">.NET 9</th>
+<th style="text-align: center;">.NET 10</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=845891829&amp;format=image" alt="FrameworkStatistic"></td>
+<td style="text-align: center;"><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=935306611&amp;format=image" alt="FrameworkStatistic"></td>
 <td style="text-align: center;"><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&amp;format=image" alt="Net8Statistic"></td>
 <td style="text-align: center;"><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&amp;format=image" alt="Net9Statistic"></td>
+<td style="text-align: center;"><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1926760119&amp;format=image" alt="Net10Statistic"></td>
 </tr>
 </tbody>
 </table>

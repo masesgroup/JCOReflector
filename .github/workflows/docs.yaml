@@ -136,7 +136,7 @@ jobs:
 
       - name: Extract commit SHA
         run: |
-          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA)" >> $GITHUB_ENV
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
 
       - name: Build net8.0 Java Help files

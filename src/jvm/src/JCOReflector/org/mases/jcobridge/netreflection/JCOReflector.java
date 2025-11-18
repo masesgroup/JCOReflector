@@ -76,7 +76,7 @@ public class JCOReflector {
     /**
      * Set the FallbackOnNativeParse value
      * 
-     * @param fallbackOnNative set the FallbackOnNativeParse value
+     * @param fallbackOnNativeParse set the FallbackOnNativeParse value
      */
     public static synchronized void setFallbackOnNativeParse(boolean fallbackOnNativeParse) {
         _fallbackOnNativeParse = fallbackOnNativeParse;

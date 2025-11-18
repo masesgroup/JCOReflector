@@ -861,6 +861,11 @@ jobs:
         with: 
           fetch-depth: '1'
 
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            10.x
+
       - name: Restore net462 JCOReflector bin from cache
         uses: actions/cache/restore@v4
         with:

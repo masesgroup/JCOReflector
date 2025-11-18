@@ -7,3 +7,6 @@
 [submodule "docs/net9.0"]
 	path = docs/net9.0
 	url = https://github.com/masesgroup/NET9Docs.git
+[submodule "docs/net10.0"]
+	path = docs/net10.0
+	url = https://github.com/masesgroup/NET10Docs.git

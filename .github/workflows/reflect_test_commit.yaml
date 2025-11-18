@@ -85,7 +85,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'windows-2022' ]
-        framework: [ 'net462', 'net8.0', 'net9.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
 
     # The type of runner that the job will run on
     runs-on: ${{ matrix.os }}
@@ -101,6 +101,11 @@ jobs:
       - uses: actions/checkout@v5
         with: 
           fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            10.x
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -179,7 +184,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-22.04' ]
-        framework: [ 'net8.0', 'net9.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
     # The type of runner that the job will run on
     runs-on: ${{ matrix.os }}
 
@@ -194,6 +199,7 @@ jobs:
         with:
           dotnet-version: |
             9.x
+            10.x
 
       - name: Restore ${{ matrix.framework }} JCOReflector source from cache
         uses: actions/cache/restore@v4
@@ -233,16 +239,14 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'windows-2022' ]
-        framework: [ 'net462', 'net8.0', 'net9.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -259,6 +263,12 @@ jobs:
       - uses: actions/checkout@v5
         with: 
           fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v4
@@ -290,6 +300,11 @@ jobs:
         if: matrix.framework == 'net9.0'
         shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -334,16 +349,14 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'windows-2022' ]
-        framework: [ 'net462', 'net8.0', 'net9.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -360,6 +373,12 @@ jobs:
       - uses: actions/checkout@v5
         with: 
           fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v4
@@ -396,6 +415,11 @@ jobs:
         if: matrix.framework == 'net9.0'
         shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Scala test source file for ${{ matrix.framework }}
         shell: cmd
@@ -461,16 +485,14 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-latest', 'macos-latest' ]
-        framework: [ 'net8.0', 'net9.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -488,6 +510,12 @@ jobs:
         with:
           dotnet-version: |
             9.x
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v4
@@ -516,6 +544,11 @@ jobs:
         if: matrix.framework == 'net9.0'
         shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Java test source file
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
@@ -563,16 +596,14 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-latest' ]
-        framework: [ 'net8.0', 'net9.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -590,6 +621,12 @@ jobs:
         with:
           dotnet-version: |
             9.x
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
 
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v4
@@ -627,6 +664,11 @@ jobs:
         if: matrix.framework == 'net9.0'
         shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Scala test source file
         run: |
@@ -679,16 +721,14 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'macos-latest' ]
-        framework: [ 'net8.0', 'net9.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
-          - jdk_vendor: graalvm
-            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -706,6 +746,12 @@ jobs:
         with:
           dotnet-version: |
             9.x
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v4
@@ -749,6 +795,11 @@ jobs:
         if: matrix.framework == 'net9.0'
         shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Scala test source file
         run: |
@@ -834,6 +885,14 @@ jobs:
           path: ./bin/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net9.0_${{ github.sha }}
 
+      - name: Restore net10.0 JCOReflector bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net10.0_${{ github.sha }}
+
       - uses: actions/upload-artifact@v5
         with:
           name: net8.0
@@ -844,6 +903,11 @@ jobs:
           name: net9.0
           path: .\bin\net9.0\**\*
         
+      - uses: actions/upload-artifact@v5
+        with:
+          name: net10.0
+          path: .\bin\net10.0\**\*
+
       - uses: actions/upload-artifact@v5
         with:
           name: net462
@@ -892,6 +956,17 @@ jobs:
               ./src/jvm/statistics/net9.0/
               ./src/jvm/src/net9.0/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net9.0_${{ github.sha }}
+
+      - name: Restore net10.0 JCOReflector source from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: |
+              ./src/jvm/net10.0.md
+              ./src/jvm/statistics/net10.0/
+              ./src/jvm/src/net10.0/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net10.0_${{ github.sha }}
 
       - name: Extract commit SHA
         if: ${{ inputs.GeneratePR == true }}

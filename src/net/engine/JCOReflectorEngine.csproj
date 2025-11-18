@@ -10,7 +10,7 @@
     <Version>1.16.0.0</Version>
     <Product>MASES.JCOReflectorEngine</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <TargetFrameworks>net462;net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>net462;net8.0;net9.0;net10.0</TargetFrameworks>
     <OutputPath>..\..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -117,7 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="3.2.1" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.6.5-beta4">
+    <PackageReference Include="MASES.JCOBridge" Version="2.6.5-rc1">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>

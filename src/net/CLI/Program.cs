@@ -40,6 +40,8 @@ namespace MASES.JCOReflector.CLI
             var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 8)";
 #elif NET9_0
             var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 9)";
+#elif NET10_0
+            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 10)";
 #elif NETFRAMEWORK
             var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET Framework)";
 #else

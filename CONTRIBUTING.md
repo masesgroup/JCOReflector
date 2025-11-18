@@ -14,25 +14,30 @@ The project is organized in this folder structure:
 
 * **bin** (The output folder, automatically generated and not in git)
     * net462 (folder for .NET Framework output)
-    * net6.0 (folder for .NET 6 output)
     * net8.0 (folder for .NET 8 output)
+    * net9.0 (folder for .NET 9 output)
+    * net10.0 (folder for .NET 10 output)
 	
-* **netreflected** (container of Java classes)
+* **src** (container of Java classes)
+  * **jvm**
     * **src** (a standard folder used in any Java IDE)
-        * **JCOReflector** (contains the base classes used from JCOReflector to build reflected classes)
-        * **net462** (contains, sepearated in folders, the sets of reflected classes of .NET Framework generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net6.0** (contains, sepearated in folders, the sets of reflected classes of .NET 6 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net8.0** (contains, sepearated in folders, the sets of reflected classes of .NET 8 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+      * **JCOReflector** (contains the base classes used from JCOReflector to build reflected classes)
+      * **net462** (contains, sepearated in folders, the sets of reflected classes of .NET Framework generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net8.0** (contains, sepearated in folders, the sets of reflected classes of .NET 8 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net9.0** (contains, sepearated in folders, the sets of reflected classes of .NET 9 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net10.0** (contains, sepearated in folders, the sets of reflected classes of .NET 10 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **docs**
-        * **net462** (contains the generated documentation related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net6.0** (contains the generated documentation related to .NET 6: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net8.0** (contains the generated documentation related to .NET 8: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+      * **net462** (contains the generated documentation related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net8.0** (contains the generated documentation related to .NET 8: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net9.0** (contains the generated documentation related to .NET 9: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net10.0** (contains the generated documentation related to .NET 10: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **statistics**
-        * **net462** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net6.0** (contains the generated statistics related to .NET 6: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net8.0** (contains the generated statistics related to .NET 8: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+      * **net462** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net8.0** (contains the generated statistics related to .NET 8: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net9.0** (contains the generated statistics related to .NET 9: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net10.0** (contains the generated statistics related to .NET 10: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		
-* **netreflected-tests** (container test classes)
+* **tests** (container test classes)
 	* **java** (container of Java test classes)
 		* **src** (a standard folder used in any Java IDE)
 			* **mscorlib** (contains an example class which use mscorlib API)
@@ -74,13 +79,14 @@ If you are a developer and want to contribute you are welcome, we reccomend to t
 
 The basic and simple rules for the project are:
 * **Reflection engine** only commit with modifications in the following folders are accepted:
-    * *src*
-    * *netreflected/src/JCOReflector*
-* **Unit test**: contibution can be made in the testing code section under *netreflected-tests* folder
+    * **src**
+    * **src/jvm/src/JCOReflector**
+* **Unit test**: contibution can be made in the testing code section under **tests** folder
 * **Reflected classes**: the following folders and subsolders are generated code from JCOReflector, to change them a developer shall modify the templates; the code will be updated from mantairners after the validation of JCOReflector engine:
-    * *netreflected/src/net6.0*
-    * *netreflected/src/net8.0*
-    * *netreflected/src/net462*
+    * **src/jvm/src/net10.0**
+	* **src/jvm/src/net9.0**
+    * **src/jvm/src/net8.0**
+    * **src/jvm/src/net462**
 
 ## Suggesting Enhancements
 

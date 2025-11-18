@@ -83,7 +83,7 @@ jobs:
           gpg --list-secret-keys --keyid-format LONG
         shell: bash
 
-      - uses: actions/setup-dotnet@v5s
+      - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
             10.x

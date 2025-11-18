@@ -246,7 +246,9 @@ jobs:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: [ 11, 17 ]
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -350,7 +352,9 @@ jobs:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: [ 11, 17 ]
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -480,7 +484,9 @@ jobs:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: [ 11, 17 ]
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -591,7 +597,9 @@ jobs:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: [ 11, 17 ]
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -716,7 +724,9 @@ jobs:
           - jdk_vendor: oracle
             jdk_version: 11
           - jdk_vendor: graalvm
-            jdk_version: [ 11, 17 ]
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:

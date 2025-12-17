@@ -981,7 +981,7 @@ jobs:
 
       - name: Request a PR to commit changes
         if: ${{ inputs.GeneratePR == true }}
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch-suffix: short-commit-hash
           add-paths: |

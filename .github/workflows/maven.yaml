@@ -114,7 +114,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.5 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.6 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
         shell: bash

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>MASES.JCOReflectorEngine</AssemblyName>
     <RootNamespace>MASES.JCOReflector.Engine</RootNamespace>
@@ -117,12 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="3.2.1" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.6.5">
+    <PackageReference Include="MASES.JCOBridge" Version="2.6.6-rc1">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All" />
   </ItemGroup>
 </Project>

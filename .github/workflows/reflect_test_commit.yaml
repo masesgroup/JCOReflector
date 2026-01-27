@@ -251,7 +251,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
     
     steps:
       # Runs a set of commands using the runners shell
@@ -361,7 +361,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
       
     steps:
       # Runs a set of commands using the runners shell
@@ -497,13 +497,19 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v6
         with: 
           fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net8.0'
+        with:
+          dotnet-version: |
+            8.x
 
       - uses: actions/setup-dotnet@v5
         if: matrix.framework == 'net9.0'
@@ -608,7 +614,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -733,13 +739,19 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v6
         with: 
           fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net8.0'
+        with:
+          dotnet-version: |
+            8.x
 
       - uses: actions/setup-dotnet@v5
         if: matrix.framework == 'net9.0'

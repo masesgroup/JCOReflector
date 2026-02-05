@@ -119,8 +119,8 @@ public final class JCOBridgeInstance implements IJCEventLog {
                 try {
                     JCOReflector.writeLog("Initializing JCOBridge runtime");
                     try {
-                        JCOBridge.setScopeOn(JCOReflector.getScopeOn());
-                        JCOBridge.setScopeOnVersion(JCOReflector.getScopeOnVersion());
+                        JCOBridge.setScopedOn(JCOReflector.getScopedOn());
+                        JCOBridge.setScopedOnVersion(JCOReflector.getScopedOnVersion());
                         JCOBridge.Initialize(JCOReflector.getCommandLineArgs());
                     } catch (JCNativeException e) {
                         if (!e.getCLRType().contains("FallbackInTrialModeException")) {

@@ -40,8 +40,8 @@ import java.lang.reflect.*;
  */
 public class JCOReflector {
     static boolean _fallbackOnNativeParse = false;
-    static String _scopeOn = "JCOReflector";
-    static String _scopeOnVersion = "1.16.0.0";
+    static String _scopedOn = "JCOReflector";
+    static String _scopedOnVersion = "1.16.0.0";
     static String _runtimeFolder = null;
     static boolean _isLogging = false;
     static String _loggingFilename = "JCOBridge.log";
@@ -83,39 +83,39 @@ public class JCOReflector {
     }
 
     /**
-     * Return the ScopeOn value
+     * Return the ScopedOn value
      * 
-     * @return the ScopeOn value
+     * @return the ScopedOn value
      */
-    public static synchronized String getScopeOn() {
-        return _scopeOn;
+    public static synchronized String getScopedOn() {
+        return _scopedOn;
     }
 
     /**
-     * Set the ScopeOn value
+     * Set the ScopedOn value
      * 
-     * @param scopeOn the ScopeOn value
+     * @param scopedOn the ScopedOn value
      */
-    public static synchronized void setScopeOn(String scopeOn) {
-        _scopeOn = scopeOn;
+    public static synchronized void setScopedOn(String scopedOn) {
+        _scopedOn = scopedOn;
     }
 
     /**
-     * Return the ScopeOnVersion value
+     * Return the ScopedOnVersion value
      * 
-     * @return the ScopeOnVersion value
+     * @return the ScopedOnVersion value
      */
-    public static synchronized String getScopeOnVersion() {
-        return _scopeOnVersion;
+    public static synchronized String getScopedOnVersion() {
+        return _scopedOnVersion;
     }
 
     /**
-     * Set the ScopeOnVersion value
+     * Set the ScopedOnVersion value
      * 
-     * @param scopeOnVersion the ScopeOnVersion value
+     * @param scopedOnVersion the ScopedOnVersion value
      */
-    public static synchronized void setScopeOnVersion(String scopeOnVersion) {
-        _scopeOnVersion = scopeOnVersion;
+    public static synchronized void setScopedOnVersion(String scopedOnVersion) {
+        _scopedOnVersion = scopedOnVersion;
     }
 
     /**
@@ -485,10 +485,10 @@ public class JCOReflector {
                 initTempRT();
             } else if (string.toLowerCase() == "-path") {
                 registerPath(args[index++]);
-            } else if (string.toLowerCase() == "-scopeon") {
-                setScopeOn(args[index++]);
-            } else if (string.toLowerCase() == "-scopeonversion") {
-                setScopeOnVersion(args[index++]);
+            } else if (string.toLowerCase() == "-scopedon") {
+                setScopedOn(args[index++]);
+            } else if (string.toLowerCase() == "-scopedonversion") {
+                setScopedOnVersion(args[index++]);
             }
         }
     }

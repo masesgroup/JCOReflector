@@ -117,7 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="3.2.1" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.6.6-rc1">
+    <PackageReference Include="MASES.JCOBridge" Version="2.6.6-rc2">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>

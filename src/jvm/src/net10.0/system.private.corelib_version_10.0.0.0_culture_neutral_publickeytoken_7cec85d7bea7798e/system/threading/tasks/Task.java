@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020-2025 MASES s.r.l.
+ *  Copyright (c) 2020-2026 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -207,7 +207,7 @@ public class Task extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public boolean Wait(int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NullReferenceException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException {
+    public boolean Wait(int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.NullReferenceException, system.OperationCanceledException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWait = null;
@@ -221,7 +221,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean Wait(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.FormatException {
+    public boolean Wait(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.NullReferenceException, system.threading.ThreadStateException, system.OperationCanceledException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWait = null;
@@ -235,7 +235,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean Wait(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.FormatException {
+    public boolean Wait(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.NullReferenceException, system.threading.ThreadStateException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWait = null;
@@ -249,7 +249,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean Wait(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.threading.ThreadStateException, system.IndexOutOfRangeException, system.FormatException {
+    public boolean Wait(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.NullReferenceException, system.threading.ThreadStateException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWait = null;
@@ -855,7 +855,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Wait() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.FormatException {
+    public void Wait() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.NullReferenceException, system.threading.ThreadStateException, system.OperationCanceledException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -865,7 +865,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Wait(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.FormatException {
+    public void Wait(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.NullReferenceException, system.threading.ThreadStateException, system.OperationCanceledException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

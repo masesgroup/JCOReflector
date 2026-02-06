@@ -1006,7 +1006,7 @@ jobs:
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
           assignees: masesdevelopers
-          labels: enhancement, java, .NET Framework, .NET 8, .NET 9
+          labels: enhancement, java, .NET Framework, .NET 8, .NET 9, .NET 10
 
      # - name: Commit statistics changes
      #   if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo

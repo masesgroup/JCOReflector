@@ -140,19 +140,19 @@ jobs:
         shell: bash
 
       - name: Build net8.0 Java Help files
-        run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
 
       - name: Build net9.0 Java Help files
-        run: dotnet bin\net9.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\net9.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
 
       - name: Build net10.0 Java Help files
-        run: dotnet bin\net10.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\net10.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
 
       - name: Build net462 Java Help files
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net462\MASES.JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
         
       - name: Clean temporary files

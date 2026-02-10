@@ -243,8 +243,14 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -353,8 +359,14 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -489,8 +501,14 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -606,8 +624,14 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -731,8 +755,14 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 

@@ -127,11 +127,11 @@ jobs:
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_${{ matrix.framework }}.job
 
       - name: Build Java files ${{ matrix.framework }}
-        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
 
       - name: Build JAR files ${{ matrix.framework }}
-        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_${{ matrix.framework }}_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_${{ matrix.framework }}_win19.job -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
 
       - name: Save ${{ matrix.framework }} JCOReflector source in cache
@@ -217,10 +217,10 @@ jobs:
         run: dotnet build --no-incremental --framework ${{ matrix.framework }} --configuration Release src/net/JCOReflectorCLI.sln
 
       - name: Build ${{ matrix.framework }} Java files
-        run: dotnet bin/${{ matrix.framework }}/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
+        run: dotnet bin/${{ matrix.framework }}/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_8_X64 -JobFile .github/workflows/build_linux.job
 
       - name: Build JAR files
-        run: dotnet bin/${{ matrix.framework }}/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_${{ matrix.framework }}_linux.job
+        run: dotnet bin/${{ matrix.framework }}/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_8_X64 -JobFile .github/workflows/createjars_${{ matrix.framework }}_linux.job
 
       - name: Extract commit SHA
         run: |
@@ -241,10 +241,16 @@ jobs:
         os: [ 'windows-2022' ]
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -351,10 +357,16 @@ jobs:
         os: [ 'windows-2022' ]
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -487,10 +499,19 @@ jobs:
         os: [ 'ubuntu-latest', 'macos-latest' ]
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - os: macos-latest
+            jdk_vendor: temurin
+            jdk_version: 8
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -604,10 +625,16 @@ jobs:
         os: [ 'ubuntu-latest' ]
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -729,10 +756,18 @@ jobs:
         os: [ 'macos-latest' ]
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
-        jdk_version: [ '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: temurin
+            jdk_version: 8
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
           - jdk_vendor: graalvm
             jdk_version: 11
 

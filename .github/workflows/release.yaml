@@ -53,7 +53,7 @@ jobs:
         uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
-          java-version: 11
+          java-version: 8
           cache: 'maven'
           server-id: central # Value of the distributionManagement/repository/id field of the pom.xml, old value was ossrh
           server-username: MAVEN_USERNAME # env variable for username in deploy
@@ -115,18 +115,18 @@ jobs:
 
       - name: Build Java files
         run: |
-          .\bin\net8.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net9.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net10.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net462\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net8.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_8_X64%
+          .\bin\net9.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_8_X64%
+          .\bin\net10.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_8_X64%
+          .\bin\net462\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
           
       - name: Build JAR files
         run: |
-          .\bin\net8.0\MASES.JCOReflectorCLI -JobType C\teJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net9.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net9.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net10.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net10.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net8.0\MASES.JCOReflectorCLI -JobType C\teJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_8_X64%
+          .\bin\net9.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net9.0_win19.job -JDKFolder %JAVA_HOME_8_X64%
+          .\bin\net10.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net10.0_win19.job -JDKFolder %JAVA_HOME_8_X64%
+          .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
 
       - name: Compress release files

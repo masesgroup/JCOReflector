@@ -5,7 +5,7 @@
       <title>JCOReflector (a .NET Java™ wrapper) | MASES Group website - JCOReflector </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="JCOReflector (a .NET Java™ wrapper) | MASES Group website - JCOReflector ">
-      
+      <meta name="description" content="JCOReflector is a comprehensive suite of libraries and tools to use Java/JVM™ APIs (Java™, Scala, Kotlin, ...) and .NET side-by-side.">
       
       <link rel="icon" href="images/favicon.png">
       <link rel="stylesheet" href="public/docfx.min.css">
@@ -73,6 +73,8 @@
         <article data-uid="">
 <h1 id="jcoreflector-a-net-java-wrapper">JCOReflector (a .NET Java™ wrapper)</h1>
 
+<p><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-8%2B-blue" alt="Java 8+"></a>
+<a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-8%2B-purple" alt=".NET 8+"></a></p>
 <p>JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, ...) and .NET side-by-side.</p>
 <h3 id="libraries-and-tools">Libraries and Tools</h3>
 <table>
@@ -120,6 +122,33 @@ JCOReflector can be used to reflects any .NET assembly (even assembly outside th
 The generated wrapper classes are based on the powerful <a href="https://www.jcobridge.com">JCOBridge</a> engine and extends its use to simplify the use of .NET from Java™(JVM™).
 It was created internally from us to support our customers, now we made it available for everyone.</p>
 <p>This project adheres to the Contributor <a href="CODE_OF_CONDUCT.md">Covenant code of conduct</a>. By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.</p>
+<h2 id="why-jcoreflector">Why JCOReflector?</h2>
+<p><strong>Access .NET from Any Java Version (8 through 25)</strong></p>
+<p>JCOReflector enables Java applications—including <strong>legacy Java 8 systems</strong>—to call .NET libraries and frameworks directly:</p>
+<pre><code class="lang-java">// Java 8 application calling .NET
+import system.Console;
+import microsoft.ml.*;
+
+public class LegacyApp {
+    public static void main(String[] args) {
+        // Call .NET ML.NET from Java 8!
+        var mlContext = new MLContext();
+        var prediction = model.predict(data);
+        
+        Console.WriteLine(&quot;Prediction: &quot; + prediction);
+    }
+}
+</code></pre>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li>✅ <strong>Java 8+ Compatible</strong> - Works with Java 8 through Java 25</li>
+<li>✅ <strong>No .NET Code Changes</strong> - Generated wrappers for any .NET assembly</li>
+<li>✅ <strong>Legacy Modernization</strong> - Add ML.NET, Azure SDKs to Java 8 apps</li>
+<li>✅ <strong>Gradual Migration</strong> - Keep Java 8, modernize capabilities</li>
+</ul>
+<blockquote>
+<p><strong>Use Case:</strong> Call modern .NET libraries (ML.NET, Azure SDK, etc.) from existing Java 8 applications without upgrading Java runtime.</p>
+</blockquote>
 <h2 id="runtime-engine">Runtime engine</h2>
 <p>JCOReflector uses <a href="https://www.jcobridge.com">JCOBridge</a>, and its <a href="https://www.jcobridge.com/features/">features</a>, to obtain many benefits:</p>
 <ul>
@@ -140,6 +169,25 @@ It was created internally from us to support our customers, now we made it avail
 </li>
 </ul>
 <p><a href="https://www.jcobridge.com">JCOBridge 2.6.*</a> can be used for free without any obligations; you need to purchase a commercial license, or uninstall the software, if you have direct or indirect incomes from the product usage.</p>
+<h3 id="supported-versions">Supported Versions</h3>
+<p><strong>Java:</strong></p>
+<ul>
+<li>✅ Java 8 (JRE 1.8.0_161 or later)</li>
+<li>✅ Java 11 (LTS)</li>
+<li>✅ Java 17 (LTS)</li>
+<li>✅ Java 21 (LTS)</li>
+<li>✅ Java 25 (LTS)</li>
+</ul>
+<p><strong>Note:</strong> Works with Oracle JDK, OpenJDK, Amazon Corretto, Azul Zulu, and other compatible distributions.</p>
+<p><strong>.NET:</strong></p>
+<ul>
+<li>.NET Framework 4.6.2+</li>
+<li>.NET 6, 8, 9, 10</li>
+</ul>
+<p><strong>Note for Java 8 Users:</strong>
+JCOReflector enables modernization of Java 8 applications by providing access
+to cutting-edge .NET libraries without requiring Java runtime upgrades. Oracle
+Extended Support for Java 8 runs until December 2030.</p>
 <h3 id="jcobridge-resources">JCOBridge resources</h3>
 <p>Have a look at the following JCOBridge resources:</p>
 <table>
@@ -296,6 +344,58 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 <p>C# and Java™ are different languages. The reflection process cannot reflects into Java™ some features available on C#: an example are properties where get/set is automatically choosed from C# compiler
 Other limitations comes from some differences between the two engines (CLR and JVM™).
 In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these limitations, but manual operations shall be made: do not change the reflected classes, override them in your code.</p>
+<h2 id="java-8-integration-use-cases">Java 8 Integration Use Cases</h2>
+<h3 id="1-machine-learning-in-legacy-java">1. Machine Learning in Legacy Java</h3>
+<pre><code class="lang-java">// Java 8 application using ML.NET
+import microsoft.ml.*;
+import microsoft.ml.data.*;
+
+public class FraudDetection {
+    public void detectFraud(Transaction transaction) {
+        // ML.NET model trained in .NET
+        MLContext mlContext = new MLContext();
+        ITransformer model = mlContext.Model.Load(&quot;model.zip&quot;);
+        
+        // Predict from Java 8
+        var prediction = model.Transform(transaction);
+        
+        if (prediction.isFraud()) {
+            flagTransaction(transaction);
+        }
+    }
+}
+</code></pre>
+<h3 id="2-azure-integration-from-java-8">2. Azure Integration from Java 8</h3>
+<pre><code class="lang-java">// Java 8 app using Azure .NET SDK
+import com.azure.storage.blob.*;
+
+public class DocumentProcessor {
+    public void uploadToAzure(byte[] document) {
+        // Azure Storage .NET SDK from Java 8
+        BlobClient blobClient = new BlobClient(connectionString);
+        blobClient.upload(document);
+    }
+}
+</code></pre>
+<h3 id="3-modern-pdf-processing">3. Modern PDF Processing</h3>
+<pre><code class="lang-java">// Java 8 using .NET PDF libraries
+import itext7.*;
+
+public class ReportGenerator {
+    public void generateReport() {
+        // Modern .NET PDF libraries from Java 8
+        PdfWriter writer = new PdfWriter(&quot;report.pdf&quot;);
+        // ... full .NET API available
+    }
+}
+</code></pre>
+<p><strong>Migration Path:</strong></p>
+<pre><code>Java 8 Legacy App
+     ↓ JCOReflector
+.NET Modern Libraries (ML.NET, Azure, etc.)
+     ↓ Proven Value
+Eventually migrate Java when ready
+</code></pre>
 <h2 id="how-to-use-the-generator-tool-jcoreflector">How to use the generator tool (JCOReflector)</h2>
 <p>In the root folder execute:</p>
 <blockquote>

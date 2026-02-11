@@ -501,6 +501,9 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - os: macos-latest
+            jdk_vendor: temurin
+            jdk_version: 8
           - jdk_vendor: microsoft
             jdk_version: 8
           - jdk_vendor: oracle
@@ -755,6 +758,8 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
+          - jdk_vendor: temurin
+            jdk_version: 8
           - jdk_vendor: microsoft
             jdk_version: 8
           - jdk_vendor: oracle

@@ -28,7 +28,7 @@ jobs:
       - name: Create modified file list
         if: ${{ github.event_name == 'push' }}
         id: get_changed_files
-        uses: masesgroup/retrieve-changed-files@v3
+        uses: masesgroup/retrieve-changed-files@v4
         with:
           format: 'csv'
 

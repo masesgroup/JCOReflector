@@ -111,7 +111,7 @@ jobs:
       - name: Build JCOReflectorCLI
         run: dotnet build --no-incremental --configuration Release --framework ${{ matrix.framework }} /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
 
-      - uses: nuget/setup-nuget@v2.0.1
+      - uses: nuget/setup-nuget@v2.0.2
         with:
           nuget-version: '5.x'
           

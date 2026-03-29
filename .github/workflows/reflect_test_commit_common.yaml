@@ -128,7 +128,6 @@ jobs:
 
   # This workflow contains a single job called "build"
   build_windows_prepare_scala:
-    if: ${{ inputs.EnableWindowsTests }}
     needs: build_windows
     strategy:
       fail-fast: false
@@ -250,7 +249,6 @@ jobs:
       - id: set-matrix-unix-os-ext
         if: ${{ inputs.ExecuteOnMoreOSes == true }}
         run: echo "matrix_unix=[ 'ubuntu-22.04', 'ubuntu-22.04-arm', 'ubuntu-24.04', 'ubuntu-24.04-arm', 'macos-14', 'macos-15', 'macos-26' ]" >> $GITHUB_OUTPUT
-
 
   java_tests_windows:
     if: ${{ inputs.EnableWindowsTests }}

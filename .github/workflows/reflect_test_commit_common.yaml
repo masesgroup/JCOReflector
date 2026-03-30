@@ -520,7 +520,13 @@ jobs:
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
         exclude:
-          - os: macos-latest
+          - os: macos-14
+            jdk_vendor: temurin
+            jdk_version: 8
+          - os: macos-15
+            jdk_vendor: temurin
+            jdk_version: 8
+          - os: macos-26
             jdk_vendor: temurin
             jdk_version: 8
           - jdk_vendor: microsoft

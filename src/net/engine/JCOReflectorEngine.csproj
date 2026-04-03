@@ -106,8 +106,10 @@
   <ItemGroup>
     <EmbeddedResource Condition="$(TargetFramework) == 'net462'" Include="..\..\jvm\src\net462\assemblies.list" />
     <EmbeddedResource Condition="$(TargetFramework) == 'net6.0'" Include="..\..\jvm\src\net6.0\assemblies.list" />
-	<EmbeddedResource Condition="$(TargetFramework) == 'net7.0'" Include="..\..\jvm\src\net7.0\assemblies.list" />
-	<EmbeddedResource Condition="$(TargetFramework) == 'net8.0'" Include="..\..\jvm\src\net8.0\assemblies.list" />
+	  <EmbeddedResource Condition="$(TargetFramework) == 'net7.0'" Include="..\..\jvm\src\net7.0\assemblies.list" />
+	  <EmbeddedResource Condition="$(TargetFramework) == 'net8.0'" Include="..\..\jvm\src\net8.0\assemblies.list" />
+	  <EmbeddedResource Condition="$(TargetFramework) == 'net9.0'" Include="..\..\jvm\src\net9.0\assemblies.list" />
+	  <EmbeddedResource Condition="$(TargetFramework) == 'net10.0'" Include="..\..\jvm\src\net10.0\assemblies.list" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
@@ -117,7 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="3.2.1" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.6.7-beta5">
+    <PackageReference Include="MASES.JCOBridge" Version="2.6.7-beta6">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>

@@ -38,7 +38,7 @@ jobs:
           repository: masesgroup/CommonTools
           path: CommonTools
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Setup IndexNow # Generate files dynamically to prevent them from being leaked in public repositories.
         run: echo ${{ secrets.INDEXNOW_KEY }} > ./docs/${{ secrets.INDEXNOW_KEY }}.txt
       - name: Build with Jekyll

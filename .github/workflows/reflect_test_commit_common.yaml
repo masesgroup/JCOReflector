@@ -12,8 +12,13 @@ on:
         required: false
         default: false
         type: boolean
-      ExecuteOnLargerJDKSet:
-        description: 'Executes tests on more JDK'
+      ExecuteOnLargerJDKVendorSet:
+        description: 'Executes tests on more JDK vendor'
+        required: false
+        default: false
+        type: boolean
+      ExecuteOnLargerJDKVersionSet:
+        description: 'Executes tests on more JDK version'
         required: false
         default: false
         type: boolean
@@ -214,17 +219,24 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix_jdk_vendor: ${{ steps.set-jdk-vendor.outputs.matrix_jdk_vendor || steps.set-jdk-vendor-ext.outputs.matrix_jdk_vendor }}
+      matrix_jdk_version: ${{ steps.set-jdk-version.outputs.matrix_jdk_version || steps.set-jdk-version-ext.outputs.matrix_jdk_version }}
       matrix_win_os: ${{ steps.set-matrix-win-os.outputs.matrix_win || steps.set-matrix-win-os-ext.outputs.matrix_win }}
       matrix_linux_os: ${{ steps.set-matrix-linux-os.outputs.matrix_linux || steps.set-matrix-linux-os-ext.outputs.matrix_linux }}
       matrix_mac_os: ${{ steps.set-matrix-mac-os.outputs.matrix_mac || steps.set-matrix-mac-os-ext.outputs.matrix_mac }}
       matrix_unix_os: ${{ steps.set-matrix-unix-os.outputs.matrix_unix || steps.set-matrix-unix-os-ext.outputs.matrix_unix }}
     steps:
       - id: set-jdk-vendor
-        if: ${{ inputs.ExecuteOnLargerJDKSet == false }}
+        if: ${{ inputs.ExecuteOnLargerJDKVendorSet == false }}
         run: echo "matrix_jdk_vendor=[ 'temurin' ]" >> $GITHUB_OUTPUT
       - id: set-jdk-vendor-ext
-        if: ${{ inputs.ExecuteOnLargerJDKSet == true }}
+        if: ${{ inputs.ExecuteOnLargerJDKVendorSet == true }}
         run: echo "matrix_jdk_vendor=[ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle' ]" >> $GITHUB_OUTPUT
+      - id: set-jdk-version-ext
+        if: ${{ inputs.ExecuteOnLargerJDKVersionSet == false }}
+        run: echo "matrix_jdk_version=[ '17', '21', '25' ]" >> $GITHUB_OUTPUT
+      - id: set-jdk-version
+        if: ${{ inputs.ExecuteOnLargerJDKVersionSet == true }}
+        run: echo "matrix_jdk_version=[ '8', '11', '17', '21', '25' ]" >> $GITHUB_OUTPUT
       - id: set-matrix-win-os
         if: ${{ inputs.ExecuteOnMoreOSes == false }}
         run: echo "matrix_win=[ 'windows-2025' ]" >> $GITHUB_OUTPUT
@@ -259,7 +271,7 @@ jobs:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
-        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
           - jdk_vendor: microsoft
             jdk_version: 8
@@ -375,7 +387,7 @@ jobs:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
-        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
           - jdk_vendor: microsoft
             jdk_version: 8
@@ -518,7 +530,7 @@ jobs:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_unix_os) }}
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
-        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
           - os: macos-14
             jdk_vendor: temurin
@@ -651,7 +663,7 @@ jobs:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
-        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
           - jdk_vendor: microsoft
             jdk_version: 8
@@ -783,7 +795,7 @@ jobs:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
-        jdk_version: [ '8', '11', '17', '21', '25' ] # only LTS versions
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
           - jdk_vendor: temurin
             jdk_version: 8

@@ -135,4 +135,4 @@ jobs:
     secrets:
       actor: ${{ github.actor }}
       GITHUB_TOKEN_INHERITED: ${{ secrets.GITHUB_TOKEN }}
-      JCOBRIDGE_ENCODED: ${{ secrets.JCOBRIDGE_ENCODED_2_6_7 }}
+      JCOBRIDGE_ENCODED: ${{ secrets.JCOBRIDGE_ENCODED_2_6_8 }}

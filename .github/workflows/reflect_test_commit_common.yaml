@@ -306,6 +306,10 @@ jobs:
           dotnet-version: |
             10.x
 
+      - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
+        if: ${{ matrix.os == 'windows-11-arm' }}
+        run: choco install zstandard
+
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v5
         with:
@@ -421,6 +425,10 @@ jobs:
         with:
           dotnet-version: |
             10.x
+
+      - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
+        if: ${{ matrix.os == 'windows-11-arm' }}
+        run: choco install zstandard
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v5

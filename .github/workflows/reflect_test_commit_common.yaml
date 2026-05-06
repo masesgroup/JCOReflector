@@ -274,6 +274,8 @@ jobs:
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
           - os: windows-11-arm
+            framework: net462
+          - os: windows-11-arm
             jdk_version: 8
           - os: windows-11-arm
             jdk_version: 11
@@ -399,6 +401,8 @@ jobs:
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
+          - os: windows-11-arm
+            framework: net462
           - os: windows-11-arm
             jdk_version: 8
           - os: windows-11-arm

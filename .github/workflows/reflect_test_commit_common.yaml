@@ -950,7 +950,11 @@ jobs:
 
   execute_finalize:
     needs: [java_tests_windows, scala_tests_windows, java_tests_unix, scala_tests_linux, scala_tests_mac]
-
+    if: |
+      always() &&
+      !contains(needs.*.result, 'failure') &&
+      !contains(needs.*.result, 'cancelled')
+      
     runs-on: windows-2022
     steps:
 

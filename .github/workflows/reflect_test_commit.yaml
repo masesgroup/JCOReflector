@@ -116,7 +116,7 @@ jobs:
     needs: check
     if: "always() && needs.check.outputs.run_job == 'true'"
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
       attestations: write
       packages: write

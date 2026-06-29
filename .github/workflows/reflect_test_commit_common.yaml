@@ -115,7 +115,7 @@ jobs:
         shell: cmd
 
       - name: Save ${{ matrix.framework }} JCOReflector source in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: |
@@ -125,7 +125,7 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Save JCOReflector bin in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/
@@ -151,7 +151,7 @@ jobs:
         run: Expand-Archive -LiteralPath '.\scala-${{ env.SCALARELEASE }}.zip' -DestinationPath .\bin\ -Force
 
       - name: Save Scala bin in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/
@@ -182,7 +182,7 @@ jobs:
             10.x
 
       - name: Restore ${{ matrix.framework }} JCOReflector source from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -207,7 +207,7 @@ jobs:
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
 
       - name: Save ${{ matrix.framework }} JCOReflector bin in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/
@@ -319,7 +319,7 @@ jobs:
         run: choco install zstandard
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -447,7 +447,7 @@ jobs:
         run: choco install zstandard
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -455,7 +455,7 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Restore Scala bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -606,7 +606,7 @@ jobs:
             10.x
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -724,7 +724,7 @@ jobs:
             10.x
 
       - name: Restore JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -864,7 +864,7 @@ jobs:
             10.x
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -974,7 +974,7 @@ jobs:
             10.x
 
       - name: Restore net462 JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -982,7 +982,7 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net462_${{ github.sha }}
    
       - name: Restore net8.0 JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -990,7 +990,7 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net8.0_${{ github.sha }}
 
       - name: Restore net9.0 JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -998,7 +998,7 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net9.0_${{ github.sha }}
 
       - name: Restore net10.0 JCOReflector bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -1037,7 +1037,7 @@ jobs:
           path: .\bin\*nupkg
 
       - name: Restore net462 JCOReflector source from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -1048,7 +1048,7 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net462_${{ github.sha }}
 
       - name: Restore net8.0 JCOReflector source from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -1059,7 +1059,7 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net8.0_${{ github.sha }}
 
       - name: Restore net9.0 JCOReflector source from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -1070,7 +1070,7 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net9.0_${{ github.sha }}
 
       - name: Restore net10.0 JCOReflector source from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true

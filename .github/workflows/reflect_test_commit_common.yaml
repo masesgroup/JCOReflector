@@ -236,7 +236,10 @@ jobs:
       - name: Install sshpass
         if: ${{ inputs.UseSpecialSettings == true }}
         shell: bash
-        run: sudo apt-get update && sudo apt-get install -y sshpass
+        timeout-minutes: 3
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          which sshpass || sudo apt-get install -y sshpass
 
       - name: Download ${{ inputs.SpecialSettingsSource }} via SFTP
         if: ${{ inputs.UseSpecialSettings == true }}

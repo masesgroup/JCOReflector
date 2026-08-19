@@ -135,9 +135,19 @@ jobs:
         shell: cmd
         run: dir .\Deploy\*nupkg
 
-      - name: Add special repo
+      - name: Add special repo with source mapping
         if: ${{ success() && inputs.UseSpecialSettings == true }}
-        run: dotnet nuget add source --name localDeployNuGet "${{ github.workspace }}\Deploy\"
+        shell: cmd
+        run: |
+          dotnet nuget add source "${{ github.workspace }}\Deploy\" --name localDeployNuGet
+          dotnet nuget add source-mapping --package-source-name localDeployNuGet --package-pattern "MASES.JCOBridge*"
+          
+      - name: Show effective NuGet config
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: |
+          dotnet nuget list source
+          type "${{ github.workspace }}\NuGet.Config"
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -261,10 +271,20 @@ jobs:
         shell: bash
         run: ls -la ./Deploy/*.nupkg
 
-      - name: Add special repo
+      - name: Add special repo with source mapping
         if: ${{ success() && inputs.UseSpecialSettings == true }}
         shell: bash
-        run: dotnet nuget add source --name localDeployNuGet "${{ github.workspace }}/Deploy/"
+        run: |
+          DEPLOY_PATH="${{ github.workspace }}/Deploy/"
+          dotnet nuget add source "$DEPLOY_PATH" --name localDeployNuGet
+          dotnet nuget add source-mapping --package-source-name localDeployNuGet --package-pattern "MASES.JCOBridge*"
+          
+      - name: Show effective NuGet config
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: |
+          dotnet nuget list source
+          cat "${{ github.workspace }}/NuGet.Config"
 
       - name: Restore ${{ matrix.framework }} JCOReflector source from cache
         uses: actions/cache/restore@v6

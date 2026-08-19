@@ -13,6 +13,16 @@ on:
    
   workflow_dispatch:
     inputs:
+      UseSpecialSettings:
+        description: 'Use special settings: not available in forks'
+        required: false
+        default: false
+        type: boolean
+      SpecialSettingsSource:
+        description: 'Name of special settings file: not available in forks'
+        required: false
+        default: 'source.zip'
+        type: string
       ExecuteOnMoreOSes:
         description: 'Executes tests on more Oses'
         required: false
@@ -124,6 +134,8 @@ jobs:
       artifact-metadata: write
     uses: ./.github/workflows/reflect_test_commit_common.yaml
     with:
+      UseSpecialSettings: ${{ inputs.UseSpecialSettings || false }}
+      SpecialSettingsSource: ${{ inputs.SpecialSettingsSource || 'source.zip' }}
       ExecuteOnMoreOSes: ${{ inputs.ExecuteOnMoreOSes || github.event_name == 'schedule' }}
       ExecuteOnLargerJDKVendorSet: ${{ inputs.ExecuteOnLargerJDKVendorSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
       ExecuteOnLargerJDKVersionSet: ${{ inputs.ExecuteOnLargerJDKVersionSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
@@ -136,3 +148,10 @@ jobs:
       actor: ${{ github.actor }}
       GITHUB_TOKEN_INHERITED: ${{ secrets.GITHUB_TOKEN }}
       JCOBRIDGE_ENCODED: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+      SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
+      SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+      SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+      SFTP_HOST_KEY: ${{ secrets.SFTP_HOST_KEY }}
+      SFTP_KNOWN_HOST: ${{ secrets.SFTP_KNOWN_HOST }}
+      FIRST_SPECIAL_SETTINGS_PASSWORD: ${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
+      SPECIAL_SETTINGS_PASSWORD: ${{ secrets.SPECIAL_SETTINGS_PASSWORD }}

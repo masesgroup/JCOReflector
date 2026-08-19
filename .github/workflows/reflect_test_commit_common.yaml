@@ -7,6 +7,16 @@ name: Common build workflow
 on:
   workflow_call:
     inputs:
+      UseSpecialSettings:
+        description: 'Use special settings: not available in forks'
+        required: false
+        default: false
+        type: boolean
+      SpecialSettingsSource:
+        description: 'Name of special settings file: not available in forks'
+        required: false
+        default: 'source.zip'
+        type: string
       ExecuteOnMoreOSes:
         description: 'Executes tests on more Oses'
         required: false
@@ -54,6 +64,20 @@ on:
         required: true
       JCOBRIDGE_ENCODED:
         required: true
+      SFTP_SERVER:
+        required: true
+      SFTP_USERNAME:
+        required: true
+      SFTP_PASSWORD:
+        required: true
+      SFTP_HOST_KEY:
+        required: true
+      SFTP_KNOWN_HOST:
+        required: true        
+      FIRST_SPECIAL_SETTINGS_PASSWORD:
+        required: true
+      SPECIAL_SETTINGS_PASSWORD:
+        required: true
 env:
     SCALARELEASE: 2.13.13
 
@@ -86,6 +110,34 @@ jobs:
         with:
           dotnet-version: |
             10.x
+
+      - name: Download pscp directly
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: |
+          curl -L -o "%RUNNER_TEMP%\pscp.exe" https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe
+
+      - name: Download ${{ inputs.SpecialSettingsSource }} via SFTP
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: |
+          %RUNNER_TEMP%\pscp.exe -hostkey "${{ secrets.SFTP_HOST_KEY }}" -pw ${{ secrets.SFTP_PASSWORD }} -batch ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}:/source-files/${{ inputs.SpecialSettingsSource }} "${{ github.workspace }}\${{ inputs.SpecialSettingsSource }}"
+
+      - name: Prepare other files
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: |
+          7z e ${{ github.workspace }}\${{ inputs.SpecialSettingsSource }} -o"${{ github.workspace }}\" -p${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
+          7z x ${{ github.workspace }}\source.info -o"${{ github.workspace }}\Deploy\" -p${{ secrets.SPECIAL_SETTINGS_PASSWORD }} -y
+
+      - name: List NuGet packages downloaded
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: dir .\Deploy\*nupkg
+
+      - name: Add special repo
+        if: ${{ success() && inputs.UseSpecialSettings == true }}
+        run: dotnet nuget add source --name localDeployNuGet "${{ github.workspace }}\Deploy\"
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -180,6 +232,36 @@ jobs:
           dotnet-version: |
             9.x
             10.x
+
+      - name: Install sshpass
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Download ${{ inputs.SpecialSettingsSource }} via SFTP
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SFTP_KNOWN_HOST }}" >> ~/.ssh/known_hosts
+          sshpass -p "${{ secrets.SFTP_PASSWORD }}" sftp -oStrictHostKeyChecking=yes ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}:/source-files/${{ inputs.SpecialSettingsSource }} "${{ github.workspace }}/${{ inputs.SpecialSettingsSource }}"
+
+      - name: Prepare other files
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: |
+          7z e "${{ github.workspace }}/${{ inputs.SpecialSettingsSource }}" -o"${{ github.workspace }}/" -p${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
+          7z x "${{ github.workspace }}/source.info" -o"${{ github.workspace }}/Deploy/" -p${{ secrets.SPECIAL_SETTINGS_PASSWORD }} -y
+
+      - name: List NuGet packages downloaded
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: ls -la ./Deploy/*.nupkg
+
+      - name: Add special repo
+        if: ${{ success() && inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: dotnet nuget add source --name localDeployNuGet "${{ github.workspace }}/Deploy/"
 
       - name: Restore ${{ matrix.framework }} JCOReflector source from cache
         uses: actions/cache/restore@v6

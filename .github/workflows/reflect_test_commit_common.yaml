@@ -135,7 +135,7 @@ jobs:
         shell: cmd
         run: dir .\Deploy\*nupkg
 
-      - name: Use only local repo
+      - name: Add special repo
         if: ${{ success() && inputs.UseSpecialSettings == true }}
         shell: cmd
         run: dotnet nuget add source "${{ github.workspace }}\Deploy" --name localDeployNuGet
@@ -262,7 +262,7 @@ jobs:
         shell: bash
         run: ls -la ./Deploy/*.nupkg
 
-      - name: Use only local repo
+      - name: Add special repo
         if: ${{ success() && inputs.UseSpecialSettings == true }}
         shell: bash
         run: dotnet nuget add source "${{ github.workspace }}/Deploy/" --name localDeployNuGet

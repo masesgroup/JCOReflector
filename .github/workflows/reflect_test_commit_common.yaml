@@ -138,9 +138,7 @@ jobs:
       - name: Use only local repo
         if: ${{ success() && inputs.UseSpecialSettings == true }}
         shell: cmd
-        run: |
-          dotnet nuget add source "${{ github.workspace }}\Deploy" --name localDeployNuGet
-          dotnet nuget remove source nuget.org
+        run: dotnet nuget add source "${{ github.workspace }}\Deploy" --name localDeployNuGet
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -267,9 +265,7 @@ jobs:
       - name: Use only local repo
         if: ${{ success() && inputs.UseSpecialSettings == true }}
         shell: bash
-        run: |
-          dotnet nuget add source "${{ github.workspace }}/Deploy/" --name localDeployNuGet
-          dotnet nuget remove source nuget.org
+        run: dotnet nuget add source "${{ github.workspace }}/Deploy/" --name localDeployNuGet
 
       - name: Restore ${{ matrix.framework }} JCOReflector source from cache
         uses: actions/cache/restore@v6

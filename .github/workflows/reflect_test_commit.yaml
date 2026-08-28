@@ -147,7 +147,7 @@ jobs:
     secrets:
       actor: ${{ github.actor }}
       GITHUB_TOKEN_INHERITED: ${{ secrets.GITHUB_TOKEN }}
-      JCOBRIDGE_ENCODED: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+      JCOBRIDGE_ENCODED: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
       SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
       SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
       SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}

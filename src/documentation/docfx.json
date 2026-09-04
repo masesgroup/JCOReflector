@@ -41,6 +41,12 @@
         "files": [
           "images/**"
         ]
+      },
+      {
+        "src": "../../",
+        "files": [
+          "llms.txt"
+        ]
       }
     ],
     "overwrite": [

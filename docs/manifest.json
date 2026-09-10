@@ -11,6 +11,16 @@
       }
     },
     {
+      "type": "Resource",
+      "source_relative_path": "../../llms.txt",
+      "output": {
+        "resource": {
+          "relative_path": "llms.txt"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/ClrTest.Reflection.DefaultFormatProvider.yml",
       "output": {

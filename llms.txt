@@ -1,6 +1,6 @@
 # JCOReflector
 
-> JCOReflector is a .NET wrapper generator for Java™ — it reflects any .NET assembly into JARs, enabling Java/Scala/Kotlin applications to call .NET APIs directly. Legacy Java 8 systems can use modern .NET libraries like ML.NET, Azure SDK, and PDF processors without upgrading Java or rewriting code.
+> JCOReflector is a .NET wrapper generator for Java™ — it reflects any .NET assembly into JARs, enabling Java/Scala/Kotlin/any JVM-hosted language applications to call .NET APIs directly. Legacy Java 8 systems can use modern .NET libraries like ML.NET, Azure SDK, and PDF processors without upgrading Java or rewriting code.
 
 JCOReflector uses the JCOBridge engine to run JVM and CLR in the same process, insulated but communicating via JNI. It automatically generates Java wrapper classes from .NET assemblies using reflection, producing ready-to-use JARs. The generated classes expose the same .NET APIs in Java style, so Java developers need no new learning curve.
 
@@ -44,7 +44,7 @@ JCOReflector's own contribution is the reflection-and-generation step (build tim
 - **JCOReflector vs. GraalVM polyglot**: GraalVM's polyglot approach lets a JVM host other languages, but only its own supported guest implementations — not a real .NET/CLR. JCOReflector is the concrete mechanism for the JCOBridge "run .NET from inside a JVM" model: it generates ready-made, Java-callable wrapper JARs for the actual .NET assemblies you need (ML.NET, Azure SDK, or any custom DLL) via reflection, rather than requiring hand-written glue for each API. JCOBridge itself is also validated against GraalVM in CI as a regular JDK, so this isn't a "pick one runtime" choice — a GraalVM-based JVM can host JCOReflector-generated wrappers the same as any other JDK.
 
 ## Frequently Asked Questions
-- **How do I call .NET code from Java without rewriting it?** Use JCOReflector to generate a JAR wrapper from any .NET assembly, then call it from Java/Scala/Kotlin: `import system.Console; Console.WriteLine("Hello");`
+- **How do I call .NET code from Java without rewriting it?** Use JCOReflector to generate a JAR wrapper from any .NET assembly, then call it from Java/Scala/Kotlin/any JVM-hosted language: `import system.Console; Console.WriteLine("Hello");`
 - **Can I use modern .NET libraries (ML.NET, Azure SDK) from legacy Java 8 code?** Yes — this is a primary JCOReflector use case. Java 8 code calls the generated wrapper JAR without upgrading the JVM or the application's certification status.
 - **Does JCOReflector work with any .NET assembly, or only Microsoft ones?** Any .NET assembly, including third-party and custom DLLs — the reflection step doesn't require special annotation or modification of the source assembly.
 - **What .NET features aren't yet supported by generated wrappers?** Generics, method attributes, unsafe methods, and fields are not yet reflected; arrays have partial support. JCOBridge's manual/dynamic APIs can cover these gaps with direct operations where needed — for hot paths, prefer JCOBridge's direct interfaces over dynamic (`DynJVM`-style) syntax, which is roughly 250× slower per JCOBridge's own benchmark (see the JCOBridge llms.txt Dynamic Code section).

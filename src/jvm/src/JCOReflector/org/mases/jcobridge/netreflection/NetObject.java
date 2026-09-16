@@ -120,7 +120,7 @@ public class NetObject implements IJCOBridgeReflected {
         try {
             JCType concreteType = JCOBridgeInstance.getInstance(getJCOAssemblyName()).GetType(fullGenericClrName);
             this.classInstance = (JCObject) concreteType.NewObject(constructorArgs);
-        } catch (JCException e) {
+        } catch (JCNativeException e) {
             throw translateException(e);
         }
     }

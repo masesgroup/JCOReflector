@@ -172,7 +172,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
     
     // Methods section
     
-    public static boolean IsDefaultView(ICollectionView view) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean IsDefaultView(ICollectionView view) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException, system.NotImplementedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefaultView = null;
@@ -186,7 +186,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
         }
     }
 
-    public static ICollectionView GetDefaultView(NetObject source) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException {
+    public static  ICollectionView GetDefaultView(NetObject source) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultView = null;

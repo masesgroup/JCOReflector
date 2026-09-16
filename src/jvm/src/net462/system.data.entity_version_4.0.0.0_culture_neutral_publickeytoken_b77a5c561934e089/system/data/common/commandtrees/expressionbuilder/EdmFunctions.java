@@ -153,7 +153,7 @@ public class EdmFunctions extends NetObject  {
     
     // Methods section
     
-    public static DbExpression Contains(DbExpression searchedString, DbExpression searchedForString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbExpression Contains(DbExpression searchedString, DbExpression searchedForString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContains = null;
@@ -168,7 +168,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Abs(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Abs(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -183,7 +183,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddDays(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddDays(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddDays = null;
@@ -198,7 +198,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddHours(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddHours(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddHours = null;
@@ -213,7 +213,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddMicroseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddMicroseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddMicroseconds = null;
@@ -228,7 +228,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddMilliseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddMilliseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddMilliseconds = null;
@@ -243,7 +243,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddMinutes(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddMinutes(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddMinutes = null;
@@ -258,7 +258,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddMonths(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddMonths(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddMonths = null;
@@ -273,7 +273,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddNanoseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddNanoseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddNanoseconds = null;
@@ -288,7 +288,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddSeconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddSeconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddSeconds = null;
@@ -303,7 +303,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression AddYears(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression AddYears(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddYears = null;
@@ -318,7 +318,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Average(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Average(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAverage = null;
@@ -333,7 +333,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression BitwiseAnd(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression BitwiseAnd(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseAnd = null;
@@ -348,7 +348,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression BitwiseNot(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression BitwiseNot(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseNot = null;
@@ -363,7 +363,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression BitwiseOr(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression BitwiseOr(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseOr = null;
@@ -378,7 +378,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression BitwiseXor(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression BitwiseXor(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseXor = null;
@@ -393,7 +393,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Ceiling(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Ceiling(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -408,7 +408,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Concat(DbExpression string1, DbExpression string2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Concat(DbExpression string1, DbExpression string2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConcat = null;
@@ -423,7 +423,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Count(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Count(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCount = null;
@@ -438,7 +438,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression CreateDateTime(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression CreateDateTime(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDateTime = null;
@@ -453,7 +453,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression CreateDateTimeOffset(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second, DbExpression timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression CreateDateTimeOffset(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second, DbExpression timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDateTimeOffset = null;
@@ -468,7 +468,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression CreateTime(DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression CreateTime(DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTime = null;
@@ -483,7 +483,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression CurrentDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression CurrentDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCurrentDateTime = null;
@@ -498,7 +498,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression CurrentDateTimeOffset() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression CurrentDateTimeOffset() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCurrentDateTimeOffset = null;
@@ -513,7 +513,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression CurrentUtcDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression CurrentUtcDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCurrentUtcDateTime = null;
@@ -528,7 +528,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Day(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Day(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDay = null;
@@ -543,7 +543,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DayOfYear(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DayOfYear(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDayOfYear = null;
@@ -558,7 +558,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffDays(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffDays(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffDays = null;
@@ -573,7 +573,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffHours(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffHours(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffHours = null;
@@ -588,7 +588,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffMicroseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffMicroseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffMicroseconds = null;
@@ -603,7 +603,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffMilliseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffMilliseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffMilliseconds = null;
@@ -618,7 +618,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffMinutes(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffMinutes(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffMinutes = null;
@@ -633,7 +633,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffMonths(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffMonths(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffMonths = null;
@@ -648,7 +648,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffNanoseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffNanoseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffNanoseconds = null;
@@ -663,7 +663,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffSeconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffSeconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffSeconds = null;
@@ -678,7 +678,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression DiffYears(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression DiffYears(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffYears = null;
@@ -693,7 +693,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression EndsWith(DbExpression stringArgument, DbExpression suffix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression EndsWith(DbExpression stringArgument, DbExpression suffix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEndsWith = null;
@@ -708,7 +708,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Floor(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Floor(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFloor = null;
@@ -723,7 +723,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression GetTotalOffsetMinutes(DbExpression dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression GetTotalOffsetMinutes(DbExpression dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTotalOffsetMinutes = null;
@@ -738,7 +738,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Hour(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Hour(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHour = null;
@@ -753,7 +753,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression IndexOf(DbExpression searchString, DbExpression stringToFind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression IndexOf(DbExpression searchString, DbExpression stringToFind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIndexOf = null;
@@ -768,7 +768,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Left(DbExpression stringArgument, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Left(DbExpression stringArgument, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeft = null;
@@ -783,7 +783,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Length(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Length(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLength = null;
@@ -798,7 +798,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression LongCount(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression LongCount(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLongCount = null;
@@ -813,7 +813,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Max(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Max(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -828,7 +828,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Millisecond(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Millisecond(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMillisecond = null;
@@ -843,7 +843,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Min(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Min(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -858,7 +858,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Minute(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Minute(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinute = null;
@@ -873,7 +873,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Month(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Month(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMonth = null;
@@ -888,7 +888,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression NewGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression NewGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewGuid = null;
@@ -903,7 +903,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Power(DbExpression baseArgument, DbExpression exponent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Power(DbExpression baseArgument, DbExpression exponent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPower = null;
@@ -918,7 +918,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Replace(DbExpression stringArgument, DbExpression toReplace, DbExpression replacement) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Replace(DbExpression stringArgument, DbExpression toReplace, DbExpression replacement) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReplace = null;
@@ -933,7 +933,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Reverse(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Reverse(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverse = null;
@@ -948,7 +948,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Right(DbExpression stringArgument, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Right(DbExpression stringArgument, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRight = null;
@@ -963,7 +963,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Round(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Round(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -978,7 +978,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Round(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Round(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -993,7 +993,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Second(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Second(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSecond = null;
@@ -1008,7 +1008,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression StartsWith(DbExpression stringArgument, DbExpression prefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression StartsWith(DbExpression stringArgument, DbExpression prefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartsWith = null;
@@ -1023,7 +1023,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression StDev(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression StDev(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStDev = null;
@@ -1038,7 +1038,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression StDevP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression StDevP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStDevP = null;
@@ -1053,7 +1053,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Substring(DbExpression stringArgument, DbExpression start, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Substring(DbExpression stringArgument, DbExpression start, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubstring = null;
@@ -1068,7 +1068,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Sum(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Sum(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSum = null;
@@ -1083,7 +1083,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression ToLower(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression ToLower(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToLower = null;
@@ -1098,7 +1098,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression ToUpper(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression ToUpper(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUpper = null;
@@ -1113,7 +1113,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Trim(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Trim(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrim = null;
@@ -1128,7 +1128,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression TrimEnd(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression TrimEnd(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrimEnd = null;
@@ -1143,7 +1143,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression TrimStart(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression TrimStart(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrimStart = null;
@@ -1158,7 +1158,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Truncate(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Truncate(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;
@@ -1173,7 +1173,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression TruncateTime(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression TruncateTime(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncateTime = null;
@@ -1188,7 +1188,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Var(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Var(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVar = null;
@@ -1203,7 +1203,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression VarP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression VarP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVarP = null;
@@ -1218,7 +1218,7 @@ public class EdmFunctions extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Year(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
+    public static  DbFunctionExpression Year(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectYear = null;

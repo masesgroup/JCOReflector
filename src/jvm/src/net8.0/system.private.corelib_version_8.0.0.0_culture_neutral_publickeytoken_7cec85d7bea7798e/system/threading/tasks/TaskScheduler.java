@@ -152,7 +152,7 @@ public class TaskScheduler extends NetObject  {
     
     // Methods section
     
-    public static TaskScheduler FromCurrentSynchronizationContext() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
+    public static  TaskScheduler FromCurrentSynchronizationContext() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromCurrentSynchronizationContext = null;

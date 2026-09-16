@@ -159,7 +159,7 @@ public class ObjectConverter extends NetObject  {
     
     // Methods section
     
-    public static NetObject ConvertValue(NetObject value, NetType toType, java.lang.String formatString) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  NetObject ConvertValue(NetObject value, NetType toType, java.lang.String formatString) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertValue = null;

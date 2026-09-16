@@ -196,7 +196,7 @@ public class AxParameterData extends NetObject  {
     
     // Methods section
     
-    public static AxParameterData[] Convert(ParameterInfo[] infos) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  AxParameterData[] Convert(ParameterInfo[] infos) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -217,7 +217,7 @@ public class AxParameterData extends NetObject  {
         }
     }
 
-    public static AxParameterData[] Convert(ParameterInfo[] infos, boolean ignoreByRefs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
+    public static  AxParameterData[] Convert(ParameterInfo[] infos, boolean ignoreByRefs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;

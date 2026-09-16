@@ -160,7 +160,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean IsApplicationTargeting45() throws Throwable {
+    public static  boolean IsApplicationTargeting45() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsApplicationTargeting45 = null;
@@ -174,7 +174,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
         }
     }
 
-    public static WebSocket CreateFromStream(Stream stream, boolean isServer, java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public static  WebSocket CreateFromStream(Stream stream, boolean isServer, java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromStream = null;
@@ -189,7 +189,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
         }
     }
 
-    public static WebSocket CreateFromStream(Stream stream, WebSocketCreationOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.threading.SynchronizationLockException {
+    public static  WebSocket CreateFromStream(Stream stream, WebSocketCreationOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromStream = null;
@@ -254,7 +254,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void RegisterPrefixes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void RegisterPrefixes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

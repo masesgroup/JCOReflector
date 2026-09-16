@@ -153,7 +153,7 @@ public class WindowsRuntimeMarshal extends NetObject  {
     
     // Methods section
     
-    public static IActivationFactory GetActivationFactory(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  IActivationFactory GetActivationFactory(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetActivationFactory = null;

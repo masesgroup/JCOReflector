@@ -180,7 +180,7 @@ public class AssemblyName extends NetObject  {
     
     // Methods section
     
-    public static boolean ReferenceMatchesDefinition(AssemblyName reference, AssemblyName definition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  boolean ReferenceMatchesDefinition(AssemblyName reference, AssemblyName definition) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReferenceMatchesDefinition = null;
@@ -255,7 +255,7 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public static AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable {
+    public static  AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAssemblyName = null;

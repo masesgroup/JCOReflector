@@ -156,7 +156,7 @@ public class ContextUtil extends NetObject  {
     
     // Methods section
     
-    public static boolean IsCallerInRole(java.lang.String role) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
+    public static  boolean IsCallerInRole(java.lang.String role) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsCallerInRole = null;
@@ -170,7 +170,7 @@ public class ContextUtil extends NetObject  {
         }
     }
 
-    public static boolean IsDefaultContext() throws Throwable {
+    public static  boolean IsDefaultContext() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefaultContext = null;
@@ -184,7 +184,7 @@ public class ContextUtil extends NetObject  {
         }
     }
 
-    public static NetObject GetNamedProperty(java.lang.String name) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
+    public static  NetObject GetNamedProperty(java.lang.String name) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNamedProperty = null;
@@ -199,7 +199,7 @@ public class ContextUtil extends NetObject  {
         }
     }
 
-    public static void DisableCommit() throws Throwable {
+    public static  void DisableCommit() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -209,7 +209,7 @@ public class ContextUtil extends NetObject  {
         }
     }
 
-    public static void EnableCommit() throws Throwable {
+    public static  void EnableCommit() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -219,7 +219,7 @@ public class ContextUtil extends NetObject  {
         }
     }
 
-    public static void SetAbort() throws Throwable {
+    public static  void SetAbort() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -229,7 +229,7 @@ public class ContextUtil extends NetObject  {
         }
     }
 
-    public static void SetComplete() throws Throwable {
+    public static  void SetComplete() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -239,7 +239,7 @@ public class ContextUtil extends NetObject  {
         }
     }
 
-    public static void SetNamedProperty(java.lang.String name, NetObject value) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
+    public static  void SetNamedProperty(java.lang.String name, NetObject value) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

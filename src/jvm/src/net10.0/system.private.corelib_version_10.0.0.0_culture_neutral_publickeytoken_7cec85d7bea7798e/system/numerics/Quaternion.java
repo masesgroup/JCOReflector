@@ -192,7 +192,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Single Dot(Quaternion quaternion1, Quaternion quaternion2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Single Dot(Quaternion quaternion1, Quaternion quaternion2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDot = null;
@@ -237,7 +237,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Add(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Quaternion Add(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -252,7 +252,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Concatenate(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Quaternion Concatenate(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConcatenate = null;
@@ -267,7 +267,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Conjugate(Quaternion value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Quaternion Conjugate(Quaternion value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConjugate = null;
@@ -282,7 +282,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Create(Single x, Single y, Single z, Single w) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Quaternion Create(Single x, Single y, Single z, Single w) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -297,7 +297,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Create(Vector3 vectorPart, Single scalarPart) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Quaternion Create(Vector3 vectorPart, Single scalarPart) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -312,7 +312,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Quaternion CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromAxisAngle = null;
@@ -327,7 +327,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion CreateFromRotationMatrix(Matrix4x4 matrix) throws Throwable {
+    public static  Quaternion CreateFromRotationMatrix(Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromRotationMatrix = null;
@@ -342,7 +342,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Quaternion CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromYawPitchRoll = null;
@@ -357,7 +357,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Divide(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Quaternion Divide(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -372,7 +372,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Inverse(Quaternion value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Quaternion Inverse(Quaternion value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInverse = null;
@@ -387,7 +387,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Lerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Quaternion Lerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -402,7 +402,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Multiply(Quaternion value1, Single value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Quaternion Multiply(Quaternion value1, Single value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -417,7 +417,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Multiply(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Quaternion Multiply(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -432,7 +432,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Negate(Quaternion value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Quaternion Negate(Quaternion value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -447,7 +447,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Normalize(Quaternion value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Quaternion Normalize(Quaternion value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalize = null;
@@ -462,7 +462,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Slerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Quaternion Slerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSlerp = null;
@@ -477,7 +477,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Subtract(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Quaternion Subtract(Quaternion value1, Quaternion value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

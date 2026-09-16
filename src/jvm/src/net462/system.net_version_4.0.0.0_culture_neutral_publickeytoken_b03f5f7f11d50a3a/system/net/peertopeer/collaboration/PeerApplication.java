@@ -192,7 +192,7 @@ public class PeerApplication extends NetObject implements system.runtime.seriali
         }
     }
 
-    public static boolean Equals(NetObject objA, NetObject objB) throws Throwable, system.ObjectDisposedException {
+    public static  boolean Equals(NetObject objA, NetObject objB) throws Throwable, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;

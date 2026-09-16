@@ -152,7 +152,7 @@ public class SystemFonts extends NetObject  {
     
     // Methods section
     
-    public static Font GetFontByName(java.lang.String systemFontName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  Font GetFontByName(java.lang.String systemFontName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFontByName = null;

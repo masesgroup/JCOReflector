@@ -153,7 +153,7 @@ public class CursorInteropHelper extends NetObject  {
     
     // Methods section
     
-    public static Cursor Create(SafeHandle cursorHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  Cursor Create(SafeHandle cursorHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

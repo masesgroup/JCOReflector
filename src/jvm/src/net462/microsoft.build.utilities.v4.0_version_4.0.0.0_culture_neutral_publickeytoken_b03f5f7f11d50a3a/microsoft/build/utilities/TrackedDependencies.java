@@ -153,7 +153,7 @@ public class TrackedDependencies extends NetObject  {
     
     // Methods section
     
-    public static ITaskItem[] ExpandWildcards(ITaskItem[] expand) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public static  ITaskItem[] ExpandWildcards(ITaskItem[] expand) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExpandWildcards = null;

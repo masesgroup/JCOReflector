@@ -219,7 +219,7 @@ public class LinkedResource extends AttachmentBase  {
     
     // Methods section
     
-    public static LinkedResource CreateLinkedResourceFromString(java.lang.String content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  LinkedResource CreateLinkedResourceFromString(java.lang.String content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateLinkedResourceFromString = null;
@@ -234,7 +234,7 @@ public class LinkedResource extends AttachmentBase  {
         }
     }
 
-    public static LinkedResource CreateLinkedResourceFromString(java.lang.String content, ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException {
+    public static  LinkedResource CreateLinkedResourceFromString(java.lang.String content, ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateLinkedResourceFromString = null;
@@ -249,7 +249,7 @@ public class LinkedResource extends AttachmentBase  {
         }
     }
 
-    public static LinkedResource CreateLinkedResourceFromString(java.lang.String content, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  LinkedResource CreateLinkedResourceFromString(java.lang.String content, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateLinkedResourceFromString = null;

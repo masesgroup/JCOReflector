@@ -153,7 +153,7 @@ public class CounterSampleCalculator extends NetObject  {
     
     // Methods section
     
-    public static Single ComputeCounterValue(CounterSample oldSample, CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
+    public static  Single ComputeCounterValue(CounterSample oldSample, CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectComputeCounterValue = null;
@@ -168,7 +168,7 @@ public class CounterSampleCalculator extends NetObject  {
         }
     }
 
-    public static Single ComputeCounterValue(CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
+    public static  Single ComputeCounterValue(CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectComputeCounterValue = null;

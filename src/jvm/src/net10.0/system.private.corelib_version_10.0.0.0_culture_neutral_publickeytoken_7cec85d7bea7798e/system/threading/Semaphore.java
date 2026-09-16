@@ -206,7 +206,7 @@ public class Semaphore extends WaitHandle  {
     
     // Methods section
     
-    public static boolean TryOpenExisting(java.lang.String name, NamedWaitHandleOptions options, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException {
+    public static  boolean TryOpenExisting(java.lang.String name, NamedWaitHandleOptions options, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryOpenExisting = null;
@@ -220,7 +220,7 @@ public class Semaphore extends WaitHandle  {
         }
     }
 
-    public static boolean TryOpenExisting(java.lang.String name, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException {
+    public static  boolean TryOpenExisting(java.lang.String name, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryOpenExisting = null;
@@ -314,7 +314,7 @@ public class Semaphore extends WaitHandle  {
         }
     }
 
-    public static Semaphore OpenExisting(java.lang.String name, NamedWaitHandleOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException {
+    public static  Semaphore OpenExisting(java.lang.String name, NamedWaitHandleOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenExisting = null;
@@ -329,7 +329,7 @@ public class Semaphore extends WaitHandle  {
         }
     }
 
-    public static Semaphore OpenExisting(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException {
+    public static  Semaphore OpenExisting(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenExisting = null;

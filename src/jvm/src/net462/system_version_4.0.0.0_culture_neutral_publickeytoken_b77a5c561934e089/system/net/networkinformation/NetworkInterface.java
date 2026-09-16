@@ -159,7 +159,7 @@ public class NetworkInterface extends NetObject  {
     
     // Methods section
     
-    public static boolean GetIsNetworkAvailable() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
+    public static  boolean GetIsNetworkAvailable() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetIsNetworkAvailable = null;
@@ -232,7 +232,7 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public static NetworkInterface[] GetAllNetworkInterfaces() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.resources.MissingManifestResourceException, system.net.sockets.SocketException {
+    public static  NetworkInterface[] GetAllNetworkInterfaces() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.resources.MissingManifestResourceException, system.net.sockets.SocketException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAllNetworkInterfaces = null;

@@ -152,7 +152,7 @@ public class UriParser extends NetObject  {
     
     // Methods section
     
-    public static boolean IsKnownScheme(java.lang.String schemeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException {
+    public static  boolean IsKnownScheme(java.lang.String schemeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsKnownScheme = null;
@@ -166,7 +166,7 @@ public class UriParser extends NetObject  {
         }
     }
 
-    public static void Register(UriParser uriParser, java.lang.String schemeName, int defaultPort) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException {
+    public static  void Register(UriParser uriParser, java.lang.String schemeName, int defaultPort) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

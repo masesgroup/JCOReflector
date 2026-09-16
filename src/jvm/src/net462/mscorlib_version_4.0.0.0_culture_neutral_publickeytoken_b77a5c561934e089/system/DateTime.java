@@ -297,7 +297,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static boolean Equals(DateTime t1, DateTime t2) throws Throwable {
+    public static  boolean Equals(DateTime t1, DateTime t2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -325,7 +325,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static boolean IsLeapYear(int year) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  boolean IsLeapYear(int year) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLeapYear = null;
@@ -339,7 +339,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static boolean TryParse(java.lang.String s, JCORefOut<DateTime> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, JCORefOut<DateTime> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -353,7 +353,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static boolean TryParse(java.lang.String s, IFormatProvider provider, DateTimeStyles styles, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, IFormatProvider provider, DateTimeStyles styles, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -367,7 +367,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static boolean TryParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
+    public static  boolean TryParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -381,7 +381,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static boolean TryParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  boolean TryParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateTime> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -435,7 +435,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static int Compare(DateTime t1, DateTime t2) throws Throwable {
+    public static  int Compare(DateTime t1, DateTime t2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -555,7 +555,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static int DaysInMonth(int year, int month) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  int DaysInMonth(int year, int month) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDaysInMonth = null;
@@ -850,7 +850,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime FromBinary(long dateData) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public static  DateTime FromBinary(long dateData) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBinary = null;
@@ -865,7 +865,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime FromFileTime(long fileTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.NotSupportedException {
+    public static  DateTime FromFileTime(long fileTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFileTime = null;
@@ -880,7 +880,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime FromFileTimeUtc(long fileTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  DateTime FromFileTimeUtc(long fileTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFileTimeUtc = null;
@@ -895,7 +895,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime FromOADate(double d) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  DateTime FromOADate(double d) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromOADate = null;
@@ -910,7 +910,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
+    public static  DateTime Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -925,7 +925,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
+    public static  DateTime Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -940,7 +940,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime Parse(java.lang.String s, IFormatProvider provider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
+    public static  DateTime Parse(java.lang.String s, IFormatProvider provider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -955,7 +955,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArgumentException, system.OverflowException {
+    public static  DateTime ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -970,7 +970,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
+    public static  DateTime ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -985,7 +985,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime ParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  DateTime ParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -1000,7 +1000,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  DateTime ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -1015,7 +1015,7 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime SpecifyKind(DateTime value, DateTimeKind kind) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  DateTime SpecifyKind(DateTime value, DateTimeKind kind) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSpecifyKind = null;

@@ -421,7 +421,7 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public static int GetKnownRequestHeaderIndex(java.lang.String header) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  int GetKnownRequestHeaderIndex(java.lang.String header) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetKnownRequestHeaderIndex = null;
@@ -461,7 +461,7 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public static int GetKnownResponseHeaderIndex(java.lang.String header) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  int GetKnownResponseHeaderIndex(java.lang.String header) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetKnownResponseHeaderIndex = null;
@@ -1248,7 +1248,7 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public static java.lang.String GetKnownRequestHeaderName(int index) throws Throwable {
+    public static  java.lang.String GetKnownRequestHeaderName(int index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetKnownRequestHeaderName = null;
@@ -1262,7 +1262,7 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public static java.lang.String GetKnownResponseHeaderName(int index) throws Throwable {
+    public static  java.lang.String GetKnownResponseHeaderName(int index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetKnownResponseHeaderName = null;
@@ -1402,7 +1402,7 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public static java.lang.String GetStatusDescription(int code) throws Throwable {
+    public static  java.lang.String GetStatusDescription(int code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStatusDescription = null;

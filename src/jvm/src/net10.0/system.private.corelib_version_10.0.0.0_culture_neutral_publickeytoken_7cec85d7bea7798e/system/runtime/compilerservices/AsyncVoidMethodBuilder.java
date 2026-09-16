@@ -157,7 +157,7 @@ public class AsyncVoidMethodBuilder extends ValueType  {
     
     // Methods section
     
-    public static AsyncVoidMethodBuilder Create() throws Throwable, system.PlatformNotSupportedException {
+    public static  AsyncVoidMethodBuilder Create() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

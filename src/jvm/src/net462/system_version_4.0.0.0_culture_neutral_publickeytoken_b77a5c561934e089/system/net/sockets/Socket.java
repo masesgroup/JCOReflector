@@ -235,7 +235,7 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean ConnectAsync(SocketType socketType, ProtocolType protocolType, SocketAsyncEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.security.SecurityException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.FormatException {
+    public static  boolean ConnectAsync(SocketType socketType, ProtocolType protocolType, SocketAsyncEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.security.SecurityException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConnectAsync = null;
@@ -2479,7 +2479,7 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void CancelConnectAsync(SocketAsyncEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public static  void CancelConnectAsync(SocketAsyncEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -2629,7 +2629,7 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void Select(IList checkRead, IList checkWrite, IList checkError, int microSeconds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeInitializationException, system.FormatException, system.IndexOutOfRangeException, system.net.sockets.SocketException {
+    public static  void Select(IList checkRead, IList checkWrite, IList checkError, int microSeconds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeInitializationException, system.FormatException, system.IndexOutOfRangeException, system.net.sockets.SocketException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

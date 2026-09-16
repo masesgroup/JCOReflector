@@ -166,7 +166,7 @@ public class AntiXssEncoder extends HttpEncoder  {
     
     // Methods section
     
-    public static java.lang.String CssEncode(java.lang.String input) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  java.lang.String CssEncode(java.lang.String input) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCssEncode = null;
@@ -180,7 +180,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String HtmlEncode(java.lang.String input, boolean useNamedEntities) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
+    public static  java.lang.String HtmlEncode(java.lang.String input, boolean useNamedEntities) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHtmlEncode = null;
@@ -194,7 +194,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String HtmlFormUrlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
+    public static  java.lang.String HtmlFormUrlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHtmlFormUrlEncode = null;
@@ -208,7 +208,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String HtmlFormUrlEncode(java.lang.String input, int codePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.threading.ThreadAbortException {
+    public static  java.lang.String HtmlFormUrlEncode(java.lang.String input, int codePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHtmlFormUrlEncode = null;
@@ -222,7 +222,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String HtmlFormUrlEncode(java.lang.String input, Encoding inputEncoding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  java.lang.String HtmlFormUrlEncode(java.lang.String input, Encoding inputEncoding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHtmlFormUrlEncode = null;
@@ -236,7 +236,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String UrlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
+    public static  java.lang.String UrlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -250,7 +250,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String UrlEncode(java.lang.String input, int codePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.threading.ThreadAbortException {
+    public static  java.lang.String UrlEncode(java.lang.String input, int codePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -264,7 +264,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String UrlEncode(java.lang.String input, Encoding inputEncoding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  java.lang.String UrlEncode(java.lang.String input, Encoding inputEncoding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -278,7 +278,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String XmlAttributeEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
+    public static  java.lang.String XmlAttributeEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXmlAttributeEncode = null;
@@ -292,7 +292,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static java.lang.String XmlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
+    public static  java.lang.String XmlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXmlEncode = null;
@@ -306,7 +306,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public static void MarkAsSafe(LowerCodeCharts lowerCodeCharts, LowerMidCodeCharts lowerMidCodeCharts, MidCodeCharts midCodeCharts, UpperMidCodeCharts upperMidCodeCharts, UpperCodeCharts upperCodeCharts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
+    public static  void MarkAsSafe(LowerCodeCharts lowerCodeCharts, LowerMidCodeCharts lowerMidCodeCharts, MidCodeCharts midCodeCharts, UpperMidCodeCharts upperMidCodeCharts, UpperCodeCharts upperCodeCharts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

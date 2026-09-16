@@ -367,7 +367,7 @@ public class FrameworkElement extends UIElement implements system.windows.markup
         }
     }
 
-    public static FlowDirection GetFlowDirection(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  FlowDirection GetFlowDirection(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFlowDirection = null;
@@ -472,7 +472,7 @@ public class FrameworkElement extends UIElement implements system.windows.markup
         }
     }
 
-    public static void SetFlowDirection(DependencyObject element, FlowDirection value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  void SetFlowDirection(DependencyObject element, FlowDirection value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -502,7 +502,7 @@ public class FrameworkElement extends UIElement implements system.windows.markup
         }
     }
 
-    public void UpdateDefaultStyle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.Win32Exception, system.net.WebException, system.io.IOException, system.InvalidCastException {
+    public void UpdateDefaultStyle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.Win32Exception, system.io.FileFormatException, system.net.WebException, system.io.IOException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

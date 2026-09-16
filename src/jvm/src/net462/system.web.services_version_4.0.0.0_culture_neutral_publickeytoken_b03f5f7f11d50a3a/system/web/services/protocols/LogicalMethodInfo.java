@@ -172,7 +172,7 @@ public class LogicalMethodInfo extends NetObject  {
     
     // Methods section
     
-    public static boolean IsBeginMethod(MethodInfo methodInfo) throws Throwable, system.NotImplementedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  boolean IsBeginMethod(MethodInfo methodInfo) throws Throwable, system.NotImplementedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBeginMethod = null;
@@ -186,7 +186,7 @@ public class LogicalMethodInfo extends NetObject  {
         }
     }
 
-    public static boolean IsEndMethod(MethodInfo methodInfo) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  boolean IsEndMethod(MethodInfo methodInfo) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEndMethod = null;
@@ -293,7 +293,7 @@ public class LogicalMethodInfo extends NetObject  {
         }
     }
 
-    public static LogicalMethodInfo[] Create(MethodInfo[] methodInfos) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+    public static  LogicalMethodInfo[] Create(MethodInfo[] methodInfos) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -314,7 +314,7 @@ public class LogicalMethodInfo extends NetObject  {
         }
     }
 
-    public static LogicalMethodInfo[] Create(MethodInfo[] methodInfos, LogicalMethodTypes types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+    public static  LogicalMethodInfo[] Create(MethodInfo[] methodInfos, LogicalMethodTypes types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

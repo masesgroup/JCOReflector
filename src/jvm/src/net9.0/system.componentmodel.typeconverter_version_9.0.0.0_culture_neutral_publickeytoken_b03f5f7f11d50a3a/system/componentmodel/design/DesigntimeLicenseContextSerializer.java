@@ -155,7 +155,7 @@ public class DesigntimeLicenseContextSerializer extends NetObject  {
     
     // Methods section
     
-    public static void Serialize(Stream o, java.lang.String cryptoKey, DesigntimeLicenseContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  void Serialize(Stream o, java.lang.String cryptoKey, DesigntimeLicenseContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

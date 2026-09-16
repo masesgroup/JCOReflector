@@ -182,7 +182,7 @@ public class ExpressionActivityEditor extends UserControl  {
         }
     }
 
-    public static java.lang.String GetExpressionActivityEditor(NetObject target) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  java.lang.String GetExpressionActivityEditor(NetObject target) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExpressionActivityEditor = null;
@@ -206,7 +206,7 @@ public class ExpressionActivityEditor extends UserControl  {
         }
     }
 
-    public static void SetExpressionActivityEditor(NetObject target, java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.threading.ThreadAbortException {
+    public static  void SetExpressionActivityEditor(NetObject target, java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

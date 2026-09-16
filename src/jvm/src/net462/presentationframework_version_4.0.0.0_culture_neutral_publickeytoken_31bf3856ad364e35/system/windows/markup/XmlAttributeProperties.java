@@ -155,7 +155,7 @@ public class XmlAttributeProperties extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String GetXmlNamespaceMaps(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  java.lang.String GetXmlNamespaceMaps(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlNamespaceMaps = null;
@@ -169,7 +169,7 @@ public class XmlAttributeProperties extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlnsDefinition(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  java.lang.String GetXmlnsDefinition(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlnsDefinition = null;
@@ -183,7 +183,7 @@ public class XmlAttributeProperties extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlSpace(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  java.lang.String GetXmlSpace(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlSpace = null;
@@ -197,7 +197,7 @@ public class XmlAttributeProperties extends NetObject  {
         }
     }
 
-    public static XmlnsDictionary GetXmlnsDictionary(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  XmlnsDictionary GetXmlnsDictionary(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlnsDictionary = null;
@@ -212,7 +212,7 @@ public class XmlAttributeProperties extends NetObject  {
         }
     }
 
-    public static void SetXmlNamespaceMaps(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void SetXmlNamespaceMaps(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -222,7 +222,7 @@ public class XmlAttributeProperties extends NetObject  {
         }
     }
 
-    public static void SetXmlnsDefinition(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void SetXmlnsDefinition(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -232,7 +232,7 @@ public class XmlAttributeProperties extends NetObject  {
         }
     }
 
-    public static void SetXmlnsDictionary(DependencyObject dependencyObject, XmlnsDictionary value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void SetXmlnsDictionary(DependencyObject dependencyObject, XmlnsDictionary value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -242,7 +242,7 @@ public class XmlAttributeProperties extends NetObject  {
         }
     }
 
-    public static void SetXmlSpace(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void SetXmlSpace(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

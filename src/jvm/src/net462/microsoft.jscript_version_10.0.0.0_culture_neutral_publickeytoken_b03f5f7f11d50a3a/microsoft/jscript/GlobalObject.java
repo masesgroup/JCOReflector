@@ -166,7 +166,7 @@ public class GlobalObject extends NetObject  {
     
     // Methods section
     
-    public static boolean isFinite(double number) throws Throwable {
+    public static  boolean isFinite(double number) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectisFinite = null;
@@ -180,7 +180,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static boolean isNaN(NetObject num) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  boolean isNaN(NetObject num) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectisNaN = null;
@@ -194,7 +194,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static double parseFloat(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
+    public static  double parseFloat(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectparseFloat = null;
@@ -234,7 +234,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static double parseInt(NetObject string, NetObject radix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
+    public static  double parseInt(NetObject string, NetObject radix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectparseInt = null;
@@ -274,7 +274,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static int ScriptEngineBuildVersion() throws Throwable {
+    public static  int ScriptEngineBuildVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectScriptEngineBuildVersion = null;
@@ -314,7 +314,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static int ScriptEngineMajorVersion() throws Throwable {
+    public static  int ScriptEngineMajorVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectScriptEngineMajorVersion = null;
@@ -354,7 +354,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static int ScriptEngineMinorVersion() throws Throwable {
+    public static  int ScriptEngineMinorVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectScriptEngineMinorVersion = null;
@@ -394,7 +394,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static NetObject eval(NetObject x) throws Throwable, microsoft.jscript.JScriptException {
+    public static  NetObject eval(NetObject x) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecteval = null;
@@ -409,7 +409,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static NetObject GetObject(NetObject moniker, NetObject progId) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.NullReferenceException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.reflection.TargetInvocationException {
+    public static  NetObject GetObject(NetObject moniker, NetObject progId) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.NullReferenceException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetObject = null;
@@ -424,7 +424,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static java.lang.String decodeURI(NetObject encodedURI) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String decodeURI(NetObject encodedURI) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectdecodeURI = null;
@@ -438,7 +438,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static java.lang.String decodeURIComponent(NetObject encodedURI) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String decodeURIComponent(NetObject encodedURI) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectdecodeURIComponent = null;
@@ -452,7 +452,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static java.lang.String encodeURI(NetObject uri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String encodeURI(NetObject uri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectencodeURI = null;
@@ -466,7 +466,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static java.lang.String encodeURIComponent(NetObject uriComponent) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String encodeURIComponent(NetObject uriComponent) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectencodeURIComponent = null;
@@ -480,7 +480,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static java.lang.String escape(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String escape(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectescape = null;
@@ -494,7 +494,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static java.lang.String ScriptEngine() throws Throwable {
+    public static  java.lang.String ScriptEngine() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectScriptEngine = null;
@@ -508,7 +508,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static java.lang.String unescape(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String unescape(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectunescape = null;
@@ -522,7 +522,7 @@ public class GlobalObject extends NetObject  {
         }
     }
 
-    public static void CollectGarbage() throws Throwable {
+    public static  void CollectGarbage() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

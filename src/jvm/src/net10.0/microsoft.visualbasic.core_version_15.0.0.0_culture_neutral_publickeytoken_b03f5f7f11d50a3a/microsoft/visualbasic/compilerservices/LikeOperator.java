@@ -154,7 +154,7 @@ public class LikeOperator extends NetObject  {
     
     // Methods section
     
-    public static boolean LikeString(java.lang.String Source, java.lang.String Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.InvalidCastException, system.ObjectDisposedException {
+    public static  boolean LikeString(java.lang.String Source, java.lang.String Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.InvalidCastException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLikeString = null;
@@ -168,7 +168,7 @@ public class LikeOperator extends NetObject  {
         }
     }
 
-    public static NetObject LikeObject(NetObject Source, NetObject Pattern, CompareMethod CompareOption) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.BadImageFormatException {
+    public static  NetObject LikeObject(NetObject Source, NetObject Pattern, CompareMethod CompareOption) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLikeObject = null;

@@ -155,7 +155,7 @@ public class XsltConvert extends NetObject  {
     
     // Methods section
     
-    public static boolean ToBoolean(XPathItem item) throws Throwable {
+    public static  boolean ToBoolean(XPathItem item) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -169,7 +169,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static double ToDouble(int value) throws Throwable {
+    public static  double ToDouble(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -209,7 +209,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static double ToDouble(long value) throws Throwable {
+    public static  double ToDouble(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -249,7 +249,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static double ToDouble(Decimal value) throws Throwable {
+    public static  double ToDouble(Decimal value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -289,7 +289,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static double ToDouble(java.lang.String value) throws Throwable, system.ArgumentException {
+    public static  double ToDouble(java.lang.String value) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -329,7 +329,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static double ToDouble(XPathItem item) throws Throwable, system.ArgumentException {
+    public static  double ToDouble(XPathItem item) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -369,7 +369,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static int ToInt(double value) throws Throwable {
+    public static  int ToInt(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt = null;
@@ -409,7 +409,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static long ToLong(double value) throws Throwable {
+    public static  long ToLong(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToLong = null;
@@ -449,7 +449,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException {
+    public static  DateTime ToDateTime(java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -464,7 +464,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(double value) throws Throwable {
+    public static  Decimal ToDecimal(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -479,7 +479,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(double value) throws Throwable, system.ArgumentException {
+    public static  java.lang.String ToString(double value) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -493,7 +493,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTime value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
+    public static  java.lang.String ToString(DateTime value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -507,7 +507,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(XPathItem item) throws Throwable, system.ArgumentException {
+    public static  java.lang.String ToString(XPathItem item) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -521,7 +521,7 @@ public class XsltConvert extends NetObject  {
         }
     }
 
-    public static XPathNavigator ToNode(XPathItem item) throws Throwable, system.ArgumentException {
+    public static  XPathNavigator ToNode(XPathItem item) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToNode = null;

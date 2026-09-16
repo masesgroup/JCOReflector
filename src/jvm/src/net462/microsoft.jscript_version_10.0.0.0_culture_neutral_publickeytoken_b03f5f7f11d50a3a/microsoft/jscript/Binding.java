@@ -152,7 +152,7 @@ public class Binding extends AST  {
     
     // Methods section
     
-    public static boolean IsMissing(NetObject value) throws Throwable {
+    public static  boolean IsMissing(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMissing = null;

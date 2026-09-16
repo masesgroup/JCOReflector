@@ -159,7 +159,7 @@ public class Debugger extends NetObject  {
     
     // Methods section
     
-    public static boolean IsLogging() throws Throwable {
+    public static  boolean IsLogging() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLogging = null;
@@ -173,7 +173,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static boolean Launch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  boolean Launch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLaunch = null;
@@ -187,7 +187,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static void Break() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  void Break() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -197,7 +197,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static void Log(int level, java.lang.String category, java.lang.String message) throws Throwable {
+    public static  void Log(int level, java.lang.String category, java.lang.String message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -207,7 +207,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static void NotifyOfCrossThreadDependency() throws Throwable, system.InvalidOperationException, system.threading.ThreadAbortException {
+    public static  void NotifyOfCrossThreadDependency() throws Throwable, system.InvalidOperationException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

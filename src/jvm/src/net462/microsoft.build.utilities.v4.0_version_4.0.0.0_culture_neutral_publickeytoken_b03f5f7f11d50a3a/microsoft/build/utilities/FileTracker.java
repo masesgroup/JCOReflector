@@ -155,7 +155,7 @@ public class FileTracker extends NetObject  {
     
     // Methods section
     
-    public static boolean FileIsExcludedFromDependencies(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+    public static  boolean FileIsExcludedFromDependencies(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFileIsExcludedFromDependencies = null;
@@ -169,7 +169,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static boolean FileIsUnderPath(java.lang.String fileName, java.lang.String path) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  boolean FileIsUnderPath(java.lang.String fileName, java.lang.String path) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFileIsUnderPath = null;
@@ -183,7 +183,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static boolean ForceOutOfProcTracking(ExecutableType toolType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException {
+    public static  boolean ForceOutOfProcTracking(ExecutableType toolType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForceOutOfProcTracking = null;
@@ -197,7 +197,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static boolean ForceOutOfProcTracking(ExecutableType toolType, java.lang.String dllName, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
+    public static  boolean ForceOutOfProcTracking(ExecutableType toolType, java.lang.String dllName, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForceOutOfProcTracking = null;
@@ -211,7 +211,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.io.IOException {
+    public static  Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartProcess = null;
@@ -226,7 +226,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.io.IOException {
+    public static  Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartProcess = null;
@@ -241,7 +241,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType, java.lang.String intermediateDirectory, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.io.IOException {
+    public static  Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType, java.lang.String intermediateDirectory, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartProcess = null;
@@ -256,7 +256,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType, java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.io.IOException {
+    public static  Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType, java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartProcess = null;
@@ -271,7 +271,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType, java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.RankException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
+    public static  Process StartProcess(java.lang.String command, java.lang.String arguments, ExecutableType toolType, java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.RankException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartProcess = null;
@@ -286,7 +286,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String CreateRootingMarkerResponseFile(ITaskItem[] sources) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.io.IOException, system.FormatException {
+    public static  java.lang.String CreateRootingMarkerResponseFile(ITaskItem[] sources) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.io.IOException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRootingMarkerResponseFile = null;
@@ -300,7 +300,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String CreateRootingMarkerResponseFile(java.lang.String rootMarker) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.NullReferenceException {
+    public static  java.lang.String CreateRootingMarkerResponseFile(java.lang.String rootMarker) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRootingMarkerResponseFile = null;
@@ -314,7 +314,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String EnsureFileTrackerOnPath() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.PlatformNotSupportedException {
+    public static  java.lang.String EnsureFileTrackerOnPath() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEnsureFileTrackerOnPath = null;
@@ -328,7 +328,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String EnsureFileTrackerOnPath(java.lang.String rootPath) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.PlatformNotSupportedException {
+    public static  java.lang.String EnsureFileTrackerOnPath(java.lang.String rootPath) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEnsureFileTrackerOnPath = null;
@@ -342,7 +342,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String FindTrackerOnPath() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String FindTrackerOnPath() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFindTrackerOnPath = null;
@@ -356,7 +356,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String FormatRootingMarker(ITaskItem source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException {
+    public static  java.lang.String FormatRootingMarker(ITaskItem source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFormatRootingMarker = null;
@@ -370,7 +370,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String FormatRootingMarker(ITaskItem source, ITaskItem output) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException {
+    public static  java.lang.String FormatRootingMarker(ITaskItem source, ITaskItem output) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFormatRootingMarker = null;
@@ -384,7 +384,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String FormatRootingMarker(ITaskItem[] sources) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException {
+    public static  java.lang.String FormatRootingMarker(ITaskItem[] sources) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFormatRootingMarker = null;
@@ -398,7 +398,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String FormatRootingMarker(ITaskItem[] sources, ITaskItem[] outputs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException {
+    public static  java.lang.String FormatRootingMarker(ITaskItem[] sources, ITaskItem[] outputs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFormatRootingMarker = null;
@@ -412,7 +412,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String GetFileTrackerPath(ExecutableType toolType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+    public static  java.lang.String GetFileTrackerPath(ExecutableType toolType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFileTrackerPath = null;
@@ -426,7 +426,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String GetFileTrackerPath(ExecutableType toolType, java.lang.String rootPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public static  java.lang.String GetFileTrackerPath(ExecutableType toolType, java.lang.String rootPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFileTrackerPath = null;
@@ -440,7 +440,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTrackerPath(ExecutableType toolType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+    public static  java.lang.String GetTrackerPath(ExecutableType toolType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTrackerPath = null;
@@ -454,7 +454,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTrackerPath(ExecutableType toolType, java.lang.String rootPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public static  java.lang.String GetTrackerPath(ExecutableType toolType, java.lang.String rootPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTrackerPath = null;
@@ -468,7 +468,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String TrackerArguments(java.lang.String command, java.lang.String arguments, java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.NotSupportedException {
+    public static  java.lang.String TrackerArguments(java.lang.String command, java.lang.String arguments, java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrackerArguments = null;
@@ -482,7 +482,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String TrackerArguments(java.lang.String command, java.lang.String arguments, java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String TrackerArguments(java.lang.String command, java.lang.String arguments, java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrackerArguments = null;
@@ -496,7 +496,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String TrackerCommandArguments(java.lang.String command, java.lang.String arguments) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  java.lang.String TrackerCommandArguments(java.lang.String command, java.lang.String arguments) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrackerCommandArguments = null;
@@ -510,7 +510,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String TrackerResponseFileArguments(java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String TrackerResponseFileArguments(java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrackerResponseFileArguments = null;
@@ -524,7 +524,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static java.lang.String TrackerResponseFileArguments(java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.PathTooLongException {
+    public static  java.lang.String TrackerResponseFileArguments(java.lang.String dllName, java.lang.String intermediateDirectory, java.lang.String rootFiles, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrackerResponseFileArguments = null;
@@ -538,7 +538,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void EndTrackingContext() throws Throwable {
+    public static  void EndTrackingContext() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -548,7 +548,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void ResumeTracking() throws Throwable {
+    public static  void ResumeTracking() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -558,7 +558,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void SetThreadCount(int threadCount) throws Throwable {
+    public static  void SetThreadCount(int threadCount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -568,7 +568,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void StartTrackingContext(java.lang.String intermediateDirectory, java.lang.String taskName) throws Throwable {
+    public static  void StartTrackingContext(java.lang.String intermediateDirectory, java.lang.String taskName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -578,7 +578,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void StartTrackingContextWithRoot(java.lang.String intermediateDirectory, java.lang.String taskName, java.lang.String rootMarkerResponseFile) throws Throwable {
+    public static  void StartTrackingContextWithRoot(java.lang.String intermediateDirectory, java.lang.String taskName, java.lang.String rootMarkerResponseFile) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -588,7 +588,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void StopTrackingAndCleanup() throws Throwable {
+    public static  void StopTrackingAndCleanup() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -598,7 +598,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void SuspendTracking() throws Throwable {
+    public static  void SuspendTracking() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -608,7 +608,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void WriteAllTLogs(java.lang.String intermediateDirectory, java.lang.String taskName) throws Throwable {
+    public static  void WriteAllTLogs(java.lang.String intermediateDirectory, java.lang.String taskName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -618,7 +618,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static void WriteContextTLogs(java.lang.String intermediateDirectory, java.lang.String taskName) throws Throwable {
+    public static  void WriteContextTLogs(java.lang.String intermediateDirectory, java.lang.String taskName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

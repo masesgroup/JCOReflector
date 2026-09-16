@@ -155,7 +155,7 @@ public class SingleType extends NetObject  {
     
     // Methods section
     
-    public static Single FromObject(NetObject Value, NumberFormatInfo NumberFormat) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  Single FromObject(NetObject Value, NumberFormatInfo NumberFormat) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromObject = null;
@@ -170,7 +170,7 @@ public class SingleType extends NetObject  {
         }
     }
 
-    public static Single FromObject(NetObject Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  Single FromObject(NetObject Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromObject = null;
@@ -185,7 +185,7 @@ public class SingleType extends NetObject  {
         }
     }
 
-    public static Single FromString(java.lang.String Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidCastException {
+    public static  Single FromString(java.lang.String Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;
@@ -200,7 +200,7 @@ public class SingleType extends NetObject  {
         }
     }
 
-    public static Single FromString(java.lang.String Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException {
+    public static  Single FromString(java.lang.String Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;

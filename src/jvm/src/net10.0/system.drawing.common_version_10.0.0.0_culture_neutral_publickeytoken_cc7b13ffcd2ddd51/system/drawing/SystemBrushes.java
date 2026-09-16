@@ -153,7 +153,7 @@ public class SystemBrushes extends NetObject  {
     
     // Methods section
     
-    public static Brush FromSystemColor(Color c) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
+    public static  Brush FromSystemColor(Color c) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromSystemColor = null;

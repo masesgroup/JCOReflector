@@ -159,7 +159,7 @@ public class RuleExpressionWalker extends NetObject  {
     
     // Methods section
     
-    public static boolean Match(CodeExpression firstExpression, CodeExpression secondExpression) throws Throwable {
+    public static  boolean Match(CodeExpression firstExpression, CodeExpression secondExpression) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMatch = null;
@@ -173,7 +173,7 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
-    public static CodeExpression Clone(CodeExpression originalExpression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
+    public static  CodeExpression Clone(CodeExpression originalExpression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClone = null;
@@ -188,7 +188,7 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
-    public static RuleExpressionInfo Validate(RuleValidation validation, CodeExpression expression, boolean isWritten) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  RuleExpressionInfo Validate(RuleValidation validation, CodeExpression expression, boolean isWritten) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectValidate = null;
@@ -203,7 +203,7 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
-    public static RuleExpressionResult Evaluate(RuleExecution execution, CodeExpression expression) throws Throwable, system.ArgumentNullException {
+    public static  RuleExpressionResult Evaluate(RuleExecution execution, CodeExpression expression) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEvaluate = null;
@@ -218,7 +218,7 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
-    public static void AnalyzeUsage(RuleAnalysis analysis, CodeExpression expression, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable, system.ArgumentNullException {
+    public static  void AnalyzeUsage(RuleAnalysis analysis, CodeExpression expression, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -228,7 +228,7 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
-    public static void Decompile(StringBuilder stringBuilder, CodeExpression expression, CodeExpression parentExpression) throws Throwable {
+    public static  void Decompile(StringBuilder stringBuilder, CodeExpression expression, CodeExpression parentExpression) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

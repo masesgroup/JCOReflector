@@ -154,7 +154,7 @@ public class Binder extends NetObject  {
     
     // Methods section
     
-    public static CallSiteBinder Convert(CSharpBinderFlags flags, NetType type, NetType context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
+    public static  CallSiteBinder Convert(CSharpBinderFlags flags, NetType type, NetType context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -169,7 +169,7 @@ public class Binder extends NetObject  {
         }
     }
 
-    public static CallSiteBinder IsEvent(CSharpBinderFlags flags, java.lang.String name, NetType context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
+    public static  CallSiteBinder IsEvent(CSharpBinderFlags flags, java.lang.String name, NetType context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEvent = null;

@@ -178,7 +178,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static boolean IsDefined(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+    public static  boolean IsDefined(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -232,7 +232,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static Array GetValues(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException {
+    public static  Array GetValues(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetValues = null;
@@ -247,7 +247,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject Parse(NetType enumType, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  NetObject Parse(NetType enumType, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -262,7 +262,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject Parse(NetType enumType, java.lang.String value, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidCastException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  NetObject Parse(NetType enumType, java.lang.String value, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidCastException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -277,7 +277,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -292,7 +292,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, short value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, short value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -307,7 +307,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, int value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, int value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -322,7 +322,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, long value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, long value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -337,7 +337,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, SByte value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, SByte value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -352,7 +352,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -367,7 +367,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, UInt16 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, UInt16 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -382,7 +382,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, UInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, UInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -397,7 +397,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetObject ToObject(NetType enumType, UInt64 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetObject ToObject(NetType enumType, UInt64 value) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -412,7 +412,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static java.lang.String Format(NetType enumType, NetObject value, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static  java.lang.String Format(NetType enumType, NetObject value, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFormat = null;
@@ -426,7 +426,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static java.lang.String GetName(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String GetName(NetType enumType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetName = null;
@@ -482,7 +482,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static java.lang.String[] GetNames(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
+    public static  java.lang.String[] GetNames(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNames = null;
@@ -505,7 +505,7 @@ public class Enum extends ValueType  {
         }
     }
 
-    public static NetType GetUnderlyingType(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  NetType GetUnderlyingType(NetType enumType) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUnderlyingType = null;

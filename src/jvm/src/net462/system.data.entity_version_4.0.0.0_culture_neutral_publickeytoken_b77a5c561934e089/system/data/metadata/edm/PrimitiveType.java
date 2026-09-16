@@ -173,7 +173,7 @@ public class PrimitiveType extends SimpleType  {
         }
     }
 
-    public static PrimitiveType GetEdmPrimitiveType(PrimitiveTypeKind primitiveTypeKind) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  PrimitiveType GetEdmPrimitiveType(PrimitiveTypeKind primitiveTypeKind) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEdmPrimitiveType = null;

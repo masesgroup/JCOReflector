@@ -289,7 +289,7 @@ public class GradientStopCollection extends Animatable implements system.IFormat
         }
     }
 
-    public static GradientStopCollection Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.net.WebException, system.NotImplementedException, system.io.FileNotFoundException, system.NotSupportedException, system.AccessViolationException {
+    public static  GradientStopCollection Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileFormatException, system.net.WebException, system.NotImplementedException, system.io.FileNotFoundException, system.NotSupportedException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

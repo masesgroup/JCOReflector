@@ -208,7 +208,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
         }
     }
 
-    public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken token1, CancellationToken token2) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
+    public static  CancellationTokenSource CreateLinkedTokenSource(CancellationToken token1, CancellationToken token2) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateLinkedTokenSource = null;
@@ -223,7 +223,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
         }
     }
 
-    public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken token) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
+    public static  CancellationTokenSource CreateLinkedTokenSource(CancellationToken token) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateLinkedTokenSource = null;
@@ -238,7 +238,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
         }
     }
 
-    public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken... tokens) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public static  CancellationTokenSource CreateLinkedTokenSource(CancellationToken... tokens) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateLinkedTokenSource = null;

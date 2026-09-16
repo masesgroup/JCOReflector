@@ -187,7 +187,7 @@ public class Point extends ValueType  {
     
     // Methods section
     
-    public static Point Add(Point pt, Size sz) throws Throwable {
+    public static  Point Add(Point pt, Size sz) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -202,7 +202,7 @@ public class Point extends ValueType  {
         }
     }
 
-    public static Point Ceiling(PointF value) throws Throwable {
+    public static  Point Ceiling(PointF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -217,7 +217,7 @@ public class Point extends ValueType  {
         }
     }
 
-    public static Point Round(PointF value) throws Throwable {
+    public static  Point Round(PointF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -232,7 +232,7 @@ public class Point extends ValueType  {
         }
     }
 
-    public static Point Subtract(Point pt, Size sz) throws Throwable {
+    public static  Point Subtract(Point pt, Size sz) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -247,7 +247,7 @@ public class Point extends ValueType  {
         }
     }
 
-    public static Point Truncate(PointF value) throws Throwable {
+    public static  Point Truncate(PointF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;

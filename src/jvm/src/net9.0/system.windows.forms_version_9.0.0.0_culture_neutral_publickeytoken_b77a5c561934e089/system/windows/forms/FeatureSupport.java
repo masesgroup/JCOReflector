@@ -180,7 +180,7 @@ public class FeatureSupport extends NetObject  {
         }
     }
 
-    public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName, Version minimumVersion) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName, Version minimumVersion) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPresent = null;
@@ -194,7 +194,7 @@ public class FeatureSupport extends NetObject  {
         }
     }
 
-    public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPresent = null;
@@ -223,7 +223,7 @@ public class FeatureSupport extends NetObject  {
         }
     }
 
-    public static Version GetVersionPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  Version GetVersionPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetVersionPresent = null;

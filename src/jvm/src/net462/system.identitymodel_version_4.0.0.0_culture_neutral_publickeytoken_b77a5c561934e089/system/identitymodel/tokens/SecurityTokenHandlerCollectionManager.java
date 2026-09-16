@@ -179,7 +179,7 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
         }
     }
 
-    public static SecurityTokenHandlerCollectionManager CreateDefaultSecurityTokenHandlerCollectionManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException {
+    public static  SecurityTokenHandlerCollectionManager CreateDefaultSecurityTokenHandlerCollectionManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDefaultSecurityTokenHandlerCollectionManager = null;
@@ -194,7 +194,7 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
         }
     }
 
-    public static SecurityTokenHandlerCollectionManager CreateEmptySecurityTokenHandlerCollectionManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
+    public static  SecurityTokenHandlerCollectionManager CreateEmptySecurityTokenHandlerCollectionManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEmptySecurityTokenHandlerCollectionManager = null;

@@ -151,7 +151,7 @@ public class Debugger extends NetObject  {
     
     // Methods section
     
-    public static boolean IsLogging() throws Throwable {
+    public static  boolean IsLogging() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLogging = null;
@@ -165,7 +165,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static boolean Launch() throws Throwable {
+    public static  boolean Launch() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLaunch = null;
@@ -179,7 +179,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static void Break() throws Throwable {
+    public static  void Break() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -189,7 +189,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static void BreakForUserUnhandledException(NetException exception) throws Throwable {
+    public static  void BreakForUserUnhandledException(NetException exception) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -199,7 +199,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static void Log(int level, java.lang.String category, java.lang.String message) throws Throwable {
+    public static  void Log(int level, java.lang.String category, java.lang.String message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -209,7 +209,7 @@ public class Debugger extends NetObject  {
         }
     }
 
-    public static void NotifyOfCrossThreadDependency() throws Throwable {
+    public static  void NotifyOfCrossThreadDependency() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

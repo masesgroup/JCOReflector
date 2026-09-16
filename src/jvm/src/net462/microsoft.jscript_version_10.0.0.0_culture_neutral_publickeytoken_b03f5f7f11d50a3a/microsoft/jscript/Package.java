@@ -155,7 +155,7 @@ public class Package extends AST  {
     
     // Methods section
     
-    public static void JScriptPackage(java.lang.String rootName, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+    public static  void JScriptPackage(java.lang.String rootName, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

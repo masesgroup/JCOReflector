@@ -160,7 +160,7 @@ public class CheckBoxRenderer extends NetObject  {
     
     // Methods section
     
-    public static boolean IsBackgroundPartiallyTransparent(CheckBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
+    public static  boolean IsBackgroundPartiallyTransparent(CheckBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
@@ -174,7 +174,7 @@ public class CheckBoxRenderer extends NetObject  {
         }
     }
 
-    public static Size GetGlyphSize(Graphics g, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+    public static  Size GetGlyphSize(Graphics g, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetGlyphSize = null;
@@ -189,7 +189,7 @@ public class CheckBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException {
+    public static  void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -199,7 +199,7 @@ public class CheckBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, Image image, Rectangle imageBounds, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, Image image, Rectangle imageBounds, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -209,7 +209,7 @@ public class CheckBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, TextFormatFlags flags, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, TextFormatFlags flags, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -219,7 +219,7 @@ public class CheckBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  void DrawCheckBox(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String checkBoxText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, CheckBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -229,7 +229,7 @@ public class CheckBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawCheckBox(Graphics g, Point glyphLocation, CheckBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  void DrawCheckBox(Graphics g, Point glyphLocation, CheckBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -239,7 +239,7 @@ public class CheckBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentNullException {
+    public static  void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

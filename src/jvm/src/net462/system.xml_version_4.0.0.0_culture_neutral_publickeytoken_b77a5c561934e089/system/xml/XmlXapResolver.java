@@ -178,7 +178,7 @@ public class XmlXapResolver extends XmlResolver  {
         }
     }
 
-    public static void RegisterApplicationResourceStreamResolver(IApplicationResourceStreamResolver appStreamResolver) throws Throwable {
+    public static  void RegisterApplicationResourceStreamResolver(IApplicationResourceStreamResolver appStreamResolver) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

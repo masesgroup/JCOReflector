@@ -151,7 +151,7 @@ public class Path extends NetObject  {
     
     // Methods section
     
-    public static boolean HasExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  boolean HasExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHasExtension = null;
@@ -165,7 +165,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static boolean IsPathRooted(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  boolean IsPathRooted(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPathRooted = null;
@@ -179,7 +179,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static char[] GetInvalidFileNameChars() throws Throwable {
+    public static  char[] GetInvalidFileNameChars() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInvalidFileNameChars = null;
@@ -202,7 +202,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static char[] GetInvalidPathChars() throws Throwable {
+    public static  char[] GetInvalidPathChars() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInvalidPathChars = null;
@@ -225,7 +225,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String ChangeExtension(java.lang.String path, java.lang.String extension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  java.lang.String ChangeExtension(java.lang.String path, java.lang.String extension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectChangeExtension = null;
@@ -239,7 +239,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String Combine(java.lang.String path1, java.lang.String path2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  java.lang.String Combine(java.lang.String path1, java.lang.String path2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCombine = null;
@@ -253,7 +253,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String Combine(java.lang.String path1, java.lang.String path2, java.lang.String path3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  java.lang.String Combine(java.lang.String path1, java.lang.String path2, java.lang.String path3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCombine = null;
@@ -267,7 +267,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String Combine(java.lang.String path1, java.lang.String path2, java.lang.String path3, java.lang.String path4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  java.lang.String Combine(java.lang.String path1, java.lang.String path2, java.lang.String path3, java.lang.String path4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCombine = null;
@@ -281,7 +281,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String Combine(java.lang.String... paths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  java.lang.String Combine(java.lang.String... paths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCombine = null;
@@ -295,7 +295,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String Combine(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  java.lang.String Combine(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCombine = null;
@@ -309,7 +309,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDirectoryName(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String GetDirectoryName(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDirectoryName = null;
@@ -323,7 +323,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String GetExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExtension = null;
@@ -337,7 +337,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetFileName(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String GetFileName(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFileName = null;
@@ -351,7 +351,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetFileNameWithoutExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String GetFileNameWithoutExtension(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFileNameWithoutExtension = null;
@@ -365,7 +365,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetFullPath(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
+    public static  java.lang.String GetFullPath(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFullPath = null;
@@ -379,7 +379,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathRoot(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String GetPathRoot(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathRoot = null;
@@ -393,7 +393,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetRandomFileName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  java.lang.String GetRandomFileName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRandomFileName = null;
@@ -407,7 +407,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTempFileName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException {
+    public static  java.lang.String GetTempFileName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTempFileName = null;
@@ -421,7 +421,7 @@ public class Path extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTempPath() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String GetTempPath() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTempPath = null;

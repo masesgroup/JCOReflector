@@ -164,7 +164,7 @@ public class XamlReader extends NetObject  {
     
     // Methods section
     
-    public static NetObject Load(Stream stream) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.xml.XmlException, system.UriFormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
+    public static  NetObject Load(Stream stream) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.xml.XmlException, system.UriFormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -179,7 +179,7 @@ public class XamlReader extends NetObject  {
         }
     }
 
-    public static NetObject Load(Stream stream, ParserContext parserContext) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.xml.schema.XmlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
+    public static  NetObject Load(Stream stream, ParserContext parserContext) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.xml.schema.XmlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -194,7 +194,7 @@ public class XamlReader extends NetObject  {
         }
     }
 
-    public static NetObject Load(XmlReader reader) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.NotImplementedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.FormatException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
+    public static  NetObject Load(XmlReader reader) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.NotImplementedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.FormatException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -254,7 +254,7 @@ public class XamlReader extends NetObject  {
         }
     }
 
-    public static NetObject Parse(java.lang.String xamlText) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
+    public static  NetObject Parse(java.lang.String xamlText) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -269,7 +269,7 @@ public class XamlReader extends NetObject  {
         }
     }
 
-    public static NetObject Parse(java.lang.String xamlText, ParserContext parserContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.UriFormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
+    public static  NetObject Parse(java.lang.String xamlText, ParserContext parserContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.UriFormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -284,7 +284,7 @@ public class XamlReader extends NetObject  {
         }
     }
 
-    public static XamlSchemaContext GetWpfSchemaContext() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  XamlSchemaContext GetWpfSchemaContext() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetWpfSchemaContext = null;

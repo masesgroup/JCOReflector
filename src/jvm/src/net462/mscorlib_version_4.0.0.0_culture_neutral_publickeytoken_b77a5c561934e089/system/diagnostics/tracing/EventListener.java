@@ -162,7 +162,7 @@ public class EventListener extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static int EventSourceIndex(EventSource eventSource) throws Throwable {
+    public static  int EventSourceIndex(EventSource eventSource) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEventSourceIndex = null;

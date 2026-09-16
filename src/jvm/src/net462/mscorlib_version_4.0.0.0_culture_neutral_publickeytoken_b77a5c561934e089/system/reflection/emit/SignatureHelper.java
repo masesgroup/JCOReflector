@@ -182,7 +182,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetFieldSigHelper(Module mod) throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public static  SignatureHelper GetFieldSigHelper(Module mod) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFieldSigHelper = null;
@@ -197,7 +197,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetLocalVarSigHelper() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public static  SignatureHelper GetLocalVarSigHelper() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLocalVarSigHelper = null;
@@ -212,7 +212,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetLocalVarSigHelper(Module mod) throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public static  SignatureHelper GetLocalVarSigHelper(Module mod) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLocalVarSigHelper = null;
@@ -227,7 +227,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetMethodSigHelper(CallingConventions callingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  SignatureHelper GetMethodSigHelper(CallingConventions callingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethodSigHelper = null;
@@ -242,7 +242,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetMethodSigHelper(Module mod, CallingConventions callingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
+    public static  SignatureHelper GetMethodSigHelper(Module mod, CallingConventions callingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethodSigHelper = null;
@@ -257,7 +257,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetMethodSigHelper(Module mod, CallingConvention unmanagedCallConv, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException {
+    public static  SignatureHelper GetMethodSigHelper(Module mod, CallingConvention unmanagedCallConv, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethodSigHelper = null;
@@ -272,7 +272,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetMethodSigHelper(Module mod, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
+    public static  SignatureHelper GetMethodSigHelper(Module mod, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethodSigHelper = null;
@@ -287,7 +287,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetMethodSigHelper(CallingConvention unmanagedCallingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
+    public static  SignatureHelper GetMethodSigHelper(CallingConvention unmanagedCallingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethodSigHelper = null;
@@ -302,7 +302,7 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
-    public static SignatureHelper GetPropertySigHelper(Module mod, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  SignatureHelper GetPropertySigHelper(Module mod, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPropertySigHelper = null;

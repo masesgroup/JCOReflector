@@ -153,7 +153,7 @@ public class ProjectData extends NetObject  {
     
     // Methods section
     
-    public static NetException CreateProjectError(int hr) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  NetException CreateProjectError(int hr) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateProjectError = null;
@@ -168,7 +168,7 @@ public class ProjectData extends NetObject  {
         }
     }
 
-    public static void ClearProjectError() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  void ClearProjectError() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -178,7 +178,7 @@ public class ProjectData extends NetObject  {
         }
     }
 
-    public static void EndApp() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException {
+    public static  void EndApp() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -188,7 +188,7 @@ public class ProjectData extends NetObject  {
         }
     }
 
-    public static void SetProjectError(NetException ex, int lErl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  void SetProjectError(NetException ex, int lErl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -198,7 +198,7 @@ public class ProjectData extends NetObject  {
         }
     }
 
-    public static void SetProjectError(NetException ex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  void SetProjectError(NetException ex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

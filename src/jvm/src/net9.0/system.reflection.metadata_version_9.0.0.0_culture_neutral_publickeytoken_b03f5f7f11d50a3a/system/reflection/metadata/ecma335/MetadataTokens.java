@@ -192,7 +192,7 @@ public class MetadataTokens extends NetObject  {
     
     // Methods section
     
-    public static boolean TryGetHeapIndex(HandleKind type, JCORefOut<HeapIndex> index) throws Throwable {
+    public static  boolean TryGetHeapIndex(HandleKind type, JCORefOut<HeapIndex> index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetHeapIndex = null;
@@ -206,7 +206,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static boolean TryGetTableIndex(HandleKind type, JCORefOut<TableIndex> index) throws Throwable {
+    public static  boolean TryGetTableIndex(HandleKind type, JCORefOut<TableIndex> index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetTableIndex = null;
@@ -220,7 +220,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetHeapOffset(BlobHandle handle) throws Throwable {
+    public static  int GetHeapOffset(BlobHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHeapOffset = null;
@@ -260,7 +260,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetHeapOffset(GuidHandle handle) throws Throwable {
+    public static  int GetHeapOffset(GuidHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHeapOffset = null;
@@ -300,7 +300,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetHeapOffset(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  int GetHeapOffset(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHeapOffset = null;
@@ -340,7 +340,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetHeapOffset(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  int GetHeapOffset(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHeapOffset = null;
@@ -380,7 +380,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetHeapOffset(StringHandle handle) throws Throwable {
+    public static  int GetHeapOffset(StringHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHeapOffset = null;
@@ -420,7 +420,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetHeapOffset(UserStringHandle handle) throws Throwable {
+    public static  int GetHeapOffset(UserStringHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHeapOffset = null;
@@ -460,7 +460,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetRowNumber(EntityHandle handle) throws Throwable {
+    public static  int GetRowNumber(EntityHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRowNumber = null;
@@ -500,7 +500,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetRowNumber(MetadataReader reader, EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  int GetRowNumber(MetadataReader reader, EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRowNumber = null;
@@ -540,7 +540,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetToken(EntityHandle handle) throws Throwable {
+    public static  int GetToken(EntityHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetToken = null;
@@ -580,7 +580,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetToken(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  int GetToken(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetToken = null;
@@ -620,7 +620,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetToken(MetadataReader reader, EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  int GetToken(MetadataReader reader, EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetToken = null;
@@ -660,7 +660,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static int GetToken(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  int GetToken(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetToken = null;
@@ -700,7 +700,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static AssemblyFileHandle AssemblyFileHandle(int rowNumber) throws Throwable {
+    public static  AssemblyFileHandle AssemblyFileHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAssemblyFileHandle = null;
@@ -715,7 +715,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static AssemblyReferenceHandle AssemblyReferenceHandle(int rowNumber) throws Throwable {
+    public static  AssemblyReferenceHandle AssemblyReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAssemblyReferenceHandle = null;
@@ -730,7 +730,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static BlobHandle BlobHandle(int offset) throws Throwable {
+    public static  BlobHandle BlobHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlobHandle = null;
@@ -745,7 +745,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static ConstantHandle ConstantHandle(int rowNumber) throws Throwable {
+    public static  ConstantHandle ConstantHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConstantHandle = null;
@@ -760,7 +760,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static CustomAttributeHandle CustomAttributeHandle(int rowNumber) throws Throwable {
+    public static  CustomAttributeHandle CustomAttributeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCustomAttributeHandle = null;
@@ -775,7 +775,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static CustomDebugInformationHandle CustomDebugInformationHandle(int rowNumber) throws Throwable {
+    public static  CustomDebugInformationHandle CustomDebugInformationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCustomDebugInformationHandle = null;
@@ -790,7 +790,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static DeclarativeSecurityAttributeHandle DeclarativeSecurityAttributeHandle(int rowNumber) throws Throwable {
+    public static  DeclarativeSecurityAttributeHandle DeclarativeSecurityAttributeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeclarativeSecurityAttributeHandle = null;
@@ -805,7 +805,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static DocumentHandle DocumentHandle(int rowNumber) throws Throwable {
+    public static  DocumentHandle DocumentHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDocumentHandle = null;
@@ -820,7 +820,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static DocumentNameBlobHandle DocumentNameBlobHandle(int offset) throws Throwable {
+    public static  DocumentNameBlobHandle DocumentNameBlobHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDocumentNameBlobHandle = null;
@@ -835,7 +835,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static EntityHandle EntityHandle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  EntityHandle EntityHandle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEntityHandle = null;
@@ -850,7 +850,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static EntityHandle EntityHandle(TableIndex tableIndex, int rowNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  EntityHandle EntityHandle(TableIndex tableIndex, int rowNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEntityHandle = null;
@@ -865,7 +865,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static EntityHandle Handle(TableIndex tableIndex, int rowNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  EntityHandle Handle(TableIndex tableIndex, int rowNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHandle = null;
@@ -880,7 +880,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static EventDefinitionHandle EventDefinitionHandle(int rowNumber) throws Throwable {
+    public static  EventDefinitionHandle EventDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEventDefinitionHandle = null;
@@ -895,7 +895,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static ExportedTypeHandle ExportedTypeHandle(int rowNumber) throws Throwable {
+    public static  ExportedTypeHandle ExportedTypeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExportedTypeHandle = null;
@@ -910,7 +910,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static FieldDefinitionHandle FieldDefinitionHandle(int rowNumber) throws Throwable {
+    public static  FieldDefinitionHandle FieldDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFieldDefinitionHandle = null;
@@ -925,7 +925,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static GenericParameterConstraintHandle GenericParameterConstraintHandle(int rowNumber) throws Throwable {
+    public static  GenericParameterConstraintHandle GenericParameterConstraintHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenericParameterConstraintHandle = null;
@@ -940,7 +940,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static GenericParameterHandle GenericParameterHandle(int rowNumber) throws Throwable {
+    public static  GenericParameterHandle GenericParameterHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenericParameterHandle = null;
@@ -955,7 +955,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static GuidHandle GuidHandle(int offset) throws Throwable {
+    public static  GuidHandle GuidHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGuidHandle = null;
@@ -970,7 +970,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static Handle Handle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  Handle Handle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHandle = null;
@@ -985,7 +985,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static ImportScopeHandle ImportScopeHandle(int rowNumber) throws Throwable {
+    public static  ImportScopeHandle ImportScopeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportScopeHandle = null;
@@ -1000,7 +1000,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static InterfaceImplementationHandle InterfaceImplementationHandle(int rowNumber) throws Throwable {
+    public static  InterfaceImplementationHandle InterfaceImplementationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInterfaceImplementationHandle = null;
@@ -1015,7 +1015,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static LocalConstantHandle LocalConstantHandle(int rowNumber) throws Throwable {
+    public static  LocalConstantHandle LocalConstantHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLocalConstantHandle = null;
@@ -1030,7 +1030,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static LocalScopeHandle LocalScopeHandle(int rowNumber) throws Throwable {
+    public static  LocalScopeHandle LocalScopeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLocalScopeHandle = null;
@@ -1045,7 +1045,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static LocalVariableHandle LocalVariableHandle(int rowNumber) throws Throwable {
+    public static  LocalVariableHandle LocalVariableHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLocalVariableHandle = null;
@@ -1060,7 +1060,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static ManifestResourceHandle ManifestResourceHandle(int rowNumber) throws Throwable {
+    public static  ManifestResourceHandle ManifestResourceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectManifestResourceHandle = null;
@@ -1075,7 +1075,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static MemberReferenceHandle MemberReferenceHandle(int rowNumber) throws Throwable {
+    public static  MemberReferenceHandle MemberReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMemberReferenceHandle = null;
@@ -1090,7 +1090,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static MethodDebugInformationHandle MethodDebugInformationHandle(int rowNumber) throws Throwable {
+    public static  MethodDebugInformationHandle MethodDebugInformationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMethodDebugInformationHandle = null;
@@ -1105,7 +1105,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static MethodDefinitionHandle MethodDefinitionHandle(int rowNumber) throws Throwable {
+    public static  MethodDefinitionHandle MethodDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMethodDefinitionHandle = null;
@@ -1120,7 +1120,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static MethodImplementationHandle MethodImplementationHandle(int rowNumber) throws Throwable {
+    public static  MethodImplementationHandle MethodImplementationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMethodImplementationHandle = null;
@@ -1135,7 +1135,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static MethodSpecificationHandle MethodSpecificationHandle(int rowNumber) throws Throwable {
+    public static  MethodSpecificationHandle MethodSpecificationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMethodSpecificationHandle = null;
@@ -1150,7 +1150,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static ModuleReferenceHandle ModuleReferenceHandle(int rowNumber) throws Throwable {
+    public static  ModuleReferenceHandle ModuleReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModuleReferenceHandle = null;
@@ -1165,7 +1165,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static ParameterHandle ParameterHandle(int rowNumber) throws Throwable {
+    public static  ParameterHandle ParameterHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParameterHandle = null;
@@ -1180,7 +1180,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static PropertyDefinitionHandle PropertyDefinitionHandle(int rowNumber) throws Throwable {
+    public static  PropertyDefinitionHandle PropertyDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPropertyDefinitionHandle = null;
@@ -1195,7 +1195,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static StandaloneSignatureHandle StandaloneSignatureHandle(int rowNumber) throws Throwable {
+    public static  StandaloneSignatureHandle StandaloneSignatureHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStandaloneSignatureHandle = null;
@@ -1210,7 +1210,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static StringHandle StringHandle(int offset) throws Throwable {
+    public static  StringHandle StringHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStringHandle = null;
@@ -1225,7 +1225,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static TypeDefinitionHandle TypeDefinitionHandle(int rowNumber) throws Throwable {
+    public static  TypeDefinitionHandle TypeDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTypeDefinitionHandle = null;
@@ -1240,7 +1240,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static TypeReferenceHandle TypeReferenceHandle(int rowNumber) throws Throwable {
+    public static  TypeReferenceHandle TypeReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTypeReferenceHandle = null;
@@ -1255,7 +1255,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static TypeSpecificationHandle TypeSpecificationHandle(int rowNumber) throws Throwable {
+    public static  TypeSpecificationHandle TypeSpecificationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTypeSpecificationHandle = null;
@@ -1270,7 +1270,7 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
-    public static UserStringHandle UserStringHandle(int offset) throws Throwable {
+    public static  UserStringHandle UserStringHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUserStringHandle = null;

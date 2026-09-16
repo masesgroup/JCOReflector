@@ -152,7 +152,7 @@ public class VersioningHelper extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to, NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.NullReferenceException {
+    public static  java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to, NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeVersionSafeName = null;
@@ -166,7 +166,7 @@ public class VersioningHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public static  java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeVersionSafeName = null;

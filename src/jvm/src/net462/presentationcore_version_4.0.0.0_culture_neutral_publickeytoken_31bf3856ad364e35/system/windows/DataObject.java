@@ -495,7 +495,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         }
     }
 
-    public static void AddCopyingHandler(DependencyObject element, DataObjectCopyingEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void AddCopyingHandler(DependencyObject element, DataObjectCopyingEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -505,7 +505,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         }
     }
 
-    public static void AddPastingHandler(DependencyObject element, DataObjectPastingEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void AddPastingHandler(DependencyObject element, DataObjectPastingEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -515,7 +515,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         }
     }
 
-    public static void AddSettingDataHandler(DependencyObject element, DataObjectSettingDataEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void AddSettingDataHandler(DependencyObject element, DataObjectSettingDataEventHandler handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -525,7 +525,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         }
     }
 
-    public static void RemoveCopyingHandler(DependencyObject element, DataObjectCopyingEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void RemoveCopyingHandler(DependencyObject element, DataObjectCopyingEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -535,7 +535,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         }
     }
 
-    public static void RemovePastingHandler(DependencyObject element, DataObjectPastingEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void RemovePastingHandler(DependencyObject element, DataObjectPastingEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -545,7 +545,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         }
     }
 
-    public static void RemoveSettingDataHandler(DependencyObject element, DataObjectSettingDataEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void RemoveSettingDataHandler(DependencyObject element, DataObjectSettingDataEventHandler handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

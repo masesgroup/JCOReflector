@@ -159,7 +159,7 @@ public class CmdLineOptionParser extends NetObject  {
     
     // Methods section
     
-    public static boolean IsSimpleOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  boolean IsSimpleOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSimpleOption = null;
@@ -173,7 +173,7 @@ public class CmdLineOptionParser extends NetObject  {
         }
     }
 
-    public static NetObject IsBooleanOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  NetObject IsBooleanOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBooleanOption = null;
@@ -188,7 +188,7 @@ public class CmdLineOptionParser extends NetObject  {
         }
     }
 
-    public static NetObject IsBooleanOption(java.lang.String option, java.lang.String shortPrefix, java.lang.String longPrefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+    public static  NetObject IsBooleanOption(java.lang.String option, java.lang.String shortPrefix, java.lang.String longPrefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBooleanOption = null;
@@ -203,7 +203,7 @@ public class CmdLineOptionParser extends NetObject  {
         }
     }
 
-    public static java.lang.String IsArgumentOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  java.lang.String IsArgumentOption(java.lang.String option, java.lang.String prefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsArgumentOption = null;
@@ -217,7 +217,7 @@ public class CmdLineOptionParser extends NetObject  {
         }
     }
 
-    public static java.lang.String IsArgumentOption(java.lang.String option, java.lang.String shortPrefix, java.lang.String longPrefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+    public static  java.lang.String IsArgumentOption(java.lang.String option, java.lang.String shortPrefix, java.lang.String longPrefix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsArgumentOption = null;

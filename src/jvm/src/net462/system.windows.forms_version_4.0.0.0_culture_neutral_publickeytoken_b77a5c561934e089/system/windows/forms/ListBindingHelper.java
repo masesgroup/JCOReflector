@@ -153,7 +153,7 @@ public class ListBindingHelper extends NetObject  {
     
     // Methods section
     
-    public static PropertyDescriptorCollection GetListItemProperties(NetObject list) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  PropertyDescriptorCollection GetListItemProperties(NetObject list) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetListItemProperties = null;
@@ -168,7 +168,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetListItemProperties(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  PropertyDescriptorCollection GetListItemProperties(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetListItemProperties = null;
@@ -183,7 +183,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetListItemProperties(NetObject dataSource, java.lang.String dataMember, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  PropertyDescriptorCollection GetListItemProperties(NetObject dataSource, java.lang.String dataMember, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetListItemProperties = null;
@@ -198,7 +198,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static NetObject GetList(NetObject list) throws Throwable {
+    public static  NetObject GetList(NetObject list) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetList = null;
@@ -213,7 +213,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static NetObject GetList(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  NetObject GetList(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetList = null;
@@ -228,7 +228,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetListName(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.NotSupportedException {
+    public static  java.lang.String GetListName(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetListName = null;
@@ -242,7 +242,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static NetType GetListItemType(NetObject list) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  NetType GetListItemType(NetObject list) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetListItemType = null;
@@ -257,7 +257,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static NetType GetListItemType(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
+    public static  NetType GetListItemType(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetListItemType = null;

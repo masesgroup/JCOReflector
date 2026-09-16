@@ -154,7 +154,7 @@ public class DynamicUpdateServices extends NetObject  {
     
     // Methods section
     
-    public static DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentOutOfRangeException {
+    public static  DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateUpdateMap = null;
@@ -169,7 +169,7 @@ public class DynamicUpdateServices extends NetObject  {
         }
     }
 
-    public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateUpdateMap = null;
@@ -184,7 +184,7 @@ public class DynamicUpdateServices extends NetObject  {
         }
     }
 
-    public static DynamicUpdateMap GetImplementationMap(Activity targetActivity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  DynamicUpdateMap GetImplementationMap(Activity targetActivity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetImplementationMap = null;
@@ -199,7 +199,7 @@ public class DynamicUpdateServices extends NetObject  {
         }
     }
 
-    public static void PrepareForUpdate(Activity workflowDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+    public static  void PrepareForUpdate(Activity workflowDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -209,7 +209,7 @@ public class DynamicUpdateServices extends NetObject  {
         }
     }
 
-    public static void PrepareForUpdate(ActivityBuilder activityDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+    public static  void PrepareForUpdate(ActivityBuilder activityDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -219,7 +219,7 @@ public class DynamicUpdateServices extends NetObject  {
         }
     }
 
-    public static void SetImplementationMap(Activity targetActivity, DynamicUpdateMap implementationMap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static  void SetImplementationMap(Activity targetActivity, DynamicUpdateMap implementationMap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

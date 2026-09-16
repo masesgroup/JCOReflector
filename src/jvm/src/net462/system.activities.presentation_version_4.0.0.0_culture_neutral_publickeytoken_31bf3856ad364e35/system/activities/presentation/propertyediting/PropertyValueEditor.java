@@ -172,7 +172,7 @@ public class PropertyValueEditor extends NetObject  {
     
     // Methods section
     
-    public static EditorAttribute CreateEditorAttribute(PropertyValueEditor editor) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  EditorAttribute CreateEditorAttribute(PropertyValueEditor editor) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEditorAttribute = null;
@@ -187,7 +187,7 @@ public class PropertyValueEditor extends NetObject  {
         }
     }
 
-    public static EditorAttribute CreateEditorAttribute(NetType propertyValueEditorType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  EditorAttribute CreateEditorAttribute(NetType propertyValueEditorType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEditorAttribute = null;

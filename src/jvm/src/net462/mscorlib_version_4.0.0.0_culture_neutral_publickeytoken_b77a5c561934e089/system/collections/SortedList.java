@@ -371,7 +371,7 @@ public class SortedList extends NetObjectEnumerable  {
         }
     }
 
-    public static SortedList Synchronized(SortedList list) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  SortedList Synchronized(SortedList list) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSynchronized = null;

@@ -521,7 +521,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public static XmlSchemaComplexType GetDataTableSchema(XmlSchemaSet schemaSet) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException {
+    public static  XmlSchemaComplexType GetDataTableSchema(XmlSchemaSet schemaSet) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataTableSchema = null;

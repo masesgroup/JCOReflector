@@ -373,7 +373,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean Equals(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static  SqlBoolean Equals(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -388,7 +388,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static  SqlBoolean GreaterThan(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -403,7 +403,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static  SqlBoolean GreaterThanOrEqual(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -418,7 +418,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean LessThan(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static  SqlBoolean LessThan(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -433,7 +433,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static  SqlBoolean LessThanOrEqual(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -448,7 +448,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean NotEquals(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static  SqlBoolean NotEquals(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -628,7 +628,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlString Add(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public static  SqlString Add(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -658,7 +658,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlString Concat(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public static  SqlString Concat(SqlString x, SqlString y) throws Throwable, system.data.sqltypes.SqlTypeException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConcat = null;
@@ -673,7 +673,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static CompareOptions CompareOptionsFromSqlCompareOptions(SqlCompareOptions compareOptions) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  CompareOptions CompareOptionsFromSqlCompareOptions(SqlCompareOptions compareOptions) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareOptionsFromSqlCompareOptions = null;
@@ -688,7 +688,7 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

@@ -152,7 +152,7 @@ public class Validator extends NetObject  {
     
     // Methods section
     
-    public static void ValidateObject(NetObject instance, ValidationContext validationContext, boolean validateAllProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.dataannotations.ValidationException {
+    public static  void ValidateObject(NetObject instance, ValidationContext validationContext, boolean validateAllProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.dataannotations.ValidationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -162,7 +162,7 @@ public class Validator extends NetObject  {
         }
     }
 
-    public static void ValidateObject(NetObject instance, ValidationContext validationContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.dataannotations.ValidationException {
+    public static  void ValidateObject(NetObject instance, ValidationContext validationContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.dataannotations.ValidationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -172,7 +172,7 @@ public class Validator extends NetObject  {
         }
     }
 
-    public static void ValidateProperty(NetObject value, ValidationContext validationContext) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.dataannotations.ValidationException {
+    public static  void ValidateProperty(NetObject value, ValidationContext validationContext) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.dataannotations.ValidationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

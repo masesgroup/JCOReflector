@@ -162,7 +162,7 @@ public class X509Certificate2UI extends NetObject  {
     
     // Methods section
     
-    public static X509Certificate2Collection SelectFromCollection(X509Certificate2Collection certificates, java.lang.String title, java.lang.String message, X509SelectionFlag selectionFlag) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public static  X509Certificate2Collection SelectFromCollection(X509Certificate2Collection certificates, java.lang.String title, java.lang.String message, X509SelectionFlag selectionFlag) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSelectFromCollection = null;
@@ -177,7 +177,7 @@ public class X509Certificate2UI extends NetObject  {
         }
     }
 
-    public static void DisplayCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public static  void DisplayCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

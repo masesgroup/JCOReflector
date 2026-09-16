@@ -158,7 +158,7 @@ public class ButtonRenderer extends NetObject  {
     
     // Methods section
     
-    public static boolean IsBackgroundPartiallyTransparent(PushButtonState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
+    public static  boolean IsBackgroundPartiallyTransparent(PushButtonState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
@@ -172,7 +172,7 @@ public class ButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawButton(Graphics g, Rectangle bounds, boolean focused, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void DrawButton(Graphics g, Rectangle bounds, boolean focused, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -182,7 +182,7 @@ public class ButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawButton(Graphics g, Rectangle bounds, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void DrawButton(Graphics g, Rectangle bounds, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -192,7 +192,7 @@ public class ButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, boolean focused, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException {
+    public static  void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, boolean focused, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -202,7 +202,7 @@ public class ButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
+    public static  void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -212,7 +212,7 @@ public class ButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, TextFormatFlags flags, boolean focused, PushButtonState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, TextFormatFlags flags, boolean focused, PushButtonState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -222,7 +222,7 @@ public class ButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException {
+    public static  void DrawButton(Graphics g, Rectangle bounds, java.lang.String buttonText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -232,7 +232,7 @@ public class ButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawButton(Graphics g, Rectangle bounds, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException {
+    public static  void DrawButton(Graphics g, Rectangle bounds, PushButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -242,7 +242,7 @@ public class ButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
+    public static  void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

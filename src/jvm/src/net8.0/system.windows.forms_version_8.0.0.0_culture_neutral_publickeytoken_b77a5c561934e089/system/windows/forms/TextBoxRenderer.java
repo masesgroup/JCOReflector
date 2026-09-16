@@ -156,7 +156,7 @@ public class TextBoxRenderer extends NetObject  {
     
     // Methods section
     
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, TextBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, TextBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -166,7 +166,7 @@ public class TextBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, Rectangle textBounds, TextBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, Rectangle textBounds, TextBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -176,7 +176,7 @@ public class TextBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, TextFormatFlags flags, TextBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, TextFormatFlags flags, TextBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -186,7 +186,7 @@ public class TextBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, TextBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String textBoxText, Font font, TextBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -196,7 +196,7 @@ public class TextBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, TextBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, TextBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

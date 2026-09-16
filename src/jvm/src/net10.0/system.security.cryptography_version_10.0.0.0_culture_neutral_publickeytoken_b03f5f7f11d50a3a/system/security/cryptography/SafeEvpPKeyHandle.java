@@ -176,7 +176,7 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
         }
     }
 
-    public static SafeEvpPKeyHandle OpenKeyFromProvider(java.lang.String providerName, java.lang.String keyUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  SafeEvpPKeyHandle OpenKeyFromProvider(java.lang.String providerName, java.lang.String keyUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenKeyFromProvider = null;
@@ -191,7 +191,7 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
         }
     }
 
-    public static SafeEvpPKeyHandle OpenPrivateKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  SafeEvpPKeyHandle OpenPrivateKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenPrivateKeyFromEngine = null;
@@ -206,7 +206,7 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
         }
     }
 
-    public static SafeEvpPKeyHandle OpenPublicKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  SafeEvpPKeyHandle OpenPublicKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenPublicKeyFromEngine = null;

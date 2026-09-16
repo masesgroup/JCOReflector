@@ -158,7 +158,7 @@ public class SerializerDescriptor extends NetObject  {
     
     // Methods section
     
-    public static SerializerDescriptor CreateFromFactoryInstance(ISerializerFactory factoryInstance) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static  SerializerDescriptor CreateFromFactoryInstance(ISerializerFactory factoryInstance) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromFactoryInstance = null;

@@ -200,7 +200,7 @@ public class ActivityDesigner extends NetObject implements system.componentmodel
         }
     }
 
-    public static boolean IsCommentedActivity(Activity activity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  boolean IsCommentedActivity(Activity activity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsCommentedActivity = null;
@@ -229,7 +229,7 @@ public class ActivityDesigner extends NetObject implements system.componentmodel
         }
     }
 
-    public static ActivityDesigner GetRootDesigner(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  ActivityDesigner GetRootDesigner(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRootDesigner = null;

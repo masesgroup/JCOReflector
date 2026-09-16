@@ -213,7 +213,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static WindowsIdentity GetAnonymous() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public static  WindowsIdentity GetAnonymous() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAnonymous = null;
@@ -228,7 +228,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static WindowsIdentity GetCurrent() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
+    public static  WindowsIdentity GetCurrent() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrent = null;
@@ -243,7 +243,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static WindowsIdentity GetCurrent(boolean ifImpersonating) throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
+    public static  WindowsIdentity GetCurrent(boolean ifImpersonating) throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrent = null;
@@ -258,7 +258,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static WindowsIdentity GetCurrent(TokenAccessLevels desiredAccess) throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
+    public static  WindowsIdentity GetCurrent(TokenAccessLevels desiredAccess) throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrent = null;
@@ -298,7 +298,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static void RunImpersonated(SafeAccessTokenHandle safeAccessTokenHandle, Action action) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.NullReferenceException {
+    public static  void RunImpersonated(SafeAccessTokenHandle safeAccessTokenHandle, Action action) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -156,7 +156,7 @@ public class Environment extends NetObject  {
     
     // Methods section
     
-    public static IDictionary GetEnvironmentVariables() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
+    public static  IDictionary GetEnvironmentVariables() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnvironmentVariables = null;
@@ -171,7 +171,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static IDictionary GetEnvironmentVariables(EnvironmentVariableTarget target) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  IDictionary GetEnvironmentVariables(EnvironmentVariableTarget target) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnvironmentVariables = null;
@@ -186,7 +186,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static java.lang.String ExpandEnvironmentVariables(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
+    public static  java.lang.String ExpandEnvironmentVariables(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExpandEnvironmentVariables = null;
@@ -200,7 +200,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static java.lang.String GetEnvironmentVariable(java.lang.String variable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
+    public static  java.lang.String GetEnvironmentVariable(java.lang.String variable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnvironmentVariable = null;
@@ -214,7 +214,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static java.lang.String GetEnvironmentVariable(java.lang.String variable, EnvironmentVariableTarget target) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  java.lang.String GetEnvironmentVariable(java.lang.String variable, EnvironmentVariableTarget target) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnvironmentVariable = null;
@@ -228,7 +228,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetCommandLineArgs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
+    public static  java.lang.String[] GetCommandLineArgs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCommandLineArgs = null;
@@ -251,7 +251,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetLogicalDrives() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String[] GetLogicalDrives() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLogicalDrives = null;
@@ -274,7 +274,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static void Exit(int exitCode) throws Throwable {
+    public static  void Exit(int exitCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -284,7 +284,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static void FailFast(java.lang.String message) throws Throwable {
+    public static  void FailFast(java.lang.String message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -294,7 +294,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static void FailFast(java.lang.String message, NetException exception) throws Throwable {
+    public static  void FailFast(java.lang.String message, NetException exception) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -304,7 +304,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static void SetEnvironmentVariable(java.lang.String variable, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static  void SetEnvironmentVariable(java.lang.String variable, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -314,7 +314,7 @@ public class Environment extends NetObject  {
         }
     }
 
-    public static void SetEnvironmentVariable(java.lang.String variable, java.lang.String value, EnvironmentVariableTarget target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.NotSupportedException, system.io.IOException {
+    public static  void SetEnvironmentVariable(java.lang.String variable, java.lang.String value, EnvironmentVariableTarget target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.NotSupportedException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

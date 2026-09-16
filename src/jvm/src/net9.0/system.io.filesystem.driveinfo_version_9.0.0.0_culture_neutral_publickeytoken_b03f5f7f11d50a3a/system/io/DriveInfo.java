@@ -170,7 +170,7 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
     
     // Methods section
     
-    public static DriveInfo[] GetDrives() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException, system.runtime.interopservices.ExternalException {
+    public static  DriveInfo[] GetDrives() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDrives = null;

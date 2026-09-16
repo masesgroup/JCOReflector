@@ -156,7 +156,7 @@ public class SslCertificateTrust extends NetObject  {
     
     // Methods section
     
-    public static SslCertificateTrust CreateForX509Collection(X509Certificate2Collection trustList, boolean sendTrustInHandshake) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  SslCertificateTrust CreateForX509Collection(X509Certificate2Collection trustList, boolean sendTrustInHandshake) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateForX509Collection = null;
@@ -171,7 +171,7 @@ public class SslCertificateTrust extends NetObject  {
         }
     }
 
-    public static SslCertificateTrust CreateForX509Store(X509Store store, boolean sendTrustInHandshake) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
+    public static  SslCertificateTrust CreateForX509Store(X509Store store, boolean sendTrustInHandshake) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateForX509Store = null;

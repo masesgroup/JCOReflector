@@ -165,7 +165,7 @@ public class RemotingServices extends NetObject  {
     
     // Methods section
     
-    public static boolean Disconnect(MarshalByRefObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
+    public static  boolean Disconnect(MarshalByRefObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDisconnect = null;
@@ -179,7 +179,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static boolean IsMethodOverloaded(IMethodMessage msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+    public static  boolean IsMethodOverloaded(IMethodMessage msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMethodOverloaded = null;
@@ -193,7 +193,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static boolean IsObjectOutOfAppDomain(NetObject tp) throws Throwable {
+    public static  boolean IsObjectOutOfAppDomain(NetObject tp) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsObjectOutOfAppDomain = null;
@@ -207,7 +207,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static boolean IsObjectOutOfContext(NetObject tp) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public static  boolean IsObjectOutOfContext(NetObject tp) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsObjectOutOfContext = null;
@@ -221,7 +221,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static boolean IsOneWay(MethodBase method) throws Throwable, system.ArgumentException {
+    public static  boolean IsOneWay(MethodBase method) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOneWay = null;
@@ -235,7 +235,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static boolean IsTransparentProxy(NetObject proxy) throws Throwable {
+    public static  boolean IsTransparentProxy(NetObject proxy) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTransparentProxy = null;
@@ -249,7 +249,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static NetObject Connect(NetType classToProxy, java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
+    public static  NetObject Connect(NetType classToProxy, java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConnect = null;
@@ -264,7 +264,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static NetObject Connect(NetType classToProxy, java.lang.String url, NetObject data) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
+    public static  NetObject Connect(NetType classToProxy, java.lang.String url, NetObject data) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConnect = null;
@@ -279,7 +279,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static NetObject GetLifetimeService(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  NetObject GetLifetimeService(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLifetimeService = null;
@@ -294,7 +294,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static NetObject Unmarshal(ObjRef objectRef) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
+    public static  NetObject Unmarshal(ObjRef objectRef) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnmarshal = null;
@@ -309,7 +309,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static NetObject Unmarshal(ObjRef objectRef, boolean fRefine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
+    public static  NetObject Unmarshal(ObjRef objectRef, boolean fRefine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnmarshal = null;
@@ -324,7 +324,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static MethodBase GetMethodBaseFromMethodMessage(IMethodMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.reflection.AmbiguousMatchException {
+    public static  MethodBase GetMethodBaseFromMethodMessage(IMethodMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethodBaseFromMethodMessage = null;
@@ -339,7 +339,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static IMessageSink GetEnvoyChainForProxy(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public static  IMessageSink GetEnvoyChainForProxy(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnvoyChainForProxy = null;
@@ -354,7 +354,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static IMethodReturnMessage ExecuteMessage(MarshalByRefObject target, IMethodCallMessage reqMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  IMethodReturnMessage ExecuteMessage(MarshalByRefObject target, IMethodCallMessage reqMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExecuteMessage = null;
@@ -369,7 +369,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static ObjRef GetObjRefForProxy(MarshalByRefObject obj) throws Throwable, system.runtime.remoting.RemotingException {
+    public static  ObjRef GetObjRefForProxy(MarshalByRefObject obj) throws Throwable, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetObjRefForProxy = null;
@@ -384,7 +384,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static ObjRef Marshal(MarshalByRefObject Obj) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  ObjRef Marshal(MarshalByRefObject Obj) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMarshal = null;
@@ -399,7 +399,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static ObjRef Marshal(MarshalByRefObject Obj, java.lang.String URI) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  ObjRef Marshal(MarshalByRefObject Obj, java.lang.String URI) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMarshal = null;
@@ -414,7 +414,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static ObjRef Marshal(MarshalByRefObject Obj, java.lang.String ObjURI, NetType RequestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  ObjRef Marshal(MarshalByRefObject Obj, java.lang.String ObjURI, NetType RequestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMarshal = null;
@@ -429,7 +429,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static RealProxy GetRealProxy(NetObject proxy) throws Throwable {
+    public static  RealProxy GetRealProxy(NetObject proxy) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRealProxy = null;
@@ -444,7 +444,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetObjectUri(MarshalByRefObject obj) throws Throwable {
+    public static  java.lang.String GetObjectUri(MarshalByRefObject obj) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetObjectUri = null;
@@ -458,7 +458,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetSessionIdForMethodMessage(IMethodMessage msg) throws Throwable {
+    public static  java.lang.String GetSessionIdForMethodMessage(IMethodMessage msg) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSessionIdForMethodMessage = null;
@@ -472,7 +472,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static NetType GetServerTypeForUri(java.lang.String URI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException {
+    public static  NetType GetServerTypeForUri(java.lang.String URI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetServerTypeForUri = null;
@@ -487,7 +487,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.NullReferenceException {
+    public static  void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -497,7 +497,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static void LogRemotingStage(int stage) throws Throwable {
+    public static  void LogRemotingStage(int stage) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -507,7 +507,7 @@ public class RemotingServices extends NetObject  {
         }
     }
 
-    public static void SetObjectUriForMarshal(MarshalByRefObject obj, java.lang.String uri) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  void SetObjectUriForMarshal(MarshalByRefObject obj, java.lang.String uri) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

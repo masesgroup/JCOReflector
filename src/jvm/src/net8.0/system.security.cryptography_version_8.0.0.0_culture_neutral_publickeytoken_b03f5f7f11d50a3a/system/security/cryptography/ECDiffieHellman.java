@@ -410,7 +410,7 @@ public class ECDiffieHellman extends ECAlgorithm  {
         }
     }
 
-    public static ECDiffieHellman CreateNewECDiffieHellman() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
+    public static  ECDiffieHellman CreateNewECDiffieHellman() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -425,7 +425,7 @@ public class ECDiffieHellman extends ECAlgorithm  {
         }
     }
 
-    public static ECDiffieHellman Create(ECCurve curve) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  ECDiffieHellman Create(ECCurve curve) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -440,7 +440,7 @@ public class ECDiffieHellman extends ECAlgorithm  {
         }
     }
 
-    public static ECDiffieHellman Create(ECParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotSupportedException {
+    public static  ECDiffieHellman Create(ECParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -455,7 +455,7 @@ public class ECDiffieHellman extends ECAlgorithm  {
         }
     }
 
-    public static ECDiffieHellman CreateNewECDiffieHellman(java.lang.String algorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
+    public static  ECDiffieHellman CreateNewECDiffieHellman(java.lang.String algorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

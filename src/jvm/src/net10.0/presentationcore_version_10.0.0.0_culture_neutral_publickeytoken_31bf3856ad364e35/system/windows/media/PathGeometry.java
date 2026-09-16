@@ -223,7 +223,7 @@ public class PathGeometry extends Geometry  {
         }
     }
 
-    public static PathGeometry CreateFromGeometry(Geometry geometry) throws Throwable {
+    public static  PathGeometry CreateFromGeometry(Geometry geometry) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromGeometry = null;

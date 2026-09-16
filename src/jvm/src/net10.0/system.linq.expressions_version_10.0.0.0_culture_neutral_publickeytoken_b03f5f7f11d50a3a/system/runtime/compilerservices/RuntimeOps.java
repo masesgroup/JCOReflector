@@ -155,7 +155,7 @@ public class RuntimeOps extends NetObject  {
     
     // Methods section
     
-    public static boolean ExpandoCheckVersion(ExpandoObject expando, NetObject version) throws Throwable {
+    public static  boolean ExpandoCheckVersion(ExpandoObject expando, NetObject version) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExpandoCheckVersion = null;
@@ -169,7 +169,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static boolean ExpandoTryDeleteValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException {
+    public static  boolean ExpandoTryDeleteValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExpandoTryDeleteValue = null;
@@ -183,7 +183,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static boolean ExpandoTryGetValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase, JCORefOut<NetObject> value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static  boolean ExpandoTryGetValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase, JCORefOut<NetObject> value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExpandoTryGetValue = null;
@@ -197,7 +197,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static Expression Quote(Expression expression, NetObject hoistedLocals, NetObject[] locals) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static  Expression Quote(Expression expression, NetObject hoistedLocals, NetObject[] locals) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectQuote = null;
@@ -212,7 +212,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static NetObject ExpandoTrySetValue(ExpandoObject expando, NetObject indexClass, int index, NetObject value, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.IndexOutOfRangeException {
+    public static  NetObject ExpandoTrySetValue(ExpandoObject expando, NetObject indexClass, int index, NetObject value, java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExpandoTrySetValue = null;
@@ -227,7 +227,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static IRuntimeVariables CreateRuntimeVariables() throws Throwable {
+    public static  IRuntimeVariables CreateRuntimeVariables() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRuntimeVariables = null;
@@ -242,7 +242,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static IRuntimeVariables CreateRuntimeVariables(NetObject[] data, long[] indexes) throws Throwable {
+    public static  IRuntimeVariables CreateRuntimeVariables(NetObject[] data, long[] indexes) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRuntimeVariables = null;
@@ -257,7 +257,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static IRuntimeVariables CreateRuntimeVariables(NetObject[] dupParam0, JCORefOut dupParam1) throws Throwable {
+    public static  IRuntimeVariables CreateRuntimeVariables(NetObject[] dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRuntimeVariables = null;
@@ -272,7 +272,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables first, IRuntimeVariables second, int[] indexes) throws Throwable {
+    public static  IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables first, IRuntimeVariables second, int[] indexes) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMergeRuntimeVariables = null;
@@ -287,7 +287,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables dupParam0, IRuntimeVariables dupParam1, JCORefOut dupParam2) throws Throwable {
+    public static  IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables dupParam0, IRuntimeVariables dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMergeRuntimeVariables = null;
@@ -302,7 +302,7 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static void ExpandoPromoteClass(ExpandoObject expando, NetObject oldClass, NetObject newClass) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void ExpandoPromoteClass(ExpandoObject expando, NetObject oldClass, NetObject newClass) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

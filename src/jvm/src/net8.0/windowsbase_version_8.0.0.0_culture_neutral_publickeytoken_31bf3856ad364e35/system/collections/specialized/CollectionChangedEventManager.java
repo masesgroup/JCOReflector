@@ -158,7 +158,7 @@ public class CollectionChangedEventManager extends WeakEventManager  {
     
     // Methods section
     
-    public static void AddListener(INotifyCollectionChanged source, IWeakEventListener listener) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
+    public static  void AddListener(INotifyCollectionChanged source, IWeakEventListener listener) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -168,7 +168,7 @@ public class CollectionChangedEventManager extends WeakEventManager  {
         }
     }
 
-    public static void RemoveListener(INotifyCollectionChanged source, IWeakEventListener listener) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
+    public static  void RemoveListener(INotifyCollectionChanged source, IWeakEventListener listener) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -263,7 +263,7 @@ public class EventProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Guid CreateActivityId() throws Throwable {
+    public static  Guid CreateActivityId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateActivityId = null;
@@ -298,7 +298,7 @@ public class EventProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void SetActivityId(JCORefOut<Guid> id) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public static  void SetActivityId(JCORefOut<Guid> id) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

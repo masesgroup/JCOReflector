@@ -158,7 +158,7 @@ public class ComboBoxRenderer extends NetObject  {
     
     // Methods section
     
-    public static void DrawDropDownButton(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  void DrawDropDownButton(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -168,7 +168,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -178,7 +178,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -188,7 +188,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -198,7 +198,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -208,7 +208,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

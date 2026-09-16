@@ -324,7 +324,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean Equals(SqlGuid x, SqlGuid y) throws Throwable {
+    public static  SqlBoolean Equals(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -339,7 +339,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlGuid x, SqlGuid y) throws Throwable {
+    public static  SqlBoolean GreaterThan(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -354,7 +354,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable {
+    public static  SqlBoolean GreaterThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -369,7 +369,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean LessThan(SqlGuid x, SqlGuid y) throws Throwable {
+    public static  SqlBoolean LessThan(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -384,7 +384,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable {
+    public static  SqlBoolean LessThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -399,7 +399,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean NotEquals(SqlGuid x, SqlGuid y) throws Throwable {
+    public static  SqlBoolean NotEquals(SqlGuid x, SqlGuid y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -414,7 +414,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlGuid Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  SqlGuid Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -444,7 +444,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

@@ -155,7 +155,7 @@ public class SoapServices extends NetObject  {
     
     // Methods section
     
-    public static boolean DecodeXmlNamespaceForClrTypeNamespace(java.lang.String inNamespace, JCORefOut typeNamespace, JCORefOut assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  boolean DecodeXmlNamespaceForClrTypeNamespace(java.lang.String inNamespace, JCORefOut typeNamespace, JCORefOut assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecodeXmlNamespaceForClrTypeNamespace = null;
@@ -169,7 +169,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static boolean GetTypeAndMethodNameFromSoapAction(java.lang.String soapAction, JCORefOut typeName, JCORefOut methodName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException {
+    public static  boolean GetTypeAndMethodNameFromSoapAction(java.lang.String soapAction, JCORefOut typeName, JCORefOut methodName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeAndMethodNameFromSoapAction = null;
@@ -183,7 +183,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static boolean GetXmlElementForInteropType(NetType type, JCORefOut xmlElement, JCORefOut xmlNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  boolean GetXmlElementForInteropType(NetType type, JCORefOut xmlElement, JCORefOut xmlNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlElementForInteropType = null;
@@ -197,7 +197,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static boolean GetXmlTypeForInteropType(NetType type, JCORefOut xmlType, JCORefOut xmlTypeNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException {
+    public static  boolean GetXmlTypeForInteropType(NetType type, JCORefOut xmlType, JCORefOut xmlTypeNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlTypeForInteropType = null;
@@ -211,7 +211,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static boolean IsClrTypeNamespace(java.lang.String namespaceString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  boolean IsClrTypeNamespace(java.lang.String namespaceString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsClrTypeNamespace = null;
@@ -225,7 +225,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static boolean IsSoapActionValidForMethodBase(java.lang.String soapAction, MethodBase mb) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException {
+    public static  boolean IsSoapActionValidForMethodBase(java.lang.String soapAction, MethodBase mb) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSoapActionValidForMethodBase = null;
@@ -239,7 +239,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static java.lang.String CodeXmlNamespaceForClrTypeNamespace(java.lang.String typeNamespace, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  java.lang.String CodeXmlNamespaceForClrTypeNamespace(java.lang.String typeNamespace, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCodeXmlNamespaceForClrTypeNamespace = null;
@@ -253,7 +253,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetSoapActionFromMethodBase(MethodBase mb) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  java.lang.String GetSoapActionFromMethodBase(MethodBase mb) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSoapActionFromMethodBase = null;
@@ -267,7 +267,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlNamespaceForMethodCall(MethodBase mb) throws Throwable, system.ArgumentException {
+    public static  java.lang.String GetXmlNamespaceForMethodCall(MethodBase mb) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlNamespaceForMethodCall = null;
@@ -281,7 +281,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlNamespaceForMethodResponse(MethodBase mb) throws Throwable, system.ArgumentException {
+    public static  java.lang.String GetXmlNamespaceForMethodResponse(MethodBase mb) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlNamespaceForMethodResponse = null;
@@ -295,7 +295,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static NetType GetInteropTypeFromXmlElement(java.lang.String xmlElement, java.lang.String xmlNamespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  NetType GetInteropTypeFromXmlElement(java.lang.String xmlElement, java.lang.String xmlNamespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInteropTypeFromXmlElement = null;
@@ -310,7 +310,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static NetType GetInteropTypeFromXmlType(java.lang.String xmlType, java.lang.String xmlTypeNamespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  NetType GetInteropTypeFromXmlType(java.lang.String xmlType, java.lang.String xmlTypeNamespace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInteropTypeFromXmlType = null;
@@ -325,7 +325,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static void GetInteropFieldTypeAndNameFromXmlAttribute(NetType containingType, java.lang.String xmlAttribute, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
+    public static  void GetInteropFieldTypeAndNameFromXmlAttribute(NetType containingType, java.lang.String xmlAttribute, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -335,7 +335,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static void GetInteropFieldTypeAndNameFromXmlElement(NetType containingType, java.lang.String xmlElement, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
+    public static  void GetInteropFieldTypeAndNameFromXmlElement(NetType containingType, java.lang.String xmlElement, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -345,7 +345,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static void PreLoad(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void PreLoad(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -355,7 +355,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static void PreLoad(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void PreLoad(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -365,7 +365,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static void RegisterInteropXmlElement(java.lang.String xmlElement, java.lang.String xmlNamespace, NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public static  void RegisterInteropXmlElement(java.lang.String xmlElement, java.lang.String xmlNamespace, NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -375,7 +375,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static void RegisterInteropXmlType(java.lang.String xmlType, java.lang.String xmlTypeNamespace, NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public static  void RegisterInteropXmlType(java.lang.String xmlType, java.lang.String xmlTypeNamespace, NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -385,7 +385,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static void RegisterSoapActionForMethodBase(MethodBase mb) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void RegisterSoapActionForMethodBase(MethodBase mb) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -395,7 +395,7 @@ public class SoapServices extends NetObject  {
         }
     }
 
-    public static void RegisterSoapActionForMethodBase(MethodBase mb, java.lang.String soapAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void RegisterSoapActionForMethodBase(MethodBase mb, java.lang.String soapAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -160,7 +160,7 @@ public class NetworkChange extends NetObject  {
     
     // Methods section
     
-    public static void RegisterNetworkChange(NetworkChange nc) throws Throwable {
+    public static  void RegisterNetworkChange(NetworkChange nc) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

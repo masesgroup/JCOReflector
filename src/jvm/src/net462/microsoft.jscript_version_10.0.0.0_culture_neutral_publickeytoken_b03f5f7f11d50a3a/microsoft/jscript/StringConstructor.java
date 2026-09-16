@@ -170,7 +170,7 @@ public class StringConstructor extends ScriptFunction  {
         }
     }
 
-    public static java.lang.String fromCharCode(NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.MissingMethodException {
+    public static  java.lang.String fromCharCode(NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectfromCharCode = null;

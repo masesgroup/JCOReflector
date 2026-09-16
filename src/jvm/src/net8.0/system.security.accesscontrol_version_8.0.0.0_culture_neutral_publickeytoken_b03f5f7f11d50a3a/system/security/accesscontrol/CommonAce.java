@@ -167,7 +167,7 @@ public class CommonAce extends QualifiedAce  {
     
     // Methods section
     
-    public static int MaxOpaqueLength(boolean isCallback) throws Throwable {
+    public static  int MaxOpaqueLength(boolean isCallback) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxOpaqueLength = null;

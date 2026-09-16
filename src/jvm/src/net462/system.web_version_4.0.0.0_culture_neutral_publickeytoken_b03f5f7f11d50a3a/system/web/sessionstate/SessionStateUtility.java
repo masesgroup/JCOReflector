@@ -158,7 +158,7 @@ public class SessionStateUtility extends NetObject  {
     
     // Methods section
     
-    public static boolean IsSessionStateReadOnly(HttpContext context) throws Throwable {
+    public static  boolean IsSessionStateReadOnly(HttpContext context) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSessionStateReadOnly = null;
@@ -172,7 +172,7 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
-    public static boolean IsSessionStateRequired(HttpContext context) throws Throwable {
+    public static  boolean IsSessionStateRequired(HttpContext context) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSessionStateRequired = null;
@@ -186,7 +186,7 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
-    public static HttpStaticObjectsCollection GetSessionStaticObjects(HttpContext context) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  HttpStaticObjectsCollection GetSessionStaticObjects(HttpContext context) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSessionStaticObjects = null;
@@ -201,7 +201,7 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
-    public static IHttpSessionState GetHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
+    public static  IHttpSessionState GetHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHttpSessionStateFromContext = null;
@@ -216,7 +216,7 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
-    public static void AddHttpSessionStateToContext(HttpContext context, IHttpSessionState container) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
+    public static  void AddHttpSessionStateToContext(HttpContext context, IHttpSessionState container) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -226,7 +226,7 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
-    public static void RaiseSessionEnd(IHttpSessionState session, NetObject eventSource, EventArgs eventArgs) throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.web.HttpException, system.ArgumentOutOfRangeException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
+    public static  void RaiseSessionEnd(IHttpSessionState session, NetObject eventSource, EventArgs eventArgs) throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.web.HttpException, system.ArgumentOutOfRangeException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -236,7 +236,7 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
-    public static void RemoveHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
+    public static  void RemoveHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

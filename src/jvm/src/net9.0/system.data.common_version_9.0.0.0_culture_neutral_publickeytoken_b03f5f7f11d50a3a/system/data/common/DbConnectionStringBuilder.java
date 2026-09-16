@@ -261,7 +261,7 @@ public class DbConnectionStringBuilder extends NetObjectEnumerable  {
         }
     }
 
-    public static void AppendKeyValuePair(StringBuilder builder, java.lang.String keyword, java.lang.String value, boolean useOdbcRules) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
+    public static  void AppendKeyValuePair(StringBuilder builder, java.lang.String keyword, java.lang.String value, boolean useOdbcRules) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -271,7 +271,7 @@ public class DbConnectionStringBuilder extends NetObjectEnumerable  {
         }
     }
 
-    public static void AppendKeyValuePair(StringBuilder builder, java.lang.String keyword, java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
+    public static  void AppendKeyValuePair(StringBuilder builder, java.lang.String keyword, java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

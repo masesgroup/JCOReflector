@@ -164,7 +164,7 @@ public class DesignerView extends UserControl  {
     
     // Methods section
     
-    public static CommandMenuMode GetCommandMenuMode(DependencyObject obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  CommandMenuMode GetCommandMenuMode(DependencyObject obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCommandMenuMode = null;
@@ -229,7 +229,7 @@ public class DesignerView extends UserControl  {
         }
     }
 
-    public static void SetCommandMenuMode(DependencyObject obj, CommandMenuMode value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void SetCommandMenuMode(DependencyObject obj, CommandMenuMode value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

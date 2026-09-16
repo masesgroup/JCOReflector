@@ -155,7 +155,7 @@ public class ProgressBarRenderer extends NetObject  {
     
     // Methods section
     
-    public static void DrawHorizontalBar(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  void DrawHorizontalBar(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -165,7 +165,7 @@ public class ProgressBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawHorizontalChunks(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  void DrawHorizontalChunks(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -175,7 +175,7 @@ public class ProgressBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawVerticalBar(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  void DrawVerticalBar(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -185,7 +185,7 @@ public class ProgressBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawVerticalChunks(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  void DrawVerticalChunks(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

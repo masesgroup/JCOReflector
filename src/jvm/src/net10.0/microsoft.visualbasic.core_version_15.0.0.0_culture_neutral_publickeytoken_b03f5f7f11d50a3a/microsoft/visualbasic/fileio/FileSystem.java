@@ -170,7 +170,7 @@ public class FileSystem extends NetObject  {
     
     // Methods section
     
-    public static boolean DirectoryExists(java.lang.String directory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean DirectoryExists(java.lang.String directory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDirectoryExists = null;
@@ -184,7 +184,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static boolean FileExists(java.lang.String file) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean FileExists(java.lang.String file) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFileExists = null;
@@ -198,7 +198,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static byte[] ReadAllBytes(java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.io.IOException, system.threading.ThreadStateException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+    public static  byte[] ReadAllBytes(java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.io.IOException, system.threading.ThreadStateException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadAllBytes = null;
@@ -221,7 +221,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static TextFieldParser OpenTextFieldParser(java.lang.String file, int... fieldWidths) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException {
+    public static  TextFieldParser OpenTextFieldParser(java.lang.String file, int... fieldWidths) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenTextFieldParser = null;
@@ -236,7 +236,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static TextFieldParser OpenTextFieldParser(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException {
+    public static  TextFieldParser OpenTextFieldParser(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenTextFieldParser = null;
@@ -251,7 +251,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static TextFieldParser OpenTextFieldParser(java.lang.String file, java.lang.String... delimiters) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException {
+    public static  TextFieldParser OpenTextFieldParser(java.lang.String file, java.lang.String... delimiters) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenTextFieldParser = null;
@@ -266,7 +266,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static TextFieldParser OpenTextFieldParser(java.lang.String file) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException {
+    public static  TextFieldParser OpenTextFieldParser(java.lang.String file) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenTextFieldParser = null;
@@ -281,7 +281,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static DirectoryInfo GetDirectoryInfo(java.lang.String directory) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+    public static  DirectoryInfo GetDirectoryInfo(java.lang.String directory) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDirectoryInfo = null;
@@ -296,7 +296,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static DriveInfo GetDriveInfo(java.lang.String drive) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
+    public static  DriveInfo GetDriveInfo(java.lang.String drive) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDriveInfo = null;
@@ -311,7 +311,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static FileInfo GetFileInfo(java.lang.String file) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
+    public static  FileInfo GetFileInfo(java.lang.String file) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFileInfo = null;
@@ -326,7 +326,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static StreamReader OpenTextFileReader(java.lang.String file, Encoding encoding) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
+    public static  StreamReader OpenTextFileReader(java.lang.String file, Encoding encoding) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenTextFileReader = null;
@@ -341,7 +341,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static StreamReader OpenTextFileReader(java.lang.String file) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public static  StreamReader OpenTextFileReader(java.lang.String file) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenTextFileReader = null;
@@ -356,7 +356,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static StreamWriter OpenTextFileWriter(java.lang.String file, boolean append, Encoding encoding) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
+    public static  StreamWriter OpenTextFileWriter(java.lang.String file, boolean append, Encoding encoding) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenTextFileWriter = null;
@@ -371,7 +371,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static StreamWriter OpenTextFileWriter(java.lang.String file, boolean append) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public static  StreamWriter OpenTextFileWriter(java.lang.String file, boolean append) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenTextFileWriter = null;
@@ -386,7 +386,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static java.lang.String CombinePath(java.lang.String baseDirectory, java.lang.String relativePath) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
+    public static  java.lang.String CombinePath(java.lang.String baseDirectory, java.lang.String relativePath) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCombinePath = null;
@@ -400,7 +400,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static java.lang.String GetName(java.lang.String path) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
+    public static  java.lang.String GetName(java.lang.String path) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetName = null;
@@ -414,7 +414,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static java.lang.String GetParentPath(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.FormatException {
+    public static  java.lang.String GetParentPath(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetParentPath = null;
@@ -428,7 +428,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTempFileName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.threading.ThreadStateException {
+    public static  java.lang.String GetTempFileName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.threading.ThreadStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTempFileName = null;
@@ -442,7 +442,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static java.lang.String ReadAllText(java.lang.String file, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static  java.lang.String ReadAllText(java.lang.String file, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadAllText = null;
@@ -456,7 +456,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static java.lang.String ReadAllText(java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static  java.lang.String ReadAllText(java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadAllText = null;
@@ -470,7 +470,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, boolean overwrite) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, boolean overwrite) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -480,7 +480,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -490,7 +490,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -500,7 +500,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -510,7 +510,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -520,7 +520,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -530,7 +530,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -540,7 +540,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -550,7 +550,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void CreateDirectory(java.lang.String directory) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.io.IOException {
+    public static  void CreateDirectory(java.lang.String directory) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -560,7 +560,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void DeleteDirectory(java.lang.String directory, DeleteDirectoryOption onDirectoryNotEmpty) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ObjectDisposedException {
+    public static  void DeleteDirectory(java.lang.String directory, DeleteDirectoryOption onDirectoryNotEmpty) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -570,7 +570,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void DeleteDirectory(java.lang.String directory, UIOption showUI, RecycleOption recycle, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void DeleteDirectory(java.lang.String directory, UIOption showUI, RecycleOption recycle, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -580,7 +580,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void DeleteDirectory(java.lang.String directory, UIOption showUI, RecycleOption recycle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void DeleteDirectory(java.lang.String directory, UIOption showUI, RecycleOption recycle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -590,7 +590,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void DeleteFile(java.lang.String file, UIOption showUI, RecycleOption recycle, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
+    public static  void DeleteFile(java.lang.String file, UIOption showUI, RecycleOption recycle, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -600,7 +600,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void DeleteFile(java.lang.String file, UIOption showUI, RecycleOption recycle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
+    public static  void DeleteFile(java.lang.String file, UIOption showUI, RecycleOption recycle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -610,7 +610,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void DeleteFile(java.lang.String file) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
+    public static  void DeleteFile(java.lang.String file) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -620,7 +620,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, boolean overwrite) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, boolean overwrite) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -630,7 +630,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -640,7 +640,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -650,7 +650,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
+    public static  void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -660,7 +660,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -670,7 +670,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -680,7 +680,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -690,7 +690,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -700,7 +700,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void RenameDirectory(java.lang.String directory, java.lang.String newName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.DirectoryNotFoundException, system.diagnostics.UnreachableException {
+    public static  void RenameDirectory(java.lang.String directory, java.lang.String newName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.DirectoryNotFoundException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -710,7 +710,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void RenameFile(java.lang.String file, java.lang.String newName) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.io.FileNotFoundException, system.io.IOException {
+    public static  void RenameFile(java.lang.String file, java.lang.String newName) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.io.FileNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -720,7 +720,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void WriteAllBytes(java.lang.String file, byte[] data, boolean append) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.runtime.serialization.SerializationException {
+    public static  void WriteAllBytes(java.lang.String file, byte[] data, boolean append) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -730,7 +730,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void WriteAllBytes(java.lang.String dupParam0, JCORefOut dupParam1, boolean dupParam2) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.runtime.serialization.SerializationException {
+    public static  void WriteAllBytes(java.lang.String dupParam0, JCORefOut dupParam1, boolean dupParam2) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -740,7 +740,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void WriteAllText(java.lang.String file, java.lang.String text, boolean append, Encoding encoding) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArrayTypeMismatchException {
+    public static  void WriteAllText(java.lang.String file, java.lang.String text, boolean append, Encoding encoding) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -750,7 +750,7 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void WriteAllText(java.lang.String file, java.lang.String text, boolean append) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArrayTypeMismatchException {
+    public static  void WriteAllText(java.lang.String file, java.lang.String text, boolean append) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

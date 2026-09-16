@@ -222,7 +222,7 @@ public class AttributeCollection extends NetObjectEnumerable  {
         }
     }
 
-    public static AttributeCollection FromExisting(AttributeCollection existing, Attribute... newAttributes) throws Throwable, system.ArgumentNullException {
+    public static  AttributeCollection FromExisting(AttributeCollection existing, Attribute... newAttributes) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromExisting = null;

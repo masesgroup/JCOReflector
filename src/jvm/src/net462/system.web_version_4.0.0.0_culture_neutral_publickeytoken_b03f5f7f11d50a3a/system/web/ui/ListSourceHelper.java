@@ -155,7 +155,7 @@ public class ListSourceHelper extends NetObject  {
     
     // Methods section
     
-    public static boolean ContainsListCollection(IDataSource dataSource) throws Throwable {
+    public static  boolean ContainsListCollection(IDataSource dataSource) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainsListCollection = null;
@@ -169,7 +169,7 @@ public class ListSourceHelper extends NetObject  {
         }
     }
 
-    public static IList GetList(IDataSource dataSource) throws Throwable {
+    public static  IList GetList(IDataSource dataSource) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetList = null;

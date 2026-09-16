@@ -156,7 +156,7 @@ public class XamlAccessLevel extends NetObject  {
     
     // Methods section
     
-    public static XamlAccessLevel AssemblyAccessTo(Assembly assembly) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  XamlAccessLevel AssemblyAccessTo(Assembly assembly) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAssemblyAccessTo = null;
@@ -171,7 +171,7 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
-    public static XamlAccessLevel AssemblyAccessTo(AssemblyName assemblyName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.IndexOutOfRangeException {
+    public static  XamlAccessLevel AssemblyAccessTo(AssemblyName assemblyName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAssemblyAccessTo = null;
@@ -186,7 +186,7 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
-    public static XamlAccessLevel PrivateAccessTo(java.lang.String assemblyQualifiedTypeName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.io.FileLoadException, system.security.SecurityException {
+    public static  XamlAccessLevel PrivateAccessTo(java.lang.String assemblyQualifiedTypeName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.io.FileLoadException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPrivateAccessTo = null;
@@ -201,7 +201,7 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
-    public static XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPrivateAccessTo = null;

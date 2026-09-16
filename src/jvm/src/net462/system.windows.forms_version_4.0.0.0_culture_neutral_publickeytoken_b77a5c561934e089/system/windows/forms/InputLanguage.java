@@ -156,7 +156,7 @@ public class InputLanguage extends NetObject  {
     
     // Methods section
     
-    public static InputLanguage FromCulture(CultureInfo culture) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  InputLanguage FromCulture(CultureInfo culture) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromCulture = null;

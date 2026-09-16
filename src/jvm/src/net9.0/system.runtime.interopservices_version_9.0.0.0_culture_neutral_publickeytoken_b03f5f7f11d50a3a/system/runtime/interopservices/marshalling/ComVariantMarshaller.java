@@ -152,7 +152,7 @@ public class ComVariantMarshaller extends NetObject  {
     
     // Methods section
     
-    public static NetObject ConvertToManaged(ComVariant unmanaged) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NullReferenceException, system.FormatException {
+    public static  NetObject ConvertToManaged(ComVariant unmanaged) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NullReferenceException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertToManaged = null;
@@ -167,7 +167,7 @@ public class ComVariantMarshaller extends NetObject  {
         }
     }
 
-    public static ComVariant ConvertToUnmanaged(NetObject managed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
+    public static  ComVariant ConvertToUnmanaged(NetObject managed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertToUnmanaged = null;
@@ -182,7 +182,7 @@ public class ComVariantMarshaller extends NetObject  {
         }
     }
 
-    public static void Free(ComVariant unmanaged) throws Throwable {
+    public static  void Free(ComVariant unmanaged) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

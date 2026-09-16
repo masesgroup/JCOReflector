@@ -160,7 +160,7 @@ public class RadioButtonRenderer extends NetObject  {
     
     // Methods section
     
-    public static boolean IsBackgroundPartiallyTransparent(RadioButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
+    public static  boolean IsBackgroundPartiallyTransparent(RadioButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
@@ -174,7 +174,7 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
-    public static Size GetGlyphSize(Graphics g, RadioButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException {
+    public static  Size GetGlyphSize(Graphics g, RadioButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetGlyphSize = null;
@@ -189,7 +189,7 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.NotSupportedException {
+    public static  void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -199,7 +199,7 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, boolean focused, RadioButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, boolean focused, RadioButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -209,7 +209,7 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, Image image, Rectangle imageBounds, boolean focused, RadioButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, Image image, Rectangle imageBounds, boolean focused, RadioButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -219,7 +219,7 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, TextFormatFlags flags, boolean focused, RadioButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
+    public static  void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, TextFormatFlags flags, boolean focused, RadioButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -229,7 +229,7 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, RadioButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
+    public static  void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, RadioButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -239,7 +239,7 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
-    public static void DrawRadioButton(Graphics g, Point glyphLocation, RadioButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
+    public static  void DrawRadioButton(Graphics g, Point glyphLocation, RadioButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

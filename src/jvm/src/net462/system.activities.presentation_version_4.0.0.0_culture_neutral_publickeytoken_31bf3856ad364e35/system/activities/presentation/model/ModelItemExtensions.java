@@ -153,7 +153,7 @@ public class ModelItemExtensions extends NetObject  {
     
     // Methods section
     
-    public static boolean IsParentOf(ModelItem item, ModelItem child) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  boolean IsParentOf(ModelItem item, ModelItem child) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsParentOf = null;
@@ -167,7 +167,7 @@ public class ModelItemExtensions extends NetObject  {
         }
     }
 
-    public static EditingContext GetEditingContext(ModelItem modelItem) throws Throwable {
+    public static  EditingContext GetEditingContext(ModelItem modelItem) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEditingContext = null;
@@ -182,7 +182,7 @@ public class ModelItemExtensions extends NetObject  {
         }
     }
 
-    public static ModelItem GetModelItemFromPath(java.lang.String path, ModelItem root) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.NullReferenceException {
+    public static  ModelItem GetModelItemFromPath(java.lang.String path, ModelItem root) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetModelItemFromPath = null;
@@ -197,7 +197,7 @@ public class ModelItemExtensions extends NetObject  {
         }
     }
 
-    public static java.lang.String GetModelPath(ModelItem modelItem) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException {
+    public static  java.lang.String GetModelPath(ModelItem modelItem) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetModelPath = null;
@@ -211,7 +211,7 @@ public class ModelItemExtensions extends NetObject  {
         }
     }
 
-    public static void Focus(ModelItem item) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public static  void Focus(ModelItem item) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -221,7 +221,7 @@ public class ModelItemExtensions extends NetObject  {
         }
     }
 
-    public static void Focus(ModelItem item, int level) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
+    public static  void Focus(ModelItem item, int level) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -158,7 +158,7 @@ public class DesignTimeTemplateParser extends NetObject  {
     
     // Methods section
     
-    public static Control ParseControl(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpParseException, system.MissingMethodException {
+    public static  Control ParseControl(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpParseException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseControl = null;
@@ -173,7 +173,7 @@ public class DesignTimeTemplateParser extends NetObject  {
         }
     }
 
-    public static Control[] ParseControls(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpParseException, system.MissingMethodException {
+    public static  Control[] ParseControls(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpParseException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseControls = null;
@@ -194,7 +194,7 @@ public class DesignTimeTemplateParser extends NetObject  {
         }
     }
 
-    public static ControlBuilder ParseTheme(IDesignerHost host, java.lang.String theme, java.lang.String themePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
+    public static  ControlBuilder ParseTheme(IDesignerHost host, java.lang.String theme, java.lang.String themePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseTheme = null;
@@ -209,7 +209,7 @@ public class DesignTimeTemplateParser extends NetObject  {
         }
     }
 
-    public static ITemplate ParseTemplate(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
+    public static  ITemplate ParseTemplate(DesignTimeParseData data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.OutOfMemoryException, system.web.HttpParseException, system.io.IOException, system.io.PathTooLongException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseTemplate = null;

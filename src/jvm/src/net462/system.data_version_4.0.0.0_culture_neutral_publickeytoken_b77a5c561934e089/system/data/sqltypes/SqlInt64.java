@@ -261,7 +261,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean Equals(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlBoolean Equals(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -276,7 +276,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlBoolean GreaterThan(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -291,7 +291,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlBoolean GreaterThanOrEqual(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -306,7 +306,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean LessThan(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlBoolean LessThan(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -321,7 +321,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlBoolean LessThanOrEqual(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -336,7 +336,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean NotEquals(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlBoolean NotEquals(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -441,7 +441,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 Add(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException {
+    public static  SqlInt64 Add(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -456,7 +456,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 BitwiseAnd(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlInt64 BitwiseAnd(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseAnd = null;
@@ -471,7 +471,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 BitwiseOr(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlInt64 BitwiseOr(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseOr = null;
@@ -486,7 +486,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 Divide(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException, system.DivideByZeroException {
+    public static  SqlInt64 Divide(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -501,7 +501,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 Mod(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException, system.DivideByZeroException {
+    public static  SqlInt64 Mod(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMod = null;
@@ -516,7 +516,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 Modulus(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException, system.DivideByZeroException {
+    public static  SqlInt64 Modulus(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModulus = null;
@@ -531,7 +531,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 Multiply(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException {
+    public static  SqlInt64 Multiply(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -546,7 +546,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 OnesComplement(SqlInt64 x) throws Throwable {
+    public static  SqlInt64 OnesComplement(SqlInt64 x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnesComplement = null;
@@ -561,7 +561,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+    public static  SqlInt64 Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -576,7 +576,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 Subtract(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException {
+    public static  SqlInt64 Subtract(SqlInt64 x, SqlInt64 y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -591,7 +591,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlInt64 Xor(SqlInt64 x, SqlInt64 y) throws Throwable {
+    public static  SqlInt64 Xor(SqlInt64 x, SqlInt64 y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXor = null;
@@ -651,7 +651,7 @@ public class SqlInt64 extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

@@ -152,7 +152,7 @@ public class AttachablePropertyServices extends NetObject  {
     
     // Methods section
     
-    public static boolean RemoveProperty(NetObject instance, AttachableMemberIdentifier name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  boolean RemoveProperty(NetObject instance, AttachableMemberIdentifier name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRemoveProperty = null;
@@ -166,7 +166,7 @@ public class AttachablePropertyServices extends NetObject  {
         }
     }
 
-    public static boolean TryGetProperty(NetObject instance, AttachableMemberIdentifier name, JCORefOut<NetObject> value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean TryGetProperty(NetObject instance, AttachableMemberIdentifier name, JCORefOut<NetObject> value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetProperty = null;
@@ -180,7 +180,7 @@ public class AttachablePropertyServices extends NetObject  {
         }
     }
 
-    public static int GetAttachedPropertyCount(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  int GetAttachedPropertyCount(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAttachedPropertyCount = null;
@@ -220,7 +220,7 @@ public class AttachablePropertyServices extends NetObject  {
         }
     }
 
-    public static void SetProperty(NetObject instance, AttachableMemberIdentifier name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static  void SetProperty(NetObject instance, AttachableMemberIdentifier name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

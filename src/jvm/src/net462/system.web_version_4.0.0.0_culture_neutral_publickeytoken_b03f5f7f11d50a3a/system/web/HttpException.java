@@ -265,7 +265,7 @@ public class HttpException extends ExternalException {
         }
     }
 
-    public static HttpException CreateFromLastError(java.lang.String message) throws Throwable {
+    public static  HttpException CreateFromLastError(java.lang.String message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromLastError = null;

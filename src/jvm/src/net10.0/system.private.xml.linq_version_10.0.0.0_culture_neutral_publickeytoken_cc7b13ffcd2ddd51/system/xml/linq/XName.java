@@ -159,7 +159,7 @@ public class XName extends NetObject implements system.runtime.serialization.ISe
     
     // Methods section
     
-    public static XName Get(java.lang.String localName, java.lang.String namespaceName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException {
+    public static  XName Get(java.lang.String localName, java.lang.String namespaceName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGet = null;
@@ -174,7 +174,7 @@ public class XName extends NetObject implements system.runtime.serialization.ISe
         }
     }
 
-    public static XName Get(java.lang.String expandedName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.OverflowException, system.InvalidOperationException {
+    public static  XName Get(java.lang.String expandedName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.OverflowException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGet = null;

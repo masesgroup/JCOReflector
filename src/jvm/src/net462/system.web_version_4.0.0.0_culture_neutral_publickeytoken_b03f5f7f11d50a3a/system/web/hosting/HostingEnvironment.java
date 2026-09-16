@@ -170,7 +170,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
     
     // Methods section
     
-    public static IDisposable Impersonate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
+    public static  IDisposable Impersonate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImpersonate = null;
@@ -185,7 +185,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static IDisposable SetCultures() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  IDisposable SetCultures() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetCultures = null;
@@ -200,7 +200,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static IDisposable SetCultures(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.web.HttpException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeInitializationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  IDisposable SetCultures(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.web.HttpException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeInitializationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetCultures = null;
@@ -230,7 +230,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static java.lang.String MapPath(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  java.lang.String MapPath(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMapPath = null;
@@ -244,7 +244,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static void DecrementBusyCount() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  void DecrementBusyCount() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -254,7 +254,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static void IncrementBusyCount() throws Throwable {
+    public static  void IncrementBusyCount() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -264,7 +264,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static void InitiateShutdown() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SemaphoreFullException {
+    public static  void InitiateShutdown() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SemaphoreFullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -274,7 +274,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static void MessageReceived() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  void MessageReceived() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -284,7 +284,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static void RegisterObject(IRegisteredObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+    public static  void RegisterObject(IRegisteredObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -294,7 +294,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static void RegisterVirtualPathProvider(VirtualPathProvider virtualPathProvider) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.configuration.ConfigurationErrorsException {
+    public static  void RegisterVirtualPathProvider(VirtualPathProvider virtualPathProvider) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -304,7 +304,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
         }
     }
 
-    public static void UnregisterObject(IRegisteredObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.threading.SemaphoreFullException {
+    public static  void UnregisterObject(IRegisteredObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.threading.SemaphoreFullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

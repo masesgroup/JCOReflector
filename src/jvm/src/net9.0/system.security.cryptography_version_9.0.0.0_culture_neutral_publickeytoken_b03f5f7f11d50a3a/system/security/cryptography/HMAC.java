@@ -153,7 +153,7 @@ public class HMAC extends KeyedHashAlgorithm  {
     
     // Methods section
     
-    public static HMAC CreateNewHMAC() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  HMAC CreateNewHMAC() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -168,7 +168,7 @@ public class HMAC extends KeyedHashAlgorithm  {
         }
     }
 
-    public static HMAC CreateNewHMAC(java.lang.String algorithmName) throws Throwable {
+    public static  HMAC CreateNewHMAC(java.lang.String algorithmName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

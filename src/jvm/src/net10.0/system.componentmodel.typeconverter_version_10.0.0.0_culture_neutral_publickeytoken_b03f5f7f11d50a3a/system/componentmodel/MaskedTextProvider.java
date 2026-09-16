@@ -281,7 +281,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public static boolean GetOperationResultFromHint(MaskedTextResultHint hint) throws Throwable {
+    public static  boolean GetOperationResultFromHint(MaskedTextResultHint hint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetOperationResultFromHint = null;
@@ -379,7 +379,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public static boolean IsValidInputChar(char c) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  boolean IsValidInputChar(char c) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidInputChar = null;
@@ -393,7 +393,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public static boolean IsValidMaskChar(char c) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  boolean IsValidMaskChar(char c) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidMaskChar = null;
@@ -407,7 +407,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public static boolean IsValidPasswordChar(char c) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  boolean IsValidPasswordChar(char c) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidPasswordChar = null;

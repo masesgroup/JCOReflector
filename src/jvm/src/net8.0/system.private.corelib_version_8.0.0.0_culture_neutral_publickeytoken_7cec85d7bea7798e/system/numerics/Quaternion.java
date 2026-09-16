@@ -192,7 +192,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Single Dot(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
+    public static  Single Dot(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDot = null;
@@ -237,7 +237,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Add(Quaternion value1, Quaternion value2) throws Throwable {
+    public static  Quaternion Add(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -252,7 +252,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Concatenate(Quaternion value1, Quaternion value2) throws Throwable {
+    public static  Quaternion Concatenate(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConcatenate = null;
@@ -267,7 +267,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Conjugate(Quaternion value) throws Throwable {
+    public static  Quaternion Conjugate(Quaternion value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConjugate = null;
@@ -282,7 +282,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable {
+    public static  Quaternion CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromAxisAngle = null;
@@ -297,7 +297,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion CreateFromRotationMatrix(Matrix4x4 matrix) throws Throwable {
+    public static  Quaternion CreateFromRotationMatrix(Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromRotationMatrix = null;
@@ -312,7 +312,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable {
+    public static  Quaternion CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromYawPitchRoll = null;
@@ -327,7 +327,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Divide(Quaternion value1, Quaternion value2) throws Throwable {
+    public static  Quaternion Divide(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -342,7 +342,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Inverse(Quaternion value) throws Throwable {
+    public static  Quaternion Inverse(Quaternion value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInverse = null;
@@ -357,7 +357,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Lerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
+    public static  Quaternion Lerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -372,7 +372,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Multiply(Quaternion value1, Single value2) throws Throwable {
+    public static  Quaternion Multiply(Quaternion value1, Single value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -387,7 +387,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Multiply(Quaternion value1, Quaternion value2) throws Throwable {
+    public static  Quaternion Multiply(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -402,7 +402,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Negate(Quaternion value) throws Throwable {
+    public static  Quaternion Negate(Quaternion value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -417,7 +417,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Normalize(Quaternion value) throws Throwable {
+    public static  Quaternion Normalize(Quaternion value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalize = null;
@@ -432,7 +432,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Slerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
+    public static  Quaternion Slerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSlerp = null;
@@ -447,7 +447,7 @@ public class Quaternion extends ValueType  {
         }
     }
 
-    public static Quaternion Subtract(Quaternion value1, Quaternion value2) throws Throwable {
+    public static  Quaternion Subtract(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

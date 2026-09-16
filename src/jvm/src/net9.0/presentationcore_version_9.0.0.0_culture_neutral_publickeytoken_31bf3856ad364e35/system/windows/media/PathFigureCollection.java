@@ -289,7 +289,7 @@ public class PathFigureCollection extends Animatable implements system.IFormatta
         }
     }
 
-    public static PathFigureCollection Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  PathFigureCollection Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

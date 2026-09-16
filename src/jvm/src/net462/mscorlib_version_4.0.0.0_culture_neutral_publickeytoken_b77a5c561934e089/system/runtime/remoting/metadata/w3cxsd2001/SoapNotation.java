@@ -170,7 +170,7 @@ public class SoapNotation extends NetObject  {
     
     // Methods section
     
-    public static SoapNotation Parse(java.lang.String value) throws Throwable {
+    public static  SoapNotation Parse(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

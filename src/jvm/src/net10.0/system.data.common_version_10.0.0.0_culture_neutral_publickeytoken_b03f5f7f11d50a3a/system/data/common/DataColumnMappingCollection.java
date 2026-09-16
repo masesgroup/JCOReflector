@@ -385,7 +385,7 @@ public class DataColumnMappingCollection extends MarshalByRefObject  {
         }
     }
 
-    public static DataColumnMapping GetColumnMappingBySchemaAction(DataColumnMappingCollection columnMappings, java.lang.String sourceColumn, MissingMappingAction mappingAction) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
+    public static  DataColumnMapping GetColumnMappingBySchemaAction(DataColumnMappingCollection columnMappings, java.lang.String sourceColumn, MissingMappingAction mappingAction) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetColumnMappingBySchemaAction = null;
@@ -400,7 +400,7 @@ public class DataColumnMappingCollection extends MarshalByRefObject  {
         }
     }
 
-    public static DataColumn GetDataColumn(DataColumnMappingCollection columnMappings, java.lang.String sourceColumn, NetType dataType, DataTable dataTable, MissingMappingAction mappingAction, MissingSchemaAction schemaAction) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException {
+    public static  DataColumn GetDataColumn(DataColumnMappingCollection columnMappings, java.lang.String sourceColumn, NetType dataType, DataTable dataTable, MissingMappingAction mappingAction, MissingSchemaAction schemaAction) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataColumn = null;

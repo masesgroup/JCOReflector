@@ -164,7 +164,7 @@ public class ActivityDesignerPaint extends NetObject  {
     
     // Methods section
     
-    public static GraphicsPath GetRoundedRectanglePath(Rectangle rectangle, int radius) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  GraphicsPath GetRoundedRectanglePath(Rectangle rectangle, int radius) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRoundedRectanglePath = null;
@@ -179,7 +179,7 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
-    public static void Draw3DButton(Graphics graphics, Image image, Rectangle bounds, Single transparency, ButtonState buttonState) throws Throwable, system.ArgumentNullException, system.OverflowException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
+    public static  void Draw3DButton(Graphics graphics, Image image, Rectangle bounds, Single transparency, ButtonState buttonState) throws Throwable, system.ArgumentNullException, system.OverflowException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -189,7 +189,7 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
-    public static void DrawExpandButton(Graphics graphics, Rectangle boundingRect, boolean drawExpanded, CompositeDesignerTheme compositeDesignerTheme) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void DrawExpandButton(Graphics graphics, Rectangle boundingRect, boolean drawExpanded, CompositeDesignerTheme compositeDesignerTheme) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -199,7 +199,7 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
-    public static void DrawImage(Graphics graphics, Image image, Rectangle destination, Rectangle source, DesignerContentAlignment alignment, Single transparency, boolean grayscale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  void DrawImage(Graphics graphics, Image image, Rectangle destination, Rectangle source, DesignerContentAlignment alignment, Single transparency, boolean grayscale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -209,7 +209,7 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
-    public static void DrawImage(Graphics graphics, Image image, Rectangle destination, DesignerContentAlignment alignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  void DrawImage(Graphics graphics, Image image, Rectangle destination, DesignerContentAlignment alignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -219,7 +219,7 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
-    public static void DrawRoundedRectangle(Graphics graphics, Pen drawingPen, Rectangle rectangle, int radius) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  void DrawRoundedRectangle(Graphics graphics, Pen drawingPen, Rectangle rectangle, int radius) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -229,7 +229,7 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
-    public static void DrawText(Graphics graphics, Font font, java.lang.String text, Rectangle boundingRect, StringAlignment alignment, TextQuality textQuality, Brush textBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void DrawText(Graphics graphics, Font font, java.lang.String text, Rectangle boundingRect, StringAlignment alignment, TextQuality textQuality, Brush textBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

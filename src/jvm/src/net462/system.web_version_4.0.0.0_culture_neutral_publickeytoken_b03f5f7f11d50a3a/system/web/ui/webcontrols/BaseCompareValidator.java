@@ -153,7 +153,7 @@ public class BaseCompareValidator extends BaseValidator  {
     
     // Methods section
     
-    public static boolean CanConvert(java.lang.String text, ValidationDataType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
+    public static  boolean CanConvert(java.lang.String text, ValidationDataType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCanConvert = null;
@@ -167,7 +167,7 @@ public class BaseCompareValidator extends BaseValidator  {
         }
     }
 
-    public static boolean CanConvert(java.lang.String text, ValidationDataType type, boolean cultureInvariant) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
+    public static  boolean CanConvert(java.lang.String text, ValidationDataType type, boolean cultureInvariant) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCanConvert = null;

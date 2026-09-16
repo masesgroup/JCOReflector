@@ -174,7 +174,7 @@ public class VisualTreeHelper extends NetObject  {
     
     // Methods section
     
-    public static double GetOpacity(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  double GetOpacity(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetOpacity = null;
@@ -214,7 +214,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static int GetChildrenCount(DependencyObject reference) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  int GetChildrenCount(DependencyObject reference) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetChildrenCount = null;
@@ -254,7 +254,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static DependencyObject GetChild(DependencyObject reference, int childIndex) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DependencyObject GetChild(DependencyObject reference, int childIndex) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetChild = null;
@@ -269,7 +269,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static DependencyObject GetParent(DependencyObject reference) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DependencyObject GetParent(DependencyObject reference) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetParent = null;
@@ -284,7 +284,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static DpiScale GetDpi(Visual visual) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  DpiScale GetDpi(Visual visual) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDpi = null;
@@ -299,7 +299,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Brush GetOpacityMask(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  Brush GetOpacityMask(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetOpacityMask = null;
@@ -314,7 +314,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static CacheMode GetCacheMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  CacheMode GetCacheMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCacheMode = null;
@@ -329,7 +329,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static DoubleCollection GetXSnappingGuidelines(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DoubleCollection GetXSnappingGuidelines(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXSnappingGuidelines = null;
@@ -344,7 +344,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static DoubleCollection GetYSnappingGuidelines(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DoubleCollection GetYSnappingGuidelines(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetYSnappingGuidelines = null;
@@ -359,7 +359,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static DrawingGroup GetDrawing(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DrawingGroup GetDrawing(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDrawing = null;
@@ -374,7 +374,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static EdgeMode GetEdgeMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  EdgeMode GetEdgeMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEdgeMode = null;
@@ -389,7 +389,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static BitmapEffect GetBitmapEffect(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  BitmapEffect GetBitmapEffect(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBitmapEffect = null;
@@ -404,7 +404,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static BitmapEffectInput GetBitmapEffectInput(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  BitmapEffectInput GetBitmapEffectInput(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBitmapEffectInput = null;
@@ -419,7 +419,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Effect GetEffect(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  Effect GetEffect(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEffect = null;
@@ -434,7 +434,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Geometry GetClip(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  Geometry GetClip(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetClip = null;
@@ -449,7 +449,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static HitTestResult HitTest(Visual reference, Point point) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException {
+    public static  HitTestResult HitTest(Visual reference, Point point) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHitTest = null;
@@ -464,7 +464,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Rect3D GetContentBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+    public static  Rect3D GetContentBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetContentBounds = null;
@@ -479,7 +479,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Rect3D GetDescendantBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+    public static  Rect3D GetDescendantBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDescendantBounds = null;
@@ -494,7 +494,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Transform GetTransform(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  Transform GetTransform(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTransform = null;
@@ -509,7 +509,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Rect GetContentBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+    public static  Rect GetContentBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetContentBounds = null;
@@ -524,7 +524,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Rect GetDescendantBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+    public static  Rect GetDescendantBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDescendantBounds = null;
@@ -539,7 +539,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static Vector GetOffset(Visual reference) throws Throwable, system.ArgumentNullException {
+    public static  Vector GetOffset(Visual reference) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetOffset = null;
@@ -554,7 +554,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static void HitTest(Visual3D reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters3D hitTestParameters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.ArithmeticException, system.NotSupportedException {
+    public static  void HitTest(Visual3D reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters3D hitTestParameters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.ArithmeticException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -564,7 +564,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static void HitTest(Visual reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters hitTestParameters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
+    public static  void HitTest(Visual reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters hitTestParameters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -574,7 +574,7 @@ public class VisualTreeHelper extends NetObject  {
         }
     }
 
-    public static void SetRootDpi(Visual visual, DpiScale dpiInfo) throws Throwable, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void SetRootDpi(Visual visual, DpiScale dpiInfo) throws Throwable, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

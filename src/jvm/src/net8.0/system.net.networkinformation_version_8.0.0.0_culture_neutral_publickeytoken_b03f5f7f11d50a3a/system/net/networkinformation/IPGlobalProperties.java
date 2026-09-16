@@ -251,7 +251,7 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
-    public static IPGlobalProperties GetIPGlobalProperties() throws Throwable {
+    public static  IPGlobalProperties GetIPGlobalProperties() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetIPGlobalProperties = null;

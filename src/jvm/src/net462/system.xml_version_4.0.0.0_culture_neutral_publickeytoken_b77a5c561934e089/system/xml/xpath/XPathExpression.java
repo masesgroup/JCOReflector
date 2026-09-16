@@ -176,7 +176,7 @@ public class XPathExpression extends NetObject  {
         }
     }
 
-    public static XPathExpression Compile(java.lang.String xpath) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException, system.NullReferenceException {
+    public static  XPathExpression Compile(java.lang.String xpath) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompile = null;
@@ -191,7 +191,7 @@ public class XPathExpression extends NetObject  {
         }
     }
 
-    public static XPathExpression Compile(java.lang.String xpath, IXmlNamespaceResolver nsResolver) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
+    public static  XPathExpression Compile(java.lang.String xpath, IXmlNamespaceResolver nsResolver) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompile = null;

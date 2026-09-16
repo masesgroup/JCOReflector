@@ -155,7 +155,7 @@ public class FunctionPrototype extends ScriptFunction  {
     
     // Methods section
     
-    public static NetObject apply(NetObject thisob, NetObject thisarg, NetObject argArray) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.MissingMethodException, microsoft.jscript.vsa.JSVsaException {
+    public static  NetObject apply(NetObject thisob, NetObject thisarg, NetObject argArray) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.MissingMethodException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectapply = null;
@@ -170,7 +170,7 @@ public class FunctionPrototype extends ScriptFunction  {
         }
     }
 
-    public static NetObject call(NetObject thisob, NetObject thisarg, NetObject... args) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+    public static  NetObject call(NetObject thisob, NetObject thisarg, NetObject... args) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectcall = null;
@@ -185,7 +185,7 @@ public class FunctionPrototype extends ScriptFunction  {
         }
     }
 
-    public static java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoString = null;

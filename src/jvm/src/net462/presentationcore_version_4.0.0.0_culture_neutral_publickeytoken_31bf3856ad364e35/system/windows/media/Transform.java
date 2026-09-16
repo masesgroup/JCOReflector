@@ -200,7 +200,7 @@ public class Transform extends GeneralTransform  {
         }
     }
 
-    public static Transform Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException {
+    public static  Transform Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

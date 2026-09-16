@@ -153,7 +153,7 @@ public class ShortType extends NetObject  {
     
     // Methods section
     
-    public static short FromObject(NetObject Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  short FromObject(NetObject Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromObject = null;
@@ -193,7 +193,7 @@ public class ShortType extends NetObject  {
         }
     }
 
-    public static short FromString(java.lang.String Value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException {
+    public static  short FromString(java.lang.String Value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;

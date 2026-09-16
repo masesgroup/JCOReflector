@@ -183,7 +183,7 @@ public class FaultConverter extends NetObject  {
         }
     }
 
-    public static FaultConverter GetDefaultFaultConverter(MessageVersion version) throws Throwable {
+    public static  FaultConverter GetDefaultFaultConverter(MessageVersion version) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultFaultConverter = null;

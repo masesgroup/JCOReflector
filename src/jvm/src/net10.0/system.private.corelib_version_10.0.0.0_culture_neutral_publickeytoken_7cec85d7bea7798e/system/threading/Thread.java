@@ -255,7 +255,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static boolean Yield() throws Throwable {
+    public static  boolean Yield() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectYield = null;
@@ -269,7 +269,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static int GetCurrentProcessorId() throws Throwable {
+    public static  int GetCurrentProcessorId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrentProcessorId = null;
@@ -309,7 +309,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static int GetDomainID() throws Throwable {
+    public static  int GetDomainID() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDomainID = null;
@@ -349,7 +349,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static AppDomain GetDomain() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException {
+    public static  AppDomain GetDomain() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDomain = null;
@@ -364,7 +364,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static LocalDataStoreSlot AllocateDataSlot() throws Throwable, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException {
+    public static  LocalDataStoreSlot AllocateDataSlot() throws Throwable, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllocateDataSlot = null;
@@ -379,7 +379,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static LocalDataStoreSlot AllocateNamedDataSlot(java.lang.String name) throws Throwable, system.threading.LockRecursionException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.threading.SynchronizationLockException, system.NullReferenceException, system.NotSupportedException {
+    public static  LocalDataStoreSlot AllocateNamedDataSlot(java.lang.String name) throws Throwable, system.threading.LockRecursionException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.threading.SynchronizationLockException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllocateNamedDataSlot = null;
@@ -394,7 +394,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static LocalDataStoreSlot GetNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public static  LocalDataStoreSlot GetNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNamedDataSlot = null;
@@ -409,7 +409,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static NetObject GetData(LocalDataStoreSlot slot) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException {
+    public static  NetObject GetData(LocalDataStoreSlot slot) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetData = null;
@@ -474,7 +474,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void BeginCriticalRegion() throws Throwable {
+    public static  void BeginCriticalRegion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -484,7 +484,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void BeginThreadAffinity() throws Throwable {
+    public static  void BeginThreadAffinity() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -504,7 +504,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void EndCriticalRegion() throws Throwable {
+    public static  void EndCriticalRegion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -514,7 +514,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void EndThreadAffinity() throws Throwable {
+    public static  void EndThreadAffinity() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -524,7 +524,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void FreeNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
+    public static  void FreeNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -554,7 +554,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void MemoryBarrier() throws Throwable {
+    public static  void MemoryBarrier() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -564,7 +564,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void ResetAbort() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void ResetAbort() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -604,7 +604,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void SetData(LocalDataStoreSlot slot, NetObject data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public static  void SetData(LocalDataStoreSlot slot, NetObject data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -614,7 +614,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void Sleep(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void Sleep(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -624,7 +624,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void Sleep(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void Sleep(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -634,7 +634,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void SpinWait(int iterations) throws Throwable {
+    public static  void SpinWait(int iterations) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -694,7 +694,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> address, byte value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> address, byte value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -704,7 +704,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> address, double value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> address, double value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -714,7 +714,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> address, short value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> address, short value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -724,7 +724,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicInteger> address, int value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicInteger> address, int value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -734,7 +734,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicLong> address, long value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<java.util.concurrent.atomic.AtomicLong> address, long value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -744,7 +744,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<SByte> address, SByte value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<SByte> address, SByte value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -754,7 +754,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<Single> address, Single value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<Single> address, Single value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -764,7 +764,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<NetObject> address, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<NetObject> address, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -774,7 +774,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<UInt16> address, UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<UInt16> address, UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -784,7 +784,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<UInt32> address, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<UInt32> address, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -794,7 +794,7 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
-    public static void VolatileWrite(JCORefOut<UInt64> address, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  void VolatileWrite(JCORefOut<UInt64> address, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

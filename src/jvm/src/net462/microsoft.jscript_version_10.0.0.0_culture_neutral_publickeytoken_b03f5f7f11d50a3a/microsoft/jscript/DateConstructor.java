@@ -155,7 +155,7 @@ public class DateConstructor extends ScriptFunction  {
     
     // Methods section
     
-    public static double parse(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArithmeticException, system.ArgumentOutOfRangeException {
+    public static  double parse(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArithmeticException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectparse = null;
@@ -195,7 +195,7 @@ public class DateConstructor extends ScriptFunction  {
         }
     }
 
-    public static double UTC(NetObject year, NetObject month, NetObject date, NetObject hours, NetObject minutes, NetObject seconds, NetObject ms) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.ArithmeticException {
+    public static  double UTC(NetObject year, NetObject month, NetObject date, NetObject hours, NetObject minutes, NetObject seconds, NetObject ms) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUTC = null;

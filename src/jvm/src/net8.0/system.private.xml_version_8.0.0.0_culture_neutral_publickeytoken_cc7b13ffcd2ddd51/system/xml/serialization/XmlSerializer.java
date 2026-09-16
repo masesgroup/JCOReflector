@@ -353,7 +353,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlSerializerAssemblyName(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String GetXmlSerializerAssemblyName(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlSerializerAssemblyName = null;
@@ -367,7 +367,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlSerializerAssemblyName(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String GetXmlSerializerAssemblyName(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlSerializerAssemblyName = null;
@@ -381,7 +381,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static XmlSerializer[] FromMappings(XmlMapping[] mappings, NetType type) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.RankException, system.diagnostics.tracing.EventSourceException, system.io.FileLoadException, system.MulticastNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.InvalidCastException {
+    public static  XmlSerializer[] FromMappings(XmlMapping[] mappings, NetType type) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.RankException, system.diagnostics.tracing.EventSourceException, system.io.FileLoadException, system.MulticastNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromMappings = null;
@@ -402,7 +402,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static XmlSerializer[] FromMappings(XmlMapping[] mappings) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.RankException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.collections.generic.KeyNotFoundException, system.InvalidCastException {
+    public static  XmlSerializer[] FromMappings(XmlMapping[] mappings) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.RankException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.collections.generic.KeyNotFoundException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromMappings = null;
@@ -423,7 +423,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static XmlSerializer[] FromTypes(NetType[] types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+    public static  XmlSerializer[] FromTypes(NetType[] types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromTypes = null;

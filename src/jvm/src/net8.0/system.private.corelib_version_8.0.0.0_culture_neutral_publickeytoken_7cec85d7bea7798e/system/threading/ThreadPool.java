@@ -160,7 +160,7 @@ public class ThreadPool extends NetObject  {
     
     // Methods section
     
-    public static boolean BindHandle(SafeHandle osHandle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ApplicationException {
+    public static  boolean BindHandle(SafeHandle osHandle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBindHandle = null;
@@ -174,7 +174,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static boolean QueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
+    public static  boolean QueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectQueueUserWorkItem = null;
@@ -188,7 +188,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static boolean QueueUserWorkItem(WaitCallback callBack) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
+    public static  boolean QueueUserWorkItem(WaitCallback callBack) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectQueueUserWorkItem = null;
@@ -202,7 +202,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static boolean SetMaxThreads(int workerThreads, int completionPortThreads) throws Throwable, system.PlatformNotSupportedException {
+    public static  boolean SetMaxThreads(int workerThreads, int completionPortThreads) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetMaxThreads = null;
@@ -216,7 +216,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static boolean SetMinThreads(int workerThreads, int completionPortThreads) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException {
+    public static  boolean SetMinThreads(int workerThreads, int completionPortThreads) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetMinThreads = null;
@@ -230,7 +230,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static boolean UnsafeQueueUserWorkItem(IThreadPoolWorkItem callBack, boolean preferLocal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
+    public static  boolean UnsafeQueueUserWorkItem(IThreadPoolWorkItem callBack, boolean preferLocal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnsafeQueueUserWorkItem = null;
@@ -244,7 +244,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static boolean UnsafeQueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
+    public static  boolean UnsafeQueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnsafeQueueUserWorkItem = null;
@@ -258,7 +258,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, int millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, int millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterWaitForSingleObject = null;
@@ -273,7 +273,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterWaitForSingleObject = null;
@@ -288,7 +288,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterWaitForSingleObject = null;
@@ -303,7 +303,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterWaitForSingleObject = null;
@@ -318,7 +318,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, int millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, int millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnsafeRegisterWaitForSingleObject = null;
@@ -333,7 +333,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnsafeRegisterWaitForSingleObject = null;
@@ -348,7 +348,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnsafeRegisterWaitForSingleObject = null;
@@ -363,7 +363,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnsafeRegisterWaitForSingleObject = null;
@@ -378,7 +378,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static void GetAvailableThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  void GetAvailableThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -388,7 +388,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static void GetMaxThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  void GetMaxThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -398,7 +398,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static void GetMinThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  void GetMinThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -209,7 +209,7 @@ public class DataGridRow extends Control  {
         }
     }
 
-    public static DataGridRow GetRowContainingElement(FrameworkElement element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DataGridRow GetRowContainingElement(FrameworkElement element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRowContainingElement = null;

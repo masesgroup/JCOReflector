@@ -156,7 +156,7 @@ public class PEReaderExtensions extends NetObject  {
     
     // Methods section
     
-    public static MetadataReader GetMetadataReader(PEReader peReader, MetadataReaderOptions options, MetadataStringDecoder utf8Decoder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.NullReferenceException, system.FormatException {
+    public static  MetadataReader GetMetadataReader(PEReader peReader, MetadataReaderOptions options, MetadataStringDecoder utf8Decoder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.NullReferenceException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMetadataReader = null;
@@ -171,7 +171,7 @@ public class PEReaderExtensions extends NetObject  {
         }
     }
 
-    public static MetadataReader GetMetadataReader(PEReader peReader, MetadataReaderOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.NullReferenceException, system.IndexOutOfRangeException {
+    public static  MetadataReader GetMetadataReader(PEReader peReader, MetadataReaderOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMetadataReader = null;
@@ -186,7 +186,7 @@ public class PEReaderExtensions extends NetObject  {
         }
     }
 
-    public static MetadataReader GetMetadataReader(PEReader peReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.NullReferenceException, system.IndexOutOfRangeException {
+    public static  MetadataReader GetMetadataReader(PEReader peReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMetadataReader = null;
@@ -201,7 +201,7 @@ public class PEReaderExtensions extends NetObject  {
         }
     }
 
-    public static MethodBodyBlock GetMethodBody(PEReader peReader, int relativeVirtualAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.NullReferenceException, system.FormatException {
+    public static  MethodBodyBlock GetMethodBody(PEReader peReader, int relativeVirtualAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.NullReferenceException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethodBody = null;

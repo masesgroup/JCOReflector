@@ -163,7 +163,7 @@ public class ServiceModelActivitiesSectionGroup extends ConfigurationSectionGrou
     
     // Methods section
     
-    public static ServiceModelActivitiesSectionGroup GetSectionGroup(Configuration config) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.TypeLoadException {
+    public static  ServiceModelActivitiesSectionGroup GetSectionGroup(Configuration config) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.TypeLoadException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSectionGroup = null;

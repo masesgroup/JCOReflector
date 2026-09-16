@@ -155,7 +155,7 @@ public class JsonSchemaExporter extends NetObject  {
     
     // Methods section
     
-    public static JsonNode GetJsonSchemaAsNode(JsonSerializerOptions options, NetType type, JsonSchemaExporterOptions exporterOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException {
+    public static  JsonNode GetJsonSchemaAsNode(JsonSerializerOptions options, NetType type, JsonSchemaExporterOptions exporterOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetJsonSchemaAsNode = null;
@@ -170,7 +170,7 @@ public class JsonSchemaExporter extends NetObject  {
         }
     }
 
-    public static JsonNode GetJsonSchemaAsNode(JsonTypeInfo typeInfo, JsonSchemaExporterOptions exporterOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  JsonNode GetJsonSchemaAsNode(JsonTypeInfo typeInfo, JsonSchemaExporterOptions exporterOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetJsonSchemaAsNode = null;

@@ -219,7 +219,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsControl(Rune value) throws Throwable {
+    public static  boolean IsControl(Rune value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsControl = null;
@@ -233,7 +233,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsDigit(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsDigit(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDigit = null;
@@ -247,7 +247,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsLetter(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsLetter(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLetter = null;
@@ -261,7 +261,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsLetterOrDigit(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  boolean IsLetterOrDigit(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLetterOrDigit = null;
@@ -275,7 +275,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsLower(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsLower(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLower = null;
@@ -289,7 +289,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsNumber(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsNumber(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNumber = null;
@@ -303,7 +303,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsPunctuation(Rune value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  boolean IsPunctuation(Rune value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPunctuation = null;
@@ -317,7 +317,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsSeparator(Rune value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  boolean IsSeparator(Rune value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSeparator = null;
@@ -331,7 +331,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsSymbol(Rune value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  boolean IsSymbol(Rune value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSymbol = null;
@@ -345,7 +345,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsUpper(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsUpper(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsUpper = null;
@@ -359,7 +359,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsValid(int value) throws Throwable {
+    public static  boolean IsValid(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValid = null;
@@ -373,7 +373,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsValid(UInt32 value) throws Throwable {
+    public static  boolean IsValid(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValid = null;
@@ -387,7 +387,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean IsWhiteSpace(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  boolean IsWhiteSpace(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWhiteSpace = null;
@@ -401,7 +401,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean TryCreate(char highSurrogate, char lowSurrogate, JCORefOut<Rune> result) throws Throwable {
+    public static  boolean TryCreate(char highSurrogate, char lowSurrogate, JCORefOut<Rune> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -415,7 +415,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean TryCreate(char ch, JCORefOut<Rune> result) throws Throwable {
+    public static  boolean TryCreate(char ch, JCORefOut<Rune> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -429,7 +429,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean TryCreate(int value, JCORefOut<Rune> result) throws Throwable {
+    public static  boolean TryCreate(int value, JCORefOut<Rune> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -443,7 +443,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean TryCreate(UInt32 value, JCORefOut<Rune> result) throws Throwable {
+    public static  boolean TryCreate(UInt32 value, JCORefOut<Rune> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -457,7 +457,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static boolean TryGetRuneAt(java.lang.String input, int index, JCORefOut<Rune> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  boolean TryGetRuneAt(java.lang.String input, int index, JCORefOut<Rune> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetRuneAt = null;
@@ -471,7 +471,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static double GetNumericValue(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  double GetNumericValue(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNumericValue = null;
@@ -551,7 +551,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static UnicodeCategory GetUnicodeCategory(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  UnicodeCategory GetUnicodeCategory(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUnicodeCategory = null;
@@ -566,7 +566,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static Rune GetRuneAt(java.lang.String input, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  Rune GetRuneAt(java.lang.String input, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuneAt = null;
@@ -581,7 +581,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static Rune ToLower(Rune value, CultureInfo culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  Rune ToLower(Rune value, CultureInfo culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToLower = null;
@@ -596,7 +596,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static Rune ToLowerInvariant(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static  Rune ToLowerInvariant(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToLowerInvariant = null;
@@ -611,7 +611,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static Rune ToUpper(Rune value, CultureInfo culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  Rune ToUpper(Rune value, CultureInfo culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUpper = null;
@@ -626,7 +626,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
         }
     }
 
-    public static Rune ToUpperInvariant(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static  Rune ToUpperInvariant(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUpperInvariant = null;

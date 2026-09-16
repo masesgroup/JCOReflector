@@ -153,7 +153,7 @@ public class MorphHelper extends NetObject  {
     
     // Methods section
     
-    public static PropertyValueMorphHelper GetPropertyValueMorphHelper(NetType propertyType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static  PropertyValueMorphHelper GetPropertyValueMorphHelper(NetType propertyType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPropertyValueMorphHelper = null;
@@ -167,7 +167,7 @@ public class MorphHelper extends NetObject  {
         }
     }
 
-    public static void AddPropertyValueMorphHelper(NetType propertyType, PropertyValueMorphHelper extension) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  void AddPropertyValueMorphHelper(NetType propertyType, PropertyValueMorphHelper extension) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -177,7 +177,7 @@ public class MorphHelper extends NetObject  {
         }
     }
 
-    public static void MorphObject(ModelItem oldModelItem, ModelItem newModelitem) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  void MorphObject(ModelItem oldModelItem, ModelItem newModelitem) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -187,7 +187,7 @@ public class MorphHelper extends NetObject  {
         }
     }
 
-    public static void MorphProperties(ModelItem oldModelItem, ModelItem newModelitem) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.FormatException {
+    public static  void MorphProperties(ModelItem oldModelItem, ModelItem newModelitem) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

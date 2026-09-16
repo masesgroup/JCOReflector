@@ -234,7 +234,7 @@ public class EventSource extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Guid GetGuid(NetType eventSourceType) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidCastException, system.NullReferenceException {
+    public static  Guid GetGuid(NetType eventSourceType) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidCastException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetGuid = null;
@@ -249,7 +249,7 @@ public class EventSource extends NetObject implements AutoCloseable {
         }
     }
 
-    public static java.lang.String GenerateManifest(NetType eventSourceType, java.lang.String assemblyPathToIncludeInManifest) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.io.IOException {
+    public static  java.lang.String GenerateManifest(NetType eventSourceType, java.lang.String assemblyPathToIncludeInManifest) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateManifest = null;
@@ -263,7 +263,7 @@ public class EventSource extends NetObject implements AutoCloseable {
         }
     }
 
-    public static java.lang.String GenerateManifest(NetType eventSourceType, java.lang.String assemblyPathToIncludeInManifest, EventManifestOptions flags) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.InvalidCastException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.io.EndOfStreamException, system.io.IOException, system.BadImageFormatException {
+    public static  java.lang.String GenerateManifest(NetType eventSourceType, java.lang.String assemblyPathToIncludeInManifest, EventManifestOptions flags) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.InvalidCastException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.io.EndOfStreamException, system.io.IOException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateManifest = null;
@@ -277,7 +277,7 @@ public class EventSource extends NetObject implements AutoCloseable {
         }
     }
 
-    public static java.lang.String GetName(NetType eventSourceType) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.InvalidCastException, system.NullReferenceException {
+    public static  java.lang.String GetName(NetType eventSourceType) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.InvalidCastException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetName = null;
@@ -315,7 +315,7 @@ public class EventSource extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void SetCurrentThreadActivityId(Guid activityId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  void SetCurrentThreadActivityId(Guid activityId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -325,7 +325,7 @@ public class EventSource extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void SetCurrentThreadActivityId(Guid activityId, JCORefOut<Guid> oldActivityThatWillContinue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  void SetCurrentThreadActivityId(Guid activityId, JCORefOut<Guid> oldActivityThatWillContinue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

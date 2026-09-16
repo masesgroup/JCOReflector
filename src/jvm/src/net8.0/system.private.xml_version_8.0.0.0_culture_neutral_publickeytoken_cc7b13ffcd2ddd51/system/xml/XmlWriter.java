@@ -690,7 +690,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(Stream output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  XmlWriter Create(Stream output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -705,7 +705,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(Stream output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  XmlWriter Create(Stream output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -720,7 +720,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(TextWriter output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public static  XmlWriter Create(TextWriter output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -735,7 +735,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(TextWriter output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  XmlWriter Create(TextWriter output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -750,7 +750,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(java.lang.String outputFileName, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.runtime.serialization.SerializationException, system.ArrayTypeMismatchException {
+    public static  XmlWriter Create(java.lang.String outputFileName, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.runtime.serialization.SerializationException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -765,7 +765,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(java.lang.String outputFileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.xml.XmlException, system.diagnostics.UnreachableException, system.FormatException {
+    public static  XmlWriter Create(java.lang.String outputFileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.xml.XmlException, system.diagnostics.UnreachableException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -780,7 +780,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(StringBuilder output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  XmlWriter Create(StringBuilder output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -795,7 +795,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(StringBuilder output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  XmlWriter Create(StringBuilder output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -810,7 +810,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(XmlWriter output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  XmlWriter Create(XmlWriter output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -825,7 +825,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(XmlWriter output) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static  XmlWriter Create(XmlWriter output) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

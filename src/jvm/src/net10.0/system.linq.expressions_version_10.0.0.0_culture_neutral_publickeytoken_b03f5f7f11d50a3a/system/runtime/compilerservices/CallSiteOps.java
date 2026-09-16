@@ -152,7 +152,7 @@ public class CallSiteOps extends NetObject  {
     
     // Methods section
     
-    public static boolean GetMatch(CallSite site) throws Throwable {
+    public static  boolean GetMatch(CallSite site) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMatch = null;
@@ -166,7 +166,7 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
-    public static boolean SetNotMatched(CallSite site) throws Throwable {
+    public static  boolean SetNotMatched(CallSite site) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetNotMatched = null;
@@ -180,7 +180,7 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
-    public static void ClearMatch(CallSite site) throws Throwable {
+    public static  void ClearMatch(CallSite site) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

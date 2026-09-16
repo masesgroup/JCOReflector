@@ -180,7 +180,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsEvenInteger(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsEvenInteger(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEvenInteger = null;
@@ -194,7 +194,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsFinite(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsFinite(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFinite = null;
@@ -208,7 +208,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsInfinity(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsInfinity(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInfinity = null;
@@ -222,7 +222,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsInteger(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsInteger(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInteger = null;
@@ -236,7 +236,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsNaN(Single f) throws Throwable {
+    public static  boolean IsNaN(Single f) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNaN = null;
@@ -250,7 +250,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsNegative(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsNegative(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegative = null;
@@ -264,7 +264,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsNegativeInfinity(Single f) throws Throwable {
+    public static  boolean IsNegativeInfinity(Single f) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegativeInfinity = null;
@@ -278,7 +278,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsNormal(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsNormal(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNormal = null;
@@ -292,7 +292,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsOddInteger(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsOddInteger(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOddInteger = null;
@@ -306,7 +306,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsPositive(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsPositive(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositive = null;
@@ -320,7 +320,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsPositiveInfinity(Single f) throws Throwable {
+    public static  boolean IsPositiveInfinity(Single f) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositiveInfinity = null;
@@ -334,7 +334,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsPow2(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsPow2(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPow2 = null;
@@ -348,7 +348,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsRealNumber(Single value) throws Throwable {
+    public static  boolean IsRealNumber(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsRealNumber = null;
@@ -362,7 +362,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean IsSubnormal(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsSubnormal(Single f) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSubnormal = null;
@@ -376,7 +376,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, JCORefOut<Single> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, JCORefOut<Single> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -390,7 +390,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<Single> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<Single> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -404,7 +404,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<Single> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<Single> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -498,7 +498,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static int ILogB(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  int ILogB(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectILogB = null;
@@ -538,7 +538,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static int Sign(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArithmeticException {
+    public static  int Sign(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -578,7 +578,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Abs(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single Abs(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -593,7 +593,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Acos(Single x) throws Throwable {
+    public static  Single Acos(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcos = null;
@@ -608,7 +608,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Acosh(Single x) throws Throwable {
+    public static  Single Acosh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcosh = null;
@@ -623,7 +623,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single AcosPi(Single x) throws Throwable {
+    public static  Single AcosPi(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcosPi = null;
@@ -638,7 +638,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Asin(Single x) throws Throwable {
+    public static  Single Asin(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsin = null;
@@ -653,7 +653,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Asinh(Single x) throws Throwable {
+    public static  Single Asinh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsinh = null;
@@ -668,7 +668,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single AsinPi(Single x) throws Throwable {
+    public static  Single AsinPi(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsinPi = null;
@@ -683,7 +683,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Atan(Single x) throws Throwable {
+    public static  Single Atan(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan = null;
@@ -698,7 +698,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Atan2(Single y, Single x) throws Throwable {
+    public static  Single Atan2(Single y, Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan2 = null;
@@ -713,7 +713,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Atan2Pi(Single y, Single x) throws Throwable {
+    public static  Single Atan2Pi(Single y, Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan2Pi = null;
@@ -728,7 +728,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Atanh(Single x) throws Throwable {
+    public static  Single Atanh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtanh = null;
@@ -743,7 +743,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single AtanPi(Single x) throws Throwable {
+    public static  Single AtanPi(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtanPi = null;
@@ -758,7 +758,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single BitDecrement(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single BitDecrement(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitDecrement = null;
@@ -773,7 +773,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single BitIncrement(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single BitIncrement(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitIncrement = null;
@@ -788,7 +788,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Cbrt(Single x) throws Throwable {
+    public static  Single Cbrt(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCbrt = null;
@@ -803,7 +803,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Ceiling(Single x) throws Throwable {
+    public static  Single Ceiling(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -818,7 +818,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Clamp(Single value, Single min, Single max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  Single Clamp(Single value, Single min, Single max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClamp = null;
@@ -833,7 +833,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single CopySign(Single value, Single sign) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single CopySign(Single value, Single sign) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCopySign = null;
@@ -848,7 +848,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Cos(Single x) throws Throwable {
+    public static  Single Cos(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCos = null;
@@ -863,7 +863,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Cosh(Single x) throws Throwable {
+    public static  Single Cosh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCosh = null;
@@ -878,7 +878,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single CosPi(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single CosPi(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCosPi = null;
@@ -893,7 +893,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single DegreesToRadians(Single degrees) throws Throwable {
+    public static  Single DegreesToRadians(Single degrees) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDegreesToRadians = null;
@@ -908,7 +908,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Exp(Single x) throws Throwable {
+    public static  Single Exp(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp = null;
@@ -923,7 +923,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Exp10(Single x) throws Throwable {
+    public static  Single Exp10(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp10 = null;
@@ -938,7 +938,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Exp10M1(Single x) throws Throwable {
+    public static  Single Exp10M1(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp10M1 = null;
@@ -953,7 +953,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Exp2(Single x) throws Throwable {
+    public static  Single Exp2(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp2 = null;
@@ -968,7 +968,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Exp2M1(Single x) throws Throwable {
+    public static  Single Exp2M1(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp2M1 = null;
@@ -983,7 +983,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single ExpM1(Single x) throws Throwable {
+    public static  Single ExpM1(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExpM1 = null;
@@ -998,7 +998,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Floor(Single x) throws Throwable {
+    public static  Single Floor(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFloor = null;
@@ -1013,7 +1013,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single FusedMultiplyAdd(Single left, Single right, Single addend) throws Throwable {
+    public static  Single FusedMultiplyAdd(Single left, Single right, Single addend) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFusedMultiplyAdd = null;
@@ -1028,7 +1028,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Hypot(Single x, Single y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single Hypot(Single x, Single y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHypot = null;
@@ -1043,7 +1043,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Ieee754Remainder(Single left, Single right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
+    public static  Single Ieee754Remainder(Single left, Single right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIeee754Remainder = null;
@@ -1058,7 +1058,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Lerp(Single value1, Single value2, Single amount) throws Throwable {
+    public static  Single Lerp(Single value1, Single value2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -1073,7 +1073,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Log(Single x, Single newBase) throws Throwable {
+    public static  Single Log(Single x, Single newBase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -1088,7 +1088,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Log(Single x) throws Throwable {
+    public static  Single Log(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -1103,7 +1103,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Log10(Single x) throws Throwable {
+    public static  Single Log10(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10 = null;
@@ -1118,7 +1118,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Log10P1(Single x) throws Throwable {
+    public static  Single Log10P1(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10P1 = null;
@@ -1133,7 +1133,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Log2(Single value) throws Throwable {
+    public static  Single Log2(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2 = null;
@@ -1148,7 +1148,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Log2P1(Single x) throws Throwable {
+    public static  Single Log2P1(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2P1 = null;
@@ -1163,7 +1163,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single LogP1(Single x) throws Throwable {
+    public static  Single LogP1(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLogP1 = null;
@@ -1178,7 +1178,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Max(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single Max(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -1193,7 +1193,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single MaxMagnitude(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single MaxMagnitude(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitude = null;
@@ -1208,7 +1208,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single MaxMagnitudeNumber(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single MaxMagnitudeNumber(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitudeNumber = null;
@@ -1223,7 +1223,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single MaxNumber(Single x, Single y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single MaxNumber(Single x, Single y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxNumber = null;
@@ -1238,7 +1238,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Min(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single Min(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -1253,7 +1253,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single MinMagnitude(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single MinMagnitude(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitude = null;
@@ -1268,7 +1268,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single MinMagnitudeNumber(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single MinMagnitudeNumber(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitudeNumber = null;
@@ -1283,7 +1283,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single MinNumber(Single x, Single y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single MinNumber(Single x, Single y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinNumber = null;
@@ -1298,7 +1298,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
+    public static  Single Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1313,7 +1313,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.FormatException {
+    public static  Single Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1328,7 +1328,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.FormatException {
+    public static  Single Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1343,7 +1343,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.FormatException {
+    public static  Single Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1358,7 +1358,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Pow(Single x, Single y) throws Throwable {
+    public static  Single Pow(Single x, Single y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -1373,7 +1373,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single RadiansToDegrees(Single radians) throws Throwable {
+    public static  Single RadiansToDegrees(Single radians) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRadiansToDegrees = null;
@@ -1388,7 +1388,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single ReciprocalEstimate(Single x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single ReciprocalEstimate(Single x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReciprocalEstimate = null;
@@ -1403,7 +1403,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single ReciprocalSqrtEstimate(Single x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single ReciprocalSqrtEstimate(Single x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReciprocalSqrtEstimate = null;
@@ -1418,7 +1418,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single RootN(Single x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Single RootN(Single x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRootN = null;
@@ -1433,7 +1433,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Round(Single x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  Single Round(Single x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1448,7 +1448,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Round(Single x, int digits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  Single Round(Single x, int digits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1463,7 +1463,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Round(Single x, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  Single Round(Single x, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1478,7 +1478,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Round(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single Round(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1493,7 +1493,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single ScaleB(Single x, int n) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single ScaleB(Single x, int n) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectScaleB = null;
@@ -1508,7 +1508,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Sin(Single x) throws Throwable {
+    public static  Single Sin(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSin = null;
@@ -1523,7 +1523,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Sinh(Single x) throws Throwable {
+    public static  Single Sinh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinh = null;
@@ -1538,7 +1538,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single SinPi(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single SinPi(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinPi = null;
@@ -1553,7 +1553,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Sqrt(Single x) throws Throwable {
+    public static  Single Sqrt(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSqrt = null;
@@ -1568,7 +1568,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Tan(Single x) throws Throwable {
+    public static  Single Tan(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTan = null;
@@ -1583,7 +1583,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Tanh(Single x) throws Throwable {
+    public static  Single Tanh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTanh = null;
@@ -1598,7 +1598,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single TanPi(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Single TanPi(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTanPi = null;
@@ -1613,7 +1613,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static Single Truncate(Single x) throws Throwable {
+    public static  Single Truncate(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;

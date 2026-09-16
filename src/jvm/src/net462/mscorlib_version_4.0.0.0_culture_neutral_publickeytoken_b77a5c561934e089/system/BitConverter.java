@@ -155,7 +155,7 @@ public class BitConverter extends NetObject  {
     
     // Methods section
     
-    public static boolean ToBoolean(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  boolean ToBoolean(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -169,7 +169,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  boolean ToBoolean(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -183,7 +183,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(boolean value) throws Throwable {
+    public static  byte[] GetBytes(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -206,7 +206,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(char value) throws Throwable {
+    public static  byte[] GetBytes(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -229,7 +229,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(double value) throws Throwable {
+    public static  byte[] GetBytes(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -252,7 +252,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(short value) throws Throwable {
+    public static  byte[] GetBytes(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -275,7 +275,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(int value) throws Throwable {
+    public static  byte[] GetBytes(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -298,7 +298,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(long value) throws Throwable {
+    public static  byte[] GetBytes(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -321,7 +321,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(Single value) throws Throwable {
+    public static  byte[] GetBytes(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -344,7 +344,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(UInt16 value) throws Throwable {
+    public static  byte[] GetBytes(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -367,7 +367,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(UInt32 value) throws Throwable {
+    public static  byte[] GetBytes(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -390,7 +390,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static byte[] GetBytes(UInt64 value) throws Throwable {
+    public static  byte[] GetBytes(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBytes = null;
@@ -413,7 +413,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static char ToChar(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  char ToChar(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -427,7 +427,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static char ToChar(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  char ToChar(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -441,7 +441,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static double Int64BitsToDouble(long value) throws Throwable {
+    public static  double Int64BitsToDouble(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInt64BitsToDouble = null;
@@ -481,7 +481,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static double ToDouble(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  double ToDouble(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -521,7 +521,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static double ToDouble(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  double ToDouble(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -561,7 +561,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static short ToInt16(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  short ToInt16(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -601,7 +601,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static short ToInt16(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  short ToInt16(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -641,7 +641,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static int ToInt32(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  int ToInt32(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -681,7 +681,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static int ToInt32(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  int ToInt32(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -721,7 +721,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static long DoubleToInt64Bits(double value) throws Throwable {
+    public static  long DoubleToInt64Bits(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDoubleToInt64Bits = null;
@@ -761,7 +761,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static long ToInt64(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  long ToInt64(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -801,7 +801,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static long ToInt64(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  long ToInt64(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -841,7 +841,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static Single ToSingle(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Single ToSingle(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -856,7 +856,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static Single ToSingle(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Single ToSingle(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -871,7 +871,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  java.lang.String ToString(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -885,7 +885,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  java.lang.String ToString(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -899,7 +899,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  java.lang.String ToString(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -913,7 +913,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  java.lang.String ToString(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -927,7 +927,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte[] value, int startIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  java.lang.String ToString(byte[] value, int startIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -941,7 +941,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  java.lang.String ToString(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -955,7 +955,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  UInt16 ToUInt16(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -970,7 +970,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  UInt16 ToUInt16(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -985,7 +985,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  UInt32 ToUInt32(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -1000,7 +1000,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  UInt32 ToUInt32(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -1015,7 +1015,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  UInt64 ToUInt64(byte[] value, int startIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -1030,7 +1030,7 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  UInt64 ToUInt64(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;

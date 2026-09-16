@@ -224,7 +224,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
     
     // Methods section
     
-    public static boolean CheckSchemeName(java.lang.String schemeName) throws Throwable {
+    public static  boolean CheckSchemeName(java.lang.String schemeName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckSchemeName = null;
@@ -252,7 +252,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static boolean IsHexDigit(char character) throws Throwable {
+    public static  boolean IsHexDigit(char character) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsHexDigit = null;
@@ -266,7 +266,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static boolean IsHexEncoding(java.lang.String pattern, int index) throws Throwable {
+    public static  boolean IsHexEncoding(java.lang.String pattern, int index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsHexEncoding = null;
@@ -294,7 +294,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static boolean IsWellFormedUriString(java.lang.String uriString, UriKind uriKind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
+    public static  boolean IsWellFormedUriString(java.lang.String uriString, UriKind uriKind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWellFormedUriString = null;
@@ -308,7 +308,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static boolean TryCreate(java.lang.String uriString, UriKind uriKind, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.MemberAccessException, system.io.PathTooLongException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  boolean TryCreate(java.lang.String uriString, UriKind uriKind, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.MemberAccessException, system.io.PathTooLongException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -322,7 +322,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static boolean TryCreate(Uri baseUri, java.lang.String relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
+    public static  boolean TryCreate(Uri baseUri, java.lang.String relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -336,7 +336,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static boolean TryCreate(Uri baseUri, Uri relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException {
+    public static  boolean TryCreate(Uri baseUri, Uri relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -350,7 +350,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static char HexUnescape(java.lang.String pattern, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  char HexUnescape(java.lang.String pattern, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHexUnescape = null;
@@ -364,7 +364,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static int Compare(Uri uri1, Uri uri2, UriComponents partsToCompare, UriFormat compareFormat, StringComparison comparisonType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  int Compare(Uri uri1, Uri uri2, UriComponents partsToCompare, UriFormat compareFormat, StringComparison comparisonType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -404,7 +404,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static int FromHex(char digit) throws Throwable, system.ArgumentException {
+    public static  int FromHex(char digit) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromHex = null;
@@ -444,7 +444,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static java.lang.String EscapeDataString(java.lang.String stringToEscape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException {
+    public static  java.lang.String EscapeDataString(java.lang.String stringToEscape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEscapeDataString = null;
@@ -458,7 +458,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static java.lang.String EscapeUriString(java.lang.String stringToEscape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException {
+    public static  java.lang.String EscapeUriString(java.lang.String stringToEscape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEscapeUriString = null;
@@ -500,7 +500,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static java.lang.String HexEscape(char character) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  java.lang.String HexEscape(char character) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHexEscape = null;
@@ -528,7 +528,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static java.lang.String UnescapeDataString(java.lang.String stringToUnescape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException {
+    public static  java.lang.String UnescapeDataString(java.lang.String stringToUnescape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnescapeDataString = null;
@@ -557,7 +557,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
         }
     }
 
-    public static UriHostNameType CheckHostName(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  UriHostNameType CheckHostName(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckHostName = null;

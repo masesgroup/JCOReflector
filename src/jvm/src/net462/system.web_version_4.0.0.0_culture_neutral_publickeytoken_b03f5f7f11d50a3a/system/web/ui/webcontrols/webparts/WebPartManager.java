@@ -384,7 +384,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
         }
     }
 
-    public static WebPartManager GetCurrentWebPartManager(Page page) throws Throwable, system.ArgumentNullException {
+    public static  WebPartManager GetCurrentWebPartManager(Page page) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrentWebPartManager = null;

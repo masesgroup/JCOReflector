@@ -164,7 +164,7 @@ public class PhysicalAddress extends NetObject  {
     
     // Methods section
     
-    public static boolean TryParse(java.lang.String address, JCORefOut<PhysicalAddress> value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  boolean TryParse(java.lang.String address, JCORefOut<PhysicalAddress> value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -201,7 +201,7 @@ public class PhysicalAddress extends NetObject  {
         }
     }
 
-    public static PhysicalAddress Parse(java.lang.String address) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  PhysicalAddress Parse(java.lang.String address) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

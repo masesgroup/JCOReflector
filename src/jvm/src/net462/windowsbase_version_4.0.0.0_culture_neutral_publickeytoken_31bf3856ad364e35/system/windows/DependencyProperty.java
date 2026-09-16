@@ -217,7 +217,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+    public static  DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegister = null;
@@ -232,7 +232,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+    public static  DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegister = null;
@@ -247,7 +247,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+    public static  DependencyProperty Register(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegister = null;
@@ -262,7 +262,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterAttached = null;
@@ -277,7 +277,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterAttached = null;
@@ -292,7 +292,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
+    public static  DependencyProperty RegisterAttached(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterAttached = null;
@@ -307,7 +307,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterAttachedReadOnly = null;
@@ -322,7 +322,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
+    public static  DependencyPropertyKey RegisterAttachedReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata defaultMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterAttachedReadOnly = null;
@@ -337,7 +337,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+    public static  DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterReadOnly = null;
@@ -352,7 +352,7 @@ public class DependencyProperty extends NetObject  {
         }
     }
 
-    public static DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+    public static  DependencyPropertyKey RegisterReadOnly(java.lang.String name, NetType propertyType, NetType ownerType, PropertyMetadata typeMetadata, ValidateValueCallback validateValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterReadOnly = null;

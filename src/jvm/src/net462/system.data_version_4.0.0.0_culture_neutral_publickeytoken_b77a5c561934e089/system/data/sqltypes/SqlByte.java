@@ -261,7 +261,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean Equals(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlBoolean Equals(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -276,7 +276,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlBoolean GreaterThan(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -291,7 +291,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlBoolean GreaterThanOrEqual(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -306,7 +306,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean LessThan(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlBoolean LessThan(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -321,7 +321,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlBoolean LessThanOrEqual(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -336,7 +336,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlBoolean NotEquals(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlBoolean NotEquals(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -366,7 +366,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte Add(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
+    public static  SqlByte Add(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -381,7 +381,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte BitwiseAnd(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlByte BitwiseAnd(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseAnd = null;
@@ -396,7 +396,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte BitwiseOr(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlByte BitwiseOr(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseOr = null;
@@ -411,7 +411,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte Divide(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
+    public static  SqlByte Divide(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -426,7 +426,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte Mod(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
+    public static  SqlByte Mod(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMod = null;
@@ -441,7 +441,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte Modulus(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
+    public static  SqlByte Modulus(SqlByte x, SqlByte y) throws Throwable, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModulus = null;
@@ -456,7 +456,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte Multiply(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
+    public static  SqlByte Multiply(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -471,7 +471,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte OnesComplement(SqlByte x) throws Throwable {
+    public static  SqlByte OnesComplement(SqlByte x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnesComplement = null;
@@ -486,7 +486,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+    public static  SqlByte Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -501,7 +501,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte Subtract(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
+    public static  SqlByte Subtract(SqlByte x, SqlByte y) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -516,7 +516,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static SqlByte Xor(SqlByte x, SqlByte y) throws Throwable {
+    public static  SqlByte Xor(SqlByte x, SqlByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXor = null;
@@ -651,7 +651,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

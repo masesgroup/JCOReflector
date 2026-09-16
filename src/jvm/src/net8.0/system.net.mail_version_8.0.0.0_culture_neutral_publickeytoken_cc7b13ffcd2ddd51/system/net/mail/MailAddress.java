@@ -185,7 +185,7 @@ public class MailAddress extends NetObject  {
     
     // Methods section
     
-    public static boolean TryCreate(java.lang.String address, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
+    public static  boolean TryCreate(java.lang.String address, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -199,7 +199,7 @@ public class MailAddress extends NetObject  {
         }
     }
 
-    public static boolean TryCreate(java.lang.String address, java.lang.String displayName, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException {
+    public static  boolean TryCreate(java.lang.String address, java.lang.String displayName, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -213,7 +213,7 @@ public class MailAddress extends NetObject  {
         }
     }
 
-    public static boolean TryCreate(java.lang.String address, java.lang.String displayName, Encoding displayNameEncoding, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
+    public static  boolean TryCreate(java.lang.String address, java.lang.String displayName, Encoding displayNameEncoding, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;

@@ -170,7 +170,7 @@ public class XmlConvert extends NetObject  {
     
     // Methods section
     
-    public static boolean IsNCNameChar(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static  boolean IsNCNameChar(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNCNameChar = null;
@@ -184,7 +184,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static boolean IsPublicIdChar(char ch) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  boolean IsPublicIdChar(char ch) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPublicIdChar = null;
@@ -198,7 +198,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static boolean IsStartNCNameChar(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static  boolean IsStartNCNameChar(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsStartNCNameChar = null;
@@ -212,7 +212,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static boolean IsWhitespaceChar(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static  boolean IsWhitespaceChar(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWhitespaceChar = null;
@@ -226,7 +226,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static boolean IsXmlChar(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static  boolean IsXmlChar(char ch) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsXmlChar = null;
@@ -240,7 +240,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static boolean IsXmlSurrogatePair(char lowChar, char highChar) throws Throwable {
+    public static  boolean IsXmlSurrogatePair(char lowChar, char highChar) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsXmlSurrogatePair = null;
@@ -254,7 +254,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(java.lang.String s) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException {
+    public static  boolean ToBoolean(java.lang.String s) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -268,7 +268,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static byte ToByte(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
+    public static  byte ToByte(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -308,7 +308,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static char ToChar(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
+    public static  char ToChar(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -322,7 +322,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static double ToDouble(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  double ToDouble(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -362,7 +362,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static short ToInt16(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
+    public static  short ToInt16(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -402,7 +402,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static int ToInt32(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
+    public static  int ToInt32(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -442,7 +442,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static long ToInt64(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
+    public static  long ToInt64(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -482,7 +482,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
+    public static  SByte ToSByte(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -497,7 +497,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  Single ToSingle(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -512,7 +512,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String s, java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
+    public static  DateTime ToDateTime(java.lang.String s, java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -527,7 +527,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String s, java.lang.String[] formats) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  DateTime ToDateTime(java.lang.String s, java.lang.String[] formats) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -542,7 +542,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  DateTime ToDateTime(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -557,7 +557,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String s, XmlDateTimeSerializationMode dateTimeOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
+    public static  DateTime ToDateTime(java.lang.String s, XmlDateTimeSerializationMode dateTimeOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -572,7 +572,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
+    public static  DateTime ToDateTime(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -587,7 +587,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTimeOffset ToDateTimeOffset(java.lang.String s, java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
+    public static  DateTimeOffset ToDateTimeOffset(java.lang.String s, java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTimeOffset = null;
@@ -602,7 +602,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTimeOffset ToDateTimeOffset(java.lang.String s, java.lang.String[] formats) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  DateTimeOffset ToDateTimeOffset(java.lang.String s, java.lang.String[] formats) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTimeOffset = null;
@@ -617,7 +617,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTimeOffset ToDateTimeOffset(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  DateTimeOffset ToDateTimeOffset(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTimeOffset = null;
@@ -632,7 +632,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTimeOffset ToDateTimeOffset(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
+    public static  DateTimeOffset ToDateTimeOffset(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTimeOffset = null;
@@ -647,7 +647,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException {
+    public static  Decimal ToDecimal(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -662,7 +662,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static Guid ToGuid(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
+    public static  Guid ToGuid(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToGuid = null;
@@ -677,7 +677,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String DecodeName(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static  java.lang.String DecodeName(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecodeName = null;
@@ -691,7 +691,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String EncodeLocalName(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
+    public static  java.lang.String EncodeLocalName(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncodeLocalName = null;
@@ -705,7 +705,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String EncodeName(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
+    public static  java.lang.String EncodeName(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncodeName = null;
@@ -719,7 +719,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String EncodeNmToken(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
+    public static  java.lang.String EncodeNmToken(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncodeNmToken = null;
@@ -733,7 +733,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(boolean value) throws Throwable {
+    public static  java.lang.String ToString(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -747,7 +747,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String ToString(byte value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -761,7 +761,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(char value) throws Throwable {
+    public static  java.lang.String ToString(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -775,7 +775,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
+    public static  java.lang.String ToString(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -789,7 +789,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(short value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(short value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -803,7 +803,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(int value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(int value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -817,7 +817,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(long value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(long value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -831,7 +831,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(SByte value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(SByte value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -845,7 +845,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
+    public static  java.lang.String ToString(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -859,7 +859,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTime value, java.lang.String format) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
+    public static  java.lang.String ToString(DateTime value, java.lang.String format) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -873,7 +873,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTime value, XmlDateTimeSerializationMode dateTimeOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String ToString(DateTime value, XmlDateTimeSerializationMode dateTimeOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -887,7 +887,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTime value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
+    public static  java.lang.String ToString(DateTime value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -901,7 +901,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTimeOffset value, java.lang.String format) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.OverflowException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public static  java.lang.String ToString(DateTimeOffset value, java.lang.String format) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.OverflowException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -915,7 +915,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTimeOffset value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OverflowException {
+    public static  java.lang.String ToString(DateTimeOffset value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -929,7 +929,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(Decimal value) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(Decimal value) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -943,7 +943,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(Guid value) throws Throwable {
+    public static  java.lang.String ToString(Guid value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -957,7 +957,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(TimeSpan value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String ToString(TimeSpan value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -971,7 +971,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt16 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String ToString(UInt16 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -985,7 +985,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt32 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String ToString(UInt32 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -999,7 +999,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt64 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String ToString(UInt64 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -1013,7 +1013,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String VerifyName(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String VerifyName(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifyName = null;
@@ -1027,7 +1027,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String VerifyNCName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException {
+    public static  java.lang.String VerifyNCName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifyNCName = null;
@@ -1041,7 +1041,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String VerifyNMTOKEN(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String VerifyNMTOKEN(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifyNMTOKEN = null;
@@ -1055,7 +1055,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String VerifyPublicId(java.lang.String publicId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String VerifyPublicId(java.lang.String publicId) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifyPublicId = null;
@@ -1069,7 +1069,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String VerifyTOKEN(java.lang.String token) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
+    public static  java.lang.String VerifyTOKEN(java.lang.String token) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifyTOKEN = null;
@@ -1083,7 +1083,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String VerifyWhitespace(java.lang.String content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
+    public static  java.lang.String VerifyWhitespace(java.lang.String content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifyWhitespace = null;
@@ -1097,7 +1097,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String VerifyXmlChars(java.lang.String content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String VerifyXmlChars(java.lang.String content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifyXmlChars = null;
@@ -1111,7 +1111,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static TimeSpan ToTimeSpan(java.lang.String s) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException {
+    public static  TimeSpan ToTimeSpan(java.lang.String s) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToTimeSpan = null;
@@ -1126,7 +1126,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
+    public static  UInt16 ToUInt16(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -1141,7 +1141,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
+    public static  UInt32 ToUInt32(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -1156,7 +1156,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
+    public static  UInt64 ToUInt64(java.lang.String s) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;

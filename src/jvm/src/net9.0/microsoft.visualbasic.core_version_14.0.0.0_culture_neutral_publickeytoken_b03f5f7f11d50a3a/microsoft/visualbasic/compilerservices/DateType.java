@@ -155,7 +155,7 @@ public class DateType extends NetObject  {
     
     // Methods section
     
-    public static DateTime FromObject(NetObject Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  DateTime FromObject(NetObject Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromObject = null;
@@ -170,7 +170,7 @@ public class DateType extends NetObject  {
         }
     }
 
-    public static DateTime FromString(java.lang.String Value, CultureInfo culture) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException {
+    public static  DateTime FromString(java.lang.String Value, CultureInfo culture) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;
@@ -185,7 +185,7 @@ public class DateType extends NetObject  {
         }
     }
 
-    public static DateTime FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
+    public static  DateTime FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;

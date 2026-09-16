@@ -180,7 +180,7 @@ public class FeatureSupport extends NetObject  {
         }
     }
 
-    public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException {
+    public static  boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPresent = null;
@@ -194,7 +194,7 @@ public class FeatureSupport extends NetObject  {
         }
     }
 
-    public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName, Version minimumVersion) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException {
+    public static  boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName, Version minimumVersion) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPresent = null;
@@ -223,7 +223,7 @@ public class FeatureSupport extends NetObject  {
         }
     }
 
-    public static Version GetVersionPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException {
+    public static  Version GetVersionPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetVersionPresent = null;

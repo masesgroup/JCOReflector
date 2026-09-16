@@ -161,7 +161,7 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
     
     // Methods section
     
-    public static PrintSystemJobInfo Get(PrintQueue printQueue, int jobIdentifier) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.BadImageFormatException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException {
+    public static  PrintSystemJobInfo Get(PrintQueue printQueue, int jobIdentifier) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.BadImageFormatException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGet = null;

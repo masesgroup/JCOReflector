@@ -222,7 +222,7 @@ public class TextDecorationCollectionConverter extends TypeConverter  {
         }
     }
 
-    public static TextDecorationCollection ConvertFromStringNewTextDecorationCollectionConverter(java.lang.String text) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.componentmodel.Win32Exception, system.FormatException, system.diagnostics.UnreachableException, system.ArgumentNullException {
+    public static  TextDecorationCollection ConvertFromStringNewTextDecorationCollectionConverter(java.lang.String text) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.componentmodel.Win32Exception, system.FormatException, system.diagnostics.UnreachableException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertFromString = null;

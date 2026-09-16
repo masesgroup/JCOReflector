@@ -175,7 +175,7 @@ public class NameValueWithParametersHeaderValue extends NameValueHeaderValue  {
     
     // Methods section
     
-    public static NameValueWithParametersHeaderValue ParseNewNameValueWithParametersHeaderValue(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
+    public static  NameValueWithParametersHeaderValue ParseNewNameValueWithParametersHeaderValue(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

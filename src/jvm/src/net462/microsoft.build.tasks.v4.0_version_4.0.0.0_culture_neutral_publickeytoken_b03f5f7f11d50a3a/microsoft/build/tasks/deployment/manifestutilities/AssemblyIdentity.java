@@ -220,7 +220,7 @@ public class AssemblyIdentity extends NetObject  {
     
     // Methods section
     
-    public static AssemblyIdentity FromAssemblyName(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public static  AssemblyIdentity FromAssemblyName(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromAssemblyName = null;
@@ -235,7 +235,7 @@ public class AssemblyIdentity extends NetObject  {
         }
     }
 
-    public static AssemblyIdentity FromFile(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  AssemblyIdentity FromFile(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFile = null;
@@ -250,7 +250,7 @@ public class AssemblyIdentity extends NetObject  {
         }
     }
 
-    public static AssemblyIdentity FromManagedAssembly(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  AssemblyIdentity FromManagedAssembly(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromManagedAssembly = null;
@@ -265,7 +265,7 @@ public class AssemblyIdentity extends NetObject  {
         }
     }
 
-    public static AssemblyIdentity FromManifest(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException {
+    public static  AssemblyIdentity FromManifest(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromManifest = null;
@@ -280,7 +280,7 @@ public class AssemblyIdentity extends NetObject  {
         }
     }
 
-    public static AssemblyIdentity FromNativeAssembly(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
+    public static  AssemblyIdentity FromNativeAssembly(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromNativeAssembly = null;

@@ -190,7 +190,7 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
         }
     }
 
-    public static DataColumn GetDataColumnBySchemaAction(java.lang.String sourceColumn, java.lang.String dataSetColumn, DataTable dataTable, NetType dataType, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.FormatException, system.InvalidCastException {
+    public static  DataColumn GetDataColumnBySchemaAction(java.lang.String sourceColumn, java.lang.String dataSetColumn, DataTable dataTable, NetType dataType, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataColumnBySchemaAction = null;

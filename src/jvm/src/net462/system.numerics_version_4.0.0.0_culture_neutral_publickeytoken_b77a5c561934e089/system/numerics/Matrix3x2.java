@@ -181,7 +181,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static boolean Invert(Matrix3x2 matrix, JCORefOut<Matrix3x2> result) throws Throwable {
+    public static  boolean Invert(Matrix3x2 matrix, JCORefOut<Matrix3x2> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvert = null;
@@ -210,7 +210,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Add(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
+    public static  Matrix3x2 Add(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -225,7 +225,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateRotation(Single radians) throws Throwable, system.ArithmeticException {
+    public static  Matrix3x2 CreateRotation(Single radians) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotation = null;
@@ -240,7 +240,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.ArithmeticException {
+    public static  Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotation = null;
@@ -255,7 +255,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single scale) throws Throwable {
+    public static  Matrix3x2 CreateScale(Single scale) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -270,7 +270,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single xScale, Single yScale) throws Throwable {
+    public static  Matrix3x2 CreateScale(Single xScale, Single yScale) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -285,7 +285,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single xScale, Single yScale, Vector2 centerPoint) throws Throwable {
+    public static  Matrix3x2 CreateScale(Single xScale, Single yScale, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -300,7 +300,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single scale, Vector2 centerPoint) throws Throwable {
+    public static  Matrix3x2 CreateScale(Single scale, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -315,7 +315,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Vector2 scales) throws Throwable {
+    public static  Matrix3x2 CreateScale(Vector2 scales) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -330,7 +330,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Vector2 scales, Vector2 centerPoint) throws Throwable {
+    public static  Matrix3x2 CreateScale(Vector2 scales, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -345,7 +345,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY) throws Throwable {
+    public static  Matrix3x2 CreateSkew(Single radiansX, Single radiansY) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSkew = null;
@@ -360,7 +360,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY, Vector2 centerPoint) throws Throwable {
+    public static  Matrix3x2 CreateSkew(Single radiansX, Single radiansY, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSkew = null;
@@ -375,7 +375,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateTranslation(Single xPosition, Single yPosition) throws Throwable {
+    public static  Matrix3x2 CreateTranslation(Single xPosition, Single yPosition) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTranslation = null;
@@ -390,7 +390,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateTranslation(Vector2 position) throws Throwable {
+    public static  Matrix3x2 CreateTranslation(Vector2 position) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTranslation = null;
@@ -405,7 +405,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Lerp(Matrix3x2 matrix1, Matrix3x2 matrix2, Single amount) throws Throwable {
+    public static  Matrix3x2 Lerp(Matrix3x2 matrix1, Matrix3x2 matrix2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -420,7 +420,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Multiply(Matrix3x2 value1, Single value2) throws Throwable {
+    public static  Matrix3x2 Multiply(Matrix3x2 value1, Single value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -435,7 +435,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Multiply(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
+    public static  Matrix3x2 Multiply(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -450,7 +450,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Negate(Matrix3x2 value) throws Throwable {
+    public static  Matrix3x2 Negate(Matrix3x2 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -465,7 +465,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Subtract(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
+    public static  Matrix3x2 Subtract(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

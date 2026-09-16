@@ -744,7 +744,7 @@ public class ECDsa extends ECAlgorithm  {
         }
     }
 
-    public static ECDsa CreateNewECDsa() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
+    public static  ECDsa CreateNewECDsa() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -759,7 +759,7 @@ public class ECDsa extends ECAlgorithm  {
         }
     }
 
-    public static ECDsa Create(ECCurve curve) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  ECDsa Create(ECCurve curve) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -774,7 +774,7 @@ public class ECDsa extends ECAlgorithm  {
         }
     }
 
-    public static ECDsa Create(ECParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotSupportedException {
+    public static  ECDsa Create(ECParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -789,7 +789,7 @@ public class ECDsa extends ECAlgorithm  {
         }
     }
 
-    public static ECDsa CreateNewECDsa(java.lang.String algorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException {
+    public static  ECDsa CreateNewECDsa(java.lang.String algorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

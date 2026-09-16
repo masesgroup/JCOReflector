@@ -153,7 +153,7 @@ public class TripleDES extends SymmetricAlgorithm  {
     
     // Methods section
     
-    public static boolean IsWeakKey(byte[] rgbKey) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  boolean IsWeakKey(byte[] rgbKey) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWeakKey = null;
@@ -167,7 +167,7 @@ public class TripleDES extends SymmetricAlgorithm  {
         }
     }
 
-    public static boolean IsWeakKey(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  boolean IsWeakKey(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWeakKey = null;
@@ -181,7 +181,7 @@ public class TripleDES extends SymmetricAlgorithm  {
         }
     }
 
-    public static TripleDES CreateNewTripleDES() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  TripleDES CreateNewTripleDES() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -196,7 +196,7 @@ public class TripleDES extends SymmetricAlgorithm  {
         }
     }
 
-    public static TripleDES CreateNewTripleDES(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  TripleDES CreateNewTripleDES(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

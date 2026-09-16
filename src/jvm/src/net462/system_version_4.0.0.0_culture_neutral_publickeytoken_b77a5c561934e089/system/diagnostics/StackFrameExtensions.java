@@ -152,7 +152,7 @@ public class StackFrameExtensions extends NetObject  {
     
     // Methods section
     
-    public static boolean HasILOffset(StackFrame stackFrame) throws Throwable {
+    public static  boolean HasILOffset(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHasILOffset = null;
@@ -166,7 +166,7 @@ public class StackFrameExtensions extends NetObject  {
         }
     }
 
-    public static boolean HasMethod(StackFrame stackFrame) throws Throwable {
+    public static  boolean HasMethod(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHasMethod = null;
@@ -180,7 +180,7 @@ public class StackFrameExtensions extends NetObject  {
         }
     }
 
-    public static boolean HasNativeImage(StackFrame stackFrame) throws Throwable {
+    public static  boolean HasNativeImage(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHasNativeImage = null;
@@ -194,7 +194,7 @@ public class StackFrameExtensions extends NetObject  {
         }
     }
 
-    public static boolean HasSource(StackFrame stackFrame) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
+    public static  boolean HasSource(StackFrame stackFrame) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHasSource = null;

@@ -153,7 +153,7 @@ public class ECDsaCertificateExtensions extends NetObject  {
     
     // Methods section
     
-    public static ECDsa GetECDsaPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.AccessViolationException, system.NullReferenceException, system.PlatformNotSupportedException {
+    public static  ECDsa GetECDsaPrivateKey(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.AccessViolationException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetECDsaPrivateKey = null;
@@ -168,7 +168,7 @@ public class ECDsaCertificateExtensions extends NetObject  {
         }
     }
 
-    public static ECDsa GetECDsaPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ApplicationException, system.NotSupportedException, system.AccessViolationException, system.NullReferenceException, system.PlatformNotSupportedException {
+    public static  ECDsa GetECDsaPublicKey(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ApplicationException, system.NotSupportedException, system.AccessViolationException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetECDsaPublicKey = null;
@@ -183,7 +183,7 @@ public class ECDsaCertificateExtensions extends NetObject  {
         }
     }
 
-    public static X509Certificate2 CopyWithPrivateKey(X509Certificate2 certificate, ECDsa privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NotSupportedException, system.AccessViolationException, system.NullReferenceException, system.PlatformNotSupportedException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
+    public static  X509Certificate2 CopyWithPrivateKey(X509Certificate2 certificate, ECDsa privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NotSupportedException, system.AccessViolationException, system.NullReferenceException, system.PlatformNotSupportedException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCopyWithPrivateKey = null;

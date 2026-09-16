@@ -157,7 +157,7 @@ public class CompressedStack extends NetObject  {
     
     // Methods section
     
-    public static CompressedStack Capture() throws Throwable {
+    public static  CompressedStack Capture() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCapture = null;
@@ -187,7 +187,7 @@ public class CompressedStack extends NetObject  {
         }
     }
 
-    public static CompressedStack GetCompressedStack() throws Throwable {
+    public static  CompressedStack GetCompressedStack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompressedStack = null;
@@ -212,7 +212,7 @@ public class CompressedStack extends NetObject  {
         }
     }
 
-    public static void Run(CompressedStack compressedStack, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void Run(CompressedStack compressedStack, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

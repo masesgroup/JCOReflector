@@ -163,7 +163,7 @@ public class TypedDataSetGenerator extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String GenerateIdName(java.lang.String name, ICodeGenerator codeGen) throws Throwable, system.IndexOutOfRangeException {
+    public static  java.lang.String GenerateIdName(java.lang.String name, ICodeGenerator codeGen) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateIdName = null;
@@ -177,7 +177,7 @@ public class TypedDataSetGenerator extends NetObject  {
         }
     }
 
-    public static void Generate(DataSet dataSet, CodeNamespace codeNamespace, ICodeGenerator codeGen) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.data.DataException, system.OutOfMemoryException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException, system.data.TypedDataSetGeneratorException {
+    public static  void Generate(DataSet dataSet, CodeNamespace codeNamespace, ICodeGenerator codeGen) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.data.DataException, system.OutOfMemoryException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException, system.data.TypedDataSetGeneratorException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -173,7 +173,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
     
     // Methods section
     
-    public static boolean IsAlphaPixelFormat(PixelFormat pixfmt) throws Throwable {
+    public static  boolean IsAlphaPixelFormat(PixelFormat pixfmt) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsAlphaPixelFormat = null;
@@ -187,7 +187,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static boolean IsCanonicalPixelFormat(PixelFormat pixfmt) throws Throwable {
+    public static  boolean IsCanonicalPixelFormat(PixelFormat pixfmt) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsCanonicalPixelFormat = null;
@@ -201,7 +201,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static boolean IsExtendedPixelFormat(PixelFormat pixfmt) throws Throwable {
+    public static  boolean IsExtendedPixelFormat(PixelFormat pixfmt) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsExtendedPixelFormat = null;
@@ -255,7 +255,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static int GetPixelFormatSize(PixelFormat pixfmt) throws Throwable {
+    public static  int GetPixelFormatSize(PixelFormat pixfmt) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPixelFormatSize = null;
@@ -335,7 +335,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static Image FromFile(java.lang.String filename, boolean useEmbeddedColorManagement) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
+    public static  Image FromFile(java.lang.String filename, boolean useEmbeddedColorManagement) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFile = null;
@@ -350,7 +350,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static Image FromFile(java.lang.String filename) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
+    public static  Image FromFile(java.lang.String filename) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFile = null;
@@ -365,7 +365,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static Image FromStream(Stream stream, boolean useEmbeddedColorManagement, boolean validateImageData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException {
+    public static  Image FromStream(Stream stream, boolean useEmbeddedColorManagement, boolean validateImageData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromStream = null;
@@ -380,7 +380,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static Image FromStream(Stream stream, boolean useEmbeddedColorManagement) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
+    public static  Image FromStream(Stream stream, boolean useEmbeddedColorManagement) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromStream = null;
@@ -395,7 +395,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static Image FromStream(Stream stream) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.io.IOException {
+    public static  Image FromStream(Stream stream) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromStream = null;

@@ -297,7 +297,7 @@ public class OracleConnection extends DbConnection implements system.ICloneable 
         }
     }
 
-    public static void ClearAllPools() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.threading.SemaphoreFullException {
+    public static  void ClearAllPools() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.threading.SemaphoreFullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -307,7 +307,7 @@ public class OracleConnection extends DbConnection implements system.ICloneable 
         }
     }
 
-    public static void ClearPool(OracleConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
+    public static  void ClearPool(OracleConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

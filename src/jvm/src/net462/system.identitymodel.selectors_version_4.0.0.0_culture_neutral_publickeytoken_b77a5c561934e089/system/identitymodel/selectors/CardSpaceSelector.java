@@ -155,7 +155,7 @@ public class CardSpaceSelector extends NetObject  {
     
     // Methods section
     
-    public static GenericXmlSecurityToken GetToken(CardSpacePolicyElement[] policyChain, SecurityTokenSerializer tokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.InvalidTimeZoneException {
+    public static  GenericXmlSecurityToken GetToken(CardSpacePolicyElement[] policyChain, SecurityTokenSerializer tokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.InvalidTimeZoneException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetToken = null;
@@ -170,7 +170,7 @@ public class CardSpaceSelector extends NetObject  {
         }
     }
 
-    public static void Import(java.lang.String fileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception {
+    public static  void Import(java.lang.String fileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -180,7 +180,7 @@ public class CardSpaceSelector extends NetObject  {
         }
     }
 
-    public static void Manage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception {
+    public static  void Manage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -170,7 +170,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean IsAssignable(NetType toType, NetType fromType) throws Throwable, system.InvalidOperationException {
+    public static  boolean IsAssignable(NetType toType, NetType fromType) throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsAssignable = null;
@@ -184,7 +184,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean IsEnum(NetType type) throws Throwable, system.ArgumentNullException {
+    public static  boolean IsEnum(NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEnum = null;
@@ -198,7 +198,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean IsSubclassOf(NetType subclass, NetType superClass) throws Throwable {
+    public static  boolean IsSubclassOf(NetType subclass, NetType superClass) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSubclassOf = null;
@@ -255,7 +255,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public static java.lang.String[] GetEnumNames(NetType enumType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static  java.lang.String[] GetEnumNames(NetType enumType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnumNames = null;
@@ -278,7 +278,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public static NetType GetEventHandlerType(EventInfo eventInfo) throws Throwable, system.ArgumentNullException {
+    public static  NetType GetEventHandlerType(EventInfo eventInfo) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEventHandlerType = null;

@@ -154,7 +154,7 @@ public class ParallelEnumerable extends NetObject  {
     
     // Methods section
     
-    public static ParallelQuery AsOrdered(ParallelQuery source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  ParallelQuery AsOrdered(ParallelQuery source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsOrdered = null;
@@ -169,7 +169,7 @@ public class ParallelEnumerable extends NetObject  {
         }
     }
 
-    public static ParallelQuery AsParallel(IEnumerable source) throws Throwable, system.ArgumentNullException {
+    public static  ParallelQuery AsParallel(IEnumerable source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsParallel = null;

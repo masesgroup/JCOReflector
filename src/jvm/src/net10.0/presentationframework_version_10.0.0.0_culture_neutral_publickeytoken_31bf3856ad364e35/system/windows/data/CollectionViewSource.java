@@ -172,7 +172,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
     
     // Methods section
     
-    public static boolean IsDefaultView(ICollectionView view) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean IsDefaultView(ICollectionView view) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefaultView = null;
@@ -186,7 +186,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
         }
     }
 
-    public static ICollectionView GetDefaultView(NetObject source) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  ICollectionView GetDefaultView(NetObject source) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultView = null;

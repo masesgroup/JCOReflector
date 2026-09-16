@@ -156,7 +156,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean IsFlowSuppressed() throws Throwable {
+    public static  boolean IsFlowSuppressed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFlowSuppressed = null;
@@ -170,7 +170,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean IsWindowsIdentityFlowSuppressed() throws Throwable {
+    public static  boolean IsWindowsIdentityFlowSuppressed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWindowsIdentityFlowSuppressed = null;
@@ -184,7 +184,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static SecurityContext Capture() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException {
+    public static  SecurityContext Capture() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCapture = null;
@@ -214,7 +214,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static AsyncFlowControl SuppressFlow() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public static  AsyncFlowControl SuppressFlow() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSuppressFlow = null;
@@ -229,7 +229,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static AsyncFlowControl SuppressFlowWindowsIdentity() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public static  AsyncFlowControl SuppressFlowWindowsIdentity() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSuppressFlowWindowsIdentity = null;
@@ -254,7 +254,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void RestoreFlow() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public static  void RestoreFlow() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -264,7 +264,7 @@ public class SecurityContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void Run(SecurityContext securityContext, ContextCallback callback, NetObject state) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.NullReferenceException {
+    public static  void Run(SecurityContext securityContext, ContextCallback callback, NetObject state) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

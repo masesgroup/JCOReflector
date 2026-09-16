@@ -219,7 +219,7 @@ public class Attachment extends AttachmentBase  {
     
     // Methods section
     
-    public static Attachment CreateAttachmentFromString(java.lang.String content, ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static  Attachment CreateAttachmentFromString(java.lang.String content, ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateAttachmentFromString = null;
@@ -234,7 +234,7 @@ public class Attachment extends AttachmentBase  {
         }
     }
 
-    public static Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static  Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateAttachmentFromString = null;
@@ -249,7 +249,7 @@ public class Attachment extends AttachmentBase  {
         }
     }
 
-    public static Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static  Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateAttachmentFromString = null;

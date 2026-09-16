@@ -187,7 +187,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static boolean Equals(Matrix3D matrix1, Matrix3D matrix2) throws Throwable {
+    public static  boolean Equals(Matrix3D matrix1, Matrix3D matrix2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -215,7 +215,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Matrix3D Multiply(Matrix3D matrix1, Matrix3D matrix2) throws Throwable {
+    public static  Matrix3D Multiply(Matrix3D matrix1, Matrix3D matrix2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -230,7 +230,7 @@ public class Matrix3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Matrix3D Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
+    public static  Matrix3D Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

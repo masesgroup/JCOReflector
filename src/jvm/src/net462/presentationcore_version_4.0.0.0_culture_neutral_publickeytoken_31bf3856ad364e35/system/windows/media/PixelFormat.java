@@ -169,7 +169,7 @@ public class PixelFormat extends ValueType  {
         }
     }
 
-    public static boolean Equals(PixelFormat left, PixelFormat right) throws Throwable {
+    public static  boolean Equals(PixelFormat left, PixelFormat right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;

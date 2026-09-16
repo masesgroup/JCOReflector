@@ -286,7 +286,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean Equals(SqlSingle x, SqlSingle y) throws Throwable {
+    public static  SqlBoolean Equals(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -301,7 +301,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlSingle x, SqlSingle y) throws Throwable {
+    public static  SqlBoolean GreaterThan(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -316,7 +316,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlSingle x, SqlSingle y) throws Throwable {
+    public static  SqlBoolean GreaterThanOrEqual(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -331,7 +331,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean LessThan(SqlSingle x, SqlSingle y) throws Throwable {
+    public static  SqlBoolean LessThan(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -346,7 +346,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlSingle x, SqlSingle y) throws Throwable {
+    public static  SqlBoolean LessThanOrEqual(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -361,7 +361,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean NotEquals(SqlSingle x, SqlSingle y) throws Throwable {
+    public static  SqlBoolean NotEquals(SqlSingle x, SqlSingle y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -496,7 +496,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlSingle Add(SqlSingle x, SqlSingle y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public static  SqlSingle Add(SqlSingle x, SqlSingle y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -511,7 +511,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlSingle Divide(SqlSingle x, SqlSingle y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.DivideByZeroException, system.NotSupportedException, system.OverflowException {
+    public static  SqlSingle Divide(SqlSingle x, SqlSingle y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.DivideByZeroException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -526,7 +526,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlSingle Multiply(SqlSingle x, SqlSingle y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public static  SqlSingle Multiply(SqlSingle x, SqlSingle y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -541,7 +541,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlSingle Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
+    public static  SqlSingle Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -556,7 +556,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlSingle Subtract(SqlSingle x, SqlSingle y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public static  SqlSingle Subtract(SqlSingle x, SqlSingle y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -586,7 +586,7 @@ public class SqlSingle extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

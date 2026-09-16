@@ -241,7 +241,7 @@ public class PrintServer extends PrintSystemObject  {
     
     // Methods section
     
-    public static boolean DeletePrintQueue(PrintQueue printQueue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  boolean DeletePrintQueue(PrintQueue printQueue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeletePrintQueue = null;
@@ -255,7 +255,7 @@ public class PrintServer extends PrintSystemObject  {
         }
     }
 
-    public static boolean DeletePrintQueue(java.lang.String printQueueName) throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
+    public static  boolean DeletePrintQueue(java.lang.String printQueueName) throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeletePrintQueue = null;

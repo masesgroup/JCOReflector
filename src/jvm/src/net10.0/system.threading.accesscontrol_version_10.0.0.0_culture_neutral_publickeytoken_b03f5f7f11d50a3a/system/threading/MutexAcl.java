@@ -154,7 +154,7 @@ public class MutexAcl extends NetObject  {
     
     // Methods section
     
-    public static boolean TryOpenExisting(java.lang.String name, MutexRights rights, JCORefOut<Mutex> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  boolean TryOpenExisting(java.lang.String name, MutexRights rights, JCORefOut<Mutex> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryOpenExisting = null;
@@ -168,7 +168,7 @@ public class MutexAcl extends NetObject  {
         }
     }
 
-    public static Mutex Create(boolean initiallyOwned, java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> createdNew, MutexSecurity mutexSecurity) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.threading.SynchronizationLockException {
+    public static  Mutex Create(boolean initiallyOwned, java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> createdNew, MutexSecurity mutexSecurity) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -183,7 +183,7 @@ public class MutexAcl extends NetObject  {
         }
     }
 
-    public static Mutex OpenExisting(java.lang.String name, MutexRights rights) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.DirectoryNotFoundException {
+    public static  Mutex OpenExisting(java.lang.String name, MutexRights rights) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.DirectoryNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenExisting = null;

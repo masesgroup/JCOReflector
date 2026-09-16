@@ -156,7 +156,7 @@ public class LicenseManager extends NetObject  {
     
     // Methods section
     
-    public static boolean IsLicensed(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean IsLicensed(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLicensed = null;
@@ -170,7 +170,7 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static boolean IsValid(NetType type, NetObject instance, JCORefOut<License> license) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean IsValid(NetType type, NetObject instance, JCORefOut<License> license) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValid = null;
@@ -184,7 +184,7 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static boolean IsValid(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean IsValid(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValid = null;
@@ -198,7 +198,7 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static License Validate(NetType type, NetObject instance) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.LicenseException {
+    public static  License Validate(NetType type, NetObject instance) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.LicenseException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectValidate = null;
@@ -213,7 +213,7 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static NetObject CreateWithContext(NetType type, LicenseContext creationContext, NetObject[] args) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  NetObject CreateWithContext(NetType type, LicenseContext creationContext, NetObject[] args) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateWithContext = null;
@@ -228,7 +228,7 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static NetObject CreateWithContext(NetType type, LicenseContext creationContext) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static  NetObject CreateWithContext(NetType type, LicenseContext creationContext) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateWithContext = null;
@@ -243,7 +243,7 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static void LockContext(NetObject contextUser) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  void LockContext(NetObject contextUser) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -253,7 +253,7 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static void UnlockContext(NetObject contextUser) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  void UnlockContext(NetObject contextUser) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -263,7 +263,7 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static void Validate(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.LicenseException {
+    public static  void Validate(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.io.FileLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.LicenseException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

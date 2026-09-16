@@ -158,7 +158,7 @@ public class XmlILStorageConverter extends NetObject  {
     
     // Methods section
     
-    public static XmlAtomicValue BooleanToAtomicValue(boolean value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue BooleanToAtomicValue(boolean value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBooleanToAtomicValue = null;
@@ -173,7 +173,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue BytesToAtomicValue(byte[] value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue BytesToAtomicValue(byte[] value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBytesToAtomicValue = null;
@@ -188,7 +188,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue BytesToAtomicValue(JCORefOut dupParam0, int dupParam1, XmlQueryRuntime dupParam2) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue BytesToAtomicValue(JCORefOut dupParam0, int dupParam1, XmlQueryRuntime dupParam2) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBytesToAtomicValue = null;
@@ -203,7 +203,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue DateTimeToAtomicValue(DateTime value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue DateTimeToAtomicValue(DateTime value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateTimeToAtomicValue = null;
@@ -218,7 +218,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue DecimalToAtomicValue(Decimal value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue DecimalToAtomicValue(Decimal value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecimalToAtomicValue = null;
@@ -233,7 +233,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue DoubleToAtomicValue(double value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue DoubleToAtomicValue(double value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDoubleToAtomicValue = null;
@@ -248,7 +248,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue Int32ToAtomicValue(int value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue Int32ToAtomicValue(int value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInt32ToAtomicValue = null;
@@ -263,7 +263,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue Int64ToAtomicValue(long value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue Int64ToAtomicValue(long value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInt64ToAtomicValue = null;
@@ -278,7 +278,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue SingleToAtomicValue(Single value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue SingleToAtomicValue(Single value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSingleToAtomicValue = null;
@@ -293,7 +293,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue StringToAtomicValue(java.lang.String value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue StringToAtomicValue(java.lang.String value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStringToAtomicValue = null;
@@ -308,7 +308,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue TimeSpanToAtomicValue(TimeSpan value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue TimeSpanToAtomicValue(TimeSpan value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTimeSpanToAtomicValue = null;
@@ -323,7 +323,7 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue XmlQualifiedNameToAtomicValue(XmlQualifiedName value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
+    public static  XmlAtomicValue XmlQualifiedNameToAtomicValue(XmlQualifiedName value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXmlQualifiedNameToAtomicValue = null;

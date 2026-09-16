@@ -168,7 +168,7 @@ public class JsonElement extends ValueType  {
     
     // Methods section
     
-    public static boolean DeepEquals(JsonElement element1, JsonElement element2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.InsufficientExecutionStackException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.RankException {
+    public static  boolean DeepEquals(JsonElement element1, JsonElement element2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.InsufficientExecutionStackException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeepEquals = null;
@@ -885,7 +885,7 @@ public class JsonElement extends ValueType  {
         }
     }
 
-    public static JsonElement Parse(java.lang.String json, JsonDocumentOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException {
+    public static  JsonElement Parse(java.lang.String json, JsonDocumentOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -900,7 +900,7 @@ public class JsonElement extends ValueType  {
         }
     }
 
-    public static JsonElement ParseValue(JCORefOut<Utf8JsonReader> reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.RankException, system.NullReferenceException, system.NotSupportedException {
+    public static  JsonElement ParseValue(JCORefOut<Utf8JsonReader> reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.RankException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseValue = null;

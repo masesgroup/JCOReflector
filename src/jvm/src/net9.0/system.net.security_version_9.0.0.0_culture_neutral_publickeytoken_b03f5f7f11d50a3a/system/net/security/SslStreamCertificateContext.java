@@ -157,7 +157,7 @@ public class SslStreamCertificateContext extends NetObject  {
     
     // Methods section
     
-    public static SslStreamCertificateContext Create(X509Certificate2 target, X509Certificate2Collection additionalCertificates, boolean offline, SslCertificateTrust trust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public static  SslStreamCertificateContext Create(X509Certificate2 target, X509Certificate2Collection additionalCertificates, boolean offline, SslCertificateTrust trust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -172,7 +172,7 @@ public class SslStreamCertificateContext extends NetObject  {
         }
     }
 
-    public static SslStreamCertificateContext Create(X509Certificate2 target, X509Certificate2Collection additionalCertificates, boolean offline) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public static  SslStreamCertificateContext Create(X509Certificate2 target, X509Certificate2Collection additionalCertificates, boolean offline) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

@@ -191,7 +191,7 @@ public class Size extends ValueType  {
         }
     }
 
-    public static Size Add(Size sz1, Size sz2) throws Throwable {
+    public static  Size Add(Size sz1, Size sz2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -206,7 +206,7 @@ public class Size extends ValueType  {
         }
     }
 
-    public static Size Ceiling(SizeF value) throws Throwable {
+    public static  Size Ceiling(SizeF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -221,7 +221,7 @@ public class Size extends ValueType  {
         }
     }
 
-    public static Size Round(SizeF value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Size Round(SizeF value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -236,7 +236,7 @@ public class Size extends ValueType  {
         }
     }
 
-    public static Size Subtract(Size sz1, Size sz2) throws Throwable {
+    public static  Size Subtract(Size sz1, Size sz2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -251,7 +251,7 @@ public class Size extends ValueType  {
         }
     }
 
-    public static Size Truncate(SizeF value) throws Throwable {
+    public static  Size Truncate(SizeF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;

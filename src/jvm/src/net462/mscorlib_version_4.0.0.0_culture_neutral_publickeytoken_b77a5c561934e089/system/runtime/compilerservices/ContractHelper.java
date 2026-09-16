@@ -152,7 +152,7 @@ public class ContractHelper extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String RaiseContractFailedEvent(ContractFailureKind failureKind, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
+    public static  java.lang.String RaiseContractFailedEvent(ContractFailureKind failureKind, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRaiseContractFailedEvent = null;
@@ -166,7 +166,7 @@ public class ContractHelper extends NetObject  {
         }
     }
 
-    public static void TriggerFailure(ContractFailureKind kind, java.lang.String displayMessage, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+    public static  void TriggerFailure(ContractFailureKind kind, java.lang.String displayMessage, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

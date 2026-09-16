@@ -263,7 +263,7 @@ public class DbConnectionStringBuilder extends NetObjectEnumerable implements sy
         }
     }
 
-    public static void AppendKeyValuePair(StringBuilder builder, java.lang.String keyword, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
+    public static  void AppendKeyValuePair(StringBuilder builder, java.lang.String keyword, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -273,7 +273,7 @@ public class DbConnectionStringBuilder extends NetObjectEnumerable implements sy
         }
     }
 
-    public static void AppendKeyValuePair(StringBuilder builder, java.lang.String keyword, java.lang.String value, boolean useOdbcRules) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
+    public static  void AppendKeyValuePair(StringBuilder builder, java.lang.String keyword, java.lang.String value, boolean useOdbcRules) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

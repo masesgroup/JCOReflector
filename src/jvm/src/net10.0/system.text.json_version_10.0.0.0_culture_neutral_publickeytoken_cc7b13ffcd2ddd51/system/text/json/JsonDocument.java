@@ -159,7 +159,7 @@ public class JsonDocument extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean TryParseValue(JCORefOut<Utf8JsonReader> reader, JCORefOut<JsonDocument> document) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.RankException, system.NullReferenceException, system.NotSupportedException {
+    public static  boolean TryParseValue(JCORefOut<Utf8JsonReader> reader, JCORefOut<JsonDocument> document) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.RankException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseValue = null;
@@ -173,7 +173,7 @@ public class JsonDocument extends NetObject implements AutoCloseable {
         }
     }
 
-    public static JsonDocument Parse(Stream utf8Json, JsonDocumentOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.text.json.JsonException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public static  JsonDocument Parse(Stream utf8Json, JsonDocumentOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.text.json.JsonException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -188,7 +188,7 @@ public class JsonDocument extends NetObject implements AutoCloseable {
         }
     }
 
-    public static JsonDocument Parse(java.lang.String json, JsonDocumentOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public static  JsonDocument Parse(java.lang.String json, JsonDocumentOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -203,7 +203,7 @@ public class JsonDocument extends NetObject implements AutoCloseable {
         }
     }
 
-    public static JsonDocument ParseValue(JCORefOut<Utf8JsonReader> reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
+    public static  JsonDocument ParseValue(JCORefOut<Utf8JsonReader> reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseValue = null;

@@ -262,7 +262,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static boolean Equals(Decimal d1, Decimal d2) throws Throwable {
+    public static  boolean Equals(Decimal d1, Decimal d2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -276,7 +276,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static boolean TryParse(java.lang.String s, JCORefOut<Decimal> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException {
+    public static  boolean TryParse(java.lang.String s, JCORefOut<Decimal> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -290,7 +290,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<Decimal> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException {
+    public static  boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<Decimal> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -304,7 +304,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static byte ToByte(Decimal value) throws Throwable, system.OverflowException {
+    public static  byte ToByte(Decimal value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -344,7 +344,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static double ToDouble(Decimal d) throws Throwable {
+    public static  double ToDouble(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -384,7 +384,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static short ToInt16(Decimal value) throws Throwable, system.OverflowException {
+    public static  short ToInt16(Decimal value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -424,7 +424,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static int Compare(Decimal d1, Decimal d2) throws Throwable {
+    public static  int Compare(Decimal d1, Decimal d2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -544,7 +544,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static int ToInt32(Decimal d) throws Throwable, system.OverflowException {
+    public static  int ToInt32(Decimal d) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -584,7 +584,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static int[] GetBits(Decimal d) throws Throwable {
+    public static  int[] GetBits(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBits = null;
@@ -607,7 +607,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static long ToInt64(Decimal d) throws Throwable, system.OverflowException {
+    public static  long ToInt64(Decimal d) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -647,7 +647,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static long ToOACurrency(Decimal value) throws Throwable {
+    public static  long ToOACurrency(Decimal value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToOACurrency = null;
@@ -687,7 +687,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static SByte ToSByte(Decimal value) throws Throwable, system.OverflowException {
+    public static  SByte ToSByte(Decimal value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -702,7 +702,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Single ToSingle(Decimal d) throws Throwable {
+    public static  Single ToSingle(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -717,7 +717,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Add(Decimal d1, Decimal d2) throws Throwable {
+    public static  Decimal Add(Decimal d1, Decimal d2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -732,7 +732,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Ceiling(Decimal d) throws Throwable, system.ArgumentException {
+    public static  Decimal Ceiling(Decimal d) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -747,7 +747,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Divide(Decimal d1, Decimal d2) throws Throwable {
+    public static  Decimal Divide(Decimal d1, Decimal d2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -762,7 +762,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Floor(Decimal d) throws Throwable {
+    public static  Decimal Floor(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFloor = null;
@@ -777,7 +777,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal FromOACurrency(long cy) throws Throwable {
+    public static  Decimal FromOACurrency(long cy) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromOACurrency = null;
@@ -792,7 +792,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Multiply(Decimal d1, Decimal d2) throws Throwable {
+    public static  Decimal Multiply(Decimal d1, Decimal d2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -807,7 +807,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Negate(Decimal d) throws Throwable, system.ArgumentException {
+    public static  Decimal Negate(Decimal d) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -822,7 +822,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
+    public static  Decimal Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -837,7 +837,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
+    public static  Decimal Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -852,7 +852,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
+    public static  Decimal Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -867,7 +867,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
+    public static  Decimal Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -882,7 +882,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Remainder(Decimal d1, Decimal d2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  Decimal Remainder(Decimal d1, Decimal d2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRemainder = null;
@@ -897,7 +897,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Round(Decimal d) throws Throwable {
+    public static  Decimal Round(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -912,7 +912,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Round(Decimal d, int decimals) throws Throwable {
+    public static  Decimal Round(Decimal d, int decimals) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -927,7 +927,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Round(Decimal d, int decimals, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  Decimal Round(Decimal d, int decimals, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -942,7 +942,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Round(Decimal d, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  Decimal Round(Decimal d, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -957,7 +957,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Subtract(Decimal d1, Decimal d2) throws Throwable {
+    public static  Decimal Subtract(Decimal d1, Decimal d2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -972,7 +972,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static Decimal Truncate(Decimal d) throws Throwable {
+    public static  Decimal Truncate(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;
@@ -1044,7 +1044,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static UInt16 ToUInt16(Decimal value) throws Throwable, system.OverflowException {
+    public static  UInt16 ToUInt16(Decimal value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -1059,7 +1059,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static UInt32 ToUInt32(Decimal d) throws Throwable, system.OverflowException {
+    public static  UInt32 ToUInt32(Decimal d) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -1074,7 +1074,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static UInt64 ToUInt64(Decimal d) throws Throwable, system.OverflowException {
+    public static  UInt64 ToUInt64(Decimal d) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;

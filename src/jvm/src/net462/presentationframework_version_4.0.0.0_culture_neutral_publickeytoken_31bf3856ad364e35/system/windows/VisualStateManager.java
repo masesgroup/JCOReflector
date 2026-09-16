@@ -164,7 +164,7 @@ public class VisualStateManager extends DependencyObject  {
     
     // Methods section
     
-    public static boolean GoToElementState(FrameworkElement stateGroupsRoot, java.lang.String stateName, boolean useTransitions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
+    public static  boolean GoToElementState(FrameworkElement stateGroupsRoot, java.lang.String stateName, boolean useTransitions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGoToElementState = null;
@@ -178,7 +178,7 @@ public class VisualStateManager extends DependencyObject  {
         }
     }
 
-    public static boolean GoToState(FrameworkElement control, java.lang.String stateName, boolean useTransitions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
+    public static  boolean GoToState(FrameworkElement control, java.lang.String stateName, boolean useTransitions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGoToState = null;
@@ -192,7 +192,7 @@ public class VisualStateManager extends DependencyObject  {
         }
     }
 
-    public static IList GetVisualStateGroups(FrameworkElement obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  IList GetVisualStateGroups(FrameworkElement obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetVisualStateGroups = null;
@@ -207,7 +207,7 @@ public class VisualStateManager extends DependencyObject  {
         }
     }
 
-    public static VisualStateManager GetCustomVisualStateManager(FrameworkElement obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  VisualStateManager GetCustomVisualStateManager(FrameworkElement obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomVisualStateManager = null;
@@ -222,7 +222,7 @@ public class VisualStateManager extends DependencyObject  {
         }
     }
 
-    public static void SetCustomVisualStateManager(FrameworkElement obj, VisualStateManager value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void SetCustomVisualStateManager(FrameworkElement obj, VisualStateManager value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

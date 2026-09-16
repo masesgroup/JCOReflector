@@ -248,7 +248,7 @@ public class ResourceManager extends NetObject  {
         }
     }
 
-    public static ResourceManager CreateFileBasedResourceManager(java.lang.String baseName, java.lang.String resourceDir, NetType usingResourceSet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
+    public static  ResourceManager CreateFileBasedResourceManager(java.lang.String baseName, java.lang.String resourceDir, NetType usingResourceSet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFileBasedResourceManager = null;

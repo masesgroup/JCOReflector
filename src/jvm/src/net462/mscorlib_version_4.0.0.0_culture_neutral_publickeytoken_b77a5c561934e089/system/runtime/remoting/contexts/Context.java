@@ -167,7 +167,7 @@ public class Context extends NetObject  {
     
     // Methods section
     
-    public static boolean RegisterDynamicProperty(IDynamicProperty prop, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.runtime.remoting.RemotingException {
+    public static  boolean RegisterDynamicProperty(IDynamicProperty prop, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterDynamicProperty = null;
@@ -181,7 +181,7 @@ public class Context extends NetObject  {
         }
     }
 
-    public static boolean UnregisterDynamicProperty(java.lang.String name, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException {
+    public static  boolean UnregisterDynamicProperty(java.lang.String name, ContextBoundObject obj, Context ctx) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnregisterDynamicProperty = null;
@@ -195,7 +195,7 @@ public class Context extends NetObject  {
         }
     }
 
-    public static LocalDataStoreSlot AllocateDataSlot() throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public static  LocalDataStoreSlot AllocateDataSlot() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllocateDataSlot = null;
@@ -210,7 +210,7 @@ public class Context extends NetObject  {
         }
     }
 
-    public static LocalDataStoreSlot AllocateNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  LocalDataStoreSlot AllocateNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllocateNamedDataSlot = null;
@@ -225,7 +225,7 @@ public class Context extends NetObject  {
         }
     }
 
-    public static LocalDataStoreSlot GetNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  LocalDataStoreSlot GetNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNamedDataSlot = null;
@@ -240,7 +240,7 @@ public class Context extends NetObject  {
         }
     }
 
-    public static NetObject GetData(LocalDataStoreSlot slot) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  NetObject GetData(LocalDataStoreSlot slot) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetData = null;
@@ -280,7 +280,7 @@ public class Context extends NetObject  {
         }
     }
 
-    public static void FreeNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public static  void FreeNamedDataSlot(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -300,7 +300,7 @@ public class Context extends NetObject  {
         }
     }
 
-    public static void SetData(LocalDataStoreSlot slot, NetObject data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void SetData(LocalDataStoreSlot slot, NetObject data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

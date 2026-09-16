@@ -155,7 +155,7 @@ public class CSharpArgumentInfo extends NetObject  {
     
     // Methods section
     
-    public static CSharpArgumentInfo Create(CSharpArgumentInfoFlags flags, java.lang.String name) throws Throwable {
+    public static  CSharpArgumentInfo Create(CSharpArgumentInfoFlags flags, java.lang.String name) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

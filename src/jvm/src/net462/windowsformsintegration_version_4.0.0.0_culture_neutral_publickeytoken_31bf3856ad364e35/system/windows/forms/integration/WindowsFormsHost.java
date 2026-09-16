@@ -182,7 +182,7 @@ public class WindowsFormsHost extends HwndHost  {
         }
     }
 
-    public static void EnableWindowsFormsInterop() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public static  void EnableWindowsFormsInterop() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

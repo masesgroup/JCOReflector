@@ -151,7 +151,7 @@ public class SyntaxCheck extends NetObject  {
     
     // Methods section
     
-    public static boolean CheckMachineName(java.lang.String value) throws Throwable, system.NullReferenceException {
+    public static  boolean CheckMachineName(java.lang.String value) throws Throwable, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckMachineName = null;
@@ -165,7 +165,7 @@ public class SyntaxCheck extends NetObject  {
         }
     }
 
-    public static boolean CheckPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+    public static  boolean CheckPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckPath = null;
@@ -179,7 +179,7 @@ public class SyntaxCheck extends NetObject  {
         }
     }
 
-    public static boolean CheckRootedPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException {
+    public static  boolean CheckRootedPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckRootedPath = null;

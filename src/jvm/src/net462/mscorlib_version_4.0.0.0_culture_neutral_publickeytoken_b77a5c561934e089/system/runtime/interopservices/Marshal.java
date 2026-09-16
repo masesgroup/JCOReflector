@@ -166,7 +166,7 @@ public class Marshal extends NetObject  {
     
     // Methods section
     
-    public static boolean AreComObjectsAvailableForCleanup() throws Throwable {
+    public static  boolean AreComObjectsAvailableForCleanup() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAreComObjectsAvailableForCleanup = null;
@@ -180,7 +180,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static boolean IsComObject(NetObject o) throws Throwable {
+    public static  boolean IsComObject(NetObject o) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsComObject = null;
@@ -194,7 +194,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static boolean IsTypeVisibleFromCom(NetType t) throws Throwable {
+    public static  boolean IsTypeVisibleFromCom(NetType t) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTypeVisibleFromCom = null;
@@ -208,7 +208,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static boolean SetComObjectData(NetObject obj, NetObject key, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
+    public static  boolean SetComObjectData(NetObject obj, NetObject key, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetComObjectData = null;
@@ -222,7 +222,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static byte ReadByte(NetObject ptr, int ofs) throws Throwable {
+    public static  byte ReadByte(NetObject ptr, int ofs) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadByte = null;
@@ -262,7 +262,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static short ReadInt16(NetObject ptr, int ofs) throws Throwable {
+    public static  short ReadInt16(NetObject ptr, int ofs) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadInt16 = null;
@@ -302,7 +302,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int FinalReleaseComObject(NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  int FinalReleaseComObject(NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFinalReleaseComObject = null;
@@ -342,7 +342,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetComSlotForMethodInfo(MemberInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  int GetComSlotForMethodInfo(MemberInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetComSlotForMethodInfo = null;
@@ -382,7 +382,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetEndComSlot(NetType t) throws Throwable {
+    public static  int GetEndComSlot(NetType t) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEndComSlot = null;
@@ -422,7 +422,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetExceptionCode() throws Throwable {
+    public static  int GetExceptionCode() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExceptionCode = null;
@@ -462,7 +462,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetHRForException(NetException e) throws Throwable {
+    public static  int GetHRForException(NetException e) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHRForException = null;
@@ -502,7 +502,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetHRForLastWin32Error() throws Throwable {
+    public static  int GetHRForLastWin32Error() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHRForLastWin32Error = null;
@@ -542,7 +542,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetLastWin32Error() throws Throwable {
+    public static  int GetLastWin32Error() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLastWin32Error = null;
@@ -582,7 +582,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetStartComSlot(NetType t) throws Throwable {
+    public static  int GetStartComSlot(NetType t) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStartComSlot = null;
@@ -622,7 +622,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetTypeLibLcid(ITypeLib typelib) throws Throwable {
+    public static  int GetTypeLibLcid(ITypeLib typelib) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeLibLcid = null;
@@ -662,7 +662,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetTypeLibLcid(UCOMITypeLib pTLB) throws Throwable {
+    public static  int GetTypeLibLcid(UCOMITypeLib pTLB) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeLibLcid = null;
@@ -702,7 +702,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int NumParamBytes(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  int NumParamBytes(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNumParamBytes = null;
@@ -742,7 +742,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int ReadInt32(NetObject ptr, int ofs) throws Throwable {
+    public static  int ReadInt32(NetObject ptr, int ofs) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadInt32 = null;
@@ -782,7 +782,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int ReleaseComObject(NetObject o) throws Throwable {
+    public static  int ReleaseComObject(NetObject o) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReleaseComObject = null;
@@ -822,7 +822,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int SizeOf(NetObject structure) throws Throwable, system.ArgumentNullException {
+    public static  int SizeOf(NetObject structure) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSizeOf = null;
@@ -862,7 +862,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int SizeOf(NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  int SizeOf(NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSizeOf = null;
@@ -902,7 +902,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static long ReadInt64(NetObject ptr, int ofs) throws Throwable {
+    public static  long ReadInt64(NetObject ptr, int ofs) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadInt64 = null;
@@ -942,7 +942,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetException GetExceptionForHR(int errorCode) throws Throwable {
+    public static  NetException GetExceptionForHR(int errorCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExceptionForHR = null;
@@ -957,7 +957,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static Guid GenerateGuidForType(NetType type) throws Throwable {
+    public static  Guid GenerateGuidForType(NetType type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateGuidForType = null;
@@ -972,7 +972,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static Guid GetTypeLibGuid(ITypeLib typelib) throws Throwable {
+    public static  Guid GetTypeLibGuid(ITypeLib typelib) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeLibGuid = null;
@@ -987,7 +987,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static Guid GetTypeLibGuid(UCOMITypeLib pTLB) throws Throwable {
+    public static  Guid GetTypeLibGuid(UCOMITypeLib pTLB) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeLibGuid = null;
@@ -1002,7 +1002,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static Guid GetTypeLibGuidForAssembly(Assembly asm) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  Guid GetTypeLibGuidForAssembly(Assembly asm) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeLibGuidForAssembly = null;
@@ -1017,7 +1017,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetObject BindToMoniker(java.lang.String monikerName) throws Throwable {
+    public static  NetObject BindToMoniker(java.lang.String monikerName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBindToMoniker = null;
@@ -1032,7 +1032,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetObject CreateWrapperOfType(NetObject o, NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+    public static  NetObject CreateWrapperOfType(NetObject o, NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateWrapperOfType = null;
@@ -1047,7 +1047,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetObject GetActiveObject(java.lang.String progID) throws Throwable {
+    public static  NetObject GetActiveObject(java.lang.String progID) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetActiveObject = null;
@@ -1062,7 +1062,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetObject GetComObjectData(NetObject obj, NetObject key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  NetObject GetComObjectData(NetObject obj, NetObject key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetComObjectData = null;
@@ -1077,7 +1077,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static MemberInfo GetMethodInfoForComSlot(NetType t, int slot, JCORefOut<ComMemberType> memberType) throws Throwable {
+    public static  MemberInfo GetMethodInfoForComSlot(NetType t, int slot, JCORefOut<ComMemberType> memberType) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethodInfoForComSlot = null;
@@ -1092,7 +1092,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public static  java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateProgIdForType = null;
@@ -1106,7 +1106,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTypeInfoName(ITypeInfo typeInfo) throws Throwable, system.ArgumentNullException {
+    public static  java.lang.String GetTypeInfoName(ITypeInfo typeInfo) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeInfoName = null;
@@ -1120,7 +1120,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTypeInfoName(UCOMITypeInfo pTI) throws Throwable, system.ArgumentNullException {
+    public static  java.lang.String GetTypeInfoName(UCOMITypeInfo pTI) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeInfoName = null;
@@ -1134,7 +1134,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTypeLibName(ITypeLib typelib) throws Throwable, system.ArgumentNullException {
+    public static  java.lang.String GetTypeLibName(ITypeLib typelib) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeLibName = null;
@@ -1148,7 +1148,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTypeLibName(UCOMITypeLib pTLB) throws Throwable, system.ArgumentNullException {
+    public static  java.lang.String GetTypeLibName(UCOMITypeLib pTLB) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeLibName = null;
@@ -1162,7 +1162,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static Thread GetThreadFromFiberCookie(int cookie) throws Throwable, system.ArgumentException {
+    public static  Thread GetThreadFromFiberCookie(int cookie) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetThreadFromFiberCookie = null;
@@ -1177,7 +1177,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetType GetTypeFromCLSID(Guid clsid) throws Throwable {
+    public static  NetType GetTypeFromCLSID(Guid clsid) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeFromCLSID = null;
@@ -1192,7 +1192,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void ChangeWrapperHandleStrength(NetObject otp, boolean fIsWeak) throws Throwable {
+    public static  void ChangeWrapperHandleStrength(NetObject otp, boolean fIsWeak) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1202,7 +1202,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void CleanupUnusedObjectsInCurrentContext() throws Throwable {
+    public static  void CleanupUnusedObjectsInCurrentContext() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1212,7 +1212,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void GetTypeLibVersionForAssembly(Assembly inputAssembly, JCORefOut<java.util.concurrent.atomic.AtomicInteger> majorVersion, JCORefOut<java.util.concurrent.atomic.AtomicInteger> minorVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  void GetTypeLibVersionForAssembly(Assembly inputAssembly, JCORefOut<java.util.concurrent.atomic.AtomicInteger> majorVersion, JCORefOut<java.util.concurrent.atomic.AtomicInteger> minorVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1222,7 +1222,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void Prelink(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  void Prelink(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1232,7 +1232,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void PrelinkAll(NetType c) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  void PrelinkAll(NetType c) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1242,7 +1242,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void ReleaseThreadCache() throws Throwable {
+    public static  void ReleaseThreadCache() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1252,7 +1252,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void ThrowExceptionForHR(int errorCode) throws Throwable {
+    public static  void ThrowExceptionForHR(int errorCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1262,7 +1262,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteByte(JCORefOut<NetObject> ptr, int ofs, byte val) throws Throwable {
+    public static  void WriteByte(JCORefOut<NetObject> ptr, int ofs, byte val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1272,7 +1272,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, char val) throws Throwable {
+    public static  void WriteInt16(JCORefOut<NetObject> ptr, int ofs, char val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1282,7 +1282,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, short val) throws Throwable {
+    public static  void WriteInt16(JCORefOut<NetObject> ptr, int ofs, short val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1292,7 +1292,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteInt32(JCORefOut<NetObject> ptr, int ofs, int val) throws Throwable {
+    public static  void WriteInt32(JCORefOut<NetObject> ptr, int ofs, int val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1302,7 +1302,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteInt64(JCORefOut<NetObject> ptr, int ofs, long val) throws Throwable {
+    public static  void WriteInt64(JCORefOut<NetObject> ptr, int ofs, long val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

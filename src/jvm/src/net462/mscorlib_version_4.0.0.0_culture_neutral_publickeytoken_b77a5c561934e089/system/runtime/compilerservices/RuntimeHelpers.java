@@ -156,7 +156,7 @@ public class RuntimeHelpers extends NetObject  {
     
     // Methods section
     
-    public static boolean Equals(NetObject o1, NetObject o2) throws Throwable {
+    public static  boolean Equals(NetObject o1, NetObject o2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -170,7 +170,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static int GetHashCode(NetObject o) throws Throwable {
+    public static  int GetHashCode(NetObject o) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHashCode = null;
@@ -210,7 +210,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static NetObject GetObjectValue(NetObject obj) throws Throwable {
+    public static  NetObject GetObjectValue(NetObject obj) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetObjectValue = null;
@@ -225,7 +225,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void EnsureSufficientExecutionStack() throws Throwable {
+    public static  void EnsureSufficientExecutionStack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -235,7 +235,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void InitializeArray(Array array, RuntimeFieldHandle fldHandle) throws Throwable {
+    public static  void InitializeArray(Array array, RuntimeFieldHandle fldHandle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -245,7 +245,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareConstrainedRegions() throws Throwable {
+    public static  void PrepareConstrainedRegions() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -255,7 +255,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareConstrainedRegionsNoOP() throws Throwable {
+    public static  void PrepareConstrainedRegionsNoOP() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -265,7 +265,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareMethod(RuntimeMethodHandle method) throws Throwable {
+    public static  void PrepareMethod(RuntimeMethodHandle method) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -275,7 +275,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareMethod(RuntimeMethodHandle method, RuntimeTypeHandle[] instantiation) throws Throwable {
+    public static  void PrepareMethod(RuntimeMethodHandle method, RuntimeTypeHandle[] instantiation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -285,7 +285,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void ProbeForSufficientStack() throws Throwable {
+    public static  void ProbeForSufficientStack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -295,7 +295,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void RunClassConstructor(RuntimeTypeHandle type) throws Throwable {
+    public static  void RunClassConstructor(RuntimeTypeHandle type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -305,7 +305,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void RunModuleConstructor(ModuleHandle module) throws Throwable {
+    public static  void RunModuleConstructor(ModuleHandle module) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

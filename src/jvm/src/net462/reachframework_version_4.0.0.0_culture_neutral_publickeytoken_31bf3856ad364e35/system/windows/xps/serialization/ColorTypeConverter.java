@@ -241,7 +241,7 @@ public class ColorTypeConverter extends ExpandableObjectConverter  {
         }
     }
 
-    public static java.lang.String SerializeColorContext(IServiceProvider context, ColorContext colorContext) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.UriFormatException {
+    public static  java.lang.String SerializeColorContext(IServiceProvider context, ColorContext colorContext) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSerializeColorContext = null;

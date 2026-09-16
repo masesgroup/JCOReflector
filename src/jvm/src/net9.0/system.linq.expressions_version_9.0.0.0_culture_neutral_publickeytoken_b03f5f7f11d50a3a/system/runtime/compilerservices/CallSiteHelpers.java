@@ -152,7 +152,7 @@ public class CallSiteHelpers extends NetObject  {
     
     // Methods section
     
-    public static boolean IsInternalFrame(MethodBase mb) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsInternalFrame(MethodBase mb) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInternalFrame = null;

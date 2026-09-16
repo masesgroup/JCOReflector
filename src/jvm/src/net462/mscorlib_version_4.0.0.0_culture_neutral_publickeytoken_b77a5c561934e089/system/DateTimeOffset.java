@@ -244,7 +244,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static boolean Equals(DateTimeOffset first, DateTimeOffset second) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  boolean Equals(DateTimeOffset first, DateTimeOffset second) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -272,7 +272,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static boolean TryParse(java.lang.String input, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String input, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -286,7 +286,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static boolean TryParse(java.lang.String input, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String input, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -300,7 +300,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
+    public static  boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -314,7 +314,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -328,7 +328,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static int Compare(DateTimeOffset first, DateTimeOffset second) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  int Compare(DateTimeOffset first, DateTimeOffset second) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -663,7 +663,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset FromFileTime(long fileTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException {
+    public static  DateTimeOffset FromFileTime(long fileTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFileTime = null;
@@ -678,7 +678,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset FromUnixTimeMilliseconds(long milliseconds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
+    public static  DateTimeOffset FromUnixTimeMilliseconds(long milliseconds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromUnixTimeMilliseconds = null;
@@ -693,7 +693,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset FromUnixTimeSeconds(long seconds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
+    public static  DateTimeOffset FromUnixTimeSeconds(long seconds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromUnixTimeSeconds = null;
@@ -708,7 +708,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
+    public static  DateTimeOffset Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -723,7 +723,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset Parse(java.lang.String input, IFormatProvider formatProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  DateTimeOffset Parse(java.lang.String input, IFormatProvider formatProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -738,7 +738,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset Parse(java.lang.String input, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
+    public static  DateTimeOffset Parse(java.lang.String input, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -753,7 +753,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  DateTimeOffset ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -768,7 +768,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
+    public static  DateTimeOffset ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -783,7 +783,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset ParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  DateTimeOffset ParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -798,7 +798,7 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
-    public static DateTimeOffset ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  DateTimeOffset ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;

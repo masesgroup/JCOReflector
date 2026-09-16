@@ -152,7 +152,7 @@ public class CutCopyPasteHelper extends NetObject  {
     
     // Methods section
     
-    public static boolean CanCopy(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static  boolean CanCopy(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCanCopy = null;
@@ -166,7 +166,7 @@ public class CutCopyPasteHelper extends NetObject  {
         }
     }
 
-    public static boolean CanCut(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static  boolean CanCut(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCanCut = null;
@@ -180,7 +180,7 @@ public class CutCopyPasteHelper extends NetObject  {
         }
     }
 
-    public static boolean CanPaste(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.threading.ThreadStateException, system.SystemException, system.security.XmlSyntaxException, system.NullReferenceException, system.deployment.application.InvalidDeploymentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException {
+    public static  boolean CanPaste(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.threading.ThreadStateException, system.SystemException, system.security.XmlSyntaxException, system.NullReferenceException, system.deployment.application.InvalidDeploymentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCanPaste = null;
@@ -194,7 +194,7 @@ public class CutCopyPasteHelper extends NetObject  {
         }
     }
 
-    public static void DoCopy(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.xaml.XamlException, system.NotImplementedException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
+    public static  void DoCopy(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.xaml.XamlException, system.NotImplementedException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -204,7 +204,7 @@ public class CutCopyPasteHelper extends NetObject  {
         }
     }
 
-    public static void DoCut(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.xaml.XamlException, system.NotImplementedException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
+    public static  void DoCut(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.xaml.XamlException, system.NotImplementedException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -214,7 +214,7 @@ public class CutCopyPasteHelper extends NetObject  {
         }
     }
 
-    public static void DoPaste(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.SystemException, system.NullReferenceException, system.security.SecurityException, system.xml.XmlException, system.NotImplementedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException {
+    public static  void DoPaste(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.SystemException, system.NullReferenceException, system.security.SecurityException, system.xml.XmlException, system.NotImplementedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

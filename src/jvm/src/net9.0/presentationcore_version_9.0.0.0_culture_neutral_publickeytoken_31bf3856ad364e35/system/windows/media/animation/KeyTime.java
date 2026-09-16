@@ -157,7 +157,7 @@ public class KeyTime extends ValueType  {
     
     // Methods section
     
-    public static boolean Equals(KeyTime keyTime1, KeyTime keyTime2) throws Throwable {
+    public static  boolean Equals(KeyTime keyTime1, KeyTime keyTime2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -185,7 +185,7 @@ public class KeyTime extends ValueType  {
         }
     }
 
-    public static KeyTime FromPercent(double percent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  KeyTime FromPercent(double percent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromPercent = null;
@@ -200,7 +200,7 @@ public class KeyTime extends ValueType  {
         }
     }
 
-    public static KeyTime FromTimeSpan(TimeSpan timeSpan) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  KeyTime FromTimeSpan(TimeSpan timeSpan) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromTimeSpan = null;

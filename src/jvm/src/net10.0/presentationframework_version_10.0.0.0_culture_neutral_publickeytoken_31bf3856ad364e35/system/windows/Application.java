@@ -265,7 +265,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public NetObject FindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.net.WebException, system.IndexOutOfRangeException, system.InvalidCastException, system.OverflowException, system.reflection.AmbiguousMatchException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.windows.ResourceReferenceKeyNotFoundException {
+    public NetObject FindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.io.FileFormatException, system.net.WebException, system.IndexOutOfRangeException, system.InvalidCastException, system.OverflowException, system.reflection.AmbiguousMatchException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.windows.ResourceReferenceKeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindResource = null;
@@ -280,7 +280,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public static NetObject LoadComponent(Uri resourceLocator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidCastException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.xml.XmlException {
+    public static  NetObject LoadComponent(Uri resourceLocator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidCastException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadComponent = null;
@@ -295,7 +295,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public NetObject TryFindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.net.WebException, system.IndexOutOfRangeException, system.InvalidCastException, system.OverflowException, system.reflection.AmbiguousMatchException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException {
+    public NetObject TryFindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.io.FileFormatException, system.net.WebException, system.IndexOutOfRangeException, system.InvalidCastException, system.OverflowException, system.reflection.AmbiguousMatchException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryFindResource = null;
@@ -310,7 +310,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public static java.lang.String GetCookie(Uri uri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.FormatException, system.componentmodel.Win32Exception {
+    public static  java.lang.String GetCookie(Uri uri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCookie = null;
@@ -324,7 +324,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public static StreamResourceInfo GetContentStream(Uri uriContent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
+    public static  StreamResourceInfo GetContentStream(Uri uriContent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetContentStream = null;
@@ -339,7 +339,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public static StreamResourceInfo GetRemoteStream(Uri uriRemote) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.UriFormatException, system.globalization.CultureNotFoundException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
+    public static  StreamResourceInfo GetRemoteStream(Uri uriRemote) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.UriFormatException, system.globalization.CultureNotFoundException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRemoteStream = null;
@@ -354,7 +354,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public static StreamResourceInfo GetResourceStream(Uri uriResource) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
+    public static  StreamResourceInfo GetResourceStream(Uri uriResource) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetResourceStream = null;
@@ -369,7 +369,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public static void LoadComponent(NetObject component, Uri resourceLocator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.xaml.XamlException, system.windows.markup.XamlParseException {
+    public static  void LoadComponent(NetObject component, Uri resourceLocator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.xaml.XamlException, system.windows.markup.XamlParseException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -379,7 +379,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public static void SetCookie(Uri uri, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
+    public static  void SetCookie(Uri uri, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -567,7 +567,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public void setThemeMode(ThemeMode ThemeMode) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.diagnostics.UnreachableException, system.net.WebException, system.net.CookieException {
+    public void setThemeMode(ThemeMode ThemeMode) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.diagnostics.UnreachableException, system.io.FileFormatException, system.net.WebException, system.net.CookieException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

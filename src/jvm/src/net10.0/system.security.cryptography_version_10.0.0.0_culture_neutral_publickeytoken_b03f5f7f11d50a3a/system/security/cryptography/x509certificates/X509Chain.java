@@ -189,7 +189,7 @@ public class X509Chain extends NetObject implements AutoCloseable {
         }
     }
 
-    public static X509Chain Create() throws Throwable {
+    public static  X509Chain Create() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

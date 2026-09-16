@@ -263,7 +263,7 @@ public class StackFrame extends ScriptObject  {
         }
     }
 
-    public static void PushStackFrameForMethod(NetObject thisob, JSLocalField[] fields, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, microsoft.jscript.JScriptException {
+    public static  void PushStackFrameForMethod(NetObject thisob, JSLocalField[] fields, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -273,7 +273,7 @@ public class StackFrame extends ScriptObject  {
         }
     }
 
-    public static void PushStackFrameForStaticMethod(RuntimeTypeHandle thisclass, JSLocalField[] fields, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
+    public static  void PushStackFrameForStaticMethod(RuntimeTypeHandle thisclass, JSLocalField[] fields, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

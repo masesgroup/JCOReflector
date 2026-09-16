@@ -180,7 +180,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
     
     // Methods section
     
-    public static boolean Equals(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
+    public static  boolean Equals(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -222,7 +222,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Add(Quaternion left, Quaternion right) throws Throwable {
+    public static  Quaternion Add(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -237,7 +237,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Multiply(Quaternion left, Quaternion right) throws Throwable {
+    public static  Quaternion Multiply(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -252,7 +252,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Parse(java.lang.String source) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
+    public static  Quaternion Parse(java.lang.String source) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -267,7 +267,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Slerp(Quaternion from, Quaternion to, double t, boolean useShortestPath) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Quaternion Slerp(Quaternion from, Quaternion to, double t, boolean useShortestPath) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSlerp = null;
@@ -282,7 +282,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Slerp(Quaternion from, Quaternion to, double t) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Quaternion Slerp(Quaternion from, Quaternion to, double t) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSlerp = null;
@@ -297,7 +297,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Subtract(Quaternion left, Quaternion right) throws Throwable {
+    public static  Quaternion Subtract(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

@@ -159,7 +159,7 @@ public class NetworkInterface extends NetObject  {
     
     // Methods section
     
-    public static boolean GetIsNetworkAvailable() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException {
+    public static  boolean GetIsNetworkAvailable() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetIsNetworkAvailable = null;
@@ -232,7 +232,7 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public static NetworkInterface[] GetAllNetworkInterfaces() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
+    public static  NetworkInterface[] GetAllNetworkInterfaces() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAllNetworkInterfaces = null;

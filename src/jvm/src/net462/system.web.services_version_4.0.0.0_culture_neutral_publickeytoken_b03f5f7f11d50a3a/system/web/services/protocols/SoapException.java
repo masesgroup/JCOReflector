@@ -263,7 +263,7 @@ public class SoapException extends SystemException {
     
     // Methods section
     
-    public static boolean IsClientFaultCode(XmlQualifiedName code) throws Throwable {
+    public static  boolean IsClientFaultCode(XmlQualifiedName code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsClientFaultCode = null;
@@ -277,7 +277,7 @@ public class SoapException extends SystemException {
         }
     }
 
-    public static boolean IsMustUnderstandFaultCode(XmlQualifiedName code) throws Throwable {
+    public static  boolean IsMustUnderstandFaultCode(XmlQualifiedName code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMustUnderstandFaultCode = null;
@@ -291,7 +291,7 @@ public class SoapException extends SystemException {
         }
     }
 
-    public static boolean IsServerFaultCode(XmlQualifiedName code) throws Throwable {
+    public static  boolean IsServerFaultCode(XmlQualifiedName code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsServerFaultCode = null;
@@ -305,7 +305,7 @@ public class SoapException extends SystemException {
         }
     }
 
-    public static boolean IsVersionMismatchFaultCode(XmlQualifiedName code) throws Throwable {
+    public static  boolean IsVersionMismatchFaultCode(XmlQualifiedName code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsVersionMismatchFaultCode = null;

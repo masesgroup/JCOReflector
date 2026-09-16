@@ -155,7 +155,7 @@ public class Queryable extends NetObject  {
     
     // Methods section
     
-    public static IQueryable AsQueryable(IEnumerable source) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException {
+    public static  IQueryable AsQueryable(IEnumerable source) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsQueryable = null;

@@ -152,7 +152,7 @@ public class ContractHelper extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String RaiseContractFailedEvent(ContractFailureKind failureKind, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.diagnostics.contracts.ContractException {
+    public static  java.lang.String RaiseContractFailedEvent(ContractFailureKind failureKind, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.diagnostics.contracts.ContractException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRaiseContractFailedEvent = null;
@@ -166,7 +166,7 @@ public class ContractHelper extends NetObject  {
         }
     }
 
-    public static void TriggerFailure(ContractFailureKind kind, java.lang.String displayMessage, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.contracts.ContractException {
+    public static  void TriggerFailure(ContractFailureKind kind, java.lang.String displayMessage, java.lang.String userMessage, java.lang.String conditionText, NetException innerException) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.contracts.ContractException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

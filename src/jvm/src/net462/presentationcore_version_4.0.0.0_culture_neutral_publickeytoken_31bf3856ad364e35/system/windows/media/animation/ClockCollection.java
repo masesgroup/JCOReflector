@@ -169,7 +169,7 @@ public class ClockCollection extends NetObjectEnumerable  {
         }
     }
 
-    public static boolean Equals(ClockCollection objA, ClockCollection objB) throws Throwable {
+    public static  boolean Equals(ClockCollection objA, ClockCollection objB) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;

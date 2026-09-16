@@ -181,7 +181,7 @@ public class XmlQueryItemSequence extends NetObjectEnumerable  {
     
     // Methods section
     
-    public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq) throws Throwable {
+    public static  XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateOrReuse = null;
@@ -196,7 +196,7 @@ public class XmlQueryItemSequence extends NetObjectEnumerable  {
         }
     }
 
-    public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq, XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq, XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateOrReuse = null;

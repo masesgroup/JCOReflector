@@ -152,7 +152,7 @@ public class JitInfo extends NetObject  {
     
     // Methods section
     
-    public static long GetCompiledILBytes(boolean currentThread) throws Throwable {
+    public static  long GetCompiledILBytes(boolean currentThread) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompiledILBytes = null;
@@ -192,7 +192,7 @@ public class JitInfo extends NetObject  {
         }
     }
 
-    public static long GetCompiledMethodCount(boolean currentThread) throws Throwable {
+    public static  long GetCompiledMethodCount(boolean currentThread) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompiledMethodCount = null;
@@ -232,7 +232,7 @@ public class JitInfo extends NetObject  {
         }
     }
 
-    public static TimeSpan GetCompilationTime(boolean currentThread) throws Throwable {
+    public static  TimeSpan GetCompilationTime(boolean currentThread) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompilationTime = null;

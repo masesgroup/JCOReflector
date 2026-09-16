@@ -154,7 +154,7 @@ public class LogicalTreeHelper extends NetObject  {
     
     // Methods section
     
-    public static IEnumerable GetChildren(DependencyObject current) throws Throwable, system.ArgumentNullException {
+    public static  IEnumerable GetChildren(DependencyObject current) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetChildren = null;
@@ -169,7 +169,7 @@ public class LogicalTreeHelper extends NetObject  {
         }
     }
 
-    public static IEnumerable GetChildren(FrameworkContentElement current) throws Throwable, system.ArgumentNullException {
+    public static  IEnumerable GetChildren(FrameworkContentElement current) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetChildren = null;
@@ -184,7 +184,7 @@ public class LogicalTreeHelper extends NetObject  {
         }
     }
 
-    public static IEnumerable GetChildren(FrameworkElement current) throws Throwable, system.ArgumentNullException {
+    public static  IEnumerable GetChildren(FrameworkElement current) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetChildren = null;
@@ -199,7 +199,7 @@ public class LogicalTreeHelper extends NetObject  {
         }
     }
 
-    public static DependencyObject FindLogicalNode(DependencyObject logicalTreeNode, java.lang.String elementName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  DependencyObject FindLogicalNode(DependencyObject logicalTreeNode, java.lang.String elementName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFindLogicalNode = null;
@@ -214,7 +214,7 @@ public class LogicalTreeHelper extends NetObject  {
         }
     }
 
-    public static DependencyObject GetParent(DependencyObject current) throws Throwable, system.ArgumentNullException {
+    public static  DependencyObject GetParent(DependencyObject current) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetParent = null;
@@ -229,7 +229,7 @@ public class LogicalTreeHelper extends NetObject  {
         }
     }
 
-    public static void BringIntoView(DependencyObject current) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  void BringIntoView(DependencyObject current) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

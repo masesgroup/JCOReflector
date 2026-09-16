@@ -152,7 +152,7 @@ public class Unsafe extends NetObject  {
     
     // Methods section
     
-    public static void CopyBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void CopyBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -162,7 +162,7 @@ public class Unsafe extends NetObject  {
         }
     }
 
-    public static void CopyBlockUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void CopyBlockUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -172,7 +172,7 @@ public class Unsafe extends NetObject  {
         }
     }
 
-    public static void InitBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> startAddress, byte value, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void InitBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> startAddress, byte value, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -182,7 +182,7 @@ public class Unsafe extends NetObject  {
         }
     }
 
-    public static void InitBlockUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> startAddress, byte value, UInt32 byteCount) throws Throwable, system.PlatformNotSupportedException {
+    public static  void InitBlockUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> startAddress, byte value, UInt32 byteCount) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

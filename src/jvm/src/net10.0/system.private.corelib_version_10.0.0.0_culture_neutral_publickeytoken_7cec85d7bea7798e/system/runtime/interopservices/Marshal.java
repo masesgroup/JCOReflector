@@ -157,7 +157,7 @@ public class Marshal extends NetObject  {
     
     // Methods section
     
-    public static boolean AreComObjectsAvailableForCleanup() throws Throwable {
+    public static  boolean AreComObjectsAvailableForCleanup() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAreComObjectsAvailableForCleanup = null;
@@ -171,7 +171,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static boolean IsComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  boolean IsComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsComObject = null;
@@ -185,7 +185,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static boolean IsTypeVisibleFromCom(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  boolean IsTypeVisibleFromCom(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTypeVisibleFromCom = null;
@@ -199,7 +199,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static boolean SetComObjectData(NetObject obj, NetObject key, NetObject data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  boolean SetComObjectData(NetObject obj, NetObject key, NetObject data) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetComObjectData = null;
@@ -213,7 +213,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static byte ReadByte(NetObject ptr, int ofs) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
+    public static  byte ReadByte(NetObject ptr, int ofs) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadByte = null;
@@ -253,7 +253,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static short ReadInt16(NetObject ptr, int ofs) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  short ReadInt16(NetObject ptr, int ofs) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadInt16 = null;
@@ -293,7 +293,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int FinalReleaseComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  int FinalReleaseComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFinalReleaseComObject = null;
@@ -333,7 +333,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetEndComSlot(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  int GetEndComSlot(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEndComSlot = null;
@@ -373,7 +373,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetExceptionCode() throws Throwable {
+    public static  int GetExceptionCode() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExceptionCode = null;
@@ -413,7 +413,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetHRForException(NetException e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  int GetHRForException(NetException e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHRForException = null;
@@ -453,7 +453,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetHRForLastWin32Error() throws Throwable {
+    public static  int GetHRForLastWin32Error() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHRForLastWin32Error = null;
@@ -493,7 +493,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetLastPInvokeError() throws Throwable {
+    public static  int GetLastPInvokeError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLastPInvokeError = null;
@@ -533,7 +533,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetLastSystemError() throws Throwable {
+    public static  int GetLastSystemError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLastSystemError = null;
@@ -573,7 +573,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetLastWin32Error() throws Throwable {
+    public static  int GetLastWin32Error() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLastWin32Error = null;
@@ -613,7 +613,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int GetStartComSlot(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  int GetStartComSlot(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStartComSlot = null;
@@ -653,7 +653,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int ReadInt32(NetObject ptr, int ofs) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  int ReadInt32(NetObject ptr, int ofs) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadInt32 = null;
@@ -693,7 +693,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int ReleaseComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException {
+    public static  int ReleaseComObject(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReleaseComObject = null;
@@ -733,7 +733,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int SizeOf(NetObject structure) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  int SizeOf(NetObject structure) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSizeOf = null;
@@ -773,7 +773,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static int SizeOf(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  int SizeOf(NetType t) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSizeOf = null;
@@ -813,7 +813,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static long ReadInt64(NetObject ptr, int ofs) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  long ReadInt64(NetObject ptr, int ofs) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadInt64 = null;
@@ -853,7 +853,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetException GetExceptionForHR(int errorCode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  NetException GetExceptionForHR(int errorCode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExceptionForHR = null;
@@ -868,7 +868,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static Guid GenerateGuidForType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  Guid GenerateGuidForType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateGuidForType = null;
@@ -883,7 +883,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetObject BindToMoniker(java.lang.String monikerName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  NetObject BindToMoniker(java.lang.String monikerName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBindToMoniker = null;
@@ -898,7 +898,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetObject CreateWrapperOfType(NetObject o, NetType t) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  NetObject CreateWrapperOfType(NetObject o, NetType t) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateWrapperOfType = null;
@@ -913,7 +913,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetObject GetComObjectData(NetObject obj, NetObject key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  NetObject GetComObjectData(NetObject obj, NetObject key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetComObjectData = null;
@@ -928,7 +928,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static  java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateProgIdForType = null;
@@ -942,7 +942,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GetLastPInvokeErrorMessage() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
+    public static  java.lang.String GetLastPInvokeErrorMessage() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLastPInvokeErrorMessage = null;
@@ -956,7 +956,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPInvokeErrorMessage(int error) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException {
+    public static  java.lang.String GetPInvokeErrorMessage(int error) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPInvokeErrorMessage = null;
@@ -970,7 +970,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTypeInfoName(ITypeInfo typeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  java.lang.String GetTypeInfoName(ITypeInfo typeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeInfoName = null;
@@ -984,7 +984,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static NetType GetTypeFromCLSID(Guid clsid) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  NetType GetTypeFromCLSID(Guid clsid) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeFromCLSID = null;
@@ -999,7 +999,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void ChangeWrapperHandleStrength(NetObject otp, boolean fIsWeak) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void ChangeWrapperHandleStrength(NetObject otp, boolean fIsWeak) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1009,7 +1009,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void CleanupUnusedObjectsInCurrentContext() throws Throwable {
+    public static  void CleanupUnusedObjectsInCurrentContext() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1019,7 +1019,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void Prelink(MethodInfo m) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void Prelink(MethodInfo m) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1029,7 +1029,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void PrelinkAll(NetType c) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void PrelinkAll(NetType c) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1039,7 +1039,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void SetLastPInvokeError(int error) throws Throwable {
+    public static  void SetLastPInvokeError(int error) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1049,7 +1049,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void SetLastSystemError(int error) throws Throwable {
+    public static  void SetLastSystemError(int error) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1059,7 +1059,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void ThrowExceptionForHR(int errorCode) throws Throwable, system.PlatformNotSupportedException {
+    public static  void ThrowExceptionForHR(int errorCode) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1069,7 +1069,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteByte(NetObject ptr, int ofs, byte val) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
+    public static  void WriteByte(NetObject ptr, int ofs, byte val) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1079,7 +1079,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, char val) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
+    public static  void WriteInt16(JCORefOut<NetObject> ptr, int ofs, char val) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1089,7 +1089,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteInt16(NetObject ptr, int ofs, short val) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void WriteInt16(NetObject ptr, int ofs, short val) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1099,7 +1099,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteInt32(NetObject ptr, int ofs, int val) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void WriteInt32(NetObject ptr, int ofs, int val) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1109,7 +1109,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void WriteInt64(NetObject ptr, int ofs, long val) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void WriteInt64(NetObject ptr, int ofs, long val) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

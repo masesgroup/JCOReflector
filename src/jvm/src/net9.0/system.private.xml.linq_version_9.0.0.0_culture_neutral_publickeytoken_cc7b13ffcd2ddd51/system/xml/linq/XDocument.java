@@ -264,7 +264,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(Stream stream, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException {
+    public static  XDocument Load(Stream stream, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -279,7 +279,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(Stream stream) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException {
+    public static  XDocument Load(Stream stream) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -294,7 +294,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(TextReader textReader, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
+    public static  XDocument Load(TextReader textReader, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -309,7 +309,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(TextReader textReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
+    public static  XDocument Load(TextReader textReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -324,7 +324,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(java.lang.String uri, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException {
+    public static  XDocument Load(java.lang.String uri, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -339,7 +339,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(java.lang.String uri) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.ArrayTypeMismatchException, system.OverflowException {
+    public static  XDocument Load(java.lang.String uri) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -354,7 +354,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(XmlReader reader, LoadOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  XDocument Load(XmlReader reader, LoadOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -369,7 +369,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(XmlReader reader) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+    public static  XDocument Load(XmlReader reader) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -384,7 +384,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Parse(java.lang.String text, LoadOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.xml.XmlException, system.OverflowException, system.globalization.CultureNotFoundException {
+    public static  XDocument Parse(java.lang.String text, LoadOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.xml.XmlException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -399,7 +399,7 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Parse(java.lang.String text) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.OverflowException {
+    public static  XDocument Parse(java.lang.String text) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.xml.XmlException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

@@ -155,7 +155,7 @@ public class With extends AST  {
     
     // Methods section
     
-    public static NetObject JScriptWith(NetObject withOb, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.ArgumentException {
+    public static  NetObject JScriptWith(NetObject withOb, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptWith = null;

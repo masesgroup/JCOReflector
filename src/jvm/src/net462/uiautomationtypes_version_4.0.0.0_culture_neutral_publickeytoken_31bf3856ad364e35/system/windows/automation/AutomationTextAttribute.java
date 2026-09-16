@@ -155,7 +155,7 @@ public class AutomationTextAttribute extends AutomationIdentifier  {
     
     // Methods section
     
-    public static AutomationTextAttribute LookupById(int id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  AutomationTextAttribute LookupById(int id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLookupById = null;

@@ -156,7 +156,7 @@ public class ReflectionModelServices extends NetObject  {
     
     // Methods section
     
-    public static boolean IsDisposalRequired(ComposablePartDefinition partDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+    public static  boolean IsDisposalRequired(ComposablePartDefinition partDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDisposalRequired = null;
@@ -170,7 +170,7 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
-    public static boolean IsExportFactoryImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException {
+    public static  boolean IsExportFactoryImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsExportFactoryImportDefinition = null;
@@ -184,7 +184,7 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
-    public static boolean IsImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  boolean IsImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsImportingParameter = null;
@@ -198,7 +198,7 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
-    public static ContractBasedImportDefinition GetExportFactoryProductImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  ContractBasedImportDefinition GetExportFactoryProductImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExportFactoryProductImportDefinition = null;
@@ -213,7 +213,7 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
-    public static LazyMemberInfo GetExportingMember(ExportDefinition exportDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  LazyMemberInfo GetExportingMember(ExportDefinition exportDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExportingMember = null;
@@ -228,7 +228,7 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
-    public static LazyMemberInfo GetImportingMember(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  LazyMemberInfo GetImportingMember(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetImportingMember = null;

@@ -164,7 +164,7 @@ public class Convert extends NetObject  {
     
     // Methods section
     
-    public static boolean IsBadIndex(AST ast) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
+    public static  boolean IsBadIndex(AST ast) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBadIndex = null;
@@ -178,7 +178,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(double d) throws Throwable {
+    public static  boolean ToBoolean(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -192,7 +192,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(NetObject value) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static  boolean ToBoolean(NetObject value) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -206,7 +206,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(NetObject value, boolean explicitConversion) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static  boolean ToBoolean(NetObject value, boolean explicitConversion) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -220,7 +220,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double CheckIfDoubleIsInteger(double d) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double CheckIfDoubleIsInteger(double d) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckIfDoubleIsInteger = null;
@@ -260,7 +260,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToNumber(NetObject value) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.FormatException, system.ArithmeticException {
+    public static  double ToNumber(NetObject value) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.FormatException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToNumber = null;
@@ -300,7 +300,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToNumber(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.MissingMethodException {
+    public static  double ToNumber(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToNumber = null;
@@ -340,7 +340,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(NetObject value) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
+    public static  int ToInt32(NetObject value) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -380,7 +380,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single CheckIfSingleIsInteger(Single s) throws Throwable, microsoft.jscript.JScriptException {
+    public static  Single CheckIfSingleIsInteger(Single s) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckIfSingleIsInteger = null;
@@ -395,7 +395,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject Coerce(NetObject value, NetObject type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.InvalidOperationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.NotSupportedException, system.OutOfMemoryException {
+    public static  NetObject Coerce(NetObject value, NetObject type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.InvalidOperationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCoerce = null;
@@ -410,7 +410,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject Coerce2(NetObject value, TypeCode target, boolean truncationPermitted) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.MissingMethodException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
+    public static  NetObject Coerce2(NetObject value, TypeCode target, boolean truncationPermitted) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.MissingMethodException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCoerce2 = null;
@@ -425,7 +425,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject CoerceT(NetObject value, NetType t, boolean explicitOK) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.ArithmeticException, system.OverflowException, system.OutOfMemoryException, system.TypeInitializationException, system.security.SecurityException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException {
+    public static  NetObject CoerceT(NetObject value, NetType t, boolean explicitOK) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.ArithmeticException, system.OverflowException, system.OutOfMemoryException, system.TypeInitializationException, system.security.SecurityException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCoerceT = null;
@@ -440,7 +440,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ToForInObject(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static  NetObject ToForInObject(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToForInObject = null;
@@ -455,7 +455,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ToNativeArray(NetObject value, RuntimeTypeHandle handle) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidCastException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.MissingMethodException, system.FormatException, system.OverflowException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
+    public static  NetObject ToNativeArray(NetObject value, RuntimeTypeHandle handle) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidCastException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.MissingMethodException, system.FormatException, system.OverflowException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToNativeArray = null;
@@ -470,7 +470,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ToObject(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException, microsoft.jscript.JScriptException {
+    public static  NetObject ToObject(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -485,7 +485,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ToObject2(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException, microsoft.jscript.JScriptException {
+    public static  NetObject ToObject2(NetObject value, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotImplementedException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject2 = null;
@@ -500,7 +500,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(boolean b) throws Throwable {
+    public static  java.lang.String ToString(boolean b) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -514,7 +514,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(double d) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
+    public static  java.lang.String ToString(double d) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -528,7 +528,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(NetObject value, boolean explicitOK) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, microsoft.jscript.JScriptException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String ToString(NetObject value, boolean explicitOK) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, microsoft.jscript.JScriptException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -542,7 +542,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static void ThrowTypeMismatch(NetObject val) throws Throwable, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.JScriptException {
+    public static  void ThrowTypeMismatch(NetObject val) throws Throwable, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -157,7 +157,7 @@ public class DynamicExpression extends Expression  {
     
     // Methods section
     
-    public static DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -172,7 +172,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -187,7 +187,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -202,7 +202,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -217,7 +217,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression... arguments) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException {
+    public static  DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression... arguments) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -232,7 +232,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -247,7 +247,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -262,7 +262,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -277,7 +277,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression arg0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression arg0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -292,7 +292,7 @@ public class DynamicExpression extends Expression  {
         }
     }
 
-    public static DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression... arguments) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
+    public static  DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, Expression... arguments) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;

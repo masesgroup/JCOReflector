@@ -211,7 +211,7 @@ public class HttpPolicyDownloaderProtocol extends NetObject  {
         }
     }
 
-    public static void RegisterUnsafeWebRequestCreator(IUnsafeWebRequestCreate creator) throws Throwable {
+    public static  void RegisterUnsafeWebRequestCreator(IUnsafeWebRequestCreate creator) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

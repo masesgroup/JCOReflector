@@ -460,7 +460,7 @@ public class MetadataWorkspace extends NetObject  {
         }
     }
 
-    public static void ClearCache() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.data.MetadataException, system.NotSupportedException, system.io.FileNotFoundException, system.NotImplementedException, system.NullReferenceException {
+    public static  void ClearCache() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.data.MetadataException, system.NotSupportedException, system.io.FileNotFoundException, system.NotImplementedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

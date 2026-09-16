@@ -167,7 +167,7 @@ public class SqlAuthenticationProvider extends NetObject  {
         }
     }
 
-    public static boolean SetProvider(SqlAuthenticationMethod authenticationMethod, SqlAuthenticationProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.FormatException {
+    public static  boolean SetProvider(SqlAuthenticationMethod authenticationMethod, SqlAuthenticationProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetProvider = null;
@@ -181,7 +181,7 @@ public class SqlAuthenticationProvider extends NetObject  {
         }
     }
 
-    public static SqlAuthenticationProvider GetProvider(SqlAuthenticationMethod authenticationMethod) throws Throwable, system.ArgumentNullException {
+    public static  SqlAuthenticationProvider GetProvider(SqlAuthenticationMethod authenticationMethod) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProvider = null;

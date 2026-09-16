@@ -179,7 +179,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static boolean IsEvenInteger(SByte value) throws Throwable {
+    public static  boolean IsEvenInteger(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEvenInteger = null;
@@ -193,7 +193,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static boolean IsNegative(SByte value) throws Throwable {
+    public static  boolean IsNegative(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegative = null;
@@ -207,7 +207,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static boolean IsOddInteger(SByte value) throws Throwable {
+    public static  boolean IsOddInteger(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOddInteger = null;
@@ -221,7 +221,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static boolean IsPositive(SByte value) throws Throwable {
+    public static  boolean IsPositive(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositive = null;
@@ -235,7 +235,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static boolean IsPow2(SByte value) throws Throwable {
+    public static  boolean IsPow2(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPow2 = null;
@@ -249,7 +249,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, JCORefOut<SByte> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
+    public static  boolean TryParse(java.lang.String s, JCORefOut<SByte> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -263,7 +263,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<SByte> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<SByte> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -277,7 +277,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<SByte> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
+    public static  boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<SByte> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -371,7 +371,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static int Sign(SByte value) throws Throwable {
+    public static  int Sign(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -411,7 +411,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Abs(SByte value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  SByte Abs(SByte value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -426,7 +426,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Clamp(SByte value, SByte min, SByte max) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  SByte Clamp(SByte value, SByte min, SByte max) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClamp = null;
@@ -441,7 +441,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte CopySign(SByte value, SByte sign) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte CopySign(SByte value, SByte sign) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCopySign = null;
@@ -456,7 +456,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte LeadingZeroCount(SByte value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  SByte LeadingZeroCount(SByte value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeadingZeroCount = null;
@@ -471,7 +471,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Log2(SByte value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public static  SByte Log2(SByte value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2 = null;
@@ -486,7 +486,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Max(SByte x, SByte y) throws Throwable {
+    public static  SByte Max(SByte x, SByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -501,7 +501,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte MaxMagnitude(SByte x, SByte y) throws Throwable {
+    public static  SByte MaxMagnitude(SByte x, SByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitude = null;
@@ -516,7 +516,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Min(SByte x, SByte y) throws Throwable {
+    public static  SByte Min(SByte x, SByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -531,7 +531,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte MinMagnitude(SByte x, SByte y) throws Throwable {
+    public static  SByte MinMagnitude(SByte x, SByte y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitude = null;
@@ -546,7 +546,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
+    public static  SByte Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -561,7 +561,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  SByte Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -576,7 +576,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  SByte Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -591,7 +591,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  SByte Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -606,7 +606,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte PopCount(SByte value) throws Throwable {
+    public static  SByte PopCount(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPopCount = null;
@@ -621,7 +621,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte RotateLeft(SByte value, int rotateAmount) throws Throwable {
+    public static  SByte RotateLeft(SByte value, int rotateAmount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRotateLeft = null;
@@ -636,7 +636,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte RotateRight(SByte value, int rotateAmount) throws Throwable {
+    public static  SByte RotateRight(SByte value, int rotateAmount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRotateRight = null;
@@ -651,7 +651,7 @@ public class SByte extends ValueType  {
         }
     }
 
-    public static SByte TrailingZeroCount(SByte value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  SByte TrailingZeroCount(SByte value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrailingZeroCount = null;

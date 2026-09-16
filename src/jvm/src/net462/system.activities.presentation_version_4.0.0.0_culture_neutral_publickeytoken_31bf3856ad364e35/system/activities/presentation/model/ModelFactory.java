@@ -154,7 +154,7 @@ public class ModelFactory extends NetObject  {
     
     // Methods section
     
-    public static ModelItem CreateItem(EditingContext context, NetObject item) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  ModelItem CreateItem(EditingContext context, NetObject item) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateItem = null;
@@ -169,7 +169,7 @@ public class ModelFactory extends NetObject  {
         }
     }
 
-    public static ModelItem CreateItem(EditingContext context, NetType itemType, CreateOptions options, NetObject... arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  ModelItem CreateItem(EditingContext context, NetType itemType, CreateOptions options, NetObject... arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateItem = null;
@@ -184,7 +184,7 @@ public class ModelFactory extends NetObject  {
         }
     }
 
-    public static ModelItem CreateItem(EditingContext context, NetType itemType, NetObject... arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException {
+    public static  ModelItem CreateItem(EditingContext context, NetType itemType, NetObject... arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateItem = null;
@@ -199,7 +199,7 @@ public class ModelFactory extends NetObject  {
         }
     }
 
-    public static ModelItem CreateStaticMemberItem(EditingContext context, NetType type, java.lang.String memberName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  ModelItem CreateStaticMemberItem(EditingContext context, NetType type, java.lang.String memberName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateStaticMemberItem = null;

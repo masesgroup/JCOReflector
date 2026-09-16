@@ -154,7 +154,7 @@ public class TextEffectResolver extends NetObject  {
     
     // Methods section
     
-    public static TextEffectTarget[] Resolve(TextPointer startPosition, TextPointer endPosition, TextEffect effect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static  TextEffectTarget[] Resolve(TextPointer startPosition, TextPointer endPosition, TextEffect effect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolve = null;

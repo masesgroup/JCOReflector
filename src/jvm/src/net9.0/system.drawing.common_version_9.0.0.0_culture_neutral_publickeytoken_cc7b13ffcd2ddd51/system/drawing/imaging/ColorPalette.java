@@ -177,7 +177,7 @@ public class ColorPalette extends NetObject  {
     
     // Methods section
     
-    public static ColorPalette CreateOptimalPalette(int colors, boolean useTransparentColor, Bitmap bitmap) throws Throwable, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public static  ColorPalette CreateOptimalPalette(int colors, boolean useTransparentColor, Bitmap bitmap) throws Throwable, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateOptimalPalette = null;

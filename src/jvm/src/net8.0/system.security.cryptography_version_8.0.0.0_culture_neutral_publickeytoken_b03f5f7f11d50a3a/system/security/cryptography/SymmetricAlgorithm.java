@@ -657,7 +657,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
-    public static SymmetricAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  SymmetricAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -672,7 +672,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
-    public static SymmetricAlgorithm Create(java.lang.String algName) throws Throwable {
+    public static  SymmetricAlgorithm Create(java.lang.String algName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

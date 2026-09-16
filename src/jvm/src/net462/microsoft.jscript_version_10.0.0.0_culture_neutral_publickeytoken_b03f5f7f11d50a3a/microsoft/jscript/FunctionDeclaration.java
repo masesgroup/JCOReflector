@@ -158,7 +158,7 @@ public class FunctionDeclaration extends AST  {
     
     // Methods section
     
-    public static Closure JScriptFunctionDeclaration(RuntimeTypeHandle handle, java.lang.String name, java.lang.String method_name, java.lang.String[] formal_parameters, JSLocalField[] fields, boolean must_save_stack_locals, boolean hasArgumentsObject, java.lang.String text, NetObject declaringObject, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+    public static  Closure JScriptFunctionDeclaration(RuntimeTypeHandle handle, java.lang.String name, java.lang.String method_name, java.lang.String[] formal_parameters, JSLocalField[] fields, boolean must_save_stack_locals, boolean hasArgumentsObject, java.lang.String text, NetObject declaringObject, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptFunctionDeclaration = null;
@@ -173,7 +173,7 @@ public class FunctionDeclaration extends AST  {
         }
     }
 
-    public static Closure JScriptFunctionDeclaration(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, NetObject dupParam8, VsaEngine dupParam9) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+    public static  Closure JScriptFunctionDeclaration(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, NetObject dupParam8, VsaEngine dupParam9) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptFunctionDeclaration = null;

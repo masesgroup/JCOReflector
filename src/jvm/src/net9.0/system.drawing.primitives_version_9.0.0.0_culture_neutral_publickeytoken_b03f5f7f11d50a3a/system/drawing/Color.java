@@ -256,7 +256,7 @@ public class Color extends ValueType  {
         }
     }
 
-    public static Color FromArgb(int alpha, int red, int green, int blue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public static  Color FromArgb(int alpha, int red, int green, int blue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromArgb = null;
@@ -271,7 +271,7 @@ public class Color extends ValueType  {
         }
     }
 
-    public static Color FromArgb(int red, int green, int blue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  Color FromArgb(int red, int green, int blue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromArgb = null;
@@ -286,7 +286,7 @@ public class Color extends ValueType  {
         }
     }
 
-    public static Color FromArgb(int alpha, Color baseColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public static  Color FromArgb(int alpha, Color baseColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromArgb = null;
@@ -301,7 +301,7 @@ public class Color extends ValueType  {
         }
     }
 
-    public static Color FromArgb(int argb) throws Throwable {
+    public static  Color FromArgb(int argb) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromArgb = null;
@@ -316,7 +316,7 @@ public class Color extends ValueType  {
         }
     }
 
-    public static Color FromKnownColor(KnownColor color) throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
+    public static  Color FromKnownColor(KnownColor color) throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromKnownColor = null;
@@ -331,7 +331,7 @@ public class Color extends ValueType  {
         }
     }
 
-    public static Color FromName(java.lang.String name) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException {
+    public static  Color FromName(java.lang.String name) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromName = null;

@@ -211,7 +211,7 @@ public class ConfigurationException extends SystemException {
     
     // Methods section
     
-    public static int GetXmlNodeLineNumber(XmlNode node) throws Throwable {
+    public static  int GetXmlNodeLineNumber(XmlNode node) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlNodeLineNumber = null;
@@ -251,7 +251,7 @@ public class ConfigurationException extends SystemException {
         }
     }
 
-    public static java.lang.String GetXmlNodeFilename(XmlNode node) throws Throwable {
+    public static  java.lang.String GetXmlNodeFilename(XmlNode node) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlNodeFilename = null;

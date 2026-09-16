@@ -159,7 +159,7 @@ public class BitmapEncoder extends DispatcherObject  {
     
     // Methods section
     
-    public static BitmapEncoder Create(Guid containerFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
+    public static  BitmapEncoder Create(Guid containerFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -174,7 +174,7 @@ public class BitmapEncoder extends DispatcherObject  {
         }
     }
 
-    public void Save(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
+    public void Save(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.io.FileFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.UriFormatException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

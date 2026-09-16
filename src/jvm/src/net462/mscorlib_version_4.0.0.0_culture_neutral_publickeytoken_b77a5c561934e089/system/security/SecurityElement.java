@@ -189,7 +189,7 @@ public class SecurityElement extends NetObject  {
         }
     }
 
-    public static boolean IsValidAttributeName(java.lang.String name) throws Throwable {
+    public static  boolean IsValidAttributeName(java.lang.String name) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidAttributeName = null;
@@ -203,7 +203,7 @@ public class SecurityElement extends NetObject  {
         }
     }
 
-    public static boolean IsValidAttributeValue(java.lang.String value) throws Throwable {
+    public static  boolean IsValidAttributeValue(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidAttributeValue = null;
@@ -217,7 +217,7 @@ public class SecurityElement extends NetObject  {
         }
     }
 
-    public static boolean IsValidTag(java.lang.String tag) throws Throwable {
+    public static  boolean IsValidTag(java.lang.String tag) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidTag = null;
@@ -231,7 +231,7 @@ public class SecurityElement extends NetObject  {
         }
     }
 
-    public static boolean IsValidText(java.lang.String text) throws Throwable {
+    public static  boolean IsValidText(java.lang.String text) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidText = null;
@@ -260,7 +260,7 @@ public class SecurityElement extends NetObject  {
         }
     }
 
-    public static SecurityElement FromString(java.lang.String xml) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  SecurityElement FromString(java.lang.String xml) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;
@@ -304,7 +304,7 @@ public class SecurityElement extends NetObject  {
         }
     }
 
-    public static java.lang.String Escape(java.lang.String str) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException {
+    public static  java.lang.String Escape(java.lang.String str) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEscape = null;

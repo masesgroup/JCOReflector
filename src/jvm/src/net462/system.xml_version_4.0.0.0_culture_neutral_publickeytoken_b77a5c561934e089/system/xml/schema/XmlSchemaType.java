@@ -167,7 +167,7 @@ public class XmlSchemaType extends XmlSchemaAnnotated  {
     
     // Methods section
     
-    public static boolean IsDerivedFrom(XmlSchemaType derivedType, XmlSchemaType baseType, XmlSchemaDerivationMethod except) throws Throwable {
+    public static  boolean IsDerivedFrom(XmlSchemaType derivedType, XmlSchemaType baseType, XmlSchemaDerivationMethod except) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDerivedFrom = null;
@@ -181,7 +181,7 @@ public class XmlSchemaType extends XmlSchemaAnnotated  {
         }
     }
 
-    public static XmlSchemaComplexType GetBuiltInComplexType(XmlTypeCode typeCode) throws Throwable {
+    public static  XmlSchemaComplexType GetBuiltInComplexType(XmlTypeCode typeCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBuiltInComplexType = null;
@@ -196,7 +196,7 @@ public class XmlSchemaType extends XmlSchemaAnnotated  {
         }
     }
 
-    public static XmlSchemaComplexType GetBuiltInComplexType(XmlQualifiedName qualifiedName) throws Throwable, system.ArgumentNullException {
+    public static  XmlSchemaComplexType GetBuiltInComplexType(XmlQualifiedName qualifiedName) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBuiltInComplexType = null;
@@ -211,7 +211,7 @@ public class XmlSchemaType extends XmlSchemaAnnotated  {
         }
     }
 
-    public static XmlSchemaSimpleType GetBuiltInSimpleType(XmlTypeCode typeCode) throws Throwable {
+    public static  XmlSchemaSimpleType GetBuiltInSimpleType(XmlTypeCode typeCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBuiltInSimpleType = null;
@@ -226,7 +226,7 @@ public class XmlSchemaType extends XmlSchemaAnnotated  {
         }
     }
 
-    public static XmlSchemaSimpleType GetBuiltInSimpleType(XmlQualifiedName qualifiedName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  XmlSchemaSimpleType GetBuiltInSimpleType(XmlQualifiedName qualifiedName) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBuiltInSimpleType = null;

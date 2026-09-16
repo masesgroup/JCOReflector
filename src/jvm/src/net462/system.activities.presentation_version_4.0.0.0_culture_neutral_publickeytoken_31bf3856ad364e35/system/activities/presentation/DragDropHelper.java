@@ -164,7 +164,7 @@ public class DragDropHelper extends NetObject  {
     
     // Methods section
     
-    public static boolean AllowDrop(IDataObject draggedDataObject, EditingContext context, NetType... allowedItemTypes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.NotSupportedException {
+    public static  boolean AllowDrop(IDataObject draggedDataObject, EditingContext context, NetType... allowedItemTypes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllowDrop = null;
@@ -178,7 +178,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static ICompositeView GetCompositeView(DragEventArgs e) throws Throwable {
+    public static  ICompositeView GetCompositeView(DragEventArgs e) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompositeView = null;
@@ -193,7 +193,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static ModelItem GetDraggedModelItem(DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  ModelItem GetDraggedModelItem(DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDraggedModelItem = null;
@@ -208,7 +208,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static NetObject GetDroppedObject(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.security.SecurityException, system.NotImplementedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
+    public static  NetObject GetDroppedObject(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.security.SecurityException, system.NotImplementedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDroppedObject = null;
@@ -223,7 +223,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static DragDropEffects DoDragMove(WorkflowViewElement draggedViewElement, Point referencePoint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.OutOfMemoryException, system.threading.ThreadStateException, system.SystemException {
+    public static  DragDropEffects DoDragMove(WorkflowViewElement draggedViewElement, Point referencePoint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.OutOfMemoryException, system.threading.ThreadStateException, system.SystemException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDoDragMove = null;
@@ -238,7 +238,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static DragDropEffects GetDragDropCompletedEffects(DataObject data) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  DragDropEffects GetDragDropCompletedEffects(DataObject data) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDragDropCompletedEffects = null;
@@ -253,7 +253,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static Point GetDragDropAnchorPoint(DragEventArgs e) throws Throwable {
+    public static  Point GetDragDropAnchorPoint(DragEventArgs e) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDragDropAnchorPoint = null;
@@ -268,7 +268,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static UIElement GetCompositeView(WorkflowViewElement workflowViewElement) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static  UIElement GetCompositeView(WorkflowViewElement workflowViewElement) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompositeView = null;
@@ -283,7 +283,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static void SetCompositeView(WorkflowViewElement workflowViewElement, UIElement dragSource) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static  void SetCompositeView(WorkflowViewElement workflowViewElement, UIElement dragSource) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -293,7 +293,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static void SetDragDropCompletedEffects(DragEventArgs e, DragDropEffects completedEffects) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException {
+    public static  void SetDragDropCompletedEffects(DragEventArgs e, DragDropEffects completedEffects) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

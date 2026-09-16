@@ -153,7 +153,7 @@ public class WaitHandleExtensions extends NetObject  {
     
     // Methods section
     
-    public static SafeWaitHandle GetSafeWaitHandle(WaitHandle waitHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  SafeWaitHandle GetSafeWaitHandle(WaitHandle waitHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSafeWaitHandle = null;
@@ -168,7 +168,7 @@ public class WaitHandleExtensions extends NetObject  {
         }
     }
 
-    public static void SetSafeWaitHandle(WaitHandle waitHandle, SafeWaitHandle value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void SetSafeWaitHandle(WaitHandle waitHandle, SafeWaitHandle value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

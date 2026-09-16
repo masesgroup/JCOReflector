@@ -189,7 +189,7 @@ public class SocketAddress extends NetObject  {
         }
     }
 
-    public static int GetMaximumAddressSize(AddressFamily addressFamily) throws Throwable {
+    public static  int GetMaximumAddressSize(AddressFamily addressFamily) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMaximumAddressSize = null;

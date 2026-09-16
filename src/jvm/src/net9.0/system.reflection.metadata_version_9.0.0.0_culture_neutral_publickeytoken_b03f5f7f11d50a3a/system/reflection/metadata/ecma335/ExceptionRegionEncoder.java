@@ -158,7 +158,7 @@ public class ExceptionRegionEncoder extends ValueType  {
     
     // Methods section
     
-    public static boolean IsSmallExceptionRegion(int startOffset, int length) throws Throwable {
+    public static  boolean IsSmallExceptionRegion(int startOffset, int length) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSmallExceptionRegion = null;
@@ -172,7 +172,7 @@ public class ExceptionRegionEncoder extends ValueType  {
         }
     }
 
-    public static boolean IsSmallRegionCount(int exceptionRegionCount) throws Throwable {
+    public static  boolean IsSmallRegionCount(int exceptionRegionCount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSmallRegionCount = null;

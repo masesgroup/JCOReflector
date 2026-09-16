@@ -154,7 +154,7 @@ public class XPathQueryGenerator extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, StringBuilder rootElementXpath, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.runtime.serialization.InvalidDataContractException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, StringBuilder rootElementXpath, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.runtime.serialization.InvalidDataContractException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromDataContractSerializer = null;
@@ -168,7 +168,7 @@ public class XPathQueryGenerator extends NetObject  {
         }
     }
 
-    public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.runtime.serialization.InvalidDataContractException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.runtime.serialization.InvalidDataContractException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromDataContractSerializer = null;

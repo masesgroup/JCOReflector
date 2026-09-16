@@ -173,7 +173,7 @@ public class SolidColorBrush extends Brush  {
     
     // Methods section
     
-    public static NetObject DeserializeFrom(BinaryReader reader) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.io.EndOfStreamException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.UriFormatException, system.NotSupportedException, system.FormatException {
+    public static  NetObject DeserializeFrom(BinaryReader reader) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.io.EndOfStreamException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.UriFormatException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeserializeFrom = null;

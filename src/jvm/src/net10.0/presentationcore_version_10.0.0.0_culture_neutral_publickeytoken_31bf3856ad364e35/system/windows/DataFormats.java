@@ -152,7 +152,7 @@ public class DataFormats extends NetObject  {
     
     // Methods section
     
-    public static DataFormat GetDataFormat(int id) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.threading.SynchronizationLockException {
+    public static  DataFormat GetDataFormat(int id) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataFormat = null;
@@ -167,7 +167,7 @@ public class DataFormats extends NetObject  {
         }
     }
 
-    public static DataFormat GetDataFormat(java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
+    public static  DataFormat GetDataFormat(java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataFormat = null;

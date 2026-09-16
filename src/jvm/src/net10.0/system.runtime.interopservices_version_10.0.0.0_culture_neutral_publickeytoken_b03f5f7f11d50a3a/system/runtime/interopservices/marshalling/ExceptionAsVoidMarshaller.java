@@ -151,7 +151,7 @@ public class ExceptionAsVoidMarshaller extends NetObject  {
     
     // Methods section
     
-    public static void ConvertToUnmanaged(NetException e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  void ConvertToUnmanaged(NetException e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

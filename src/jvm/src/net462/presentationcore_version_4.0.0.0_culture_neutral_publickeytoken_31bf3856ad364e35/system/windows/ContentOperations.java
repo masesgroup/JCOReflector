@@ -153,7 +153,7 @@ public class ContentOperations extends NetObject  {
     
     // Methods section
     
-    public static DependencyObject GetParent(ContentElement reference) throws Throwable, system.ArgumentNullException {
+    public static  DependencyObject GetParent(ContentElement reference) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetParent = null;
@@ -168,7 +168,7 @@ public class ContentOperations extends NetObject  {
         }
     }
 
-    public static void SetParent(ContentElement reference, DependencyObject parent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.io.IOException {
+    public static  void SetParent(ContentElement reference, DependencyObject parent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

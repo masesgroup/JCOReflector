@@ -170,7 +170,7 @@ public class StringInfo extends NetObject  {
     
     // Methods section
     
-    public static int[] ParseCombiningCharacters(java.lang.String str) throws Throwable, system.ArgumentNullException {
+    public static  int[] ParseCombiningCharacters(java.lang.String str) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseCombiningCharacters = null;
@@ -193,7 +193,7 @@ public class StringInfo extends NetObject  {
         }
     }
 
-    public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  TextElementEnumerator GetTextElementEnumerator(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTextElementEnumerator = null;
@@ -208,7 +208,7 @@ public class StringInfo extends NetObject  {
         }
     }
 
-    public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  TextElementEnumerator GetTextElementEnumerator(java.lang.String str, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTextElementEnumerator = null;
@@ -223,7 +223,7 @@ public class StringInfo extends NetObject  {
         }
     }
 
-    public static java.lang.String GetNextTextElement(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String GetNextTextElement(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNextTextElement = null;
@@ -237,7 +237,7 @@ public class StringInfo extends NetObject  {
         }
     }
 
-    public static java.lang.String GetNextTextElement(java.lang.String str, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String GetNextTextElement(java.lang.String str, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNextTextElement = null;

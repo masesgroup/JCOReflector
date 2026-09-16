@@ -154,7 +154,7 @@ public class Versioned extends NetObject  {
     
     // Methods section
     
-    public static boolean IsNumeric(NetObject Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArgumentNullException {
+    public static  boolean IsNumeric(NetObject Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNumeric = null;
@@ -168,7 +168,7 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static NetObject CallByName(NetObject Instance, java.lang.String MethodName, CallType UseCallType, NetObject... Arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
+    public static  NetObject CallByName(NetObject Instance, java.lang.String MethodName, CallType UseCallType, NetObject... Arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCallByName = null;
@@ -183,7 +183,7 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSystemTypeName = null;
@@ -197,7 +197,7 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static java.lang.String TypeName(NetObject Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  java.lang.String TypeName(NetObject Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTypeName = null;
@@ -211,7 +211,7 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static java.lang.String VbTypeName(java.lang.String SystemName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException {
+    public static  java.lang.String VbTypeName(java.lang.String SystemName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVbTypeName = null;

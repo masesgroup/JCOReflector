@@ -153,7 +153,7 @@ public class MimeFormatter extends NetObject  {
     
     // Methods section
     
-    public static NetObject GetInitializer(NetType type, LogicalMethodInfo methodInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  NetObject GetInitializer(NetType type, LogicalMethodInfo methodInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInitializer = null;
@@ -183,7 +183,7 @@ public class MimeFormatter extends NetObject  {
         }
     }
 
-    public static NetObject[] GetInitializers(NetType type, LogicalMethodInfo[] methodInfos) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  NetObject[] GetInitializers(NetType type, LogicalMethodInfo[] methodInfos) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInitializers = null;
@@ -225,7 +225,7 @@ public class MimeFormatter extends NetObject  {
         }
     }
 
-    public static MimeFormatter CreateInstance(NetType type, NetObject initializer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  MimeFormatter CreateInstance(NetType type, NetObject initializer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateInstance = null;

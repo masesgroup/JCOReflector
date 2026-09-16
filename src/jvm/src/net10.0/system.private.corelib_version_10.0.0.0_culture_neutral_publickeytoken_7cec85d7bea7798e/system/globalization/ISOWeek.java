@@ -154,7 +154,7 @@ public class ISOWeek extends NetObject  {
     
     // Methods section
     
-    public static int GetWeekOfYear(DateOnly date) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  int GetWeekOfYear(DateOnly date) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetWeekOfYear = null;
@@ -194,7 +194,7 @@ public class ISOWeek extends NetObject  {
         }
     }
 
-    public static int GetWeekOfYear(DateTime date) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  int GetWeekOfYear(DateTime date) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetWeekOfYear = null;
@@ -234,7 +234,7 @@ public class ISOWeek extends NetObject  {
         }
     }
 
-    public static int GetWeeksInYear(int year) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  int GetWeeksInYear(int year) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetWeeksInYear = null;
@@ -274,7 +274,7 @@ public class ISOWeek extends NetObject  {
         }
     }
 
-    public static int GetYear(DateOnly date) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  int GetYear(DateOnly date) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetYear = null;
@@ -314,7 +314,7 @@ public class ISOWeek extends NetObject  {
         }
     }
 
-    public static int GetYear(DateTime date) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  int GetYear(DateTime date) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetYear = null;
@@ -354,7 +354,7 @@ public class ISOWeek extends NetObject  {
         }
     }
 
-    public static DateOnly ToDateOnly(int year, int week, DayOfWeek dayOfWeek) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  DateOnly ToDateOnly(int year, int week, DayOfWeek dayOfWeek) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateOnly = null;
@@ -369,7 +369,7 @@ public class ISOWeek extends NetObject  {
         }
     }
 
-    public static DateTime GetYearEnd(int year) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  DateTime GetYearEnd(int year) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetYearEnd = null;
@@ -384,7 +384,7 @@ public class ISOWeek extends NetObject  {
         }
     }
 
-    public static DateTime GetYearStart(int year) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  DateTime GetYearStart(int year) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetYearStart = null;
@@ -399,7 +399,7 @@ public class ISOWeek extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(int year, int week, DayOfWeek dayOfWeek) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public static  DateTime ToDateTime(int year, int week, DayOfWeek dayOfWeek) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;

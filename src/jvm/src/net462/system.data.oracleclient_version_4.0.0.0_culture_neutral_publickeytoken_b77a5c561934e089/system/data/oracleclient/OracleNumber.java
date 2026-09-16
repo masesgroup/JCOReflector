@@ -247,7 +247,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleBoolean Equals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  OracleBoolean Equals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -262,7 +262,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleBoolean GreaterThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  OracleBoolean GreaterThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -277,7 +277,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleBoolean GreaterThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  OracleBoolean GreaterThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -292,7 +292,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleBoolean LessThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  OracleBoolean LessThan(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -307,7 +307,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleBoolean LessThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  OracleBoolean LessThanOrEqual(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -322,7 +322,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleBoolean NotEquals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  OracleBoolean NotEquals(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -337,7 +337,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Abs(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Abs(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -352,7 +352,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Acos(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Acos(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcos = null;
@@ -367,7 +367,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Add(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Add(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -382,7 +382,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Asin(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Asin(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsin = null;
@@ -397,7 +397,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Atan(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Atan(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan = null;
@@ -412,7 +412,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Atan2(OracleNumber y, OracleNumber x) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Atan2(OracleNumber y, OracleNumber x) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan2 = null;
@@ -427,7 +427,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Ceiling(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Ceiling(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -442,7 +442,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Cos(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Cos(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCos = null;
@@ -457,7 +457,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Cosh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Cosh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCosh = null;
@@ -472,7 +472,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Divide(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Divide(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -487,7 +487,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Exp(OracleNumber p) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Exp(OracleNumber p) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp = null;
@@ -502,7 +502,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Floor(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Floor(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFloor = null;
@@ -517,7 +517,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Log(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Log(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -532,7 +532,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Log(OracleNumber n, int newBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Log(OracleNumber n, int newBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -547,7 +547,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Log(OracleNumber n, OracleNumber newBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Log(OracleNumber n, OracleNumber newBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -562,7 +562,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Log10(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Log10(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10 = null;
@@ -577,7 +577,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Max(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Max(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -592,7 +592,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Min(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Min(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -607,7 +607,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Modulo(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Modulo(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModulo = null;
@@ -622,7 +622,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Multiply(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Multiply(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -637,7 +637,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Negate(OracleNumber x) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Negate(OracleNumber x) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -652,7 +652,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -667,7 +667,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Pow(OracleNumber x, int y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Pow(OracleNumber x, int y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -682,7 +682,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Pow(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Pow(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -697,7 +697,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Round(OracleNumber n, int position) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Round(OracleNumber n, int position) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -712,7 +712,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Shift(OracleNumber n, int digits) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Shift(OracleNumber n, int digits) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShift = null;
@@ -727,7 +727,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Sign(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Sign(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -742,7 +742,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Sin(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Sin(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSin = null;
@@ -757,7 +757,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Sinh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Sinh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinh = null;
@@ -772,7 +772,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Sqrt(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Sqrt(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSqrt = null;
@@ -787,7 +787,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Subtract(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Subtract(OracleNumber x, OracleNumber y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -802,7 +802,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Tan(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Tan(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTan = null;
@@ -817,7 +817,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Tanh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  OracleNumber Tanh(OracleNumber n) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTanh = null;
@@ -832,7 +832,7 @@ public class OracleNumber extends ValueType  {
         }
     }
 
-    public static OracleNumber Truncate(OracleNumber n, int position) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static  OracleNumber Truncate(OracleNumber n, int position) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;

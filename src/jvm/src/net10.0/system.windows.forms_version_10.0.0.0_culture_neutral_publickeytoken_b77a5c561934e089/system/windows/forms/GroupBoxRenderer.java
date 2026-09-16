@@ -158,7 +158,7 @@ public class GroupBoxRenderer extends NetObject  {
     
     // Methods section
     
-    public static boolean IsBackgroundPartiallyTransparent(GroupBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
+    public static  boolean IsBackgroundPartiallyTransparent(GroupBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBackgroundPartiallyTransparent = null;
@@ -172,7 +172,7 @@ public class GroupBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, Color textColor, TextFormatFlags flags, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, Color textColor, TextFormatFlags flags, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -182,7 +182,7 @@ public class GroupBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, Color textColor, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public static  void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, Color textColor, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -192,7 +192,7 @@ public class GroupBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, TextFormatFlags flags, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, TextFormatFlags flags, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -202,7 +202,7 @@ public class GroupBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
+    public static  void DrawGroupBox(Graphics g, Rectangle bounds, java.lang.String groupBoxText, Font font, GroupBoxState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -212,7 +212,7 @@ public class GroupBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawGroupBox(Graphics g, Rectangle bounds, GroupBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.FormatException {
+    public static  void DrawGroupBox(Graphics g, Rectangle bounds, GroupBoxState state) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -222,7 +222,7 @@ public class GroupBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentNullException {
+    public static  void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

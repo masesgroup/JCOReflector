@@ -157,7 +157,7 @@ public class SecurityManager extends NetObject  {
     
     // Methods section
     
-    public static boolean CurrentThreadRequiresSecurityContextCapture() throws Throwable {
+    public static  boolean CurrentThreadRequiresSecurityContextCapture() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCurrentThreadRequiresSecurityContextCapture = null;
@@ -171,7 +171,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static boolean IsGranted(IPermission perm) throws Throwable {
+    public static  boolean IsGranted(IPermission perm) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsGranted = null;
@@ -185,7 +185,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static IEnumerator PolicyHierarchy() throws Throwable {
+    public static  IEnumerator PolicyHierarchy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPolicyHierarchy = null;
@@ -200,7 +200,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable {
+    public static  IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePolicyGroups = null;
@@ -215,7 +215,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable {
+    public static  PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStandardSandbox = null;
@@ -230,7 +230,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable {
+    public static  PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePolicy = null;
@@ -245,7 +245,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
+    public static  PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePolicy = null;
@@ -260,7 +260,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolvePolicy(Evidence[] evidences) throws Throwable {
+    public static  PermissionSet ResolvePolicy(Evidence[] evidences) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePolicy = null;
@@ -275,7 +275,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolveSystemPolicy(Evidence evidence) throws Throwable {
+    public static  PermissionSet ResolveSystemPolicy(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveSystemPolicy = null;
@@ -290,7 +290,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable {
+    public static  PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPolicyLevelFromFile = null;
@@ -305,7 +305,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable {
+    public static  PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPolicyLevelFromString = null;
@@ -320,7 +320,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static void GetZoneAndOrigin(JCORefOut<NetArrayList> zone, JCORefOut<NetArrayList> origin) throws Throwable {
+    public static  void GetZoneAndOrigin(JCORefOut<NetArrayList> zone, JCORefOut<NetArrayList> origin) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -330,7 +330,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static void SavePolicy() throws Throwable {
+    public static  void SavePolicy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -340,7 +340,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static void SavePolicyLevel(PolicyLevel level) throws Throwable {
+    public static  void SavePolicyLevel(PolicyLevel level) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

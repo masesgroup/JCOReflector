@@ -183,7 +183,7 @@ public class AssemblyInstaller extends Installer  {
     
     // Methods section
     
-    public static void CheckIfInstallable(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException {
+    public static  void CheckIfInstallable(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -161,7 +161,7 @@ public class InternalRemotingServices extends NetObject  {
     
     // Methods section
     
-    public static SoapAttribute GetCachedSoapAttribute(NetObject reflectionObject) throws Throwable, system.ArgumentException {
+    public static  SoapAttribute GetCachedSoapAttribute(NetObject reflectionObject) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCachedSoapAttribute = null;
@@ -176,7 +176,7 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
-    public static void DebugOutChnl(java.lang.String s) throws Throwable, system.IndexOutOfRangeException {
+    public static  void DebugOutChnl(java.lang.String s) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -186,7 +186,7 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
-    public static void RemotingAssert(boolean condition, java.lang.String message) throws Throwable {
+    public static  void RemotingAssert(boolean condition, java.lang.String message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -196,7 +196,7 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
-    public static void RemotingTrace(NetObject... messages) throws Throwable {
+    public static  void RemotingTrace(NetObject... messages) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -206,7 +206,7 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
-    public static void SetServerIdentity(MethodCall m, NetObject srvID) throws Throwable {
+    public static  void SetServerIdentity(MethodCall m, NetObject srvID) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

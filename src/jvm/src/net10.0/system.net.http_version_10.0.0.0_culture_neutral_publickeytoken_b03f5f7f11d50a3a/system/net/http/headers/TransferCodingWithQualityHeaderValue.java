@@ -175,7 +175,7 @@ public class TransferCodingWithQualityHeaderValue extends TransferCodingHeaderVa
     
     // Methods section
     
-    public static TransferCodingWithQualityHeaderValue ParseNewTransferCodingWithQualityHeaderValue(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
+    public static  TransferCodingWithQualityHeaderValue ParseNewTransferCodingWithQualityHeaderValue(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

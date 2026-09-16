@@ -154,7 +154,7 @@ public class X509Certificate2UI extends NetObject  {
     
     // Methods section
     
-    public static X509Certificate2Collection SelectFromCollection(X509Certificate2Collection certificates, java.lang.String title, java.lang.String message, X509SelectionFlag selectionFlag) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.security.cryptography.CryptographicException, system.AccessViolationException {
+    public static  X509Certificate2Collection SelectFromCollection(X509Certificate2Collection certificates, java.lang.String title, java.lang.String message, X509SelectionFlag selectionFlag) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.security.cryptography.CryptographicException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSelectFromCollection = null;
@@ -169,7 +169,7 @@ public class X509Certificate2UI extends NetObject  {
         }
     }
 
-    public static void DisplayCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.AccessViolationException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException {
+    public static  void DisplayCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.AccessViolationException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

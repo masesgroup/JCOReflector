@@ -152,7 +152,7 @@ public class VisualDiagnostics extends NetObject  {
     
     // Methods section
     
-    public static XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXamlSourceInfo = null;
@@ -167,7 +167,7 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
 
-    public static void DisableVisualTreeChanged() throws Throwable {
+    public static  void DisableVisualTreeChanged() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -177,7 +177,7 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
 
-    public static void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

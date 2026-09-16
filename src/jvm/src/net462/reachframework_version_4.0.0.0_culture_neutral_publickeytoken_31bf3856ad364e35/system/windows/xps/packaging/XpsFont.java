@@ -155,7 +155,7 @@ public class XpsFont extends XpsResource  {
     
     // Methods section
     
-    public static void ObfuscateFontData(byte[] fontData, Guid guid) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
+    public static  void ObfuscateFontData(byte[] fontData, Guid guid) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -165,7 +165,7 @@ public class XpsFont extends XpsResource  {
         }
     }
 
-    public static void ObfuscateFontData(JCORefOut dupParam0, Guid dupParam1) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
+    public static  void ObfuscateFontData(JCORefOut dupParam0, Guid dupParam1) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -153,7 +153,7 @@ public class RuntimeEnvironment extends NetObject  {
     
     // Methods section
     
-    public static boolean FromGlobalAccessCache(Assembly a) throws Throwable {
+    public static  boolean FromGlobalAccessCache(Assembly a) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromGlobalAccessCache = null;
@@ -167,7 +167,7 @@ public class RuntimeEnvironment extends NetObject  {
         }
     }
 
-    public static NetObject GetRuntimeInterfaceAsObject(Guid clsid, Guid riid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  NetObject GetRuntimeInterfaceAsObject(Guid clsid, Guid riid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeInterfaceAsObject = null;
@@ -182,7 +182,7 @@ public class RuntimeEnvironment extends NetObject  {
         }
     }
 
-    public static java.lang.String GetRuntimeDirectory() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException {
+    public static  java.lang.String GetRuntimeDirectory() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeDirectory = null;
@@ -196,7 +196,7 @@ public class RuntimeEnvironment extends NetObject  {
         }
     }
 
-    public static java.lang.String GetSystemVersion() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OverflowException, system.InvalidOperationException {
+    public static  java.lang.String GetSystemVersion() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OverflowException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSystemVersion = null;

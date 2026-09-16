@@ -205,7 +205,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IEnumerator GetEnumerator(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException {
+    public static  IEnumerator GetEnumerator(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnumerator = null;
@@ -265,7 +265,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetMachineStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
+    public static  IsolatedStorageFile GetMachineStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMachineStoreForApplication = null;
@@ -280,7 +280,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetMachineStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
+    public static  IsolatedStorageFile GetMachineStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMachineStoreForAssembly = null;
@@ -295,7 +295,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetMachineStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
+    public static  IsolatedStorageFile GetMachineStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMachineStoreForDomain = null;
@@ -310,7 +310,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject applicationIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject applicationIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -325,7 +325,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject domainIdentity, NetObject assemblyIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject domainIdentity, NetObject assemblyIdentity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -340,7 +340,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, Evidence domainEvidence, NetType domainEvidenceType, Evidence assemblyEvidence, NetType assemblyEvidenceType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.XmlSyntaxException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, Evidence domainEvidence, NetType domainEvidenceType, Evidence assemblyEvidence, NetType assemblyEvidenceType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.XmlSyntaxException, system.NullReferenceException, system.io.isolatedstorage.IsolatedStorageException, system.security.cryptography.CryptographicException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -355,7 +355,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType applicationEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType applicationEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -370,7 +370,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType domainEvidenceType, NetType assemblyEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType domainEvidenceType, NetType assemblyEvidenceType) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -385,7 +385,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
+    public static  IsolatedStorageFile GetUserStoreForApplication() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserStoreForApplication = null;
@@ -400,7 +400,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
+    public static  IsolatedStorageFile GetUserStoreForAssembly() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserStoreForAssembly = null;
@@ -415,7 +415,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
+    public static  IsolatedStorageFile GetUserStoreForDomain() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserStoreForDomain = null;
@@ -430,7 +430,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForSite() throws Throwable, system.NotSupportedException {
+    public static  IsolatedStorageFile GetUserStoreForSite() throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserStoreForSite = null;
@@ -697,7 +697,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static void Remove(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ApplicationException {
+    public static  void Remove(IsolatedStorageScope scope) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.isolatedstorage.IsolatedStorageException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

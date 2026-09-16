@@ -170,7 +170,7 @@ public class XNamespace extends NetObject  {
         }
     }
 
-    public static XNamespace Get(java.lang.String namespaceName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
+    public static  XNamespace Get(java.lang.String namespaceName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGet = null;

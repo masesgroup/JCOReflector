@@ -157,7 +157,7 @@ public class AutomationInteropProvider extends NetObject  {
     
     // Methods section
     
-    public static void RaiseAutomationEvent(AutomationEvent eventId, IRawElementProviderSimple provider, AutomationEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void RaiseAutomationEvent(AutomationEvent eventId, IRawElementProviderSimple provider, AutomationEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -167,7 +167,7 @@ public class AutomationInteropProvider extends NetObject  {
         }
     }
 
-    public static void RaiseAutomationPropertyChangedEvent(IRawElementProviderSimple element, AutomationPropertyChangedEventArgs e) throws Throwable, system.ArgumentNullException {
+    public static  void RaiseAutomationPropertyChangedEvent(IRawElementProviderSimple element, AutomationPropertyChangedEventArgs e) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -177,7 +177,7 @@ public class AutomationInteropProvider extends NetObject  {
         }
     }
 
-    public static void RaiseStructureChangedEvent(IRawElementProviderSimple provider, StructureChangedEventArgs e) throws Throwable, system.ArgumentNullException {
+    public static  void RaiseStructureChangedEvent(IRawElementProviderSimple provider, StructureChangedEventArgs e) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

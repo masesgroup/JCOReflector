@@ -151,7 +151,7 @@ public class ProfileOptimization extends NetObject  {
     
     // Methods section
     
-    public static void SetProfileRoot(java.lang.String directoryPath) throws Throwable {
+    public static  void SetProfileRoot(java.lang.String directoryPath) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -161,7 +161,7 @@ public class ProfileOptimization extends NetObject  {
         }
     }
 
-    public static void StartProfile(java.lang.String profile) throws Throwable {
+    public static  void StartProfile(java.lang.String profile) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

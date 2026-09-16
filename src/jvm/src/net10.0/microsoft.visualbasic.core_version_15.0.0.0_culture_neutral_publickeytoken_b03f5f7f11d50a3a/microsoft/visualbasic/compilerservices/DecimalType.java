@@ -155,7 +155,7 @@ public class DecimalType extends NetObject  {
     
     // Methods section
     
-    public static Decimal FromBoolean(boolean Value) throws Throwable {
+    public static  Decimal FromBoolean(boolean Value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBoolean = null;
@@ -170,7 +170,7 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal FromObject(NetObject Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.ArgumentNullException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  Decimal FromObject(NetObject Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.ArgumentNullException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromObject = null;
@@ -185,7 +185,7 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal FromObject(NetObject Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  Decimal FromObject(NetObject Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromObject = null;
@@ -200,7 +200,7 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal FromString(java.lang.String Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidCastException {
+    public static  Decimal FromString(java.lang.String Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;
@@ -215,7 +215,7 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal FromString(java.lang.String Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException {
+    public static  Decimal FromString(java.lang.String Value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;
@@ -230,7 +230,7 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal Parse(java.lang.String Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  Decimal Parse(java.lang.String Value, NumberFormatInfo NumberFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

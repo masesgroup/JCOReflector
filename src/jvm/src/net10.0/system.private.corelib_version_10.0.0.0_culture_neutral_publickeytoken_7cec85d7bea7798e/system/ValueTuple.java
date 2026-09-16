@@ -219,7 +219,7 @@ public class ValueTuple extends ValueType implements system.collections.IStructu
         }
     }
 
-    public static ValueTuple Create() throws Throwable {
+    public static  ValueTuple Create() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

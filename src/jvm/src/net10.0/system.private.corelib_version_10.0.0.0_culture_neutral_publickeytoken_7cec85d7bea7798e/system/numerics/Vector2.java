@@ -182,7 +182,7 @@ public class Vector2 extends ValueType  {
     
     // Methods section
     
-    public static boolean All(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  boolean All(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAll = null;
@@ -196,7 +196,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean AllWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  boolean AllWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllWhereAllBitsSet = null;
@@ -210,7 +210,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean Any(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  boolean Any(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAny = null;
@@ -224,7 +224,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean AnyWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  boolean AnyWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAnyWhereAllBitsSet = null;
@@ -252,7 +252,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean EqualsAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean EqualsAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEqualsAll = null;
@@ -266,7 +266,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean EqualsAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean EqualsAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEqualsAny = null;
@@ -280,7 +280,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean GreaterThanAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean GreaterThanAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanAll = null;
@@ -294,7 +294,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean GreaterThanAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean GreaterThanAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanAny = null;
@@ -308,7 +308,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean GreaterThanOrEqualAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean GreaterThanOrEqualAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqualAll = null;
@@ -322,7 +322,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean GreaterThanOrEqualAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean GreaterThanOrEqualAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqualAny = null;
@@ -336,7 +336,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean LessThanAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean LessThanAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanAll = null;
@@ -350,7 +350,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean LessThanAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean LessThanAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanAny = null;
@@ -364,7 +364,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean LessThanOrEqualAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean LessThanOrEqualAll(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqualAll = null;
@@ -378,7 +378,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean LessThanOrEqualAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean LessThanOrEqualAny(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqualAny = null;
@@ -392,7 +392,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean None(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  boolean None(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNone = null;
@@ -406,7 +406,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static boolean NoneWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  boolean NoneWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNoneWhereAllBitsSet = null;
@@ -420,7 +420,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static int Count(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  int Count(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCount = null;
@@ -460,7 +460,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static int CountWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  int CountWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCountWhereAllBitsSet = null;
@@ -500,7 +500,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static int IndexOf(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  int IndexOf(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIndexOf = null;
@@ -540,7 +540,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static int IndexOfWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  int IndexOfWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIndexOfWhereAllBitsSet = null;
@@ -580,7 +580,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static int LastIndexOf(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  int LastIndexOf(Vector2 vector, Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLastIndexOf = null;
@@ -620,7 +620,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static int LastIndexOfWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  int LastIndexOfWhereAllBitsSet(Vector2 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLastIndexOfWhereAllBitsSet = null;
@@ -660,7 +660,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Single Cross(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Single Cross(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCross = null;
@@ -675,7 +675,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Single Distance(Vector2 value1, Vector2 value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Single Distance(Vector2 value1, Vector2 value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDistance = null;
@@ -690,7 +690,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Single DistanceSquared(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Single DistanceSquared(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDistanceSquared = null;
@@ -705,7 +705,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Single Dot(Vector2 value1, Vector2 value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Single Dot(Vector2 value1, Vector2 value2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDot = null;
@@ -750,7 +750,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Single Sum(Vector2 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Single Sum(Vector2 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSum = null;
@@ -765,7 +765,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Abs(Vector2 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Abs(Vector2 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -780,7 +780,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Add(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Add(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -795,7 +795,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 AndNot(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 AndNot(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAndNot = null;
@@ -810,7 +810,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 BitwiseAnd(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 BitwiseAnd(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseAnd = null;
@@ -825,7 +825,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 BitwiseOr(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 BitwiseOr(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitwiseOr = null;
@@ -840,7 +840,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Clamp(Vector2 value1, Vector2 min, Vector2 max) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Clamp(Vector2 value1, Vector2 min, Vector2 max) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClamp = null;
@@ -855,7 +855,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 ClampNative(Vector2 value1, Vector2 min, Vector2 max) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 ClampNative(Vector2 value1, Vector2 min, Vector2 max) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClampNative = null;
@@ -870,7 +870,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 ConditionalSelect(Vector2 condition, Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 ConditionalSelect(Vector2 condition, Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConditionalSelect = null;
@@ -885,7 +885,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 CopySign(Vector2 value, Vector2 sign) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
+    public static  Vector2 CopySign(Vector2 value, Vector2 sign) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCopySign = null;
@@ -900,7 +900,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Cos(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 Cos(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCos = null;
@@ -915,7 +915,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Create(Single x, Single y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Create(Single x, Single y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -930,7 +930,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Create(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Vector2 Create(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -945,7 +945,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 CreateScalar(Single x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Vector2 CreateScalar(Single x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScalar = null;
@@ -960,7 +960,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 CreateScalarUnsafe(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Vector2 CreateScalarUnsafe(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScalarUnsafe = null;
@@ -975,7 +975,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 DegreesToRadians(Vector2 degrees) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 DegreesToRadians(Vector2 degrees) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDegreesToRadians = null;
@@ -990,7 +990,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Divide(Vector2 left, Single divisor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Divide(Vector2 left, Single divisor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -1005,7 +1005,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Divide(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Divide(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -1020,7 +1020,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Equals(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Equals(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -1035,7 +1035,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Exp(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 Exp(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp = null;
@@ -1050,7 +1050,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 FusedMultiplyAdd(Vector2 left, Vector2 right, Vector2 addend) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 FusedMultiplyAdd(Vector2 left, Vector2 right, Vector2 addend) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFusedMultiplyAdd = null;
@@ -1065,7 +1065,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 GreaterThan(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 GreaterThan(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -1080,7 +1080,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 GreaterThanOrEqual(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 GreaterThanOrEqual(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -1095,7 +1095,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Hypot(Vector2 x, Vector2 y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Hypot(Vector2 x, Vector2 y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHypot = null;
@@ -1110,7 +1110,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsEvenInteger(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsEvenInteger(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEvenInteger = null;
@@ -1125,7 +1125,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsFinite(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsFinite(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFinite = null;
@@ -1140,7 +1140,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsInfinity(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsInfinity(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInfinity = null;
@@ -1155,7 +1155,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsInteger(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsInteger(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInteger = null;
@@ -1170,7 +1170,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsNaN(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsNaN(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNaN = null;
@@ -1185,7 +1185,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsNegative(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsNegative(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegative = null;
@@ -1200,7 +1200,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsNegativeInfinity(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsNegativeInfinity(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegativeInfinity = null;
@@ -1215,7 +1215,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsNormal(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsNormal(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNormal = null;
@@ -1230,7 +1230,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsOddInteger(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsOddInteger(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOddInteger = null;
@@ -1245,7 +1245,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsPositive(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsPositive(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositive = null;
@@ -1260,7 +1260,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsPositiveInfinity(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsPositiveInfinity(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositiveInfinity = null;
@@ -1275,7 +1275,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsSubnormal(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsSubnormal(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSubnormal = null;
@@ -1290,7 +1290,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 IsZero(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 IsZero(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsZero = null;
@@ -1305,7 +1305,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Lerp(Vector2 value1, Vector2 value2, Single amount) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static  Vector2 Lerp(Vector2 value1, Vector2 value2, Single amount) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -1320,7 +1320,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Lerp(Vector2 value1, Vector2 value2, Vector2 amount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Lerp(Vector2 value1, Vector2 value2, Vector2 amount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -1335,7 +1335,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 LessThan(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 LessThan(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -1350,7 +1350,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 LessThanOrEqual(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 LessThanOrEqual(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -1365,7 +1365,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 LoadUnsafe(JCORefOut<Single> source) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  Vector2 LoadUnsafe(JCORefOut<Single> source) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadUnsafe = null;
@@ -1380,7 +1380,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Log(Vector2 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Log(Vector2 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -1395,7 +1395,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Log2(Vector2 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Log2(Vector2 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2 = null;
@@ -1410,7 +1410,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Max(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Max(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -1425,7 +1425,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MaxMagnitude(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MaxMagnitude(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitude = null;
@@ -1440,7 +1440,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MaxMagnitudeNumber(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MaxMagnitudeNumber(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitudeNumber = null;
@@ -1455,7 +1455,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MaxNative(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MaxNative(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxNative = null;
@@ -1470,7 +1470,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MaxNumber(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MaxNumber(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxNumber = null;
@@ -1485,7 +1485,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Min(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Min(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -1500,7 +1500,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MinMagnitude(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MinMagnitude(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitude = null;
@@ -1515,7 +1515,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MinMagnitudeNumber(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MinMagnitudeNumber(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitudeNumber = null;
@@ -1530,7 +1530,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MinNative(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MinNative(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinNative = null;
@@ -1545,7 +1545,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MinNumber(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MinNumber(Vector2 value1, Vector2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinNumber = null;
@@ -1560,7 +1560,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Multiply(Single left, Vector2 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Vector2 Multiply(Single left, Vector2 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -1575,7 +1575,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Multiply(Vector2 left, Single right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Multiply(Vector2 left, Single right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -1590,7 +1590,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Multiply(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Multiply(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -1605,7 +1605,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 MultiplyAddEstimate(Vector2 left, Vector2 right, Vector2 addend) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 MultiplyAddEstimate(Vector2 left, Vector2 right, Vector2 addend) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyAddEstimate = null;
@@ -1620,7 +1620,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Negate(Vector2 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Negate(Vector2 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -1635,7 +1635,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Normalize(Vector2 value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 Normalize(Vector2 value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalize = null;
@@ -1650,7 +1650,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 OnesComplement(Vector2 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 OnesComplement(Vector2 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnesComplement = null;
@@ -1665,7 +1665,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 RadiansToDegrees(Vector2 radians) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 RadiansToDegrees(Vector2 radians) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRadiansToDegrees = null;
@@ -1680,7 +1680,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Reflect(Vector2 vector, Vector2 normal) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 Reflect(Vector2 vector, Vector2 normal) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReflect = null;
@@ -1695,7 +1695,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Round(Vector2 vector, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
+    public static  Vector2 Round(Vector2 vector, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1710,7 +1710,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Round(Vector2 vector) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Round(Vector2 vector) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1725,7 +1725,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Shuffle(Vector2 vector, byte xIndex, byte yIndex) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 Shuffle(Vector2 vector, byte xIndex, byte yIndex) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShuffle = null;
@@ -1740,7 +1740,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Sin(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 Sin(Vector2 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSin = null;
@@ -1755,7 +1755,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 SquareRoot(Vector2 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 SquareRoot(Vector2 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSquareRoot = null;
@@ -1770,7 +1770,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Subtract(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Subtract(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -1785,7 +1785,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Transform(Vector2 position, Matrix3x2 matrix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Transform(Vector2 position, Matrix3x2 matrix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -1800,7 +1800,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Transform(Vector2 position, Matrix4x4 matrix) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Vector2 Transform(Vector2 position, Matrix4x4 matrix) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -1815,7 +1815,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Transform(Vector2 value, Quaternion rotation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Vector2 Transform(Vector2 value, Quaternion rotation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -1830,7 +1830,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 TransformNormal(Vector2 normal, Matrix3x2 matrix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 TransformNormal(Vector2 normal, Matrix3x2 matrix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransformNormal = null;
@@ -1845,7 +1845,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 TransformNormal(Vector2 normal, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 TransformNormal(Vector2 normal, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransformNormal = null;
@@ -1860,7 +1860,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Truncate(Vector2 vector) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector2 Truncate(Vector2 vector) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;
@@ -1875,7 +1875,7 @@ public class Vector2 extends ValueType  {
         }
     }
 
-    public static Vector2 Xor(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Vector2 Xor(Vector2 left, Vector2 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXor = null;

@@ -154,7 +154,7 @@ public class Globals extends NetObject  {
     
     // Methods section
     
-    public static ArrayObject ConstructArray(NetObject... args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
+    public static  ArrayObject ConstructArray(NetObject... args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConstructArray = null;
@@ -169,7 +169,7 @@ public class Globals extends NetObject  {
         }
     }
 
-    public static ArrayObject ConstructArrayLiteral(NetObject[] args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.MissingMethodException, system.FormatException {
+    public static  ArrayObject ConstructArrayLiteral(NetObject[] args) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConstructArrayLiteral = null;

@@ -168,7 +168,7 @@ public class CreateManifestResourceName extends TaskExtension  {
         }
     }
 
-    public static java.lang.String MakeValidEverettIdentifier(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
+    public static  java.lang.String MakeValidEverettIdentifier(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeValidEverettIdentifier = null;

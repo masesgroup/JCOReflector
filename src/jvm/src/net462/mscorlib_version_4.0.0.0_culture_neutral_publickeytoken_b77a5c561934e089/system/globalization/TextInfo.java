@@ -184,7 +184,7 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
         }
     }
 
-    public static TextInfo ReadOnly(TextInfo textInfo) throws Throwable, system.ArgumentNullException {
+    public static  TextInfo ReadOnly(TextInfo textInfo) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadOnly = null;

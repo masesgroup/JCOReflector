@@ -152,7 +152,7 @@ public class MachineKey extends NetObject  {
     
     // Methods section
     
-    public static byte[] Decode(java.lang.String encodedData, MachineKeyProtection protectionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.OutOfMemoryException {
+    public static  byte[] Decode(java.lang.String encodedData, MachineKeyProtection protectionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecode = null;
@@ -175,7 +175,7 @@ public class MachineKey extends NetObject  {
         }
     }
 
-    public static byte[] Protect(byte[] userData, java.lang.String... purposes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
+    public static  byte[] Protect(byte[] userData, java.lang.String... purposes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProtect = null;
@@ -198,7 +198,7 @@ public class MachineKey extends NetObject  {
         }
     }
 
-    public static byte[] Protect(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
+    public static  byte[] Protect(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProtect = null;
@@ -221,7 +221,7 @@ public class MachineKey extends NetObject  {
         }
     }
 
-    public static byte[] Unprotect(byte[] protectedData, java.lang.String... purposes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
+    public static  byte[] Unprotect(byte[] protectedData, java.lang.String... purposes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnprotect = null;
@@ -244,7 +244,7 @@ public class MachineKey extends NetObject  {
         }
     }
 
-    public static byte[] Unprotect(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
+    public static  byte[] Unprotect(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnprotect = null;
@@ -267,7 +267,7 @@ public class MachineKey extends NetObject  {
         }
     }
 
-    public static java.lang.String Encode(byte[] data, MachineKeyProtection protectionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
+    public static  java.lang.String Encode(byte[] data, MachineKeyProtection protectionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncode = null;
@@ -281,7 +281,7 @@ public class MachineKey extends NetObject  {
         }
     }
 
-    public static java.lang.String Encode(JCORefOut dupParam0, MachineKeyProtection dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
+    public static  java.lang.String Encode(JCORefOut dupParam0, MachineKeyProtection dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncode = null;

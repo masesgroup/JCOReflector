@@ -153,7 +153,7 @@ public class SendKeys extends NetObject  {
     
     // Methods section
     
-    public static void Flush() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidAsynchronousStateException {
+    public static  void Flush() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -163,7 +163,7 @@ public class SendKeys extends NetObject  {
         }
     }
 
-    public static void Send(java.lang.String keys) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.FormatException, system.OverflowException, system.runtime.interopservices.ExternalException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.MulticastNotSupportedException {
+    public static  void Send(java.lang.String keys) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.FormatException, system.OverflowException, system.runtime.interopservices.ExternalException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -173,7 +173,7 @@ public class SendKeys extends NetObject  {
         }
     }
 
-    public static void SendWait(java.lang.String keys) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidCastException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.MulticastNotSupportedException {
+    public static  void SendWait(java.lang.String keys) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidCastException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

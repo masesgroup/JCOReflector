@@ -306,7 +306,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlBoolean Equals(SqlDateTime x, SqlDateTime y) throws Throwable {
+    public static  SqlBoolean Equals(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -321,7 +321,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlDateTime x, SqlDateTime y) throws Throwable {
+    public static  SqlBoolean GreaterThan(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -336,7 +336,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlDateTime x, SqlDateTime y) throws Throwable {
+    public static  SqlBoolean GreaterThanOrEqual(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -351,7 +351,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlBoolean LessThan(SqlDateTime x, SqlDateTime y) throws Throwable {
+    public static  SqlBoolean LessThan(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -366,7 +366,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlDateTime x, SqlDateTime y) throws Throwable {
+    public static  SqlBoolean LessThanOrEqual(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -381,7 +381,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlBoolean NotEquals(SqlDateTime x, SqlDateTime y) throws Throwable {
+    public static  SqlBoolean NotEquals(SqlDateTime x, SqlDateTime y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -396,7 +396,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlDateTime Add(SqlDateTime x, TimeSpan t) throws Throwable, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlTypeException, system.OverflowException {
+    public static  SqlDateTime Add(SqlDateTime x, TimeSpan t) throws Throwable, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlTypeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -411,7 +411,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlDateTime Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OverflowException, system.data.sqltypes.SqlTypeException {
+    public static  SqlDateTime Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OverflowException, system.data.sqltypes.SqlTypeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -426,7 +426,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static SqlDateTime Subtract(SqlDateTime x, TimeSpan t) throws Throwable, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlTypeException, system.OverflowException {
+    public static  SqlDateTime Subtract(SqlDateTime x, TimeSpan t) throws Throwable, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlTypeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -456,7 +456,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

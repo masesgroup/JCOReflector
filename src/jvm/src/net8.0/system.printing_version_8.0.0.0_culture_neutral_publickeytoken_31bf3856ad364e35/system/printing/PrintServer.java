@@ -241,7 +241,7 @@ public class PrintServer extends PrintSystemObject  {
     
     // Methods section
     
-    public static boolean DeletePrintQueue(PrintQueue printQueue) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ObjectDisposedException {
+    public static  boolean DeletePrintQueue(PrintQueue printQueue) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeletePrintQueue = null;
@@ -255,7 +255,7 @@ public class PrintServer extends PrintSystemObject  {
         }
     }
 
-    public static boolean DeletePrintQueue(java.lang.String printQueueName) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public static  boolean DeletePrintQueue(java.lang.String printQueueName) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeletePrintQueue = null;

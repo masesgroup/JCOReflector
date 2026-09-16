@@ -154,7 +154,7 @@ public class Help extends NetObject  {
     
     // Methods section
     
-    public static void ShowHelp(Control parent, java.lang.String url, java.lang.String keyword) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException {
+    public static  void ShowHelp(Control parent, java.lang.String url, java.lang.String keyword) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -164,7 +164,7 @@ public class Help extends NetObject  {
         }
     }
 
-    public static void ShowHelp(Control parent, java.lang.String url, HelpNavigator command, NetObject parameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.InvalidOperationException, system.UriFormatException, system.ArrayTypeMismatchException, system.OverflowException {
+    public static  void ShowHelp(Control parent, java.lang.String url, HelpNavigator command, NetObject parameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.InvalidOperationException, system.UriFormatException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -174,7 +174,7 @@ public class Help extends NetObject  {
         }
     }
 
-    public static void ShowHelp(Control parent, java.lang.String url, HelpNavigator navigator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException {
+    public static  void ShowHelp(Control parent, java.lang.String url, HelpNavigator navigator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -184,7 +184,7 @@ public class Help extends NetObject  {
         }
     }
 
-    public static void ShowHelp(Control parent, java.lang.String url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException {
+    public static  void ShowHelp(Control parent, java.lang.String url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -194,7 +194,7 @@ public class Help extends NetObject  {
         }
     }
 
-    public static void ShowHelpIndex(Control parent, java.lang.String url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException {
+    public static  void ShowHelpIndex(Control parent, java.lang.String url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -204,7 +204,7 @@ public class Help extends NetObject  {
         }
     }
 
-    public static void ShowPopup(Control parent, java.lang.String caption, Point location) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.ArrayTypeMismatchException {
+    public static  void ShowPopup(Control parent, java.lang.String caption, Point location) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

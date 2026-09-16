@@ -179,7 +179,7 @@ public class XmlQualifiedName extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String ToString(java.lang.String name, java.lang.String ns) throws Throwable, system.IndexOutOfRangeException {
+    public static  java.lang.String ToString(java.lang.String name, java.lang.String ns) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;

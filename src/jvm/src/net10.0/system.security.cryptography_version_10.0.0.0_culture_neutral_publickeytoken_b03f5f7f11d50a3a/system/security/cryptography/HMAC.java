@@ -153,7 +153,7 @@ public class HMAC extends KeyedHashAlgorithm  {
     
     // Methods section
     
-    public static HMAC CreateNewHMAC() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  HMAC CreateNewHMAC() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -168,7 +168,7 @@ public class HMAC extends KeyedHashAlgorithm  {
         }
     }
 
-    public static HMAC CreateNewHMAC(java.lang.String algorithmName) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeLoadException, system.io.FileLoadException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.NullReferenceException {
+    public static  HMAC CreateNewHMAC(java.lang.String algorithmName) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeLoadException, system.io.FileLoadException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

@@ -319,7 +319,7 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
         }
     }
 
-    public static void DeriveParameters(OleDbCommand command) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.AccessViolationException, system.InvalidCastException, system.FormatException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.data.DataException {
+    public static  void DeriveParameters(OleDbCommand command) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.AccessViolationException, system.InvalidCastException, system.FormatException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.data.DataException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

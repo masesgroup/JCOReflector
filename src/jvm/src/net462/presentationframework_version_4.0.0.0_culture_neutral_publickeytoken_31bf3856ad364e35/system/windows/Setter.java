@@ -185,7 +185,7 @@ public class Setter extends SetterBase implements system.componentmodel.ISupport
     
     // Methods section
     
-    public static void ReceiveMarkupExtension(NetObject targetObject, XamlSetMarkupExtensionEventArgs eventArgs) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void ReceiveMarkupExtension(NetObject targetObject, XamlSetMarkupExtensionEventArgs eventArgs) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -195,7 +195,7 @@ public class Setter extends SetterBase implements system.componentmodel.ISupport
         }
     }
 
-    public static void ReceiveTypeConverter(NetObject targetObject, XamlSetTypeConverterEventArgs eventArgs) throws Throwable, system.ArgumentNullException {
+    public static  void ReceiveTypeConverter(NetObject targetObject, XamlSetTypeConverterEventArgs eventArgs) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

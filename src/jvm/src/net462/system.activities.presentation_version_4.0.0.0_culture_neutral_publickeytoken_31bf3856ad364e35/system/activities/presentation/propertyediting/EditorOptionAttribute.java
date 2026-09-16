@@ -160,7 +160,7 @@ public class EditorOptionAttribute extends Attribute  {
     
     // Methods section
     
-    public static boolean TryGetOptionValue(IEnumerable attributes, java.lang.String optionName, JCORefOut<NetObject> optionValue) throws Throwable, system.NullReferenceException {
+    public static  boolean TryGetOptionValue(IEnumerable attributes, java.lang.String optionName, JCORefOut<NetObject> optionValue) throws Throwable, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetOptionValue = null;

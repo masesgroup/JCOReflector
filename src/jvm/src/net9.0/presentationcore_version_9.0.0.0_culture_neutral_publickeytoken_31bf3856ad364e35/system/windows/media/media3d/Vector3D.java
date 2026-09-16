@@ -171,7 +171,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
     
     // Methods section
     
-    public static boolean Equals(Vector3D vector1, Vector3D vector2) throws Throwable {
+    public static  boolean Equals(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -199,7 +199,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static double AngleBetween(Vector3D vector1, Vector3D vector2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  double AngleBetween(Vector3D vector1, Vector3D vector2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAngleBetween = null;
@@ -239,7 +239,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static double DotProduct(Vector3D vector1, Vector3D vector2) throws Throwable {
+    public static  double DotProduct(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDotProduct = null;
@@ -293,7 +293,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point3D Add(Vector3D vector, Point3D point) throws Throwable {
+    public static  Point3D Add(Vector3D vector, Point3D point) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -308,7 +308,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point3D Subtract(Vector3D vector, Point3D point) throws Throwable {
+    public static  Point3D Subtract(Vector3D vector, Point3D point) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -323,7 +323,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector3D Add(Vector3D vector1, Vector3D vector2) throws Throwable {
+    public static  Vector3D Add(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -338,7 +338,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector3D CrossProduct(Vector3D vector1, Vector3D vector2) throws Throwable {
+    public static  Vector3D CrossProduct(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCrossProduct = null;
@@ -353,7 +353,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector3D Divide(Vector3D vector, double scalar) throws Throwable {
+    public static  Vector3D Divide(Vector3D vector, double scalar) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -368,7 +368,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector3D Multiply(double scalar, Vector3D vector) throws Throwable {
+    public static  Vector3D Multiply(double scalar, Vector3D vector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -383,7 +383,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector3D Multiply(Vector3D vector, double scalar) throws Throwable {
+    public static  Vector3D Multiply(Vector3D vector, double scalar) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -398,7 +398,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector3D Multiply(Vector3D vector, Matrix3D matrix) throws Throwable {
+    public static  Vector3D Multiply(Vector3D vector, Matrix3D matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -413,7 +413,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector3D Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
+    public static  Vector3D Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -428,7 +428,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector3D Subtract(Vector3D vector1, Vector3D vector2) throws Throwable {
+    public static  Vector3D Subtract(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

@@ -154,7 +154,7 @@ public class BitOperations extends NetObject  {
     
     // Methods section
     
-    public static boolean IsPow2(int value) throws Throwable {
+    public static  boolean IsPow2(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPow2 = null;
@@ -168,7 +168,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static boolean IsPow2(long value) throws Throwable {
+    public static  boolean IsPow2(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPow2 = null;
@@ -182,7 +182,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static boolean IsPow2(UInt32 value) throws Throwable {
+    public static  boolean IsPow2(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPow2 = null;
@@ -196,7 +196,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static boolean IsPow2(UInt64 value) throws Throwable {
+    public static  boolean IsPow2(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPow2 = null;
@@ -210,7 +210,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int LeadingZeroCount(UInt32 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  int LeadingZeroCount(UInt32 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeadingZeroCount = null;
@@ -250,7 +250,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int LeadingZeroCount(UInt64 value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static  int LeadingZeroCount(UInt64 value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeadingZeroCount = null;
@@ -290,7 +290,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int Log2(UInt32 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  int Log2(UInt32 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2 = null;
@@ -330,7 +330,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int Log2(UInt64 value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static  int Log2(UInt64 value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2 = null;
@@ -370,7 +370,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int PopCount(UInt32 value) throws Throwable {
+    public static  int PopCount(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPopCount = null;
@@ -410,7 +410,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int PopCount(UInt64 value) throws Throwable {
+    public static  int PopCount(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPopCount = null;
@@ -450,7 +450,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int TrailingZeroCount(int value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  int TrailingZeroCount(int value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrailingZeroCount = null;
@@ -490,7 +490,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int TrailingZeroCount(long value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static  int TrailingZeroCount(long value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrailingZeroCount = null;
@@ -530,7 +530,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int TrailingZeroCount(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  int TrailingZeroCount(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrailingZeroCount = null;
@@ -570,7 +570,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static int TrailingZeroCount(UInt64 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  int TrailingZeroCount(UInt64 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrailingZeroCount = null;
@@ -610,7 +610,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt32 Crc32C(UInt32 crc, byte data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  UInt32 Crc32C(UInt32 crc, byte data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCrc32C = null;
@@ -625,7 +625,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt32 Crc32C(UInt32 crc, UInt16 data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  UInt32 Crc32C(UInt32 crc, UInt16 data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCrc32C = null;
@@ -640,7 +640,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt32 Crc32C(UInt32 crc, UInt32 data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  UInt32 Crc32C(UInt32 crc, UInt32 data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCrc32C = null;
@@ -655,7 +655,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt32 Crc32C(UInt32 crc, UInt64 data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  UInt32 Crc32C(UInt32 crc, UInt64 data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCrc32C = null;
@@ -670,7 +670,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt32 RotateLeft(UInt32 value, int offset) throws Throwable {
+    public static  UInt32 RotateLeft(UInt32 value, int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRotateLeft = null;
@@ -685,7 +685,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt32 RotateRight(UInt32 value, int offset) throws Throwable {
+    public static  UInt32 RotateRight(UInt32 value, int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRotateRight = null;
@@ -700,7 +700,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt32 RoundUpToPowerOf2(UInt32 value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static  UInt32 RoundUpToPowerOf2(UInt32 value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRoundUpToPowerOf2 = null;
@@ -715,7 +715,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt64 RotateLeft(UInt64 value, int offset) throws Throwable {
+    public static  UInt64 RotateLeft(UInt64 value, int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRotateLeft = null;
@@ -730,7 +730,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt64 RotateRight(UInt64 value, int offset) throws Throwable {
+    public static  UInt64 RotateRight(UInt64 value, int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRotateRight = null;
@@ -745,7 +745,7 @@ public class BitOperations extends NetObject  {
         }
     }
 
-    public static UInt64 RoundUpToPowerOf2(UInt64 value) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  UInt64 RoundUpToPowerOf2(UInt64 value) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRoundUpToPowerOf2 = null;

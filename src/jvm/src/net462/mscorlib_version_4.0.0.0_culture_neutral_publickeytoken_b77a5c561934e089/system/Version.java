@@ -214,7 +214,7 @@ public class Version extends NetObject  {
         }
     }
 
-    public static boolean TryParse(java.lang.String input, JCORefOut<Version> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  boolean TryParse(java.lang.String input, JCORefOut<Version> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -337,7 +337,7 @@ public class Version extends NetObject  {
         }
     }
 
-    public static Version Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Version Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

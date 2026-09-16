@@ -157,7 +157,7 @@ public class VBArrayPrototype extends JSObject  {
     
     // Methods section
     
-    public static int dimensions(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  int dimensions(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectdimensions = null;
@@ -197,7 +197,7 @@ public class VBArrayPrototype extends JSObject  {
         }
     }
 
-    public static int lbound(NetObject thisob, NetObject dimension) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
+    public static  int lbound(NetObject thisob, NetObject dimension) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectlbound = null;
@@ -237,7 +237,7 @@ public class VBArrayPrototype extends JSObject  {
         }
     }
 
-    public static int ubound(NetObject thisob, NetObject dimension) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
+    public static  int ubound(NetObject thisob, NetObject dimension) throws Throwable, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectubound = null;
@@ -277,7 +277,7 @@ public class VBArrayPrototype extends JSObject  {
         }
     }
 
-    public static ArrayObject toArray(NetObject thisob, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.MissingMethodException, system.FormatException {
+    public static  ArrayObject toArray(NetObject thisob, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoArray = null;
@@ -292,7 +292,7 @@ public class VBArrayPrototype extends JSObject  {
         }
     }
 
-    public static NetObject getItem(NetObject thisob, NetObject... args) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
+    public static  NetObject getItem(NetObject thisob, NetObject... args) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetItem = null;

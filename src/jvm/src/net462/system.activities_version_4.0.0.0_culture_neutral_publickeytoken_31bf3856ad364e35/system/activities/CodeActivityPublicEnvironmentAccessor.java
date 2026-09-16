@@ -186,7 +186,7 @@ public class CodeActivityPublicEnvironmentAccessor extends ValueType  {
         }
     }
 
-    public static CodeActivityPublicEnvironmentAccessor Create(CodeActivityMetadata metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  CodeActivityPublicEnvironmentAccessor Create(CodeActivityMetadata metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

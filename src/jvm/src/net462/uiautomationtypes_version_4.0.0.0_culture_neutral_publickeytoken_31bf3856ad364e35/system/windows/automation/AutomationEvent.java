@@ -155,7 +155,7 @@ public class AutomationEvent extends AutomationIdentifier  {
     
     // Methods section
     
-    public static AutomationEvent LookupById(int id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  AutomationEvent LookupById(int id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLookupById = null;

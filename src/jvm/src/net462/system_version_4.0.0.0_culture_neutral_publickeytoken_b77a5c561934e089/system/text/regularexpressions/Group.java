@@ -156,7 +156,7 @@ public class Group extends Capture  {
     
     // Methods section
     
-    public static Group Synchronized(Group inner) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  Group Synchronized(Group inner) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSynchronized = null;

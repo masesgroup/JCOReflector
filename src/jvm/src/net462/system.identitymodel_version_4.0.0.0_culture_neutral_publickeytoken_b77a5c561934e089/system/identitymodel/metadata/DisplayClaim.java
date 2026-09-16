@@ -194,7 +194,7 @@ public class DisplayClaim extends NetObject  {
     
     // Methods section
     
-    public static DisplayClaim CreateDisplayClaimFromClaimType(java.lang.String claimType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+    public static  DisplayClaim CreateDisplayClaimFromClaimType(java.lang.String claimType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDisplayClaimFromClaimType = null;

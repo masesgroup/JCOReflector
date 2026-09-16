@@ -159,7 +159,7 @@ public class ActivationContext extends NetObject implements system.runtime.seria
     
     // Methods section
     
-    public static ActivationContext CreatePartialActivationContext(ApplicationIdentity identity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  ActivationContext CreatePartialActivationContext(ApplicationIdentity identity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePartialActivationContext = null;
@@ -174,7 +174,7 @@ public class ActivationContext extends NetObject implements system.runtime.seria
         }
     }
 
-    public static ActivationContext CreatePartialActivationContext(ApplicationIdentity identity, java.lang.String[] manifestPaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  ActivationContext CreatePartialActivationContext(ApplicationIdentity identity, java.lang.String[] manifestPaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePartialActivationContext = null;
@@ -189,7 +189,7 @@ public class ActivationContext extends NetObject implements system.runtime.seria
         }
     }
 
-    public static ActivationContext CreatePartialActivationContext(ApplicationIdentity dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  ActivationContext CreatePartialActivationContext(ApplicationIdentity dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePartialActivationContext = null;

@@ -152,7 +152,7 @@ public class Runtime extends NetObject  {
     
     // Methods section
     
-    public static boolean Equals(NetObject v1, NetObject v2) throws Throwable, system.NullReferenceException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.NotSupportedException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  boolean Equals(NetObject v1, NetObject v2) throws Throwable, system.NullReferenceException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.NotSupportedException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -166,7 +166,7 @@ public class Runtime extends NetObject  {
         }
     }
 
-    public static long DoubleToInt64(double val) throws Throwable, system.ArithmeticException {
+    public static  long DoubleToInt64(double val) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDoubleToInt64 = null;
@@ -206,7 +206,7 @@ public class Runtime extends NetObject  {
         }
     }
 
-    public static long UncheckedDecimalToInt64(Decimal val) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
+    public static  long UncheckedDecimalToInt64(Decimal val) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUncheckedDecimalToInt64 = null;

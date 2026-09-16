@@ -200,7 +200,7 @@ public class ArgumentException extends SystemException {
         }
     }
 
-    public static void ThrowIfNullOrEmpty(java.lang.String argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  void ThrowIfNullOrEmpty(java.lang.String argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -210,7 +210,7 @@ public class ArgumentException extends SystemException {
         }
     }
 
-    public static void ThrowIfNullOrWhiteSpace(java.lang.String argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  void ThrowIfNullOrWhiteSpace(java.lang.String argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

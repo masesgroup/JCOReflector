@@ -153,7 +153,7 @@ public class DES extends SymmetricAlgorithm  {
     
     // Methods section
     
-    public static boolean IsSemiWeakKey(byte[] rgbKey) throws Throwable, system.security.cryptography.CryptographicException {
+    public static  boolean IsSemiWeakKey(byte[] rgbKey) throws Throwable, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSemiWeakKey = null;
@@ -167,7 +167,7 @@ public class DES extends SymmetricAlgorithm  {
         }
     }
 
-    public static boolean IsSemiWeakKey(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicException {
+    public static  boolean IsSemiWeakKey(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSemiWeakKey = null;
@@ -181,7 +181,7 @@ public class DES extends SymmetricAlgorithm  {
         }
     }
 
-    public static boolean IsWeakKey(byte[] rgbKey) throws Throwable, system.security.cryptography.CryptographicException {
+    public static  boolean IsWeakKey(byte[] rgbKey) throws Throwable, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWeakKey = null;
@@ -195,7 +195,7 @@ public class DES extends SymmetricAlgorithm  {
         }
     }
 
-    public static boolean IsWeakKey(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicException {
+    public static  boolean IsWeakKey(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWeakKey = null;
@@ -209,7 +209,7 @@ public class DES extends SymmetricAlgorithm  {
         }
     }
 
-    public static DES CreateNewDES() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  DES CreateNewDES() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -224,7 +224,7 @@ public class DES extends SymmetricAlgorithm  {
         }
     }
 
-    public static DES CreateNewDES(java.lang.String algName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  DES CreateNewDES(java.lang.String algName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

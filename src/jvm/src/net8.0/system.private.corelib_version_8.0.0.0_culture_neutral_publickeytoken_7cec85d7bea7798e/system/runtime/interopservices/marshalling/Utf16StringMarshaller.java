@@ -151,7 +151,7 @@ public class Utf16StringMarshaller extends NetObject  {
     
     // Methods section
     
-    public static char GetPinnableReference(java.lang.String str) throws Throwable {
+    public static  char GetPinnableReference(java.lang.String str) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPinnableReference = null;

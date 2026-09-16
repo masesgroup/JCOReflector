@@ -250,7 +250,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography FromBinary(byte[] wellKnownBinary) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography FromBinary(byte[] wellKnownBinary) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBinary = null;
@@ -265,7 +265,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography FromBinary(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography FromBinary(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBinary = null;
@@ -280,7 +280,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography FromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography FromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBinary = null;
@@ -295,7 +295,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography FromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography FromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBinary = null;
@@ -310,7 +310,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography FromGml(java.lang.String geographyMarkup) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography FromGml(java.lang.String geographyMarkup) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromGml = null;
@@ -325,7 +325,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography FromGml(java.lang.String geographyMarkup, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography FromGml(java.lang.String geographyMarkup, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromGml = null;
@@ -340,7 +340,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography FromText(java.lang.String wellKnownText) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography FromText(java.lang.String wellKnownText) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromText = null;
@@ -355,7 +355,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography FromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography FromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromText = null;
@@ -370,7 +370,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography GeographyCollectionFromBinary(byte[] geographyCollectionWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography GeographyCollectionFromBinary(byte[] geographyCollectionWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGeographyCollectionFromBinary = null;
@@ -385,7 +385,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography GeographyCollectionFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography GeographyCollectionFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGeographyCollectionFromBinary = null;
@@ -400,7 +400,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography GeographyCollectionFromText(java.lang.String geographyCollectionWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography GeographyCollectionFromText(java.lang.String geographyCollectionWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGeographyCollectionFromText = null;
@@ -430,7 +430,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography LineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography LineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLineFromBinary = null;
@@ -445,7 +445,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography LineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography LineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLineFromBinary = null;
@@ -460,7 +460,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography LineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography LineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLineFromText = null;
@@ -475,7 +475,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiLineFromBinary = null;
@@ -490,7 +490,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiLineFromBinary = null;
@@ -505,7 +505,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiLineFromText = null;
@@ -520,7 +520,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiPointFromBinary = null;
@@ -535,7 +535,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiPointFromBinary = null;
@@ -550,7 +550,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiPointFromText = null;
@@ -565,7 +565,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiPolygonFromBinary = null;
@@ -580,7 +580,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiPolygonFromBinary = null;
@@ -595,7 +595,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography MultiPolygonFromText(java.lang.String multiPolygonWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography MultiPolygonFromText(java.lang.String multiPolygonWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiPolygonFromText = null;
@@ -625,7 +625,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography PointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography PointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPointFromBinary = null;
@@ -640,7 +640,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography PointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography PointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPointFromBinary = null;
@@ -655,7 +655,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography PointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography PointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPointFromText = null;
@@ -670,7 +670,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography PolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography PolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPolygonFromBinary = null;
@@ -685,7 +685,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography PolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography PolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPolygonFromBinary = null;
@@ -700,7 +700,7 @@ public class DbGeography extends NetObject  {
         }
     }
 
-    public static DbGeography PolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
+    public static  DbGeography PolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPolygonFromText = null;

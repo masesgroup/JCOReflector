@@ -197,7 +197,7 @@ public class Semaphore extends WaitHandle  {
     
     // Methods section
     
-    public static boolean TryOpenExisting(java.lang.String name, SemaphoreRights rights, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException {
+    public static  boolean TryOpenExisting(java.lang.String name, SemaphoreRights rights, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryOpenExisting = null;
@@ -211,7 +211,7 @@ public class Semaphore extends WaitHandle  {
         }
     }
 
-    public static boolean TryOpenExisting(java.lang.String name, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException {
+    public static  boolean TryOpenExisting(java.lang.String name, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryOpenExisting = null;
@@ -320,7 +320,7 @@ public class Semaphore extends WaitHandle  {
         }
     }
 
-    public static Semaphore OpenExisting(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  Semaphore OpenExisting(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenExisting = null;
@@ -335,7 +335,7 @@ public class Semaphore extends WaitHandle  {
         }
     }
 
-    public static Semaphore OpenExisting(java.lang.String name, SemaphoreRights rights) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException {
+    public static  Semaphore OpenExisting(java.lang.String name, SemaphoreRights rights) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenExisting = null;

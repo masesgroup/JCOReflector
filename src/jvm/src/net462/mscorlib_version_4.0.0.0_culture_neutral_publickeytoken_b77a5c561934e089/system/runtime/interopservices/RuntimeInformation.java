@@ -153,7 +153,7 @@ public class RuntimeInformation extends NetObject  {
     
     // Methods section
     
-    public static boolean IsOSPlatform(OSPlatform osPlatform) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
+    public static  boolean IsOSPlatform(OSPlatform osPlatform) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOSPlatform = null;

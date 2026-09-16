@@ -156,7 +156,7 @@ public class ImageCodecInfo extends NetObject  {
     
     // Methods section
     
-    public static ImageCodecInfo[] GetImageDecoders() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  ImageCodecInfo[] GetImageDecoders() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetImageDecoders = null;
@@ -177,7 +177,7 @@ public class ImageCodecInfo extends NetObject  {
         }
     }
 
-    public static ImageCodecInfo[] GetImageEncoders() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  ImageCodecInfo[] GetImageEncoders() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetImageEncoders = null;

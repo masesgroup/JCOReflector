@@ -172,7 +172,7 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
-    public static TypeUsage CreateBinaryTypeUsage(PrimitiveType primitiveType, boolean isFixedLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  TypeUsage CreateBinaryTypeUsage(PrimitiveType primitiveType, boolean isFixedLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateBinaryTypeUsage = null;
@@ -187,7 +187,7 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
-    public static TypeUsage CreateBinaryTypeUsage(PrimitiveType primitiveType, boolean isFixedLength, int maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  TypeUsage CreateBinaryTypeUsage(PrimitiveType primitiveType, boolean isFixedLength, int maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateBinaryTypeUsage = null;
@@ -202,7 +202,7 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
-    public static TypeUsage CreateDecimalTypeUsage(PrimitiveType primitiveType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  TypeUsage CreateDecimalTypeUsage(PrimitiveType primitiveType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDecimalTypeUsage = null;
@@ -217,7 +217,7 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
-    public static TypeUsage CreateDecimalTypeUsage(PrimitiveType primitiveType, byte precision, byte scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  TypeUsage CreateDecimalTypeUsage(PrimitiveType primitiveType, byte precision, byte scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDecimalTypeUsage = null;
@@ -232,7 +232,7 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
-    public static TypeUsage CreateDefaultTypeUsage(EdmType edmType) throws Throwable, system.ArgumentNullException {
+    public static  TypeUsage CreateDefaultTypeUsage(EdmType edmType) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDefaultTypeUsage = null;
@@ -247,7 +247,7 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
-    public static TypeUsage CreateStringTypeUsage(PrimitiveType primitiveType, boolean isUnicode, boolean isFixedLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  TypeUsage CreateStringTypeUsage(PrimitiveType primitiveType, boolean isUnicode, boolean isFixedLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateStringTypeUsage = null;
@@ -262,7 +262,7 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
-    public static TypeUsage CreateStringTypeUsage(PrimitiveType primitiveType, boolean isUnicode, boolean isFixedLength, int maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  TypeUsage CreateStringTypeUsage(PrimitiveType primitiveType, boolean isUnicode, boolean isFixedLength, int maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateStringTypeUsage = null;

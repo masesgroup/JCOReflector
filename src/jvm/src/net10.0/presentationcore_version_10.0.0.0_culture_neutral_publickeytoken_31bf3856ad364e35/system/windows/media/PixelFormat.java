@@ -155,7 +155,7 @@ public class PixelFormat extends ValueType  {
     
     // Methods section
     
-    public static boolean Equals(PixelFormat left, PixelFormat right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean Equals(PixelFormat left, PixelFormat right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;

@@ -154,7 +154,7 @@ public class Typeof extends UnaryOp  {
     
     // Methods section
     
-    public static java.lang.String JScriptTypeof(NetObject value) throws Throwable {
+    public static  java.lang.String JScriptTypeof(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptTypeof = null;

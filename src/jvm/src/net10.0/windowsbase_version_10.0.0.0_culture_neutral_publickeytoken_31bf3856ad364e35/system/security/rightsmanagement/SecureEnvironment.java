@@ -157,7 +157,7 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean IsUserActivated(ContentUser user) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.security.rightsmanagement.RightsManagementException {
+    public static  boolean IsUserActivated(ContentUser user) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.security.rightsmanagement.RightsManagementException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsUserActivated = null;
@@ -171,7 +171,7 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
         }
     }
 
-    public static SecureEnvironment Create(java.lang.String applicationManifest, AuthenticationType authentication, UserActivationMode userActivationMode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.ObjectDisposedException, system.UriFormatException, system.threading.AbandonedMutexException {
+    public static  SecureEnvironment Create(java.lang.String applicationManifest, AuthenticationType authentication, UserActivationMode userActivationMode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.ObjectDisposedException, system.UriFormatException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -186,7 +186,7 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
         }
     }
 
-    public static SecureEnvironment Create(java.lang.String applicationManifest, ContentUser user) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  SecureEnvironment Create(java.lang.String applicationManifest, ContentUser user) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -211,7 +211,7 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void RemoveActivatedUser(ContentUser user) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.security.rightsmanagement.RightsManagementException {
+    public static  void RemoveActivatedUser(ContentUser user) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.security.rightsmanagement.RightsManagementException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

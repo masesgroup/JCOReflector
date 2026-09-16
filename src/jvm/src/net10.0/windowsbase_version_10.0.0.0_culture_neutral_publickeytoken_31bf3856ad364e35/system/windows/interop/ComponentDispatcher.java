@@ -152,7 +152,7 @@ public class ComponentDispatcher extends NetObject  {
     
     // Methods section
     
-    public static boolean RaiseThreadMessage(JCORefOut<MSG> msg) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static  boolean RaiseThreadMessage(JCORefOut<MSG> msg) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRaiseThreadMessage = null;
@@ -166,7 +166,7 @@ public class ComponentDispatcher extends NetObject  {
         }
     }
 
-    public static void PopModal() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  void PopModal() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -176,7 +176,7 @@ public class ComponentDispatcher extends NetObject  {
         }
     }
 
-    public static void PushModal() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  void PushModal() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -186,7 +186,7 @@ public class ComponentDispatcher extends NetObject  {
         }
     }
 
-    public static void RaiseIdle() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static  void RaiseIdle() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -155,7 +155,7 @@ public class JavaScriptEncoder extends TextEncoder  {
     
     // Methods section
     
-    public static JavaScriptEncoder Create(TextEncoderSettings settings) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.ArrayTypeMismatchException {
+    public static  JavaScriptEncoder Create(TextEncoderSettings settings) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -170,7 +170,7 @@ public class JavaScriptEncoder extends TextEncoder  {
         }
     }
 
-    public static JavaScriptEncoder Create(UnicodeRange... allowedRanges) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  JavaScriptEncoder Create(UnicodeRange... allowedRanges) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

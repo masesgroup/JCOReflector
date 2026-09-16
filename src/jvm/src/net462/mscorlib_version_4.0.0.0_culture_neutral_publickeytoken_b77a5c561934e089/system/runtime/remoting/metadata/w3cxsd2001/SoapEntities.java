@@ -170,7 +170,7 @@ public class SoapEntities extends NetObject  {
     
     // Methods section
     
-    public static SoapEntities Parse(java.lang.String value) throws Throwable {
+    public static  SoapEntities Parse(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

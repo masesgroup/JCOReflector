@@ -174,7 +174,7 @@ public class ParserContext extends NetObject  {
     
     // Methods section
     
-    public static XmlParserContext ToXmlParserContext(ParserContext parserContext) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static  XmlParserContext ToXmlParserContext(ParserContext parserContext) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToXmlParserContext = null;

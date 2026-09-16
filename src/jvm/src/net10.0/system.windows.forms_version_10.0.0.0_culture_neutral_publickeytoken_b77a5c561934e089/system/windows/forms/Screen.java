@@ -157,7 +157,7 @@ public class Screen extends NetObject  {
     
     // Methods section
     
-    public static Rectangle GetBounds(Point pt) throws Throwable, system.PlatformNotSupportedException {
+    public static  Rectangle GetBounds(Point pt) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBounds = null;
@@ -172,7 +172,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Rectangle GetBounds(Rectangle rect) throws Throwable, system.PlatformNotSupportedException {
+    public static  Rectangle GetBounds(Rectangle rect) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBounds = null;
@@ -187,7 +187,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Rectangle GetBounds(Control ctl) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public static  Rectangle GetBounds(Control ctl) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBounds = null;
@@ -202,7 +202,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Rectangle GetWorkingArea(Point pt) throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
+    public static  Rectangle GetWorkingArea(Point pt) throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetWorkingArea = null;
@@ -217,7 +217,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Rectangle GetWorkingArea(Rectangle rect) throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
+    public static  Rectangle GetWorkingArea(Rectangle rect) throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetWorkingArea = null;
@@ -232,7 +232,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Rectangle GetWorkingArea(Control ctl) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
+    public static  Rectangle GetWorkingArea(Control ctl) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetWorkingArea = null;
@@ -247,7 +247,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Screen FromControl(Control control) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException {
+    public static  Screen FromControl(Control control) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromControl = null;
@@ -262,7 +262,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Screen FromPoint(Point point) throws Throwable, system.PlatformNotSupportedException {
+    public static  Screen FromPoint(Point point) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromPoint = null;
@@ -277,7 +277,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public static Screen FromRectangle(Rectangle rect) throws Throwable, system.PlatformNotSupportedException {
+    public static  Screen FromRectangle(Rectangle rect) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromRectangle = null;

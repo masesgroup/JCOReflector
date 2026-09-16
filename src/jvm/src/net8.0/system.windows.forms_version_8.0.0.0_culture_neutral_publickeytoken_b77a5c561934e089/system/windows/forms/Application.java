@@ -170,7 +170,7 @@ public class Application extends NetObject  {
     
     // Methods section
     
-    public static boolean FilterMessage(JCORefOut<Message> message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean FilterMessage(JCORefOut<Message> message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFilterMessage = null;
@@ -184,7 +184,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static boolean SetHighDpiMode(HighDpiMode highDpiMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static  boolean SetHighDpiMode(HighDpiMode highDpiMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetHighDpiMode = null;
@@ -198,7 +198,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static boolean SetSuspendState(PowerState state, boolean force, boolean disableWakeEvent) throws Throwable {
+    public static  boolean SetSuspendState(PowerState state, boolean force, boolean disableWakeEvent) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetSuspendState = null;
@@ -212,7 +212,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static ApartmentState OleRequired() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  ApartmentState OleRequired() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOleRequired = null;
@@ -227,7 +227,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void AddMessageFilter(IMessageFilter value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  void AddMessageFilter(IMessageFilter value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -237,7 +237,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void DoEvents() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  void DoEvents() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -247,7 +247,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void EnableVisualStyles() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException {
+    public static  void EnableVisualStyles() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -257,7 +257,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void Exit() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public static  void Exit() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -267,7 +267,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void Exit(CancelEventArgs e) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public static  void Exit(CancelEventArgs e) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -277,7 +277,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void ExitThread() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
+    public static  void ExitThread() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -287,7 +287,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void OnThreadException(NetException t) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public static  void OnThreadException(NetException t) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -297,7 +297,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void RaiseIdle(EventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  void RaiseIdle(EventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -307,7 +307,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void RemoveMessageFilter(IMessageFilter value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  void RemoveMessageFilter(IMessageFilter value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -317,7 +317,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void Restart() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.NullReferenceException, system.ObjectDisposedException, system.AggregateException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException {
+    public static  void Restart() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.NullReferenceException, system.ObjectDisposedException, system.AggregateException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -327,7 +327,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void Run() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  void Run() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -337,7 +337,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void Run(ApplicationContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  void Run(ApplicationContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -347,7 +347,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void Run(Form mainForm) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  void Run(Form mainForm) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -357,7 +357,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void SetCompatibleTextRenderingDefault(boolean defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void SetCompatibleTextRenderingDefault(boolean defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -367,7 +367,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void SetDefaultFont(Font font) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
+    public static  void SetDefaultFont(Font font) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -377,7 +377,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void SetUnhandledExceptionMode(UnhandledExceptionMode mode, boolean threadScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void SetUnhandledExceptionMode(UnhandledExceptionMode mode, boolean threadScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -387,7 +387,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void SetUnhandledExceptionMode(UnhandledExceptionMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void SetUnhandledExceptionMode(UnhandledExceptionMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -397,7 +397,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public static void UnregisterMessageLoop() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  void UnregisterMessageLoop() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

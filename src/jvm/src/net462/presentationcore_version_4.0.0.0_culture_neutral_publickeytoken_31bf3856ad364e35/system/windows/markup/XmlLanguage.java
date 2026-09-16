@@ -185,7 +185,7 @@ public class XmlLanguage extends NetObject  {
         }
     }
 
-    public static XmlLanguage GetLanguage(java.lang.String ietfLanguageTag) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  XmlLanguage GetLanguage(java.lang.String ietfLanguageTag) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLanguage = null;

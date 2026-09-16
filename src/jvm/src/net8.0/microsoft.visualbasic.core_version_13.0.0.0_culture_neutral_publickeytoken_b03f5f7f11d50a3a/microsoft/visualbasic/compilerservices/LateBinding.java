@@ -153,7 +153,7 @@ public class LateBinding extends NetObject  {
     
     // Methods section
     
-    public static NetObject LateGet(NetObject o, NetType objType, java.lang.String name, NetObject[] args, java.lang.String[] paramnames, boolean[] CopyBack) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.MissingMethodException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OverflowException, system.MissingMemberException, system.reflection.AmbiguousMatchException {
+    public static  NetObject LateGet(NetObject o, NetType objType, java.lang.String name, NetObject[] args, java.lang.String[] paramnames, boolean[] CopyBack) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.MissingMethodException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OverflowException, system.MissingMemberException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLateGet = null;
@@ -168,7 +168,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static NetObject LateGet(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.MissingMethodException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OverflowException, system.MissingMemberException, system.reflection.AmbiguousMatchException {
+    public static  NetObject LateGet(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.MissingMethodException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OverflowException, system.MissingMemberException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLateGet = null;
@@ -183,7 +183,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static NetObject LateIndexGet(NetObject o, NetObject[] args, java.lang.String[] paramnames) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.RankException, system.OverflowException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public static  NetObject LateIndexGet(NetObject o, NetObject[] args, java.lang.String[] paramnames) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.RankException, system.OverflowException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLateIndexGet = null;
@@ -198,7 +198,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static NetObject LateIndexGet(NetObject dupParam0, NetObject[] dupParam1, JCORefOut dupParam2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.RankException, system.OverflowException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public static  NetObject LateIndexGet(NetObject dupParam0, NetObject[] dupParam1, JCORefOut dupParam2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.RankException, system.OverflowException, system.InvalidCastException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLateIndexGet = null;
@@ -213,7 +213,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateCall(NetObject o, NetType objType, java.lang.String name, NetObject[] args, java.lang.String[] paramnames, boolean[] CopyBack) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+    public static  void LateCall(NetObject o, NetType objType, java.lang.String name, NetObject[] args, java.lang.String[] paramnames, boolean[] CopyBack) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -223,7 +223,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateCall(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+    public static  void LateCall(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -233,7 +233,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateIndexSet(NetObject o, NetObject[] args, java.lang.String[] paramnames) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.InvalidCastException, system.OverflowException, system.RankException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public static  void LateIndexSet(NetObject o, NetObject[] args, java.lang.String[] paramnames) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.InvalidCastException, system.OverflowException, system.RankException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -243,7 +243,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateIndexSet(NetObject dupParam0, NetObject[] dupParam1, JCORefOut dupParam2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.InvalidCastException, system.OverflowException, system.RankException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public static  void LateIndexSet(NetObject dupParam0, NetObject[] dupParam1, JCORefOut dupParam2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.InvalidCastException, system.OverflowException, system.RankException, system.MissingMemberException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -253,7 +253,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateIndexSetComplex(NetObject o, NetObject[] args, java.lang.String[] paramnames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OverflowException, system.RankException, system.MissingMemberException, system.ArgumentNullException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.NullReferenceException {
+    public static  void LateIndexSetComplex(NetObject o, NetObject[] args, java.lang.String[] paramnames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OverflowException, system.RankException, system.MissingMemberException, system.ArgumentNullException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -263,7 +263,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateIndexSetComplex(NetObject dupParam0, NetObject[] dupParam1, JCORefOut dupParam2, boolean dupParam3, boolean dupParam4) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OverflowException, system.RankException, system.MissingMemberException, system.ArgumentNullException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.NullReferenceException {
+    public static  void LateIndexSetComplex(NetObject dupParam0, NetObject[] dupParam1, JCORefOut dupParam2, boolean dupParam3, boolean dupParam4) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OverflowException, system.RankException, system.MissingMemberException, system.ArgumentNullException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -273,7 +273,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateSet(NetObject o, NetType objType, java.lang.String name, NetObject[] args, java.lang.String[] paramnames) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
+    public static  void LateSet(NetObject o, NetType objType, java.lang.String name, NetObject[] args, java.lang.String[] paramnames) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -283,7 +283,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateSet(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCORefOut dupParam4) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
+    public static  void LateSet(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCORefOut dupParam4) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -293,7 +293,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateSetComplex(NetObject o, NetType objType, java.lang.String name, NetObject[] args, java.lang.String[] paramnames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
+    public static  void LateSetComplex(NetObject o, NetType objType, java.lang.String name, NetObject[] args, java.lang.String[] paramnames, boolean OptimisticSet, boolean RValueBase) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -303,7 +303,7 @@ public class LateBinding extends NetObject  {
         }
     }
 
-    public static void LateSetComplex(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCORefOut dupParam4, boolean dupParam5, boolean dupParam6) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
+    public static  void LateSetComplex(NetObject dupParam0, NetType dupParam1, java.lang.String dupParam2, NetObject[] dupParam3, JCORefOut dupParam4, boolean dupParam5, boolean dupParam6) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.MissingMethodException, system.InvalidCastException, system.OverflowException, system.RankException, system.NullReferenceException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

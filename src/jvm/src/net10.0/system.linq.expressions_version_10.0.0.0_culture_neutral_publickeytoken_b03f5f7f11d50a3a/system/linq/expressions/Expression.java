@@ -195,7 +195,7 @@ public class Expression extends NetObject  {
     
     // Methods section
     
-    public static boolean TryGetActionType(NetType[] typeArgs, JCORefOut<NetType> actionType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  boolean TryGetActionType(NetType[] typeArgs, JCORefOut<NetType> actionType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetActionType = null;
@@ -209,7 +209,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static boolean TryGetFuncType(NetType[] typeArgs, JCORefOut<NetType> funcType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  boolean TryGetFuncType(NetType[] typeArgs, JCORefOut<NetType> funcType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetFuncType = null;
@@ -223,7 +223,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Add(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Add(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -238,7 +238,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Add(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Add(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -253,7 +253,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression AddAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddAssign = null;
@@ -268,7 +268,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression AddAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddAssign = null;
@@ -283,7 +283,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression AddAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddAssign = null;
@@ -298,7 +298,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression AddAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddAssignChecked = null;
@@ -313,7 +313,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression AddAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddAssignChecked = null;
@@ -328,7 +328,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression AddAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddAssignChecked = null;
@@ -343,7 +343,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression AddChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddChecked = null;
@@ -358,7 +358,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddChecked(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression AddChecked(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddChecked = null;
@@ -373,7 +373,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression And(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression And(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAnd = null;
@@ -388,7 +388,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression And(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression And(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAnd = null;
@@ -403,7 +403,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AndAlso(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression AndAlso(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAndAlso = null;
@@ -418,7 +418,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AndAlso(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression AndAlso(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAndAlso = null;
@@ -433,7 +433,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AndAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression AndAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAndAssign = null;
@@ -448,7 +448,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AndAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression AndAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAndAssign = null;
@@ -463,7 +463,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AndAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression AndAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAndAssign = null;
@@ -478,7 +478,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ArrayIndex(Expression array, Expression index) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression ArrayIndex(Expression array, Expression index) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectArrayIndex = null;
@@ -493,7 +493,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Assign(Expression left, Expression right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  BinaryExpression Assign(Expression left, Expression right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAssign = null;
@@ -508,7 +508,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Coalesce(Expression left, Expression right, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Coalesce(Expression left, Expression right, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCoalesce = null;
@@ -523,7 +523,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Coalesce(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Coalesce(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCoalesce = null;
@@ -538,7 +538,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Divide(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Divide(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -553,7 +553,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Divide(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Divide(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -568,7 +568,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression DivideAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression DivideAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivideAssign = null;
@@ -583,7 +583,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression DivideAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression DivideAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivideAssign = null;
@@ -598,7 +598,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression DivideAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression DivideAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivideAssign = null;
@@ -613,7 +613,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Equal(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Equal(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEqual = null;
@@ -628,7 +628,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Equal(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Equal(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEqual = null;
@@ -643,7 +643,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ExclusiveOr(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression ExclusiveOr(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExclusiveOr = null;
@@ -658,7 +658,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ExclusiveOr(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression ExclusiveOr(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExclusiveOr = null;
@@ -673,7 +673,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression ExclusiveOrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExclusiveOrAssign = null;
@@ -688,7 +688,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression ExclusiveOrAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExclusiveOrAssign = null;
@@ -703,7 +703,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression ExclusiveOrAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExclusiveOrAssign = null;
@@ -718,7 +718,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression GreaterThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression GreaterThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -733,7 +733,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression GreaterThan(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression GreaterThan(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -748,7 +748,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression GreaterThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression GreaterThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -763,7 +763,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression GreaterThanOrEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression GreaterThanOrEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -778,7 +778,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LeftShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression LeftShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeftShift = null;
@@ -793,7 +793,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LeftShift(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression LeftShift(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeftShift = null;
@@ -808,7 +808,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LeftShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression LeftShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeftShiftAssign = null;
@@ -823,7 +823,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LeftShiftAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression LeftShiftAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeftShiftAssign = null;
@@ -838,7 +838,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LeftShiftAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression LeftShiftAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeftShiftAssign = null;
@@ -853,7 +853,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LessThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression LessThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -868,7 +868,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LessThan(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression LessThan(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -883,7 +883,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LessThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression LessThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -898,7 +898,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LessThanOrEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression LessThanOrEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -913,7 +913,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right, boolean liftToNull, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right, boolean liftToNull, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeBinary = null;
@@ -928,7 +928,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeBinary = null;
@@ -943,7 +943,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeBinary = null;
@@ -958,7 +958,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Modulo(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Modulo(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModulo = null;
@@ -973,7 +973,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Modulo(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Modulo(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModulo = null;
@@ -988,7 +988,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ModuloAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression ModuloAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModuloAssign = null;
@@ -1003,7 +1003,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ModuloAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression ModuloAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModuloAssign = null;
@@ -1018,7 +1018,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ModuloAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression ModuloAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModuloAssign = null;
@@ -1033,7 +1033,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Multiply(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Multiply(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -1048,7 +1048,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Multiply(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Multiply(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -1063,7 +1063,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression MultiplyAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyAssign = null;
@@ -1078,7 +1078,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression MultiplyAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyAssign = null;
@@ -1093,7 +1093,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression MultiplyAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyAssign = null;
@@ -1108,7 +1108,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression MultiplyAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyAssignChecked = null;
@@ -1123,7 +1123,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression MultiplyAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyAssignChecked = null;
@@ -1138,7 +1138,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression MultiplyAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyAssignChecked = null;
@@ -1153,7 +1153,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression MultiplyChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyChecked = null;
@@ -1168,7 +1168,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyChecked(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression MultiplyChecked(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyChecked = null;
@@ -1183,7 +1183,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression NotEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression NotEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEqual = null;
@@ -1198,7 +1198,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression NotEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression NotEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEqual = null;
@@ -1213,7 +1213,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Or(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Or(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOr = null;
@@ -1228,7 +1228,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Or(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Or(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOr = null;
@@ -1243,7 +1243,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression OrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression OrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrAssign = null;
@@ -1258,7 +1258,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression OrAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression OrAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrAssign = null;
@@ -1273,7 +1273,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression OrAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression OrAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrAssign = null;
@@ -1288,7 +1288,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression OrElse(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression OrElse(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrElse = null;
@@ -1303,7 +1303,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression OrElse(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression OrElse(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrElse = null;
@@ -1318,7 +1318,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Power(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Power(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPower = null;
@@ -1333,7 +1333,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Power(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Power(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPower = null;
@@ -1348,7 +1348,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression PowerAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression PowerAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPowerAssign = null;
@@ -1363,7 +1363,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression PowerAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression PowerAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPowerAssign = null;
@@ -1378,7 +1378,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression PowerAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression PowerAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPowerAssign = null;
@@ -1393,7 +1393,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ReferenceEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression ReferenceEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReferenceEqual = null;
@@ -1408,7 +1408,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ReferenceNotEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression ReferenceNotEqual(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReferenceNotEqual = null;
@@ -1423,7 +1423,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression RightShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression RightShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRightShift = null;
@@ -1438,7 +1438,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression RightShift(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression RightShift(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRightShift = null;
@@ -1453,7 +1453,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression RightShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression RightShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRightShiftAssign = null;
@@ -1468,7 +1468,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression RightShiftAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression RightShiftAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRightShiftAssign = null;
@@ -1483,7 +1483,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression RightShiftAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression RightShiftAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRightShiftAssign = null;
@@ -1498,7 +1498,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Subtract(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression Subtract(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -1513,7 +1513,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Subtract(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression Subtract(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -1528,7 +1528,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression SubtractAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractAssign = null;
@@ -1543,7 +1543,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression SubtractAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractAssign = null;
@@ -1558,7 +1558,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression SubtractAssign(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractAssign = null;
@@ -1573,7 +1573,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression SubtractAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractAssignChecked = null;
@@ -1588,7 +1588,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression SubtractAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractAssignChecked = null;
@@ -1603,7 +1603,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression SubtractAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractAssignChecked = null;
@@ -1618,7 +1618,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BinaryExpression SubtractChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractChecked = null;
@@ -1633,7 +1633,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractChecked(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  BinaryExpression SubtractChecked(Expression left, Expression right) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractChecked = null;
@@ -1648,7 +1648,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -1663,7 +1663,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -1678,7 +1678,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BlockExpression Block(Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -1693,7 +1693,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BlockExpression Block(Expression arg0, Expression arg1) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  BlockExpression Block(Expression arg0, Expression arg1) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -1708,7 +1708,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BlockExpression Block(Expression... expressions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  BlockExpression Block(Expression... expressions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -1723,7 +1723,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BlockExpression Block(NetType type, Expression... expressions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static  BlockExpression Block(NetType type, Expression... expressions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -1738,7 +1738,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static CatchBlock Catch(ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
+    public static  CatchBlock Catch(ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCatch = null;
@@ -1753,7 +1753,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static CatchBlock Catch(ParameterExpression variable, Expression body) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
+    public static  CatchBlock Catch(ParameterExpression variable, Expression body) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCatch = null;
@@ -1768,7 +1768,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static CatchBlock Catch(NetType type, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  CatchBlock Catch(NetType type, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCatch = null;
@@ -1783,7 +1783,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static CatchBlock Catch(NetType type, Expression body) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  CatchBlock Catch(NetType type, Expression body) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCatch = null;
@@ -1798,7 +1798,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static CatchBlock MakeCatchBlock(NetType type, ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  CatchBlock MakeCatchBlock(NetType type, ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeCatchBlock = null;
@@ -1813,7 +1813,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCondition = null;
@@ -1828,7 +1828,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCondition = null;
@@ -1843,7 +1843,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ConditionalExpression IfThen(Expression test, Expression ifTrue) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  ConditionalExpression IfThen(Expression test, Expression ifTrue) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIfThen = null;
@@ -1858,7 +1858,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ConditionalExpression IfThenElse(Expression test, Expression ifTrue, Expression ifFalse) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  ConditionalExpression IfThenElse(Expression test, Expression ifTrue, Expression ifFalse) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIfThenElse = null;
@@ -1873,7 +1873,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ConstantExpression Constant(NetObject value, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  ConstantExpression Constant(NetObject value, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConstant = null;
@@ -1888,7 +1888,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ConstantExpression Constant(NetObject value) throws Throwable {
+    public static  ConstantExpression Constant(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConstant = null;
@@ -1903,7 +1903,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DebugInfoExpression ClearDebugInfo(SymbolDocumentInfo document) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  DebugInfoExpression ClearDebugInfo(SymbolDocumentInfo document) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClearDebugInfo = null;
@@ -1918,7 +1918,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DebugInfoExpression DebugInfo(SymbolDocumentInfo document, int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  DebugInfoExpression DebugInfo(SymbolDocumentInfo document, int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDebugInfo = null;
@@ -1933,7 +1933,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DefaultExpression Default(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  DefaultExpression Default(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefault = null;
@@ -1948,7 +1948,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DefaultExpression Empty() throws Throwable {
+    public static  DefaultExpression Empty() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEmpty = null;
@@ -1963,7 +1963,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -1978,7 +1978,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -1993,7 +1993,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -2008,7 +2008,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public static  DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -2023,7 +2023,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression... arguments) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression... arguments) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -2038,7 +2038,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static  DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -2053,7 +2053,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static  DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -2068,7 +2068,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static  DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -2083,7 +2083,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static  DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -2098,7 +2098,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
+    public static  DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -2113,7 +2113,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ElementInit ElementInit(MethodInfo addMethod, Expression... arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
+    public static  ElementInit ElementInit(MethodInfo addMethod, Expression... arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectElementInit = null;
@@ -2173,7 +2173,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Break(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Break(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBreak = null;
@@ -2188,7 +2188,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Break(LabelTarget target, Expression value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Break(LabelTarget target, Expression value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBreak = null;
@@ -2203,7 +2203,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Break(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Break(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBreak = null;
@@ -2218,7 +2218,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Break(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Break(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBreak = null;
@@ -2233,7 +2233,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Continue(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Continue(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContinue = null;
@@ -2248,7 +2248,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Continue(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Continue(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContinue = null;
@@ -2263,7 +2263,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Goto(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Goto(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGoto = null;
@@ -2278,7 +2278,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Goto(LabelTarget target, Expression value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Goto(LabelTarget target, Expression value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGoto = null;
@@ -2293,7 +2293,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Goto(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Goto(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGoto = null;
@@ -2308,7 +2308,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Goto(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Goto(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGoto = null;
@@ -2323,7 +2323,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression MakeGoto(GotoExpressionKind kind, LabelTarget target, Expression value, NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
+    public static  GotoExpression MakeGoto(GotoExpressionKind kind, LabelTarget target, Expression value, NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeGoto = null;
@@ -2338,7 +2338,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Return(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Return(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReturn = null;
@@ -2353,7 +2353,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Return(LabelTarget target, Expression value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Return(LabelTarget target, Expression value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReturn = null;
@@ -2368,7 +2368,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Return(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Return(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReturn = null;
@@ -2383,7 +2383,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Return(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  GotoExpression Return(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReturn = null;
@@ -2398,7 +2398,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static IndexExpression ArrayAccess(Expression array, Expression... indexes) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  IndexExpression ArrayAccess(Expression array, Expression... indexes) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectArrayAccess = null;
@@ -2413,7 +2413,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static IndexExpression Property(Expression instance, PropertyInfo indexer, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
+    public static  IndexExpression Property(Expression instance, PropertyInfo indexer, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -2428,7 +2428,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static IndexExpression Property(Expression instance, java.lang.String propertyName, Expression... arguments) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  IndexExpression Property(Expression instance, java.lang.String propertyName, Expression... arguments) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -2443,7 +2443,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static InvocationExpression Invoke(Expression expression, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
+    public static  InvocationExpression Invoke(Expression expression, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvoke = null;
@@ -2458,7 +2458,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LabelExpression Label(LabelTarget target, Expression defaultValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
+    public static  LabelExpression Label(LabelTarget target, Expression defaultValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLabel = null;
@@ -2473,7 +2473,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LabelExpression Label(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  LabelExpression Label(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLabel = null;
@@ -2488,7 +2488,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LabelTarget Label() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+    public static  LabelTarget Label() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLabel = null;
@@ -2503,7 +2503,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LabelTarget Label(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+    public static  LabelTarget Label(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLabel = null;
@@ -2518,7 +2518,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LabelTarget Label(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  LabelTarget Label(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLabel = null;
@@ -2533,7 +2533,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LabelTarget Label(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+    public static  LabelTarget Label(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLabel = null;
@@ -2548,7 +2548,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LambdaExpression Lambda(Expression body, boolean tailCall, ParameterExpression... parameters) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
+    public static  LambdaExpression Lambda(Expression body, boolean tailCall, ParameterExpression... parameters) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -2563,7 +2563,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LambdaExpression Lambda(Expression body, ParameterExpression... parameters) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
+    public static  LambdaExpression Lambda(Expression body, ParameterExpression... parameters) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -2578,7 +2578,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LambdaExpression Lambda(NetType delegateType, Expression body, boolean tailCall, ParameterExpression... parameters) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
+    public static  LambdaExpression Lambda(NetType delegateType, Expression body, boolean tailCall, ParameterExpression... parameters) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -2593,7 +2593,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LambdaExpression Lambda(NetType delegateType, Expression body, ParameterExpression... parameters) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
+    public static  LambdaExpression Lambda(NetType delegateType, Expression body, ParameterExpression... parameters) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -2608,7 +2608,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ListInitExpression ListInit(NewExpression newExpression, ElementInit... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
+    public static  ListInitExpression ListInit(NewExpression newExpression, ElementInit... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListInit = null;
@@ -2623,7 +2623,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ListInitExpression ListInit(NewExpression newExpression, Expression... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
+    public static  ListInitExpression ListInit(NewExpression newExpression, Expression... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListInit = null;
@@ -2638,7 +2638,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ListInitExpression ListInit(NewExpression newExpression, MethodInfo addMethod, Expression... initializers) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
+    public static  ListInitExpression ListInit(NewExpression newExpression, MethodInfo addMethod, Expression... initializers) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListInit = null;
@@ -2653,7 +2653,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LoopExpression Loop(Expression body, LabelTarget _break, LabelTarget _continue) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  LoopExpression Loop(Expression body, LabelTarget _break, LabelTarget _continue) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoop = null;
@@ -2668,7 +2668,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LoopExpression Loop(Expression body, LabelTarget _break) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  LoopExpression Loop(Expression body, LabelTarget _break) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoop = null;
@@ -2683,7 +2683,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LoopExpression Loop(Expression body) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException {
+    public static  LoopExpression Loop(Expression body) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoop = null;
@@ -2698,7 +2698,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberAssignment Bind(MemberInfo member, Expression expression) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  MemberAssignment Bind(MemberInfo member, Expression expression) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBind = null;
@@ -2713,7 +2713,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberAssignment Bind(MethodInfo propertyAccessor, Expression expression) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MemberAssignment Bind(MethodInfo propertyAccessor, Expression expression) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBind = null;
@@ -2728,7 +2728,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression Field(Expression expression, FieldInfo field) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  MemberExpression Field(Expression expression, FieldInfo field) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectField = null;
@@ -2743,7 +2743,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression Field(Expression expression, java.lang.String fieldName) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  MemberExpression Field(Expression expression, java.lang.String fieldName) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectField = null;
@@ -2758,7 +2758,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression Field(Expression expression, NetType type, java.lang.String fieldName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  MemberExpression Field(Expression expression, NetType type, java.lang.String fieldName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectField = null;
@@ -2773,7 +2773,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression MakeMemberAccess(Expression expression, MemberInfo member) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MemberExpression MakeMemberAccess(Expression expression, MemberInfo member) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeMemberAccess = null;
@@ -2788,7 +2788,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression Property(Expression expression, MethodInfo propertyAccessor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MemberExpression Property(Expression expression, MethodInfo propertyAccessor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -2803,7 +2803,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression Property(Expression expression, PropertyInfo property) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  MemberExpression Property(Expression expression, PropertyInfo property) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -2818,7 +2818,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression Property(Expression expression, java.lang.String propertyName) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  MemberExpression Property(Expression expression, java.lang.String propertyName) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -2833,7 +2833,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression Property(Expression expression, NetType type, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  MemberExpression Property(Expression expression, NetType type, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -2848,7 +2848,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberExpression PropertyOrField(Expression expression, java.lang.String propertyOrFieldName) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  MemberExpression PropertyOrField(Expression expression, java.lang.String propertyOrFieldName) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPropertyOrField = null;
@@ -2863,7 +2863,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberInitExpression MemberInit(NewExpression newExpression, MemberBinding... bindings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
+    public static  MemberInitExpression MemberInit(NewExpression newExpression, MemberBinding... bindings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMemberInit = null;
@@ -2878,7 +2878,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberListBinding ListBind(MemberInfo member, ElementInit... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  MemberListBinding ListBind(MemberInfo member, ElementInit... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListBind = null;
@@ -2893,7 +2893,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberListBinding ListBind(MethodInfo propertyAccessor, ElementInit... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  MemberListBinding ListBind(MethodInfo propertyAccessor, ElementInit... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListBind = null;
@@ -2908,7 +2908,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberMemberBinding MemberBind(MemberInfo member, MemberBinding... bindings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
+    public static  MemberMemberBinding MemberBind(MemberInfo member, MemberBinding... bindings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMemberBind = null;
@@ -2923,7 +2923,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MemberMemberBinding MemberBind(MethodInfo propertyAccessor, MemberBinding... bindings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  MemberMemberBinding MemberBind(MethodInfo propertyAccessor, MemberBinding... bindings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMemberBind = null;
@@ -2938,7 +2938,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression ArrayIndex(Expression array, Expression... indexes) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
+    public static  MethodCallExpression ArrayIndex(Expression array, Expression... indexes) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectArrayIndex = null;
@@ -2953,7 +2953,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MethodCallExpression Call(Expression instance, MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -2968,7 +2968,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression arg0, Expression arg1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MethodCallExpression Call(Expression instance, MethodInfo method, Expression arg0, Expression arg1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -2983,7 +2983,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
+    public static  MethodCallExpression Call(Expression instance, MethodInfo method, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -2998,7 +2998,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(Expression instance, MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MethodCallExpression Call(Expression instance, MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3013,7 +3013,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(Expression instance, java.lang.String methodName, NetType[] typeArguments, Expression... arguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException {
+    public static  MethodCallExpression Call(Expression instance, java.lang.String methodName, NetType[] typeArguments, Expression... arguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3028,7 +3028,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3043,7 +3043,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3058,7 +3058,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3073,7 +3073,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3088,7 +3088,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  MethodCallExpression Call(MethodInfo method, Expression arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3103,7 +3103,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(MethodInfo method, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
+    public static  MethodCallExpression Call(MethodInfo method, Expression... arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3118,7 +3118,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(NetType type, java.lang.String methodName, NetType[] typeArguments, Expression... arguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException {
+    public static  MethodCallExpression Call(NetType type, java.lang.String methodName, NetType[] typeArguments, Expression... arguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -3133,7 +3133,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NewArrayExpression NewArrayBounds(NetType type, Expression... bounds) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  NewArrayExpression NewArrayBounds(NetType type, Expression... bounds) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewArrayBounds = null;
@@ -3148,7 +3148,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NewArrayExpression NewArrayInit(NetType type, Expression... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  NewArrayExpression NewArrayInit(NetType type, Expression... initializers) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewArrayInit = null;
@@ -3163,7 +3163,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NewExpression New(ConstructorInfo constructor, Expression... arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  NewExpression New(ConstructorInfo constructor, Expression... arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNew = null;
@@ -3178,7 +3178,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NewExpression New(ConstructorInfo constructor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  NewExpression New(ConstructorInfo constructor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNew = null;
@@ -3193,7 +3193,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NewExpression New(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
+    public static  NewExpression New(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNew = null;
@@ -3208,7 +3208,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ParameterExpression Parameter(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
+    public static  ParameterExpression Parameter(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParameter = null;
@@ -3223,7 +3223,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ParameterExpression Parameter(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
+    public static  ParameterExpression Parameter(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParameter = null;
@@ -3238,7 +3238,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ParameterExpression Variable(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
+    public static  ParameterExpression Variable(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVariable = null;
@@ -3253,7 +3253,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ParameterExpression Variable(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
+    public static  ParameterExpression Variable(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVariable = null;
@@ -3268,7 +3268,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static RuntimeVariablesExpression RuntimeVariables(ParameterExpression... variables) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
+    public static  RuntimeVariablesExpression RuntimeVariables(ParameterExpression... variables) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRuntimeVariables = null;
@@ -3283,7 +3283,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SwitchCase SwitchCase(Expression body, Expression... testValues) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
+    public static  SwitchCase SwitchCase(Expression body, Expression... testValues) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitchCase = null;
@@ -3298,7 +3298,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SwitchExpression Switch(Expression switchValue, Expression defaultBody, SwitchCase... cases) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  SwitchExpression Switch(Expression switchValue, Expression defaultBody, SwitchCase... cases) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitch = null;
@@ -3313,7 +3313,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SwitchExpression Switch(Expression switchValue, Expression defaultBody, MethodInfo comparison, SwitchCase... cases) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  SwitchExpression Switch(Expression switchValue, Expression defaultBody, MethodInfo comparison, SwitchCase... cases) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitch = null;
@@ -3328,7 +3328,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SwitchExpression Switch(Expression switchValue, SwitchCase... cases) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  SwitchExpression Switch(Expression switchValue, SwitchCase... cases) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitch = null;
@@ -3343,7 +3343,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SwitchExpression Switch(NetType type, Expression switchValue, Expression defaultBody, MethodInfo comparison, SwitchCase... cases) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  SwitchExpression Switch(NetType type, Expression switchValue, Expression defaultBody, MethodInfo comparison, SwitchCase... cases) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitch = null;
@@ -3358,7 +3358,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor, Guid documentType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
+    public static  SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor, Guid documentType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSymbolDocument = null;
@@ -3373,7 +3373,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
+    public static  SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSymbolDocument = null;
@@ -3388,7 +3388,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
+    public static  SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSymbolDocument = null;
@@ -3403,7 +3403,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  SymbolDocumentInfo SymbolDocument(java.lang.String fileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSymbolDocument = null;
@@ -3418,7 +3418,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static TryExpression TryCatch(Expression body, CatchBlock... handlers) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
+    public static  TryExpression TryCatch(Expression body, CatchBlock... handlers) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCatch = null;
@@ -3433,7 +3433,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static TryExpression TryCatchFinally(Expression body, Expression _finally, CatchBlock... handlers) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
+    public static  TryExpression TryCatchFinally(Expression body, Expression _finally, CatchBlock... handlers) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCatchFinally = null;
@@ -3448,7 +3448,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static TryExpression TryFault(Expression body, Expression fault) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
+    public static  TryExpression TryFault(Expression body, Expression fault) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryFault = null;
@@ -3463,7 +3463,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static TryExpression TryFinally(Expression body, Expression _finally) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
+    public static  TryExpression TryFinally(Expression body, Expression _finally) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryFinally = null;
@@ -3478,7 +3478,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static TypeBinaryExpression TypeEqual(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  TypeBinaryExpression TypeEqual(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTypeEqual = null;
@@ -3493,7 +3493,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static TypeBinaryExpression TypeIs(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  TypeBinaryExpression TypeIs(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTypeIs = null;
@@ -3508,7 +3508,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression ArrayLength(Expression array) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression ArrayLength(Expression array) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectArrayLength = null;
@@ -3523,7 +3523,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Convert(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression Convert(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -3538,7 +3538,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Convert(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression Convert(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -3553,7 +3553,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression ConvertChecked(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression ConvertChecked(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertChecked = null;
@@ -3568,7 +3568,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression ConvertChecked(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression ConvertChecked(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertChecked = null;
@@ -3583,7 +3583,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Decrement(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression Decrement(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecrement = null;
@@ -3598,7 +3598,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Decrement(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression Decrement(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecrement = null;
@@ -3613,7 +3613,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Increment(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression Increment(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIncrement = null;
@@ -3628,7 +3628,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Increment(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression Increment(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIncrement = null;
@@ -3643,7 +3643,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression IsFalse(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression IsFalse(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFalse = null;
@@ -3658,7 +3658,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression IsFalse(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression IsFalse(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFalse = null;
@@ -3673,7 +3673,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression IsTrue(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression IsTrue(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTrue = null;
@@ -3688,7 +3688,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression IsTrue(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression IsTrue(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTrue = null;
@@ -3703,7 +3703,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression MakeUnary(ExpressionType unaryType, Expression operand, NetType type, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression MakeUnary(ExpressionType unaryType, Expression operand, NetType type, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeUnary = null;
@@ -3718,7 +3718,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression MakeUnary(ExpressionType unaryType, Expression operand, NetType type) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression MakeUnary(ExpressionType unaryType, Expression operand, NetType type) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeUnary = null;
@@ -3733,7 +3733,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Negate(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression Negate(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -3748,7 +3748,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Negate(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression Negate(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -3763,7 +3763,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression NegateChecked(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression NegateChecked(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegateChecked = null;
@@ -3778,7 +3778,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression NegateChecked(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression NegateChecked(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegateChecked = null;
@@ -3793,7 +3793,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Not(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression Not(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNot = null;
@@ -3808,7 +3808,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Not(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression Not(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNot = null;
@@ -3823,7 +3823,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression OnesComplement(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression OnesComplement(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnesComplement = null;
@@ -3838,7 +3838,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression OnesComplement(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression OnesComplement(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnesComplement = null;
@@ -3853,7 +3853,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PostDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression PostDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostDecrementAssign = null;
@@ -3868,7 +3868,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PostDecrementAssign(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression PostDecrementAssign(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostDecrementAssign = null;
@@ -3883,7 +3883,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PostIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression PostIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostIncrementAssign = null;
@@ -3898,7 +3898,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PostIncrementAssign(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression PostIncrementAssign(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostIncrementAssign = null;
@@ -3913,7 +3913,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PreDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression PreDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPreDecrementAssign = null;
@@ -3928,7 +3928,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PreDecrementAssign(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression PreDecrementAssign(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPreDecrementAssign = null;
@@ -3943,7 +3943,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PreIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression PreIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPreIncrementAssign = null;
@@ -3958,7 +3958,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PreIncrementAssign(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression PreIncrementAssign(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPreIncrementAssign = null;
@@ -3973,7 +3973,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Quote(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression Quote(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectQuote = null;
@@ -3988,7 +3988,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Rethrow() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  UnaryExpression Rethrow() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRethrow = null;
@@ -4003,7 +4003,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Rethrow(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
+    public static  UnaryExpression Rethrow(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRethrow = null;
@@ -4018,7 +4018,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Throw(Expression value, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  UnaryExpression Throw(Expression value, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectThrow = null;
@@ -4033,7 +4033,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Throw(Expression value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
+    public static  UnaryExpression Throw(Expression value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectThrow = null;
@@ -4048,7 +4048,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression TypeAs(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression TypeAs(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTypeAs = null;
@@ -4063,7 +4063,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression UnaryPlus(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression UnaryPlus(Expression expression, MethodInfo method) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnaryPlus = null;
@@ -4078,7 +4078,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression UnaryPlus(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
+    public static  UnaryExpression UnaryPlus(Expression expression) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnaryPlus = null;
@@ -4093,7 +4093,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Unbox(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
+    public static  UnaryExpression Unbox(Expression expression, NetType type) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnbox = null;
@@ -4108,7 +4108,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NetType GetActionType(NetType... typeArgs) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  NetType GetActionType(NetType... typeArgs) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetActionType = null;
@@ -4123,7 +4123,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NetType GetDelegateType(NetType... typeArgs) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.io.FileLoadException, system.globalization.CultureNotFoundException {
+    public static  NetType GetDelegateType(NetType... typeArgs) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.io.FileLoadException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDelegateType = null;
@@ -4138,7 +4138,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NetType GetFuncType(NetType... typeArgs) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  NetType GetFuncType(NetType... typeArgs) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFuncType = null;

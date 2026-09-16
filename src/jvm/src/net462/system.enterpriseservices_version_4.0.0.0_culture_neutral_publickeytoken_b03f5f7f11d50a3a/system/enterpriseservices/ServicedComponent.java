@@ -167,7 +167,7 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
         }
     }
 
-    public static void DisposeObject(ServicedComponent sc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException {
+    public static  void DisposeObject(ServicedComponent sc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -223,7 +223,7 @@ public class Cursor extends NetObject implements system.runtime.serialization.IS
         }
     }
 
-    public static void Hide() throws Throwable {
+    public static  void Hide() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -233,7 +233,7 @@ public class Cursor extends NetObject implements system.runtime.serialization.IS
         }
     }
 
-    public static void Show() throws Throwable {
+    public static  void Show() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -156,7 +156,7 @@ public class AnnotationHelper extends NetObject  {
     
     // Methods section
     
-    public static Annotation CreateHighlightForSelection(AnnotationService service, java.lang.String author, Brush highlightBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.xml.XmlException {
+    public static  Annotation CreateHighlightForSelection(AnnotationService service, java.lang.String author, Brush highlightBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHighlightForSelection = null;
@@ -171,7 +171,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static Annotation CreateInkStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  Annotation CreateInkStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateInkStickyNoteForSelection = null;
@@ -186,7 +186,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static Annotation CreateTextStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  Annotation CreateTextStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTextStickyNoteForSelection = null;
@@ -201,7 +201,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static IAnchorInfo GetAnchorInfo(AnnotationService service, Annotation annotation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.MulticastNotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.FormatException {
+    public static  IAnchorInfo GetAnchorInfo(AnnotationService service, Annotation annotation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.MulticastNotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAnchorInfo = null;
@@ -216,7 +216,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static void ClearHighlightsForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.xml.XmlException {
+    public static  void ClearHighlightsForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -226,7 +226,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static void DeleteInkStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
+    public static  void DeleteInkStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -236,7 +236,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static void DeleteTextStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
+    public static  void DeleteTextStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

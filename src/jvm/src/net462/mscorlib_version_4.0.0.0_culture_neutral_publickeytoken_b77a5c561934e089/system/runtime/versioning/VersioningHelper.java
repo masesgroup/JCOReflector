@@ -152,7 +152,7 @@ public class VersioningHelper extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException {
+    public static  java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeVersionSafeName = null;
@@ -166,7 +166,7 @@ public class VersioningHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to, NetType type) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException {
+    public static  java.lang.String MakeVersionSafeName(java.lang.String name, ResourceScope from, ResourceScope to, NetType type) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeVersionSafeName = null;

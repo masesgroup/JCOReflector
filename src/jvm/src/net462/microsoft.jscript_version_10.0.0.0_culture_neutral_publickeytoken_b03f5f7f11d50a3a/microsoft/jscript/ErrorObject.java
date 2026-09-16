@@ -155,7 +155,7 @@ public class ErrorObject extends JSObject  {
     
     // Methods section
     
-    public static NetException ToException(ErrorObject err) throws Throwable {
+    public static  NetException ToException(ErrorObject err) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToException = null;

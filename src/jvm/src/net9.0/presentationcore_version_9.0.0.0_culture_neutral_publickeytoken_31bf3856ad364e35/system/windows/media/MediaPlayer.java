@@ -175,7 +175,7 @@ public class MediaPlayer extends Animatable  {
         }
     }
 
-    public void Open(Uri source) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
+    public void Open(Uri source) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.security.SecurityException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

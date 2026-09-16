@@ -157,7 +157,7 @@ public class CompressedStack extends NetObject  {
     
     // Methods section
     
-    public static CompressedStack Capture() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.ArgumentException {
+    public static  CompressedStack Capture() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCapture = null;
@@ -187,7 +187,7 @@ public class CompressedStack extends NetObject  {
         }
     }
 
-    public static CompressedStack GetCompressedStack() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.ArgumentException {
+    public static  CompressedStack GetCompressedStack() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompressedStack = null;
@@ -212,7 +212,7 @@ public class CompressedStack extends NetObject  {
         }
     }
 
-    public static void Run(CompressedStack compressedStack, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
+    public static  void Run(CompressedStack compressedStack, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

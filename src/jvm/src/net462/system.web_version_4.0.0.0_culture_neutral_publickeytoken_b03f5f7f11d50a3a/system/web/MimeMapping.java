@@ -151,7 +151,7 @@ public class MimeMapping extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String GetMimeMapping(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public static  java.lang.String GetMimeMapping(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMimeMapping = null;

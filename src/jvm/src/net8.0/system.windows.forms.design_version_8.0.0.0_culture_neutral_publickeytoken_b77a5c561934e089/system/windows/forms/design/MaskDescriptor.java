@@ -153,7 +153,7 @@ public class MaskDescriptor extends NetObject  {
     
     // Methods section
     
-    public static boolean IsValidMaskDescriptor(MaskDescriptor maskDescriptor, JCORefOut validationErrorDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.TimeoutException, system.MulticastNotSupportedException, system.InvalidCastException {
+    public static  boolean IsValidMaskDescriptor(MaskDescriptor maskDescriptor, JCORefOut validationErrorDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.TimeoutException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidMaskDescriptor = null;
@@ -167,7 +167,7 @@ public class MaskDescriptor extends NetObject  {
         }
     }
 
-    public static boolean IsValidMaskDescriptor(MaskDescriptor maskDescriptor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.TimeoutException, system.MulticastNotSupportedException, system.FormatException, system.InvalidCastException {
+    public static  boolean IsValidMaskDescriptor(MaskDescriptor maskDescriptor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.TimeoutException, system.MulticastNotSupportedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidMaskDescriptor = null;

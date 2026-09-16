@@ -161,7 +161,7 @@ public class CorrelationTokenCollection extends NetObjectEnumerable  {
     
     // Methods section
     
-    public static CorrelationToken GetCorrelationToken(Activity activity, java.lang.String correlationTokenName, java.lang.String ownerActivityName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  CorrelationToken GetCorrelationToken(Activity activity, java.lang.String correlationTokenName, java.lang.String ownerActivityName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCorrelationToken = null;

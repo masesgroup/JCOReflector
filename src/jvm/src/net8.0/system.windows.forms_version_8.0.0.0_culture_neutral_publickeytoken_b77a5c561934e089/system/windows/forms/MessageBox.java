@@ -161,7 +161,7 @@ public class MessageBox extends NetObject  {
     
     // Methods section
     
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, boolean displayHelpButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, boolean displayHelpButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -176,7 +176,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, java.lang.String keyword) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, java.lang.String keyword) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -191,7 +191,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator, NetObject param) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator, NetObject param) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -206,7 +206,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -221,7 +221,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -236,7 +236,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -251,7 +251,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -266,7 +266,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -281,7 +281,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -296,7 +296,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text, java.lang.String caption) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text, java.lang.String caption) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -311,7 +311,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(java.lang.String text) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(java.lang.String text) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -326,7 +326,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, java.lang.String keyword) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, java.lang.String keyword) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -341,7 +341,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator, NetObject param) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator, NetObject param) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -356,7 +356,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -371,7 +371,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -386,7 +386,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -401,7 +401,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -416,7 +416,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -431,7 +431,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -446,7 +446,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;
@@ -461,7 +461,7 @@ public class MessageBox extends NetObject  {
         }
     }
 
-    public static DialogResult Show(IWin32Window owner, java.lang.String text) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
+    public static  DialogResult Show(IWin32Window owner, java.lang.String text) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShow = null;

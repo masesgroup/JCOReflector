@@ -203,7 +203,7 @@ public class StylusPoint extends ValueType  {
         }
     }
 
-    public static boolean Equals(StylusPoint stylusPoint1, StylusPoint stylusPoint2) throws Throwable, system.ArgumentNullException {
+    public static  boolean Equals(StylusPoint stylusPoint1, StylusPoint stylusPoint2) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;

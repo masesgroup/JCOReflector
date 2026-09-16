@@ -155,7 +155,7 @@ public class ThreadPoolBoundHandle extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static ThreadPoolBoundHandle BindHandle(SafeHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  ThreadPoolBoundHandle BindHandle(SafeHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBindHandle = null;

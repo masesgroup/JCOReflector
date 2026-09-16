@@ -238,7 +238,7 @@ public class Rect3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static boolean Equals(Rect3D rect1, Rect3D rect2) throws Throwable {
+    public static  boolean Equals(Rect3D rect1, Rect3D rect2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -280,7 +280,7 @@ public class Rect3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect3D Intersect(Rect3D rect1, Rect3D rect2) throws Throwable {
+    public static  Rect3D Intersect(Rect3D rect1, Rect3D rect2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIntersect = null;
@@ -295,7 +295,7 @@ public class Rect3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect3D Offset(Rect3D rect, double offsetX, double offsetY, double offsetZ) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  Rect3D Offset(Rect3D rect, double offsetX, double offsetY, double offsetZ) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOffset = null;
@@ -310,7 +310,7 @@ public class Rect3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect3D Offset(Rect3D rect, Vector3D offsetVector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  Rect3D Offset(Rect3D rect, Vector3D offsetVector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOffset = null;
@@ -325,7 +325,7 @@ public class Rect3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect3D Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
+    public static  Rect3D Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -340,7 +340,7 @@ public class Rect3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect3D Union(Rect3D rect, Point3D point) throws Throwable {
+    public static  Rect3D Union(Rect3D rect, Point3D point) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnion = null;
@@ -355,7 +355,7 @@ public class Rect3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect3D Union(Rect3D rect1, Rect3D rect2) throws Throwable {
+    public static  Rect3D Union(Rect3D rect1, Rect3D rect2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnion = null;

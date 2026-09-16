@@ -161,7 +161,7 @@ public class RealProxy extends NetObject  {
     
     // Methods section
     
-    public static NetObject GetStubData(RealProxy rp) throws Throwable {
+    public static  NetObject GetStubData(RealProxy rp) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStubData = null;
@@ -261,7 +261,7 @@ public class RealProxy extends NetObject  {
         }
     }
 
-    public static void SetStubData(RealProxy rp, NetObject stubData) throws Throwable {
+    public static  void SetStubData(RealProxy rp, NetObject stubData) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

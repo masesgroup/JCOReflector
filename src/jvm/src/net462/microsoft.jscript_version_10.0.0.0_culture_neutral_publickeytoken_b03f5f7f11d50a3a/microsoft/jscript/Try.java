@@ -155,7 +155,7 @@ public class Try extends AST  {
     
     // Methods section
     
-    public static NetObject JScriptExceptionValue(NetObject e, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException {
+    public static  NetObject JScriptExceptionValue(NetObject e, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptExceptionValue = null;
@@ -170,7 +170,7 @@ public class Try extends AST  {
         }
     }
 
-    public static void PushHandlerScope(VsaEngine engine, java.lang.String id, int scopeId) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+    public static  void PushHandlerScope(VsaEngine engine, java.lang.String id, int scopeId) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

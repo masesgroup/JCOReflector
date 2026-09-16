@@ -152,7 +152,7 @@ public class RenderCapability extends NetObject  {
     
     // Methods section
     
-    public static boolean IsPixelShaderVersionSupported(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.OverflowException {
+    public static  boolean IsPixelShaderVersionSupported(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPixelShaderVersionSupported = null;
@@ -166,7 +166,7 @@ public class RenderCapability extends NetObject  {
         }
     }
 
-    public static boolean IsPixelShaderVersionSupportedInSoftware(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.OverflowException {
+    public static  boolean IsPixelShaderVersionSupportedInSoftware(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPixelShaderVersionSupportedInSoftware = null;
@@ -180,7 +180,7 @@ public class RenderCapability extends NetObject  {
         }
     }
 
-    public static int MaxPixelShaderInstructionSlots(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.OverflowException {
+    public static  int MaxPixelShaderInstructionSlots(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxPixelShaderInstructionSlots = null;

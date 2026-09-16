@@ -185,7 +185,7 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
         }
     }
 
-    public static void SetIterationContext(WindowsRuntimeDesignerContext context) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
+    public static  void SetIterationContext(WindowsRuntimeDesignerContext context) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

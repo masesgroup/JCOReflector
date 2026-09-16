@@ -164,7 +164,7 @@ public class WebHeaderCollection extends NameValueCollection  {
     
     // Methods section
     
-    public static boolean IsRestricted(java.lang.String headerName, boolean response) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  boolean IsRestricted(java.lang.String headerName, boolean response) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsRestricted = null;
@@ -178,7 +178,7 @@ public class WebHeaderCollection extends NameValueCollection  {
         }
     }
 
-    public static boolean IsRestricted(java.lang.String headerName) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static  boolean IsRestricted(java.lang.String headerName) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsRestricted = null;

@@ -161,7 +161,7 @@ public class TextRenderer extends NetObject  {
     
     // Methods section
     
-    public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
+    public static  Size MeasureText(IDeviceContext dc, java.lang.String text, Font font) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMeasureText = null;
@@ -176,7 +176,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font, Size proposedSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
+    public static  Size MeasureText(IDeviceContext dc, java.lang.String text, Font font, Size proposedSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMeasureText = null;
@@ -191,7 +191,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static Size MeasureText(IDeviceContext dc, java.lang.String text, Font font, Size proposedSize, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+    public static  Size MeasureText(IDeviceContext dc, java.lang.String text, Font font, Size proposedSize, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMeasureText = null;
@@ -206,7 +206,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static Size MeasureText(java.lang.String text, Font font) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
+    public static  Size MeasureText(java.lang.String text, Font font) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMeasureText = null;
@@ -221,7 +221,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static Size MeasureText(java.lang.String text, Font font, Size proposedSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
+    public static  Size MeasureText(java.lang.String text, Font font, Size proposedSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMeasureText = null;
@@ -236,7 +236,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static Size MeasureText(java.lang.String text, Font font, Size proposedSize, TextFormatFlags flags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
+    public static  Size MeasureText(java.lang.String text, Font font, Size proposedSize, TextFormatFlags flags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMeasureText = null;
@@ -251,7 +251,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -261,7 +261,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, Color backColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, Color backColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -271,7 +271,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, Color backColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, Color backColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -281,7 +281,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  void DrawText(IDeviceContext dc, java.lang.String text, Font font, Point pt, Color foreColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -291,7 +291,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -301,7 +301,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, Color backColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, Color backColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -311,7 +311,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, Color backColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, Color backColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -321,7 +321,7 @@ public class TextRenderer extends NetObject  {
         }
     }
 
-    public static void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public static  void DrawText(IDeviceContext dc, java.lang.String text, Font font, Rectangle bounds, Color foreColor, TextFormatFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

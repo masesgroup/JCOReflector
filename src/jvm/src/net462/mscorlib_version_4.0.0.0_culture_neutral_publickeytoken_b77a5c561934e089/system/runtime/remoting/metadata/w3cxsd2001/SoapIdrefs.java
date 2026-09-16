@@ -170,7 +170,7 @@ public class SoapIdrefs extends NetObject  {
     
     // Methods section
     
-    public static SoapIdrefs Parse(java.lang.String value) throws Throwable {
+    public static  SoapIdrefs Parse(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

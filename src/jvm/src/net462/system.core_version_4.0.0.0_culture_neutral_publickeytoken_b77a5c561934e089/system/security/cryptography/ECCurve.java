@@ -156,7 +156,7 @@ public class ECCurve extends ValueType  {
     
     // Methods section
     
-    public static ECCurve CreateFromFriendlyName(java.lang.String oidFriendlyName) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
+    public static  ECCurve CreateFromFriendlyName(java.lang.String oidFriendlyName) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromFriendlyName = null;
@@ -171,7 +171,7 @@ public class ECCurve extends ValueType  {
         }
     }
 
-    public static ECCurve CreateFromOid(Oid curveOid) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  ECCurve CreateFromOid(Oid curveOid) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromOid = null;
@@ -186,7 +186,7 @@ public class ECCurve extends ValueType  {
         }
     }
 
-    public static ECCurve CreateFromValue(java.lang.String oidValue) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArgumentException {
+    public static  ECCurve CreateFromValue(java.lang.String oidValue) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromValue = null;

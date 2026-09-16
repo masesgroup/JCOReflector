@@ -163,7 +163,7 @@ public class CollectionsUtil extends NetObject  {
     
     // Methods section
     
-    public static Hashtable CreateCaseInsensitiveHashtable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Hashtable CreateCaseInsensitiveHashtable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCaseInsensitiveHashtable = null;
@@ -178,7 +178,7 @@ public class CollectionsUtil extends NetObject  {
         }
     }
 
-    public static Hashtable CreateCaseInsensitiveHashtable(int capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Hashtable CreateCaseInsensitiveHashtable(int capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCaseInsensitiveHashtable = null;
@@ -193,7 +193,7 @@ public class CollectionsUtil extends NetObject  {
         }
     }
 
-    public static Hashtable CreateCaseInsensitiveHashtable(IDictionary d) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException {
+    public static  Hashtable CreateCaseInsensitiveHashtable(IDictionary d) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCaseInsensitiveHashtable = null;
@@ -208,7 +208,7 @@ public class CollectionsUtil extends NetObject  {
         }
     }
 
-    public static SortedList CreateCaseInsensitiveSortedList() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
+    public static  SortedList CreateCaseInsensitiveSortedList() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCaseInsensitiveSortedList = null;

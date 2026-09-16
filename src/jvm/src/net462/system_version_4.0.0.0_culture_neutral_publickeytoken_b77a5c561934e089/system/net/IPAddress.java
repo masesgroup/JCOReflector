@@ -185,7 +185,7 @@ public class IPAddress extends NetObject  {
     
     // Methods section
     
-    public static boolean IsLoopback(IPAddress address) throws Throwable, system.ArgumentNullException {
+    public static  boolean IsLoopback(IPAddress address) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLoopback = null;
@@ -199,7 +199,7 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static boolean TryParse(java.lang.String ipString, JCORefOut<IPAddress> address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  boolean TryParse(java.lang.String ipString, JCORefOut<IPAddress> address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -236,7 +236,7 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static short HostToNetworkOrder(short host) throws Throwable {
+    public static  short HostToNetworkOrder(short host) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHostToNetworkOrder = null;
@@ -276,7 +276,7 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static short NetworkToHostOrder(short network) throws Throwable {
+    public static  short NetworkToHostOrder(short network) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNetworkToHostOrder = null;
@@ -316,7 +316,7 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static int HostToNetworkOrder(int host) throws Throwable {
+    public static  int HostToNetworkOrder(int host) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHostToNetworkOrder = null;
@@ -356,7 +356,7 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static int NetworkToHostOrder(int network) throws Throwable {
+    public static  int NetworkToHostOrder(int network) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNetworkToHostOrder = null;
@@ -396,7 +396,7 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static long HostToNetworkOrder(long host) throws Throwable {
+    public static  long HostToNetworkOrder(long host) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHostToNetworkOrder = null;
@@ -436,7 +436,7 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static long NetworkToHostOrder(long network) throws Throwable {
+    public static  long NetworkToHostOrder(long network) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNetworkToHostOrder = null;
@@ -506,7 +506,7 @@ public class IPAddress extends NetObject  {
         }
     }
 
-    public static IPAddress Parse(java.lang.String ipString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  IPAddress Parse(java.lang.String ipString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

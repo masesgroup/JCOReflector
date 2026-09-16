@@ -195,7 +195,7 @@ public class XmlSchemas extends CollectionBase  {
         }
     }
 
-    public static boolean IsDataSet(XmlSchema schema) throws Throwable {
+    public static  boolean IsDataSet(XmlSchema schema) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDataSet = null;

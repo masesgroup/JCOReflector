@@ -152,7 +152,7 @@ public class Interlocked extends NetObject  {
     
     // Methods section
     
-    public static double CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location1, double value, double comparand) throws Throwable {
+    public static  double CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location1, double value, double comparand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareExchange = null;
@@ -192,7 +192,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static double Exchange(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location1, double value) throws Throwable {
+    public static  double Exchange(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location1, double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExchange = null;
@@ -232,7 +232,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static int Add(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
+    public static  int Add(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -272,7 +272,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static int CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value, int comparand) throws Throwable {
+    public static  int CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value, int comparand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareExchange = null;
@@ -312,7 +312,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static int Exchange(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
+    public static  int Exchange(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExchange = null;
@@ -352,7 +352,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static long Add(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
+    public static  long Add(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -392,7 +392,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static long CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value, long comparand) throws Throwable {
+    public static  long CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value, long comparand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareExchange = null;
@@ -432,7 +432,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static long Exchange(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
+    public static  long Exchange(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExchange = null;
@@ -472,7 +472,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static long Read(JCORefOut<java.util.concurrent.atomic.AtomicLong> location) throws Throwable {
+    public static  long Read(JCORefOut<java.util.concurrent.atomic.AtomicLong> location) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRead = null;
@@ -512,7 +512,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static Single CompareExchange(JCORefOut<Single> location1, Single value, Single comparand) throws Throwable {
+    public static  Single CompareExchange(JCORefOut<Single> location1, Single value, Single comparand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareExchange = null;
@@ -527,7 +527,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static Single Exchange(JCORefOut<Single> location1, Single value) throws Throwable {
+    public static  Single Exchange(JCORefOut<Single> location1, Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExchange = null;
@@ -542,7 +542,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static NetObject CompareExchange(JCORefOut<NetObject> location1, NetObject value, NetObject comparand) throws Throwable {
+    public static  NetObject CompareExchange(JCORefOut<NetObject> location1, NetObject value, NetObject comparand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareExchange = null;
@@ -557,7 +557,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static NetObject Exchange(JCORefOut<NetObject> location1, NetObject value) throws Throwable {
+    public static  NetObject Exchange(JCORefOut<NetObject> location1, NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExchange = null;
@@ -572,7 +572,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static void MemoryBarrier() throws Throwable {
+    public static  void MemoryBarrier() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -582,7 +582,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public static void SpeculationBarrier() throws Throwable {
+    public static  void SpeculationBarrier() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

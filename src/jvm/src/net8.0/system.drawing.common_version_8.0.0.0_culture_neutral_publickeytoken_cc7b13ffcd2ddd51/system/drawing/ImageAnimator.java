@@ -155,7 +155,7 @@ public class ImageAnimator extends NetObject  {
     
     // Methods section
     
-    public static boolean CanAnimate(Image image) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  boolean CanAnimate(Image image) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCanAnimate = null;
@@ -169,7 +169,7 @@ public class ImageAnimator extends NetObject  {
         }
     }
 
-    public static void Animate(Image image, EventHandler onFrameChangedHandler) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
+    public static  void Animate(Image image, EventHandler onFrameChangedHandler) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -179,7 +179,7 @@ public class ImageAnimator extends NetObject  {
         }
     }
 
-    public static void StopAnimate(Image image, EventHandler onFrameChangedHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
+    public static  void StopAnimate(Image image, EventHandler onFrameChangedHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -189,7 +189,7 @@ public class ImageAnimator extends NetObject  {
         }
     }
 
-    public static void UpdateFrames() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
+    public static  void UpdateFrames() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -199,7 +199,7 @@ public class ImageAnimator extends NetObject  {
         }
     }
 
-    public static void UpdateFrames(Image image) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
+    public static  void UpdateFrames(Image image) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

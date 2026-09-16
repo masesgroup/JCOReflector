@@ -175,7 +175,7 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
         }
     }
 
-    public static OwnerDrawPropertyBag Copy(OwnerDrawPropertyBag value) throws Throwable, system.ArgumentException {
+    public static  OwnerDrawPropertyBag Copy(OwnerDrawPropertyBag value) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCopy = null;

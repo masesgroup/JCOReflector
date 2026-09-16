@@ -183,7 +183,7 @@ public class IdentityVerifier extends NetObject  {
         }
     }
 
-    public static IdentityVerifier CreateDefault() throws Throwable {
+    public static  IdentityVerifier CreateDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDefault = null;

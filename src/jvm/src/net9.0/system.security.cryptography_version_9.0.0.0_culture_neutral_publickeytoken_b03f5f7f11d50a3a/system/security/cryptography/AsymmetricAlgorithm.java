@@ -199,7 +199,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
-    public static AsymmetricAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  AsymmetricAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -214,7 +214,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
-    public static AsymmetricAlgorithm Create(java.lang.String algName) throws Throwable {
+    public static  AsymmetricAlgorithm Create(java.lang.String algName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

@@ -197,7 +197,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
         }
     }
 
-    public static CertificateRevocationListBuilder Load(byte[] currentCrl, JCORefOut<BigInteger> currentCrlNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.OverflowException {
+    public static  CertificateRevocationListBuilder Load(byte[] currentCrl, JCORefOut<BigInteger> currentCrlNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -212,7 +212,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
         }
     }
 
-    public static CertificateRevocationListBuilder LoadPem(java.lang.String currentCrl, JCORefOut<BigInteger> currentCrlNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.OverflowException, system.FormatException {
+    public static  CertificateRevocationListBuilder LoadPem(java.lang.String currentCrl, JCORefOut<BigInteger> currentCrlNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPem = null;

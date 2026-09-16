@@ -151,7 +151,7 @@ public class EntityFunctions extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String AsNonUnicode(java.lang.String value) throws Throwable {
+    public static  java.lang.String AsNonUnicode(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsNonUnicode = null;
@@ -165,7 +165,7 @@ public class EntityFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String AsUnicode(java.lang.String value) throws Throwable {
+    public static  java.lang.String AsUnicode(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsUnicode = null;
@@ -179,7 +179,7 @@ public class EntityFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String Reverse(java.lang.String stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static  java.lang.String Reverse(java.lang.String stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverse = null;

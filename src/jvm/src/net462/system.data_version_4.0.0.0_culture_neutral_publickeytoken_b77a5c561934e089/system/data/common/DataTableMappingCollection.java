@@ -382,7 +382,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
         }
     }
 
-    public static DataTableMapping GetTableMappingBySchemaAction(DataTableMappingCollection tableMappings, java.lang.String sourceTable, java.lang.String dataSetTable, MissingMappingAction mappingAction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  DataTableMapping GetTableMappingBySchemaAction(DataTableMappingCollection tableMappings, java.lang.String sourceTable, java.lang.String dataSetTable, MissingMappingAction mappingAction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTableMappingBySchemaAction = null;

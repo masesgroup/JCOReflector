@@ -166,7 +166,7 @@ public class Duration extends ValueType  {
     
     // Methods section
     
-    public static boolean Equals(Duration t1, Duration t2) throws Throwable {
+    public static  boolean Equals(Duration t1, Duration t2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -194,7 +194,7 @@ public class Duration extends ValueType  {
         }
     }
 
-    public static int Compare(Duration t1, Duration t2) throws Throwable {
+    public static  int Compare(Duration t1, Duration t2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -249,7 +249,7 @@ public class Duration extends ValueType  {
         }
     }
 
-    public static Duration Plus(Duration duration) throws Throwable {
+    public static  Duration Plus(Duration duration) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPlus = null;

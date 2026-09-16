@@ -155,7 +155,7 @@ public class StreamPipeExtensions extends NetObject  {
     
     // Methods section
     
-    public static Task CopyToAsync(Stream source, PipeWriter destination, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  Task CopyToAsync(Stream source, PipeWriter destination, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCopyToAsync = null;

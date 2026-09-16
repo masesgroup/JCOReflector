@@ -156,7 +156,7 @@ public class DynamicUpdateMap extends NetObject  {
     
     // Methods section
     
-    public static DynamicUpdateMap Merge(DynamicUpdateMap... maps) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public static  DynamicUpdateMap Merge(DynamicUpdateMap... maps) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMerge = null;

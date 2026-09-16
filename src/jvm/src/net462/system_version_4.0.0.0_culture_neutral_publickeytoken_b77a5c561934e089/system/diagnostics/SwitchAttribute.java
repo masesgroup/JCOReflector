@@ -166,7 +166,7 @@ public class SwitchAttribute extends Attribute  {
     
     // Methods section
     
-    public static SwitchAttribute[] GetAll(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  SwitchAttribute[] GetAll(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAll = null;

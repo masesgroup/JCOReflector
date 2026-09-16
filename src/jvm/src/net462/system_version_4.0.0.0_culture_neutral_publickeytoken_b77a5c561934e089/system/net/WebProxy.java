@@ -271,7 +271,7 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
         }
     }
 
-    public static WebProxy GetDefaultProxy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  WebProxy GetDefaultProxy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultProxy = null;

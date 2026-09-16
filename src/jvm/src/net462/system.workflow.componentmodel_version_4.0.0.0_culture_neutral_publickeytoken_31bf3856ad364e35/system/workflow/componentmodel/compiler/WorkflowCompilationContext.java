@@ -158,7 +158,7 @@ public class WorkflowCompilationContext extends NetObject  {
     
     // Methods section
     
-    public static IDisposable CreateScope(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException {
+    public static  IDisposable CreateScope(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScope = null;

@@ -154,7 +154,7 @@ public class ConfigurationSettings extends NetObject  {
     
     // Methods section
     
-    public static NetObject GetConfig(java.lang.String sectionName) throws Throwable, system.NotSupportedException, system.ArgumentException {
+    public static  NetObject GetConfig(java.lang.String sectionName) throws Throwable, system.NotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetConfig = null;

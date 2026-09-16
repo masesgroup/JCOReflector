@@ -204,7 +204,7 @@ public class Relational extends BinaryOp  {
         }
     }
 
-    public static double JScriptCompare(NetObject v1, NetObject v2) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
+    public static  double JScriptCompare(NetObject v1, NetObject v2) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptCompare = null;

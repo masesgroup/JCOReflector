@@ -154,7 +154,7 @@ public class DataContractJsonSerializerExtensions extends NetObject  {
     
     // Methods section
     
-    public static ISerializationSurrogateProvider GetSerializationSurrogateProvider(DataContractJsonSerializer serializer) throws Throwable {
+    public static  ISerializationSurrogateProvider GetSerializationSurrogateProvider(DataContractJsonSerializer serializer) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializationSurrogateProvider = null;
@@ -169,7 +169,7 @@ public class DataContractJsonSerializerExtensions extends NetObject  {
         }
     }
 
-    public static void SetSerializationSurrogateProvider(DataContractJsonSerializer serializer, ISerializationSurrogateProvider provider) throws Throwable {
+    public static  void SetSerializationSurrogateProvider(DataContractJsonSerializer serializer, ISerializationSurrogateProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

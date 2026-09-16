@@ -173,7 +173,7 @@ public class ChannelServices extends NetObject  {
     
     // Methods section
     
-    public static IDictionary GetChannelSinkProperties(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  IDictionary GetChannelSinkProperties(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetChannelSinkProperties = null;
@@ -188,7 +188,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static IChannel GetChannel(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public static  IChannel GetChannel(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetChannel = null;
@@ -203,7 +203,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static IServerChannelSink CreateServerChannelSinkChain(IServerChannelSinkProvider provider, IChannelReceiver channel) throws Throwable {
+    public static  IServerChannelSink CreateServerChannelSinkChain(IServerChannelSinkProvider provider, IChannelReceiver channel) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateServerChannelSinkChain = null;
@@ -218,7 +218,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static ServerProcessing DispatchMessage(IServerChannelSinkStack sinkStack, IMessage msg, JCORefOut<IMessage> replyMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
+    public static  ServerProcessing DispatchMessage(IServerChannelSinkStack sinkStack, IMessage msg, JCORefOut<IMessage> replyMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDispatchMessage = null;
@@ -233,7 +233,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static IMessage SyncDispatchMessage(IMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
+    public static  IMessage SyncDispatchMessage(IMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSyncDispatchMessage = null;
@@ -248,7 +248,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static IMessageCtrl AsyncDispatchMessage(IMessage msg, IMessageSink replySink) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
+    public static  IMessageCtrl AsyncDispatchMessage(IMessage msg, IMessageSink replySink) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsyncDispatchMessage = null;
@@ -263,7 +263,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetUrlsForObject(MarshalByRefObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public static  java.lang.String[] GetUrlsForObject(MarshalByRefObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUrlsForObject = null;
@@ -286,7 +286,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static void RegisterChannel(IChannel chnl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
+    public static  void RegisterChannel(IChannel chnl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -296,7 +296,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static void RegisterChannel(IChannel chnl, boolean ensureSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
+    public static  void RegisterChannel(IChannel chnl, boolean ensureSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -306,7 +306,7 @@ public class ChannelServices extends NetObject  {
         }
     }
 
-    public static void UnregisterChannel(IChannel chnl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
+    public static  void UnregisterChannel(IChannel chnl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -247,7 +247,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(Task[] tasks, int millisecondsTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.FormatException, system.AggregateException {
+    public static  boolean WaitAll(Task[] tasks, int millisecondsTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.FormatException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAll = null;
@@ -261,7 +261,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(Task[] tasks, int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.FormatException, system.AggregateException {
+    public static  boolean WaitAll(Task[] tasks, int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.FormatException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAll = null;
@@ -275,7 +275,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(Task[] tasks, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OperationCanceledException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.AggregateException {
+    public static  boolean WaitAll(Task[] tasks, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OperationCanceledException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAll = null;
@@ -289,7 +289,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(Task... tasks) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+    public static  int WaitAny(Task... tasks) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -329,7 +329,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(Task[] tasks, int millisecondsTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.AggregateException {
+    public static  int WaitAny(Task[] tasks, int millisecondsTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -369,7 +369,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(Task[] tasks, int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.AggregateException {
+    public static  int WaitAny(Task[] tasks, int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -409,7 +409,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(Task[] tasks, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.AggregateException {
+    public static  int WaitAny(Task[] tasks, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -449,7 +449,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(Task[] tasks, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+    public static  int WaitAny(Task[] tasks, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OperationCanceledException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -519,7 +519,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static YieldAwaitable Yield() throws Throwable {
+    public static  YieldAwaitable Yield() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectYield = null;
@@ -534,7 +534,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task Delay(int millisecondsDelay) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException {
+    public static  Task Delay(int millisecondsDelay) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDelay = null;
@@ -549,7 +549,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task Delay(int millisecondsDelay, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException {
+    public static  Task Delay(int millisecondsDelay, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDelay = null;
@@ -564,7 +564,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task Delay(TimeSpan delay) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.ObjectDisposedException {
+    public static  Task Delay(TimeSpan delay) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDelay = null;
@@ -579,7 +579,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task Delay(TimeSpan delay, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException {
+    public static  Task Delay(TimeSpan delay, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDelay = null;
@@ -594,7 +594,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task FromCanceled(CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  Task FromCanceled(CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromCanceled = null;
@@ -609,7 +609,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task FromException(NetException exception) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MulticastNotSupportedException {
+    public static  Task FromException(NetException exception) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromException = null;
@@ -624,7 +624,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task Run(Action action) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException {
+    public static  Task Run(Action action) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRun = null;
@@ -639,7 +639,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task Run(Action action, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException {
+    public static  Task Run(Action action, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRun = null;
@@ -654,7 +654,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static Task WhenAll(Task... tasks) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
+    public static  Task WhenAll(Task... tasks) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWhenAll = null;
@@ -739,7 +739,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void WaitAll(Task... tasks) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.AggregateException {
+    public static  void WaitAll(Task... tasks) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -749,7 +749,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void WaitAll(Task[] tasks, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.FormatException, system.AggregateException {
+    public static  void WaitAll(Task[] tasks, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OperationCanceledException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.FormatException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

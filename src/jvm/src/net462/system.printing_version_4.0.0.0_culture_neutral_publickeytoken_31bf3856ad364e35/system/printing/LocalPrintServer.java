@@ -269,7 +269,7 @@ public class LocalPrintServer extends PrintServer  {
         }
     }
 
-    public static PrintQueue GetDefaultPrintQueue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+    public static  PrintQueue GetDefaultPrintQueue() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultPrintQueue = null;

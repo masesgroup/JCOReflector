@@ -157,7 +157,7 @@ public class ActivityXamlServices extends NetObject  {
     
     // Methods section
     
-    public static Activity Load(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  Activity Load(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -172,7 +172,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static Activity Load(Stream stream, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.io.EndOfStreamException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
+    public static  Activity Load(Stream stream, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.io.EndOfStreamException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -187,7 +187,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static Activity Load(TextReader textReader) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  Activity Load(TextReader textReader) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -202,7 +202,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static Activity Load(TextReader textReader, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.io.EndOfStreamException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
+    public static  Activity Load(TextReader textReader, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.io.EndOfStreamException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -217,7 +217,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static Activity Load(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.AggregateException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  Activity Load(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.AggregateException, system.FormatException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -232,7 +232,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static Activity Load(java.lang.String fileName, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.io.EndOfStreamException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
+    public static  Activity Load(java.lang.String fileName, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.io.EndOfStreamException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -247,7 +247,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static Activity Load(XmlReader xmlReader) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xml.XmlException, system.UriFormatException, system.xaml.XamlException, system.io.EndOfStreamException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
+    public static  Activity Load(XmlReader xmlReader) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xml.XmlException, system.UriFormatException, system.xaml.XamlException, system.io.EndOfStreamException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -262,7 +262,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static Activity Load(XmlReader xmlReader, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xml.XmlException, system.security.SecurityException, system.UriFormatException, system.threading.ThreadAbortException, system.xaml.XamlException, system.FormatException, system.io.EndOfStreamException, system.io.IOException, system.OverflowException, system.configuration.ConfigurationErrorsException {
+    public static  Activity Load(XmlReader xmlReader, ActivityXamlServicesSettings settings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xml.XmlException, system.security.SecurityException, system.UriFormatException, system.threading.ThreadAbortException, system.xaml.XamlException, system.FormatException, system.io.EndOfStreamException, system.io.IOException, system.OverflowException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoad = null;
@@ -277,7 +277,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static XamlWriter CreateBuilderWriter(XamlWriter innerWriter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  XamlWriter CreateBuilderWriter(XamlWriter innerWriter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateBuilderWriter = null;
@@ -292,7 +292,7 @@ public class ActivityXamlServices extends NetObject  {
         }
     }
 
-    public static void InitializeComponent(NetType componentType, NetObject componentInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException {
+    public static  void InitializeComponent(NetType componentType, NetObject componentInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -183,7 +183,7 @@ public class Int32Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static boolean Equals(Int32Rect int32Rect1, Int32Rect int32Rect2) throws Throwable {
+    public static  boolean Equals(Int32Rect int32Rect1, Int32Rect int32Rect2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -211,7 +211,7 @@ public class Int32Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Int32Rect Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+    public static  Int32Rect Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

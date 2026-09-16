@@ -154,7 +154,7 @@ public class OpCodes extends NetObject  {
     
     // Methods section
     
-    public static boolean TakesSingleByteArgument(OpCode inst) throws Throwable {
+    public static  boolean TakesSingleByteArgument(OpCode inst) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTakesSingleByteArgument = null;

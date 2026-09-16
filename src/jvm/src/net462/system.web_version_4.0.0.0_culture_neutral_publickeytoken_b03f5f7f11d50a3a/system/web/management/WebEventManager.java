@@ -151,7 +151,7 @@ public class WebEventManager extends NetObject  {
     
     // Methods section
     
-    public static void Flush() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.web.HttpException {
+    public static  void Flush() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -161,7 +161,7 @@ public class WebEventManager extends NetObject  {
         }
     }
 
-    public static void Flush(java.lang.String providerName) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.web.HttpException {
+    public static  void Flush(java.lang.String providerName) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

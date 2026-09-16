@@ -170,7 +170,7 @@ public class Point4D extends ValueType implements system.IFormattable {
     
     // Methods section
     
-    public static boolean Equals(Point4D point1, Point4D point2) throws Throwable {
+    public static  boolean Equals(Point4D point1, Point4D point2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -212,7 +212,7 @@ public class Point4D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point4D Add(Point4D point1, Point4D point2) throws Throwable {
+    public static  Point4D Add(Point4D point1, Point4D point2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -227,7 +227,7 @@ public class Point4D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point4D Multiply(Point4D point, Matrix3D matrix) throws Throwable {
+    public static  Point4D Multiply(Point4D point, Matrix3D matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -242,7 +242,7 @@ public class Point4D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point4D Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
+    public static  Point4D Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -257,7 +257,7 @@ public class Point4D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point4D Subtract(Point4D point1, Point4D point2) throws Throwable {
+    public static  Point4D Subtract(Point4D point1, Point4D point2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

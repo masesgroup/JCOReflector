@@ -155,7 +155,7 @@ public class NrbfDecoder extends NetObject  {
     
     // Methods section
     
-    public static boolean StartsWithPayloadHeader(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  boolean StartsWithPayloadHeader(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartsWithPayloadHeader = null;
@@ -169,7 +169,7 @@ public class NrbfDecoder extends NetObject  {
         }
     }
 
-    public static ClassRecord DecodeClassRecord(Stream payload, PayloadOptions options, boolean leaveOpen) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.io.EndOfStreamException, system.FormatException, system.io.IOException {
+    public static  ClassRecord DecodeClassRecord(Stream payload, PayloadOptions options, boolean leaveOpen) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.io.EndOfStreamException, system.FormatException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecodeClassRecord = null;
@@ -184,7 +184,7 @@ public class NrbfDecoder extends NetObject  {
         }
     }
 
-    public static SerializationRecord Decode(Stream payload, PayloadOptions options, boolean leaveOpen) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.io.EndOfStreamException {
+    public static  SerializationRecord Decode(Stream payload, PayloadOptions options, boolean leaveOpen) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.io.EndOfStreamException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecode = null;

@@ -182,7 +182,7 @@ public class ActivityContext extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String traceParent, java.lang.String traceState, boolean isRemote, JCORefOut<ActivityContext> context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  boolean TryParse(java.lang.String traceParent, java.lang.String traceState, boolean isRemote, JCORefOut<ActivityContext> context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -196,7 +196,7 @@ public class ActivityContext extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String traceParent, java.lang.String traceState, JCORefOut<ActivityContext> context) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  boolean TryParse(java.lang.String traceParent, java.lang.String traceState, JCORefOut<ActivityContext> context) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -210,7 +210,7 @@ public class ActivityContext extends ValueType  {
         }
     }
 
-    public static ActivityContext Parse(java.lang.String traceParent, java.lang.String traceState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  ActivityContext Parse(java.lang.String traceParent, java.lang.String traceState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

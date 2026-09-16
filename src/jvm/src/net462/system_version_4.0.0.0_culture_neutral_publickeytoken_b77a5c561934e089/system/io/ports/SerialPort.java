@@ -472,7 +472,7 @@ public class SerialPort extends Component  {
         }
     }
 
-    public static java.lang.String[] GetPortNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException {
+    public static  java.lang.String[] GetPortNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPortNames = null;

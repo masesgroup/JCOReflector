@@ -384,7 +384,7 @@ public class PerformanceCounter extends Component  {
         }
     }
 
-    public static void CloseSharedResources() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException {
+    public static  void CloseSharedResources() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

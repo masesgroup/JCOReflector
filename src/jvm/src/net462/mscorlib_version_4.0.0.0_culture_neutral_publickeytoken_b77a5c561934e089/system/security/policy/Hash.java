@@ -207,7 +207,7 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateMD5(byte[] md5) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Hash CreateMD5(byte[] md5) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateMD5 = null;
@@ -222,7 +222,7 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateMD5(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Hash CreateMD5(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateMD5 = null;
@@ -237,7 +237,7 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateSHA1(byte[] sha1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Hash CreateSHA1(byte[] sha1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSHA1 = null;
@@ -252,7 +252,7 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateSHA1(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Hash CreateSHA1(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSHA1 = null;
@@ -267,7 +267,7 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateSHA256(byte[] sha256) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Hash CreateSHA256(byte[] sha256) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSHA256 = null;
@@ -282,7 +282,7 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateSHA256(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  Hash CreateSHA256(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSHA256 = null;

@@ -153,7 +153,7 @@ public class PresentationTraceSources extends NetObject  {
     
     // Methods section
     
-    public static PresentationTraceLevel GetTraceLevel(NetObject element) throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public static  PresentationTraceLevel GetTraceLevel(NetObject element) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTraceLevel = null;
@@ -168,7 +168,7 @@ public class PresentationTraceSources extends NetObject  {
         }
     }
 
-    public static void Refresh() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.configuration.ConfigurationErrorsException, system.OverflowException {
+    public static  void Refresh() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -178,7 +178,7 @@ public class PresentationTraceSources extends NetObject  {
         }
     }
 
-    public static void SetTraceLevel(NetObject element, PresentationTraceLevel traceLevel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  void SetTraceLevel(NetObject element, PresentationTraceLevel traceLevel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

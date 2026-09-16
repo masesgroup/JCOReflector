@@ -154,7 +154,7 @@ public class MathObject extends JSObject  {
     
     // Methods section
     
-    public static double abs(double d) throws Throwable {
+    public static  double abs(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectabs = null;
@@ -194,7 +194,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double acos(double x) throws Throwable {
+    public static  double acos(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectacos = null;
@@ -234,7 +234,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double asin(double x) throws Throwable {
+    public static  double asin(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectasin = null;
@@ -274,7 +274,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double atan(double x) throws Throwable {
+    public static  double atan(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectatan = null;
@@ -314,7 +314,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double atan2(double dy, double dx) throws Throwable {
+    public static  double atan2(double dy, double dx) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectatan2 = null;
@@ -354,7 +354,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double ceil(double x) throws Throwable {
+    public static  double ceil(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectceil = null;
@@ -394,7 +394,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double cos(double x) throws Throwable {
+    public static  double cos(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectcos = null;
@@ -434,7 +434,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double exp(double x) throws Throwable {
+    public static  double exp(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectexp = null;
@@ -474,7 +474,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double floor(double x) throws Throwable {
+    public static  double floor(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectfloor = null;
@@ -514,7 +514,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double log(double x) throws Throwable {
+    public static  double log(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectlog = null;
@@ -554,7 +554,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double max(NetObject x, NetObject y, NetObject... args) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double max(NetObject x, NetObject y, NetObject... args) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectmax = null;
@@ -594,7 +594,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double min(NetObject x, NetObject y, NetObject... args) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double min(NetObject x, NetObject y, NetObject... args) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectmin = null;
@@ -634,7 +634,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double pow(double dx, double dy) throws Throwable, system.ArithmeticException {
+    public static  double pow(double dx, double dy) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectpow = null;
@@ -674,7 +674,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double random() throws Throwable {
+    public static  double random() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectrandom = null;
@@ -714,7 +714,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double round(double d) throws Throwable {
+    public static  double round(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectround = null;
@@ -754,7 +754,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double sin(double x) throws Throwable {
+    public static  double sin(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsin = null;
@@ -794,7 +794,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double sqrt(double x) throws Throwable {
+    public static  double sqrt(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsqrt = null;
@@ -834,7 +834,7 @@ public class MathObject extends JSObject  {
         }
     }
 
-    public static double tan(double x) throws Throwable {
+    public static  double tan(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttan = null;

@@ -151,7 +151,7 @@ public class Contract extends NetObject  {
     
     // Methods section
     
-    public static void Assert(boolean condition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
+    public static  void Assert(boolean condition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -161,7 +161,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Assert(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
+    public static  void Assert(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -171,7 +171,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Assume(boolean condition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
+    public static  void Assume(boolean condition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -181,7 +181,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Assume(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
+    public static  void Assume(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -191,7 +191,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void EndContractBlock() throws Throwable {
+    public static  void EndContractBlock() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -201,7 +201,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Ensures(boolean condition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  void Ensures(boolean condition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -211,7 +211,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Ensures(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  void Ensures(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -221,7 +221,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Invariant(boolean condition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  void Invariant(boolean condition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -231,7 +231,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Invariant(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  void Invariant(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -241,7 +241,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Requires(boolean condition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  void Requires(boolean condition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -251,7 +251,7 @@ public class Contract extends NetObject  {
         }
     }
 
-    public static void Requires(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  void Requires(boolean condition, java.lang.String userMessage) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -181,7 +181,7 @@ public class UIElement3DAutomationPeer extends AutomationPeer  {
         }
     }
 
-    public static AutomationPeer CreatePeerForElement(UIElement3D element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  AutomationPeer CreatePeerForElement(UIElement3D element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePeerForElement = null;
@@ -196,7 +196,7 @@ public class UIElement3DAutomationPeer extends AutomationPeer  {
         }
     }
 
-    public static AutomationPeer FromElement(UIElement3D element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  AutomationPeer FromElement(UIElement3D element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromElement = null;

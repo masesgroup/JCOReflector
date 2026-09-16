@@ -153,7 +153,7 @@ public class BindingRestrictions extends NetObject  {
     
     // Methods section
     
-    public static BindingRestrictions GetExpressionRestriction(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  BindingRestrictions GetExpressionRestriction(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetExpressionRestriction = null;
@@ -168,7 +168,7 @@ public class BindingRestrictions extends NetObject  {
         }
     }
 
-    public static BindingRestrictions GetInstanceRestriction(Expression expression, NetObject instance) throws Throwable, system.ArgumentNullException {
+    public static  BindingRestrictions GetInstanceRestriction(Expression expression, NetObject instance) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInstanceRestriction = null;
@@ -183,7 +183,7 @@ public class BindingRestrictions extends NetObject  {
         }
     }
 
-    public static BindingRestrictions GetTypeRestriction(Expression expression, NetType type) throws Throwable, system.ArgumentNullException {
+    public static  BindingRestrictions GetTypeRestriction(Expression expression, NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeRestriction = null;

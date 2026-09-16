@@ -301,7 +301,7 @@ public class SiteMapNodeCollection extends NetObjectEnumerable  {
         }
     }
 
-    public static SiteMapNodeCollection ReadOnly(SiteMapNodeCollection collection) throws Throwable, system.ArgumentNullException {
+    public static  SiteMapNodeCollection ReadOnly(SiteMapNodeCollection collection) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadOnly = null;

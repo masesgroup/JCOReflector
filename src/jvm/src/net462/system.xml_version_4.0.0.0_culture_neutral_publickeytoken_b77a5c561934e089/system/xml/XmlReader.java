@@ -169,7 +169,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean IsName(java.lang.String str) throws Throwable, system.NullReferenceException {
+    public static  boolean IsName(java.lang.String str) throws Throwable, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsName = null;
@@ -183,7 +183,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean IsNameToken(java.lang.String str) throws Throwable, system.NullReferenceException {
+    public static  boolean IsNameToken(java.lang.String str) throws Throwable, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNameToken = null;
@@ -1675,7 +1675,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(Stream input) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
+    public static  XmlReader Create(Stream input) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1690,7 +1690,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(Stream input, XmlReaderSettings settings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
+    public static  XmlReader Create(Stream input, XmlReaderSettings settings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1705,7 +1705,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(Stream input, XmlReaderSettings settings, java.lang.String baseUri) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
+    public static  XmlReader Create(Stream input, XmlReaderSettings settings, java.lang.String baseUri) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1720,7 +1720,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(Stream input, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
+    public static  XmlReader Create(Stream input, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1735,7 +1735,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(TextReader input) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
+    public static  XmlReader Create(TextReader input) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1750,7 +1750,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(TextReader input, XmlReaderSettings settings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
+    public static  XmlReader Create(TextReader input, XmlReaderSettings settings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1765,7 +1765,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(TextReader input, XmlReaderSettings settings, java.lang.String baseUri) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
+    public static  XmlReader Create(TextReader input, XmlReaderSettings settings, java.lang.String baseUri) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1780,7 +1780,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(TextReader input, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
+    public static  XmlReader Create(TextReader input, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1795,7 +1795,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(java.lang.String inputUri) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
+    public static  XmlReader Create(java.lang.String inputUri) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1810,7 +1810,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(java.lang.String inputUri, XmlReaderSettings settings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
+    public static  XmlReader Create(java.lang.String inputUri, XmlReaderSettings settings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1825,7 +1825,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(java.lang.String inputUri, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.xml.XmlException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
+    public static  XmlReader Create(java.lang.String inputUri, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.xml.XmlException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1840,7 +1840,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(XmlReader reader, XmlReaderSettings settings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MulticastNotSupportedException, system.xml.schema.XmlSchemaException, system.NotSupportedException, system.FormatException {
+    public static  XmlReader Create(XmlReader reader, XmlReaderSettings settings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MulticastNotSupportedException, system.xml.schema.XmlSchemaException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

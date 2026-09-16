@@ -151,7 +151,7 @@ public class TrackingProfileCache extends NetObject  {
     
     // Methods section
     
-    public static void Clear() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static  void Clear() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

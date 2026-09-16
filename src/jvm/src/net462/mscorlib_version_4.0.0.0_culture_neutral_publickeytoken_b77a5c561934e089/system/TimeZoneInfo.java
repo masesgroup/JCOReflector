@@ -261,7 +261,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTime(DateTime dateTime, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+    public static  DateTime ConvertTime(DateTime dateTime, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTime = null;
@@ -276,7 +276,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTime(DateTime dateTime, TimeZoneInfo sourceTimeZone, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  DateTime ConvertTime(DateTime dateTime, TimeZoneInfo sourceTimeZone, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTime = null;
@@ -291,7 +291,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
+    public static  DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTimeBySystemTimeZoneId = null;
@@ -306,7 +306,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String sourceTimeZoneId, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TimeZoneNotFoundException {
+    public static  DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String sourceTimeZoneId, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TimeZoneNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTimeBySystemTimeZoneId = null;
@@ -321,7 +321,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTimeFromUtc(DateTime dateTime, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException {
+    public static  DateTime ConvertTimeFromUtc(DateTime dateTime, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTimeFromUtc = null;
@@ -336,7 +336,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTimeToUtc(DateTime dateTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+    public static  DateTime ConvertTimeToUtc(DateTime dateTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTimeToUtc = null;
@@ -351,7 +351,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTimeToUtc(DateTime dateTime, TimeZoneInfo sourceTimeZone) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException {
+    public static  DateTime ConvertTimeToUtc(DateTime dateTime, TimeZoneInfo sourceTimeZone) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTimeToUtc = null;
@@ -366,7 +366,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTimeOffset ConvertTime(DateTimeOffset dateTimeOffset, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
+    public static  DateTimeOffset ConvertTime(DateTimeOffset dateTimeOffset, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTime = null;
@@ -381,7 +381,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTimeOffset ConvertTimeBySystemTimeZoneId(DateTimeOffset dateTimeOffset, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
+    public static  DateTimeOffset ConvertTimeBySystemTimeZoneId(DateTimeOffset dateTimeOffset, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTimeBySystemTimeZoneId = null;
@@ -482,7 +482,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static TimeZoneInfo CreateCustomTimeZone(java.lang.String id, TimeSpan baseUtcOffset, java.lang.String displayName, java.lang.String standardDisplayName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException {
+    public static  TimeZoneInfo CreateCustomTimeZone(java.lang.String id, TimeSpan baseUtcOffset, java.lang.String displayName, java.lang.String standardDisplayName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCustomTimeZone = null;
@@ -497,7 +497,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static TimeZoneInfo FindSystemTimeZoneById(java.lang.String id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
+    public static  TimeZoneInfo FindSystemTimeZoneById(java.lang.String id) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.TimeZoneNotFoundException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFindSystemTimeZoneById = null;
@@ -512,7 +512,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static TimeZoneInfo FromSerializedString(java.lang.String source) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.InvalidTimeZoneException, system.OverflowException {
+    public static  TimeZoneInfo FromSerializedString(java.lang.String source) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromSerializedString = null;
@@ -527,7 +527,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static void ClearCachedData() throws Throwable {
+    public static  void ClearCachedData() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

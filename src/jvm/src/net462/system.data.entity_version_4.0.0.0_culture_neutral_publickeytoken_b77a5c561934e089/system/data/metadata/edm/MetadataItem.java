@@ -154,7 +154,7 @@ public class MetadataItem extends NetObject  {
     
     // Methods section
     
-    public static EdmType GetBuiltInType(BuiltInTypeKind builtInTypeKind) throws Throwable {
+    public static  EdmType GetBuiltInType(BuiltInTypeKind builtInTypeKind) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBuiltInType = null;

@@ -155,7 +155,7 @@ public class PipeWriter extends NetObject  {
     
     // Methods section
     
-    public static PipeWriter Create(Stream stream, StreamPipeWriterOptions writerOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  PipeWriter Create(Stream stream, StreamPipeWriterOptions writerOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

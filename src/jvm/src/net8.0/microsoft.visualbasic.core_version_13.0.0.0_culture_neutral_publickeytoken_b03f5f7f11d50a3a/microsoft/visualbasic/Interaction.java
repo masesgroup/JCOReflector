@@ -157,7 +157,7 @@ public class Interaction extends NetObject  {
     
     // Methods section
     
-    public static int Shell(java.lang.String PathName, AppWinStyle Style, boolean Wait, int Timeout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  int Shell(java.lang.String PathName, AppWinStyle Style, boolean Wait, int Timeout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShell = null;
@@ -197,7 +197,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static MsgBoxResult MsgBox(NetObject Prompt, MsgBoxStyle Buttons, NetObject Title) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  MsgBoxResult MsgBox(NetObject Prompt, MsgBoxStyle Buttons, NetObject Title) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMsgBox = null;
@@ -212,7 +212,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static NetObject CallByName(NetObject ObjectRef, java.lang.String ProcName, CallType UseCallType, NetObject... Args) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+    public static  NetObject CallByName(NetObject ObjectRef, java.lang.String ProcName, CallType UseCallType, NetObject... Args) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.MissingMemberException, system.InvalidCastException, system.OverflowException, system.MissingMethodException, system.RankException, system.NullReferenceException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCallByName = null;
@@ -227,7 +227,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static NetObject Choose(double Index, NetObject... Choice) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException {
+    public static  NetObject Choose(double Index, NetObject... Choice) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectChoose = null;
@@ -242,7 +242,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static NetObject CreateObject(java.lang.String ProgId, java.lang.String ServerName) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
+    public static  NetObject CreateObject(java.lang.String ProgId, java.lang.String ServerName) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateObject = null;
@@ -257,7 +257,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static NetObject GetObject(java.lang.String PathName, java.lang.String _Class) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
+    public static  NetObject GetObject(java.lang.String PathName, java.lang.String _Class) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetObject = null;
@@ -272,7 +272,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static NetObject IIf(boolean Expression, NetObject TruePart, NetObject FalsePart) throws Throwable {
+    public static  NetObject IIf(boolean Expression, NetObject TruePart, NetObject FalsePart) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIIf = null;
@@ -287,7 +287,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static NetObject Switch(NetObject... VarExpr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.ArrayTypeMismatchException {
+    public static  NetObject Switch(NetObject... VarExpr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitch = null;
@@ -302,7 +302,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static java.lang.String Command() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ApplicationException {
+    public static  java.lang.String Command() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCommand = null;
@@ -316,7 +316,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static java.lang.String Environ(int Expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException {
+    public static  java.lang.String Environ(int Expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEnviron = null;
@@ -330,7 +330,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static java.lang.String Environ(java.lang.String Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException {
+    public static  java.lang.String Environ(java.lang.String Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEnviron = null;
@@ -344,7 +344,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static java.lang.String GetSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key, java.lang.String Default) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.FormatException {
+    public static  java.lang.String GetSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key, java.lang.String Default) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSetting = null;
@@ -358,7 +358,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static java.lang.String InputBox(java.lang.String Prompt, java.lang.String Title, java.lang.String DefaultResponse, int XPos, int YPos) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  java.lang.String InputBox(java.lang.String Prompt, java.lang.String Title, java.lang.String DefaultResponse, int XPos, int YPos) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInputBox = null;
@@ -372,7 +372,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static java.lang.String Partition(long Number, long Start, long Stop, long Interval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.FormatException {
+    public static  java.lang.String Partition(long Number, long Start, long Stop, long Interval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPartition = null;
@@ -386,7 +386,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static void AppActivate(int ProcessId) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  void AppActivate(int ProcessId) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -396,7 +396,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static void AppActivate(java.lang.String Title) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  void AppActivate(java.lang.String Title) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -406,7 +406,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static void Beep() throws Throwable {
+    public static  void Beep() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -416,7 +416,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static void DeleteSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UnauthorizedAccessException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException, system.security.SecurityException {
+    public static  void DeleteSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UnauthorizedAccessException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -426,7 +426,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public static void SaveSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key, java.lang.String Setting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UnauthorizedAccessException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException, system.OverflowException {
+    public static  void SaveSetting(java.lang.String AppName, java.lang.String Section, java.lang.String Key, java.lang.String Setting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UnauthorizedAccessException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

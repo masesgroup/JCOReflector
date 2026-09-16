@@ -152,7 +152,7 @@ public class CharUnicodeInfo extends NetObject  {
     
     // Methods section
     
-    public static double GetNumericValue(char ch) throws Throwable {
+    public static  double GetNumericValue(char ch) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNumericValue = null;
@@ -192,7 +192,7 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
-    public static double GetNumericValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  double GetNumericValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNumericValue = null;
@@ -232,7 +232,7 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
-    public static int GetDecimalDigitValue(char ch) throws Throwable {
+    public static  int GetDecimalDigitValue(char ch) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDecimalDigitValue = null;
@@ -272,7 +272,7 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
-    public static int GetDecimalDigitValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  int GetDecimalDigitValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDecimalDigitValue = null;
@@ -312,7 +312,7 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
-    public static int GetDigitValue(char ch) throws Throwable {
+    public static  int GetDigitValue(char ch) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDigitValue = null;
@@ -352,7 +352,7 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
-    public static int GetDigitValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  int GetDigitValue(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDigitValue = null;
@@ -392,7 +392,7 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
-    public static UnicodeCategory GetUnicodeCategory(char ch) throws Throwable {
+    public static  UnicodeCategory GetUnicodeCategory(char ch) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUnicodeCategory = null;
@@ -407,7 +407,7 @@ public class CharUnicodeInfo extends NetObject  {
         }
     }
 
-    public static UnicodeCategory GetUnicodeCategory(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static  UnicodeCategory GetUnicodeCategory(java.lang.String s, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUnicodeCategory = null;

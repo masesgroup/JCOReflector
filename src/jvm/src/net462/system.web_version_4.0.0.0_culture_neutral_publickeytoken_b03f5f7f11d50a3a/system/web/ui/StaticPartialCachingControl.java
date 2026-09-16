@@ -186,7 +186,7 @@ public class StaticPartialCachingControl extends BasePartialCachingControl  {
     
     // Methods section
     
-    public static void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, BuildMethod buildMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
+    public static  void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, BuildMethod buildMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -196,7 +196,7 @@ public class StaticPartialCachingControl extends BasePartialCachingControl  {
         }
     }
 
-    public static void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, BuildMethod buildMethod, java.lang.String providerName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, BuildMethod buildMethod, java.lang.String providerName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -206,7 +206,7 @@ public class StaticPartialCachingControl extends BasePartialCachingControl  {
         }
     }
 
-    public static void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, BuildMethod buildMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
+    public static  void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, BuildMethod buildMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

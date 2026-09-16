@@ -159,7 +159,7 @@ public class InternalRM extends NetObject  {
     
     // Methods section
     
-    public static boolean SoapCheckEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  boolean SoapCheckEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSoapCheckEnabled = null;
@@ -173,7 +173,7 @@ public class InternalRM extends NetObject  {
         }
     }
 
-    public static void InfoSoap(NetObject... messages) throws Throwable {
+    public static  void InfoSoap(NetObject... messages) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

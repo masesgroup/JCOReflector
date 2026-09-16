@@ -190,7 +190,7 @@ public class ObjectDisposedException extends InvalidOperationException {
         }
     }
 
-    public static void ThrowIf(boolean condition, NetObject instance) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public static  void ThrowIf(boolean condition, NetObject instance) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -200,7 +200,7 @@ public class ObjectDisposedException extends InvalidOperationException {
         }
     }
 
-    public static void ThrowIf(boolean condition, NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  void ThrowIf(boolean condition, NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

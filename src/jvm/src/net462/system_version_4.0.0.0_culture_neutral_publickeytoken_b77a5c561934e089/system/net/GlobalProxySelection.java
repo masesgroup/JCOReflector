@@ -161,7 +161,7 @@ public class GlobalProxySelection extends NetObject  {
     
     // Methods section
     
-    public static IWebProxy GetEmptyWebProxy() throws Throwable {
+    public static  IWebProxy GetEmptyWebProxy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEmptyWebProxy = null;

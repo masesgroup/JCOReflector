@@ -191,7 +191,7 @@ public class DependencyPropertyDescriptor extends PropertyDescriptor  {
         }
     }
 
-    public static DependencyPropertyDescriptor FromName(java.lang.String name, NetType ownerType, NetType targetType) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  DependencyPropertyDescriptor FromName(java.lang.String name, NetType ownerType, NetType targetType) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromName = null;
@@ -206,7 +206,7 @@ public class DependencyPropertyDescriptor extends PropertyDescriptor  {
         }
     }
 
-    public static DependencyPropertyDescriptor FromName(java.lang.String name, NetType ownerType, NetType targetType, boolean ignorePropertyType) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DependencyPropertyDescriptor FromName(java.lang.String name, NetType ownerType, NetType targetType, boolean ignorePropertyType) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromName = null;
@@ -221,7 +221,7 @@ public class DependencyPropertyDescriptor extends PropertyDescriptor  {
         }
     }
 
-    public static DependencyPropertyDescriptor FromProperty(PropertyDescriptor property) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException {
+    public static  DependencyPropertyDescriptor FromProperty(PropertyDescriptor property) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromProperty = null;
@@ -236,7 +236,7 @@ public class DependencyPropertyDescriptor extends PropertyDescriptor  {
         }
     }
 
-    public static DependencyPropertyDescriptor FromProperty(DependencyProperty dependencyProperty, NetType targetType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.FormatException, system.security.SecurityException {
+    public static  DependencyPropertyDescriptor FromProperty(DependencyProperty dependencyProperty, NetType targetType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.FormatException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromProperty = null;

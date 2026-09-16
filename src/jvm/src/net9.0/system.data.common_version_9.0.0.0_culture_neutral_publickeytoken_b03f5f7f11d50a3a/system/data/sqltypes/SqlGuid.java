@@ -342,7 +342,7 @@ public class SqlGuid extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static SqlBoolean Equals(SqlGuid x, SqlGuid y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  SqlBoolean Equals(SqlGuid x, SqlGuid y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -357,7 +357,7 @@ public class SqlGuid extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlGuid x, SqlGuid y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  SqlBoolean GreaterThan(SqlGuid x, SqlGuid y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -372,7 +372,7 @@ public class SqlGuid extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  SqlBoolean GreaterThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -387,7 +387,7 @@ public class SqlGuid extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static SqlBoolean LessThan(SqlGuid x, SqlGuid y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  SqlBoolean LessThan(SqlGuid x, SqlGuid y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -402,7 +402,7 @@ public class SqlGuid extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  SqlBoolean LessThanOrEqual(SqlGuid x, SqlGuid y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -417,7 +417,7 @@ public class SqlGuid extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static SqlBoolean NotEquals(SqlGuid x, SqlGuid y) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static  SqlBoolean NotEquals(SqlGuid x, SqlGuid y) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -432,7 +432,7 @@ public class SqlGuid extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static SqlGuid Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
+    public static  SqlGuid Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -462,7 +462,7 @@ public class SqlGuid extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

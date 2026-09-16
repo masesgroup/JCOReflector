@@ -215,7 +215,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session, boolean ownsStream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public static  XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session, boolean ownsStream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateBinaryWriter = null;
@@ -230,7 +230,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public static  XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateBinaryWriter = null;
@@ -245,7 +245,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public static  XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateBinaryWriter = null;
@@ -260,7 +260,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public static  XmlDictionaryWriter CreateBinaryWriter(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateBinaryWriter = null;
@@ -275,7 +275,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateDictionaryWriter(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  XmlDictionaryWriter CreateDictionaryWriter(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDictionaryWriter = null;
@@ -290,7 +290,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo, java.lang.String boundary, java.lang.String startUri, boolean writeMessageHeaders, boolean ownsStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo, java.lang.String boundary, java.lang.String startUri, boolean writeMessageHeaders, boolean ownsStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateMtomWriter = null;
@@ -305,7 +305,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateMtomWriter = null;
@@ -320,7 +320,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException {
+    public static  XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTextWriter = null;
@@ -335,7 +335,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArrayTypeMismatchException {
+    public static  XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTextWriter = null;
@@ -350,7 +350,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateTextWriter(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArrayTypeMismatchException {
+    public static  XmlDictionaryWriter CreateTextWriter(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTextWriter = null;

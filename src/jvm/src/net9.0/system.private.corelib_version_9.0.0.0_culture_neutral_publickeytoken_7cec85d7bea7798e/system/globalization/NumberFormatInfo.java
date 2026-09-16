@@ -163,7 +163,7 @@ public class NumberFormatInfo extends NetObject  {
     
     // Methods section
     
-    public static NumberFormatInfo GetInstance(IFormatProvider formatProvider) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException {
+    public static  NumberFormatInfo GetInstance(IFormatProvider formatProvider) throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInstance = null;
@@ -178,7 +178,7 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
-    public static NumberFormatInfo ReadOnly(NumberFormatInfo nfi) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  NumberFormatInfo ReadOnly(NumberFormatInfo nfi) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadOnly = null;

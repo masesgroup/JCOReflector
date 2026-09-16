@@ -152,7 +152,7 @@ public class IntrospectionExtensions extends NetObject  {
     
     // Methods section
     
-    public static TypeInfo GetTypeInfo(NetType type) throws Throwable, system.ArgumentNullException {
+    public static  TypeInfo GetTypeInfo(NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeInfo = null;

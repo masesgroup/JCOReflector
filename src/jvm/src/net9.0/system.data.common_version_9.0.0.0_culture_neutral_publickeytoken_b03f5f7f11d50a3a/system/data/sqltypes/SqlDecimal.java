@@ -366,7 +366,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean Equals(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlBoolean Equals(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -381,7 +381,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlBoolean GreaterThan(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -396,7 +396,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlBoolean GreaterThanOrEqual(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -411,7 +411,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean LessThan(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlBoolean LessThan(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -426,7 +426,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlBoolean LessThanOrEqual(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -441,7 +441,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean NotEquals(SqlDecimal x, SqlDecimal y) throws Throwable, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlBoolean NotEquals(SqlDecimal x, SqlDecimal y) throws Throwable, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -486,7 +486,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Abs(SqlDecimal n) throws Throwable {
+    public static  SqlDecimal Abs(SqlDecimal n) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -501,7 +501,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Add(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
+    public static  SqlDecimal Add(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -516,7 +516,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal AdjustScale(SqlDecimal n, int digits, boolean fRound) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlDecimal AdjustScale(SqlDecimal n, int digits, boolean fRound) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdjustScale = null;
@@ -531,7 +531,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Ceiling(SqlDecimal n) throws Throwable, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.OverflowException {
+    public static  SqlDecimal Ceiling(SqlDecimal n) throws Throwable, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -546,7 +546,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal ConvertToPrecScale(SqlDecimal n, int precision, int scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlDecimal ConvertToPrecScale(SqlDecimal n, int precision, int scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertToPrecScale = null;
@@ -561,7 +561,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Divide(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTypeException {
+    public static  SqlDecimal Divide(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTypeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -576,7 +576,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Floor(SqlDecimal n) throws Throwable, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.OverflowException {
+    public static  SqlDecimal Floor(SqlDecimal n) throws Throwable, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFloor = null;
@@ -591,7 +591,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Multiply(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException {
+    public static  SqlDecimal Multiply(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -606,7 +606,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  SqlDecimal Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -621,7 +621,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Power(SqlDecimal n, double exp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.NotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTruncateException {
+    public static  SqlDecimal Power(SqlDecimal n, double exp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.NotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTruncateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPower = null;
@@ -636,7 +636,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Round(SqlDecimal n, int position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlDecimal Round(SqlDecimal n, int position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -651,7 +651,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Subtract(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
+    public static  SqlDecimal Subtract(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -666,7 +666,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlDecimal Truncate(SqlDecimal n, int position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlDecimal Truncate(SqlDecimal n, int position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;
@@ -711,7 +711,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlInt32 Sign(SqlDecimal n) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
+    public static  SqlInt32 Sign(SqlDecimal n) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -801,7 +801,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

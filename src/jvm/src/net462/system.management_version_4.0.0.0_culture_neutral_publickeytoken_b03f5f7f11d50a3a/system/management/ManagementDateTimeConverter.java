@@ -155,7 +155,7 @@ public class ManagementDateTimeConverter extends NetObject  {
     
     // Methods section
     
-    public static DateTime ToDateTime(java.lang.String dmtfDate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ArgumentException {
+    public static  DateTime ToDateTime(java.lang.String dmtfDate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -170,7 +170,7 @@ public class ManagementDateTimeConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToDmtfDateTime(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException, system.InvalidTimeZoneException, system.io.IOException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  java.lang.String ToDmtfDateTime(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException, system.InvalidTimeZoneException, system.io.IOException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDmtfDateTime = null;
@@ -184,7 +184,7 @@ public class ManagementDateTimeConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToDmtfTimeInterval(TimeSpan timespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  java.lang.String ToDmtfTimeInterval(TimeSpan timespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDmtfTimeInterval = null;
@@ -198,7 +198,7 @@ public class ManagementDateTimeConverter extends NetObject  {
         }
     }
 
-    public static TimeSpan ToTimeSpan(java.lang.String dmtfTimespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.OverflowException {
+    public static  TimeSpan ToTimeSpan(java.lang.String dmtfTimespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToTimeSpan = null;

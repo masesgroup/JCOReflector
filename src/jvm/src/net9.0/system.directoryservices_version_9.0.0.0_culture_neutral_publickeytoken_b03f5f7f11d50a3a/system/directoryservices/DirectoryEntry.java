@@ -207,7 +207,7 @@ public class DirectoryEntry extends Component  {
     
     // Methods section
     
-    public static boolean Exists(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
+    public static  boolean Exists(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExists = null;

@@ -167,7 +167,7 @@ public class OperatingSystem extends NetObject  {
     
     // Methods section
     
-    public static boolean IsAndroid() throws Throwable {
+    public static  boolean IsAndroid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsAndroid = null;
@@ -181,7 +181,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsAndroidVersionAtLeast(int major, int minor, int build, int revision) throws Throwable {
+    public static  boolean IsAndroidVersionAtLeast(int major, int minor, int build, int revision) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsAndroidVersionAtLeast = null;
@@ -195,7 +195,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsBrowser() throws Throwable {
+    public static  boolean IsBrowser() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBrowser = null;
@@ -209,7 +209,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsFreeBSD() throws Throwable {
+    public static  boolean IsFreeBSD() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFreeBSD = null;
@@ -223,7 +223,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsFreeBSDVersionAtLeast(int major, int minor, int build, int revision) throws Throwable {
+    public static  boolean IsFreeBSDVersionAtLeast(int major, int minor, int build, int revision) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFreeBSDVersionAtLeast = null;
@@ -237,7 +237,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsIOS() throws Throwable {
+    public static  boolean IsIOS() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsIOS = null;
@@ -251,7 +251,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsIOSVersionAtLeast(int major, int minor, int build) throws Throwable {
+    public static  boolean IsIOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsIOSVersionAtLeast = null;
@@ -265,7 +265,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsLinux() throws Throwable {
+    public static  boolean IsLinux() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsLinux = null;
@@ -279,7 +279,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsMacCatalyst() throws Throwable {
+    public static  boolean IsMacCatalyst() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMacCatalyst = null;
@@ -293,7 +293,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsMacCatalystVersionAtLeast(int major, int minor, int build) throws Throwable {
+    public static  boolean IsMacCatalystVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMacCatalystVersionAtLeast = null;
@@ -307,7 +307,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsMacOS() throws Throwable {
+    public static  boolean IsMacOS() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMacOS = null;
@@ -321,7 +321,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsMacOSVersionAtLeast(int major, int minor, int build) throws Throwable {
+    public static  boolean IsMacOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMacOSVersionAtLeast = null;
@@ -335,7 +335,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsOSPlatform(java.lang.String platform) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  boolean IsOSPlatform(java.lang.String platform) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOSPlatform = null;
@@ -349,7 +349,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsOSPlatformVersionAtLeast(java.lang.String platform, int major, int minor, int build, int revision) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  boolean IsOSPlatformVersionAtLeast(java.lang.String platform, int major, int minor, int build, int revision) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOSPlatformVersionAtLeast = null;
@@ -363,7 +363,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsTvOS() throws Throwable {
+    public static  boolean IsTvOS() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTvOS = null;
@@ -377,7 +377,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsTvOSVersionAtLeast(int major, int minor, int build) throws Throwable {
+    public static  boolean IsTvOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTvOSVersionAtLeast = null;
@@ -391,7 +391,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsWasi() throws Throwable {
+    public static  boolean IsWasi() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWasi = null;
@@ -405,7 +405,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsWatchOS() throws Throwable {
+    public static  boolean IsWatchOS() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWatchOS = null;
@@ -419,7 +419,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsWatchOSVersionAtLeast(int major, int minor, int build) throws Throwable {
+    public static  boolean IsWatchOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWatchOSVersionAtLeast = null;
@@ -433,7 +433,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsWindows() throws Throwable {
+    public static  boolean IsWindows() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWindows = null;
@@ -447,7 +447,7 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
-    public static boolean IsWindowsVersionAtLeast(int major, int minor, int build, int revision) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public static  boolean IsWindowsVersionAtLeast(int major, int minor, int build, int revision) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWindowsVersionAtLeast = null;

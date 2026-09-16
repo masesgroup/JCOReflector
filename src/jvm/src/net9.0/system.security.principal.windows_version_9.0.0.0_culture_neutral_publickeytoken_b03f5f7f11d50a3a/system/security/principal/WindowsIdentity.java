@@ -203,7 +203,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static WindowsIdentity GetAnonymous() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public static  WindowsIdentity GetAnonymous() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAnonymous = null;
@@ -218,7 +218,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static WindowsIdentity GetCurrent() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException {
+    public static  WindowsIdentity GetCurrent() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrent = null;
@@ -233,7 +233,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static WindowsIdentity GetCurrent(boolean ifImpersonating) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException {
+    public static  WindowsIdentity GetCurrent(boolean ifImpersonating) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrent = null;
@@ -248,7 +248,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static WindowsIdentity GetCurrent(TokenAccessLevels desiredAccess) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException {
+    public static  WindowsIdentity GetCurrent(TokenAccessLevels desiredAccess) throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrent = null;
@@ -273,7 +273,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public static void RunImpersonated(SafeAccessTokenHandle safeAccessTokenHandle, Action action) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException {
+    public static  void RunImpersonated(SafeAccessTokenHandle safeAccessTokenHandle, Action action) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

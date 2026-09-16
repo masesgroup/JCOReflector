@@ -156,7 +156,7 @@ public class LayoutInformation extends NetObject  {
     
     // Methods section
     
-    public static Geometry GetLayoutClip(FrameworkElement element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  Geometry GetLayoutClip(FrameworkElement element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLayoutClip = null;
@@ -171,7 +171,7 @@ public class LayoutInformation extends NetObject  {
         }
     }
 
-    public static Rect GetLayoutSlot(FrameworkElement element) throws Throwable, system.ArgumentNullException {
+    public static  Rect GetLayoutSlot(FrameworkElement element) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLayoutSlot = null;
@@ -186,7 +186,7 @@ public class LayoutInformation extends NetObject  {
         }
     }
 
-    public static UIElement GetLayoutExceptionElement(Dispatcher dispatcher) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.MulticastNotSupportedException {
+    public static  UIElement GetLayoutExceptionElement(Dispatcher dispatcher) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLayoutExceptionElement = null;

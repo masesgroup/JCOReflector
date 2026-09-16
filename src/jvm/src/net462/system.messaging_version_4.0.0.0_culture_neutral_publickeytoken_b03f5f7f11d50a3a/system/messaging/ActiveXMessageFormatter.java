@@ -204,7 +204,7 @@ public class ActiveXMessageFormatter extends NetObject  {
         }
     }
 
-    public static void InitStreamedObject(NetObject streamedObject) throws Throwable {
+    public static  void InitStreamedObject(NetObject streamedObject) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

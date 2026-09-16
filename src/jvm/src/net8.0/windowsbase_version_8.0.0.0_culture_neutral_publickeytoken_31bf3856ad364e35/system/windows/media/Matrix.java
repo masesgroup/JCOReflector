@@ -171,7 +171,7 @@ public class Matrix extends ValueType implements system.IFormattable {
     
     // Methods section
     
-    public static boolean Equals(Matrix matrix1, Matrix matrix2) throws Throwable {
+    public static  boolean Equals(Matrix matrix1, Matrix matrix2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -213,7 +213,7 @@ public class Matrix extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Matrix Multiply(Matrix trans1, Matrix trans2) throws Throwable {
+    public static  Matrix Multiply(Matrix trans1, Matrix trans2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -228,7 +228,7 @@ public class Matrix extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Matrix Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
+    public static  Matrix Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

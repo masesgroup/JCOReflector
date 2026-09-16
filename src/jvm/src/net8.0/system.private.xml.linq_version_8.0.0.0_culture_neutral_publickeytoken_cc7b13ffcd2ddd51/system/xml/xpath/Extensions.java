@@ -157,7 +157,7 @@ public class Extensions extends NetObject  {
     
     // Methods section
     
-    public static NetObject XPathEvaluate(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.xpath.XPathException {
+    public static  NetObject XPathEvaluate(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXPathEvaluate = null;
@@ -172,7 +172,7 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static NetObject XPathEvaluate(XNode node, java.lang.String expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.xml.xpath.XPathException {
+    public static  NetObject XPathEvaluate(XNode node, java.lang.String expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXPathEvaluate = null;
@@ -187,7 +187,7 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static XElement XPathSelectElement(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.xml.xpath.XPathException {
+    public static  XElement XPathSelectElement(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXPathSelectElement = null;
@@ -202,7 +202,7 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static XElement XPathSelectElement(XNode node, java.lang.String expression) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.InvalidOperationException {
+    public static  XElement XPathSelectElement(XNode node, java.lang.String expression) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXPathSelectElement = null;
@@ -217,7 +217,7 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static XPathNavigator CreateNavigator(XNode node, XmlNameTable nameTable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  XPathNavigator CreateNavigator(XNode node, XmlNameTable nameTable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateNavigator = null;
@@ -232,7 +232,7 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static XPathNavigator CreateNavigator(XNode node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  XPathNavigator CreateNavigator(XNode node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateNavigator = null;

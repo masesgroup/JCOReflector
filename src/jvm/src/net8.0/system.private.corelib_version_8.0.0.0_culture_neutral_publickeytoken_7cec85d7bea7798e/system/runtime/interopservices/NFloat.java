@@ -194,7 +194,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsEvenInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsEvenInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEvenInteger = null;
@@ -208,7 +208,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsFinite(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsFinite(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFinite = null;
@@ -222,7 +222,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsInfinity(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsInfinity(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInfinity = null;
@@ -236,7 +236,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInteger = null;
@@ -250,7 +250,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsNaN(NFloat value) throws Throwable {
+    public static  boolean IsNaN(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNaN = null;
@@ -264,7 +264,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsNegative(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsNegative(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegative = null;
@@ -278,7 +278,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsNegativeInfinity(NFloat value) throws Throwable {
+    public static  boolean IsNegativeInfinity(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegativeInfinity = null;
@@ -292,7 +292,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsNormal(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsNormal(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNormal = null;
@@ -306,7 +306,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsOddInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsOddInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOddInteger = null;
@@ -320,7 +320,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsPositive(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsPositive(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositive = null;
@@ -334,7 +334,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsPositiveInfinity(NFloat value) throws Throwable {
+    public static  boolean IsPositiveInfinity(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositiveInfinity = null;
@@ -348,7 +348,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsPow2(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsPow2(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPow2 = null;
@@ -362,7 +362,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsRealNumber(NFloat value) throws Throwable {
+    public static  boolean IsRealNumber(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsRealNumber = null;
@@ -376,7 +376,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean IsSubnormal(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsSubnormal(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSubnormal = null;
@@ -390,7 +390,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -404,7 +404,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -418,7 +418,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -512,7 +512,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static int ILogB(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  int ILogB(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectILogB = null;
@@ -552,7 +552,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static int Sign(NFloat value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArithmeticException {
+    public static  int Sign(NFloat value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -592,7 +592,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Abs(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat Abs(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -607,7 +607,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Acos(NFloat x) throws Throwable {
+    public static  NFloat Acos(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcos = null;
@@ -622,7 +622,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Acosh(NFloat x) throws Throwable {
+    public static  NFloat Acosh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcosh = null;
@@ -637,7 +637,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat AcosPi(NFloat x) throws Throwable {
+    public static  NFloat AcosPi(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcosPi = null;
@@ -652,7 +652,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Asin(NFloat x) throws Throwable {
+    public static  NFloat Asin(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsin = null;
@@ -667,7 +667,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Asinh(NFloat x) throws Throwable {
+    public static  NFloat Asinh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsinh = null;
@@ -682,7 +682,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat AsinPi(NFloat x) throws Throwable {
+    public static  NFloat AsinPi(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsinPi = null;
@@ -697,7 +697,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Atan(NFloat x) throws Throwable {
+    public static  NFloat Atan(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan = null;
@@ -712,7 +712,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Atan2(NFloat y, NFloat x) throws Throwable {
+    public static  NFloat Atan2(NFloat y, NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan2 = null;
@@ -727,7 +727,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Atan2Pi(NFloat y, NFloat x) throws Throwable {
+    public static  NFloat Atan2Pi(NFloat y, NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan2Pi = null;
@@ -742,7 +742,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Atanh(NFloat x) throws Throwable {
+    public static  NFloat Atanh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtanh = null;
@@ -757,7 +757,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat AtanPi(NFloat x) throws Throwable {
+    public static  NFloat AtanPi(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtanPi = null;
@@ -772,7 +772,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat BitDecrement(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat BitDecrement(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitDecrement = null;
@@ -787,7 +787,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat BitIncrement(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat BitIncrement(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBitIncrement = null;
@@ -802,7 +802,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Cbrt(NFloat x) throws Throwable {
+    public static  NFloat Cbrt(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCbrt = null;
@@ -817,7 +817,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Ceiling(NFloat x) throws Throwable {
+    public static  NFloat Ceiling(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -832,7 +832,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Clamp(NFloat value, NFloat min, NFloat max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
+    public static  NFloat Clamp(NFloat value, NFloat min, NFloat max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClamp = null;
@@ -847,7 +847,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat CopySign(NFloat value, NFloat sign) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat CopySign(NFloat value, NFloat sign) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCopySign = null;
@@ -862,7 +862,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Cos(NFloat x) throws Throwable {
+    public static  NFloat Cos(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCos = null;
@@ -877,7 +877,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Cosh(NFloat x) throws Throwable {
+    public static  NFloat Cosh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCosh = null;
@@ -892,7 +892,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat CosPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat CosPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCosPi = null;
@@ -907,7 +907,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat DegreesToRadians(NFloat degrees) throws Throwable {
+    public static  NFloat DegreesToRadians(NFloat degrees) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDegreesToRadians = null;
@@ -922,7 +922,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Exp(NFloat x) throws Throwable {
+    public static  NFloat Exp(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp = null;
@@ -937,7 +937,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Exp10(NFloat x) throws Throwable {
+    public static  NFloat Exp10(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp10 = null;
@@ -952,7 +952,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Exp10M1(NFloat x) throws Throwable {
+    public static  NFloat Exp10M1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp10M1 = null;
@@ -967,7 +967,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Exp2(NFloat x) throws Throwable {
+    public static  NFloat Exp2(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp2 = null;
@@ -982,7 +982,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Exp2M1(NFloat x) throws Throwable {
+    public static  NFloat Exp2M1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp2M1 = null;
@@ -997,7 +997,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat ExpM1(NFloat x) throws Throwable {
+    public static  NFloat ExpM1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExpM1 = null;
@@ -1012,7 +1012,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Floor(NFloat x) throws Throwable {
+    public static  NFloat Floor(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFloor = null;
@@ -1027,7 +1027,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat FusedMultiplyAdd(NFloat left, NFloat right, NFloat addend) throws Throwable {
+    public static  NFloat FusedMultiplyAdd(NFloat left, NFloat right, NFloat addend) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFusedMultiplyAdd = null;
@@ -1042,7 +1042,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Hypot(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat Hypot(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHypot = null;
@@ -1057,7 +1057,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Ieee754Remainder(NFloat left, NFloat right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
+    public static  NFloat Ieee754Remainder(NFloat left, NFloat right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIeee754Remainder = null;
@@ -1072,7 +1072,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Lerp(NFloat value1, NFloat value2, NFloat amount) throws Throwable {
+    public static  NFloat Lerp(NFloat value1, NFloat value2, NFloat amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -1087,7 +1087,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Log(NFloat x, NFloat newBase) throws Throwable {
+    public static  NFloat Log(NFloat x, NFloat newBase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -1102,7 +1102,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Log(NFloat x) throws Throwable {
+    public static  NFloat Log(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -1117,7 +1117,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Log10(NFloat x) throws Throwable {
+    public static  NFloat Log10(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10 = null;
@@ -1132,7 +1132,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Log10P1(NFloat x) throws Throwable {
+    public static  NFloat Log10P1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10P1 = null;
@@ -1147,7 +1147,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Log2(NFloat value) throws Throwable {
+    public static  NFloat Log2(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2 = null;
@@ -1162,7 +1162,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Log2P1(NFloat x) throws Throwable {
+    public static  NFloat Log2P1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2P1 = null;
@@ -1177,7 +1177,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat LogP1(NFloat x) throws Throwable {
+    public static  NFloat LogP1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLogP1 = null;
@@ -1192,7 +1192,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Max(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat Max(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -1207,7 +1207,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat MaxMagnitude(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat MaxMagnitude(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitude = null;
@@ -1222,7 +1222,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat MaxMagnitudeNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat MaxMagnitudeNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitudeNumber = null;
@@ -1237,7 +1237,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat MaxNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat MaxNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxNumber = null;
@@ -1252,7 +1252,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Min(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat Min(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -1267,7 +1267,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat MinMagnitude(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat MinMagnitude(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitude = null;
@@ -1282,7 +1282,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat MinMagnitudeNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat MinMagnitudeNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitudeNumber = null;
@@ -1297,7 +1297,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat MinNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat MinNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinNumber = null;
@@ -1312,7 +1312,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.FormatException {
+    public static  NFloat Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1327,7 +1327,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  NFloat Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1342,7 +1342,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  NFloat Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1357,7 +1357,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  NFloat Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1372,7 +1372,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Pow(NFloat x, NFloat y) throws Throwable {
+    public static  NFloat Pow(NFloat x, NFloat y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -1387,7 +1387,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat RadiansToDegrees(NFloat radians) throws Throwable {
+    public static  NFloat RadiansToDegrees(NFloat radians) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRadiansToDegrees = null;
@@ -1402,7 +1402,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat ReciprocalEstimate(NFloat x) throws Throwable {
+    public static  NFloat ReciprocalEstimate(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReciprocalEstimate = null;
@@ -1417,7 +1417,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat ReciprocalSqrtEstimate(NFloat x) throws Throwable {
+    public static  NFloat ReciprocalSqrtEstimate(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReciprocalSqrtEstimate = null;
@@ -1432,7 +1432,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat RootN(NFloat x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat RootN(NFloat x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRootN = null;
@@ -1447,7 +1447,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Round(NFloat x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  NFloat Round(NFloat x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1462,7 +1462,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Round(NFloat x, int digits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
+    public static  NFloat Round(NFloat x, int digits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1477,7 +1477,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Round(NFloat x, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException {
+    public static  NFloat Round(NFloat x, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1492,7 +1492,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Round(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat Round(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1507,7 +1507,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat ScaleB(NFloat x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat ScaleB(NFloat x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectScaleB = null;
@@ -1522,7 +1522,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Sin(NFloat x) throws Throwable {
+    public static  NFloat Sin(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSin = null;
@@ -1537,7 +1537,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Sinh(NFloat x) throws Throwable {
+    public static  NFloat Sinh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinh = null;
@@ -1552,7 +1552,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat SinPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat SinPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinPi = null;
@@ -1567,7 +1567,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Sqrt(NFloat x) throws Throwable {
+    public static  NFloat Sqrt(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSqrt = null;
@@ -1582,7 +1582,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Tan(NFloat x) throws Throwable {
+    public static  NFloat Tan(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTan = null;
@@ -1597,7 +1597,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Tanh(NFloat x) throws Throwable {
+    public static  NFloat Tanh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTanh = null;
@@ -1612,7 +1612,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat TanPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  NFloat TanPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTanPi = null;
@@ -1627,7 +1627,7 @@ public class NFloat extends ValueType  {
         }
     }
 
-    public static NFloat Truncate(NFloat x) throws Throwable {
+    public static  NFloat Truncate(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;

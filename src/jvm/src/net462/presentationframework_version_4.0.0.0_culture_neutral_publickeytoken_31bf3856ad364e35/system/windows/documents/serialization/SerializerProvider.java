@@ -177,7 +177,7 @@ public class SerializerProvider extends NetObject  {
         }
     }
 
-    public static void RegisterSerializer(SerializerDescriptor serializerDescriptor, boolean overwrite) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.NotSupportedException {
+    public static  void RegisterSerializer(SerializerDescriptor serializerDescriptor, boolean overwrite) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -187,7 +187,7 @@ public class SerializerProvider extends NetObject  {
         }
     }
 
-    public static void UnregisterSerializer(SerializerDescriptor serializerDescriptor) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
+    public static  void UnregisterSerializer(SerializerDescriptor serializerDescriptor) throws Throwable, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.security.SecurityException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

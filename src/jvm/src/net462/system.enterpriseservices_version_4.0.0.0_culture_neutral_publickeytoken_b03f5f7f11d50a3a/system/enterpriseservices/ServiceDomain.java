@@ -155,7 +155,7 @@ public class ServiceDomain extends NetObject  {
     
     // Methods section
     
-    public static TransactionStatus Leave() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  TransactionStatus Leave() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeave = null;
@@ -170,7 +170,7 @@ public class ServiceDomain extends NetObject  {
         }
     }
 
-    public static void Enter(ServiceConfig cfg) throws Throwable {
+    public static  void Enter(ServiceConfig cfg) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

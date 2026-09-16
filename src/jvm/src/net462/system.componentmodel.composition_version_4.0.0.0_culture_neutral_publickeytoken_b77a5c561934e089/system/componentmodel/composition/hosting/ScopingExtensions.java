@@ -155,7 +155,7 @@ public class ScopingExtensions extends NetObject  {
     
     // Methods section
     
-    public static boolean ContainsPartMetadataWithKey(ComposablePartDefinition part, java.lang.String key) throws Throwable, system.ArgumentNullException {
+    public static  boolean ContainsPartMetadataWithKey(ComposablePartDefinition part, java.lang.String key) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainsPartMetadataWithKey = null;
@@ -169,7 +169,7 @@ public class ScopingExtensions extends NetObject  {
         }
     }
 
-    public static boolean Exports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException {
+    public static  boolean Exports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExports = null;
@@ -183,7 +183,7 @@ public class ScopingExtensions extends NetObject  {
         }
     }
 
-    public static boolean Imports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException {
+    public static  boolean Imports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImports = null;
@@ -197,7 +197,7 @@ public class ScopingExtensions extends NetObject  {
         }
     }
 
-    public static boolean Imports(ComposablePartDefinition part, java.lang.String contractName, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException {
+    public static  boolean Imports(ComposablePartDefinition part, java.lang.String contractName, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImports = null;

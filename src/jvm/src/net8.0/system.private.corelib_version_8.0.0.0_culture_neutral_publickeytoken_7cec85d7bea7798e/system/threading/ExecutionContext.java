@@ -158,7 +158,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean IsFlowSuppressed() throws Throwable {
+    public static  boolean IsFlowSuppressed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFlowSuppressed = null;
@@ -172,7 +172,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static AsyncFlowControl SuppressFlow() throws Throwable {
+    public static  AsyncFlowControl SuppressFlow() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSuppressFlow = null;
@@ -187,7 +187,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static ExecutionContext Capture() throws Throwable {
+    public static  ExecutionContext Capture() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCapture = null;
@@ -237,7 +237,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void Restore(ExecutionContext executionContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void Restore(ExecutionContext executionContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -247,7 +247,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void RestoreFlow() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void RestoreFlow() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -257,7 +257,7 @@ public class ExecutionContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void Run(ExecutionContext executionContext, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void Run(ExecutionContext executionContext, ContextCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

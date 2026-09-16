@@ -151,7 +151,7 @@ public class FileSystemName extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String TranslateWin32Expression(java.lang.String expression) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentException {
+    public static  java.lang.String TranslateWin32Expression(java.lang.String expression) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTranslateWin32Expression = null;

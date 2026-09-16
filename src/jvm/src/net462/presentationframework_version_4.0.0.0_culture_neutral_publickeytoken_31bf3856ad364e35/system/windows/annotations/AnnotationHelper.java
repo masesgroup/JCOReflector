@@ -156,7 +156,7 @@ public class AnnotationHelper extends NetObject  {
     
     // Methods section
     
-    public static Annotation CreateHighlightForSelection(AnnotationService service, java.lang.String author, Brush highlightBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.xml.XmlException {
+    public static  Annotation CreateHighlightForSelection(AnnotationService service, java.lang.String author, Brush highlightBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHighlightForSelection = null;
@@ -171,7 +171,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static Annotation CreateInkStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
+    public static  Annotation CreateInkStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateInkStickyNoteForSelection = null;
@@ -186,7 +186,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static Annotation CreateTextStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
+    public static  Annotation CreateTextStickyNoteForSelection(AnnotationService service, java.lang.String author) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTextStickyNoteForSelection = null;
@@ -201,7 +201,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static IAnchorInfo GetAnchorInfo(AnnotationService service, Annotation annotation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.MulticastNotSupportedException {
+    public static  IAnchorInfo GetAnchorInfo(AnnotationService service, Annotation annotation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAnchorInfo = null;
@@ -216,7 +216,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static void ClearHighlightsForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.xml.XmlException {
+    public static  void ClearHighlightsForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -226,7 +226,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static void DeleteInkStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public static  void DeleteInkStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -236,7 +236,7 @@ public class AnnotationHelper extends NetObject  {
         }
     }
 
-    public static void DeleteTextStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public static  void DeleteTextStickyNotesForSelection(AnnotationService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

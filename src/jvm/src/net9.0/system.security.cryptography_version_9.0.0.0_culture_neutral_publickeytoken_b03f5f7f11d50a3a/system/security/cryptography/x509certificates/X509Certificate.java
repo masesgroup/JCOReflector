@@ -511,7 +511,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
         }
     }
 
-    public static X509Certificate CreateFromCertFile(java.lang.String filename) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException {
+    public static  X509Certificate CreateFromCertFile(java.lang.String filename) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromCertFile = null;
@@ -526,7 +526,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
         }
     }
 
-    public static X509Certificate CreateFromSignedFile(java.lang.String filename) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException {
+    public static  X509Certificate CreateFromSignedFile(java.lang.String filename) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromSignedFile = null;

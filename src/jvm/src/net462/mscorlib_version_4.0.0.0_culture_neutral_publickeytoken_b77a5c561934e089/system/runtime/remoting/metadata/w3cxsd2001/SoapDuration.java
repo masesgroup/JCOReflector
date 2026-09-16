@@ -160,7 +160,7 @@ public class SoapDuration extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String ToString(TimeSpan timeSpan) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidOperationException {
+    public static  java.lang.String ToString(TimeSpan timeSpan) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -174,7 +174,7 @@ public class SoapDuration extends NetObject  {
         }
     }
 
-    public static TimeSpan Parse(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.NullReferenceException, system.runtime.remoting.RemotingException {
+    public static  TimeSpan Parse(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.NullReferenceException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

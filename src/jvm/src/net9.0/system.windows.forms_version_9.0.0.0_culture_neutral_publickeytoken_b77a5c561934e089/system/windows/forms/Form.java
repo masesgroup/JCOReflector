@@ -220,7 +220,7 @@ public class Form extends ContainerControl  {
         }
     }
 
-    public static SizeF GetAutoScaleSize(Font font) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException {
+    public static  SizeF GetAutoScaleSize(Font font) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAutoScaleSize = null;

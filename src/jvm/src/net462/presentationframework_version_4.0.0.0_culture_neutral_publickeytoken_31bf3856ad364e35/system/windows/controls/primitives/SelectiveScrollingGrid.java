@@ -162,7 +162,7 @@ public class SelectiveScrollingGrid extends Grid  {
     
     // Methods section
     
-    public static SelectiveScrollingOrientation GetSelectiveScrollingOrientation(DependencyObject obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  SelectiveScrollingOrientation GetSelectiveScrollingOrientation(DependencyObject obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSelectiveScrollingOrientation = null;
@@ -177,7 +177,7 @@ public class SelectiveScrollingGrid extends Grid  {
         }
     }
 
-    public static void SetSelectiveScrollingOrientation(DependencyObject obj, SelectiveScrollingOrientation value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void SetSelectiveScrollingOrientation(DependencyObject obj, SelectiveScrollingOrientation value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -163,7 +163,7 @@ public class NumberFormatInfo extends NetObject  {
     
     // Methods section
     
-    public static NumberFormatInfo GetInstance(IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException {
+    public static  NumberFormatInfo GetInstance(IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetInstance = null;
@@ -178,7 +178,7 @@ public class NumberFormatInfo extends NetObject  {
         }
     }
 
-    public static NumberFormatInfo ReadOnly(NumberFormatInfo nfi) throws Throwable, system.ArgumentNullException {
+    public static  NumberFormatInfo ReadOnly(NumberFormatInfo nfi) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadOnly = null;

@@ -168,7 +168,7 @@ public class DiscoveryReference extends NetObject  {
         }
     }
 
-    public static java.lang.String FilenameFromUrl(java.lang.String url) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
+    public static  java.lang.String FilenameFromUrl(java.lang.String url) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFilenameFromUrl = null;

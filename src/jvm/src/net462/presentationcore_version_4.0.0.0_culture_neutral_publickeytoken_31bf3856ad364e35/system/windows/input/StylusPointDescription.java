@@ -162,7 +162,7 @@ public class StylusPointDescription extends NetObject  {
     
     // Methods section
     
-    public static boolean AreCompatible(StylusPointDescription stylusPointDescription1, StylusPointDescription stylusPointDescription2) throws Throwable, system.ArgumentNullException {
+    public static  boolean AreCompatible(StylusPointDescription stylusPointDescription1, StylusPointDescription stylusPointDescription2) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAreCompatible = null;
@@ -204,7 +204,7 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
-    public static StylusPointDescription GetCommonDescription(StylusPointDescription stylusPointDescription, StylusPointDescription stylusPointDescriptionPreserveInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  StylusPointDescription GetCommonDescription(StylusPointDescription stylusPointDescription, StylusPointDescription stylusPointDescriptionPreserveInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCommonDescription = null;

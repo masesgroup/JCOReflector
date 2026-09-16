@@ -156,7 +156,7 @@ public class GCHandle extends ValueType  {
     
     // Methods section
     
-    public static GCHandle Alloc(NetObject value) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  GCHandle Alloc(NetObject value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAlloc = null;
@@ -171,7 +171,7 @@ public class GCHandle extends ValueType  {
         }
     }
 
-    public static GCHandle Alloc(NetObject value, GCHandleType type) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  GCHandle Alloc(NetObject value, GCHandleType type) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAlloc = null;

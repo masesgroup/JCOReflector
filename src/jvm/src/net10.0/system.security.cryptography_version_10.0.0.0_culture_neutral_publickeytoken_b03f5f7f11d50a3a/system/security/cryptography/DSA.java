@@ -743,7 +743,7 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public static DSA CreateNewDSA() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
+    public static  DSA CreateNewDSA() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -758,7 +758,7 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public static DSA Create(int keySizeInBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
+    public static  DSA Create(int keySizeInBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -773,7 +773,7 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public static DSA Create(DSAParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
+    public static  DSA Create(DSAParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -788,7 +788,7 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public static DSA CreateNewDSA(java.lang.String algName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException {
+    public static  DSA CreateNewDSA(java.lang.String algName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

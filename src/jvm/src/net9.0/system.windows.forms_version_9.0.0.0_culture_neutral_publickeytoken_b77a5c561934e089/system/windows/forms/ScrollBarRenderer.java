@@ -157,7 +157,7 @@ public class ScrollBarRenderer extends NetObject  {
     
     // Methods section
     
-    public static Size GetSizeBoxSize(Graphics g, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public static  Size GetSizeBoxSize(Graphics g, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSizeBoxSize = null;
@@ -172,7 +172,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static Size GetThumbGripSize(Graphics g, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public static  Size GetThumbGripSize(Graphics g, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetThumbGripSize = null;
@@ -187,7 +187,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawArrowButton(Graphics g, Rectangle bounds, ScrollBarArrowButtonState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawArrowButton(Graphics g, Rectangle bounds, ScrollBarArrowButtonState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -197,7 +197,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawHorizontalThumb(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawHorizontalThumb(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -207,7 +207,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawHorizontalThumbGrip(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawHorizontalThumbGrip(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -217,7 +217,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawLeftHorizontalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawLeftHorizontalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -227,7 +227,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawLowerVerticalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawLowerVerticalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -237,7 +237,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawRightHorizontalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawRightHorizontalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -247,7 +247,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawSizeBox(Graphics g, Rectangle bounds, ScrollBarSizeBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawSizeBox(Graphics g, Rectangle bounds, ScrollBarSizeBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -257,7 +257,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawUpperVerticalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawUpperVerticalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -267,7 +267,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawVerticalThumb(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawVerticalThumb(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -277,7 +277,7 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawVerticalThumbGrip(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawVerticalThumbGrip(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

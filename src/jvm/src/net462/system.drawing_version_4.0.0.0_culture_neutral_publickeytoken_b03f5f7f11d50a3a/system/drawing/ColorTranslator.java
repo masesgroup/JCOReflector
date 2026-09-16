@@ -154,7 +154,7 @@ public class ColorTranslator extends NetObject  {
     
     // Methods section
     
-    public static int ToOle(Color c) throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
+    public static  int ToOle(Color c) throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToOle = null;
@@ -194,7 +194,7 @@ public class ColorTranslator extends NetObject  {
         }
     }
 
-    public static int ToWin32(Color c) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
+    public static  int ToWin32(Color c) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToWin32 = null;
@@ -234,7 +234,7 @@ public class ColorTranslator extends NetObject  {
         }
     }
 
-    public static Color FromHtml(java.lang.String htmlColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.security.SecurityException {
+    public static  Color FromHtml(java.lang.String htmlColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromHtml = null;
@@ -249,7 +249,7 @@ public class ColorTranslator extends NetObject  {
         }
     }
 
-    public static Color FromOle(int oleColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
+    public static  Color FromOle(int oleColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromOle = null;
@@ -264,7 +264,7 @@ public class ColorTranslator extends NetObject  {
         }
     }
 
-    public static Color FromWin32(int win32Color) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
+    public static  Color FromWin32(int win32Color) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromWin32 = null;
@@ -279,7 +279,7 @@ public class ColorTranslator extends NetObject  {
         }
     }
 
-    public static java.lang.String ToHtml(Color c) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  java.lang.String ToHtml(Color c) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToHtml = null;

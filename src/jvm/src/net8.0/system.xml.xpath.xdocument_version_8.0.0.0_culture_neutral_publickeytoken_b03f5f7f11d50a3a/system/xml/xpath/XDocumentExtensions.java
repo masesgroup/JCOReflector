@@ -154,7 +154,7 @@ public class XDocumentExtensions extends NetObject  {
     
     // Methods section
     
-    public static IXPathNavigable ToXPathNavigable(XNode node) throws Throwable {
+    public static  IXPathNavigable ToXPathNavigable(XNode node) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToXPathNavigable = null;

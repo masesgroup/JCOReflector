@@ -180,7 +180,7 @@ public class Range extends ValueType  {
         }
     }
 
-    public static Range EndAt(Index end) throws Throwable {
+    public static  Range EndAt(Index end) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEndAt = null;
@@ -195,7 +195,7 @@ public class Range extends ValueType  {
         }
     }
 
-    public static Range StartAt(Index start) throws Throwable {
+    public static  Range StartAt(Index start) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartAt = null;

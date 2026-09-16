@@ -180,7 +180,7 @@ public class RepeatBehavior extends ValueType implements system.IFormattable {
     
     // Methods section
     
-    public static boolean Equals(RepeatBehavior repeatBehavior1, RepeatBehavior repeatBehavior2) throws Throwable {
+    public static  boolean Equals(RepeatBehavior repeatBehavior1, RepeatBehavior repeatBehavior2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;

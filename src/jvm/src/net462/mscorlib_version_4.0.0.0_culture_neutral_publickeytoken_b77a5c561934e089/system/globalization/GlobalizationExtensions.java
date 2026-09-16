@@ -154,7 +154,7 @@ public class GlobalizationExtensions extends NetObject  {
     
     // Methods section
     
-    public static StringComparer GetStringComparer(CompareInfo compareInfo, CompareOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  StringComparer GetStringComparer(CompareInfo compareInfo, CompareOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStringComparer = null;

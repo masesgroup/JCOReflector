@@ -176,7 +176,7 @@ public class OleDbEnumerator extends NetObject  {
         }
     }
 
-    public static OleDbDataReader GetEnumerator(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
+    public static  OleDbDataReader GetEnumerator(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnumerator = null;
@@ -191,7 +191,7 @@ public class OleDbEnumerator extends NetObject  {
         }
     }
 
-    public static OleDbDataReader GetRootEnumerator() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
+    public static  OleDbDataReader GetRootEnumerator() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRootEnumerator = null;

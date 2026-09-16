@@ -157,7 +157,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
     
     // Methods section
     
-    public static EventInfo GetRuntimeEvent(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  EventInfo GetRuntimeEvent(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeEvent = null;
@@ -172,7 +172,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
         }
     }
 
-    public static FieldInfo GetRuntimeField(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  FieldInfo GetRuntimeField(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeField = null;
@@ -187,7 +187,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
         }
     }
 
-    public static InterfaceMapping GetRuntimeInterfaceMap(TypeInfo typeInfo, NetType interfaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
+    public static  InterfaceMapping GetRuntimeInterfaceMap(TypeInfo typeInfo, NetType interfaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeInterfaceMap = null;
@@ -202,7 +202,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
         }
     }
 
-    public static MethodInfo GetRuntimeBaseDefinition(MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  MethodInfo GetRuntimeBaseDefinition(MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeBaseDefinition = null;
@@ -217,7 +217,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
         }
     }
 
-    public static MethodInfo GetRuntimeMethod(NetType type, java.lang.String name, NetType[] parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  MethodInfo GetRuntimeMethod(NetType type, java.lang.String name, NetType[] parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeMethod = null;
@@ -232,7 +232,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
         }
     }
 
-    public static PropertyInfo GetRuntimeProperty(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  PropertyInfo GetRuntimeProperty(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeProperty = null;

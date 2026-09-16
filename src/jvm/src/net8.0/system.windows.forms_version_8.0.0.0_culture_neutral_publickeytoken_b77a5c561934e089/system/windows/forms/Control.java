@@ -290,7 +290,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
-    public static boolean IsKeyLocked(Keys keyVal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
+    public static  boolean IsKeyLocked(Keys keyVal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsKeyLocked = null;
@@ -304,7 +304,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
-    public static boolean IsMnemonic(char charCode, java.lang.String text) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.interopservices.ExternalException {
+    public static  boolean IsMnemonic(char charCode, java.lang.String text) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMnemonic = null;

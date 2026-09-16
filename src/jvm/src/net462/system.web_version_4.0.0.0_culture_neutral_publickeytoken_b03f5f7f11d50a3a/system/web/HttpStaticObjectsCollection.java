@@ -178,7 +178,7 @@ public class HttpStaticObjectsCollection extends NetObjectEnumerable  {
         }
     }
 
-    public static HttpStaticObjectsCollection Deserialize(BinaryReader reader) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.TypeLoadException {
+    public static  HttpStaticObjectsCollection Deserialize(BinaryReader reader) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.TypeLoadException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeserialize = null;

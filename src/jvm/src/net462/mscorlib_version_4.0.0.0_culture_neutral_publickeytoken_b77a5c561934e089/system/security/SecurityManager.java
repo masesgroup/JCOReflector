@@ -157,7 +157,7 @@ public class SecurityManager extends NetObject  {
     
     // Methods section
     
-    public static boolean CurrentThreadRequiresSecurityContextCapture() throws Throwable {
+    public static  boolean CurrentThreadRequiresSecurityContextCapture() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCurrentThreadRequiresSecurityContextCapture = null;
@@ -171,7 +171,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static boolean IsGranted(IPermission perm) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.security.SecurityException, system.MissingMethodException {
+    public static  boolean IsGranted(IPermission perm) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.security.SecurityException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsGranted = null;
@@ -185,7 +185,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static IEnumerator PolicyHierarchy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException {
+    public static  IEnumerator PolicyHierarchy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPolicyHierarchy = null;
@@ -200,7 +200,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePolicyGroups = null;
@@ -215,7 +215,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.security.XmlSyntaxException, system.NotSupportedException, system.NullReferenceException {
+    public static  PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.security.XmlSyntaxException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStandardSandbox = null;
@@ -230,7 +230,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolvePolicy(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException, system.MissingMethodException {
+    public static  PermissionSet ResolvePolicy(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePolicy = null;
@@ -245,7 +245,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException {
+    public static  PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePolicy = null;
@@ -260,7 +260,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolvePolicy(Evidence[] evidences) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException {
+    public static  PermissionSet ResolvePolicy(Evidence[] evidences) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePolicy = null;
@@ -275,7 +275,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolveSystemPolicy(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.security.XmlSyntaxException, system.InvalidCastException, system.security.SecurityException, system.security.policy.PolicyException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  PermissionSet ResolveSystemPolicy(Evidence evidence) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.security.XmlSyntaxException, system.InvalidCastException, system.security.SecurityException, system.security.policy.PolicyException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveSystemPolicy = null;
@@ -290,7 +290,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.OutOfMemoryException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.OutOfMemoryException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPolicyLevelFromFile = null;
@@ -305,7 +305,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPolicyLevelFromString = null;
@@ -320,7 +320,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static void GetZoneAndOrigin(JCORefOut<NetArrayList> zone, JCORefOut<NetArrayList> origin) throws Throwable {
+    public static  void GetZoneAndOrigin(JCORefOut<NetArrayList> zone, JCORefOut<NetArrayList> origin) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -330,7 +330,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static void SavePolicy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.security.policy.PolicyException, system.security.SecurityException, system.security.XmlSyntaxException {
+    public static  void SavePolicy() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.security.policy.PolicyException, system.security.SecurityException, system.security.XmlSyntaxException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -340,7 +340,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static void SavePolicyLevel(PolicyLevel level) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.policy.PolicyException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.XmlSyntaxException, system.RankException, system.NotImplementedException {
+    public static  void SavePolicyLevel(PolicyLevel level) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.policy.PolicyException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.XmlSyntaxException, system.RankException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

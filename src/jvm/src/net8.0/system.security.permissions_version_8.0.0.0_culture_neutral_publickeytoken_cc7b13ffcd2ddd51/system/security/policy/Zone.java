@@ -199,7 +199,7 @@ public class Zone extends EvidenceBase  {
         }
     }
 
-    public static Zone CreateFromUrl(java.lang.String url) throws Throwable {
+    public static  Zone CreateFromUrl(java.lang.String url) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromUrl = null;

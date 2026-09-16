@@ -154,7 +154,7 @@ public class VBMath extends NetObject  {
     
     // Methods section
     
-    public static Single Rnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
+    public static  Single Rnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRnd = null;
@@ -169,7 +169,7 @@ public class VBMath extends NetObject  {
         }
     }
 
-    public static Single Rnd(Single Number) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException {
+    public static  Single Rnd(Single Number) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRnd = null;
@@ -184,7 +184,7 @@ public class VBMath extends NetObject  {
         }
     }
 
-    public static void Randomize() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.NotSupportedException, system.ArgumentNullException {
+    public static  void Randomize() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.NotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -194,7 +194,7 @@ public class VBMath extends NetObject  {
         }
     }
 
-    public static void Randomize(double Number) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException {
+    public static  void Randomize(double Number) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

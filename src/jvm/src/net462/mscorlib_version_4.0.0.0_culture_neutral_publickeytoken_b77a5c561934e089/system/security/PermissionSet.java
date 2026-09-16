@@ -237,7 +237,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
         }
     }
 
-    public static byte[] ConvertPermissionSet(java.lang.String inFormat, byte[] inData, java.lang.String outFormat) throws Throwable, system.NotImplementedException {
+    public static  byte[] ConvertPermissionSet(java.lang.String inFormat, byte[] inData, java.lang.String outFormat) throws Throwable, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertPermissionSet = null;
@@ -260,7 +260,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
         }
     }
 
-    public static byte[] ConvertPermissionSet(java.lang.String dupParam0, JCORefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.NotImplementedException {
+    public static  byte[] ConvertPermissionSet(java.lang.String dupParam0, JCORefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertPermissionSet = null;
@@ -463,7 +463,7 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
         }
     }
 
-    public static void RevertAssert() throws Throwable, system.InvalidOperationException {
+    public static  void RevertAssert() throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

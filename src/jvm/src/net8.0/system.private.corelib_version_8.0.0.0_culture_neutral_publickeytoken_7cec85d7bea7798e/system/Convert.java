@@ -162,7 +162,7 @@ public class Convert extends NetObject  {
     
     // Methods section
     
-    public static boolean IsDBNull(NetObject value) throws Throwable {
+    public static  boolean IsDBNull(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDBNull = null;
@@ -176,7 +176,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(boolean value) throws Throwable {
+    public static  boolean ToBoolean(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -190,7 +190,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(byte value) throws Throwable {
+    public static  boolean ToBoolean(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -204,7 +204,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(char value) throws Throwable {
+    public static  boolean ToBoolean(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -218,7 +218,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(double value) throws Throwable {
+    public static  boolean ToBoolean(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -232,7 +232,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(short value) throws Throwable {
+    public static  boolean ToBoolean(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -246,7 +246,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(int value) throws Throwable {
+    public static  boolean ToBoolean(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -260,7 +260,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(long value) throws Throwable {
+    public static  boolean ToBoolean(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -274,7 +274,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(SByte value) throws Throwable {
+    public static  boolean ToBoolean(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -288,7 +288,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(Single value) throws Throwable {
+    public static  boolean ToBoolean(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -302,7 +302,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(DateTime value) throws Throwable {
+    public static  boolean ToBoolean(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -316,7 +316,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(Decimal value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  boolean ToBoolean(Decimal value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -330,7 +330,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  boolean ToBoolean(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -344,7 +344,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(NetObject value) throws Throwable {
+    public static  boolean ToBoolean(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -358,7 +358,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
+    public static  boolean ToBoolean(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -372,7 +372,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
+    public static  boolean ToBoolean(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -386,7 +386,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(UInt16 value) throws Throwable {
+    public static  boolean ToBoolean(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -400,7 +400,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(UInt32 value) throws Throwable {
+    public static  boolean ToBoolean(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -414,7 +414,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(UInt64 value) throws Throwable {
+    public static  boolean ToBoolean(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBoolean = null;
@@ -428,7 +428,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(boolean value) throws Throwable {
+    public static  byte ToByte(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -468,7 +468,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(byte value) throws Throwable {
+    public static  byte ToByte(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -508,7 +508,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  byte ToByte(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -548,7 +548,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  byte ToByte(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -588,7 +588,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  byte ToByte(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -628,7 +628,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  byte ToByte(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -668,7 +668,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  byte ToByte(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -708,7 +708,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  byte ToByte(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -748,7 +748,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  byte ToByte(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -788,7 +788,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(DateTime value) throws Throwable {
+    public static  byte ToByte(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -828,7 +828,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  byte ToByte(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -868,7 +868,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  byte ToByte(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -908,7 +908,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(NetObject value) throws Throwable {
+    public static  byte ToByte(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -948,7 +948,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  byte ToByte(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -988,7 +988,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  byte ToByte(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -1028,7 +1028,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  byte ToByte(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -1068,7 +1068,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  byte ToByte(UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -1108,7 +1108,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  byte ToByte(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -1148,7 +1148,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte ToByte(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  byte ToByte(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToByte = null;
@@ -1188,7 +1188,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte[] FromBase64CharArray(char[] inArray, int offset, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  byte[] FromBase64CharArray(char[] inArray, int offset, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBase64CharArray = null;
@@ -1211,7 +1211,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte[] FromBase64CharArray(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  byte[] FromBase64CharArray(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBase64CharArray = null;
@@ -1234,7 +1234,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte[] FromBase64String(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  byte[] FromBase64String(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBase64String = null;
@@ -1257,7 +1257,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static byte[] FromHexString(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  byte[] FromHexString(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromHexString = null;
@@ -1280,7 +1280,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(boolean value) throws Throwable {
+    public static  char ToChar(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1294,7 +1294,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(byte value) throws Throwable {
+    public static  char ToChar(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1308,7 +1308,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(char value) throws Throwable {
+    public static  char ToChar(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1322,7 +1322,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(double value) throws Throwable {
+    public static  char ToChar(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1336,7 +1336,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  char ToChar(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1350,7 +1350,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  char ToChar(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1364,7 +1364,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  char ToChar(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1378,7 +1378,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  char ToChar(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1392,7 +1392,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(Single value) throws Throwable {
+    public static  char ToChar(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1406,7 +1406,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(DateTime value) throws Throwable {
+    public static  char ToChar(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1420,7 +1420,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(Decimal value) throws Throwable {
+    public static  char ToChar(Decimal value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1434,7 +1434,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  char ToChar(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1448,7 +1448,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(NetObject value) throws Throwable {
+    public static  char ToChar(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1462,7 +1462,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
+    public static  char ToChar(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1476,7 +1476,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
+    public static  char ToChar(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1490,7 +1490,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(UInt16 value) throws Throwable {
+    public static  char ToChar(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1504,7 +1504,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  char ToChar(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1518,7 +1518,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static char ToChar(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  char ToChar(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToChar = null;
@@ -1532,7 +1532,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(boolean value) throws Throwable {
+    public static  double ToDouble(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1572,7 +1572,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(byte value) throws Throwable {
+    public static  double ToDouble(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1612,7 +1612,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(char value) throws Throwable {
+    public static  double ToDouble(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1652,7 +1652,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(double value) throws Throwable {
+    public static  double ToDouble(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1692,7 +1692,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(short value) throws Throwable {
+    public static  double ToDouble(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1732,7 +1732,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(int value) throws Throwable {
+    public static  double ToDouble(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1772,7 +1772,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(long value) throws Throwable {
+    public static  double ToDouble(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1812,7 +1812,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(SByte value) throws Throwable {
+    public static  double ToDouble(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1852,7 +1852,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(Single value) throws Throwable {
+    public static  double ToDouble(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1892,7 +1892,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(DateTime value) throws Throwable {
+    public static  double ToDouble(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1932,7 +1932,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(Decimal value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  double ToDouble(Decimal value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -1972,7 +1972,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  double ToDouble(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -2012,7 +2012,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(NetObject value) throws Throwable {
+    public static  double ToDouble(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -2052,7 +2052,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  double ToDouble(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -2092,7 +2092,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  double ToDouble(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -2132,7 +2132,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(UInt16 value) throws Throwable {
+    public static  double ToDouble(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -2172,7 +2172,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(UInt32 value) throws Throwable {
+    public static  double ToDouble(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -2212,7 +2212,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static double ToDouble(UInt64 value) throws Throwable {
+    public static  double ToDouble(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -2252,7 +2252,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(boolean value) throws Throwable {
+    public static  short ToInt16(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2292,7 +2292,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(byte value) throws Throwable {
+    public static  short ToInt16(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2332,7 +2332,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  short ToInt16(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2372,7 +2372,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  short ToInt16(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2412,7 +2412,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(short value) throws Throwable {
+    public static  short ToInt16(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2452,7 +2452,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  short ToInt16(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2492,7 +2492,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  short ToInt16(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2532,7 +2532,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(SByte value) throws Throwable {
+    public static  short ToInt16(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2572,7 +2572,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  short ToInt16(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2612,7 +2612,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(DateTime value) throws Throwable {
+    public static  short ToInt16(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2652,7 +2652,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  short ToInt16(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2692,7 +2692,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  short ToInt16(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2732,7 +2732,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(NetObject value) throws Throwable {
+    public static  short ToInt16(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2772,7 +2772,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  short ToInt16(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2812,7 +2812,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  short ToInt16(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2852,7 +2852,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  short ToInt16(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2892,7 +2892,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  short ToInt16(UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2932,7 +2932,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  short ToInt16(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -2972,7 +2972,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static short ToInt16(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  short ToInt16(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt16 = null;
@@ -3012,7 +3012,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut, Base64FormattingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut, Base64FormattingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64CharArray = null;
@@ -3052,7 +3052,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToBase64CharArray(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4, Base64FormattingOptions dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  int ToBase64CharArray(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4, Base64FormattingOptions dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64CharArray = null;
@@ -3092,7 +3092,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64CharArray = null;
@@ -3132,7 +3132,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToBase64CharArray(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  int ToBase64CharArray(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64CharArray = null;
@@ -3172,7 +3172,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(boolean value) throws Throwable {
+    public static  int ToInt32(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3212,7 +3212,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(byte value) throws Throwable {
+    public static  int ToInt32(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3252,7 +3252,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(char value) throws Throwable {
+    public static  int ToInt32(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3292,7 +3292,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  int ToInt32(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3332,7 +3332,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(short value) throws Throwable {
+    public static  int ToInt32(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3372,7 +3372,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(int value) throws Throwable {
+    public static  int ToInt32(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3412,7 +3412,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  int ToInt32(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3452,7 +3452,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(SByte value) throws Throwable {
+    public static  int ToInt32(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3492,7 +3492,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  int ToInt32(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3532,7 +3532,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(DateTime value) throws Throwable {
+    public static  int ToInt32(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3572,7 +3572,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  int ToInt32(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3612,7 +3612,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  int ToInt32(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3652,7 +3652,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(NetObject value) throws Throwable {
+    public static  int ToInt32(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3692,7 +3692,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  int ToInt32(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3732,7 +3732,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  int ToInt32(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3772,7 +3772,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  int ToInt32(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3812,7 +3812,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(UInt16 value) throws Throwable {
+    public static  int ToInt32(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3852,7 +3852,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  int ToInt32(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3892,7 +3892,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static int ToInt32(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  int ToInt32(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt32 = null;
@@ -3932,7 +3932,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(boolean value) throws Throwable {
+    public static  long ToInt64(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -3972,7 +3972,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(byte value) throws Throwable {
+    public static  long ToInt64(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4012,7 +4012,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(char value) throws Throwable {
+    public static  long ToInt64(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4052,7 +4052,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  long ToInt64(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4092,7 +4092,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(short value) throws Throwable {
+    public static  long ToInt64(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4132,7 +4132,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(int value) throws Throwable {
+    public static  long ToInt64(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4172,7 +4172,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(long value) throws Throwable {
+    public static  long ToInt64(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4212,7 +4212,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(SByte value) throws Throwable {
+    public static  long ToInt64(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4252,7 +4252,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  long ToInt64(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4292,7 +4292,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(DateTime value) throws Throwable {
+    public static  long ToInt64(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4332,7 +4332,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  long ToInt64(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4372,7 +4372,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  long ToInt64(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4412,7 +4412,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(NetObject value) throws Throwable {
+    public static  long ToInt64(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4452,7 +4452,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  long ToInt64(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4492,7 +4492,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  long ToInt64(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4532,7 +4532,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  long ToInt64(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4572,7 +4572,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(UInt16 value) throws Throwable {
+    public static  long ToInt64(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4612,7 +4612,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(UInt32 value) throws Throwable {
+    public static  long ToInt64(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4652,7 +4652,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static long ToInt64(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  long ToInt64(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToInt64 = null;
@@ -4692,7 +4692,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(boolean value) throws Throwable {
+    public static  SByte ToSByte(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4707,7 +4707,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(byte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(byte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4722,7 +4722,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4737,7 +4737,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4752,7 +4752,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4767,7 +4767,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4782,7 +4782,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4797,7 +4797,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(SByte value) throws Throwable {
+    public static  SByte ToSByte(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4812,7 +4812,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  SByte ToSByte(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4827,7 +4827,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(DateTime value) throws Throwable {
+    public static  SByte ToSByte(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4842,7 +4842,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  SByte ToSByte(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4857,7 +4857,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  SByte ToSByte(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4872,7 +4872,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(NetObject value) throws Throwable {
+    public static  SByte ToSByte(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4887,7 +4887,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  SByte ToSByte(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4902,7 +4902,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  SByte ToSByte(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4917,7 +4917,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  SByte ToSByte(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4932,7 +4932,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4947,7 +4947,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4962,7 +4962,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static SByte ToSByte(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  SByte ToSByte(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSByte = null;
@@ -4977,7 +4977,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(boolean value) throws Throwable {
+    public static  Single ToSingle(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -4992,7 +4992,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(byte value) throws Throwable {
+    public static  Single ToSingle(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5007,7 +5007,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(char value) throws Throwable {
+    public static  Single ToSingle(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5022,7 +5022,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(double value) throws Throwable {
+    public static  Single ToSingle(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5037,7 +5037,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(short value) throws Throwable {
+    public static  Single ToSingle(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5052,7 +5052,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(int value) throws Throwable {
+    public static  Single ToSingle(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5067,7 +5067,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(long value) throws Throwable {
+    public static  Single ToSingle(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5082,7 +5082,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(SByte value) throws Throwable {
+    public static  Single ToSingle(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5097,7 +5097,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(Single value) throws Throwable {
+    public static  Single ToSingle(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5112,7 +5112,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(DateTime value) throws Throwable {
+    public static  Single ToSingle(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5127,7 +5127,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(Decimal value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  Single ToSingle(Decimal value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5142,7 +5142,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  Single ToSingle(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5157,7 +5157,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(NetObject value) throws Throwable {
+    public static  Single ToSingle(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5172,7 +5172,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  Single ToSingle(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5187,7 +5187,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
+    public static  Single ToSingle(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5202,7 +5202,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(UInt16 value) throws Throwable {
+    public static  Single ToSingle(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5217,7 +5217,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(UInt32 value) throws Throwable {
+    public static  Single ToSingle(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5232,7 +5232,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Single ToSingle(UInt64 value) throws Throwable {
+    public static  Single ToSingle(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSingle = null;
@@ -5247,7 +5247,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(boolean value) throws Throwable {
+    public static  DateTime ToDateTime(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5262,7 +5262,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(byte value) throws Throwable {
+    public static  DateTime ToDateTime(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5277,7 +5277,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(char value) throws Throwable {
+    public static  DateTime ToDateTime(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5292,7 +5292,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(double value) throws Throwable {
+    public static  DateTime ToDateTime(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5307,7 +5307,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(short value) throws Throwable {
+    public static  DateTime ToDateTime(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5322,7 +5322,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(int value) throws Throwable {
+    public static  DateTime ToDateTime(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5337,7 +5337,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(long value) throws Throwable {
+    public static  DateTime ToDateTime(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5352,7 +5352,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(SByte value) throws Throwable {
+    public static  DateTime ToDateTime(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5367,7 +5367,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(Single value) throws Throwable {
+    public static  DateTime ToDateTime(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5382,7 +5382,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(DateTime value) throws Throwable {
+    public static  DateTime ToDateTime(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5397,7 +5397,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(Decimal value) throws Throwable {
+    public static  DateTime ToDateTime(Decimal value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5412,7 +5412,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  DateTime ToDateTime(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5427,7 +5427,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(NetObject value) throws Throwable {
+    public static  DateTime ToDateTime(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5442,7 +5442,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException {
+    public static  DateTime ToDateTime(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5457,7 +5457,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OutOfMemoryException, system.OverflowException {
+    public static  DateTime ToDateTime(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5472,7 +5472,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(UInt16 value) throws Throwable {
+    public static  DateTime ToDateTime(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5487,7 +5487,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(UInt32 value) throws Throwable {
+    public static  DateTime ToDateTime(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5502,7 +5502,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(UInt64 value) throws Throwable {
+    public static  DateTime ToDateTime(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDateTime = null;
@@ -5517,7 +5517,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(boolean value) throws Throwable {
+    public static  Decimal ToDecimal(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5532,7 +5532,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(byte value) throws Throwable {
+    public static  Decimal ToDecimal(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5547,7 +5547,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(char value) throws Throwable {
+    public static  Decimal ToDecimal(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5562,7 +5562,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  Decimal ToDecimal(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5577,7 +5577,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(short value) throws Throwable {
+    public static  Decimal ToDecimal(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5592,7 +5592,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(int value) throws Throwable {
+    public static  Decimal ToDecimal(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5607,7 +5607,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(long value) throws Throwable {
+    public static  Decimal ToDecimal(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5622,7 +5622,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(SByte value) throws Throwable {
+    public static  Decimal ToDecimal(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5637,7 +5637,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  Decimal ToDecimal(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5652,7 +5652,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(DateTime value) throws Throwable {
+    public static  Decimal ToDecimal(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5667,7 +5667,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(Decimal value) throws Throwable {
+    public static  Decimal ToDecimal(Decimal value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5682,7 +5682,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  Decimal ToDecimal(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5697,7 +5697,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(NetObject value) throws Throwable {
+    public static  Decimal ToDecimal(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5712,7 +5712,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  Decimal ToDecimal(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5727,7 +5727,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  Decimal ToDecimal(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5742,7 +5742,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(UInt16 value) throws Throwable {
+    public static  Decimal ToDecimal(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5757,7 +5757,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(UInt32 value) throws Throwable {
+    public static  Decimal ToDecimal(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5772,7 +5772,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static Decimal ToDecimal(UInt64 value) throws Throwable {
+    public static  Decimal ToDecimal(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDecimal = null;
@@ -5787,7 +5787,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ChangeType(NetObject value, NetType conversionType, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidCastException {
+    public static  NetObject ChangeType(NetObject value, NetType conversionType, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectChangeType = null;
@@ -5802,7 +5802,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ChangeType(NetObject value, NetType conversionType) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidCastException {
+    public static  NetObject ChangeType(NetObject value, NetType conversionType) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectChangeType = null;
@@ -5817,7 +5817,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ChangeType(NetObject value, TypeCode typeCode, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidCastException {
+    public static  NetObject ChangeType(NetObject value, TypeCode typeCode, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectChangeType = null;
@@ -5832,7 +5832,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static NetObject ChangeType(NetObject value, TypeCode typeCode) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidCastException {
+    public static  NetObject ChangeType(NetObject value, TypeCode typeCode) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectChangeType = null;
@@ -5847,7 +5847,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToBase64String(byte[] inArray, int offset, int length, Base64FormattingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String ToBase64String(byte[] inArray, int offset, int length, Base64FormattingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64String = null;
@@ -5861,7 +5861,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToBase64String(JCORefOut dupParam0, int dupParam1, int dupParam2, Base64FormattingOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String ToBase64String(JCORefOut dupParam0, int dupParam1, int dupParam2, Base64FormattingOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64String = null;
@@ -5875,7 +5875,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToBase64String(byte[] inArray, int offset, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String ToBase64String(byte[] inArray, int offset, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64String = null;
@@ -5889,7 +5889,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToBase64String(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public static  java.lang.String ToBase64String(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64String = null;
@@ -5903,7 +5903,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToBase64String(byte[] inArray, Base64FormattingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
+    public static  java.lang.String ToBase64String(byte[] inArray, Base64FormattingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64String = null;
@@ -5917,7 +5917,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToBase64String(JCORefOut dupParam0, Base64FormattingOptions dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
+    public static  java.lang.String ToBase64String(JCORefOut dupParam0, Base64FormattingOptions dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64String = null;
@@ -5931,7 +5931,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToBase64String(byte[] inArray) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
+    public static  java.lang.String ToBase64String(byte[] inArray) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64String = null;
@@ -5945,7 +5945,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToBase64String(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
+    public static  java.lang.String ToBase64String(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToBase64String = null;
@@ -5959,7 +5959,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToHexString(byte[] inArray, int offset, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String ToHexString(byte[] inArray, int offset, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToHexString = null;
@@ -5973,7 +5973,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToHexString(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String ToHexString(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToHexString = null;
@@ -5987,7 +5987,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToHexString(byte[] inArray) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String ToHexString(byte[] inArray) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToHexString = null;
@@ -6001,7 +6001,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToHexString(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String ToHexString(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToHexString = null;
@@ -6015,7 +6015,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(boolean value, IFormatProvider provider) throws Throwable {
+    public static  java.lang.String ToString(boolean value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6029,7 +6029,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(boolean value) throws Throwable {
+    public static  java.lang.String ToString(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6043,7 +6043,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte value, int toBase) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
+    public static  java.lang.String ToString(byte value, int toBase) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6057,7 +6057,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte value, IFormatProvider provider) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String ToString(byte value, IFormatProvider provider) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6071,7 +6071,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(byte value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String ToString(byte value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6085,7 +6085,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(char value, IFormatProvider provider) throws Throwable {
+    public static  java.lang.String ToString(char value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6099,7 +6099,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(char value) throws Throwable {
+    public static  java.lang.String ToString(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6113,7 +6113,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(double value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(double value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6127,7 +6127,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(double value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public static  java.lang.String ToString(double value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6141,7 +6141,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(short value, int toBase) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(short value, int toBase) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6155,7 +6155,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(short value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(short value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6169,7 +6169,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(short value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public static  java.lang.String ToString(short value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6183,7 +6183,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(int value, int toBase) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(int value, int toBase) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6197,7 +6197,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(int value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(int value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6211,7 +6211,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(int value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public static  java.lang.String ToString(int value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6225,7 +6225,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(long value, int toBase) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(long value, int toBase) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6239,7 +6239,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(long value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(long value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6253,7 +6253,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(long value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
+    public static  java.lang.String ToString(long value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6267,7 +6267,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(SByte value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(SByte value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6281,7 +6281,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(SByte value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public static  java.lang.String ToString(SByte value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6295,7 +6295,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(Single value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(Single value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6309,7 +6309,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(Single value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public static  java.lang.String ToString(Single value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6323,7 +6323,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTime value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
+    public static  java.lang.String ToString(DateTime value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6337,7 +6337,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTime value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
+    public static  java.lang.String ToString(DateTime value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6351,7 +6351,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(Decimal value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
+    public static  java.lang.String ToString(Decimal value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6365,7 +6365,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(Decimal value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.FormatException, system.InvalidOperationException {
+    public static  java.lang.String ToString(Decimal value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6379,7 +6379,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  java.lang.String ToString(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6393,7 +6393,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(NetObject value) throws Throwable {
+    public static  java.lang.String ToString(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6407,7 +6407,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(java.lang.String value, IFormatProvider provider) throws Throwable {
+    public static  java.lang.String ToString(java.lang.String value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6421,7 +6421,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(java.lang.String value) throws Throwable {
+    public static  java.lang.String ToString(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6435,7 +6435,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt16 value, IFormatProvider provider) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String ToString(UInt16 value, IFormatProvider provider) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6449,7 +6449,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt16 value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String ToString(UInt16 value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6463,7 +6463,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt32 value, IFormatProvider provider) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String ToString(UInt32 value, IFormatProvider provider) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6477,7 +6477,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt32 value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String ToString(UInt32 value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6491,7 +6491,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt64 value, IFormatProvider provider) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String ToString(UInt64 value, IFormatProvider provider) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6505,7 +6505,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(UInt64 value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String ToString(UInt64 value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -6519,7 +6519,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static TypeCode GetTypeCode(NetObject value) throws Throwable {
+    public static  TypeCode GetTypeCode(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeCode = null;
@@ -6534,7 +6534,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(boolean value) throws Throwable {
+    public static  UInt16 ToUInt16(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6549,7 +6549,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(byte value) throws Throwable {
+    public static  UInt16 ToUInt16(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6564,7 +6564,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(char value) throws Throwable {
+    public static  UInt16 ToUInt16(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6579,7 +6579,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt16 ToUInt16(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6594,7 +6594,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt16 ToUInt16(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6609,7 +6609,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  UInt16 ToUInt16(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6624,7 +6624,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  UInt16 ToUInt16(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6639,7 +6639,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt16 ToUInt16(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6654,7 +6654,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  UInt16 ToUInt16(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6669,7 +6669,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(DateTime value) throws Throwable {
+    public static  UInt16 ToUInt16(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6684,7 +6684,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  UInt16 ToUInt16(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6699,7 +6699,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  UInt16 ToUInt16(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6714,7 +6714,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(NetObject value) throws Throwable {
+    public static  UInt16 ToUInt16(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6729,7 +6729,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt16 ToUInt16(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6744,7 +6744,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt16 ToUInt16(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6759,7 +6759,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt16 ToUInt16(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6774,7 +6774,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(UInt16 value) throws Throwable {
+    public static  UInt16 ToUInt16(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6789,7 +6789,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt16 ToUInt16(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6804,7 +6804,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt16 ToUInt16(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt16 = null;
@@ -6819,7 +6819,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(boolean value) throws Throwable {
+    public static  UInt32 ToUInt32(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6834,7 +6834,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(byte value) throws Throwable {
+    public static  UInt32 ToUInt32(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6849,7 +6849,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(char value) throws Throwable {
+    public static  UInt32 ToUInt32(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6864,7 +6864,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt32 ToUInt32(double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6879,7 +6879,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt32 ToUInt32(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6894,7 +6894,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt32 ToUInt32(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6909,7 +6909,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  UInt32 ToUInt32(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6924,7 +6924,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt32 ToUInt32(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6939,7 +6939,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt32 ToUInt32(Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6954,7 +6954,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(DateTime value) throws Throwable {
+    public static  UInt32 ToUInt32(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6969,7 +6969,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  UInt32 ToUInt32(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6984,7 +6984,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  UInt32 ToUInt32(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -6999,7 +6999,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(NetObject value) throws Throwable {
+    public static  UInt32 ToUInt32(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -7014,7 +7014,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt32 ToUInt32(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -7029,7 +7029,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt32 ToUInt32(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -7044,7 +7044,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt32 ToUInt32(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -7059,7 +7059,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(UInt16 value) throws Throwable {
+    public static  UInt32 ToUInt32(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -7074,7 +7074,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(UInt32 value) throws Throwable {
+    public static  UInt32 ToUInt32(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -7089,7 +7089,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt32 ToUInt32(UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt32 = null;
@@ -7104,7 +7104,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(boolean value) throws Throwable {
+    public static  UInt64 ToUInt64(boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7119,7 +7119,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(byte value) throws Throwable {
+    public static  UInt64 ToUInt64(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7134,7 +7134,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(char value) throws Throwable {
+    public static  UInt64 ToUInt64(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7149,7 +7149,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  UInt64 ToUInt64(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7164,7 +7164,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt64 ToUInt64(short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7179,7 +7179,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt64 ToUInt64(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7194,7 +7194,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt64 ToUInt64(long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7209,7 +7209,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+    public static  UInt64 ToUInt64(SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7224,7 +7224,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  UInt64 ToUInt64(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7239,7 +7239,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(DateTime value) throws Throwable {
+    public static  UInt64 ToUInt64(DateTime value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7254,7 +7254,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  UInt64 ToUInt64(Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7269,7 +7269,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(NetObject value, IFormatProvider provider) throws Throwable {
+    public static  UInt64 ToUInt64(NetObject value, IFormatProvider provider) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7284,7 +7284,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(NetObject value) throws Throwable {
+    public static  UInt64 ToUInt64(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7299,7 +7299,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt64 ToUInt64(java.lang.String value, int fromBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7314,7 +7314,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt64 ToUInt64(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7329,7 +7329,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  UInt64 ToUInt64(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7344,7 +7344,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(UInt16 value) throws Throwable {
+    public static  UInt64 ToUInt64(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7359,7 +7359,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(UInt32 value) throws Throwable {
+    public static  UInt64 ToUInt64(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;
@@ -7374,7 +7374,7 @@ public class Convert extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(UInt64 value) throws Throwable {
+    public static  UInt64 ToUInt64(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToUInt64 = null;

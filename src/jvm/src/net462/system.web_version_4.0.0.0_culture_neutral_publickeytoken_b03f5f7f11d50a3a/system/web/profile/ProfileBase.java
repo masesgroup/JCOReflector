@@ -178,7 +178,7 @@ public class ProfileBase extends SettingsBase  {
         }
     }
 
-    public static ProfileBase Create(java.lang.String username) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.FormatException {
+    public static  ProfileBase Create(java.lang.String username) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -193,7 +193,7 @@ public class ProfileBase extends SettingsBase  {
         }
     }
 
-    public static ProfileBase Create(java.lang.String username, boolean isAuthenticated) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+    public static  ProfileBase Create(java.lang.String username, boolean isAuthenticated) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

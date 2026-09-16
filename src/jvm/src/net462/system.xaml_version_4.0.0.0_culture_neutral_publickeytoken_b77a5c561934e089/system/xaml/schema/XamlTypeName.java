@@ -185,7 +185,7 @@ public class XamlTypeName extends NetObject  {
     
     // Methods section
     
-    public static boolean TryParse(java.lang.String typeName, IXamlNamespaceResolver namespaceResolver, JCORefOut<XamlTypeName> result) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  boolean TryParse(java.lang.String typeName, IXamlNamespaceResolver namespaceResolver, JCORefOut<XamlTypeName> result) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -213,7 +213,7 @@ public class XamlTypeName extends NetObject  {
         }
     }
 
-    public static XamlTypeName Parse(java.lang.String typeName, IXamlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  XamlTypeName Parse(java.lang.String typeName, IXamlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

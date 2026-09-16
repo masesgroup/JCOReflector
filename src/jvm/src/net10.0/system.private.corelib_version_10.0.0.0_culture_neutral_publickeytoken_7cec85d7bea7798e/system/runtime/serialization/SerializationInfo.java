@@ -487,7 +487,7 @@ public class SerializationInfo extends NetObject  {
         }
     }
 
-    public static DeserializationToken StartDeserialization() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  DeserializationToken StartDeserialization() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartDeserialization = null;

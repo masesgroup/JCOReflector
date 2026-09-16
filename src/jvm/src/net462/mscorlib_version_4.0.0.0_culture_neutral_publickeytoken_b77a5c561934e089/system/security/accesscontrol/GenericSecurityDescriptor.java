@@ -154,7 +154,7 @@ public class GenericSecurityDescriptor extends NetObject  {
     
     // Methods section
     
-    public static boolean IsSddlConversionSupported() throws Throwable {
+    public static  boolean IsSddlConversionSupported() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSddlConversionSupported = null;

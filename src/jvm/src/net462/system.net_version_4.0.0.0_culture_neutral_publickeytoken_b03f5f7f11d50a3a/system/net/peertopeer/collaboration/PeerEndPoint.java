@@ -201,7 +201,7 @@ public class PeerEndPoint extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static boolean Equals(NetObject objA, NetObject objB) throws Throwable {
+    public static  boolean Equals(NetObject objA, NetObject objB) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;

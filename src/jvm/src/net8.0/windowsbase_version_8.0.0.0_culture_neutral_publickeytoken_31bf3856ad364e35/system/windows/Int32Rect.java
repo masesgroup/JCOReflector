@@ -169,7 +169,7 @@ public class Int32Rect extends ValueType implements system.IFormattable {
     
     // Methods section
     
-    public static boolean Equals(Int32Rect int32Rect1, Int32Rect int32Rect2) throws Throwable {
+    public static  boolean Equals(Int32Rect int32Rect1, Int32Rect int32Rect2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -211,7 +211,7 @@ public class Int32Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Int32Rect Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.OverflowException {
+    public static  Int32Rect Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

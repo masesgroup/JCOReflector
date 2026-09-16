@@ -160,7 +160,7 @@ public class SystemInformation extends NetObject  {
     
     // Methods section
     
-    public static int GetHorizontalScrollBarArrowWidthForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  int GetHorizontalScrollBarArrowWidthForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHorizontalScrollBarArrowWidthForDpi = null;
@@ -200,7 +200,7 @@ public class SystemInformation extends NetObject  {
         }
     }
 
-    public static int GetHorizontalScrollBarHeightForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  int GetHorizontalScrollBarHeightForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHorizontalScrollBarHeightForDpi = null;
@@ -240,7 +240,7 @@ public class SystemInformation extends NetObject  {
         }
     }
 
-    public static int GetVerticalScrollBarWidthForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  int GetVerticalScrollBarWidthForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetVerticalScrollBarWidthForDpi = null;
@@ -280,7 +280,7 @@ public class SystemInformation extends NetObject  {
         }
     }
 
-    public static int VerticalScrollBarArrowHeightForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  int VerticalScrollBarArrowHeightForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerticalScrollBarArrowHeightForDpi = null;
@@ -320,7 +320,7 @@ public class SystemInformation extends NetObject  {
         }
     }
 
-    public static Font GetMenuFontForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OutOfMemoryException {
+    public static  Font GetMenuFontForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMenuFontForDpi = null;
@@ -335,7 +335,7 @@ public class SystemInformation extends NetObject  {
         }
     }
 
-    public static Size GetBorderSizeForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  Size GetBorderSizeForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBorderSizeForDpi = null;

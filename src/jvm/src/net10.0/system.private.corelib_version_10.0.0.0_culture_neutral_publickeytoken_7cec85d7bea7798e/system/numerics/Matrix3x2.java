@@ -181,7 +181,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static boolean Invert(Matrix3x2 matrix, JCORefOut<Matrix3x2> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  boolean Invert(Matrix3x2 matrix, JCORefOut<Matrix3x2> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvert = null;
@@ -225,7 +225,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Add(Matrix3x2 value1, Matrix3x2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Matrix3x2 Add(Matrix3x2 value1, Matrix3x2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -240,7 +240,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Create(Single m11, Single m12, Single m21, Single m22, Single m31, Single m32) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 Create(Single m11, Single m12, Single m21, Single m22, Single m31, Single m32) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -255,7 +255,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Create(Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static  Matrix3x2 Create(Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -270,7 +270,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Create(Vector2 x, Vector2 y, Vector2 z) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  Matrix3x2 Create(Vector2 x, Vector2 y, Vector2 z) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -285,7 +285,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Create(Vector2 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Matrix3x2 Create(Vector2 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -300,7 +300,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
+    public static  Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotation = null;
@@ -315,7 +315,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateRotation(Single radians) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
+    public static  Matrix3x2 CreateRotation(Single radians) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotation = null;
@@ -330,7 +330,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single xScale, Single yScale, Vector2 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 CreateScale(Single xScale, Single yScale, Vector2 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -345,7 +345,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single xScale, Single yScale) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 CreateScale(Single xScale, Single yScale) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -360,7 +360,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single scale, Vector2 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 CreateScale(Single scale, Vector2 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -375,7 +375,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single scale) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 CreateScale(Single scale) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -390,7 +390,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Vector2 scales, Vector2 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 CreateScale(Vector2 scales, Vector2 centerPoint) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -405,7 +405,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Vector2 scales) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 CreateScale(Vector2 scales) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -420,7 +420,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY, Vector2 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static  Matrix3x2 CreateSkew(Single radiansX, Single radiansY, Vector2 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSkew = null;
@@ -435,7 +435,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static  Matrix3x2 CreateSkew(Single radiansX, Single radiansY) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSkew = null;
@@ -450,7 +450,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateTranslation(Single xPosition, Single yPosition) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 CreateTranslation(Single xPosition, Single yPosition) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTranslation = null;
@@ -465,7 +465,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateTranslation(Vector2 position) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Matrix3x2 CreateTranslation(Vector2 position) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTranslation = null;
@@ -480,7 +480,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Lerp(Matrix3x2 matrix1, Matrix3x2 matrix2, Single amount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Matrix3x2 Lerp(Matrix3x2 matrix1, Matrix3x2 matrix2, Single amount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -495,7 +495,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Multiply(Matrix3x2 value1, Single value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Matrix3x2 Multiply(Matrix3x2 value1, Single value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -510,7 +510,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Multiply(Matrix3x2 value1, Matrix3x2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Matrix3x2 Multiply(Matrix3x2 value1, Matrix3x2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -525,7 +525,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Negate(Matrix3x2 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Matrix3x2 Negate(Matrix3x2 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -540,7 +540,7 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 Subtract(Matrix3x2 value1, Matrix3x2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Matrix3x2 Subtract(Matrix3x2 value1, Matrix3x2 value2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

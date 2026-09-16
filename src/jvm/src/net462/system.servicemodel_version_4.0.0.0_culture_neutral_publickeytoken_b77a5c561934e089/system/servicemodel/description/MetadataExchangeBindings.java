@@ -151,7 +151,7 @@ public class MetadataExchangeBindings extends NetObject  {
     
     // Methods section
     
-    public static system.servicemodel.channels.Binding CreateMexHttpBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.UriFormatException {
+    public static  system.servicemodel.channels.Binding CreateMexHttpBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateMexHttpBinding = null;
@@ -166,7 +166,7 @@ public class MetadataExchangeBindings extends NetObject  {
         }
     }
 
-    public static system.servicemodel.channels.Binding CreateMexHttpsBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.UriFormatException {
+    public static  system.servicemodel.channels.Binding CreateMexHttpsBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateMexHttpsBinding = null;
@@ -181,7 +181,7 @@ public class MetadataExchangeBindings extends NetObject  {
         }
     }
 
-    public static system.servicemodel.channels.Binding CreateMexNamedPipeBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  system.servicemodel.channels.Binding CreateMexNamedPipeBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateMexNamedPipeBinding = null;
@@ -196,7 +196,7 @@ public class MetadataExchangeBindings extends NetObject  {
         }
     }
 
-    public static system.servicemodel.channels.Binding CreateMexTcpBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  system.servicemodel.channels.Binding CreateMexTcpBinding() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateMexTcpBinding = null;

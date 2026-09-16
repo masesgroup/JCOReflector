@@ -159,7 +159,7 @@ public class Clipboard extends NetObject  {
     
     // Methods section
     
-    public static boolean ContainsAudio() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  boolean ContainsAudio() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainsAudio = null;
@@ -173,7 +173,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static boolean ContainsData(java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  boolean ContainsData(java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainsData = null;
@@ -187,7 +187,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static boolean ContainsFileDropList() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  boolean ContainsFileDropList() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainsFileDropList = null;
@@ -201,7 +201,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static boolean ContainsImage() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  boolean ContainsImage() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainsImage = null;
@@ -215,7 +215,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static boolean ContainsText() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  boolean ContainsText() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainsText = null;
@@ -229,7 +229,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static boolean ContainsText(TextDataFormat format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  boolean ContainsText(TextDataFormat format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainsText = null;
@@ -243,7 +243,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static StringCollection GetFileDropList() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  StringCollection GetFileDropList() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFileDropList = null;
@@ -258,7 +258,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static Image GetImage() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  Image GetImage() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetImage = null;
@@ -273,7 +273,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static Stream GetAudioStream() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  Stream GetAudioStream() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAudioStream = null;
@@ -288,7 +288,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static NetObject GetData(java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  NetObject GetData(java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetData = null;
@@ -303,7 +303,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static java.lang.String GetText() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  java.lang.String GetText() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetText = null;
@@ -317,7 +317,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static java.lang.String GetText(TextDataFormat format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  java.lang.String GetText(TextDataFormat format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetText = null;
@@ -331,7 +331,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static IDataObject GetDataObject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public static  IDataObject GetDataObject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.MulticastNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataObject = null;
@@ -346,7 +346,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void Clear() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void Clear() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -356,7 +356,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetAudio(byte[] audioBytes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetAudio(byte[] audioBytes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -366,7 +366,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetAudio(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetAudio(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -376,7 +376,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetAudio(Stream audioStream) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetAudio(Stream audioStream) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -386,7 +386,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetData(java.lang.String format, NetObject data) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetData(java.lang.String format, NetObject data) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -396,7 +396,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetDataObject(NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetDataObject(NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -406,7 +406,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetDataObject(NetObject data, boolean copy) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.runtime.interopservices.ExternalException {
+    public static  void SetDataObject(NetObject data, boolean copy) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -416,7 +416,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetDataObject(NetObject data, boolean copy, int retryTimes, int retryDelay) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.security.SecurityException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
+    public static  void SetDataObject(NetObject data, boolean copy, int retryTimes, int retryDelay) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.ThreadStateException, system.security.SecurityException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -426,7 +426,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetFileDropList(StringCollection filePaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetFileDropList(StringCollection filePaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -436,7 +436,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetImage(Image image) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetImage(Image image) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -446,7 +446,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetText(java.lang.String text) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetText(java.lang.String text) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -456,7 +456,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public static void SetText(java.lang.String text, TextDataFormat format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
+    public static  void SetText(java.lang.String text, TextDataFormat format) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.security.SecurityException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

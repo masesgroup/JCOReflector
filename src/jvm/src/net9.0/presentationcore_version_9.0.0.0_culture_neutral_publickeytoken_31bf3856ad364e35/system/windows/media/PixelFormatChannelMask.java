@@ -155,7 +155,7 @@ public class PixelFormatChannelMask extends ValueType  {
     
     // Methods section
     
-    public static boolean Equals(PixelFormatChannelMask left, PixelFormatChannelMask right) throws Throwable {
+    public static  boolean Equals(PixelFormatChannelMask left, PixelFormatChannelMask right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;

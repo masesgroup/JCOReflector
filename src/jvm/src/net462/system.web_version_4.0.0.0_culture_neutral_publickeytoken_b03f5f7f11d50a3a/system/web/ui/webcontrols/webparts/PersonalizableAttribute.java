@@ -221,7 +221,7 @@ public class PersonalizableAttribute extends Attribute  {
         }
     }
 
-    public static ICollection GetPersonalizableProperties(NetType type) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
+    public static  ICollection GetPersonalizableProperties(NetType type) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPersonalizableProperties = null;

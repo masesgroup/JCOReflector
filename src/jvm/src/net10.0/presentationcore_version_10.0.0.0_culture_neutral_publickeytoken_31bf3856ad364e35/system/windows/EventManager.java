@@ -153,7 +153,7 @@ public class EventManager extends NetObject  {
     
     // Methods section
     
-    public static RoutedEvent RegisterRoutedEvent(java.lang.String name, RoutingStrategy routingStrategy, NetType handlerType, NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public static  RoutedEvent RegisterRoutedEvent(java.lang.String name, RoutingStrategy routingStrategy, NetType handlerType, NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterRoutedEvent = null;
@@ -168,7 +168,7 @@ public class EventManager extends NetObject  {
         }
     }
 
-    public static RoutedEvent[] GetRoutedEvents() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException {
+    public static  RoutedEvent[] GetRoutedEvents() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRoutedEvents = null;
@@ -189,7 +189,7 @@ public class EventManager extends NetObject  {
         }
     }
 
-    public static RoutedEvent[] GetRoutedEventsForOwner(NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  RoutedEvent[] GetRoutedEventsForOwner(NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRoutedEventsForOwner = null;

@@ -158,7 +158,7 @@ public class PrinterUnitConvert extends NetObject  {
     
     // Methods section
     
-    public static double Convert(double value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable {
+    public static  double Convert(double value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -198,7 +198,7 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
-    public static int Convert(int value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  int Convert(int value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -238,7 +238,7 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
-    public static Point Convert(Point value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Point Convert(Point value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -253,7 +253,7 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
-    public static Margins Convert(Margins value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public static  Margins Convert(Margins value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -268,7 +268,7 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
-    public static Rectangle Convert(Rectangle value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Rectangle Convert(Rectangle value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;
@@ -283,7 +283,7 @@ public class PrinterUnitConvert extends NetObject  {
         }
     }
 
-    public static Size Convert(Size value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Size Convert(Size value, PrinterUnit fromUnit, PrinterUnit toUnit) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvert = null;

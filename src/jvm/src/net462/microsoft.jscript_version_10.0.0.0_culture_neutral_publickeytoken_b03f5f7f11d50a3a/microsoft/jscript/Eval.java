@@ -155,7 +155,7 @@ public class Eval extends AST  {
     
     // Methods section
     
-    public static NetObject JScriptEvaluate(NetObject source, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
+    public static  NetObject JScriptEvaluate(NetObject source, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptEvaluate = null;
@@ -170,7 +170,7 @@ public class Eval extends AST  {
         }
     }
 
-    public static NetObject JScriptEvaluate(NetObject source, NetObject unsafeOption, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
+    public static  NetObject JScriptEvaluate(NetObject source, NetObject unsafeOption, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptEvaluate = null;

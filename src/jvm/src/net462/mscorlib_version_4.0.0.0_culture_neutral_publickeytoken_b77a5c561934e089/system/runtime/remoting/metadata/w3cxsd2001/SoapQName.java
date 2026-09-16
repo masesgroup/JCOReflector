@@ -190,7 +190,7 @@ public class SoapQName extends NetObject  {
     
     // Methods section
     
-    public static SoapQName Parse(java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  SoapQName Parse(java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

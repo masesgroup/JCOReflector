@@ -151,7 +151,7 @@ public class DispatchProxy extends NetObject  {
     
     // Methods section
     
-    public static NetObject Create(NetType interfaceType, NetType proxyType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
+    public static  NetObject Create(NetType interfaceType, NetType proxyType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

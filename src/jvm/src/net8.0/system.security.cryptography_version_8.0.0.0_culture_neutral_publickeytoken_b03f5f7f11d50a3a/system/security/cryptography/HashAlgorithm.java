@@ -394,7 +394,7 @@ public class HashAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
-    public static HashAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  HashAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -409,7 +409,7 @@ public class HashAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
-    public static HashAlgorithm Create(java.lang.String hashName) throws Throwable {
+    public static  HashAlgorithm Create(java.lang.String hashName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

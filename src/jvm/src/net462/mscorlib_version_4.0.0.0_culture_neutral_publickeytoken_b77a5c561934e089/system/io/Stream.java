@@ -379,7 +379,7 @@ public class Stream extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static Stream Synchronized(Stream stream) throws Throwable, system.ArgumentNullException {
+    public static  Stream Synchronized(Stream stream) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSynchronized = null;

@@ -223,7 +223,7 @@ public class Guid extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String input, JCORefOut<Guid> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+    public static  boolean TryParse(java.lang.String input, JCORefOut<Guid> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -237,7 +237,7 @@ public class Guid extends ValueType  {
         }
     }
 
-    public static boolean TryParseExact(java.lang.String input, java.lang.String format, JCORefOut<Guid> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+    public static  boolean TryParseExact(java.lang.String input, java.lang.String format, JCORefOut<Guid> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -354,7 +354,7 @@ public class Guid extends ValueType  {
         }
     }
 
-    public static Guid NewGuid() throws Throwable {
+    public static  Guid NewGuid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewGuid = null;
@@ -369,7 +369,7 @@ public class Guid extends ValueType  {
         }
     }
 
-    public static Guid Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+    public static  Guid Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -384,7 +384,7 @@ public class Guid extends ValueType  {
         }
     }
 
-    public static Guid ParseExact(java.lang.String input, java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+    public static  Guid ParseExact(java.lang.String input, java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;

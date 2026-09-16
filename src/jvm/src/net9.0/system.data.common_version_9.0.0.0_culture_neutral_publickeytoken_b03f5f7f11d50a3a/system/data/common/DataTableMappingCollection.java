@@ -382,7 +382,7 @@ public class DataTableMappingCollection extends MarshalByRefObject  {
         }
     }
 
-    public static DataTableMapping GetTableMappingBySchemaAction(DataTableMappingCollection tableMappings, java.lang.String sourceTable, java.lang.String dataSetTable, MissingMappingAction mappingAction) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
+    public static  DataTableMapping GetTableMappingBySchemaAction(DataTableMappingCollection tableMappings, java.lang.String sourceTable, java.lang.String dataSetTable, MissingMappingAction mappingAction) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTableMappingBySchemaAction = null;

@@ -157,7 +157,7 @@ public class TransactionManager extends NetObject  {
     
     // Methods section
     
-    public static Enlistment Reenlist(Guid resourceManagerIdentifier, byte[] recoveryInformation, IEnlistmentNotification enlistmentNotification) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.threading.ThreadStateException, system.runtime.interopservices.COMException {
+    public static  Enlistment Reenlist(Guid resourceManagerIdentifier, byte[] recoveryInformation, IEnlistmentNotification enlistmentNotification) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.threading.ThreadStateException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReenlist = null;
@@ -172,7 +172,7 @@ public class TransactionManager extends NetObject  {
         }
     }
 
-    public static Enlistment Reenlist(Guid dupParam0, JCORefOut dupParam1, IEnlistmentNotification dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.threading.ThreadStateException, system.runtime.interopservices.COMException {
+    public static  Enlistment Reenlist(Guid dupParam0, JCORefOut dupParam1, IEnlistmentNotification dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.threading.ThreadStateException, system.runtime.interopservices.COMException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReenlist = null;
@@ -187,7 +187,7 @@ public class TransactionManager extends NetObject  {
         }
     }
 
-    public static void RecoveryComplete(Guid resourceManagerIdentifier) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.transactions.TransactionException, system.RankException, system.ArrayTypeMismatchException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.threading.ThreadStateException {
+    public static  void RecoveryComplete(Guid resourceManagerIdentifier) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.transactions.TransactionException, system.RankException, system.ArrayTypeMismatchException, system.transactions.TransactionManagerCommunicationException, system.OutOfMemoryException, system.threading.ThreadStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

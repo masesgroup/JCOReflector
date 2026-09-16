@@ -169,7 +169,7 @@ public class Size3D extends ValueType implements system.IFormattable {
     
     // Methods section
     
-    public static boolean Equals(Size3D size1, Size3D size2) throws Throwable {
+    public static  boolean Equals(Size3D size1, Size3D size2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -211,7 +211,7 @@ public class Size3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Size3D Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
+    public static  Size3D Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

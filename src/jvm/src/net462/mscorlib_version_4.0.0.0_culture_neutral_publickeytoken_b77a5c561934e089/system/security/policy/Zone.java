@@ -214,7 +214,7 @@ public class Zone extends EvidenceBase  {
         }
     }
 
-    public static Zone CreateFromUrl(java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
+    public static  Zone CreateFromUrl(java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromUrl = null;

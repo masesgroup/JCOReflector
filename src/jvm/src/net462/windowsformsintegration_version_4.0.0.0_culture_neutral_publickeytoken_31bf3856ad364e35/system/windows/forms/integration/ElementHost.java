@@ -192,7 +192,7 @@ public class ElementHost extends Control  {
         }
     }
 
-    public static void EnableModelessKeyboardInterop(Window window) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.MulticastNotSupportedException {
+    public static  void EnableModelessKeyboardInterop(Window window) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

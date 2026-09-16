@@ -155,7 +155,7 @@ public class Namespace extends NetObject  {
     
     // Methods section
     
-    public static Namespace GetNamespace(java.lang.String name, VsaEngine engine) throws Throwable {
+    public static  Namespace GetNamespace(java.lang.String name, VsaEngine engine) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNamespace = null;

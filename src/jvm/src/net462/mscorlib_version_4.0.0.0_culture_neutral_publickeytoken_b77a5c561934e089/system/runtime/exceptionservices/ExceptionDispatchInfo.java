@@ -154,7 +154,7 @@ public class ExceptionDispatchInfo extends NetObject  {
     
     // Methods section
     
-    public static ExceptionDispatchInfo Capture(NetException source) throws Throwable, system.ArgumentNullException {
+    public static  ExceptionDispatchInfo Capture(NetException source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCapture = null;

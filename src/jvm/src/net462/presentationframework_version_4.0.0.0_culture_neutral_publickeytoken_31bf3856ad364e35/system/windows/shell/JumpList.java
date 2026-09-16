@@ -163,7 +163,7 @@ public class JumpList extends NetObject  {
     
     // Methods section
     
-    public static JumpList GetJumpList(Application application) throws Throwable, system.ArgumentNullException {
+    public static  JumpList GetJumpList(Application application) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetJumpList = null;
@@ -178,7 +178,7 @@ public class JumpList extends NetObject  {
         }
     }
 
-    public static void AddToRecentCategory(java.lang.String itemPath) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void AddToRecentCategory(java.lang.String itemPath) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -188,7 +188,7 @@ public class JumpList extends NetObject  {
         }
     }
 
-    public static void AddToRecentCategory(JumpPath jumpPath) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  void AddToRecentCategory(JumpPath jumpPath) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -198,7 +198,7 @@ public class JumpList extends NetObject  {
         }
     }
 
-    public static void AddToRecentCategory(JumpTask jumpTask) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OutOfMemoryException {
+    public static  void AddToRecentCategory(JumpTask jumpTask) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -238,7 +238,7 @@ public class JumpList extends NetObject  {
         }
     }
 
-    public static void SetJumpList(Application application, JumpList value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
+    public static  void SetJumpList(Application application, JumpList value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

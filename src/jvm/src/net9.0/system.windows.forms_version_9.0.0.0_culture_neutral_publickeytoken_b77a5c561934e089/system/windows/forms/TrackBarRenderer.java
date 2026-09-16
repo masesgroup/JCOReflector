@@ -156,7 +156,7 @@ public class TrackBarRenderer extends NetObject  {
     
     // Methods section
     
-    public static Size GetBottomPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public static  Size GetBottomPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBottomPointingThumbSize = null;
@@ -171,7 +171,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static Size GetLeftPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public static  Size GetLeftPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLeftPointingThumbSize = null;
@@ -186,7 +186,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static Size GetRightPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public static  Size GetRightPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRightPointingThumbSize = null;
@@ -201,7 +201,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static Size GetTopPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public static  Size GetTopPointingThumbSize(Graphics g, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTopPointingThumbSize = null;
@@ -216,7 +216,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawBottomPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawBottomPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -226,7 +226,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawHorizontalThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawHorizontalThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -236,7 +236,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawHorizontalTicks(Graphics g, Rectangle bounds, int numTicks, EdgeStyle edgeStyle) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public static  void DrawHorizontalTicks(Graphics g, Rectangle bounds, int numTicks, EdgeStyle edgeStyle) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -246,7 +246,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawHorizontalTrack(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawHorizontalTrack(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -256,7 +256,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawLeftPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawLeftPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -266,7 +266,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawRightPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawRightPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -276,7 +276,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTopPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawTopPointingThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -286,7 +286,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawVerticalThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawVerticalThumb(Graphics g, Rectangle bounds, TrackBarThumbState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -296,7 +296,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawVerticalTicks(Graphics g, Rectangle bounds, int numTicks, EdgeStyle edgeStyle) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public static  void DrawVerticalTicks(Graphics g, Rectangle bounds, int numTicks, EdgeStyle edgeStyle) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -306,7 +306,7 @@ public class TrackBarRenderer extends NetObject  {
         }
     }
 
-    public static void DrawVerticalTrack(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawVerticalTrack(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -157,7 +157,7 @@ public class JsonReaderWriterFactory extends NetObject  {
     
     // Methods section
     
-    public static XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.xml.XmlException {
+    public static  XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonReader = null;
@@ -172,7 +172,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.xml.XmlException {
+    public static  XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonReader = null;
@@ -187,7 +187,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, XmlDictionaryReaderQuotas quotas) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
+    public static  XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, XmlDictionaryReaderQuotas quotas) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonReader = null;
@@ -202,7 +202,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
+    public static  XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonReader = null;
@@ -217,7 +217,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(byte[] buffer, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.FormatException {
+    public static  XmlDictionaryReader CreateJsonReader(byte[] buffer, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonReader = null;
@@ -232,7 +232,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.FormatException {
+    public static  XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonReader = null;
@@ -247,7 +247,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
+    public static  XmlDictionaryReader CreateJsonReader(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonReader = null;
@@ -262,7 +262,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(Stream stream, XmlDictionaryReaderQuotas quotas) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
+    public static  XmlDictionaryReader CreateJsonReader(Stream stream, XmlDictionaryReaderQuotas quotas) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonReader = null;
@@ -277,7 +277,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent, java.lang.String indentChars) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
+    public static  XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent, java.lang.String indentChars) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonWriter = null;
@@ -292,7 +292,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
+    public static  XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonWriter = null;
@@ -307,7 +307,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
+    public static  XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonWriter = null;
@@ -322,7 +322,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException {
+    public static  XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonWriter = null;
@@ -337,7 +337,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException {
+    public static  XmlDictionaryWriter CreateJsonWriter(Stream stream) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateJsonWriter = null;

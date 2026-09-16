@@ -174,7 +174,7 @@ public class TypeDescriptor extends NetObject  {
     
     // Methods section
     
-    public static AttributeCollection GetAttributes(NetObject component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  AttributeCollection GetAttributes(NetObject component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAttributes = null;
@@ -189,7 +189,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static AttributeCollection GetAttributes(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
+    public static  AttributeCollection GetAttributes(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAttributes = null;
@@ -204,7 +204,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static AttributeCollection GetAttributes(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  AttributeCollection GetAttributes(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAttributes = null;
@@ -219,7 +219,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static IDesigner CreateDesigner(IComponent component, NetType designerBaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  IDesigner CreateDesigner(IComponent component, NetType designerBaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDesigner = null;
@@ -234,7 +234,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptor CreateEvent(NetType componentType, EventDescriptor oldEventDescriptor, Attribute... attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  EventDescriptor CreateEvent(NetType componentType, EventDescriptor oldEventDescriptor, Attribute... attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEvent = null;
@@ -249,7 +249,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptor CreateEvent(NetType componentType, java.lang.String name, NetType type, Attribute... attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static  EventDescriptor CreateEvent(NetType componentType, java.lang.String name, NetType type, Attribute... attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEvent = null;
@@ -264,7 +264,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptor GetDefaultEvent(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  EventDescriptor GetDefaultEvent(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultEvent = null;
@@ -279,7 +279,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptor GetDefaultEvent(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
+    public static  EventDescriptor GetDefaultEvent(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultEvent = null;
@@ -294,7 +294,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptor GetDefaultEvent(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  EventDescriptor GetDefaultEvent(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultEvent = null;
@@ -309,7 +309,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptorCollection GetEvents(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  EventDescriptorCollection GetEvents(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEvents = null;
@@ -324,7 +324,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptorCollection GetEvents(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  EventDescriptorCollection GetEvents(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEvents = null;
@@ -339,7 +339,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEvents = null;
@@ -354,7 +354,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
+    public static  EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEvents = null;
@@ -369,7 +369,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptorCollection GetEvents(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  EventDescriptorCollection GetEvents(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEvents = null;
@@ -384,7 +384,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptorCollection GetEvents(NetType componentType, Attribute[] attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  EventDescriptorCollection GetEvents(NetType componentType, Attribute[] attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEvents = null;
@@ -399,7 +399,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptor CreateProperty(NetType componentType, PropertyDescriptor oldPropertyDescriptor, Attribute... attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
+    public static  PropertyDescriptor CreateProperty(NetType componentType, PropertyDescriptor oldPropertyDescriptor, Attribute... attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateProperty = null;
@@ -414,7 +414,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptor CreateProperty(NetType componentType, java.lang.String name, NetType type, Attribute... attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static  PropertyDescriptor CreateProperty(NetType componentType, java.lang.String name, NetType type, Attribute... attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateProperty = null;
@@ -429,7 +429,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultProperty = null;
@@ -444,7 +444,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptor GetDefaultProperty(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
+    public static  PropertyDescriptor GetDefaultProperty(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultProperty = null;
@@ -459,7 +459,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptor GetDefaultProperty(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  PropertyDescriptor GetDefaultProperty(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDefaultProperty = null;
@@ -474,7 +474,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetProperties(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public static  PropertyDescriptorCollection GetProperties(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProperties = null;
@@ -489,7 +489,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetProperties(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  PropertyDescriptorCollection GetProperties(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProperties = null;
@@ -504,7 +504,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public static  PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProperties = null;
@@ -519,7 +519,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProperties = null;
@@ -534,7 +534,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetProperties(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  PropertyDescriptorCollection GetProperties(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProperties = null;
@@ -549,7 +549,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetProperties(NetType componentType, Attribute[] attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  PropertyDescriptorCollection GetProperties(NetType componentType, Attribute[] attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProperties = null;
@@ -564,7 +564,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static TypeConverter GetConverter(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  TypeConverter GetConverter(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetConverter = null;
@@ -579,7 +579,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static TypeConverter GetConverter(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
+    public static  TypeConverter GetConverter(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetConverter = null;
@@ -594,7 +594,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static TypeConverter GetConverter(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  TypeConverter GetConverter(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetConverter = null;
@@ -609,7 +609,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static TypeDescriptionProvider AddAttributes(NetObject instance, Attribute... attributes) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+    public static  TypeDescriptionProvider AddAttributes(NetObject instance, Attribute... attributes) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddAttributes = null;
@@ -624,7 +624,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static TypeDescriptionProvider AddAttributes(NetType type, Attribute... attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  TypeDescriptionProvider AddAttributes(NetType type, Attribute... attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddAttributes = null;
@@ -639,7 +639,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static TypeDescriptionProvider GetProvider(NetObject instance) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  TypeDescriptionProvider GetProvider(NetObject instance) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProvider = null;
@@ -654,7 +654,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static TypeDescriptionProvider GetProvider(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  TypeDescriptionProvider GetProvider(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProvider = null;
@@ -669,7 +669,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static NetObject CreateInstance(IServiceProvider provider, NetType objectType, NetType[] argTypes, NetObject[] args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
+    public static  NetObject CreateInstance(IServiceProvider provider, NetType objectType, NetType[] argTypes, NetObject[] args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateInstance = null;
@@ -684,7 +684,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static NetObject GetAssociation(NetType type, NetObject primary) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException {
+    public static  NetObject GetAssociation(NetType type, NetObject primary) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAssociation = null;
@@ -699,7 +699,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static NetObject GetEditor(NetObject component, NetType editorBaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  NetObject GetEditor(NetObject component, NetType editorBaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEditor = null;
@@ -714,7 +714,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static NetObject GetEditor(NetObject component, NetType editorBaseType, boolean noCustomTypeDesc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
+    public static  NetObject GetEditor(NetObject component, NetType editorBaseType, boolean noCustomTypeDesc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEditor = null;
@@ -729,7 +729,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static NetObject GetEditor(NetType type, NetType editorBaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  NetObject GetEditor(NetType type, NetType editorBaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEditor = null;
@@ -744,7 +744,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static java.lang.String GetClassName(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  java.lang.String GetClassName(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetClassName = null;
@@ -758,7 +758,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static java.lang.String GetClassName(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
+    public static  java.lang.String GetClassName(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetClassName = null;
@@ -772,7 +772,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static java.lang.String GetClassName(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  java.lang.String GetClassName(NetType componentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetClassName = null;
@@ -786,7 +786,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static java.lang.String GetComponentName(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static  java.lang.String GetComponentName(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetComponentName = null;
@@ -800,7 +800,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static java.lang.String GetComponentName(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
+    public static  java.lang.String GetComponentName(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetComponentName = null;
@@ -814,7 +814,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static java.lang.String GetFullComponentName(NetObject component) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  java.lang.String GetFullComponentName(NetObject component) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFullComponentName = null;
@@ -828,7 +828,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static NetType GetReflectionType(NetObject instance) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  NetType GetReflectionType(NetObject instance) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetReflectionType = null;
@@ -843,7 +843,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static NetType GetReflectionType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  NetType GetReflectionType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetReflectionType = null;
@@ -858,7 +858,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void AddEditorTable(NetType editorBaseType, Hashtable table) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+    public static  void AddEditorTable(NetType editorBaseType, Hashtable table) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -868,7 +868,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void AddProvider(TypeDescriptionProvider provider, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+    public static  void AddProvider(TypeDescriptionProvider provider, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -878,7 +878,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void AddProvider(TypeDescriptionProvider provider, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static  void AddProvider(TypeDescriptionProvider provider, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -888,7 +888,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void AddProviderTransparent(TypeDescriptionProvider provider, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
+    public static  void AddProviderTransparent(TypeDescriptionProvider provider, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -898,7 +898,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void AddProviderTransparent(TypeDescriptionProvider provider, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
+    public static  void AddProviderTransparent(TypeDescriptionProvider provider, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -908,7 +908,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void CreateAssociation(NetObject primary, NetObject secondary) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  void CreateAssociation(NetObject primary, NetObject secondary) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -918,7 +918,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void Refresh(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  void Refresh(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -928,7 +928,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void Refresh(Assembly assembly) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void Refresh(Assembly assembly) throws Throwable, system.NotImplementedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -938,7 +938,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void Refresh(Module module) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void Refresh(Module module) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -948,7 +948,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void Refresh(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  void Refresh(NetType type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -958,7 +958,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void RemoveAssociation(NetObject primary, NetObject secondary) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException {
+    public static  void RemoveAssociation(NetObject primary, NetObject secondary) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -968,7 +968,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void RemoveAssociations(NetObject primary) throws Throwable, system.ArgumentNullException {
+    public static  void RemoveAssociations(NetObject primary) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -978,7 +978,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void RemoveProvider(TypeDescriptionProvider provider, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void RemoveProvider(TypeDescriptionProvider provider, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -988,7 +988,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void RemoveProvider(TypeDescriptionProvider provider, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void RemoveProvider(TypeDescriptionProvider provider, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -998,7 +998,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void RemoveProviderTransparent(TypeDescriptionProvider provider, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
+    public static  void RemoveProviderTransparent(TypeDescriptionProvider provider, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1008,7 +1008,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void RemoveProviderTransparent(TypeDescriptionProvider provider, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
+    public static  void RemoveProviderTransparent(TypeDescriptionProvider provider, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1018,7 +1018,7 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static void SortDescriptorArray(IList infos) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.RankException, system.InvalidOperationException {
+    public static  void SortDescriptorArray(IList infos) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.RankException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -218,7 +218,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
         }
     }
 
-    public static int GetAlternationIndex(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  int GetAlternationIndex(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAlternationIndex = null;
@@ -258,7 +258,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
         }
     }
 
-    public static ItemsControl GetItemsOwner(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  ItemsControl GetItemsOwner(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetItemsOwner = null;
@@ -273,7 +273,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
         }
     }
 
-    public static ItemsControl ItemsControlFromItemContainer(DependencyObject container) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  ItemsControl ItemsControlFromItemContainer(DependencyObject container) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectItemsControlFromItemContainer = null;
@@ -288,7 +288,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
         }
     }
 
-    public static DependencyObject ContainerFromElement(ItemsControl itemsControl, DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  DependencyObject ContainerFromElement(ItemsControl itemsControl, DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContainerFromElement = null;

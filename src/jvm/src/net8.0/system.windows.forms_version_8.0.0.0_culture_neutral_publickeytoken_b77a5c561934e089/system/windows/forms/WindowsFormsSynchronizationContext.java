@@ -206,7 +206,7 @@ public class WindowsFormsSynchronizationContext extends SynchronizationContext i
         }
     }
 
-    public static void Uninstall() throws Throwable {
+    public static  void Uninstall() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

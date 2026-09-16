@@ -157,7 +157,7 @@ public class DateAndTime extends NetObject  {
     
     // Methods section
     
-    public static int DatePart(DateInterval Interval, DateTime DateValue, FirstDayOfWeek FirstDayOfWeekValue, FirstWeekOfYear FirstWeekOfYearValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
+    public static  int DatePart(DateInterval Interval, DateTime DateValue, FirstDayOfWeek FirstDayOfWeekValue, FirstWeekOfYear FirstWeekOfYearValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDatePart = null;
@@ -197,7 +197,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static int DatePart(java.lang.String Interval, NetObject DateValue, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  int DatePart(java.lang.String Interval, NetObject DateValue, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDatePart = null;
@@ -237,7 +237,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static int Day(DateTime DateValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
+    public static  int Day(DateTime DateValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDay = null;
@@ -277,7 +277,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static int Hour(DateTime TimeValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
+    public static  int Hour(DateTime TimeValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHour = null;
@@ -317,7 +317,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static int Minute(DateTime TimeValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
+    public static  int Minute(DateTime TimeValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinute = null;
@@ -357,7 +357,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static int Month(DateTime DateValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
+    public static  int Month(DateTime DateValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMonth = null;
@@ -397,7 +397,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static int Second(DateTime TimeValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
+    public static  int Second(DateTime TimeValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSecond = null;
@@ -437,7 +437,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static int Weekday(DateTime DateValue, FirstDayOfWeek DayOfWeek) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  int Weekday(DateTime DateValue, FirstDayOfWeek DayOfWeek) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWeekday = null;
@@ -477,7 +477,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static int Year(DateTime DateValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
+    public static  int Year(DateTime DateValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectYear = null;
@@ -517,7 +517,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static long DateDiff(DateInterval Interval, DateTime Date1, DateTime Date2, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException, system.FormatException {
+    public static  long DateDiff(DateInterval Interval, DateTime Date1, DateTime Date2, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateDiff = null;
@@ -557,7 +557,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static long DateDiff(java.lang.String Interval, NetObject Date1, NetObject Date2, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  long DateDiff(java.lang.String Interval, NetObject Date1, NetObject Date2, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateDiff = null;
@@ -597,7 +597,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static DateTime DateAdd(DateInterval Interval, double Number, DateTime DateValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
+    public static  DateTime DateAdd(DateInterval Interval, double Number, DateTime DateValue) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateAdd = null;
@@ -612,7 +612,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static DateTime DateAdd(java.lang.String Interval, double Number, NetObject DateValue) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static  DateTime DateAdd(java.lang.String Interval, double Number, NetObject DateValue) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateAdd = null;
@@ -627,7 +627,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static DateTime DateSerial(int Year, int Month, int Day) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException, system.InvalidTimeZoneException, system.OverflowException {
+    public static  DateTime DateSerial(int Year, int Month, int Day) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeInitializationException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateSerial = null;
@@ -642,7 +642,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static DateTime DateValue(java.lang.String StringDate) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException {
+    public static  DateTime DateValue(java.lang.String StringDate) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateValue = null;
@@ -657,7 +657,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static DateTime TimeSerial(int Hour, int Minute, int Second) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  DateTime TimeSerial(int Hour, int Minute, int Second) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTimeSerial = null;
@@ -672,7 +672,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static DateTime TimeValue(java.lang.String StringTime) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException {
+    public static  DateTime TimeValue(java.lang.String StringTime) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTimeValue = null;
@@ -687,7 +687,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static java.lang.String MonthName(int Month, boolean Abbreviate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException {
+    public static  java.lang.String MonthName(int Month, boolean Abbreviate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMonthName = null;
@@ -701,7 +701,7 @@ public class DateAndTime extends NetObject  {
         }
     }
 
-    public static java.lang.String WeekdayName(int Weekday, boolean Abbreviate, FirstDayOfWeek FirstDayOfWeekValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException {
+    public static  java.lang.String WeekdayName(int Weekday, boolean Abbreviate, FirstDayOfWeek FirstDayOfWeekValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWeekdayName = null;

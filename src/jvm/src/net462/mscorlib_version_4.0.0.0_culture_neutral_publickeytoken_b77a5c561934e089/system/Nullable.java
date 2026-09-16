@@ -151,7 +151,7 @@ public class Nullable extends NetObject  {
     
     // Methods section
     
-    public static NetType GetUnderlyingType(NetType nullableType) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+    public static  NetType GetUnderlyingType(NetType nullableType) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUnderlyingType = null;

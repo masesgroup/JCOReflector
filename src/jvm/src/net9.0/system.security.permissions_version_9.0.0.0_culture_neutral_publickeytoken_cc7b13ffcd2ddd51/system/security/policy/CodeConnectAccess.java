@@ -164,7 +164,7 @@ public class CodeConnectAccess extends NetObject  {
     
     // Methods section
     
-    public static CodeConnectAccess CreateAnySchemeAccess(int allowPort) throws Throwable {
+    public static  CodeConnectAccess CreateAnySchemeAccess(int allowPort) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateAnySchemeAccess = null;
@@ -179,7 +179,7 @@ public class CodeConnectAccess extends NetObject  {
         }
     }
 
-    public static CodeConnectAccess CreateOriginSchemeAccess(int allowPort) throws Throwable {
+    public static  CodeConnectAccess CreateOriginSchemeAccess(int allowPort) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateOriginSchemeAccess = null;

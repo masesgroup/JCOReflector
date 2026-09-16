@@ -169,7 +169,7 @@ public class TimeZone extends NetObject  {
         }
     }
 
-    public static boolean IsDaylightSavingTime(DateTime time, DaylightTime daylightTimes) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  boolean IsDaylightSavingTime(DateTime time, DaylightTime daylightTimes) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDaylightSavingTime = null;

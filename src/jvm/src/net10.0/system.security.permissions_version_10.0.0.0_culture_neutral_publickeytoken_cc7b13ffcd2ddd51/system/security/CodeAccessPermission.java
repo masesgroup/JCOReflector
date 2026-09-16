@@ -278,7 +278,7 @@ public class CodeAccessPermission extends NetObject  {
         }
     }
 
-    public static void RevertAll() throws Throwable {
+    public static  void RevertAll() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -288,7 +288,7 @@ public class CodeAccessPermission extends NetObject  {
         }
     }
 
-    public static void RevertAssert() throws Throwable {
+    public static  void RevertAssert() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -298,7 +298,7 @@ public class CodeAccessPermission extends NetObject  {
         }
     }
 
-    public static void RevertDeny() throws Throwable {
+    public static  void RevertDeny() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -308,7 +308,7 @@ public class CodeAccessPermission extends NetObject  {
         }
     }
 
-    public static void RevertPermitOnly() throws Throwable {
+    public static  void RevertPermitOnly() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

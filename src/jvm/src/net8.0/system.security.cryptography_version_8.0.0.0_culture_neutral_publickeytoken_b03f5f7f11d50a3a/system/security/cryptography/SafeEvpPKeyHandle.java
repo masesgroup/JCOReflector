@@ -176,7 +176,7 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
         }
     }
 
-    public static SafeEvpPKeyHandle OpenPrivateKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  SafeEvpPKeyHandle OpenPrivateKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenPrivateKeyFromEngine = null;
@@ -191,7 +191,7 @@ public class SafeEvpPKeyHandle extends SafeHandle  {
         }
     }
 
-    public static SafeEvpPKeyHandle OpenPublicKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  SafeEvpPKeyHandle OpenPublicKeyFromEngine(java.lang.String engineName, java.lang.String keyId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenPublicKeyFromEngine = null;

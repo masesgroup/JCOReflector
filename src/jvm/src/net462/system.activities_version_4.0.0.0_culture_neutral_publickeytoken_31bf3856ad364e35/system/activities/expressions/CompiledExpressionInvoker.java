@@ -169,7 +169,7 @@ public class CompiledExpressionInvoker extends NetObject  {
     
     // Methods section
     
-    public static NetObject GetCompiledExpressionRoot(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  NetObject GetCompiledExpressionRoot(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompiledExpressionRoot = null;
@@ -184,7 +184,7 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
 
-    public static NetObject GetCompiledExpressionRootForImplementation(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  NetObject GetCompiledExpressionRootForImplementation(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompiledExpressionRootForImplementation = null;
@@ -214,7 +214,7 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
 
-    public static void SetCompiledExpressionRoot(NetObject target, ICompiledExpressionRoot compiledExpressionRoot) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static  void SetCompiledExpressionRoot(NetObject target, ICompiledExpressionRoot compiledExpressionRoot) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -224,7 +224,7 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
 
-    public static void SetCompiledExpressionRootForImplementation(NetObject target, ICompiledExpressionRoot compiledExpressionRoot) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static  void SetCompiledExpressionRootForImplementation(NetObject target, ICompiledExpressionRoot compiledExpressionRoot) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

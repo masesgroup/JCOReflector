@@ -157,7 +157,7 @@ public class OSFeature extends FeatureSupport  {
     
     // Methods section
     
-    public static boolean IsPresent(SystemParameter enumVal) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
+    public static  boolean IsPresent(SystemParameter enumVal) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPresent = null;

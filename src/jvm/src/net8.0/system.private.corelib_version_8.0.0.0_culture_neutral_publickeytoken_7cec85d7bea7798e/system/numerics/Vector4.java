@@ -216,7 +216,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Single Distance(Vector4 value1, Vector4 value2) throws Throwable {
+    public static  Single Distance(Vector4 value1, Vector4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDistance = null;
@@ -231,7 +231,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Single DistanceSquared(Vector4 value1, Vector4 value2) throws Throwable {
+    public static  Single DistanceSquared(Vector4 value1, Vector4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDistanceSquared = null;
@@ -246,7 +246,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Single Dot(Vector4 vector1, Vector4 vector2) throws Throwable {
+    public static  Single Dot(Vector4 vector1, Vector4 vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDot = null;
@@ -291,7 +291,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Abs(Vector4 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Vector4 Abs(Vector4 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -306,7 +306,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Add(Vector4 left, Vector4 right) throws Throwable {
+    public static  Vector4 Add(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -321,7 +321,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Clamp(Vector4 value1, Vector4 min, Vector4 max) throws Throwable {
+    public static  Vector4 Clamp(Vector4 value1, Vector4 min, Vector4 max) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClamp = null;
@@ -336,7 +336,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Divide(Vector4 left, Single divisor) throws Throwable {
+    public static  Vector4 Divide(Vector4 left, Single divisor) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -351,7 +351,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Divide(Vector4 left, Vector4 right) throws Throwable {
+    public static  Vector4 Divide(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -366,7 +366,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Lerp(Vector4 value1, Vector4 value2, Single amount) throws Throwable {
+    public static  Vector4 Lerp(Vector4 value1, Vector4 value2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -381,7 +381,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Max(Vector4 value1, Vector4 value2) throws Throwable {
+    public static  Vector4 Max(Vector4 value1, Vector4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -396,7 +396,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Min(Vector4 value1, Vector4 value2) throws Throwable {
+    public static  Vector4 Min(Vector4 value1, Vector4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -411,7 +411,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Multiply(Single left, Vector4 right) throws Throwable {
+    public static  Vector4 Multiply(Single left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -426,7 +426,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Multiply(Vector4 left, Single right) throws Throwable {
+    public static  Vector4 Multiply(Vector4 left, Single right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -441,7 +441,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Multiply(Vector4 left, Vector4 right) throws Throwable {
+    public static  Vector4 Multiply(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -456,7 +456,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Negate(Vector4 value) throws Throwable {
+    public static  Vector4 Negate(Vector4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -471,7 +471,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Normalize(Vector4 vector) throws Throwable {
+    public static  Vector4 Normalize(Vector4 vector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalize = null;
@@ -486,7 +486,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 SquareRoot(Vector4 value) throws Throwable {
+    public static  Vector4 SquareRoot(Vector4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSquareRoot = null;
@@ -501,7 +501,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Subtract(Vector4 left, Vector4 right) throws Throwable {
+    public static  Vector4 Subtract(Vector4 left, Vector4 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -516,7 +516,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Transform(Vector2 position, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector4 Transform(Vector2 position, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -531,7 +531,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Transform(Vector2 value, Quaternion rotation) throws Throwable {
+    public static  Vector4 Transform(Vector2 value, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -546,7 +546,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Transform(Vector3 position, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector4 Transform(Vector3 position, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -561,7 +561,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Transform(Vector3 value, Quaternion rotation) throws Throwable {
+    public static  Vector4 Transform(Vector3 value, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -576,7 +576,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Transform(Vector4 vector, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  Vector4 Transform(Vector4 vector, Matrix4x4 matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -591,7 +591,7 @@ public class Vector4 extends ValueType  {
         }
     }
 
-    public static Vector4 Transform(Vector4 value, Quaternion rotation) throws Throwable {
+    public static  Vector4 Transform(Vector4 value, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;

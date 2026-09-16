@@ -191,7 +191,7 @@ public class BindingContext extends NetObjectEnumerable  {
         }
     }
 
-    public static void UpdateBinding(BindingContext newBindingContext, system.windows.forms.Binding binding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  void UpdateBinding(BindingContext newBindingContext, system.windows.forms.Binding binding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

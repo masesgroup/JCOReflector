@@ -190,7 +190,7 @@ public class Padding extends ValueType  {
         }
     }
 
-    public static Padding Add(Padding p1, Padding p2) throws Throwable {
+    public static  Padding Add(Padding p1, Padding p2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -205,7 +205,7 @@ public class Padding extends ValueType  {
         }
     }
 
-    public static Padding Subtract(Padding p1, Padding p2) throws Throwable {
+    public static  Padding Subtract(Padding p1, Padding p2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

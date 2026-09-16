@@ -156,7 +156,7 @@ public class ToolLocationHelper extends NetObject  {
     
     // Methods section
     
-    public static FrameworkName HighestVersionOfTargetFrameworkIdentifier(java.lang.String targetFrameworkRootDirectory, java.lang.String frameworkIdentifier) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.OverflowException {
+    public static  FrameworkName HighestVersionOfTargetFrameworkIdentifier(java.lang.String targetFrameworkRootDirectory, java.lang.String frameworkIdentifier) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHighestVersionOfTargetFrameworkIdentifier = null;
@@ -171,7 +171,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDisplayNameForTargetFrameworkDirectory(java.lang.String targetFrameworkDirectory, FrameworkName frameworkName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException {
+    public static  java.lang.String GetDisplayNameForTargetFrameworkDirectory(java.lang.String targetFrameworkDirectory, FrameworkName frameworkName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDisplayNameForTargetFrameworkDirectory = null;
@@ -185,7 +185,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDotNetFrameworkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable {
+    public static  java.lang.String GetDotNetFrameworkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDotNetFrameworkRootRegistryKey = null;
@@ -199,7 +199,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDotNetFrameworkSdkInstallKeyValue(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  java.lang.String GetDotNetFrameworkSdkInstallKeyValue(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDotNetFrameworkSdkInstallKeyValue = null;
@@ -213,7 +213,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDotNetFrameworkSdkInstallKeyValue(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  java.lang.String GetDotNetFrameworkSdkInstallKeyValue(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDotNetFrameworkSdkInstallKeyValue = null;
@@ -227,7 +227,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDotNetFrameworkSdkRootRegistryKey = null;
@@ -241,7 +241,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  java.lang.String GetDotNetFrameworkSdkRootRegistryKey(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDotNetFrameworkSdkRootRegistryKey = null;
@@ -255,7 +255,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetDotNetFrameworkVersionFolderPrefix(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  java.lang.String GetDotNetFrameworkVersionFolderPrefix(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDotNetFrameworkVersionFolderPrefix = null;
@@ -269,7 +269,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFramework = null;
@@ -283,7 +283,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
+    public static  java.lang.String GetPathToDotNetFramework(TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFramework = null;
@@ -297,7 +297,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
+    public static  java.lang.String GetPathToDotNetFrameworkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkFile = null;
@@ -311,7 +311,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String GetPathToDotNetFrameworkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkFile = null;
@@ -325,7 +325,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkReferenceAssemblies(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.resources.MissingManifestResourceException {
+    public static  java.lang.String GetPathToDotNetFrameworkReferenceAssemblies(TargetDotNetFrameworkVersion version) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkReferenceAssemblies = null;
@@ -339,7 +339,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkSdk(TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
+    public static  java.lang.String GetPathToDotNetFrameworkSdk(TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkSdk = null;
@@ -353,7 +353,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkSdk(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException {
+    public static  java.lang.String GetPathToDotNetFrameworkSdk(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkSdk = null;
@@ -367,7 +367,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
+    public static  java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkSdkFile = null;
@@ -381,7 +381,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
+    public static  java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkSdkFile = null;
@@ -395,7 +395,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
+    public static  java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkSdkFile = null;
@@ -409,7 +409,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
+    public static  java.lang.String GetPathToDotNetFrameworkSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToDotNetFrameworkSdkFile = null;
@@ -423,7 +423,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToStandardLibraries(java.lang.String targetFrameworkIdentifier, java.lang.String targetFrameworkVersion, java.lang.String targetFrameworkProfile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException {
+    public static  java.lang.String GetPathToStandardLibraries(java.lang.String targetFrameworkIdentifier, java.lang.String targetFrameworkVersion, java.lang.String targetFrameworkProfile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToStandardLibraries = null;
@@ -437,7 +437,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToStandardLibraries(java.lang.String targetFrameworkIdentifier, java.lang.String targetFrameworkVersion, java.lang.String targetFrameworkProfile, java.lang.String platformTarget) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static  java.lang.String GetPathToStandardLibraries(java.lang.String targetFrameworkIdentifier, java.lang.String targetFrameworkVersion, java.lang.String targetFrameworkProfile, java.lang.String platformTarget) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToStandardLibraries = null;
@@ -451,7 +451,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToSystemFile(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static  java.lang.String GetPathToSystemFile(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToSystemFile = null;
@@ -465,7 +465,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToWindowsSdk(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+    public static  java.lang.String GetPathToWindowsSdk(TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToWindowsSdk = null;
@@ -479,7 +479,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
+    public static  java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToWindowsSdkFile = null;
@@ -493,7 +493,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
+    public static  java.lang.String GetPathToWindowsSdkFile(java.lang.String fileName, TargetDotNetFrameworkVersion version, VisualStudioVersion visualStudioVersion, DotNetFrameworkArchitecture architecture) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPathToWindowsSdkFile = null;
@@ -507,7 +507,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public static  java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformExtensionSDKLocation = null;
@@ -521,7 +521,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformExtensionSDKLocation = null;
@@ -535,7 +535,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformExtensionSDKLocation = null;
@@ -549,7 +549,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  java.lang.String GetPlatformExtensionSDKLocation(java.lang.String sdkMoniker, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformExtensionSDKLocation = null;
@@ -563,7 +563,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String dupParam0, java.lang.String dupParam1, Version dupParam2, JCORefOut dupParam3, java.lang.String dupParam4) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  java.lang.String GetPlatformExtensionSDKLocation(java.lang.String dupParam0, java.lang.String dupParam1, Version dupParam2, JCORefOut dupParam3, java.lang.String dupParam4) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformExtensionSDKLocation = null;
@@ -577,7 +577,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public static  java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformSDKLocation = null;
@@ -591,7 +591,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, java.lang.String targetPlatformVersion, java.lang.String diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformSDKLocation = null;
@@ -605,7 +605,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static  java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformSDKLocation = null;
@@ -619,7 +619,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
+    public static  java.lang.String GetPlatformSDKLocation(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion, java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformSDKLocation = null;
@@ -633,7 +633,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String dupParam0, Version dupParam1, JCORefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
+    public static  java.lang.String GetPlatformSDKLocation(java.lang.String dupParam0, Version dupParam1, JCORefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPlatformSDKLocation = null;
@@ -647,7 +647,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetProgramFilesReferenceAssemblyRoot() throws Throwable {
+    public static  java.lang.String GetProgramFilesReferenceAssemblyRoot() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProgramFilesReferenceAssemblyRoot = null;
@@ -661,7 +661,7 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static void ClearSDKStaticCache() throws Throwable, system.ArgumentException {
+    public static  void ClearSDKStaticCache() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

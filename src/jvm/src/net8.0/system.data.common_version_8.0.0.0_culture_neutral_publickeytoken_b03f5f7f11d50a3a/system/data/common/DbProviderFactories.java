@@ -155,7 +155,7 @@ public class DbProviderFactories extends NetObject  {
     
     // Methods section
     
-    public static boolean TryGetFactory(java.lang.String providerInvariantName, JCORefOut<DbProviderFactory> factory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  boolean TryGetFactory(java.lang.String providerInvariantName, JCORefOut<DbProviderFactory> factory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetFactory = null;
@@ -169,7 +169,7 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static boolean UnregisterFactory(java.lang.String providerInvariantName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public static  boolean UnregisterFactory(java.lang.String providerInvariantName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnregisterFactory = null;
@@ -183,7 +183,7 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static DbProviderFactory GetFactory(DbConnection connection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  DbProviderFactory GetFactory(DbConnection connection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFactory = null;
@@ -198,7 +198,7 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static DbProviderFactory GetFactory(DataRow providerRow) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.TypeLoadException {
+    public static  DbProviderFactory GetFactory(DataRow providerRow) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.TypeLoadException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFactory = null;
@@ -213,7 +213,7 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static DbProviderFactory GetFactory(java.lang.String providerInvariantName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  DbProviderFactory GetFactory(java.lang.String providerInvariantName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFactory = null;
@@ -228,7 +228,7 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static DataTable GetFactoryClasses() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
+    public static  DataTable GetFactoryClasses() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFactoryClasses = null;
@@ -243,7 +243,7 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static void RegisterFactory(java.lang.String providerInvariantName, DbProviderFactory factory) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  void RegisterFactory(java.lang.String providerInvariantName, DbProviderFactory factory) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -253,7 +253,7 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static void RegisterFactory(java.lang.String providerInvariantName, java.lang.String factoryTypeAssemblyQualifiedName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  void RegisterFactory(java.lang.String providerInvariantName, java.lang.String factoryTypeAssemblyQualifiedName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -263,7 +263,7 @@ public class DbProviderFactories extends NetObject  {
         }
     }
 
-    public static void RegisterFactory(java.lang.String providerInvariantName, NetType providerFactoryClass) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  void RegisterFactory(java.lang.String providerInvariantName, NetType providerFactoryClass) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

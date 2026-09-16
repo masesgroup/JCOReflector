@@ -157,7 +157,7 @@ public class TypedReference extends ValueType  {
     
     // Methods section
     
-    public static NetObject ToObject(TypedReference value) throws Throwable {
+    public static  NetObject ToObject(TypedReference value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToObject = null;
@@ -172,7 +172,7 @@ public class TypedReference extends ValueType  {
         }
     }
 
-    public static RuntimeTypeHandle TargetTypeToken(TypedReference value) throws Throwable, system.NotSupportedException {
+    public static  RuntimeTypeHandle TargetTypeToken(TypedReference value) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTargetTypeToken = null;
@@ -187,7 +187,7 @@ public class TypedReference extends ValueType  {
         }
     }
 
-    public static NetType GetTargetType(TypedReference value) throws Throwable {
+    public static  NetType GetTargetType(TypedReference value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTargetType = null;
@@ -202,7 +202,7 @@ public class TypedReference extends ValueType  {
         }
     }
 
-    public static TypedReference MakeTypedReference(NetObject target, FieldInfo[] flds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMemberException {
+    public static  TypedReference MakeTypedReference(NetObject target, FieldInfo[] flds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeTypedReference = null;
@@ -217,7 +217,7 @@ public class TypedReference extends ValueType  {
         }
     }
 
-    public static void SetTypedReference(TypedReference target, NetObject value) throws Throwable {
+    public static  void SetTypedReference(TypedReference target, NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

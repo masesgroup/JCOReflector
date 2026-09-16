@@ -156,7 +156,7 @@ public class XamlAccessLevel extends NetObject  {
     
     // Methods section
     
-    public static XamlAccessLevel AssemblyAccessTo(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static  XamlAccessLevel AssemblyAccessTo(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAssemblyAccessTo = null;
@@ -171,7 +171,7 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
-    public static XamlAccessLevel AssemblyAccessTo(AssemblyName assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  XamlAccessLevel AssemblyAccessTo(AssemblyName assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAssemblyAccessTo = null;
@@ -186,7 +186,7 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
-    public static XamlAccessLevel PrivateAccessTo(java.lang.String assemblyQualifiedTypeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  XamlAccessLevel PrivateAccessTo(java.lang.String assemblyQualifiedTypeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPrivateAccessTo = null;
@@ -201,7 +201,7 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
-    public static XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static  XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPrivateAccessTo = null;

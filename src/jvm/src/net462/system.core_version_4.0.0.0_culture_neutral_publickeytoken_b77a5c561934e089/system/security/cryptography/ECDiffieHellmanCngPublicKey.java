@@ -173,7 +173,7 @@ public class ECDiffieHellmanCngPublicKey extends ECDiffieHellmanPublicKey  {
         }
     }
 
-    public static ECDiffieHellmanCngPublicKey FromXmlString(java.lang.String xml) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.FormatException, system.RankException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.OutOfMemoryException, system.PlatformNotSupportedException {
+    public static  ECDiffieHellmanCngPublicKey FromXmlString(java.lang.String xml) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.FormatException, system.RankException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromXmlString = null;
@@ -188,7 +188,7 @@ public class ECDiffieHellmanCngPublicKey extends ECDiffieHellmanPublicKey  {
         }
     }
 
-    public static ECDiffieHellmanPublicKey FromByteArray(byte[] publicKeyBlob, CngKeyBlobFormat format) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public static  ECDiffieHellmanPublicKey FromByteArray(byte[] publicKeyBlob, CngKeyBlobFormat format) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromByteArray = null;
@@ -203,7 +203,7 @@ public class ECDiffieHellmanCngPublicKey extends ECDiffieHellmanPublicKey  {
         }
     }
 
-    public static ECDiffieHellmanPublicKey FromByteArray(JCORefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public static  ECDiffieHellmanPublicKey FromByteArray(JCORefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromByteArray = null;

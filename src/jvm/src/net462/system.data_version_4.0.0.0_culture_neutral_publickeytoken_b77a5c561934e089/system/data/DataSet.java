@@ -471,7 +471,7 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public static XmlSchemaComplexType GetDataSetSchema(XmlSchemaSet schemaSet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException {
+    public static  XmlSchemaComplexType GetDataSetSchema(XmlSchemaSet schemaSet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataSetSchema = null;

@@ -212,7 +212,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static boolean Equals(TimeSpan t1, TimeSpan t2) throws Throwable {
+    public static  boolean Equals(TimeSpan t1, TimeSpan t2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -226,7 +226,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String input, IFormatProvider formatProvider, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  boolean TryParse(java.lang.String input, IFormatProvider formatProvider, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -240,7 +240,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  boolean TryParse(java.lang.String s, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -254,7 +254,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, TimeSpanStyles styles, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, TimeSpanStyles styles, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -268,7 +268,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -282,7 +282,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -296,7 +296,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, JCORefOut<TimeSpan> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParseExact = null;
@@ -310,7 +310,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static int Compare(TimeSpan t1, TimeSpan t2) throws Throwable {
+    public static  int Compare(TimeSpan t1, TimeSpan t2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -488,7 +488,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan FromDays(double value) throws Throwable, system.ArgumentException, system.OverflowException {
+    public static  TimeSpan FromDays(double value) throws Throwable, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDays = null;
@@ -503,7 +503,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan FromHours(double value) throws Throwable, system.ArgumentException, system.OverflowException {
+    public static  TimeSpan FromHours(double value) throws Throwable, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromHours = null;
@@ -518,7 +518,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan FromMilliseconds(double value) throws Throwable, system.ArgumentException, system.OverflowException {
+    public static  TimeSpan FromMilliseconds(double value) throws Throwable, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromMilliseconds = null;
@@ -533,7 +533,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan FromMinutes(double value) throws Throwable, system.ArgumentException, system.OverflowException {
+    public static  TimeSpan FromMinutes(double value) throws Throwable, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromMinutes = null;
@@ -548,7 +548,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan FromSeconds(double value) throws Throwable, system.ArgumentException, system.OverflowException {
+    public static  TimeSpan FromSeconds(double value) throws Throwable, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromSeconds = null;
@@ -563,7 +563,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan FromTicks(long value) throws Throwable {
+    public static  TimeSpan FromTicks(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromTicks = null;
@@ -593,7 +593,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  TimeSpan Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -608,7 +608,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan Parse(java.lang.String input, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  TimeSpan Parse(java.lang.String input, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -623,7 +623,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  TimeSpan ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -638,7 +638,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, TimeSpanStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  TimeSpan ParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, TimeSpanStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -653,7 +653,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan ParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  TimeSpan ParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -668,7 +668,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  TimeSpan ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -683,7 +683,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan ParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  TimeSpan ParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, TimeSpanStyles styles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;
@@ -698,7 +698,7 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, TimeSpanStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  TimeSpan ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, TimeSpanStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExact = null;

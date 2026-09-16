@@ -151,7 +151,7 @@ public class RuntimeFeature extends NetObject  {
     
     // Methods section
     
-    public static boolean IsSupported(java.lang.String feature) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  boolean IsSupported(java.lang.String feature) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSupported = null;

@@ -159,7 +159,7 @@ public class UrlBuilder extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String BuildUrl(IComponent component, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter) throws Throwable {
+    public static  java.lang.String BuildUrl(IComponent component, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBuildUrl = null;
@@ -173,7 +173,7 @@ public class UrlBuilder extends NetObject  {
         }
     }
 
-    public static java.lang.String BuildUrl(IComponent component, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
+    public static  java.lang.String BuildUrl(IComponent component, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBuildUrl = null;
@@ -187,7 +187,7 @@ public class UrlBuilder extends NetObject  {
         }
     }
 
-    public static java.lang.String BuildUrl(IServiceProvider serviceProvider, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
+    public static  java.lang.String BuildUrl(IServiceProvider serviceProvider, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBuildUrl = null;

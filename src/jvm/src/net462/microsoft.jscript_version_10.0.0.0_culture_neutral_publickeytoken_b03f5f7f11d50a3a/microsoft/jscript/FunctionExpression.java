@@ -158,7 +158,7 @@ public class FunctionExpression extends AST  {
     
     // Methods section
     
-    public static FunctionObject JScriptFunctionExpression(RuntimeTypeHandle handle, java.lang.String name, java.lang.String method_name, java.lang.String[] formal_params, JSLocalField[] fields, boolean must_save_stack_locals, boolean hasArgumentsObject, java.lang.String text, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+    public static  FunctionObject JScriptFunctionExpression(RuntimeTypeHandle handle, java.lang.String name, java.lang.String method_name, java.lang.String[] formal_params, JSLocalField[] fields, boolean must_save_stack_locals, boolean hasArgumentsObject, java.lang.String text, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptFunctionExpression = null;
@@ -173,7 +173,7 @@ public class FunctionExpression extends AST  {
         }
     }
 
-    public static FunctionObject JScriptFunctionExpression(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, VsaEngine dupParam8) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+    public static  FunctionObject JScriptFunctionExpression(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, VsaEngine dupParam8) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptFunctionExpression = null;

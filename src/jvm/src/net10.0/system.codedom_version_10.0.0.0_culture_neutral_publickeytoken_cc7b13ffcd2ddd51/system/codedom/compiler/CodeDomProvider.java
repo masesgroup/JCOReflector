@@ -175,7 +175,7 @@ public class CodeDomProvider extends Component  {
     
     // Methods section
     
-    public static boolean IsDefinedExtension(java.lang.String extension) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsDefinedExtension(java.lang.String extension) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefinedExtension = null;
@@ -189,7 +189,7 @@ public class CodeDomProvider extends Component  {
         }
     }
 
-    public static boolean IsDefinedLanguage(java.lang.String language) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsDefinedLanguage(java.lang.String language) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefinedLanguage = null;
@@ -246,7 +246,7 @@ public class CodeDomProvider extends Component  {
         }
     }
 
-    public static CodeDomProvider CreateProvider(java.lang.String language) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  CodeDomProvider CreateProvider(java.lang.String language) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateProvider = null;
@@ -261,7 +261,7 @@ public class CodeDomProvider extends Component  {
         }
     }
 
-    public static CompilerInfo GetCompilerInfo(java.lang.String language) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  CompilerInfo GetCompilerInfo(java.lang.String language) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCompilerInfo = null;
@@ -276,7 +276,7 @@ public class CodeDomProvider extends Component  {
         }
     }
 
-    public static CompilerInfo[] GetAllCompilerInfo() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public static  CompilerInfo[] GetAllCompilerInfo() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAllCompilerInfo = null;
@@ -490,7 +490,7 @@ public class CodeDomProvider extends Component  {
         }
     }
 
-    public static java.lang.String GetLanguageFromExtension(java.lang.String extension) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  java.lang.String GetLanguageFromExtension(java.lang.String extension) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLanguageFromExtension = null;

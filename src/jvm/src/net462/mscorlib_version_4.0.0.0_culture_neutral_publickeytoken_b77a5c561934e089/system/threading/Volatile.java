@@ -156,7 +156,7 @@ public class Volatile extends NetObject  {
     
     // Methods section
     
-    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> location, boolean value) throws Throwable {
+    public static  void Write(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> location, boolean value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -166,7 +166,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> location, byte value) throws Throwable {
+    public static  void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> location, byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -176,7 +176,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location, double value) throws Throwable {
+    public static  void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location, double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -186,7 +186,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> location, short value) throws Throwable {
+    public static  void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> location, short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -196,7 +196,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location, int value) throws Throwable {
+    public static  void Write(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location, int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -206,7 +206,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicLong> location, long value) throws Throwable {
+    public static  void Write(JCORefOut<java.util.concurrent.atomic.AtomicLong> location, long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -216,7 +216,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<SByte> location, SByte value) throws Throwable {
+    public static  void Write(JCORefOut<SByte> location, SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -226,7 +226,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<Single> location, Single value) throws Throwable {
+    public static  void Write(JCORefOut<Single> location, Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -236,7 +236,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<UInt16> location, UInt16 value) throws Throwable {
+    public static  void Write(JCORefOut<UInt16> location, UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -246,7 +246,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<UInt32> location, UInt32 value) throws Throwable {
+    public static  void Write(JCORefOut<UInt32> location, UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -256,7 +256,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut<UInt64> location, UInt64 value) throws Throwable {
+    public static  void Write(JCORefOut<UInt64> location, UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

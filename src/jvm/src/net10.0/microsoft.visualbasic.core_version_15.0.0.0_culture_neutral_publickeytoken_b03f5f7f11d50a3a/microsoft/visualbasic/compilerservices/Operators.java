@@ -153,7 +153,7 @@ public class Operators extends NetObject  {
     
     // Methods section
     
-    public static boolean ConditionalCompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  boolean ConditionalCompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConditionalCompareObjectEqual = null;
@@ -167,7 +167,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static boolean ConditionalCompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  boolean ConditionalCompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConditionalCompareObjectGreater = null;
@@ -181,7 +181,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static boolean ConditionalCompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  boolean ConditionalCompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConditionalCompareObjectGreaterEqual = null;
@@ -195,7 +195,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static boolean ConditionalCompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  boolean ConditionalCompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConditionalCompareObjectLess = null;
@@ -209,7 +209,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static boolean ConditionalCompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  boolean ConditionalCompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConditionalCompareObjectLessEqual = null;
@@ -223,7 +223,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static boolean ConditionalCompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  boolean ConditionalCompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConditionalCompareObjectNotEqual = null;
@@ -237,7 +237,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static int CompareString(java.lang.String Left, java.lang.String Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
+    public static  int CompareString(java.lang.String Left, java.lang.String Right, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareString = null;
@@ -277,7 +277,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject AddObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException, system.TypeInitializationException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject AddObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException, system.TypeInitializationException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddObject = null;
@@ -292,7 +292,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject AndObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject AndObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAndObject = null;
@@ -307,7 +307,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject CompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject CompareObjectEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareObjectEqual = null;
@@ -322,7 +322,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject CompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject CompareObjectGreater(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareObjectGreater = null;
@@ -337,7 +337,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject CompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject CompareObjectGreaterEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareObjectGreaterEqual = null;
@@ -352,7 +352,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject CompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject CompareObjectLess(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareObjectLess = null;
@@ -367,7 +367,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject CompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject CompareObjectLessEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareObjectLessEqual = null;
@@ -382,7 +382,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject CompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject CompareObjectNotEqual(NetObject Left, NetObject Right, boolean TextCompare) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.TypeInitializationException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareObjectNotEqual = null;
@@ -397,7 +397,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject ConcatenateObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.BadImageFormatException {
+    public static  NetObject ConcatenateObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConcatenateObject = null;
@@ -412,7 +412,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject DivideObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.DivideByZeroException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject DivideObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.DivideByZeroException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivideObject = null;
@@ -427,7 +427,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject ExponentObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject ExponentObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExponentObject = null;
@@ -442,7 +442,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject FallbackInvokeUserDefinedOperator(NetObject vbOp, NetObject[] arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.NullReferenceException, system.ArgumentNullException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.MissingMemberException {
+    public static  NetObject FallbackInvokeUserDefinedOperator(NetObject vbOp, NetObject[] arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.NullReferenceException, system.ArgumentNullException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFallbackInvokeUserDefinedOperator = null;
@@ -457,7 +457,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject IntDivideObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject IntDivideObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIntDivideObject = null;
@@ -472,7 +472,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject LeftShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.BadImageFormatException, system.OverflowException {
+    public static  NetObject LeftShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.BadImageFormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeftShiftObject = null;
@@ -487,7 +487,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject ModObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.DivideByZeroException, system.IndexOutOfRangeException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject ModObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.DivideByZeroException, system.IndexOutOfRangeException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModObject = null;
@@ -502,7 +502,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject MultiplyObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject MultiplyObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiplyObject = null;
@@ -517,7 +517,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject NegateObject(NetObject Operand) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject NegateObject(NetObject Operand) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegateObject = null;
@@ -532,7 +532,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject NotObject(NetObject Operand) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject NotObject(NetObject Operand) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotObject = null;
@@ -547,7 +547,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject OrObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject OrObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrObject = null;
@@ -562,7 +562,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject PlusObject(NetObject Operand) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject PlusObject(NetObject Operand) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPlusObject = null;
@@ -577,7 +577,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject RightShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.BadImageFormatException, system.OverflowException {
+    public static  NetObject RightShiftObject(NetObject Operand, NetObject Amount) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException, system.FormatException, system.BadImageFormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRightShiftObject = null;
@@ -592,7 +592,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject SubtractObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject SubtractObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.InvalidCastException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtractObject = null;
@@ -607,7 +607,7 @@ public class Operators extends NetObject  {
         }
     }
 
-    public static NetObject XorObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
+    public static  NetObject XorObject(NetObject Left, NetObject Right) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.MissingMemberException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXorObject = null;

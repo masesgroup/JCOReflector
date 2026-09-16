@@ -196,7 +196,7 @@ public class SnapLine extends NetObject  {
     
     // Methods section
     
-    public static boolean ShouldSnap(SnapLine line1, SnapLine line2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException {
+    public static  boolean ShouldSnap(SnapLine line1, SnapLine line2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShouldSnap = null;

@@ -156,7 +156,7 @@ public class ArrayPrototype extends ArrayObject  {
     
     // Methods section
     
-    public static long push(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException {
+    public static  long push(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectpush = null;
@@ -196,7 +196,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static ArrayObject concat(NetObject thisob, VsaEngine engine, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException {
+    public static  ArrayObject concat(NetObject thisob, VsaEngine engine, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectconcat = null;
@@ -211,7 +211,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static ArrayObject slice(NetObject thisob, VsaEngine engine, double start, NetObject end) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException {
+    public static  ArrayObject slice(NetObject thisob, VsaEngine engine, double start, NetObject end) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectslice = null;
@@ -226,7 +226,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static ArrayObject splice(NetObject thisob, VsaEngine engine, double start, double deleteCnt, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException {
+    public static  ArrayObject splice(NetObject thisob, VsaEngine engine, double start, double deleteCnt, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsplice = null;
@@ -241,7 +241,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static NetObject pop(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.RankException {
+    public static  NetObject pop(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectpop = null;
@@ -256,7 +256,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static NetObject reverse(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException, system.RankException {
+    public static  NetObject reverse(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectreverse = null;
@@ -271,7 +271,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static NetObject shift(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException, system.RankException {
+    public static  NetObject shift(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectshift = null;
@@ -286,7 +286,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static NetObject sort(NetObject thisob, NetObject function) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.RankException {
+    public static  NetObject sort(NetObject thisob, NetObject function) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsort = null;
@@ -301,7 +301,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static NetObject unshift(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.RankException {
+    public static  NetObject unshift(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectunshift = null;
@@ -316,7 +316,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static java.lang.String join(NetObject thisob, NetObject separator) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
+    public static  java.lang.String join(NetObject thisob, NetObject separator) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectjoin = null;
@@ -330,7 +330,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.FormatException, system.InvalidCastException, system.OutOfMemoryException {
+    public static  java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.FormatException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoLocaleString = null;
@@ -344,7 +344,7 @@ public class ArrayPrototype extends ArrayObject  {
         }
     }
 
-    public static java.lang.String toString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
+    public static  java.lang.String toString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoString = null;

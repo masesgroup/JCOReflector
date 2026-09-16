@@ -180,7 +180,7 @@ public class Matrix4x4 extends ValueType  {
     
     // Methods section
     
-    public static boolean Decompose(Matrix4x4 matrix, JCORefOut<Vector3> scale, JCORefOut<Quaternion> rotation, JCORefOut<Vector3> translation) throws Throwable {
+    public static  boolean Decompose(Matrix4x4 matrix, JCORefOut<Vector3> scale, JCORefOut<Quaternion> rotation, JCORefOut<Vector3> translation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecompose = null;
@@ -208,7 +208,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static boolean Invert(Matrix4x4 matrix, JCORefOut<Matrix4x4> result) throws Throwable {
+    public static  boolean Invert(Matrix4x4 matrix, JCORefOut<Matrix4x4> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvert = null;
@@ -237,7 +237,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 Add(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
+    public static  Matrix4x4 Add(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -252,7 +252,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 cameraUpVector, Vector3 cameraForwardVector) throws Throwable {
+    public static  Matrix4x4 CreateBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 cameraUpVector, Vector3 cameraForwardVector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateBillboard = null;
@@ -267,7 +267,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateConstrainedBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 rotateAxis, Vector3 cameraForwardVector, Vector3 objectForwardVector) throws Throwable {
+    public static  Matrix4x4 CreateConstrainedBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 rotateAxis, Vector3 cameraForwardVector, Vector3 objectForwardVector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateConstrainedBillboard = null;
@@ -282,7 +282,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable {
+    public static  Matrix4x4 CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromAxisAngle = null;
@@ -297,7 +297,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateFromQuaternion(Quaternion quaternion) throws Throwable {
+    public static  Matrix4x4 CreateFromQuaternion(Quaternion quaternion) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromQuaternion = null;
@@ -312,7 +312,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable {
+    public static  Matrix4x4 CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromYawPitchRoll = null;
@@ -327,7 +327,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateLookAt(Vector3 cameraPosition, Vector3 cameraTarget, Vector3 cameraUpVector) throws Throwable {
+    public static  Matrix4x4 CreateLookAt(Vector3 cameraPosition, Vector3 cameraTarget, Vector3 cameraUpVector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateLookAt = null;
@@ -342,7 +342,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateOrthographic(Single width, Single height, Single zNearPlane, Single zFarPlane) throws Throwable {
+    public static  Matrix4x4 CreateOrthographic(Single width, Single height, Single zNearPlane, Single zFarPlane) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateOrthographic = null;
@@ -357,7 +357,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateOrthographicOffCenter(Single left, Single right, Single bottom, Single top, Single zNearPlane, Single zFarPlane) throws Throwable {
+    public static  Matrix4x4 CreateOrthographicOffCenter(Single left, Single right, Single bottom, Single top, Single zNearPlane, Single zFarPlane) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateOrthographicOffCenter = null;
@@ -372,7 +372,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreatePerspective(Single width, Single height, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  Matrix4x4 CreatePerspective(Single width, Single height, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePerspective = null;
@@ -387,7 +387,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreatePerspectiveFieldOfView(Single fieldOfView, Single aspectRatio, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  Matrix4x4 CreatePerspectiveFieldOfView(Single fieldOfView, Single aspectRatio, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePerspectiveFieldOfView = null;
@@ -402,7 +402,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreatePerspectiveOffCenter(Single left, Single right, Single bottom, Single top, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  Matrix4x4 CreatePerspectiveOffCenter(Single left, Single right, Single bottom, Single top, Single nearPlaneDistance, Single farPlaneDistance) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePerspectiveOffCenter = null;
@@ -417,7 +417,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateReflection(Plane value) throws Throwable {
+    public static  Matrix4x4 CreateReflection(Plane value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateReflection = null;
@@ -432,7 +432,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationX(Single radians) throws Throwable {
+    public static  Matrix4x4 CreateRotationX(Single radians) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotationX = null;
@@ -447,7 +447,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationX(Single radians, Vector3 centerPoint) throws Throwable {
+    public static  Matrix4x4 CreateRotationX(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotationX = null;
@@ -462,7 +462,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationY(Single radians) throws Throwable {
+    public static  Matrix4x4 CreateRotationY(Single radians) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotationY = null;
@@ -477,7 +477,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationY(Single radians, Vector3 centerPoint) throws Throwable {
+    public static  Matrix4x4 CreateRotationY(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotationY = null;
@@ -492,7 +492,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationZ(Single radians) throws Throwable {
+    public static  Matrix4x4 CreateRotationZ(Single radians) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotationZ = null;
@@ -507,7 +507,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationZ(Single radians, Vector3 centerPoint) throws Throwable {
+    public static  Matrix4x4 CreateRotationZ(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRotationZ = null;
@@ -522,7 +522,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateScale(Single scale) throws Throwable {
+    public static  Matrix4x4 CreateScale(Single scale) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -537,7 +537,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale) throws Throwable {
+    public static  Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -552,7 +552,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale, Vector3 centerPoint) throws Throwable {
+    public static  Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -567,7 +567,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateScale(Single scale, Vector3 centerPoint) throws Throwable {
+    public static  Matrix4x4 CreateScale(Single scale, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -582,7 +582,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateScale(Vector3 scales) throws Throwable {
+    public static  Matrix4x4 CreateScale(Vector3 scales) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -597,7 +597,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateScale(Vector3 scales, Vector3 centerPoint) throws Throwable {
+    public static  Matrix4x4 CreateScale(Vector3 scales, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateScale = null;
@@ -612,7 +612,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateShadow(Vector3 lightDirection, Plane plane) throws Throwable {
+    public static  Matrix4x4 CreateShadow(Vector3 lightDirection, Plane plane) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateShadow = null;
@@ -627,7 +627,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateTranslation(Single xPosition, Single yPosition, Single zPosition) throws Throwable {
+    public static  Matrix4x4 CreateTranslation(Single xPosition, Single yPosition, Single zPosition) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTranslation = null;
@@ -642,7 +642,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateTranslation(Vector3 position) throws Throwable {
+    public static  Matrix4x4 CreateTranslation(Vector3 position) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTranslation = null;
@@ -657,7 +657,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateWorld(Vector3 position, Vector3 forward, Vector3 up) throws Throwable {
+    public static  Matrix4x4 CreateWorld(Vector3 position, Vector3 forward, Vector3 up) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateWorld = null;
@@ -672,7 +672,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 Lerp(Matrix4x4 matrix1, Matrix4x4 matrix2, Single amount) throws Throwable {
+    public static  Matrix4x4 Lerp(Matrix4x4 matrix1, Matrix4x4 matrix2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -687,7 +687,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 Multiply(Matrix4x4 value1, Single value2) throws Throwable {
+    public static  Matrix4x4 Multiply(Matrix4x4 value1, Single value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -702,7 +702,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 Multiply(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
+    public static  Matrix4x4 Multiply(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -717,7 +717,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 Negate(Matrix4x4 value) throws Throwable {
+    public static  Matrix4x4 Negate(Matrix4x4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -732,7 +732,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 Subtract(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
+    public static  Matrix4x4 Subtract(Matrix4x4 value1, Matrix4x4 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -747,7 +747,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 Transform(Matrix4x4 value, Quaternion rotation) throws Throwable {
+    public static  Matrix4x4 Transform(Matrix4x4 value, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -762,7 +762,7 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 Transpose(Matrix4x4 matrix) throws Throwable {
+    public static  Matrix4x4 Transpose(Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTranspose = null;

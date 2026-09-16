@@ -292,7 +292,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
-    public static boolean IsKeyLocked(Keys keyVal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  boolean IsKeyLocked(Keys keyVal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsKeyLocked = null;
@@ -306,7 +306,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
-    public static boolean IsMnemonic(char charCode, java.lang.String text) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.ExternalException, system.InvalidOperationException {
+    public static  boolean IsMnemonic(char charCode, java.lang.String text) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.runtime.interopservices.ExternalException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsMnemonic = null;

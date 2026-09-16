@@ -153,7 +153,7 @@ public class DistributedContextPropagator extends NetObject  {
     
     // Methods section
     
-    public static DistributedContextPropagator CreateDefaultPropagator() throws Throwable {
+    public static  DistributedContextPropagator CreateDefaultPropagator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDefaultPropagator = null;
@@ -168,7 +168,7 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
 
-    public static DistributedContextPropagator CreateNoOutputPropagator() throws Throwable {
+    public static  DistributedContextPropagator CreateNoOutputPropagator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateNoOutputPropagator = null;
@@ -183,7 +183,7 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
 
-    public static DistributedContextPropagator CreatePassThroughPropagator() throws Throwable {
+    public static  DistributedContextPropagator CreatePassThroughPropagator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePassThroughPropagator = null;

@@ -170,7 +170,7 @@ public class SoapBase64Binary extends NetObject  {
     
     // Methods section
     
-    public static SoapBase64Binary Parse(java.lang.String value) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException {
+    public static  SoapBase64Binary Parse(java.lang.String value) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

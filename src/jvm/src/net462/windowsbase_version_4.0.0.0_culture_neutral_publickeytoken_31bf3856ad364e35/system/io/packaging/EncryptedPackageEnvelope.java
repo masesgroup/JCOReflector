@@ -163,7 +163,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
     
     // Methods section
     
-    public static boolean IsEncryptedPackageEnvelope(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileFormatException, system.SystemException {
+    public static  boolean IsEncryptedPackageEnvelope(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileFormatException, system.SystemException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEncryptedPackageEnvelope = null;
@@ -177,7 +177,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static boolean IsEncryptedPackageEnvelope(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.FileFormatException, system.SystemException {
+    public static  boolean IsEncryptedPackageEnvelope(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.FileFormatException, system.SystemException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEncryptedPackageEnvelope = null;
@@ -191,7 +191,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static EncryptedPackageEnvelope Create(Stream envelopeStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.ArgumentOutOfRangeException, system.RankException, system.InvalidCastException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
+    public static  EncryptedPackageEnvelope Create(Stream envelopeStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.ArgumentOutOfRangeException, system.RankException, system.InvalidCastException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -206,7 +206,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static EncryptedPackageEnvelope Create(java.lang.String envelopeFileName, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.RankException, system.InvalidCastException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
+    public static  EncryptedPackageEnvelope Create(java.lang.String envelopeFileName, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.RankException, system.InvalidCastException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -221,7 +221,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static EncryptedPackageEnvelope CreateFromPackage(Stream envelopeStream, Stream packageStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.ArgumentOutOfRangeException, system.RankException, system.InvalidCastException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
+    public static  EncryptedPackageEnvelope CreateFromPackage(Stream envelopeStream, Stream packageStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.ArgumentOutOfRangeException, system.RankException, system.InvalidCastException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromPackage = null;
@@ -236,7 +236,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static EncryptedPackageEnvelope CreateFromPackage(java.lang.String envelopeFileName, Stream packageStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.RankException, system.InvalidCastException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
+    public static  EncryptedPackageEnvelope CreateFromPackage(java.lang.String envelopeFileName, Stream packageStream, PublishLicense publishLicense, CryptoProvider cryptoProvider) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.globalization.CultureNotFoundException, system.io.FileFormatException, system.io.EndOfStreamException, system.RankException, system.InvalidCastException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromPackage = null;
@@ -251,7 +251,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static EncryptedPackageEnvelope Open(Stream envelopeStream) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.io.DirectoryNotFoundException {
+    public static  EncryptedPackageEnvelope Open(Stream envelopeStream) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.io.DirectoryNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -266,7 +266,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static EncryptedPackageEnvelope Open(java.lang.String envelopeFileName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileNotFoundException, system.ObjectDisposedException, system.io.DirectoryNotFoundException, system.io.FileFormatException {
+    public static  EncryptedPackageEnvelope Open(java.lang.String envelopeFileName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileNotFoundException, system.ObjectDisposedException, system.io.DirectoryNotFoundException, system.io.FileFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -281,7 +281,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static EncryptedPackageEnvelope Open(java.lang.String envelopeFileName, FileAccess access) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileNotFoundException, system.ObjectDisposedException, system.io.DirectoryNotFoundException, system.io.FileFormatException {
+    public static  EncryptedPackageEnvelope Open(java.lang.String envelopeFileName, FileAccess access) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileNotFoundException, system.ObjectDisposedException, system.io.DirectoryNotFoundException, system.io.FileFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -296,7 +296,7 @@ public class EncryptedPackageEnvelope extends NetObject implements AutoCloseable
         }
     }
 
-    public static EncryptedPackageEnvelope Open(java.lang.String envelopeFileName, FileAccess access, FileShare sharing) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.io.FileFormatException, system.io.DirectoryNotFoundException {
+    public static  EncryptedPackageEnvelope Open(java.lang.String envelopeFileName, FileAccess access, FileShare sharing) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.io.FileFormatException, system.io.DirectoryNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;

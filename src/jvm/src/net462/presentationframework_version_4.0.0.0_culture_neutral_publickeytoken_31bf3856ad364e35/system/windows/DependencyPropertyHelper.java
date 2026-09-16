@@ -154,7 +154,7 @@ public class DependencyPropertyHelper extends NetObject  {
     
     // Methods section
     
-    public static boolean IsTemplatedValueDynamic(DependencyObject elementInTemplate, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  boolean IsTemplatedValueDynamic(DependencyObject elementInTemplate, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTemplatedValueDynamic = null;
@@ -168,7 +168,7 @@ public class DependencyPropertyHelper extends NetObject  {
         }
     }
 
-    public static ValueSource GetValueSource(DependencyObject dependencyObject, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  ValueSource GetValueSource(DependencyObject dependencyObject, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetValueSource = null;

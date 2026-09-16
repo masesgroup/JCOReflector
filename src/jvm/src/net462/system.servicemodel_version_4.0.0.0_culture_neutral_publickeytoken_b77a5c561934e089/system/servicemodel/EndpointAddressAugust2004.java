@@ -177,7 +177,7 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
         }
     }
 
-    public static EndpointAddressAugust2004 FromEndpointAddress(EndpointAddress address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public static  EndpointAddressAugust2004 FromEndpointAddress(EndpointAddress address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromEndpointAddress = null;
@@ -192,7 +192,7 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
         }
     }
 
-    public static XmlQualifiedName GetSchema(XmlSchemaSet xmlSchemaSet) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.RankException, system.globalization.CultureNotFoundException {
+    public static  XmlQualifiedName GetSchema(XmlSchemaSet xmlSchemaSet) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.RankException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSchema = null;

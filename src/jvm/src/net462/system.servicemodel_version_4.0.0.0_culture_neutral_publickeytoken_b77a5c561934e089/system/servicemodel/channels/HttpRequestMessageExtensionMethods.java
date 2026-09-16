@@ -154,7 +154,7 @@ public class HttpRequestMessageExtensionMethods extends NetObject  {
     
     // Methods section
     
-    public static IPrincipal GetUserPrincipal(HttpRequestMessage httpRequestMessage) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  IPrincipal GetUserPrincipal(HttpRequestMessage httpRequestMessage) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserPrincipal = null;
@@ -169,7 +169,7 @@ public class HttpRequestMessageExtensionMethods extends NetObject  {
         }
     }
 
-    public static void SetUserPrincipal(HttpRequestMessage httpRequestMessage, IPrincipal user) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  void SetUserPrincipal(HttpRequestMessage httpRequestMessage, IPrincipal user) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

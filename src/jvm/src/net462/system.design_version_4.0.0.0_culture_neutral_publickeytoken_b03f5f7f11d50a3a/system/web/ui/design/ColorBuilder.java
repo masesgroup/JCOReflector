@@ -156,7 +156,7 @@ public class ColorBuilder extends NetObject  {
     
     // Methods section
     
-    public static java.lang.String BuildColor(IComponent component, Control owner, java.lang.String initialColor) throws Throwable {
+    public static  java.lang.String BuildColor(IComponent component, Control owner, java.lang.String initialColor) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBuildColor = null;

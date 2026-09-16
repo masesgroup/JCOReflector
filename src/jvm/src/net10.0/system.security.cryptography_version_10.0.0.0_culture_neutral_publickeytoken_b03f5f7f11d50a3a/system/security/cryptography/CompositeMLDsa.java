@@ -154,7 +154,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean IsAlgorithmSupported(CompositeMLDsaAlgorithm algorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
+    public static  boolean IsAlgorithmSupported(CompositeMLDsaAlgorithm algorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsAlgorithmSupported = null;
@@ -357,7 +357,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa GenerateKey(CompositeMLDsaAlgorithm algorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
+    public static  CompositeMLDsa GenerateKey(CompositeMLDsaAlgorithm algorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateKey = null;
@@ -372,7 +372,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportCompositeMLDsaPrivateKey(CompositeMLDsaAlgorithm algorithm, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
+    public static  CompositeMLDsa ImportCompositeMLDsaPrivateKey(CompositeMLDsaAlgorithm algorithm, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportCompositeMLDsaPrivateKey = null;
@@ -387,7 +387,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportCompositeMLDsaPrivateKey(CompositeMLDsaAlgorithm dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
+    public static  CompositeMLDsa ImportCompositeMLDsaPrivateKey(CompositeMLDsaAlgorithm dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportCompositeMLDsaPrivateKey = null;
@@ -402,7 +402,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportCompositeMLDsaPublicKey(CompositeMLDsaAlgorithm algorithm, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
+    public static  CompositeMLDsa ImportCompositeMLDsaPublicKey(CompositeMLDsaAlgorithm algorithm, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportCompositeMLDsaPublicKey = null;
@@ -417,7 +417,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportCompositeMLDsaPublicKey(CompositeMLDsaAlgorithm dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
+    public static  CompositeMLDsa ImportCompositeMLDsaPublicKey(CompositeMLDsaAlgorithm dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportCompositeMLDsaPublicKey = null;
@@ -432,7 +432,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportEncryptedPkcs8PrivateKey(java.lang.String password, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportEncryptedPkcs8PrivateKey(java.lang.String password, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportEncryptedPkcs8PrivateKey = null;
@@ -447,7 +447,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportEncryptedPkcs8PrivateKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportEncryptedPkcs8PrivateKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportEncryptedPkcs8PrivateKey = null;
@@ -462,7 +462,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportFromEncryptedPem(java.lang.String source, byte[] passwordBytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportFromEncryptedPem(java.lang.String source, byte[] passwordBytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportFromEncryptedPem = null;
@@ -477,7 +477,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportFromEncryptedPem(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportFromEncryptedPem(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportFromEncryptedPem = null;
@@ -492,7 +492,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportFromEncryptedPem(java.lang.String source, java.lang.String password) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportFromEncryptedPem(java.lang.String source, java.lang.String password) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportFromEncryptedPem = null;
@@ -507,7 +507,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportFromPem(java.lang.String source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportFromPem(java.lang.String source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportFromPem = null;
@@ -522,7 +522,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportPkcs8PrivateKey(byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportPkcs8PrivateKey(byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportPkcs8PrivateKey = null;
@@ -537,7 +537,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportPkcs8PrivateKey(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportPkcs8PrivateKey(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportPkcs8PrivateKey = null;
@@ -552,7 +552,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportSubjectPublicKeyInfo(byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportSubjectPublicKeyInfo(byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportSubjectPublicKeyInfo = null;
@@ -567,7 +567,7 @@ public class CompositeMLDsa extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CompositeMLDsa ImportSubjectPublicKeyInfo(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+    public static  CompositeMLDsa ImportSubjectPublicKeyInfo(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportSubjectPublicKeyInfo = null;

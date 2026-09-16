@@ -162,7 +162,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
     
     // Methods section
     
-    public static void RegisterAdapter(NetType attributeType, NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
+    public static  void RegisterAdapter(NetType attributeType, NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -172,7 +172,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
         }
     }
 
-    public static void RegisterAdapterFactory(NetType attributeType, DataAnnotationsModelValidationFactory factory) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
+    public static  void RegisterAdapterFactory(NetType attributeType, DataAnnotationsModelValidationFactory factory) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -182,7 +182,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
         }
     }
 
-    public static void RegisterDefaultAdapter(NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static  void RegisterDefaultAdapter(NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -192,7 +192,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
         }
     }
 
-    public static void RegisterDefaultAdapterFactory(DataAnnotationsModelValidationFactory factory) throws Throwable, system.ArgumentNullException {
+    public static  void RegisterDefaultAdapterFactory(DataAnnotationsModelValidationFactory factory) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -202,7 +202,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
         }
     }
 
-    public static void RegisterDefaultValidatableObjectAdapter(NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static  void RegisterDefaultValidatableObjectAdapter(NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -212,7 +212,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
         }
     }
 
-    public static void RegisterDefaultValidatableObjectAdapterFactory(DataAnnotationsValidatableObjectAdapterFactory factory) throws Throwable, system.ArgumentNullException {
+    public static  void RegisterDefaultValidatableObjectAdapterFactory(DataAnnotationsValidatableObjectAdapterFactory factory) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -222,7 +222,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
         }
     }
 
-    public static void RegisterValidatableObjectAdapter(NetType modelType, NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
+    public static  void RegisterValidatableObjectAdapter(NetType modelType, NetType adapterType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -232,7 +232,7 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
         }
     }
 
-    public static void RegisterValidatableObjectAdapterFactory(NetType modelType, DataAnnotationsValidatableObjectAdapterFactory factory) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
+    public static  void RegisterValidatableObjectAdapterFactory(NetType modelType, DataAnnotationsValidatableObjectAdapterFactory factory) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

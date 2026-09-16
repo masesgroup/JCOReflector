@@ -158,7 +158,7 @@ public class CollectionChangedEventManager extends WeakEventManager  {
     
     // Methods section
     
-    public static void AddListener(INotifyCollectionChanged source, IWeakEventListener listener) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
+    public static  void AddListener(INotifyCollectionChanged source, IWeakEventListener listener) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -168,7 +168,7 @@ public class CollectionChangedEventManager extends WeakEventManager  {
         }
     }
 
-    public static void RemoveListener(INotifyCollectionChanged source, IWeakEventListener listener) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
+    public static  void RemoveListener(INotifyCollectionChanged source, IWeakEventListener listener) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

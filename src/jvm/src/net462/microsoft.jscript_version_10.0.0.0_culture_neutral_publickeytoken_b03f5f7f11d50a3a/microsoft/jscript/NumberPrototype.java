@@ -155,7 +155,7 @@ public class NumberPrototype extends NumberObject  {
     
     // Methods section
     
-    public static NetObject valueOf(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  NetObject valueOf(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectvalueOf = null;
@@ -170,7 +170,7 @@ public class NumberPrototype extends NumberObject  {
         }
     }
 
-    public static java.lang.String toExponential(NetObject thisob, NetObject fractionDigits) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  java.lang.String toExponential(NetObject thisob, NetObject fractionDigits) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoExponential = null;
@@ -184,7 +184,7 @@ public class NumberPrototype extends NumberObject  {
         }
     }
 
-    public static java.lang.String toFixed(NetObject thisob, double fractionDigits) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  java.lang.String toFixed(NetObject thisob, double fractionDigits) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoFixed = null;
@@ -198,7 +198,7 @@ public class NumberPrototype extends NumberObject  {
         }
     }
 
-    public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String toLocaleString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoLocaleString = null;
@@ -212,7 +212,7 @@ public class NumberPrototype extends NumberObject  {
         }
     }
 
-    public static java.lang.String toPrecision(NetObject thisob, NetObject precision) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException {
+    public static  java.lang.String toPrecision(NetObject thisob, NetObject precision) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoPrecision = null;
@@ -226,7 +226,7 @@ public class NumberPrototype extends NumberObject  {
         }
     }
 
-    public static java.lang.String toString(NetObject thisob, NetObject radix) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
+    public static  java.lang.String toString(NetObject thisob, NetObject radix) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoString = null;

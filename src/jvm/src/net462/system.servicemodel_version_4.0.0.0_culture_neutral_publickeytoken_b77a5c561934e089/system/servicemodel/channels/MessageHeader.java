@@ -171,7 +171,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
+    public static  MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHeader = null;
@@ -186,7 +186,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
+    public static  MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHeader = null;
@@ -201,7 +201,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand, java.lang.String actor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
+    public static  MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand, java.lang.String actor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHeader = null;
@@ -216,7 +216,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException, system.ArgumentOutOfRangeException {
+    public static  MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHeader = null;
@@ -231,7 +231,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
+    public static  MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHeader = null;
@@ -246,7 +246,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
+    public static  MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHeader = null;
@@ -261,7 +261,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand, java.lang.String actor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
+    public static  MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand, java.lang.String actor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHeader = null;
@@ -276,7 +276,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public static MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException {
+    public static  MessageHeader CreateHeader(java.lang.String name, java.lang.String ns, NetObject value, XmlObjectSerializer serializer, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateHeader = null;

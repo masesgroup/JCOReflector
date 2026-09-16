@@ -178,7 +178,7 @@ public class RetryConditionHeaderValue extends NetObject implements system.IClon
     
     // Methods section
     
-    public static boolean TryParse(java.lang.String input, JCORefOut<RetryConditionHeaderValue> parsedValue) throws Throwable {
+    public static  boolean TryParse(java.lang.String input, JCORefOut<RetryConditionHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -192,7 +192,7 @@ public class RetryConditionHeaderValue extends NetObject implements system.IClon
         }
     }
 
-    public static RetryConditionHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static  RetryConditionHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

@@ -182,7 +182,7 @@ public class AssemblyName extends NetObject  {
     
     // Methods section
     
-    public static boolean ReferenceMatchesDefinition(AssemblyName reference, AssemblyName definition) throws Throwable {
+    public static  boolean ReferenceMatchesDefinition(AssemblyName reference, AssemblyName definition) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReferenceMatchesDefinition = null;
@@ -257,7 +257,7 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public static AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException {
+    public static  AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAssemblyName = null;

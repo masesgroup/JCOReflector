@@ -214,7 +214,7 @@ public class Parameter extends NetObject implements system.ICloneable {
     
     // Methods section
     
-    public static DbType ConvertTypeCodeToDbType(TypeCode typeCode) throws Throwable {
+    public static  DbType ConvertTypeCodeToDbType(TypeCode typeCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertTypeCodeToDbType = null;
@@ -244,7 +244,7 @@ public class Parameter extends NetObject implements system.ICloneable {
         }
     }
 
-    public static TypeCode ConvertDbTypeToTypeCode(DbType dbType) throws Throwable {
+    public static  TypeCode ConvertDbTypeToTypeCode(DbType dbType) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertDbTypeToTypeCode = null;

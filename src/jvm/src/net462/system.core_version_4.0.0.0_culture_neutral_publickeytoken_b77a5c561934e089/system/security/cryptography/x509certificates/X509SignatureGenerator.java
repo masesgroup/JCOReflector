@@ -226,7 +226,7 @@ public class X509SignatureGenerator extends NetObject  {
         }
     }
 
-    public static X509SignatureGenerator CreateForECDsa(ECDsa key) throws Throwable, system.ArgumentNullException {
+    public static  X509SignatureGenerator CreateForECDsa(ECDsa key) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateForECDsa = null;
@@ -241,7 +241,7 @@ public class X509SignatureGenerator extends NetObject  {
         }
     }
 
-    public static X509SignatureGenerator CreateForRSA(RSA key, RSASignaturePadding signaturePadding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  X509SignatureGenerator CreateForRSA(RSA key, RSASignaturePadding signaturePadding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateForRSA = null;

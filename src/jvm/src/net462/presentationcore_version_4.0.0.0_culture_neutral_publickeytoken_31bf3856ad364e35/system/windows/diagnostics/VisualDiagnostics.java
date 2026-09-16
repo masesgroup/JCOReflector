@@ -152,7 +152,7 @@ public class VisualDiagnostics extends NetObject  {
     
     // Methods section
     
-    public static XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
+    public static  XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXamlSourceInfo = null;
@@ -167,7 +167,7 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
 
-    public static void DisableVisualTreeChanged() throws Throwable {
+    public static  void DisableVisualTreeChanged() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -177,7 +177,7 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
 
-    public static void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -156,7 +156,7 @@ public class ComboBoxRenderer extends NetObject  {
     
     // Methods section
     
-    public static void DrawDropDownButton(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public static  void DrawDropDownButton(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -166,7 +166,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.threading.SynchronizationLockException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -176,7 +176,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, ComboBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, Rectangle textBounds, ComboBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -186,7 +186,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, TextFormatFlags flags, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -196,7 +196,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, ComboBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, java.lang.String comboBoxText, Font font, ComboBoxState state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -206,7 +206,7 @@ public class ComboBoxRenderer extends NetObject  {
         }
     }
 
-    public static void DrawTextBox(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.threading.SynchronizationLockException {
+    public static  void DrawTextBox(Graphics g, Rectangle bounds, ComboBoxState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.runtime.interopservices.ExternalException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

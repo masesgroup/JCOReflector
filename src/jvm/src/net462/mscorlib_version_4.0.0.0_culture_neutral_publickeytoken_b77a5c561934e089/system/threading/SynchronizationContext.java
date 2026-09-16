@@ -230,7 +230,7 @@ public class SynchronizationContext extends NetObject  {
         }
     }
 
-    public static void SetSynchronizationContext(SynchronizationContext syncContext) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public static  void SetSynchronizationContext(SynchronizationContext syncContext) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

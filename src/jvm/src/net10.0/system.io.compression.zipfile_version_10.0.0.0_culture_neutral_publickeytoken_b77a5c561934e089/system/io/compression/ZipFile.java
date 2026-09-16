@@ -158,7 +158,7 @@ public class ZipFile extends NetObject  {
     
     // Methods section
     
-    public static ZipArchive Open(java.lang.String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.FormatException {
+    public static  ZipArchive Open(java.lang.String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -173,7 +173,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static ZipArchive Open(java.lang.String archiveFileName, ZipArchiveMode mode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException {
+    public static  ZipArchive Open(java.lang.String archiveFileName, ZipArchiveMode mode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -188,7 +188,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static ZipArchive OpenRead(java.lang.String archiveFileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException {
+    public static  ZipArchive OpenRead(java.lang.String archiveFileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenRead = null;
@@ -203,7 +203,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, Stream destination, CompressionLevel compressionLevel, boolean includeBaseDirectory, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, Stream destination, CompressionLevel compressionLevel, boolean includeBaseDirectory, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromDirectoryAsync = null;
@@ -218,7 +218,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, Stream destination, CompressionLevel compressionLevel, boolean includeBaseDirectory, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, Stream destination, CompressionLevel compressionLevel, boolean includeBaseDirectory, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromDirectoryAsync = null;
@@ -233,7 +233,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, Stream destination, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, Stream destination, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromDirectoryAsync = null;
@@ -248,7 +248,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CompressionLevel compressionLevel, boolean includeBaseDirectory, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CompressionLevel compressionLevel, boolean includeBaseDirectory, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromDirectoryAsync = null;
@@ -263,7 +263,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CompressionLevel compressionLevel, boolean includeBaseDirectory, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CompressionLevel compressionLevel, boolean includeBaseDirectory, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromDirectoryAsync = null;
@@ -278,7 +278,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromDirectoryAsync = null;
@@ -293,7 +293,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractToDirectoryAsync = null;
@@ -308,7 +308,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractToDirectoryAsync = null;
@@ -323,7 +323,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractToDirectoryAsync = null;
@@ -338,7 +338,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractToDirectoryAsync = null;
@@ -353,7 +353,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task ExtractToDirectoryAsync(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task ExtractToDirectoryAsync(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractToDirectoryAsync = null;
@@ -368,7 +368,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task ExtractToDirectoryAsync(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task ExtractToDirectoryAsync(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractToDirectoryAsync = null;
@@ -383,7 +383,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task ExtractToDirectoryAsync(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task ExtractToDirectoryAsync(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractToDirectoryAsync = null;
@@ -398,7 +398,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static Task ExtractToDirectoryAsync(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static  Task ExtractToDirectoryAsync(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractToDirectoryAsync = null;
@@ -413,7 +413,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void CreateFromDirectory(java.lang.String sourceDirectoryName, Stream destination, CompressionLevel compressionLevel, boolean includeBaseDirectory, Encoding entryNameEncoding) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
+    public static  void CreateFromDirectory(java.lang.String sourceDirectoryName, Stream destination, CompressionLevel compressionLevel, boolean includeBaseDirectory, Encoding entryNameEncoding) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -423,7 +423,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void CreateFromDirectory(java.lang.String sourceDirectoryName, Stream destination, CompressionLevel compressionLevel, boolean includeBaseDirectory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
+    public static  void CreateFromDirectory(java.lang.String sourceDirectoryName, Stream destination, CompressionLevel compressionLevel, boolean includeBaseDirectory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -433,7 +433,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void CreateFromDirectory(java.lang.String sourceDirectoryName, Stream destination) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
+    public static  void CreateFromDirectory(java.lang.String sourceDirectoryName, Stream destination) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -443,7 +443,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void CreateFromDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CompressionLevel compressionLevel, boolean includeBaseDirectory, Encoding entryNameEncoding) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
+    public static  void CreateFromDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CompressionLevel compressionLevel, boolean includeBaseDirectory, Encoding entryNameEncoding) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -453,7 +453,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void CreateFromDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CompressionLevel compressionLevel, boolean includeBaseDirectory) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
+    public static  void CreateFromDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName, CompressionLevel compressionLevel, boolean includeBaseDirectory) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -463,7 +463,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void CreateFromDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
+    public static  void CreateFromDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationArchiveFileName) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -473,7 +473,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
+    public static  void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -483,7 +483,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
+    public static  void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -493,7 +493,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName, Encoding entryNameEncoding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
+    public static  void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName, Encoding entryNameEncoding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -503,7 +503,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
+    public static  void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -513,7 +513,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void ExtractToDirectory(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException {
+    public static  void ExtractToDirectory(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -523,7 +523,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void ExtractToDirectory(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException {
+    public static  void ExtractToDirectory(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, Encoding entryNameEncoding, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -533,7 +533,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void ExtractToDirectory(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, Encoding entryNameEncoding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException {
+    public static  void ExtractToDirectory(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName, Encoding entryNameEncoding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -543,7 +543,7 @@ public class ZipFile extends NetObject  {
         }
     }
 
-    public static void ExtractToDirectory(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException {
+    public static  void ExtractToDirectory(java.lang.String sourceArchiveFileName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

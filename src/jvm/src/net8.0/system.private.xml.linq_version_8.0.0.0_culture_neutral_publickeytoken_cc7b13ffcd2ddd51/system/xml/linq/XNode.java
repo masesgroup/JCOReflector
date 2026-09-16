@@ -161,7 +161,7 @@ public class XNode extends XObject  {
     
     // Methods section
     
-    public static boolean DeepEquals(XNode n1, XNode n2) throws Throwable {
+    public static  boolean DeepEquals(XNode n1, XNode n2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeepEquals = null;
@@ -203,7 +203,7 @@ public class XNode extends XObject  {
         }
     }
 
-    public static int CompareDocumentOrder(XNode n1, XNode n2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  int CompareDocumentOrder(XNode n1, XNode n2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompareDocumentOrder = null;
@@ -272,7 +272,7 @@ public class XNode extends XObject  {
         }
     }
 
-    public static XNode ReadFrom(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.OverflowException {
+    public static  XNode ReadFrom(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadFrom = null;

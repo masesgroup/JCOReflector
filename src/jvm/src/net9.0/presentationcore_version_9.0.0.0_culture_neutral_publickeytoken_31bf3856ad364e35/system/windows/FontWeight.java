@@ -173,7 +173,7 @@ public class FontWeight extends ValueType implements system.IFormattable {
         }
     }
 
-    public static int Compare(FontWeight left, FontWeight right) throws Throwable {
+    public static  int Compare(FontWeight left, FontWeight right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -253,7 +253,7 @@ public class FontWeight extends ValueType implements system.IFormattable {
         }
     }
 
-    public static FontWeight FromOpenTypeWeight(int weightValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  FontWeight FromOpenTypeWeight(int weightValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromOpenTypeWeight = null;

@@ -209,7 +209,7 @@ public class ResourceExpressionBuilder extends ExpressionBuilder  {
         }
     }
 
-    public static ResourceExpressionFields ParseExpression(java.lang.String expression) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
+    public static  ResourceExpressionFields ParseExpression(java.lang.String expression) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseExpression = null;

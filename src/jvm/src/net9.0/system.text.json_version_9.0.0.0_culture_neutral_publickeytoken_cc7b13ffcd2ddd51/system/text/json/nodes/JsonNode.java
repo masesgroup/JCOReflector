@@ -160,7 +160,7 @@ public class JsonNode extends NetObject  {
     
     // Methods section
     
-    public static boolean DeepEquals(JsonNode node1, JsonNode node2) throws Throwable {
+    public static  boolean DeepEquals(JsonNode node1, JsonNode node2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeepEquals = null;

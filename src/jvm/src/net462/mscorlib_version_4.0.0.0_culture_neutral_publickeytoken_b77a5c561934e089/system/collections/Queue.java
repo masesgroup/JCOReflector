@@ -208,7 +208,7 @@ public class Queue extends NetObjectEnumerable  {
         }
     }
 
-    public static Queue Synchronized(Queue queue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
+    public static  Queue Synchronized(Queue queue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSynchronized = null;

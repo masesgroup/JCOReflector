@@ -204,7 +204,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IEnumerator GetEnumerator(IsolatedStorageScope scope) throws Throwable {
+    public static  IEnumerator GetEnumerator(IsolatedStorageScope scope) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEnumerator = null;
@@ -264,7 +264,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetMachineStoreForApplication() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetMachineStoreForApplication() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMachineStoreForApplication = null;
@@ -279,7 +279,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetMachineStoreForAssembly() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetMachineStoreForAssembly() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMachineStoreForAssembly = null;
@@ -294,7 +294,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetMachineStoreForDomain() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetMachineStoreForDomain() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMachineStoreForDomain = null;
@@ -309,7 +309,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject domainIdentity, NetObject assemblyIdentity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject domainIdentity, NetObject assemblyIdentity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -324,7 +324,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject applicationIdentity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetObject applicationIdentity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -339,7 +339,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType domainEvidenceType, NetType assemblyEvidenceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType domainEvidenceType, NetType assemblyEvidenceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -354,7 +354,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType applicationEvidenceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetStore(IsolatedStorageScope scope, NetType applicationEvidenceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetStore = null;
@@ -369,7 +369,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForApplication() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetUserStoreForApplication() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserStoreForApplication = null;
@@ -384,7 +384,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForAssembly() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetUserStoreForAssembly() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserStoreForAssembly = null;
@@ -399,7 +399,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForDomain() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
+    public static  IsolatedStorageFile GetUserStoreForDomain() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.UriFormatException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserStoreForDomain = null;
@@ -414,7 +414,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static IsolatedStorageFile GetUserStoreForSite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  IsolatedStorageFile GetUserStoreForSite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUserStoreForSite = null;
@@ -681,7 +681,7 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
         }
     }
 
-    public static void Remove(IsolatedStorageScope scope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.io.isolatedstorage.IsolatedStorageException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.security.accesscontrol.PrivilegeNotHeldException, system.UnauthorizedAccessException, system.ApplicationException, system.io.IOException {
+    public static  void Remove(IsolatedStorageScope scope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.io.isolatedstorage.IsolatedStorageException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.security.accesscontrol.PrivilegeNotHeldException, system.UnauthorizedAccessException, system.ApplicationException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

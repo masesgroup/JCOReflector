@@ -174,7 +174,7 @@ public class RelationshipManager extends NetObject  {
         }
     }
 
-    public static RelationshipManager Create(IEntityWithRelationships owner) throws Throwable, system.ArgumentNullException {
+    public static  RelationshipManager Create(IEntityWithRelationships owner) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

@@ -212,7 +212,7 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(PropertyDescriptor descriptor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException {
+    public static  ValueSerializer GetSerializerFor(PropertyDescriptor descriptor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializerFor = null;
@@ -227,7 +227,7 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(PropertyDescriptor descriptor, IValueSerializerContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException {
+    public static  ValueSerializer GetSerializerFor(PropertyDescriptor descriptor, IValueSerializerContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializerFor = null;
@@ -242,7 +242,7 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException {
+    public static  ValueSerializer GetSerializerFor(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializerFor = null;
@@ -257,7 +257,7 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(NetType type, IValueSerializerContext context) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MissingMethodException {
+    public static  ValueSerializer GetSerializerFor(NetType type, IValueSerializerContext context) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializerFor = null;

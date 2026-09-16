@@ -154,7 +154,7 @@ public class VisualStyleElement extends NetObject  {
     
     // Methods section
     
-    public static VisualStyleElement CreateElement(java.lang.String className, int part, int state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
+    public static  VisualStyleElement CreateElement(java.lang.String className, int part, int state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateElement = null;

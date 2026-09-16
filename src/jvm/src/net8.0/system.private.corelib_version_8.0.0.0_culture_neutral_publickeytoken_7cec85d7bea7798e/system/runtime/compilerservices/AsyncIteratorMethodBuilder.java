@@ -155,7 +155,7 @@ public class AsyncIteratorMethodBuilder extends ValueType  {
     
     // Methods section
     
-    public static AsyncIteratorMethodBuilder Create() throws Throwable {
+    public static  AsyncIteratorMethodBuilder Create() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

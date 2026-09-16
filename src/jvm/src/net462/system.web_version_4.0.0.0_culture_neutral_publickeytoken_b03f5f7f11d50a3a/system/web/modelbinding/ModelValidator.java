@@ -154,7 +154,7 @@ public class ModelValidator extends NetObject  {
     
     // Methods section
     
-    public static ModelValidator GetModelValidator(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable, system.ArgumentNullException {
+    public static  ModelValidator GetModelValidator(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetModelValidator = null;

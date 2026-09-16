@@ -152,7 +152,7 @@ public class DbDataReaderExtensions extends NetObject  {
     
     // Methods section
     
-    public static boolean CanGetColumnSchema(DbDataReader reader) throws Throwable {
+    public static  boolean CanGetColumnSchema(DbDataReader reader) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCanGetColumnSchema = null;

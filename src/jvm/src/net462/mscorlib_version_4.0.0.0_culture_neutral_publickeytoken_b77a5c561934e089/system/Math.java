@@ -158,7 +158,7 @@ public class Math extends NetObject  {
     
     // Methods section
     
-    public static byte Max(byte val1, byte val2) throws Throwable {
+    public static  byte Max(byte val1, byte val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -198,7 +198,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static byte Min(byte val1, byte val2) throws Throwable {
+    public static  byte Min(byte val1, byte val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -238,7 +238,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Abs(double value) throws Throwable {
+    public static  double Abs(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -278,7 +278,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Acos(double d) throws Throwable {
+    public static  double Acos(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcos = null;
@@ -318,7 +318,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Asin(double d) throws Throwable {
+    public static  double Asin(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsin = null;
@@ -358,7 +358,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Atan(double d) throws Throwable {
+    public static  double Atan(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan = null;
@@ -398,7 +398,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Atan2(double y, double x) throws Throwable {
+    public static  double Atan2(double y, double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan2 = null;
@@ -438,7 +438,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Ceiling(double a) throws Throwable {
+    public static  double Ceiling(double a) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -478,7 +478,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Cos(double d) throws Throwable {
+    public static  double Cos(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCos = null;
@@ -518,7 +518,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Cosh(double value) throws Throwable {
+    public static  double Cosh(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCosh = null;
@@ -558,7 +558,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Exp(double d) throws Throwable {
+    public static  double Exp(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp = null;
@@ -598,7 +598,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Floor(double d) throws Throwable {
+    public static  double Floor(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFloor = null;
@@ -638,7 +638,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double IEEERemainder(double x, double y) throws Throwable, system.ArithmeticException {
+    public static  double IEEERemainder(double x, double y) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIEEERemainder = null;
@@ -678,7 +678,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Log(double d) throws Throwable {
+    public static  double Log(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -718,7 +718,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Log(double a, double newBase) throws Throwable {
+    public static  double Log(double a, double newBase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -758,7 +758,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Log10(double d) throws Throwable {
+    public static  double Log10(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10 = null;
@@ -798,7 +798,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Max(double val1, double val2) throws Throwable {
+    public static  double Max(double val1, double val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -838,7 +838,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Min(double val1, double val2) throws Throwable {
+    public static  double Min(double val1, double val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -878,7 +878,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Pow(double x, double y) throws Throwable {
+    public static  double Pow(double x, double y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -918,7 +918,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Round(double a) throws Throwable {
+    public static  double Round(double a) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -958,7 +958,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Round(double value, int digits) throws Throwable, system.ArgumentOutOfRangeException, system.ArithmeticException {
+    public static  double Round(double value, int digits) throws Throwable, system.ArgumentOutOfRangeException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -998,7 +998,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Round(double value, int digits, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.ArithmeticException {
+    public static  double Round(double value, int digits, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1038,7 +1038,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Round(double value, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.ArithmeticException {
+    public static  double Round(double value, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -1078,7 +1078,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Sin(double a) throws Throwable {
+    public static  double Sin(double a) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSin = null;
@@ -1118,7 +1118,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Sinh(double value) throws Throwable {
+    public static  double Sinh(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinh = null;
@@ -1158,7 +1158,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Sqrt(double d) throws Throwable {
+    public static  double Sqrt(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSqrt = null;
@@ -1198,7 +1198,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Tan(double a) throws Throwable {
+    public static  double Tan(double a) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTan = null;
@@ -1238,7 +1238,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Tanh(double value) throws Throwable {
+    public static  double Tanh(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTanh = null;
@@ -1278,7 +1278,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static double Truncate(double d) throws Throwable {
+    public static  double Truncate(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;
@@ -1318,7 +1318,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static short Abs(short value) throws Throwable, system.OverflowException {
+    public static  short Abs(short value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -1358,7 +1358,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static short Max(short val1, short val2) throws Throwable {
+    public static  short Max(short val1, short val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -1398,7 +1398,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static short Min(short val1, short val2) throws Throwable {
+    public static  short Min(short val1, short val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -1438,7 +1438,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Abs(int value) throws Throwable, system.OverflowException {
+    public static  int Abs(int value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -1478,7 +1478,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int DivRem(int a, int b, JCORefOut<java.util.concurrent.atomic.AtomicInteger> result) throws Throwable {
+    public static  int DivRem(int a, int b, JCORefOut<java.util.concurrent.atomic.AtomicInteger> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivRem = null;
@@ -1518,7 +1518,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Max(int val1, int val2) throws Throwable {
+    public static  int Max(int val1, int val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -1558,7 +1558,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Min(int val1, int val2) throws Throwable {
+    public static  int Min(int val1, int val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -1598,7 +1598,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Sign(double value) throws Throwable, system.ArithmeticException {
+    public static  int Sign(double value) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -1638,7 +1638,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Sign(short value) throws Throwable {
+    public static  int Sign(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -1678,7 +1678,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Sign(int value) throws Throwable {
+    public static  int Sign(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -1718,7 +1718,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Sign(long value) throws Throwable {
+    public static  int Sign(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -1758,7 +1758,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Sign(SByte value) throws Throwable {
+    public static  int Sign(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -1798,7 +1798,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Sign(Single value) throws Throwable, system.ArithmeticException {
+    public static  int Sign(Single value) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -1838,7 +1838,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int Sign(Decimal value) throws Throwable {
+    public static  int Sign(Decimal value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -1878,7 +1878,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static long Abs(long value) throws Throwable, system.OverflowException {
+    public static  long Abs(long value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -1918,7 +1918,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static long BigMul(int a, int b) throws Throwable {
+    public static  long BigMul(int a, int b) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBigMul = null;
@@ -1958,7 +1958,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static long DivRem(long a, long b, JCORefOut<java.util.concurrent.atomic.AtomicLong> result) throws Throwable {
+    public static  long DivRem(long a, long b, JCORefOut<java.util.concurrent.atomic.AtomicLong> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivRem = null;
@@ -1998,7 +1998,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static long Max(long val1, long val2) throws Throwable {
+    public static  long Max(long val1, long val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -2038,7 +2038,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static long Min(long val1, long val2) throws Throwable {
+    public static  long Min(long val1, long val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -2078,7 +2078,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static SByte Abs(SByte value) throws Throwable, system.OverflowException {
+    public static  SByte Abs(SByte value) throws Throwable, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -2093,7 +2093,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static SByte Max(SByte val1, SByte val2) throws Throwable {
+    public static  SByte Max(SByte val1, SByte val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -2108,7 +2108,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static SByte Min(SByte val1, SByte val2) throws Throwable {
+    public static  SByte Min(SByte val1, SByte val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -2123,7 +2123,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Single Abs(Single value) throws Throwable {
+    public static  Single Abs(Single value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -2138,7 +2138,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Single Max(Single val1, Single val2) throws Throwable {
+    public static  Single Max(Single val1, Single val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -2153,7 +2153,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Single Min(Single val1, Single val2) throws Throwable {
+    public static  Single Min(Single val1, Single val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -2168,7 +2168,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Abs(Decimal value) throws Throwable, system.ArgumentException {
+    public static  Decimal Abs(Decimal value) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -2183,7 +2183,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Ceiling(Decimal d) throws Throwable, system.ArgumentException {
+    public static  Decimal Ceiling(Decimal d) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -2198,7 +2198,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Floor(Decimal d) throws Throwable {
+    public static  Decimal Floor(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFloor = null;
@@ -2213,7 +2213,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Max(Decimal val1, Decimal val2) throws Throwable {
+    public static  Decimal Max(Decimal val1, Decimal val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -2228,7 +2228,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Min(Decimal val1, Decimal val2) throws Throwable {
+    public static  Decimal Min(Decimal val1, Decimal val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -2243,7 +2243,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Round(Decimal d) throws Throwable {
+    public static  Decimal Round(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -2258,7 +2258,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Round(Decimal d, int decimals) throws Throwable {
+    public static  Decimal Round(Decimal d, int decimals) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -2273,7 +2273,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Round(Decimal d, int decimals, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  Decimal Round(Decimal d, int decimals, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -2288,7 +2288,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Round(Decimal d, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static  Decimal Round(Decimal d, MidpointRounding mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -2303,7 +2303,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static Decimal Truncate(Decimal d) throws Throwable {
+    public static  Decimal Truncate(Decimal d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;
@@ -2318,7 +2318,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static UInt16 Max(UInt16 val1, UInt16 val2) throws Throwable {
+    public static  UInt16 Max(UInt16 val1, UInt16 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -2333,7 +2333,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static UInt16 Min(UInt16 val1, UInt16 val2) throws Throwable {
+    public static  UInt16 Min(UInt16 val1, UInt16 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -2348,7 +2348,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static UInt32 Max(UInt32 val1, UInt32 val2) throws Throwable {
+    public static  UInt32 Max(UInt32 val1, UInt32 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -2363,7 +2363,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static UInt32 Min(UInt32 val1, UInt32 val2) throws Throwable {
+    public static  UInt32 Min(UInt32 val1, UInt32 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -2378,7 +2378,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static UInt64 Max(UInt64 val1, UInt64 val2) throws Throwable {
+    public static  UInt64 Max(UInt64 val1, UInt64 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -2393,7 +2393,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static UInt64 Min(UInt64 val1, UInt64 val2) throws Throwable {
+    public static  UInt64 Min(UInt64 val1, UInt64 val2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;

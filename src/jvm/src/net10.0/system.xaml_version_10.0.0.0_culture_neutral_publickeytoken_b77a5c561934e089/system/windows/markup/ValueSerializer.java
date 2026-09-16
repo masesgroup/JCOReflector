@@ -212,7 +212,7 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(PropertyDescriptor descriptor, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  ValueSerializer GetSerializerFor(PropertyDescriptor descriptor, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializerFor = null;
@@ -227,7 +227,7 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(PropertyDescriptor descriptor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.FormatException, system.io.FileNotFoundException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  ValueSerializer GetSerializerFor(PropertyDescriptor descriptor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.FormatException, system.io.FileNotFoundException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializerFor = null;
@@ -242,7 +242,7 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(NetType type, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  ValueSerializer GetSerializerFor(NetType type, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializerFor = null;
@@ -257,7 +257,7 @@ public class ValueSerializer extends NetObject  {
         }
     }
 
-    public static ValueSerializer GetSerializerFor(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.FormatException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.io.FileNotFoundException, system.MissingMethodException {
+    public static  ValueSerializer GetSerializerFor(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.FormatException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.io.FileNotFoundException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializerFor = null;

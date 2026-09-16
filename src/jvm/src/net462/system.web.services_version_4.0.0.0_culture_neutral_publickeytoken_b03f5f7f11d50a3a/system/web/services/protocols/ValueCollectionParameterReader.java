@@ -154,7 +154,7 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
     
     // Methods section
     
-    public static boolean IsSupported(ParameterInfo paramInfo) throws Throwable {
+    public static  boolean IsSupported(ParameterInfo paramInfo) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSupported = null;
@@ -168,7 +168,7 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
         }
     }
 
-    public static boolean IsSupported(LogicalMethodInfo methodInfo) throws Throwable {
+    public static  boolean IsSupported(LogicalMethodInfo methodInfo) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSupported = null;

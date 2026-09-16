@@ -291,7 +291,7 @@ public class AutomationPeer extends DispatcherObject  {
         }
     }
 
-    public static boolean ListenerExists(AutomationEvents eventId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  boolean ListenerExists(AutomationEvents eventId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListenerExists = null;

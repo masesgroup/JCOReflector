@@ -162,7 +162,7 @@ public class SelectiveScrollingGrid extends Grid  {
     
     // Methods section
     
-    public static SelectiveScrollingOrientation GetSelectiveScrollingOrientation(DependencyObject obj) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  SelectiveScrollingOrientation GetSelectiveScrollingOrientation(DependencyObject obj) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSelectiveScrollingOrientation = null;
@@ -177,7 +177,7 @@ public class SelectiveScrollingGrid extends Grid  {
         }
     }
 
-    public static void SetSelectiveScrollingOrientation(DependencyObject obj, SelectiveScrollingOrientation value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public static  void SetSelectiveScrollingOrientation(DependencyObject obj, SelectiveScrollingOrientation value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

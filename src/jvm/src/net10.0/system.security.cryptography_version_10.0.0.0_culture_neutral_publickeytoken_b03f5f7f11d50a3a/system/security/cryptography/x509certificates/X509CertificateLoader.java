@@ -155,7 +155,7 @@ public class X509CertificateLoader extends NetObject  {
     
     // Methods section
     
-    public static X509Certificate2 LoadCertificate(byte[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
+    public static  X509Certificate2 LoadCertificate(byte[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadCertificate = null;
@@ -170,7 +170,7 @@ public class X509CertificateLoader extends NetObject  {
         }
     }
 
-    public static X509Certificate2 LoadCertificate(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
+    public static  X509Certificate2 LoadCertificate(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadCertificate = null;
@@ -185,7 +185,7 @@ public class X509CertificateLoader extends NetObject  {
         }
     }
 
-    public static X509Certificate2 LoadCertificateFromFile(java.lang.String path) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException {
+    public static  X509Certificate2 LoadCertificateFromFile(java.lang.String path) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadCertificateFromFile = null;
@@ -200,7 +200,7 @@ public class X509CertificateLoader extends NetObject  {
         }
     }
 
-    public static X509Certificate2 LoadPkcs12(byte[] data, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
+    public static  X509Certificate2 LoadPkcs12(byte[] data, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPkcs12 = null;
@@ -215,7 +215,7 @@ public class X509CertificateLoader extends NetObject  {
         }
     }
 
-    public static X509Certificate2 LoadPkcs12(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2, Pkcs12LoaderLimits dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
+    public static  X509Certificate2 LoadPkcs12(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2, Pkcs12LoaderLimits dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPkcs12 = null;
@@ -230,7 +230,7 @@ public class X509CertificateLoader extends NetObject  {
         }
     }
 
-    public static X509Certificate2 LoadPkcs12FromFile(java.lang.String path, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException, system.io.IOException {
+    public static  X509Certificate2 LoadPkcs12FromFile(java.lang.String path, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPkcs12FromFile = null;
@@ -245,7 +245,7 @@ public class X509CertificateLoader extends NetObject  {
         }
     }
 
-    public static X509Certificate2Collection LoadPkcs12Collection(byte[] data, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
+    public static  X509Certificate2Collection LoadPkcs12Collection(byte[] data, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPkcs12Collection = null;
@@ -260,7 +260,7 @@ public class X509CertificateLoader extends NetObject  {
         }
     }
 
-    public static X509Certificate2Collection LoadPkcs12Collection(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2, Pkcs12LoaderLimits dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
+    public static  X509Certificate2Collection LoadPkcs12Collection(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2, Pkcs12LoaderLimits dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPkcs12Collection = null;
@@ -275,7 +275,7 @@ public class X509CertificateLoader extends NetObject  {
         }
     }
 
-    public static X509Certificate2Collection LoadPkcs12CollectionFromFile(java.lang.String path, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException, system.io.IOException {
+    public static  X509Certificate2Collection LoadPkcs12CollectionFromFile(java.lang.String path, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadPkcs12CollectionFromFile = null;

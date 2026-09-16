@@ -185,7 +185,7 @@ public class JSScanner extends NetObject  {
         }
     }
 
-    public static boolean IsKeyword(JSToken token) throws Throwable {
+    public static  boolean IsKeyword(JSToken token) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsKeyword = null;
@@ -199,7 +199,7 @@ public class JSScanner extends NetObject  {
         }
     }
 
-    public static boolean IsOperator(JSToken token) throws Throwable {
+    public static  boolean IsOperator(JSToken token) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOperator = null;

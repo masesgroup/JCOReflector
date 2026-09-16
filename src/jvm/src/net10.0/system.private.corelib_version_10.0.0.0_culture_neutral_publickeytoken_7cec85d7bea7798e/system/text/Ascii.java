@@ -153,7 +153,7 @@ public class Ascii extends NetObject  {
     
     // Methods section
     
-    public static boolean IsValid(byte value) throws Throwable {
+    public static  boolean IsValid(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValid = null;
@@ -167,7 +167,7 @@ public class Ascii extends NetObject  {
         }
     }
 
-    public static boolean IsValid(char value) throws Throwable {
+    public static  boolean IsValid(char value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValid = null;

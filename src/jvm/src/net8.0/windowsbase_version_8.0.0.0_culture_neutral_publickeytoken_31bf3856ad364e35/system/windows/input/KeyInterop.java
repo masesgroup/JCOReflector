@@ -152,7 +152,7 @@ public class KeyInterop extends NetObject  {
     
     // Methods section
     
-    public static int VirtualKeyFromKey(Key key) throws Throwable {
+    public static  int VirtualKeyFromKey(Key key) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVirtualKeyFromKey = null;
@@ -192,7 +192,7 @@ public class KeyInterop extends NetObject  {
         }
     }
 
-    public static Key KeyFromVirtualKey(int virtualKey) throws Throwable {
+    public static  Key KeyFromVirtualKey(int virtualKey) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectKeyFromVirtualKey = null;

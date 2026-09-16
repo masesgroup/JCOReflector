@@ -162,7 +162,7 @@ public class AttributedModelServices extends NetObject  {
     
     // Methods section
     
-    public static boolean Exports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+    public static  boolean Exports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExports = null;
@@ -176,7 +176,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static boolean Imports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+    public static  boolean Imports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImports = null;
@@ -190,7 +190,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static boolean Imports(ComposablePartDefinition part, NetType contractType, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+    public static  boolean Imports(ComposablePartDefinition part, NetType contractType, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImports = null;
@@ -204,7 +204,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static ComposablePart AddPart(CompositionBatch batch, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  ComposablePart AddPart(CompositionBatch batch, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddPart = null;
@@ -219,7 +219,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static ComposablePart CreatePart(ComposablePartDefinition partDefinition, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+    public static  ComposablePart CreatePart(ComposablePartDefinition partDefinition, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePart = null;
@@ -234,7 +234,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static ComposablePart CreatePart(NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  ComposablePart CreatePart(NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePart = null;
@@ -249,7 +249,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static ComposablePart CreatePart(NetObject attributedPart, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  ComposablePart CreatePart(NetObject attributedPart, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePart = null;
@@ -264,7 +264,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static ComposablePart SatisfyImportsOnce(ICompositionService compositionService, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+    public static  ComposablePart SatisfyImportsOnce(ICompositionService compositionService, NetObject attributedPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSatisfyImportsOnce = null;
@@ -279,7 +279,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static ComposablePart SatisfyImportsOnce(ICompositionService compositionService, NetObject attributedPart, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException {
+    public static  ComposablePart SatisfyImportsOnce(ICompositionService compositionService, NetObject attributedPart, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSatisfyImportsOnce = null;
@@ -294,7 +294,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static ComposablePartDefinition CreatePartDefinition(NetType type, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public static  ComposablePartDefinition CreatePartDefinition(NetType type, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePartDefinition = null;
@@ -309,7 +309,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static ComposablePartDefinition CreatePartDefinition(NetType type, ICompositionElement origin, boolean ensureIsDiscoverable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public static  ComposablePartDefinition CreatePartDefinition(NetType type, ICompositionElement origin, boolean ensureIsDiscoverable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePartDefinition = null;
@@ -324,7 +324,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetContractName(NetType type) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+    public static  java.lang.String GetContractName(NetType type) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetContractName = null;
@@ -338,7 +338,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTypeIdentity(MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
+    public static  java.lang.String GetTypeIdentity(MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeIdentity = null;
@@ -352,7 +352,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static java.lang.String GetTypeIdentity(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.NotSupportedException {
+    public static  java.lang.String GetTypeIdentity(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeIdentity = null;
@@ -366,7 +366,7 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
-    public static void ComposeParts(CompositionContainer container, NetObject... attributedParts) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
+    public static  void ComposeParts(CompositionContainer container, NetObject... attributedParts) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

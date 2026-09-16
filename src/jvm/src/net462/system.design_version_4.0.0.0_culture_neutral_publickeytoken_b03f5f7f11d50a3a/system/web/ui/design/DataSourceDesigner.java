@@ -167,7 +167,7 @@ public class DataSourceDesigner extends ControlDesigner  {
     
     // Methods section
     
-    public static boolean SchemasEquivalent(IDataSourceSchema schema1, IDataSourceSchema schema2) throws Throwable {
+    public static  boolean SchemasEquivalent(IDataSourceSchema schema1, IDataSourceSchema schema2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSchemasEquivalent = null;
@@ -181,7 +181,7 @@ public class DataSourceDesigner extends ControlDesigner  {
         }
     }
 
-    public static boolean ViewSchemasEquivalent(IDataSourceViewSchema viewSchema1, IDataSourceViewSchema viewSchema2) throws Throwable {
+    public static  boolean ViewSchemasEquivalent(IDataSourceViewSchema viewSchema1, IDataSourceViewSchema viewSchema2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectViewSchemasEquivalent = null;

@@ -162,7 +162,7 @@ public class HttpUtility extends NetObject  {
     
     // Methods section
     
-    public static byte[] UrlDecodeToBytes(byte[] bytes, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  byte[] UrlDecodeToBytes(byte[] bytes, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecodeToBytes = null;
@@ -185,7 +185,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlDecodeToBytes(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  byte[] UrlDecodeToBytes(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecodeToBytes = null;
@@ -208,7 +208,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlDecodeToBytes(byte[] bytes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public static  byte[] UrlDecodeToBytes(byte[] bytes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecodeToBytes = null;
@@ -231,7 +231,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlDecodeToBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public static  byte[] UrlDecodeToBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecodeToBytes = null;
@@ -254,7 +254,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlDecodeToBytes(java.lang.String str, Encoding e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  byte[] UrlDecodeToBytes(java.lang.String str, Encoding e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecodeToBytes = null;
@@ -277,7 +277,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlDecodeToBytes(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public static  byte[] UrlDecodeToBytes(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecodeToBytes = null;
@@ -300,7 +300,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeToBytes(byte[] bytes, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
+    public static  byte[] UrlEncodeToBytes(byte[] bytes, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncodeToBytes = null;
@@ -323,7 +323,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeToBytes(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
+    public static  byte[] UrlEncodeToBytes(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncodeToBytes = null;
@@ -346,7 +346,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeToBytes(byte[] bytes) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
+    public static  byte[] UrlEncodeToBytes(byte[] bytes) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncodeToBytes = null;
@@ -369,7 +369,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeToBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
+    public static  byte[] UrlEncodeToBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncodeToBytes = null;
@@ -392,7 +392,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeToBytes(java.lang.String str, Encoding e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
+    public static  byte[] UrlEncodeToBytes(java.lang.String str, Encoding e) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncodeToBytes = null;
@@ -415,7 +415,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeToBytes(java.lang.String str) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
+    public static  byte[] UrlEncodeToBytes(java.lang.String str) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncodeToBytes = null;
@@ -438,7 +438,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeUnicodeToBytes(java.lang.String str) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  byte[] UrlEncodeUnicodeToBytes(java.lang.String str) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncodeUnicodeToBytes = null;
@@ -461,7 +461,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static NameValueCollection ParseQueryString(java.lang.String query, Encoding encoding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+    public static  NameValueCollection ParseQueryString(java.lang.String query, Encoding encoding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseQueryString = null;
@@ -476,7 +476,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static NameValueCollection ParseQueryString(java.lang.String query) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+    public static  NameValueCollection ParseQueryString(java.lang.String query) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseQueryString = null;
@@ -491,7 +491,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String HtmlAttributeEncode(java.lang.String s) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  java.lang.String HtmlAttributeEncode(java.lang.String s) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHtmlAttributeEncode = null;
@@ -505,7 +505,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String HtmlDecode(java.lang.String s) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String HtmlDecode(java.lang.String s) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHtmlDecode = null;
@@ -519,7 +519,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String HtmlEncode(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  java.lang.String HtmlEncode(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHtmlEncode = null;
@@ -533,7 +533,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String HtmlEncode(java.lang.String s) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException {
+    public static  java.lang.String HtmlEncode(java.lang.String s) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHtmlEncode = null;
@@ -547,7 +547,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String JavaScriptStringEncode(java.lang.String value, boolean addDoubleQuotes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  java.lang.String JavaScriptStringEncode(java.lang.String value, boolean addDoubleQuotes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJavaScriptStringEncode = null;
@@ -561,7 +561,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String JavaScriptStringEncode(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  java.lang.String JavaScriptStringEncode(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJavaScriptStringEncode = null;
@@ -575,7 +575,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlDecode(byte[] bytes, int offset, int count, Encoding e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  java.lang.String UrlDecode(byte[] bytes, int offset, int count, Encoding e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecode = null;
@@ -589,7 +589,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlDecode(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  java.lang.String UrlDecode(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecode = null;
@@ -603,7 +603,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlDecode(byte[] bytes, Encoding e) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
+    public static  java.lang.String UrlDecode(byte[] bytes, Encoding e) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecode = null;
@@ -617,7 +617,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlDecode(JCORefOut dupParam0, Encoding dupParam1) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
+    public static  java.lang.String UrlDecode(JCORefOut dupParam0, Encoding dupParam1) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecode = null;
@@ -631,7 +631,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlDecode(java.lang.String str, Encoding e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException {
+    public static  java.lang.String UrlDecode(java.lang.String str, Encoding e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecode = null;
@@ -645,7 +645,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlDecode(java.lang.String str) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  java.lang.String UrlDecode(java.lang.String str) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlDecode = null;
@@ -659,7 +659,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncode(byte[] bytes, int offset, int count) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
+    public static  java.lang.String UrlEncode(byte[] bytes, int offset, int count) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -673,7 +673,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncode(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
+    public static  java.lang.String UrlEncode(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -687,7 +687,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncode(byte[] bytes) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
+    public static  java.lang.String UrlEncode(byte[] bytes) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -701,7 +701,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncode(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
+    public static  java.lang.String UrlEncode(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -715,7 +715,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncode(java.lang.String str, Encoding e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
+    public static  java.lang.String UrlEncode(java.lang.String str, Encoding e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -729,7 +729,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncode(java.lang.String str) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException {
+    public static  java.lang.String UrlEncode(java.lang.String str) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncode = null;
@@ -743,7 +743,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncodeUnicode(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
+    public static  java.lang.String UrlEncodeUnicode(java.lang.String str) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlEncodeUnicode = null;
@@ -757,7 +757,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlPathEncode(java.lang.String str) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.ArrayTypeMismatchException {
+    public static  java.lang.String UrlPathEncode(java.lang.String str) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUrlPathEncode = null;
@@ -771,7 +771,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static void HtmlAttributeEncode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException {
+    public static  void HtmlAttributeEncode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -781,7 +781,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static void HtmlDecode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  void HtmlDecode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -791,7 +791,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static void HtmlEncode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static  void HtmlEncode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

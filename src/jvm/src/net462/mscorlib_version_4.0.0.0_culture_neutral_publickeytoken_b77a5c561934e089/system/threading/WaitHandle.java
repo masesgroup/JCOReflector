@@ -155,7 +155,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.InvalidOperationException {
+    public static  boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSignalAndWait = null;
@@ -169,7 +169,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.InvalidOperationException {
+    public static  boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSignalAndWait = null;
@@ -183,7 +183,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.InvalidOperationException {
+    public static  boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSignalAndWait = null;
@@ -197,7 +197,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(WaitHandle[] waitHandles) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  boolean WaitAll(WaitHandle[] waitHandles) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAll = null;
@@ -211,7 +211,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  boolean WaitAll(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAll = null;
@@ -225,7 +225,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(WaitHandle[] waitHandles, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  boolean WaitAll(WaitHandle[] waitHandles, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAll = null;
@@ -239,7 +239,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  boolean WaitAll(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAll = null;
@@ -253,7 +253,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(WaitHandle[] waitHandles, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  boolean WaitAll(WaitHandle[] waitHandles, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAll = null;
@@ -337,7 +337,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(WaitHandle[] waitHandles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  int WaitAny(WaitHandle[] waitHandles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -377,7 +377,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  int WaitAny(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -417,7 +417,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(WaitHandle[] waitHandles, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  int WaitAny(WaitHandle[] waitHandles, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -457,7 +457,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  int WaitAny(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;
@@ -497,7 +497,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(WaitHandle[] waitHandles, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  int WaitAny(WaitHandle[] waitHandles, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitAny = null;

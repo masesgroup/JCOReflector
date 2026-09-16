@@ -170,7 +170,7 @@ public class SoapNmtoken extends NetObject  {
     
     // Methods section
     
-    public static SoapNmtoken Parse(java.lang.String value) throws Throwable {
+    public static  SoapNmtoken Parse(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

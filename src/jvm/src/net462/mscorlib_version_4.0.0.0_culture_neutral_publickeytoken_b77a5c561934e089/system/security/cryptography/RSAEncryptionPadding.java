@@ -170,7 +170,7 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
-    public static RSAEncryptionPadding CreateOaep(HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentException {
+    public static  RSAEncryptionPadding CreateOaep(HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateOaep = null;

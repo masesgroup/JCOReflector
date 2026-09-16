@@ -284,7 +284,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static boolean IsEvenInteger(BigInteger value) throws Throwable {
+    public static  boolean IsEvenInteger(BigInteger value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEvenInteger = null;
@@ -298,7 +298,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static boolean IsNegative(BigInteger value) throws Throwable {
+    public static  boolean IsNegative(BigInteger value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegative = null;
@@ -312,7 +312,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static boolean IsOddInteger(BigInteger value) throws Throwable {
+    public static  boolean IsOddInteger(BigInteger value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOddInteger = null;
@@ -326,7 +326,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static boolean IsPositive(BigInteger value) throws Throwable {
+    public static  boolean IsPositive(BigInteger value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositive = null;
@@ -340,7 +340,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static boolean IsPow2(BigInteger value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static  boolean IsPow2(BigInteger value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPow2 = null;
@@ -354,7 +354,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String value, NumberStyles style, IFormatProvider provider, JCORefOut<BigInteger> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.ArrayTypeMismatchException {
+    public static  boolean TryParse(java.lang.String value, NumberStyles style, IFormatProvider provider, JCORefOut<BigInteger> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -368,7 +368,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<BigInteger> result) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.ArrayTypeMismatchException {
+    public static  boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<BigInteger> result) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -382,7 +382,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String value, JCORefOut<BigInteger> result) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String value, JCORefOut<BigInteger> result) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -442,7 +442,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static double Log(BigInteger value, double baseValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  double Log(BigInteger value, double baseValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -482,7 +482,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static double Log(BigInteger value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  double Log(BigInteger value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -522,7 +522,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static double Log10(BigInteger value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  double Log10(BigInteger value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10 = null;
@@ -562,7 +562,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static int Compare(BigInteger left, BigInteger right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  int Compare(BigInteger left, BigInteger right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -842,7 +842,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Abs(BigInteger value) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException {
+    public static  BigInteger Abs(BigInteger value) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -857,7 +857,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Add(BigInteger left, BigInteger right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger Add(BigInteger left, BigInteger right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -872,7 +872,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Clamp(BigInteger value, BigInteger min, BigInteger max) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static  BigInteger Clamp(BigInteger value, BigInteger min, BigInteger max) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClamp = null;
@@ -887,7 +887,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger CopySign(BigInteger value, BigInteger sign) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException {
+    public static  BigInteger CopySign(BigInteger value, BigInteger sign) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCopySign = null;
@@ -902,7 +902,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Divide(BigInteger dividend, BigInteger divisor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger Divide(BigInteger dividend, BigInteger divisor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -917,7 +917,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger DivRem(BigInteger dividend, BigInteger divisor, JCORefOut<BigInteger> remainder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger DivRem(BigInteger dividend, BigInteger divisor, JCORefOut<BigInteger> remainder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivRem = null;
@@ -932,7 +932,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger GreatestCommonDivisor(BigInteger left, BigInteger right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  BigInteger GreatestCommonDivisor(BigInteger left, BigInteger right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreatestCommonDivisor = null;
@@ -947,7 +947,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger LeadingZeroCount(BigInteger value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  BigInteger LeadingZeroCount(BigInteger value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeadingZeroCount = null;
@@ -962,7 +962,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Log2(BigInteger value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  BigInteger Log2(BigInteger value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog2 = null;
@@ -977,7 +977,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Max(BigInteger left, BigInteger right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  BigInteger Max(BigInteger left, BigInteger right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -992,7 +992,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger MaxMagnitude(BigInteger x, BigInteger y) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException {
+    public static  BigInteger MaxMagnitude(BigInteger x, BigInteger y) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitude = null;
@@ -1007,7 +1007,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Min(BigInteger left, BigInteger right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  BigInteger Min(BigInteger left, BigInteger right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -1022,7 +1022,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger MinMagnitude(BigInteger x, BigInteger y) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException {
+    public static  BigInteger MinMagnitude(BigInteger x, BigInteger y) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitude = null;
@@ -1037,7 +1037,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger ModPow(BigInteger value, BigInteger exponent, BigInteger modulus) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger ModPow(BigInteger value, BigInteger exponent, BigInteger modulus) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModPow = null;
@@ -1052,7 +1052,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Multiply(BigInteger left, BigInteger right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger Multiply(BigInteger left, BigInteger right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -1067,7 +1067,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Negate(BigInteger value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException {
+    public static  BigInteger Negate(BigInteger value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -1082,7 +1082,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Parse(java.lang.String value, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException {
+    public static  BigInteger Parse(java.lang.String value, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1097,7 +1097,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Parse(java.lang.String value, NumberStyles style) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
+    public static  BigInteger Parse(java.lang.String value, NumberStyles style) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1112,7 +1112,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Parse(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.ArrayTypeMismatchException {
+    public static  BigInteger Parse(java.lang.String value, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1127,7 +1127,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Parse(java.lang.String value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException, system.InvalidOperationException {
+    public static  BigInteger Parse(java.lang.String value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -1142,7 +1142,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger PopCount(BigInteger value) throws Throwable {
+    public static  BigInteger PopCount(BigInteger value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPopCount = null;
@@ -1157,7 +1157,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Pow(BigInteger value, int exponent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger Pow(BigInteger value, int exponent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -1172,7 +1172,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Remainder(BigInteger dividend, BigInteger divisor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException {
+    public static  BigInteger Remainder(BigInteger dividend, BigInteger divisor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRemainder = null;
@@ -1187,7 +1187,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger RotateLeft(BigInteger value, int rotateAmount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger RotateLeft(BigInteger value, int rotateAmount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRotateLeft = null;
@@ -1202,7 +1202,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger RotateRight(BigInteger value, int rotateAmount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger RotateRight(BigInteger value, int rotateAmount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRotateRight = null;
@@ -1217,7 +1217,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Subtract(BigInteger left, BigInteger right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  BigInteger Subtract(BigInteger left, BigInteger right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -1232,7 +1232,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger TrailingZeroCount(BigInteger value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  BigInteger TrailingZeroCount(BigInteger value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTrailingZeroCount = null;

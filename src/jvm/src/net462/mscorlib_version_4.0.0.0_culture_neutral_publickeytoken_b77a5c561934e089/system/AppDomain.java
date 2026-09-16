@@ -1015,7 +1015,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static int GetCurrentThreadId() throws Throwable {
+    public static  int GetCurrentThreadId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrentThreadId = null;
@@ -1055,7 +1055,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static AppDomain CreateDomain(java.lang.String friendlyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  AppDomain CreateDomain(java.lang.String friendlyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDomain = null;
@@ -1070,7 +1070,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
+    public static  AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDomain = null;
@@ -1085,7 +1085,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, AppDomainSetup info) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException {
+    public static  AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, AppDomainSetup info) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDomain = null;
@@ -1100,7 +1100,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet, StrongName... fullTrustAssemblies) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.NotImplementedException {
+    public static  AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet, StrongName... fullTrustAssemblies) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDomain = null;
@@ -1115,7 +1115,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, java.lang.String appBasePath, java.lang.String appRelativeSearchPath, boolean shadowCopyFiles) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotImplementedException {
+    public static  AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, java.lang.String appBasePath, java.lang.String appRelativeSearchPath, boolean shadowCopyFiles) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDomain = null;
@@ -1130,7 +1130,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, java.lang.String appBasePath, java.lang.String appRelativeSearchPath, boolean shadowCopyFiles, AppDomainInitializer adInit, java.lang.String[] adInitArgs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotImplementedException {
+    public static  AppDomain CreateDomain(java.lang.String friendlyName, Evidence securityInfo, java.lang.String appBasePath, java.lang.String appRelativeSearchPath, boolean shadowCopyFiles, AppDomainInitializer adInit, java.lang.String[] adInitArgs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDomain = null;
@@ -1145,7 +1145,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static AppDomain CreateDomain(java.lang.String dupParam0, Evidence dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, boolean dupParam4, AppDomainInitializer dupParam5, JCORefOut dupParam6) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotImplementedException {
+    public static  AppDomain CreateDomain(java.lang.String dupParam0, Evidence dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, boolean dupParam4, AppDomainInitializer dupParam5, JCORefOut dupParam6) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDomain = null;
@@ -1946,7 +1946,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static void Unload(AppDomain domain) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.CannotUnloadAppDomainException {
+    public static  void Unload(AppDomain domain) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.CannotUnloadAppDomainException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -161,7 +161,7 @@ public class Stopwatch extends NetObject  {
     
     // Methods section
     
-    public static long GetTimestamp() throws Throwable {
+    public static  long GetTimestamp() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTimestamp = null;
@@ -201,7 +201,7 @@ public class Stopwatch extends NetObject  {
         }
     }
 
-    public static Stopwatch StartNew() throws Throwable {
+    public static  Stopwatch StartNew() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartNew = null;
@@ -216,7 +216,7 @@ public class Stopwatch extends NetObject  {
         }
     }
 
-    public static TimeSpan GetElapsedTime(long startingTimestamp, long endingTimestamp) throws Throwable {
+    public static  TimeSpan GetElapsedTime(long startingTimestamp, long endingTimestamp) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetElapsedTime = null;
@@ -231,7 +231,7 @@ public class Stopwatch extends NetObject  {
         }
     }
 
-    public static TimeSpan GetElapsedTime(long startingTimestamp) throws Throwable {
+    public static  TimeSpan GetElapsedTime(long startingTimestamp) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetElapsedTime = null;

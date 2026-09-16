@@ -155,7 +155,7 @@ public class BitmapSizeOptions extends NetObject  {
     
     // Methods section
     
-    public static BitmapSizeOptions FromEmptyOptions() throws Throwable {
+    public static  BitmapSizeOptions FromEmptyOptions() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromEmptyOptions = null;
@@ -170,7 +170,7 @@ public class BitmapSizeOptions extends NetObject  {
         }
     }
 
-    public static BitmapSizeOptions FromHeight(int pixelHeight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  BitmapSizeOptions FromHeight(int pixelHeight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromHeight = null;
@@ -185,7 +185,7 @@ public class BitmapSizeOptions extends NetObject  {
         }
     }
 
-    public static BitmapSizeOptions FromRotation(Rotation rotation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  BitmapSizeOptions FromRotation(Rotation rotation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromRotation = null;
@@ -200,7 +200,7 @@ public class BitmapSizeOptions extends NetObject  {
         }
     }
 
-    public static BitmapSizeOptions FromWidth(int pixelWidth) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  BitmapSizeOptions FromWidth(int pixelWidth) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromWidth = null;
@@ -215,7 +215,7 @@ public class BitmapSizeOptions extends NetObject  {
         }
     }
 
-    public static BitmapSizeOptions FromWidthAndHeight(int pixelWidth, int pixelHeight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  BitmapSizeOptions FromWidthAndHeight(int pixelWidth, int pixelHeight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromWidthAndHeight = null;

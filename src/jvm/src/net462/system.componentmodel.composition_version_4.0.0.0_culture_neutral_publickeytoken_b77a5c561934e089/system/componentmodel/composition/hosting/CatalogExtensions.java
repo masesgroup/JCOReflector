@@ -153,7 +153,7 @@ public class CatalogExtensions extends NetObject  {
     
     // Methods section
     
-    public static CompositionService CreateCompositionService(ComposablePartCatalog composablePartCatalog) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.componentmodel.composition.ChangeRejectedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ImportCardinalityMismatchException, system.threading.SynchronizationLockException {
+    public static  CompositionService CreateCompositionService(ComposablePartCatalog composablePartCatalog) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.componentmodel.composition.ChangeRejectedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ImportCardinalityMismatchException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCompositionService = null;

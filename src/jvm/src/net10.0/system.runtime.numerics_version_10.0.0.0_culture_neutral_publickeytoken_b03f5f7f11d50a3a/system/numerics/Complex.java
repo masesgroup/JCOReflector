@@ -182,7 +182,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsComplexNumber(Complex value) throws Throwable {
+    public static  boolean IsComplexNumber(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsComplexNumber = null;
@@ -196,7 +196,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsEvenInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsEvenInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEvenInteger = null;
@@ -210,7 +210,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsFinite(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsFinite(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsFinite = null;
@@ -224,7 +224,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsImaginaryNumber(Complex value) throws Throwable {
+    public static  boolean IsImaginaryNumber(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsImaginaryNumber = null;
@@ -238,7 +238,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsInfinity(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsInfinity(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInfinity = null;
@@ -252,7 +252,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsInteger = null;
@@ -266,7 +266,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsNaN(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsNaN(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNaN = null;
@@ -280,7 +280,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsNegative(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsNegative(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegative = null;
@@ -294,7 +294,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsNegativeInfinity(Complex value) throws Throwable {
+    public static  boolean IsNegativeInfinity(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNegativeInfinity = null;
@@ -308,7 +308,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsNormal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsNormal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNormal = null;
@@ -322,7 +322,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsOddInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsOddInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOddInteger = null;
@@ -336,7 +336,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsPositive(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  boolean IsPositive(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositive = null;
@@ -350,7 +350,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsPositiveInfinity(Complex value) throws Throwable {
+    public static  boolean IsPositiveInfinity(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsPositiveInfinity = null;
@@ -364,7 +364,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsRealNumber(Complex value) throws Throwable {
+    public static  boolean IsRealNumber(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsRealNumber = null;
@@ -378,7 +378,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean IsSubnormal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  boolean IsSubnormal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsSubnormal = null;
@@ -392,7 +392,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<Complex> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<Complex> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -406,7 +406,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<Complex> result) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public static  boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<Complex> result) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -420,7 +420,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static double Abs(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  double Abs(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -460,7 +460,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Acos(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Complex Acos(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcos = null;
@@ -475,7 +475,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Add(double left, Complex right) throws Throwable {
+    public static  Complex Add(double left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -490,7 +490,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Add(Complex left, double right) throws Throwable {
+    public static  Complex Add(Complex left, double right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -505,7 +505,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Add(Complex left, Complex right) throws Throwable {
+    public static  Complex Add(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -520,7 +520,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Asin(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Complex Asin(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsin = null;
@@ -535,7 +535,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Atan(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Atan(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan = null;
@@ -550,7 +550,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Conjugate(Complex value) throws Throwable {
+    public static  Complex Conjugate(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConjugate = null;
@@ -565,7 +565,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Cos(Complex value) throws Throwable {
+    public static  Complex Cos(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCos = null;
@@ -580,7 +580,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Cosh(Complex value) throws Throwable {
+    public static  Complex Cosh(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCosh = null;
@@ -595,7 +595,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Divide(double dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Divide(double dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -610,7 +610,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Divide(Complex dividend, double divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Divide(Complex dividend, double divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -625,7 +625,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Divide(Complex dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Divide(Complex dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -640,7 +640,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Exp(Complex value) throws Throwable {
+    public static  Complex Exp(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp = null;
@@ -655,7 +655,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex FromPolarCoordinates(double magnitude, double phase) throws Throwable {
+    public static  Complex FromPolarCoordinates(double magnitude, double phase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromPolarCoordinates = null;
@@ -670,7 +670,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Log(Complex value, double baseValue) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Log(Complex value, double baseValue) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -685,7 +685,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Log(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Log(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -700,7 +700,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Log10(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Log10(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10 = null;
@@ -715,7 +715,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex MaxMagnitude(Complex x, Complex y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex MaxMagnitude(Complex x, Complex y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMaxMagnitude = null;
@@ -730,7 +730,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex MinMagnitude(Complex x, Complex y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex MinMagnitude(Complex x, Complex y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinMagnitude = null;
@@ -745,7 +745,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Multiply(double left, Complex right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Multiply(double left, Complex right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -760,7 +760,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Multiply(Complex left, double right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Multiply(Complex left, double right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -775,7 +775,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Multiply(Complex left, Complex right) throws Throwable {
+    public static  Complex Multiply(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -790,7 +790,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Negate(Complex value) throws Throwable {
+    public static  Complex Negate(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -805,7 +805,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public static  Complex Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -820,7 +820,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public static  Complex Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -835,7 +835,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Pow(Complex value, double power) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Pow(Complex value, double power) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -850,7 +850,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Pow(Complex value, Complex power) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Pow(Complex value, Complex power) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -865,7 +865,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Reciprocal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Reciprocal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReciprocal = null;
@@ -880,7 +880,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Sin(Complex value) throws Throwable {
+    public static  Complex Sin(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSin = null;
@@ -895,7 +895,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Sinh(Complex value) throws Throwable {
+    public static  Complex Sinh(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinh = null;
@@ -910,7 +910,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Sqrt(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Sqrt(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSqrt = null;
@@ -925,7 +925,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Subtract(double left, Complex right) throws Throwable {
+    public static  Complex Subtract(double left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -940,7 +940,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Subtract(Complex left, double right) throws Throwable {
+    public static  Complex Subtract(Complex left, double right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -955,7 +955,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Subtract(Complex left, Complex right) throws Throwable {
+    public static  Complex Subtract(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -970,7 +970,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Tan(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static  Complex Tan(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTan = null;
@@ -985,7 +985,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Tanh(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Complex Tanh(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTanh = null;

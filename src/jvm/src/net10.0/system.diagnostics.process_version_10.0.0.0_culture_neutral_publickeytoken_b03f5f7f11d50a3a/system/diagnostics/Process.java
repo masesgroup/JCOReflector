@@ -276,7 +276,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process GetCurrentProcess() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
+    public static  Process GetCurrentProcess() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrentProcess = null;
@@ -291,7 +291,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process GetProcessById(int processId, java.lang.String machineName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.MissingMemberException, system.io.IOException {
+    public static  Process GetProcessById(int processId, java.lang.String machineName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.MissingMemberException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProcessById = null;
@@ -306,7 +306,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process GetProcessById(int processId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.MissingMemberException {
+    public static  Process GetProcessById(int processId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.MissingMemberException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProcessById = null;
@@ -321,7 +321,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process Start(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.FormatException, system.threading.ThreadStateException {
+    public static  Process Start(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.FormatException, system.threading.ThreadStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -336,7 +336,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process Start(java.lang.String fileName, java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
+    public static  Process Start(java.lang.String fileName, java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -351,7 +351,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process Start(java.lang.String fileName, java.lang.String arguments, java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
+    public static  Process Start(java.lang.String fileName, java.lang.String arguments, java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -366,7 +366,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process Start(java.lang.String fileName, java.lang.String arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
+    public static  Process Start(java.lang.String fileName, java.lang.String arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -381,7 +381,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process Start(java.lang.String fileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
+    public static  Process Start(java.lang.String fileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -396,7 +396,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process[] GetProcesses() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
+    public static  Process[] GetProcesses() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProcesses = null;
@@ -417,7 +417,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process[] GetProcesses(java.lang.String machineName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.io.IOException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
+    public static  Process[] GetProcesses(java.lang.String machineName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.io.IOException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProcesses = null;
@@ -438,7 +438,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process[] GetProcessesByName(java.lang.String processName, java.lang.String machineName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.io.IOException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
+    public static  Process[] GetProcessesByName(java.lang.String processName, java.lang.String machineName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.io.IOException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProcessesByName = null;
@@ -459,7 +459,7 @@ public class Process extends Component  {
         }
     }
 
-    public static Process[] GetProcessesByName(java.lang.String processName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
+    public static  Process[] GetProcessesByName(java.lang.String processName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetProcessesByName = null;
@@ -545,7 +545,7 @@ public class Process extends Component  {
         }
     }
 
-    public static void EnterDebugMode() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.InvalidOperationException, system.componentmodel.Win32Exception {
+    public static  void EnterDebugMode() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -575,7 +575,7 @@ public class Process extends Component  {
         }
     }
 
-    public static void LeaveDebugMode() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.InvalidOperationException, system.componentmodel.Win32Exception {
+    public static  void LeaveDebugMode() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.FormatException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -186,7 +186,7 @@ public class ExpressionTextBox extends UserControl  {
         }
     }
 
-    public static void RegisterExpressionActivityEditor(java.lang.String name, NetType expressionActivityEditorType, CreateExpressionFromStringCallback convertFromString) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  void RegisterExpressionActivityEditor(java.lang.String name, NetType expressionActivityEditorType, CreateExpressionFromStringCallback convertFromString) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

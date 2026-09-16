@@ -234,7 +234,7 @@ public class Rectangle extends ValueType  {
         }
     }
 
-    public static Rectangle Ceiling(RectangleF value) throws Throwable {
+    public static  Rectangle Ceiling(RectangleF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCeiling = null;
@@ -249,7 +249,7 @@ public class Rectangle extends ValueType  {
         }
     }
 
-    public static Rectangle FromLTRB(int left, int top, int right, int bottom) throws Throwable {
+    public static  Rectangle FromLTRB(int left, int top, int right, int bottom) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromLTRB = null;
@@ -264,7 +264,7 @@ public class Rectangle extends ValueType  {
         }
     }
 
-    public static Rectangle Inflate(Rectangle rect, int x, int y) throws Throwable {
+    public static  Rectangle Inflate(Rectangle rect, int x, int y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInflate = null;
@@ -279,7 +279,7 @@ public class Rectangle extends ValueType  {
         }
     }
 
-    public static Rectangle Intersect(Rectangle a, Rectangle b) throws Throwable {
+    public static  Rectangle Intersect(Rectangle a, Rectangle b) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIntersect = null;
@@ -294,7 +294,7 @@ public class Rectangle extends ValueType  {
         }
     }
 
-    public static Rectangle Round(RectangleF value) throws Throwable {
+    public static  Rectangle Round(RectangleF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -309,7 +309,7 @@ public class Rectangle extends ValueType  {
         }
     }
 
-    public static Rectangle Truncate(RectangleF value) throws Throwable {
+    public static  Rectangle Truncate(RectangleF value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;
@@ -324,7 +324,7 @@ public class Rectangle extends ValueType  {
         }
     }
 
-    public static Rectangle Union(Rectangle a, Rectangle b) throws Throwable {
+    public static  Rectangle Union(Rectangle a, Rectangle b) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnion = null;

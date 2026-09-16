@@ -214,7 +214,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public byte[] DecryptEncryptedKey(EncryptedKey encryptedKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.xml.xpath.XPathException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException {
+    public byte[] DecryptEncryptedKey(EncryptedKey encryptedKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.xml.xpath.XPathException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.diagnostics.UnreachableException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecryptEncryptedKey = null;
@@ -237,7 +237,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] DecryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  byte[] DecryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecryptKey = null;
@@ -260,7 +260,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] DecryptKey(JCORefOut dupParam0, RSA dupParam1, boolean dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  byte[] DecryptKey(JCORefOut dupParam0, RSA dupParam1, boolean dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecryptKey = null;
@@ -283,7 +283,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] DecryptKey(byte[] keyData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
+    public static  byte[] DecryptKey(byte[] keyData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecryptKey = null;
@@ -306,7 +306,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] DecryptKey(JCORefOut dupParam0, SymmetricAlgorithm dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
+    public static  byte[] DecryptKey(JCORefOut dupParam0, SymmetricAlgorithm dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecryptKey = null;
@@ -398,7 +398,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] EncryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  byte[] EncryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncryptKey = null;
@@ -421,7 +421,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] EncryptKey(JCORefOut dupParam0, RSA dupParam1, boolean dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  byte[] EncryptKey(JCORefOut dupParam0, RSA dupParam1, boolean dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncryptKey = null;
@@ -444,7 +444,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] EncryptKey(byte[] keyData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
+    public static  byte[] EncryptKey(byte[] keyData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncryptKey = null;
@@ -467,7 +467,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static byte[] EncryptKey(JCORefOut dupParam0, SymmetricAlgorithm dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
+    public static  byte[] EncryptKey(JCORefOut dupParam0, SymmetricAlgorithm dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEncryptKey = null;
@@ -513,7 +513,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public SymmetricAlgorithm GetDecryptionKey(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException {
+    public SymmetricAlgorithm GetDecryptionKey(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.diagnostics.UnreachableException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetDecryptionKey = null;
@@ -593,7 +593,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public void DecryptDocument() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
+    public void DecryptDocument() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.diagnostics.UnreachableException, system.TypeLoadException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -623,7 +623,7 @@ public class EncryptedXml extends NetObject  {
         }
     }
 
-    public static void ReplaceElement(XmlElement inputElement, EncryptedData encryptedData, boolean content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
+    public static  void ReplaceElement(XmlElement inputElement, EncryptedData encryptedData, boolean content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

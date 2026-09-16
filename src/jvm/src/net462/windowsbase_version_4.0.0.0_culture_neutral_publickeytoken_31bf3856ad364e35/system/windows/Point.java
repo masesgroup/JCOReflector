@@ -185,7 +185,7 @@ public class Point extends ValueType implements system.IFormattable {
         }
     }
 
-    public static boolean Equals(Point point1, Point point2) throws Throwable {
+    public static  boolean Equals(Point point1, Point point2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -213,7 +213,7 @@ public class Point extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point Add(Point point, Vector vector) throws Throwable {
+    public static  Point Add(Point point, Vector vector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -228,7 +228,7 @@ public class Point extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point Multiply(Point point, Matrix matrix) throws Throwable {
+    public static  Point Multiply(Point point, Matrix matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -243,7 +243,7 @@ public class Point extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
+    public static  Point Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -258,7 +258,7 @@ public class Point extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point Subtract(Point point, Vector vector) throws Throwable {
+    public static  Point Subtract(Point point, Vector vector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -273,7 +273,7 @@ public class Point extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector Subtract(Point point1, Point point2) throws Throwable {
+    public static  Vector Subtract(Point point1, Point point2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

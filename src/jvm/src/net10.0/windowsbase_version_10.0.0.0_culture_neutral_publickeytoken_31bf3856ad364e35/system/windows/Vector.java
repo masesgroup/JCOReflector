@@ -171,7 +171,7 @@ public class Vector extends ValueType implements system.IFormattable {
     
     // Methods section
     
-    public static boolean Equals(Vector vector1, Vector vector2) throws Throwable {
+    public static  boolean Equals(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -199,7 +199,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static double AngleBetween(Vector vector1, Vector vector2) throws Throwable {
+    public static  double AngleBetween(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAngleBetween = null;
@@ -239,7 +239,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static double CrossProduct(Vector vector1, Vector vector2) throws Throwable {
+    public static  double CrossProduct(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCrossProduct = null;
@@ -279,7 +279,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static double Determinant(Vector vector1, Vector vector2) throws Throwable {
+    public static  double Determinant(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeterminant = null;
@@ -319,7 +319,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static double Multiply(Vector vector1, Vector vector2) throws Throwable {
+    public static  double Multiply(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -373,7 +373,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Point Add(Vector vector, Point point) throws Throwable {
+    public static  Point Add(Vector vector, Point point) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -388,7 +388,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector Add(Vector vector1, Vector vector2) throws Throwable {
+    public static  Vector Add(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -403,7 +403,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector Divide(Vector vector, double scalar) throws Throwable {
+    public static  Vector Divide(Vector vector, double scalar) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -418,7 +418,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector Multiply(double scalar, Vector vector) throws Throwable {
+    public static  Vector Multiply(double scalar, Vector vector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -433,7 +433,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector Multiply(Vector vector, double scalar) throws Throwable {
+    public static  Vector Multiply(Vector vector, double scalar) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -448,7 +448,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector Multiply(Vector vector, Matrix matrix) throws Throwable {
+    public static  Vector Multiply(Vector vector, Matrix matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -463,7 +463,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector Parse(java.lang.String source) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
+    public static  Vector Parse(java.lang.String source) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -478,7 +478,7 @@ public class Vector extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Vector Subtract(Vector vector1, Vector vector2) throws Throwable {
+    public static  Vector Subtract(Vector vector1, Vector vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

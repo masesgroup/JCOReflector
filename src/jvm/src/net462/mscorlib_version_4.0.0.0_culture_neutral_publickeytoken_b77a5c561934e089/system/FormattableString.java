@@ -192,7 +192,7 @@ public class FormattableString extends NetObject implements system.IFormattable 
         }
     }
 
-    public static java.lang.String Invariant(FormattableString formattable) throws Throwable, system.ArgumentNullException {
+    public static  java.lang.String Invariant(FormattableString formattable) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvariant = null;

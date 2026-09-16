@@ -164,7 +164,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
     
     // Methods section
     
-    public static boolean IsValidLanguageIndependentIdentifier(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  boolean IsValidLanguageIndependentIdentifier(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsValidLanguageIndependentIdentifier = null;
@@ -188,7 +188,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
         }
     }
 
-    public static void ValidateIdentifiers(CodeObject e) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
+    public static  void ValidateIdentifiers(CodeObject e) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

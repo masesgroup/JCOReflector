@@ -600,7 +600,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static int GetCurrentThreadId() throws Throwable {
+    public static  int GetCurrentThreadId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCurrentThreadId = null;
@@ -640,7 +640,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static AppDomain CreateDomain(java.lang.String friendlyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  AppDomain CreateDomain(java.lang.String friendlyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDomain = null;
@@ -1096,7 +1096,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public static void Unload(AppDomain domain) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.CannotUnloadAppDomainException {
+    public static  void Unload(AppDomain domain) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.CannotUnloadAppDomainException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

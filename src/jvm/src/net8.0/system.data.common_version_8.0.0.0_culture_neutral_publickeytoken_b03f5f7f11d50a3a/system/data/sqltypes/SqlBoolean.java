@@ -285,7 +285,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean And(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean And(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAnd = null;
@@ -300,7 +300,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean Equals(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean Equals(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -315,7 +315,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean GreaterThan(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -330,7 +330,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean GreaterThanOrEquals(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean GreaterThanOrEquals(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEquals = null;
@@ -345,7 +345,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean LessThan(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean LessThan(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -360,7 +360,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean LessThanOrEquals(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean LessThanOrEquals(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEquals = null;
@@ -375,7 +375,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean NotEquals(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean NotEquals(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -390,7 +390,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean OnesComplement(SqlBoolean x) throws Throwable {
+    public static  SqlBoolean OnesComplement(SqlBoolean x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnesComplement = null;
@@ -405,7 +405,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean Or(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean Or(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOr = null;
@@ -420,7 +420,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static  SqlBoolean Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -435,7 +435,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static SqlBoolean Xor(SqlBoolean x, SqlBoolean y) throws Throwable {
+    public static  SqlBoolean Xor(SqlBoolean x, SqlBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXor = null;
@@ -585,7 +585,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

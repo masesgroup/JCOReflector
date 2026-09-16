@@ -151,7 +151,7 @@ public class RegexRunner extends NetObject  {
     
     // Methods section
     
-    public static boolean CharInClass(char ch, java.lang.String charClass) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static  boolean CharInClass(char ch, java.lang.String charClass) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCharInClass = null;

@@ -181,7 +181,7 @@ public class AdornerLayer extends FrameworkElement  {
         }
     }
 
-    public static AdornerLayer GetAdornerLayer(Visual visual) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  AdornerLayer GetAdornerLayer(Visual visual) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAdornerLayer = null;

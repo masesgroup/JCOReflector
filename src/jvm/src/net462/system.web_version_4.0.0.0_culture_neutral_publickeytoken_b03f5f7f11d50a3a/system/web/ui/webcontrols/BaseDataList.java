@@ -158,7 +158,7 @@ public class BaseDataList extends WebControl  {
     
     // Methods section
     
-    public static boolean IsBindableType(NetType type) throws Throwable {
+    public static  boolean IsBindableType(NetType type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBindableType = null;

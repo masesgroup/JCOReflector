@@ -213,7 +213,7 @@ public class Site extends EvidenceBase  {
         }
     }
 
-    public static Site CreateFromUrl(java.lang.String url) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException, system.InvalidOperationException {
+    public static  Site CreateFromUrl(java.lang.String url) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromUrl = null;

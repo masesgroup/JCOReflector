@@ -154,7 +154,7 @@ public class FileVersionInfo extends NetObject  {
     
     // Methods section
     
-    public static FileVersionInfo GetVersionInfo(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.AccessViolationException {
+    public static  FileVersionInfo GetVersionInfo(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetVersionInfo = null;

@@ -154,7 +154,7 @@ public class GC extends NetObject  {
     
     // Methods section
     
-    public static boolean TryStartNoGCRegion(long totalSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static  boolean TryStartNoGCRegion(long totalSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryStartNoGCRegion = null;
@@ -168,7 +168,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static boolean TryStartNoGCRegion(long totalSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static  boolean TryStartNoGCRegion(long totalSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryStartNoGCRegion = null;
@@ -182,7 +182,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static boolean TryStartNoGCRegion(long totalSize, long lohSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static  boolean TryStartNoGCRegion(long totalSize, long lohSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryStartNoGCRegion = null;
@@ -196,7 +196,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static boolean TryStartNoGCRegion(long totalSize, long lohSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static  boolean TryStartNoGCRegion(long totalSize, long lohSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryStartNoGCRegion = null;
@@ -210,7 +210,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static int CollectionCount(int generation) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  int CollectionCount(int generation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCollectionCount = null;
@@ -250,7 +250,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static int GetGeneration(NetObject obj) throws Throwable {
+    public static  int GetGeneration(NetObject obj) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetGeneration = null;
@@ -290,7 +290,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static int GetGeneration(WeakReference wo) throws Throwable {
+    public static  int GetGeneration(WeakReference wo) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetGeneration = null;
@@ -330,7 +330,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static long GetAllocatedBytesForCurrentThread() throws Throwable {
+    public static  long GetAllocatedBytesForCurrentThread() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAllocatedBytesForCurrentThread = null;
@@ -370,7 +370,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static long GetTotalMemory(boolean forceFullCollection) throws Throwable {
+    public static  long GetTotalMemory(boolean forceFullCollection) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTotalMemory = null;
@@ -410,7 +410,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static GCNotificationStatus WaitForFullGCApproach() throws Throwable {
+    public static  GCNotificationStatus WaitForFullGCApproach() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitForFullGCApproach = null;
@@ -425,7 +425,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static GCNotificationStatus WaitForFullGCApproach(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  GCNotificationStatus WaitForFullGCApproach(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitForFullGCApproach = null;
@@ -440,7 +440,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static GCNotificationStatus WaitForFullGCComplete() throws Throwable {
+    public static  GCNotificationStatus WaitForFullGCComplete() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitForFullGCComplete = null;
@@ -455,7 +455,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static GCNotificationStatus WaitForFullGCComplete(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  GCNotificationStatus WaitForFullGCComplete(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWaitForFullGCComplete = null;
@@ -470,7 +470,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void AddMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  void AddMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -480,7 +480,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void CancelFullGCNotification() throws Throwable, system.InvalidOperationException {
+    public static  void CancelFullGCNotification() throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -490,7 +490,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void Collect() throws Throwable {
+    public static  void Collect() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -500,7 +500,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void Collect(int generation) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  void Collect(int generation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -510,7 +510,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void Collect(int generation, GCCollectionMode mode) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  void Collect(int generation, GCCollectionMode mode) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -520,7 +520,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void Collect(int generation, GCCollectionMode mode, boolean blocking) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  void Collect(int generation, GCCollectionMode mode, boolean blocking) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -530,7 +530,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void Collect(int generation, GCCollectionMode mode, boolean blocking, boolean compacting) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  void Collect(int generation, GCCollectionMode mode, boolean blocking, boolean compacting) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -540,7 +540,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void EndNoGCRegion() throws Throwable, system.InvalidOperationException {
+    public static  void EndNoGCRegion() throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -550,7 +550,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void KeepAlive(NetObject obj) throws Throwable {
+    public static  void KeepAlive(NetObject obj) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -560,7 +560,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void RegisterForFullGCNotification(int maxGenerationThreshold, int largeObjectHeapThreshold) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static  void RegisterForFullGCNotification(int maxGenerationThreshold, int largeObjectHeapThreshold) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -570,7 +570,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void RemoveMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  void RemoveMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -580,7 +580,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void ReRegisterForFinalize(NetObject obj) throws Throwable, system.ArgumentNullException {
+    public static  void ReRegisterForFinalize(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -590,7 +590,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void SuppressFinalize(NetObject obj) throws Throwable, system.ArgumentNullException {
+    public static  void SuppressFinalize(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -600,7 +600,7 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void WaitForPendingFinalizers() throws Throwable {
+    public static  void WaitForPendingFinalizers() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -155,7 +155,7 @@ public class MarkupWriter extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static MarkupObject GetMarkupObjectFor(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static  MarkupObject GetMarkupObjectFor(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMarkupObjectFor = null;
@@ -170,7 +170,7 @@ public class MarkupWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static MarkupObject GetMarkupObjectFor(NetObject instance, XamlDesignerSerializationManager manager) throws Throwable, system.ArgumentNullException {
+    public static  MarkupObject GetMarkupObjectFor(NetObject instance, XamlDesignerSerializationManager manager) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMarkupObjectFor = null;

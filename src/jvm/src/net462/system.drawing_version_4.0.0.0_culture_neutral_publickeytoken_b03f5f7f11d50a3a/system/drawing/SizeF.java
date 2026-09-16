@@ -218,7 +218,7 @@ public class SizeF extends ValueType  {
         }
     }
 
-    public static SizeF Add(SizeF sz1, SizeF sz2) throws Throwable {
+    public static  SizeF Add(SizeF sz1, SizeF sz2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -233,7 +233,7 @@ public class SizeF extends ValueType  {
         }
     }
 
-    public static SizeF Subtract(SizeF sz1, SizeF sz2) throws Throwable {
+    public static  SizeF Subtract(SizeF sz1, SizeF sz2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

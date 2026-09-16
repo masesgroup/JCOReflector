@@ -194,7 +194,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(Stream stream, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException {
+    public static  Package Open(Stream stream, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -209,7 +209,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(Stream stream, FileMode packageMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException {
+    public static  Package Open(Stream stream, FileMode packageMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -224,7 +224,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException {
+    public static  Package Open(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -239,7 +239,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(java.lang.String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException, system.io.FileFormatException {
+    public static  Package Open(java.lang.String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException, system.io.FileFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -254,7 +254,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(java.lang.String path, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException, system.io.FileFormatException {
+    public static  Package Open(java.lang.String path, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException, system.io.FileFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -269,7 +269,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(java.lang.String path, FileMode packageMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException, system.io.FileFormatException {
+    public static  Package Open(java.lang.String path, FileMode packageMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException, system.io.FileFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -284,7 +284,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException, system.io.FileFormatException {
+    public static  Package Open(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.collections.generic.KeyNotFoundException, system.FormatException, system.xml.XmlException, system.io.FileFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;

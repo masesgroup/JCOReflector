@@ -152,7 +152,7 @@ public class ILOpCodeExtensions extends NetObject  {
     
     // Methods section
     
-    public static boolean IsBranch(ILOpCode opCode) throws Throwable {
+    public static  boolean IsBranch(ILOpCode opCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBranch = null;
@@ -166,7 +166,7 @@ public class ILOpCodeExtensions extends NetObject  {
         }
     }
 
-    public static int GetBranchOperandSize(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  int GetBranchOperandSize(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBranchOperandSize = null;
@@ -206,7 +206,7 @@ public class ILOpCodeExtensions extends NetObject  {
         }
     }
 
-    public static ILOpCode GetLongBranch(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  ILOpCode GetLongBranch(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLongBranch = null;
@@ -221,7 +221,7 @@ public class ILOpCodeExtensions extends NetObject  {
         }
     }
 
-    public static ILOpCode GetShortBranch(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  ILOpCode GetShortBranch(ILOpCode opCode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetShortBranch = null;

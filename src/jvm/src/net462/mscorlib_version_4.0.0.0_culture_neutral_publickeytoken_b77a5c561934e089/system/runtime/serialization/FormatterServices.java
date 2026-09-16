@@ -157,7 +157,7 @@ public class FormatterServices extends NetObject  {
     
     // Methods section
     
-    public static NetObject GetSafeUninitializedObject(NetType type) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException {
+    public static  NetObject GetSafeUninitializedObject(NetType type) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSafeUninitializedObject = null;
@@ -172,7 +172,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException {
+    public static  NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUninitializedObject = null;
@@ -187,7 +187,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static NetObject PopulateObjectMembers(NetObject obj, MemberInfo[] members, NetObject[] data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.reflection.TargetException, system.runtime.serialization.SerializationException {
+    public static  NetObject PopulateObjectMembers(NetObject obj, MemberInfo[] members, NetObject[] data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.reflection.TargetException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPopulateObjectMembers = null;
@@ -202,7 +202,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static NetObject[] GetObjectData(NetObject obj, MemberInfo[] members) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.reflection.TargetException, system.runtime.serialization.SerializationException {
+    public static  NetObject[] GetObjectData(NetObject obj, MemberInfo[] members) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.reflection.TargetException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetObjectData = null;
@@ -223,7 +223,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static MemberInfo[] GetSerializableMembers(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException {
+    public static  MemberInfo[] GetSerializableMembers(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializableMembers = null;
@@ -244,7 +244,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static MemberInfo[] GetSerializableMembers(NetType type, StreamingContext context) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.NotImplementedException {
+    public static  MemberInfo[] GetSerializableMembers(NetType type, StreamingContext context) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSerializableMembers = null;
@@ -265,7 +265,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static ISerializationSurrogate GetSurrogateForCyclicalReference(ISerializationSurrogate innerSurrogate) throws Throwable, system.ArgumentNullException {
+    public static  ISerializationSurrogate GetSurrogateForCyclicalReference(ISerializationSurrogate innerSurrogate) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSurrogateForCyclicalReference = null;
@@ -280,7 +280,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static NetType GetTypeFromAssembly(Assembly assem, java.lang.String name) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static  NetType GetTypeFromAssembly(Assembly assem, java.lang.String name) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeFromAssembly = null;
@@ -295,7 +295,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static void CheckTypeSecurity(NetType t, TypeFilterLevel securityLevel) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException {
+    public static  void CheckTypeSecurity(NetType t, TypeFilterLevel securityLevel) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

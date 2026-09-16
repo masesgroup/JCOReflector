@@ -180,7 +180,7 @@ public class Receive extends Activity  {
         }
     }
 
-    public static Receive FromOperationDescription(OperationDescription operation) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.OverflowException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  Receive FromOperationDescription(OperationDescription operation) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.OverflowException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromOperationDescription = null;

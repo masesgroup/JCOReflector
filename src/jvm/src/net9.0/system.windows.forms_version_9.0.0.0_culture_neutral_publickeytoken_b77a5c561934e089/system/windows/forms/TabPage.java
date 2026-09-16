@@ -178,7 +178,7 @@ public class TabPage extends Panel  {
     
     // Methods section
     
-    public static TabPage GetTabPageOfComponent(NetObject comp) throws Throwable {
+    public static  TabPage GetTabPageOfComponent(NetObject comp) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTabPageOfComponent = null;

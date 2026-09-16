@@ -165,7 +165,7 @@ public class PageTheme extends NetObject  {
         }
     }
 
-    public static NetObject CreateSkinKey(NetType controlType, java.lang.String skinID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public static  NetObject CreateSkinKey(NetType controlType, java.lang.String skinID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateSkinKey = null;

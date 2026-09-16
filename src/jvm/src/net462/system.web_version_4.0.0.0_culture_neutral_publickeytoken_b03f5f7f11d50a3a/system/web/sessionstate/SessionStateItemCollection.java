@@ -163,7 +163,7 @@ public class SessionStateItemCollection extends NameObjectCollectionBase  {
     
     // Methods section
     
-    public static SessionStateItemCollection Deserialize(BinaryReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.web.HttpException {
+    public static  SessionStateItemCollection Deserialize(BinaryReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeserialize = null;

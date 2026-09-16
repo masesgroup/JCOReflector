@@ -157,7 +157,7 @@ public class DbLambda extends NetObject  {
     
     // Methods section
     
-    public static DbLambda Create(DbExpression body, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  DbLambda Create(DbExpression body, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

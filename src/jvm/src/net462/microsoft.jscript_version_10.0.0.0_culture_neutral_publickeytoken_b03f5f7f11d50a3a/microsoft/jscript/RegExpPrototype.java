@@ -156,7 +156,7 @@ public class RegExpPrototype extends JSObject  {
     
     // Methods section
     
-    public static boolean test(NetObject thisob, NetObject input) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArithmeticException {
+    public static  boolean test(NetObject thisob, NetObject input) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttest = null;
@@ -170,7 +170,7 @@ public class RegExpPrototype extends JSObject  {
         }
     }
 
-    public static RegExpObject compile(NetObject thisob, NetObject source, NetObject flags) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.RankException, system.security.SecurityException {
+    public static  RegExpObject compile(NetObject thisob, NetObject source, NetObject flags) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.RankException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectcompile = null;
@@ -185,7 +185,7 @@ public class RegExpPrototype extends JSObject  {
         }
     }
 
-    public static NetObject exec(NetObject thisob, NetObject input) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArithmeticException {
+    public static  NetObject exec(NetObject thisob, NetObject input) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectexec = null;
@@ -200,7 +200,7 @@ public class RegExpPrototype extends JSObject  {
         }
     }
 
-    public static java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoString = null;

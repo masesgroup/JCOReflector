@@ -169,7 +169,7 @@ public class GridView extends ViewBase implements system.windows.markup.IAddChil
     
     // Methods section
     
-    public static boolean ShouldSerializeColumnCollection(DependencyObject obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  boolean ShouldSerializeColumnCollection(DependencyObject obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShouldSerializeColumnCollection = null;
@@ -183,7 +183,7 @@ public class GridView extends ViewBase implements system.windows.markup.IAddChil
         }
     }
 
-    public static GridViewColumnCollection GetColumnCollection(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  GridViewColumnCollection GetColumnCollection(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetColumnCollection = null;
@@ -198,7 +198,7 @@ public class GridView extends ViewBase implements system.windows.markup.IAddChil
         }
     }
 
-    public static void SetColumnCollection(DependencyObject element, GridViewColumnCollection collection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static  void SetColumnCollection(DependencyObject element, GridViewColumnCollection collection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -159,7 +159,7 @@ public class BinaryPrimitives extends NetObject  {
     
     // Methods section
     
-    public static byte ReverseEndianness(byte value) throws Throwable {
+    public static  byte ReverseEndianness(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -199,7 +199,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static short ReverseEndianness(short value) throws Throwable {
+    public static  short ReverseEndianness(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -239,7 +239,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static int ReverseEndianness(int value) throws Throwable {
+    public static  int ReverseEndianness(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -279,7 +279,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static long ReverseEndianness(long value) throws Throwable {
+    public static  long ReverseEndianness(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -319,7 +319,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static SByte ReverseEndianness(SByte value) throws Throwable {
+    public static  SByte ReverseEndianness(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -334,7 +334,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static Int128 ReverseEndianness(Int128 value) throws Throwable {
+    public static  Int128 ReverseEndianness(Int128 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -349,7 +349,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static UInt128 ReverseEndianness(UInt128 value) throws Throwable {
+    public static  UInt128 ReverseEndianness(UInt128 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -364,7 +364,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static UInt16 ReverseEndianness(UInt16 value) throws Throwable {
+    public static  UInt16 ReverseEndianness(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -379,7 +379,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static UInt32 ReverseEndianness(UInt32 value) throws Throwable {
+    public static  UInt32 ReverseEndianness(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;
@@ -394,7 +394,7 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
-    public static UInt64 ReverseEndianness(UInt64 value) throws Throwable {
+    public static  UInt64 ReverseEndianness(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReverseEndianness = null;

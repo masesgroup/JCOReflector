@@ -466,7 +466,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean Equals(SqlMoney x, SqlMoney y) throws Throwable {
+    public static  SqlBoolean Equals(SqlMoney x, SqlMoney y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -481,7 +481,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlMoney x, SqlMoney y) throws Throwable {
+    public static  SqlBoolean GreaterThan(SqlMoney x, SqlMoney y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -496,7 +496,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlMoney x, SqlMoney y) throws Throwable {
+    public static  SqlBoolean GreaterThanOrEqual(SqlMoney x, SqlMoney y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -511,7 +511,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean LessThan(SqlMoney x, SqlMoney y) throws Throwable {
+    public static  SqlBoolean LessThan(SqlMoney x, SqlMoney y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -526,7 +526,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlMoney x, SqlMoney y) throws Throwable {
+    public static  SqlBoolean LessThanOrEqual(SqlMoney x, SqlMoney y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -541,7 +541,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlBoolean NotEquals(SqlMoney x, SqlMoney y) throws Throwable {
+    public static  SqlBoolean NotEquals(SqlMoney x, SqlMoney y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -661,7 +661,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlMoney Add(SqlMoney x, SqlMoney y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public static  SqlMoney Add(SqlMoney x, SqlMoney y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -676,7 +676,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlMoney Divide(SqlMoney x, SqlMoney y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.DivideByZeroException, system.OverflowException, system.NotSupportedException, system.data.sqltypes.SqlTruncateException {
+    public static  SqlMoney Divide(SqlMoney x, SqlMoney y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.DivideByZeroException, system.OverflowException, system.NotSupportedException, system.data.sqltypes.SqlTruncateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -691,7 +691,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlMoney FromTdsValue(long value) throws Throwable {
+    public static  SqlMoney FromTdsValue(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromTdsValue = null;
@@ -706,7 +706,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlMoney Multiply(SqlMoney x, SqlMoney y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException {
+    public static  SqlMoney Multiply(SqlMoney x, SqlMoney y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -721,7 +721,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlMoney Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.FormatException {
+    public static  SqlMoney Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -736,7 +736,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static SqlMoney Subtract(SqlMoney x, SqlMoney y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public static  SqlMoney Subtract(SqlMoney x, SqlMoney y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -796,7 +796,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

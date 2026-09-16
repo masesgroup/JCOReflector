@@ -178,7 +178,7 @@ public class Equality extends BinaryOp  {
         }
     }
 
-    public static boolean JScriptEquals(NetObject v1, NetObject v2) throws Throwable, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
+    public static  boolean JScriptEquals(NetObject v1, NetObject v2) throws Throwable, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptEquals = null;

@@ -701,7 +701,7 @@ public class RSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public static RSA CreateNewRSA() throws Throwable {
+    public static  RSA CreateNewRSA() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -716,7 +716,7 @@ public class RSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public static RSA Create(int keySizeInBits) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
+    public static  RSA Create(int keySizeInBits) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -731,7 +731,7 @@ public class RSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public static RSA Create(RSAParameters parameters) throws Throwable, system.ArgumentNullException {
+    public static  RSA Create(RSAParameters parameters) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -746,7 +746,7 @@ public class RSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public static RSA CreateNewRSA(java.lang.String algName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
+    public static  RSA CreateNewRSA(java.lang.String algName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

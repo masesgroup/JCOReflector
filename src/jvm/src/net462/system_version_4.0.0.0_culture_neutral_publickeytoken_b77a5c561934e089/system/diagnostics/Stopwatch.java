@@ -161,7 +161,7 @@ public class Stopwatch extends NetObject  {
     
     // Methods section
     
-    public static long GetTimestamp() throws Throwable, system.ArgumentOutOfRangeException {
+    public static  long GetTimestamp() throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTimestamp = null;
@@ -201,7 +201,7 @@ public class Stopwatch extends NetObject  {
         }
     }
 
-    public static Stopwatch StartNew() throws Throwable, system.ArgumentOutOfRangeException {
+    public static  Stopwatch StartNew() throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartNew = null;

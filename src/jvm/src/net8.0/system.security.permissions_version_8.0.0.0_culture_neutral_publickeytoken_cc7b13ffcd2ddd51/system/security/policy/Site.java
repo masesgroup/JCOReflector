@@ -198,7 +198,7 @@ public class Site extends EvidenceBase  {
         }
     }
 
-    public static Site CreateFromUrl(java.lang.String url) throws Throwable {
+    public static  Site CreateFromUrl(java.lang.String url) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromUrl = null;

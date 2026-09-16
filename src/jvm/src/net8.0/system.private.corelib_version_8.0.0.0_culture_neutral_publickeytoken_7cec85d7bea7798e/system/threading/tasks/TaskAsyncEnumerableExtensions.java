@@ -154,7 +154,7 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
     
     // Methods section
     
-    public static ConfiguredAsyncDisposable ConfigureAwait(IAsyncDisposable source, boolean continueOnCapturedContext) throws Throwable {
+    public static  ConfiguredAsyncDisposable ConfigureAwait(IAsyncDisposable source, boolean continueOnCapturedContext) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConfigureAwait = null;

@@ -176,7 +176,7 @@ public class XPathExpression extends NetObject  {
         }
     }
 
-    public static XPathExpression Compile(java.lang.String xpath, IXmlNamespaceResolver nsResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException {
+    public static  XPathExpression Compile(java.lang.String xpath, IXmlNamespaceResolver nsResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompile = null;
@@ -191,7 +191,7 @@ public class XPathExpression extends NetObject  {
         }
     }
 
-    public static XPathExpression Compile(java.lang.String xpath) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
+    public static  XPathExpression Compile(java.lang.String xpath) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompile = null;

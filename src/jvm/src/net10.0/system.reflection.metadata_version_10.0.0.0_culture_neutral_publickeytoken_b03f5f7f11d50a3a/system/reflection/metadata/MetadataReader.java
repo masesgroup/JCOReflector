@@ -289,7 +289,7 @@ public class MetadataReader extends NetObject  {
         }
     }
 
-    public static AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.BadImageFormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.globalization.CultureNotFoundException {
+    public static  AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.BadImageFormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAssemblyName = null;

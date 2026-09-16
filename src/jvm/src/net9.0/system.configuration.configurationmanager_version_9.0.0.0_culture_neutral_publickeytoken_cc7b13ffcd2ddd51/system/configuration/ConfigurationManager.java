@@ -157,7 +157,7 @@ public class ConfigurationManager extends NetObject  {
     
     // Methods section
     
-    public static Configuration OpenExeConfiguration(ConfigurationUserLevel userLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+    public static  Configuration OpenExeConfiguration(ConfigurationUserLevel userLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenExeConfiguration = null;
@@ -172,7 +172,7 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public static Configuration OpenExeConfiguration(java.lang.String exePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+    public static  Configuration OpenExeConfiguration(java.lang.String exePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenExeConfiguration = null;
@@ -187,7 +187,7 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public static Configuration OpenMachineConfiguration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+    public static  Configuration OpenMachineConfiguration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenMachineConfiguration = null;
@@ -202,7 +202,7 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public static Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel, boolean preLoad) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+    public static  Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel, boolean preLoad) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenMappedExeConfiguration = null;
@@ -217,7 +217,7 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public static Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+    public static  Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenMappedExeConfiguration = null;
@@ -232,7 +232,7 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public static Configuration OpenMappedMachineConfiguration(ConfigurationFileMap fileMap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+    public static  Configuration OpenMappedMachineConfiguration(ConfigurationFileMap fileMap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.OverflowException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenMappedMachineConfiguration = null;
@@ -247,7 +247,7 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public static NetObject GetSection(java.lang.String sectionName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  NetObject GetSection(java.lang.String sectionName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSection = null;
@@ -262,7 +262,7 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public static void RefreshSection(java.lang.String sectionName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  void RefreshSection(java.lang.String sectionName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -160,7 +160,7 @@ public class PresentationSource extends DispatcherObject  {
     
     // Methods section
     
-    public static PresentationSource FromDependencyObject(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+    public static  PresentationSource FromDependencyObject(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDependencyObject = null;
@@ -175,7 +175,7 @@ public class PresentationSource extends DispatcherObject  {
         }
     }
 
-    public static PresentationSource FromVisual(Visual visual) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+    public static  PresentationSource FromVisual(Visual visual) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromVisual = null;
@@ -190,7 +190,7 @@ public class PresentationSource extends DispatcherObject  {
         }
     }
 
-    public static void AddSourceChangedHandler(IInputElement element, SourceChangedEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+    public static  void AddSourceChangedHandler(IInputElement element, SourceChangedEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -200,7 +200,7 @@ public class PresentationSource extends DispatcherObject  {
         }
     }
 
-    public static void RemoveSourceChangedHandler(IInputElement e, SourceChangedEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.OutOfMemoryException {
+    public static  void RemoveSourceChangedHandler(IInputElement e, SourceChangedEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

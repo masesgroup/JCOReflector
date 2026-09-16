@@ -170,7 +170,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  boolean IsDefined(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -184,7 +184,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  boolean IsDefined(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -198,7 +198,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.BadImageFormatException, system.NullReferenceException, system.NotImplementedException {
+    public static  boolean IsDefined(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.BadImageFormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -212,7 +212,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public static  boolean IsDefined(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -226,7 +226,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  boolean IsDefined(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -240,7 +240,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  boolean IsDefined(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -254,7 +254,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
+    public static  boolean IsDefined(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -268,7 +268,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.FormatException {
+    public static  boolean IsDefined(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefined = null;
@@ -296,7 +296,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+    public static  Attribute GetCustomAttribute(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttribute = null;
@@ -311,7 +311,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(Assembly element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static  Attribute GetCustomAttribute(Assembly element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttribute = null;
@@ -326,7 +326,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static  Attribute GetCustomAttribute(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttribute = null;
@@ -341,7 +341,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(MemberInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.BadImageFormatException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static  Attribute GetCustomAttribute(MemberInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.BadImageFormatException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttribute = null;
@@ -356,7 +356,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+    public static  Attribute GetCustomAttribute(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttribute = null;
@@ -371,7 +371,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(Module element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static  Attribute GetCustomAttribute(Module element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttribute = null;
@@ -386,7 +386,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.BadImageFormatException, system.reflection.AmbiguousMatchException {
+    public static  Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.BadImageFormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttribute = null;
@@ -401,7 +401,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.InvalidOperationException, system.reflection.AmbiguousMatchException {
+    public static  Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.InvalidOperationException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttribute = null;
@@ -416,7 +416,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Assembly element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  Attribute[] GetCustomAttributes(Assembly element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -437,7 +437,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  Attribute[] GetCustomAttributes(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -458,7 +458,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  Attribute[] GetCustomAttributes(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -479,7 +479,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Assembly element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  Attribute[] GetCustomAttributes(Assembly element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -500,7 +500,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(MemberInfo element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
+    public static  Attribute[] GetCustomAttributes(MemberInfo element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -521,7 +521,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
+    public static  Attribute[] GetCustomAttributes(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -542,7 +542,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.IndexOutOfRangeException, system.FormatException {
+    public static  Attribute[] GetCustomAttributes(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -563,7 +563,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(MemberInfo element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.IndexOutOfRangeException, system.FormatException {
+    public static  Attribute[] GetCustomAttributes(MemberInfo element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.BadImageFormatException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -584,7 +584,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Module element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  Attribute[] GetCustomAttributes(Module element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -605,7 +605,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  Attribute[] GetCustomAttributes(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -626,7 +626,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  Attribute[] GetCustomAttributes(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -647,7 +647,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Module element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  Attribute[] GetCustomAttributes(Module element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -668,7 +668,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(ParameterInfo element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.BadImageFormatException, system.NullReferenceException, system.NotImplementedException {
+    public static  Attribute[] GetCustomAttributes(ParameterInfo element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.BadImageFormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -689,7 +689,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.BadImageFormatException, system.NullReferenceException, system.NotImplementedException {
+    public static  Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.BadImageFormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -710,7 +710,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.BadImageFormatException {
+    public static  Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -731,7 +731,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(ParameterInfo element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.BadImageFormatException {
+    public static  Attribute[] GetCustomAttributes(ParameterInfo element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.BadImageFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;

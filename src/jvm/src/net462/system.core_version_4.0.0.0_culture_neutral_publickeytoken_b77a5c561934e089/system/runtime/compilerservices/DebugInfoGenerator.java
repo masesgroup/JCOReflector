@@ -154,7 +154,7 @@ public class DebugInfoGenerator extends NetObject  {
     
     // Methods section
     
-    public static DebugInfoGenerator CreatePdbGenerator() throws Throwable {
+    public static  DebugInfoGenerator CreatePdbGenerator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePdbGenerator = null;

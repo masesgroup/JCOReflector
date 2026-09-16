@@ -159,7 +159,7 @@ public class ScriptStream extends NetObject  {
     
     // Methods section
     
-    public static void PrintStackTrace() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static  void PrintStackTrace() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -169,7 +169,7 @@ public class ScriptStream extends NetObject  {
         }
     }
 
-    public static void PrintStackTrace(NetException e) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static  void PrintStackTrace(NetException e) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -179,7 +179,7 @@ public class ScriptStream extends NetObject  {
         }
     }
 
-    public static void Write(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  void Write(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -189,7 +189,7 @@ public class ScriptStream extends NetObject  {
         }
     }
 
-    public static void WriteLine(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  void WriteLine(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

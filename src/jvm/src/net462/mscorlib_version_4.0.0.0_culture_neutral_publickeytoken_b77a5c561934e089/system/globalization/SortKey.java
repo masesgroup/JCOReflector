@@ -154,7 +154,7 @@ public class SortKey extends NetObject  {
     
     // Methods section
     
-    public static int Compare(SortKey sortkey1, SortKey sortkey2) throws Throwable, system.ArgumentNullException {
+    public static  int Compare(SortKey sortkey1, SortKey sortkey2) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;

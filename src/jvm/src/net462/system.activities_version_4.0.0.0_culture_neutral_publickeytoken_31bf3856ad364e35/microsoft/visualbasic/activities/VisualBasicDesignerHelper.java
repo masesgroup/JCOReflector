@@ -156,7 +156,7 @@ public class VisualBasicDesignerHelper extends NetObject  {
     
     // Methods section
     
-    public static Activity RecompileVisualBasicReference(ActivityWithResult visualBasicReference, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
+    public static  Activity RecompileVisualBasicReference(ActivityWithResult visualBasicReference, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRecompileVisualBasicReference = null;
@@ -171,7 +171,7 @@ public class VisualBasicDesignerHelper extends NetObject  {
         }
     }
 
-    public static Activity RecompileVisualBasicValue(ActivityWithResult visualBasicValue, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
+    public static  Activity RecompileVisualBasicValue(ActivityWithResult visualBasicValue, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRecompileVisualBasicValue = null;

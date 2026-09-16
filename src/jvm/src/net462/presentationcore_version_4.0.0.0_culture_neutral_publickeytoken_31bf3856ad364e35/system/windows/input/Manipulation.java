@@ -159,7 +159,7 @@ public class Manipulation extends NetObject  {
     
     // Methods section
     
-    public static boolean IsManipulationActive(UIElement element) throws Throwable, system.ArgumentNullException {
+    public static  boolean IsManipulationActive(UIElement element) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsManipulationActive = null;
@@ -173,7 +173,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static IInputElement GetManipulationContainer(UIElement element) throws Throwable, system.ArgumentNullException {
+    public static  IInputElement GetManipulationContainer(UIElement element) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetManipulationContainer = null;
@@ -188,7 +188,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static ManipulationModes GetManipulationMode(UIElement element) throws Throwable, system.ArgumentNullException {
+    public static  ManipulationModes GetManipulationMode(UIElement element) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetManipulationMode = null;
@@ -203,7 +203,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static ManipulationPivot GetManipulationPivot(UIElement element) throws Throwable, system.ArgumentNullException {
+    public static  ManipulationPivot GetManipulationPivot(UIElement element) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetManipulationPivot = null;
@@ -218,7 +218,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static void AddManipulator(UIElement element, IManipulator manipulator) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.MissingMethodException {
+    public static  void AddManipulator(UIElement element, IManipulator manipulator) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -228,7 +228,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static void CompleteManipulation(UIElement element) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void CompleteManipulation(UIElement element) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -238,7 +238,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static void RemoveManipulator(UIElement element, IManipulator manipulator) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void RemoveManipulator(UIElement element, IManipulator manipulator) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -248,7 +248,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static void SetManipulationContainer(UIElement element, IInputElement container) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
+    public static  void SetManipulationContainer(UIElement element, IInputElement container) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -258,7 +258,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static void SetManipulationMode(UIElement element, ManipulationModes mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  void SetManipulationMode(UIElement element, ManipulationModes mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -268,7 +268,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static void SetManipulationParameter(UIElement element, ManipulationParameters2D parameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  void SetManipulationParameter(UIElement element, ManipulationParameters2D parameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -278,7 +278,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static void SetManipulationPivot(UIElement element, ManipulationPivot pivot) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+    public static  void SetManipulationPivot(UIElement element, ManipulationPivot pivot) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -288,7 +288,7 @@ public class Manipulation extends NetObject  {
         }
     }
 
-    public static void StartInertia(UIElement element) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
+    public static  void StartInertia(UIElement element) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

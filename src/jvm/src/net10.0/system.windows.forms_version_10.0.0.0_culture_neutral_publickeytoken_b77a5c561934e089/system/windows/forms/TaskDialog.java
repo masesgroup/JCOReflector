@@ -158,7 +158,7 @@ public class TaskDialog extends NetObject  {
     
     // Methods section
     
-    public static TaskDialogButton ShowDialog(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public static  TaskDialogButton ShowDialog(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShowDialog = null;
@@ -173,7 +173,7 @@ public class TaskDialog extends NetObject  {
         }
     }
 
-    public static TaskDialogButton ShowDialog(TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public static  TaskDialogButton ShowDialog(TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShowDialog = null;

@@ -155,7 +155,7 @@ public class GridTablesFactory extends NetObject  {
     
     // Methods section
     
-    public static DataGridTableStyle[] CreateGridTables(DataGridTableStyle gridTable, NetObject dataSource, java.lang.String dataMember, BindingContext bindingManager) throws Throwable {
+    public static  DataGridTableStyle[] CreateGridTables(DataGridTableStyle gridTable, NetObject dataSource, java.lang.String dataMember, BindingContext bindingManager) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateGridTables = null;

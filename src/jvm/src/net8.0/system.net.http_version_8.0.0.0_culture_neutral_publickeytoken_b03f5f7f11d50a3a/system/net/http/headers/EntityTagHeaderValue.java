@@ -176,7 +176,7 @@ public class EntityTagHeaderValue extends NetObject implements system.ICloneable
     
     // Methods section
     
-    public static boolean TryParse(java.lang.String input, JCORefOut<EntityTagHeaderValue> parsedValue) throws Throwable {
+    public static  boolean TryParse(java.lang.String input, JCORefOut<EntityTagHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -190,7 +190,7 @@ public class EntityTagHeaderValue extends NetObject implements system.ICloneable
         }
     }
 
-    public static EntityTagHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
+    public static  EntityTagHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

@@ -259,7 +259,7 @@ public class RectangleF extends ValueType  {
         }
     }
 
-    public static RectangleF FromLTRB(Single left, Single top, Single right, Single bottom) throws Throwable {
+    public static  RectangleF FromLTRB(Single left, Single top, Single right, Single bottom) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromLTRB = null;
@@ -274,7 +274,7 @@ public class RectangleF extends ValueType  {
         }
     }
 
-    public static RectangleF Inflate(RectangleF rect, Single x, Single y) throws Throwable {
+    public static  RectangleF Inflate(RectangleF rect, Single x, Single y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInflate = null;
@@ -289,7 +289,7 @@ public class RectangleF extends ValueType  {
         }
     }
 
-    public static RectangleF Intersect(RectangleF a, RectangleF b) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  RectangleF Intersect(RectangleF a, RectangleF b) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIntersect = null;
@@ -304,7 +304,7 @@ public class RectangleF extends ValueType  {
         }
     }
 
-    public static RectangleF Union(RectangleF a, RectangleF b) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  RectangleF Union(RectangleF a, RectangleF b) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnion = null;

@@ -156,7 +156,7 @@ public class RuntimeHelpers extends NetObject  {
     
     // Methods section
     
-    public static boolean Equals(NetObject o1, NetObject o2) throws Throwable {
+    public static  boolean Equals(NetObject o1, NetObject o2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -170,7 +170,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static boolean TryEnsureSufficientExecutionStack() throws Throwable {
+    public static  boolean TryEnsureSufficientExecutionStack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryEnsureSufficientExecutionStack = null;
@@ -184,7 +184,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static int GetHashCode(NetObject o) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  int GetHashCode(NetObject o) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHashCode = null;
@@ -224,7 +224,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static int SizeOf(RuntimeTypeHandle type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  int SizeOf(RuntimeTypeHandle type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSizeOf = null;
@@ -264,7 +264,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static NetObject Box(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> target, RuntimeTypeHandle type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public static  NetObject Box(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> target, RuntimeTypeHandle type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBox = null;
@@ -279,7 +279,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static NetObject GetObjectValue(NetObject obj) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static  NetObject GetObjectValue(NetObject obj) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetObjectValue = null;
@@ -294,7 +294,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.NullReferenceException {
+    public static  NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUninitializedObject = null;
@@ -309,7 +309,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void EnsureSufficientExecutionStack() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InsufficientExecutionStackException {
+    public static  void EnsureSufficientExecutionStack() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InsufficientExecutionStackException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -319,7 +319,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void InitializeArray(Array array, RuntimeFieldHandle fldHandle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  void InitializeArray(Array array, RuntimeFieldHandle fldHandle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -329,7 +329,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareConstrainedRegions() throws Throwable {
+    public static  void PrepareConstrainedRegions() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -339,7 +339,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareConstrainedRegionsNoOP() throws Throwable {
+    public static  void PrepareConstrainedRegionsNoOP() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -349,7 +349,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareMethod(RuntimeMethodHandle method, RuntimeTypeHandle[] instantiation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void PrepareMethod(RuntimeMethodHandle method, RuntimeTypeHandle[] instantiation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -359,7 +359,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareMethod(RuntimeMethodHandle method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  void PrepareMethod(RuntimeMethodHandle method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -369,7 +369,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void ProbeForSufficientStack() throws Throwable {
+    public static  void ProbeForSufficientStack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -379,7 +379,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void RunClassConstructor(RuntimeTypeHandle type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void RunClassConstructor(RuntimeTypeHandle type) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -389,7 +389,7 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void RunModuleConstructor(ModuleHandle module) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  void RunModuleConstructor(ModuleHandle module) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

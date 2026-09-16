@@ -192,7 +192,7 @@ public class ModifierKeysConverter extends TypeConverter  {
         }
     }
 
-    public static boolean IsDefinedModifierKeys(ModifierKeys modifierKeys) throws Throwable {
+    public static  boolean IsDefinedModifierKeys(ModifierKeys modifierKeys) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDefinedModifierKeys = null;

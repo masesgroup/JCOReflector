@@ -158,7 +158,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean IsApplicationTargeting45() throws Throwable {
+    public static  boolean IsApplicationTargeting45() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsApplicationTargeting45 = null;
@@ -222,7 +222,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void RegisterPrefixes() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException {
+    public static  void RegisterPrefixes() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

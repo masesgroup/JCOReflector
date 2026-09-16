@@ -194,7 +194,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static boolean Equals(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
+    public static  boolean Equals(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -222,7 +222,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Add(Quaternion left, Quaternion right) throws Throwable {
+    public static  Quaternion Add(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -237,7 +237,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Multiply(Quaternion left, Quaternion right) throws Throwable {
+    public static  Quaternion Multiply(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -252,7 +252,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
+    public static  Quaternion Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -267,7 +267,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Slerp(Quaternion from, Quaternion to, double t) throws Throwable {
+    public static  Quaternion Slerp(Quaternion from, Quaternion to, double t) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSlerp = null;
@@ -282,7 +282,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Slerp(Quaternion from, Quaternion to, double t, boolean useShortestPath) throws Throwable {
+    public static  Quaternion Slerp(Quaternion from, Quaternion to, double t, boolean useShortestPath) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSlerp = null;
@@ -297,7 +297,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Quaternion Subtract(Quaternion left, Quaternion right) throws Throwable {
+    public static  Quaternion Subtract(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

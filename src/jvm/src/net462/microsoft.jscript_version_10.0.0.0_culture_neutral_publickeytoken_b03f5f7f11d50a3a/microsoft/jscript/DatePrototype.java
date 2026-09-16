@@ -155,7 +155,7 @@ public class DatePrototype extends DateObject  {
     
     // Methods section
     
-    public static double getDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetDate = null;
@@ -195,7 +195,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getDay(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getDay(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetDay = null;
@@ -235,7 +235,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getFullYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getFullYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetFullYear = null;
@@ -275,7 +275,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getHours(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getHours(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetHours = null;
@@ -315,7 +315,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getMilliseconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getMilliseconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetMilliseconds = null;
@@ -355,7 +355,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getMinutes(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getMinutes(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetMinutes = null;
@@ -395,7 +395,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getMonth(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getMonth(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetMonth = null;
@@ -435,7 +435,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getSeconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getSeconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetSeconds = null;
@@ -475,7 +475,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getTime(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getTime(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetTime = null;
@@ -515,7 +515,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getTimezoneOffset(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getTimezoneOffset(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetTimezoneOffset = null;
@@ -555,7 +555,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getUTCDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getUTCDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetUTCDate = null;
@@ -595,7 +595,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getUTCDay(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getUTCDay(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetUTCDay = null;
@@ -635,7 +635,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getUTCFullYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getUTCFullYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetUTCFullYear = null;
@@ -675,7 +675,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getUTCHours(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getUTCHours(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetUTCHours = null;
@@ -715,7 +715,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getUTCMilliseconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getUTCMilliseconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetUTCMilliseconds = null;
@@ -755,7 +755,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getUTCMinutes(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getUTCMinutes(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetUTCMinutes = null;
@@ -795,7 +795,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getUTCMonth(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getUTCMonth(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetUTCMonth = null;
@@ -835,7 +835,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getUTCSeconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double getUTCSeconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetUTCSeconds = null;
@@ -875,7 +875,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double getYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  double getYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetYear = null;
@@ -915,7 +915,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setDate(NetObject thisob, double ddate) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
+    public static  double setDate(NetObject thisob, double ddate) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetDate = null;
@@ -955,7 +955,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setFullYear(NetObject thisob, double dyear, NetObject month, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setFullYear(NetObject thisob, double dyear, NetObject month, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetFullYear = null;
@@ -995,7 +995,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setHours(NetObject thisob, double dhour, NetObject min, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setHours(NetObject thisob, double dhour, NetObject min, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetHours = null;
@@ -1035,7 +1035,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setMilliseconds(NetObject thisob, double dmsec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
+    public static  double setMilliseconds(NetObject thisob, double dmsec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetMilliseconds = null;
@@ -1075,7 +1075,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setMinutes(NetObject thisob, double dmin, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setMinutes(NetObject thisob, double dmin, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetMinutes = null;
@@ -1115,7 +1115,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setMonth(NetObject thisob, double dmonth, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setMonth(NetObject thisob, double dmonth, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetMonth = null;
@@ -1155,7 +1155,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setSeconds(NetObject thisob, double dsec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setSeconds(NetObject thisob, double dsec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetSeconds = null;
@@ -1195,7 +1195,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setTime(NetObject thisob, double time) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double setTime(NetObject thisob, double time) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetTime = null;
@@ -1235,7 +1235,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setUTCDate(NetObject thisob, double ddate) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException {
+    public static  double setUTCDate(NetObject thisob, double ddate) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetUTCDate = null;
@@ -1275,7 +1275,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setUTCFullYear(NetObject thisob, double dyear, NetObject month, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setUTCFullYear(NetObject thisob, double dyear, NetObject month, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetUTCFullYear = null;
@@ -1315,7 +1315,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setUTCHours(NetObject thisob, double dhour, NetObject min, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setUTCHours(NetObject thisob, double dhour, NetObject min, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetUTCHours = null;
@@ -1355,7 +1355,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setUTCMilliseconds(NetObject thisob, double dmsec) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException {
+    public static  double setUTCMilliseconds(NetObject thisob, double dmsec) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetUTCMilliseconds = null;
@@ -1395,7 +1395,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setUTCMinutes(NetObject thisob, double dmin, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setUTCMinutes(NetObject thisob, double dmin, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetUTCMinutes = null;
@@ -1435,7 +1435,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setUTCMonth(NetObject thisob, double dmonth, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setUTCMonth(NetObject thisob, double dmonth, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetUTCMonth = null;
@@ -1475,7 +1475,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setUTCSeconds(NetObject thisob, double dsec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
+    public static  double setUTCSeconds(NetObject thisob, double dsec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetUTCSeconds = null;
@@ -1515,7 +1515,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double setYear(NetObject thisob, double dyear) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
+    public static  double setYear(NetObject thisob, double dyear) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectsetYear = null;
@@ -1555,7 +1555,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static double valueOf(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  double valueOf(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectvalueOf = null;
@@ -1595,7 +1595,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static NetObject getVarDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public static  NetObject getVarDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectgetVarDate = null;
@@ -1610,7 +1610,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static java.lang.String toDateString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  java.lang.String toDateString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoDateString = null;
@@ -1624,7 +1624,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static java.lang.String toGMTString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  java.lang.String toGMTString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoGMTString = null;
@@ -1638,7 +1638,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static java.lang.String toLocaleDateString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  java.lang.String toLocaleDateString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoLocaleDateString = null;
@@ -1652,7 +1652,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  java.lang.String toLocaleString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoLocaleString = null;
@@ -1666,7 +1666,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static java.lang.String toLocaleTimeString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  java.lang.String toLocaleTimeString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoLocaleTimeString = null;
@@ -1680,7 +1680,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoString = null;
@@ -1694,7 +1694,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static java.lang.String toTimeString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static  java.lang.String toTimeString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoTimeString = null;
@@ -1708,7 +1708,7 @@ public class DatePrototype extends DateObject  {
         }
     }
 
-    public static java.lang.String toUTCString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  java.lang.String toUTCString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoUTCString = null;

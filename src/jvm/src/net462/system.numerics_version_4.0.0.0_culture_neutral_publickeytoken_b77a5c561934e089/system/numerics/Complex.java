@@ -181,7 +181,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static double Abs(Complex value) throws Throwable {
+    public static  double Abs(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -221,7 +221,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Acos(Complex value) throws Throwable {
+    public static  Complex Acos(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcos = null;
@@ -236,7 +236,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Add(Complex left, Complex right) throws Throwable {
+    public static  Complex Add(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -251,7 +251,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Asin(Complex value) throws Throwable {
+    public static  Complex Asin(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsin = null;
@@ -266,7 +266,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Atan(Complex value) throws Throwable {
+    public static  Complex Atan(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan = null;
@@ -281,7 +281,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Conjugate(Complex value) throws Throwable {
+    public static  Complex Conjugate(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConjugate = null;
@@ -296,7 +296,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Cos(Complex value) throws Throwable {
+    public static  Complex Cos(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCos = null;
@@ -311,7 +311,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Cosh(Complex value) throws Throwable {
+    public static  Complex Cosh(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCosh = null;
@@ -326,7 +326,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Divide(Complex dividend, Complex divisor) throws Throwable {
+    public static  Complex Divide(Complex dividend, Complex divisor) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -341,7 +341,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Exp(Complex value) throws Throwable {
+    public static  Complex Exp(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp = null;
@@ -356,7 +356,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex FromPolarCoordinates(double magnitude, double phase) throws Throwable {
+    public static  Complex FromPolarCoordinates(double magnitude, double phase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromPolarCoordinates = null;
@@ -371,7 +371,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Log(Complex value) throws Throwable {
+    public static  Complex Log(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -386,7 +386,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Log(Complex value, double baseValue) throws Throwable {
+    public static  Complex Log(Complex value, double baseValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -401,7 +401,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Log10(Complex value) throws Throwable {
+    public static  Complex Log10(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10 = null;
@@ -416,7 +416,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Multiply(Complex left, Complex right) throws Throwable {
+    public static  Complex Multiply(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -431,7 +431,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Negate(Complex value) throws Throwable {
+    public static  Complex Negate(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -446,7 +446,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Pow(Complex value, double power) throws Throwable {
+    public static  Complex Pow(Complex value, double power) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -461,7 +461,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Pow(Complex value, Complex power) throws Throwable {
+    public static  Complex Pow(Complex value, Complex power) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPow = null;
@@ -476,7 +476,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Reciprocal(Complex value) throws Throwable {
+    public static  Complex Reciprocal(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReciprocal = null;
@@ -491,7 +491,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Sin(Complex value) throws Throwable {
+    public static  Complex Sin(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSin = null;
@@ -506,7 +506,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Sinh(Complex value) throws Throwable {
+    public static  Complex Sinh(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinh = null;
@@ -521,7 +521,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Sqrt(Complex value) throws Throwable {
+    public static  Complex Sqrt(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSqrt = null;
@@ -536,7 +536,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Subtract(Complex left, Complex right) throws Throwable {
+    public static  Complex Subtract(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -551,7 +551,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Tan(Complex value) throws Throwable {
+    public static  Complex Tan(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTan = null;
@@ -566,7 +566,7 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Tanh(Complex value) throws Throwable {
+    public static  Complex Tanh(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTanh = null;

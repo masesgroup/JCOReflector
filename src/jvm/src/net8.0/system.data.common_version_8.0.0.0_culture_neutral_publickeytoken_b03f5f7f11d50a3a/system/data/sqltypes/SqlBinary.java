@@ -268,7 +268,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBinary Add(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  SqlBinary Add(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -283,7 +283,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBinary Concat(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  SqlBinary Concat(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConcat = null;
@@ -298,7 +298,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBinary WrapBytes(byte[] bytes) throws Throwable {
+    public static  SqlBinary WrapBytes(byte[] bytes) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWrapBytes = null;
@@ -313,7 +313,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBinary WrapBytes(JCORefOut dupParam0) throws Throwable {
+    public static  SqlBinary WrapBytes(JCORefOut dupParam0) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWrapBytes = null;
@@ -328,7 +328,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean Equals(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  SqlBoolean Equals(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -343,7 +343,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean GreaterThan(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  SqlBoolean GreaterThan(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -358,7 +358,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean GreaterThanOrEqual(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  SqlBoolean GreaterThanOrEqual(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -373,7 +373,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean LessThan(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  SqlBoolean LessThan(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -388,7 +388,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean LessThanOrEqual(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  SqlBoolean LessThanOrEqual(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -403,7 +403,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static SqlBoolean NotEquals(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  SqlBoolean NotEquals(SqlBinary x, SqlBinary y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -433,7 +433,7 @@ public class SqlBinary extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
+    public static  XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXsdType = null;

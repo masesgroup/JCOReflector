@@ -239,7 +239,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
     
     // Methods section
     
-    public static boolean CheckSchemeName(java.lang.String schemeName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException {
+    public static  boolean CheckSchemeName(java.lang.String schemeName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckSchemeName = null;
@@ -281,7 +281,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static boolean IsHexDigit(char character) throws Throwable {
+    public static  boolean IsHexDigit(char character) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsHexDigit = null;
@@ -295,7 +295,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static boolean IsHexEncoding(java.lang.String pattern, int index) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public static  boolean IsHexEncoding(java.lang.String pattern, int index) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsHexEncoding = null;
@@ -323,7 +323,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static boolean IsWellFormedUriString(java.lang.String uriString, UriKind uriKind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static  boolean IsWellFormedUriString(java.lang.String uriString, UriKind uriKind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWellFormedUriString = null;
@@ -337,7 +337,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static boolean TryCreate(java.lang.String uriString, JCORefOut<UriCreationOptions> creationOptions, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static  boolean TryCreate(java.lang.String uriString, JCORefOut<UriCreationOptions> creationOptions, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -351,7 +351,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static boolean TryCreate(java.lang.String uriString, UriKind uriKind, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static  boolean TryCreate(java.lang.String uriString, UriKind uriKind, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -365,7 +365,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static boolean TryCreate(Uri baseUri, java.lang.String relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static  boolean TryCreate(Uri baseUri, java.lang.String relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -379,7 +379,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static boolean TryCreate(Uri baseUri, Uri relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.ArrayTypeMismatchException {
+    public static  boolean TryCreate(Uri baseUri, Uri relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryCreate = null;
@@ -393,7 +393,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static char HexUnescape(java.lang.String pattern, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  char HexUnescape(java.lang.String pattern, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHexUnescape = null;
@@ -407,7 +407,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static int Compare(Uri uri1, Uri uri2, UriComponents partsToCompare, UriFormat compareFormat, StringComparison comparisonType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.InvalidOperationException, system.UriFormatException {
+    public static  int Compare(Uri uri1, Uri uri2, UriComponents partsToCompare, UriFormat compareFormat, StringComparison comparisonType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.InvalidOperationException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -447,7 +447,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static int FromHex(char digit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  int FromHex(char digit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromHex = null;
@@ -487,7 +487,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static java.lang.String EscapeDataString(java.lang.String stringToEscape) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  java.lang.String EscapeDataString(java.lang.String stringToEscape) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEscapeDataString = null;
@@ -501,7 +501,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static java.lang.String EscapeUriString(java.lang.String stringToEscape) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static  java.lang.String EscapeUriString(java.lang.String stringToEscape) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEscapeUriString = null;
@@ -543,7 +543,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static java.lang.String HexEscape(char character) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String HexEscape(char character) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHexEscape = null;
@@ -571,7 +571,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static java.lang.String UnescapeDataString(java.lang.String stringToUnescape) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static  java.lang.String UnescapeDataString(java.lang.String stringToUnescape) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnescapeDataString = null;
@@ -600,7 +600,7 @@ public class Uri extends NetObject implements system.IFormattable, system.runtim
         }
     }
 
-    public static UriHostNameType CheckHostName(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  UriHostNameType CheckHostName(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCheckHostName = null;

@@ -168,7 +168,7 @@ public class DataContract extends NetObject  {
         }
     }
 
-    public static DataContract GetBuiltInDataContract(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.runtime.serialization.InvalidDataContractException {
+    public static  DataContract GetBuiltInDataContract(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.runtime.serialization.InvalidDataContractException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetBuiltInDataContract = null;
@@ -198,7 +198,7 @@ public class DataContract extends NetObject  {
         }
     }
 
-    public static XmlQualifiedName GetXmlName(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.serialization.InvalidDataContractException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  XmlQualifiedName GetXmlName(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.serialization.InvalidDataContractException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetXmlName = null;

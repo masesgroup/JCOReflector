@@ -169,7 +169,7 @@ public class OSPlatform extends ValueType  {
         }
     }
 
-    public static OSPlatform Create(java.lang.String osPlatform) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  OSPlatform Create(java.lang.String osPlatform) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

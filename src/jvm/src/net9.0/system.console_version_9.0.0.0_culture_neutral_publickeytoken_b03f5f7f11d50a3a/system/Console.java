@@ -161,7 +161,7 @@ public class Console extends NetObject  {
     
     // Methods section
     
-    public static int Read() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public static  int Read() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRead = null;
@@ -201,7 +201,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static ConsoleKeyInfo ReadKey() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  ConsoleKeyInfo ReadKey() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadKey = null;
@@ -216,7 +216,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static ConsoleKeyInfo ReadKey(boolean intercept) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public static  ConsoleKeyInfo ReadKey(boolean intercept) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadKey = null;
@@ -231,7 +231,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static Stream OpenStandardError() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Stream OpenStandardError() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenStandardError = null;
@@ -246,7 +246,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static Stream OpenStandardError(int bufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  Stream OpenStandardError(int bufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenStandardError = null;
@@ -261,7 +261,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static Stream OpenStandardInput() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Stream OpenStandardInput() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenStandardInput = null;
@@ -276,7 +276,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static Stream OpenStandardInput(int bufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  Stream OpenStandardInput(int bufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenStandardInput = null;
@@ -291,7 +291,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static Stream OpenStandardOutput() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static  Stream OpenStandardOutput() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenStandardOutput = null;
@@ -306,7 +306,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static Stream OpenStandardOutput(int bufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public static  Stream OpenStandardOutput(int bufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenStandardOutput = null;
@@ -321,7 +321,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static java.lang.String ReadLine() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException {
+    public static  java.lang.String ReadLine() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadLine = null;
@@ -335,7 +335,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Beep() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  void Beep() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -345,7 +345,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Beep(int frequency, int duration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  void Beep(int frequency, int duration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -355,7 +355,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.OutOfMemoryException {
+    public static  void Clear() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -365,7 +365,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void MoveBufferArea(int sourceLeft, int sourceTop, int sourceWidth, int sourceHeight, int targetLeft, int targetTop, char sourceChar, ConsoleColor sourceForeColor, ConsoleColor sourceBackColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.OutOfMemoryException {
+    public static  void MoveBufferArea(int sourceLeft, int sourceTop, int sourceWidth, int sourceHeight, int targetLeft, int targetTop, char sourceChar, ConsoleColor sourceForeColor, ConsoleColor sourceBackColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -375,7 +375,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void MoveBufferArea(int sourceLeft, int sourceTop, int sourceWidth, int sourceHeight, int targetLeft, int targetTop) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
+    public static  void MoveBufferArea(int sourceLeft, int sourceTop, int sourceWidth, int sourceHeight, int targetLeft, int targetTop) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -385,7 +385,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void ResetColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException {
+    public static  void ResetColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -395,7 +395,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void SetBufferSize(int width, int height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
+    public static  void SetBufferSize(int width, int height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -405,7 +405,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void SetCursorPosition(int left, int top) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.OutOfMemoryException {
+    public static  void SetCursorPosition(int left, int top) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -415,7 +415,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void SetError(TextWriter newError) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void SetError(TextWriter newError) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -425,7 +425,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void SetIn(TextReader newIn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void SetIn(TextReader newIn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -435,7 +435,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void SetOut(TextWriter newOut) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  void SetOut(TextWriter newOut) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -445,7 +445,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void SetWindowPosition(int left, int top) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
+    public static  void SetWindowPosition(int left, int top) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -455,7 +455,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void SetWindowSize(int width, int height) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.io.IOException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
+    public static  void SetWindowSize(int width, int height) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.io.IOException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -465,7 +465,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(boolean value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void Write(boolean value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -475,7 +475,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(char value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void Write(char value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -485,7 +485,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(char[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void Write(char[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -495,7 +495,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -505,7 +505,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(char[] buffer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void Write(char[] buffer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -515,7 +515,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void Write(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -525,7 +525,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException {
+    public static  void Write(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -535,7 +535,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void Write(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -545,7 +545,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(long value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void Write(long value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -555,7 +555,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException {
+    public static  void Write(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -565,7 +565,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(Decimal value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException {
+    public static  void Write(Decimal value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -575,7 +575,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void Write(NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -585,7 +585,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void Write(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -595,7 +595,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void Write(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -605,7 +605,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void Write(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -615,7 +615,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void Write(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -625,7 +625,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void Write(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -635,7 +635,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void Write(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -645,7 +645,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void Write(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void Write(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -655,7 +655,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void WriteLine() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -665,7 +665,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(boolean value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void WriteLine(boolean value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -675,7 +675,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(char value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void WriteLine(char value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -685,7 +685,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(char[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void WriteLine(char[] buffer, int index, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -695,7 +695,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void WriteLine(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -705,7 +705,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(char[] buffer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void WriteLine(char[] buffer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -715,7 +715,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void WriteLine(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -725,7 +725,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void WriteLine(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -735,7 +735,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void WriteLine(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -745,7 +745,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(long value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void WriteLine(long value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -755,7 +755,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void WriteLine(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -765,7 +765,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(Decimal value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
+    public static  void WriteLine(Decimal value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -775,7 +775,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void WriteLine(NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -785,7 +785,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -795,7 +795,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void WriteLine(java.lang.String format, NetObject arg0, NetObject arg1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -805,7 +805,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void WriteLine(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -815,7 +815,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void WriteLine(java.lang.String format, NetObject... arg) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -825,7 +825,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
+    public static  void WriteLine(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -835,7 +835,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void WriteLine(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -845,7 +845,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public static void WriteLine(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static  void WriteLine(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

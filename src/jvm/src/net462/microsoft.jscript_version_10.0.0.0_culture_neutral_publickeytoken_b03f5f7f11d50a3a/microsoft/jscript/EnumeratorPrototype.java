@@ -155,7 +155,7 @@ public class EnumeratorPrototype extends JSObject  {
     
     // Methods section
     
-    public static boolean atEnd(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  boolean atEnd(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectatEnd = null;
@@ -169,7 +169,7 @@ public class EnumeratorPrototype extends JSObject  {
         }
     }
 
-    public static NetObject item(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  NetObject item(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectitem = null;
@@ -184,7 +184,7 @@ public class EnumeratorPrototype extends JSObject  {
         }
     }
 
-    public static void moveFirst(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  void moveFirst(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -194,7 +194,7 @@ public class EnumeratorPrototype extends JSObject  {
         }
     }
 
-    public static void moveNext(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
+    public static  void moveNext(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

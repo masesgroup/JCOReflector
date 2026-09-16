@@ -155,7 +155,7 @@ public class InternalST extends NetObject  {
     
     // Methods section
     
-    public static boolean SoapCheckEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  boolean SoapCheckEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSoapCheckEnabled = null;
@@ -169,7 +169,7 @@ public class InternalST extends NetObject  {
         }
     }
 
-    public static Assembly LoadAssemblyFromString(java.lang.String assemblyString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException {
+    public static  Assembly LoadAssemblyFromString(java.lang.String assemblyString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadAssemblyFromString = null;
@@ -184,7 +184,7 @@ public class InternalST extends NetObject  {
         }
     }
 
-    public static void InfoSoap(NetObject... messages) throws Throwable {
+    public static  void InfoSoap(NetObject... messages) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -194,7 +194,7 @@ public class InternalST extends NetObject  {
         }
     }
 
-    public static void SerializationSetValue(FieldInfo fi, NetObject target, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.reflection.TargetException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+    public static  void SerializationSetValue(FieldInfo fi, NetObject target, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.reflection.TargetException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -204,7 +204,7 @@ public class InternalST extends NetObject  {
         }
     }
 
-    public static void Soap(NetObject... messages) throws Throwable, system.IndexOutOfRangeException {
+    public static  void Soap(NetObject... messages) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -214,7 +214,7 @@ public class InternalST extends NetObject  {
         }
     }
 
-    public static void SoapAssert(boolean condition, java.lang.String message) throws Throwable {
+    public static  void SoapAssert(boolean condition, java.lang.String message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -157,7 +157,7 @@ public class RemotingConfiguration extends NetObject  {
     
     // Methods section
     
-    public static boolean CustomErrorsEnabled(boolean isLocalRequest) throws Throwable {
+    public static  boolean CustomErrorsEnabled(boolean isLocalRequest) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCustomErrorsEnabled = null;
@@ -171,7 +171,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static boolean IsActivationAllowed(NetType svrType) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
+    public static  boolean IsActivationAllowed(NetType svrType) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsActivationAllowed = null;
@@ -185,7 +185,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static ActivatedClientTypeEntry IsRemotelyActivatedClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
+    public static  ActivatedClientTypeEntry IsRemotelyActivatedClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsRemotelyActivatedClientType = null;
@@ -200,7 +200,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static ActivatedClientTypeEntry IsRemotelyActivatedClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NotImplementedException {
+    public static  ActivatedClientTypeEntry IsRemotelyActivatedClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsRemotelyActivatedClientType = null;
@@ -215,7 +215,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static ActivatedClientTypeEntry[] GetRegisteredActivatedClientTypes() throws Throwable, system.ArgumentNullException {
+    public static  ActivatedClientTypeEntry[] GetRegisteredActivatedClientTypes() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRegisteredActivatedClientTypes = null;
@@ -236,7 +236,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static ActivatedServiceTypeEntry[] GetRegisteredActivatedServiceTypes() throws Throwable {
+    public static  ActivatedServiceTypeEntry[] GetRegisteredActivatedServiceTypes() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRegisteredActivatedServiceTypes = null;
@@ -257,7 +257,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static WellKnownClientTypeEntry IsWellKnownClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  WellKnownClientTypeEntry IsWellKnownClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWellKnownClientType = null;
@@ -272,7 +272,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static WellKnownClientTypeEntry IsWellKnownClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  WellKnownClientTypeEntry IsWellKnownClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsWellKnownClientType = null;
@@ -287,7 +287,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static WellKnownClientTypeEntry[] GetRegisteredWellKnownClientTypes() throws Throwable, system.ArgumentNullException {
+    public static  WellKnownClientTypeEntry[] GetRegisteredWellKnownClientTypes() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRegisteredWellKnownClientTypes = null;
@@ -308,7 +308,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static WellKnownServiceTypeEntry[] GetRegisteredWellKnownServiceTypes() throws Throwable, system.ArgumentNullException {
+    public static  WellKnownServiceTypeEntry[] GetRegisteredWellKnownServiceTypes() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRegisteredWellKnownServiceTypes = null;
@@ -329,7 +329,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void Configure(java.lang.String filename) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ApplicationException {
+    public static  void Configure(java.lang.String filename) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -339,7 +339,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void Configure(java.lang.String filename, boolean ensureSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.NotImplementedException, system.ApplicationException {
+    public static  void Configure(java.lang.String filename, boolean ensureSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.NotImplementedException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -349,7 +349,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterActivatedClientType(ActivatedClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
+    public static  void RegisterActivatedClientType(ActivatedClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -359,7 +359,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterActivatedClientType(NetType type, java.lang.String appUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
+    public static  void RegisterActivatedClientType(NetType type, java.lang.String appUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -369,7 +369,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterActivatedServiceType(ActivatedServiceTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public static  void RegisterActivatedServiceType(ActivatedServiceTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -379,7 +379,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterActivatedServiceType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  void RegisterActivatedServiceType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -389,7 +389,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterWellKnownClientType(WellKnownClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
+    public static  void RegisterWellKnownClientType(WellKnownClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -399,7 +399,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterWellKnownClientType(NetType type, java.lang.String objectUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
+    public static  void RegisterWellKnownClientType(NetType type, java.lang.String objectUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -409,7 +409,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterWellKnownServiceType(WellKnownServiceTypeEntry entry) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
+    public static  void RegisterWellKnownServiceType(WellKnownServiceTypeEntry entry) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -419,7 +419,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public static void RegisterWellKnownServiceType(NetType type, java.lang.String objectUri, WellKnownObjectMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
+    public static  void RegisterWellKnownServiceType(NetType type, java.lang.String objectUri, WellKnownObjectMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

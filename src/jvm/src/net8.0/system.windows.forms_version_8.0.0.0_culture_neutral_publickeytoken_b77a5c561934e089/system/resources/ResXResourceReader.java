@@ -268,7 +268,7 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
         }
     }
 
-    public static ResXResourceReader FromFileContents(java.lang.String fileContents, ITypeResolutionService typeResolver) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  ResXResourceReader FromFileContents(java.lang.String fileContents, ITypeResolutionService typeResolver) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFileContents = null;
@@ -283,7 +283,7 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
         }
     }
 
-    public static ResXResourceReader FromFileContents(java.lang.String fileContents, AssemblyName[] assemblyNames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  ResXResourceReader FromFileContents(java.lang.String fileContents, AssemblyName[] assemblyNames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFileContents = null;
@@ -298,7 +298,7 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
         }
     }
 
-    public static ResXResourceReader FromFileContents(java.lang.String fileContents) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public static  ResXResourceReader FromFileContents(java.lang.String fileContents) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromFileContents = null;

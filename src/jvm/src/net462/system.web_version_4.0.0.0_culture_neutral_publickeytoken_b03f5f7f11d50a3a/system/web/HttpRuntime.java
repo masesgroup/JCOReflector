@@ -165,7 +165,7 @@ public class HttpRuntime extends NetObject  {
     
     // Methods section
     
-    public static NamedPermissionSet GetNamedPermissionSet() throws Throwable {
+    public static  NamedPermissionSet GetNamedPermissionSet() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetNamedPermissionSet = null;
@@ -180,7 +180,7 @@ public class HttpRuntime extends NetObject  {
         }
     }
 
-    public static void Close() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SemaphoreFullException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.OverflowException {
+    public static  void Close() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SemaphoreFullException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -190,7 +190,7 @@ public class HttpRuntime extends NetObject  {
         }
     }
 
-    public static void ProcessRequest(HttpWorkerRequest wr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.PlatformNotSupportedException, system.web.HttpException, system.NullReferenceException, system.ApplicationException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.MemberAccessException {
+    public static  void ProcessRequest(HttpWorkerRequest wr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.PlatformNotSupportedException, system.web.HttpException, system.NullReferenceException, system.ApplicationException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.MemberAccessException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -200,7 +200,7 @@ public class HttpRuntime extends NetObject  {
         }
     }
 
-    public static void UnloadAppDomain() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.security.SecurityException {
+    public static  void UnloadAppDomain() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

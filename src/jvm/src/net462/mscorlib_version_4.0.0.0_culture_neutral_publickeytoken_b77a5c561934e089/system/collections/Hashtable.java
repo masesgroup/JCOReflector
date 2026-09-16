@@ -356,7 +356,7 @@ public class Hashtable extends NetObjectEnumerable  {
         }
     }
 
-    public static Hashtable Synchronized(Hashtable table) throws Throwable, system.ArgumentNullException {
+    public static  Hashtable Synchronized(Hashtable table) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSynchronized = null;

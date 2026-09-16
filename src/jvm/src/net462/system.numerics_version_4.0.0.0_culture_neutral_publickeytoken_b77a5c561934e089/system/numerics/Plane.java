@@ -204,7 +204,7 @@ public class Plane extends ValueType  {
         }
     }
 
-    public static Single Dot(Plane plane, Vector4 value) throws Throwable {
+    public static  Single Dot(Plane plane, Vector4 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDot = null;
@@ -219,7 +219,7 @@ public class Plane extends ValueType  {
         }
     }
 
-    public static Single DotCoordinate(Plane plane, Vector3 value) throws Throwable {
+    public static  Single DotCoordinate(Plane plane, Vector3 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDotCoordinate = null;
@@ -234,7 +234,7 @@ public class Plane extends ValueType  {
         }
     }
 
-    public static Single DotNormal(Plane plane, Vector3 value) throws Throwable {
+    public static  Single DotNormal(Plane plane, Vector3 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDotNormal = null;
@@ -249,7 +249,7 @@ public class Plane extends ValueType  {
         }
     }
 
-    public static Plane CreateFromVertices(Vector3 point1, Vector3 point2, Vector3 point3) throws Throwable {
+    public static  Plane CreateFromVertices(Vector3 point1, Vector3 point2, Vector3 point3) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateFromVertices = null;
@@ -264,7 +264,7 @@ public class Plane extends ValueType  {
         }
     }
 
-    public static Plane Normalize(Plane value) throws Throwable {
+    public static  Plane Normalize(Plane value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalize = null;
@@ -279,7 +279,7 @@ public class Plane extends ValueType  {
         }
     }
 
-    public static Plane Transform(Plane plane, Matrix4x4 matrix) throws Throwable {
+    public static  Plane Transform(Plane plane, Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -294,7 +294,7 @@ public class Plane extends ValueType  {
         }
     }
 
-    public static Plane Transform(Plane plane, Quaternion rotation) throws Throwable {
+    public static  Plane Transform(Plane plane, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;

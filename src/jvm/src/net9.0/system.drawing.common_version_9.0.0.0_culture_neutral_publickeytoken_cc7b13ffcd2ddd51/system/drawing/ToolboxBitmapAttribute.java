@@ -260,7 +260,7 @@ public class ToolboxBitmapAttribute extends Attribute  {
         }
     }
 
-    public static Image GetImageFromResource(NetType t, java.lang.String imageName, boolean large) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.FormatException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
+    public static  Image GetImageFromResource(NetType t, java.lang.String imageName, boolean large) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.FormatException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetImageFromResource = null;

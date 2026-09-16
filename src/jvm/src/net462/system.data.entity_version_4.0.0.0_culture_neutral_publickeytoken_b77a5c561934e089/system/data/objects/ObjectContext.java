@@ -459,7 +459,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static NetType GetObjectType(NetType type) throws Throwable, system.ArgumentNullException {
+    public static  NetType GetObjectType(NetType type) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetObjectType = null;

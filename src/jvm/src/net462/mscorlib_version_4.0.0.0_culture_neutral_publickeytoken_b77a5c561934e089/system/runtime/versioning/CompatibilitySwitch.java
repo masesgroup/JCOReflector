@@ -151,7 +151,7 @@ public class CompatibilitySwitch extends NetObject  {
     
     // Methods section
     
-    public static boolean IsEnabled(java.lang.String compatibilitySwitchName) throws Throwable {
+    public static  boolean IsEnabled(java.lang.String compatibilitySwitchName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEnabled = null;
@@ -165,7 +165,7 @@ public class CompatibilitySwitch extends NetObject  {
         }
     }
 
-    public static java.lang.String GetValue(java.lang.String compatibilitySwitchName) throws Throwable {
+    public static  java.lang.String GetValue(java.lang.String compatibilitySwitchName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetValue = null;

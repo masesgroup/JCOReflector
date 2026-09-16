@@ -153,7 +153,7 @@ public class EventManager extends NetObject  {
     
     // Methods section
     
-    public static RoutedEvent RegisterRoutedEvent(java.lang.String name, RoutingStrategy routingStrategy, NetType handlerType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
+    public static  RoutedEvent RegisterRoutedEvent(java.lang.String name, RoutingStrategy routingStrategy, NetType handlerType, NetType ownerType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRegisterRoutedEvent = null;
@@ -168,7 +168,7 @@ public class EventManager extends NetObject  {
         }
     }
 
-    public static RoutedEvent[] GetRoutedEvents() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException {
+    public static  RoutedEvent[] GetRoutedEvents() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRoutedEvents = null;
@@ -189,7 +189,7 @@ public class EventManager extends NetObject  {
         }
     }
 
-    public static RoutedEvent[] GetRoutedEventsForOwner(NetType ownerType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static  RoutedEvent[] GetRoutedEventsForOwner(NetType ownerType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRoutedEventsForOwner = null;

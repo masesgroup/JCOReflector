@@ -173,7 +173,7 @@ public class FontStretch extends ValueType implements system.IFormattable {
         }
     }
 
-    public static int Compare(FontStretch left, FontStretch right) throws Throwable {
+    public static  int Compare(FontStretch left, FontStretch right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCompare = null;
@@ -253,7 +253,7 @@ public class FontStretch extends ValueType implements system.IFormattable {
         }
     }
 
-    public static FontStretch FromOpenTypeStretch(int stretchValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  FontStretch FromOpenTypeStretch(int stretchValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromOpenTypeStretch = null;

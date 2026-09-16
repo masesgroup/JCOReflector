@@ -240,7 +240,7 @@ public class PolicyLevel extends NetObject  {
         }
     }
 
-    public static PolicyLevel CreateAppDomainLevel() throws Throwable {
+    public static  PolicyLevel CreateAppDomainLevel() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateAppDomainLevel = null;

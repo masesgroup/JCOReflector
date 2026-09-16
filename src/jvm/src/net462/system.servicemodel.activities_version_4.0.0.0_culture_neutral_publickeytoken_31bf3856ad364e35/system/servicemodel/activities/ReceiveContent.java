@@ -154,7 +154,7 @@ public class ReceiveContent extends NetObject  {
     
     // Methods section
     
-    public static ReceiveMessageContent Create(OutArgument message) throws Throwable {
+    public static  ReceiveMessageContent Create(OutArgument message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -169,7 +169,7 @@ public class ReceiveContent extends NetObject  {
         }
     }
 
-    public static ReceiveMessageContent Create(OutArgument message, NetType declaredMessageType) throws Throwable {
+    public static  ReceiveMessageContent Create(OutArgument message, NetType declaredMessageType) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

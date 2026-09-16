@@ -195,7 +195,7 @@ public class ListItem extends NetObject implements system.web.ui.IParserAccessor
     
     // Methods section
     
-    public static ListItem FromString(java.lang.String s) throws Throwable {
+    public static  ListItem FromString(java.lang.String s) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;

@@ -208,7 +208,7 @@ public class DbExpressionBuilder extends NetObject  {
     
     // Methods section
     
-    public static DbAndExpression And(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbAndExpression And(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAnd = null;
@@ -223,7 +223,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbApplyExpression CrossApply(DbExpressionBinding input, DbExpressionBinding apply) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  DbApplyExpression CrossApply(DbExpressionBinding input, DbExpressionBinding apply) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCrossApply = null;
@@ -238,7 +238,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbApplyExpression OuterApply(DbExpressionBinding input, DbExpressionBinding apply) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  DbApplyExpression OuterApply(DbExpressionBinding input, DbExpressionBinding apply) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOuterApply = null;
@@ -253,7 +253,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbArithmeticExpression Divide(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbArithmeticExpression Divide(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -268,7 +268,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbArithmeticExpression Minus(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbArithmeticExpression Minus(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMinus = null;
@@ -283,7 +283,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbArithmeticExpression Modulo(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbArithmeticExpression Modulo(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectModulo = null;
@@ -298,7 +298,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbArithmeticExpression Multiply(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbArithmeticExpression Multiply(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -313,7 +313,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbArithmeticExpression Negate(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  DbArithmeticExpression Negate(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -328,7 +328,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbArithmeticExpression Plus(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbArithmeticExpression Plus(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPlus = null;
@@ -343,7 +343,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbArithmeticExpression UnaryMinus(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbArithmeticExpression UnaryMinus(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnaryMinus = null;
@@ -358,7 +358,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbCastExpression CastTo(DbExpression argument, TypeUsage toType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbCastExpression CastTo(DbExpression argument, TypeUsage toType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCastTo = null;
@@ -373,7 +373,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbComparisonExpression Equal(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbComparisonExpression Equal(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEqual = null;
@@ -388,7 +388,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbComparisonExpression GreaterThan(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbComparisonExpression GreaterThan(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThan = null;
@@ -403,7 +403,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbComparisonExpression GreaterThanOrEqual(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbComparisonExpression GreaterThanOrEqual(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGreaterThanOrEqual = null;
@@ -418,7 +418,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbComparisonExpression LessThan(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbComparisonExpression LessThan(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThan = null;
@@ -433,7 +433,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbComparisonExpression LessThanOrEqual(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbComparisonExpression LessThanOrEqual(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLessThanOrEqual = null;
@@ -448,7 +448,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbComparisonExpression NotEqual(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbComparisonExpression NotEqual(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEqual = null;
@@ -463,7 +463,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbConstantExpression Constant(TypeUsage constantType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException {
+    public static  DbConstantExpression Constant(TypeUsage constantType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConstant = null;
@@ -478,7 +478,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbConstantExpression Constant(NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  DbConstantExpression Constant(NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConstant = null;
@@ -493,7 +493,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbDerefExpression Deref(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbDerefExpression Deref(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeref = null;
@@ -508,7 +508,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbDistinctExpression Distinct(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  DbDistinctExpression Distinct(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDistinct = null;
@@ -523,7 +523,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbElementExpression Element(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  DbElementExpression Element(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectElement = null;
@@ -538,7 +538,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbEntityRefExpression GetEntityRef(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbEntityRefExpression GetEntityRef(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEntityRef = null;
@@ -553,7 +553,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbExceptExpression Except(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbExceptExpression Except(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExcept = null;
@@ -568,7 +568,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbExpression Any(DbExpression source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbExpression Any(DbExpression source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAny = null;
@@ -583,7 +583,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbExpression Exists(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbExpression Exists(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExists = null;
@@ -598,7 +598,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbExpression Union(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbExpression Union(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnion = null;
@@ -613,7 +613,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbExpressionBinding Bind(DbExpression input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  DbExpressionBinding Bind(DbExpression input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBind = null;
@@ -628,7 +628,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbExpressionBinding BindAs(DbExpression input, java.lang.String varName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbExpressionBinding BindAs(DbExpression input, java.lang.String varName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBindAs = null;
@@ -643,7 +643,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbFilterExpression Filter(DbExpressionBinding input, DbExpression predicate) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  DbFilterExpression Filter(DbExpressionBinding input, DbExpression predicate) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFilter = null;
@@ -658,7 +658,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbFunctionAggregate Aggregate(EdmFunction function, DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  DbFunctionAggregate Aggregate(EdmFunction function, DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAggregate = null;
@@ -673,7 +673,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbFunctionAggregate AggregateDistinct(EdmFunction function, DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  DbFunctionAggregate AggregateDistinct(EdmFunction function, DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAggregateDistinct = null;
@@ -688,7 +688,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbFunctionExpression Invoke(EdmFunction function, DbExpression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  DbFunctionExpression Invoke(EdmFunction function, DbExpression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvoke = null;
@@ -703,7 +703,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbGroupExpressionBinding GroupBind(DbExpression input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  DbGroupExpressionBinding GroupBind(DbExpression input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGroupBind = null;
@@ -718,7 +718,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbGroupExpressionBinding GroupBindAs(DbExpression input, java.lang.String varName, java.lang.String groupVarName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbGroupExpressionBinding GroupBindAs(DbExpression input, java.lang.String varName, java.lang.String groupVarName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGroupBindAs = null;
@@ -733,7 +733,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbIntersectExpression Intersect(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbIntersectExpression Intersect(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIntersect = null;
@@ -748,7 +748,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbIsEmptyExpression IsEmpty(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  DbIsEmptyExpression IsEmpty(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsEmpty = null;
@@ -763,7 +763,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbIsNullExpression IsNull(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbIsNullExpression IsNull(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNull = null;
@@ -778,7 +778,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbIsOfExpression IsOf(DbExpression argument, TypeUsage type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbIsOfExpression IsOf(DbExpression argument, TypeUsage type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOf = null;
@@ -793,7 +793,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbIsOfExpression IsOfOnly(DbExpression argument, TypeUsage type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbIsOfExpression IsOfOnly(DbExpression argument, TypeUsage type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsOfOnly = null;
@@ -808,7 +808,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbJoinExpression FullOuterJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static  DbJoinExpression FullOuterJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFullOuterJoin = null;
@@ -823,7 +823,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbJoinExpression InnerJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static  DbJoinExpression InnerJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInnerJoin = null;
@@ -838,7 +838,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbJoinExpression LeftOuterJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static  DbJoinExpression LeftOuterJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeftOuterJoin = null;
@@ -853,7 +853,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbLambda Lambda(DbExpression body, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  DbLambda Lambda(DbExpression body, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -868,7 +868,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbLambdaExpression Invoke(DbLambda lambda, DbExpression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  DbLambdaExpression Invoke(DbLambda lambda, DbExpression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvoke = null;
@@ -883,7 +883,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbLikeExpression Like(DbExpression argument, DbExpression pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  DbLikeExpression Like(DbExpression argument, DbExpression pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLike = null;
@@ -898,7 +898,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbLikeExpression Like(DbExpression argument, DbExpression pattern, DbExpression escape) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  DbLikeExpression Like(DbExpression argument, DbExpression pattern, DbExpression escape) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLike = null;
@@ -913,7 +913,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbLimitExpression Limit(DbExpression argument, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  DbLimitExpression Limit(DbExpression argument, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLimit = null;
@@ -928,7 +928,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbLimitExpression Take(DbExpression argument, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbLimitExpression Take(DbExpression argument, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTake = null;
@@ -943,7 +943,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbNewInstanceExpression New(TypeUsage instanceType, DbExpression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+    public static  DbNewInstanceExpression New(TypeUsage instanceType, DbExpression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNew = null;
@@ -958,7 +958,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbNewInstanceExpression NewCollection(DbExpression... elements) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static  DbNewInstanceExpression NewCollection(DbExpression... elements) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewCollection = null;
@@ -973,7 +973,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbNewInstanceExpression NewEmptyCollection(TypeUsage collectionType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbNewInstanceExpression NewEmptyCollection(TypeUsage collectionType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewEmptyCollection = null;
@@ -988,7 +988,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbNotExpression Not(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbNotExpression Not(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNot = null;
@@ -1003,7 +1003,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbNullExpression Null(TypeUsage nullType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbNullExpression Null(TypeUsage nullType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNull = null;
@@ -1018,7 +1018,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbOfTypeExpression OfType(DbExpression argument, TypeUsage type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  DbOfTypeExpression OfType(DbExpression argument, TypeUsage type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOfType = null;
@@ -1033,7 +1033,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbOfTypeExpression OfTypeOnly(DbExpression argument, TypeUsage type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  DbOfTypeExpression OfTypeOnly(DbExpression argument, TypeUsage type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOfTypeOnly = null;
@@ -1048,7 +1048,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbOrExpression Or(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbOrExpression Or(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOr = null;
@@ -1063,7 +1063,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbParameterReferenceExpression Parameter(TypeUsage type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException {
+    public static  DbParameterReferenceExpression Parameter(TypeUsage type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParameter = null;
@@ -1078,7 +1078,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbProjectExpression Project(DbExpressionBinding input, DbExpression projection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  DbProjectExpression Project(DbExpressionBinding input, DbExpression projection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProject = null;
@@ -1093,7 +1093,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbPropertyExpression Property(DbExpression instance, EdmProperty propertyMetadata) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+    public static  DbPropertyExpression Property(DbExpression instance, EdmProperty propertyMetadata) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -1108,7 +1108,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbPropertyExpression Property(DbExpression instance, NavigationProperty navigationProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+    public static  DbPropertyExpression Property(DbExpression instance, NavigationProperty navigationProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -1123,7 +1123,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbPropertyExpression Property(DbExpression instance, RelationshipEndMember relationshipEnd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+    public static  DbPropertyExpression Property(DbExpression instance, RelationshipEndMember relationshipEnd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -1138,7 +1138,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbPropertyExpression Property(DbExpression instance, java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.data.ProviderIncompatibleException, system.ArgumentOutOfRangeException {
+    public static  DbPropertyExpression Property(DbExpression instance, java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.data.ProviderIncompatibleException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -1153,7 +1153,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbQuantifierExpression All(DbExpressionBinding input, DbExpression predicate) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  DbQuantifierExpression All(DbExpressionBinding input, DbExpression predicate) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAll = null;
@@ -1168,7 +1168,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbQuantifierExpression Any(DbExpressionBinding input, DbExpression predicate) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static  DbQuantifierExpression Any(DbExpressionBinding input, DbExpression predicate) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAny = null;
@@ -1183,7 +1183,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbRefExpression CreateRef(EntitySet entitySet, DbExpression... keyValues) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbRefExpression CreateRef(EntitySet entitySet, DbExpression... keyValues) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRef = null;
@@ -1198,7 +1198,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbRefExpression CreateRef(EntitySet entitySet, EntityType entityType, DbExpression... keyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  DbRefExpression CreateRef(EntitySet entitySet, EntityType entityType, DbExpression... keyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRef = null;
@@ -1213,7 +1213,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbRefExpression RefFromKey(EntitySet entitySet, DbExpression keyRow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.ProviderIncompatibleException, system.OutOfMemoryException {
+    public static  DbRefExpression RefFromKey(EntitySet entitySet, DbExpression keyRow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.ProviderIncompatibleException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRefFromKey = null;
@@ -1228,7 +1228,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbRefExpression RefFromKey(EntitySet entitySet, DbExpression keyRow, EntityType entityType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.ProviderIncompatibleException, system.OutOfMemoryException {
+    public static  DbRefExpression RefFromKey(EntitySet entitySet, DbExpression keyRow, EntityType entityType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.ProviderIncompatibleException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRefFromKey = null;
@@ -1243,7 +1243,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbRefKeyExpression GetRefKey(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
+    public static  DbRefKeyExpression GetRefKey(DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRefKey = null;
@@ -1258,7 +1258,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbRelationshipNavigationExpression Navigate(DbExpression navigateFrom, RelationshipEndMember fromEnd, RelationshipEndMember toEnd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbRelationshipNavigationExpression Navigate(DbExpression navigateFrom, RelationshipEndMember fromEnd, RelationshipEndMember toEnd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNavigate = null;
@@ -1273,7 +1273,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbRelationshipNavigationExpression Navigate(RelationshipType type, java.lang.String fromEndName, java.lang.String toEndName, DbExpression navigateFrom) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public static  DbRelationshipNavigationExpression Navigate(RelationshipType type, java.lang.String fromEndName, java.lang.String toEndName, DbExpression navigateFrom) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNavigate = null;
@@ -1288,7 +1288,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbScanExpression Scan(EntitySetBase targetSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static  DbScanExpression Scan(EntitySetBase targetSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectScan = null;
@@ -1303,7 +1303,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbSkipExpression Skip(DbSortExpression argument, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static  DbSkipExpression Skip(DbSortExpression argument, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSkip = null;
@@ -1318,7 +1318,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbSortClause ToSortClause(DbExpression key) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbSortClause ToSortClause(DbExpression key) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSortClause = null;
@@ -1333,7 +1333,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbSortClause ToSortClause(DbExpression key, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbSortClause ToSortClause(DbExpression key, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSortClause = null;
@@ -1348,7 +1348,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbSortClause ToSortClauseDescending(DbExpression key) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbSortClause ToSortClauseDescending(DbExpression key) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSortClauseDescending = null;
@@ -1363,7 +1363,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbSortClause ToSortClauseDescending(DbExpression key, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static  DbSortClause ToSortClauseDescending(DbExpression key, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToSortClauseDescending = null;
@@ -1378,7 +1378,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbTreatExpression TreatAs(DbExpression argument, TypeUsage treatType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbTreatExpression TreatAs(DbExpression argument, TypeUsage treatType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTreatAs = null;
@@ -1393,7 +1393,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbUnionAllExpression UnionAll(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  DbUnionAllExpression UnionAll(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnionAll = null;
@@ -1408,7 +1408,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public static DbVariableReferenceExpression Variable(TypeUsage type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static  DbVariableReferenceExpression Variable(TypeUsage type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVariable = null;

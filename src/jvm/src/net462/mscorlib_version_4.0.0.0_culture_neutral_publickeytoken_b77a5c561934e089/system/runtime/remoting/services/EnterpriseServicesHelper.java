@@ -165,7 +165,7 @@ public class EnterpriseServicesHelper extends NetObject  {
     
     // Methods section
     
-    public static IConstructionReturnMessage CreateConstructionReturnMessage(IConstructionCallMessage ctorMsg, MarshalByRefObject retObj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public static  IConstructionReturnMessage CreateConstructionReturnMessage(IConstructionCallMessage ctorMsg, MarshalByRefObject retObj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateConstructionReturnMessage = null;
@@ -180,7 +180,7 @@ public class EnterpriseServicesHelper extends NetObject  {
         }
     }
 
-    public static void SwitchWrappers(RealProxy oldcp, RealProxy newcp) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
+    public static  void SwitchWrappers(RealProxy oldcp, RealProxy newcp) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

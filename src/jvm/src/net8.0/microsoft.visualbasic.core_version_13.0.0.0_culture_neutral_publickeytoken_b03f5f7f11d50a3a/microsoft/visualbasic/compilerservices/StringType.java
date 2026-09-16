@@ -158,7 +158,7 @@ public class StringType extends NetObject  {
     
     // Methods section
     
-    public static boolean StrLike(java.lang.String Source, java.lang.String Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
+    public static  boolean StrLike(java.lang.String Source, java.lang.String Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStrLike = null;
@@ -172,7 +172,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static boolean StrLikeBinary(java.lang.String Source, java.lang.String Pattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public static  boolean StrLikeBinary(java.lang.String Source, java.lang.String Pattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStrLikeBinary = null;
@@ -186,7 +186,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static boolean StrLikeText(java.lang.String Source, java.lang.String Pattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public static  boolean StrLikeText(java.lang.String Source, java.lang.String Pattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStrLikeText = null;
@@ -200,7 +200,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static int StrCmp(java.lang.String sLeft, java.lang.String sRight, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
+    public static  int StrCmp(java.lang.String sLeft, java.lang.String sRight, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStrCmp = null;
@@ -240,7 +240,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromBoolean(boolean Value) throws Throwable {
+    public static  java.lang.String FromBoolean(boolean Value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromBoolean = null;
@@ -254,7 +254,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromByte(byte Value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String FromByte(byte Value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromByte = null;
@@ -268,7 +268,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromChar(char Value) throws Throwable {
+    public static  java.lang.String FromChar(char Value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromChar = null;
@@ -282,7 +282,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromDate(DateTime Value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
+    public static  java.lang.String FromDate(DateTime Value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDate = null;
@@ -296,7 +296,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromDecimal(Decimal Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
+    public static  java.lang.String FromDecimal(Decimal Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDecimal = null;
@@ -310,7 +310,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromDecimal(Decimal Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static  java.lang.String FromDecimal(Decimal Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDecimal = null;
@@ -324,7 +324,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromDouble(double Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
+    public static  java.lang.String FromDouble(double Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDouble = null;
@@ -338,7 +338,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromDouble(double Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
+    public static  java.lang.String FromDouble(double Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDouble = null;
@@ -352,7 +352,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromInteger(int Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String FromInteger(int Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromInteger = null;
@@ -366,7 +366,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromLong(long Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
+    public static  java.lang.String FromLong(long Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromLong = null;
@@ -380,7 +380,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromObject(NetObject Value) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.OverflowException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.InvalidCastException {
+    public static  java.lang.String FromObject(NetObject Value) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.OverflowException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromObject = null;
@@ -394,7 +394,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromShort(short Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
+    public static  java.lang.String FromShort(short Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromShort = null;
@@ -408,7 +408,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromSingle(Single Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
+    public static  java.lang.String FromSingle(Single Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromSingle = null;
@@ -422,7 +422,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static java.lang.String FromSingle(Single Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
+    public static  java.lang.String FromSingle(Single Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromSingle = null;
@@ -436,7 +436,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static void MidStmtStr(JCORefOut sDest, int StartPosition, int MaxInsertLength, java.lang.String sInsert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ArrayTypeMismatchException {
+    public static  void MidStmtStr(JCORefOut sDest, int StartPosition, int MaxInsertLength, java.lang.String sInsert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

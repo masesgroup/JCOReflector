@@ -155,7 +155,7 @@ public class ObjectPrototype extends JSObject  {
     
     // Methods section
     
-    public static boolean hasOwnProperty(NetObject thisob, NetObject name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException {
+    public static  boolean hasOwnProperty(NetObject thisob, NetObject name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecthasOwnProperty = null;
@@ -169,7 +169,7 @@ public class ObjectPrototype extends JSObject  {
         }
     }
 
-    public static boolean isPrototypeOf(NetObject thisob, NetObject ob) throws Throwable {
+    public static  boolean isPrototypeOf(NetObject thisob, NetObject ob) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectisPrototypeOf = null;
@@ -183,7 +183,7 @@ public class ObjectPrototype extends JSObject  {
         }
     }
 
-    public static boolean propertyIsEnumerable(NetObject thisob, NetObject name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException {
+    public static  boolean propertyIsEnumerable(NetObject thisob, NetObject name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectpropertyIsEnumerable = null;
@@ -197,7 +197,7 @@ public class ObjectPrototype extends JSObject  {
         }
     }
 
-    public static NetObject valueOf(NetObject thisob) throws Throwable {
+    public static  NetObject valueOf(NetObject thisob) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectvalueOf = null;
@@ -212,7 +212,7 @@ public class ObjectPrototype extends JSObject  {
         }
     }
 
-    public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
+    public static  java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoLocaleString = null;
@@ -226,7 +226,7 @@ public class ObjectPrototype extends JSObject  {
         }
     }
 
-    public static java.lang.String toString(NetObject thisob) throws Throwable, system.IndexOutOfRangeException {
+    public static  java.lang.String toString(NetObject thisob) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjecttoString = null;

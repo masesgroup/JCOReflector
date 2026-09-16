@@ -161,7 +161,7 @@ public class AnonymousIdentificationModule extends NetObject  {
     
     // Methods section
     
-    public static void ClearAnonymousIdentifier() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ApplicationException, system.OverflowException {
+    public static  void ClearAnonymousIdentifier() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ApplicationException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

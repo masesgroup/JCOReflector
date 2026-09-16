@@ -154,7 +154,7 @@ public class ForIn extends AST  {
     
     // Methods section
     
-    public static IEnumerator JScriptGetEnumerator(NetObject coll) throws Throwable, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.JScriptException {
+    public static  IEnumerator JScriptGetEnumerator(NetObject coll) throws Throwable, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJScriptGetEnumerator = null;

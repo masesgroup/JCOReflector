@@ -1165,7 +1165,7 @@ public class Calendar extends NetObject  {
         }
     }
 
-    public static Calendar ReadOnly(Calendar calendar) throws Throwable, system.ArgumentNullException {
+    public static  Calendar ReadOnly(Calendar calendar) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadOnly = null;

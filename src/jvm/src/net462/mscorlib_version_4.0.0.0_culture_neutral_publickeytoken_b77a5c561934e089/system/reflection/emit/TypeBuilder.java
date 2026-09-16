@@ -335,7 +335,7 @@ public class TypeBuilder extends TypeInfo  {
         }
     }
 
-    public static ConstructorInfo GetConstructor(NetType type, ConstructorInfo constructor) throws Throwable, system.ArgumentException, system.NotSupportedException {
+    public static  ConstructorInfo GetConstructor(NetType type, ConstructorInfo constructor) throws Throwable, system.ArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetConstructor = null;
@@ -845,7 +845,7 @@ public class TypeBuilder extends TypeInfo  {
         }
     }
 
-    public static FieldInfo GetField(NetType type, FieldInfo field) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+    public static  FieldInfo GetField(NetType type, FieldInfo field) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetField = null;
@@ -938,7 +938,7 @@ public class TypeBuilder extends TypeInfo  {
         }
     }
 
-    public static MethodInfo GetMethod(NetType type, MethodInfo method) throws Throwable, system.ArgumentException, system.NotSupportedException {
+    public static  MethodInfo GetMethod(NetType type, MethodInfo method) throws Throwable, system.ArgumentException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMethod = null;

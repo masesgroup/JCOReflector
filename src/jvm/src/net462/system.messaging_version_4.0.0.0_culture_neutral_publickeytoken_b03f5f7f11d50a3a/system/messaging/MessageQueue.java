@@ -241,7 +241,7 @@ public class MessageQueue extends Component  {
     
     // Methods section
     
-    public static boolean Exists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
+    public static  boolean Exists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExists = null;
@@ -255,7 +255,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static Guid GetMachineId(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
+    public static  Guid GetMachineId(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMachineId = null;
@@ -1011,7 +1011,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueue Create(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
+    public static  MessageQueue Create(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1026,7 +1026,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueue Create(java.lang.String path, boolean transactional) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
+    public static  MessageQueue Create(java.lang.String path, boolean transactional) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -1041,7 +1041,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueue[] GetPrivateQueuesByMachine(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.AccessViolationException {
+    public static  MessageQueue[] GetPrivateQueuesByMachine(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPrivateQueuesByMachine = null;
@@ -1062,7 +1062,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueue[] GetPublicQueues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  MessageQueue[] GetPublicQueues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPublicQueues = null;
@@ -1083,7 +1083,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueue[] GetPublicQueues(MessageQueueCriteria criteria) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  MessageQueue[] GetPublicQueues(MessageQueueCriteria criteria) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPublicQueues = null;
@@ -1104,7 +1104,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueue[] GetPublicQueuesByCategory(Guid category) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  MessageQueue[] GetPublicQueuesByCategory(Guid category) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPublicQueuesByCategory = null;
@@ -1125,7 +1125,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueue[] GetPublicQueuesByLabel(java.lang.String label) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  MessageQueue[] GetPublicQueuesByLabel(java.lang.String label) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPublicQueuesByLabel = null;
@@ -1146,7 +1146,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueue[] GetPublicQueuesByMachine(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.AccessViolationException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
+    public static  MessageQueue[] GetPublicQueuesByMachine(java.lang.String machineName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.AccessViolationException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPublicQueuesByMachine = null;
@@ -1167,7 +1167,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueueEnumerator GetMessageQueueEnumerator() throws Throwable {
+    public static  MessageQueueEnumerator GetMessageQueueEnumerator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMessageQueueEnumerator = null;
@@ -1182,7 +1182,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static MessageQueueEnumerator GetMessageQueueEnumerator(MessageQueueCriteria criteria) throws Throwable {
+    public static  MessageQueueEnumerator GetMessageQueueEnumerator(MessageQueueCriteria criteria) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMessageQueueEnumerator = null;
@@ -1197,7 +1197,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static SecurityContext GetSecurityContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.messaging.MessageQueueException {
+    public static  SecurityContext GetSecurityContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.messaging.MessageQueueException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSecurityContext = null;
@@ -1212,7 +1212,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static void ClearConnectionCache() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public static  void ClearConnectionCache() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1232,7 +1232,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public static void Delete(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
+    public static  void Delete(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

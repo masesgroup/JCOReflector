@@ -158,7 +158,7 @@ public class Animatable extends Freezable  {
     
     // Methods section
     
-    public static boolean ShouldSerializeStoredWeakReference(DependencyObject target) throws Throwable {
+    public static  boolean ShouldSerializeStoredWeakReference(DependencyObject target) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShouldSerializeStoredWeakReference = null;

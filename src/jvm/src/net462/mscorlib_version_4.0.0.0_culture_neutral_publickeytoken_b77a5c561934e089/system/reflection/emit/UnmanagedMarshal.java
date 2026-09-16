@@ -156,7 +156,7 @@ public class UnmanagedMarshal extends NetObject  {
     
     // Methods section
     
-    public static UnmanagedMarshal DefineByValArray(int elemCount) throws Throwable {
+    public static  UnmanagedMarshal DefineByValArray(int elemCount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefineByValArray = null;
@@ -171,7 +171,7 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
-    public static UnmanagedMarshal DefineByValTStr(int elemCount) throws Throwable {
+    public static  UnmanagedMarshal DefineByValTStr(int elemCount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefineByValTStr = null;
@@ -186,7 +186,7 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
-    public static UnmanagedMarshal DefineLPArray(UnmanagedType elemType) throws Throwable {
+    public static  UnmanagedMarshal DefineLPArray(UnmanagedType elemType) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefineLPArray = null;
@@ -201,7 +201,7 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
-    public static UnmanagedMarshal DefineSafeArray(UnmanagedType elemType) throws Throwable {
+    public static  UnmanagedMarshal DefineSafeArray(UnmanagedType elemType) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefineSafeArray = null;
@@ -216,7 +216,7 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
-    public static UnmanagedMarshal DefineUnmanagedMarshal(UnmanagedType unmanagedType) throws Throwable, system.ArgumentException {
+    public static  UnmanagedMarshal DefineUnmanagedMarshal(UnmanagedType unmanagedType) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefineUnmanagedMarshal = null;

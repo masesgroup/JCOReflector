@@ -170,7 +170,7 @@ public class CategoryEditor extends NetObject  {
         }
     }
 
-    public static EditorAttribute CreateEditorAttribute(CategoryEditor editor) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  EditorAttribute CreateEditorAttribute(CategoryEditor editor) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEditorAttribute = null;
@@ -185,7 +185,7 @@ public class CategoryEditor extends NetObject  {
         }
     }
 
-    public static EditorAttribute CreateEditorAttribute(NetType categoryEditorType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  EditorAttribute CreateEditorAttribute(NetType categoryEditorType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEditorAttribute = null;

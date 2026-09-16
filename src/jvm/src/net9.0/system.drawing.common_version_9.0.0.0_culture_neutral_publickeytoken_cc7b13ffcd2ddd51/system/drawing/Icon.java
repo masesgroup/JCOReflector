@@ -267,7 +267,7 @@ public class Icon extends MarshalByRefObject implements system.runtime.serializa
         }
     }
 
-    public static Icon ExtractAssociatedIcon(java.lang.String filePath) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.FormatException {
+    public static  Icon ExtractAssociatedIcon(java.lang.String filePath) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractAssociatedIcon = null;
@@ -282,7 +282,7 @@ public class Icon extends MarshalByRefObject implements system.runtime.serializa
         }
     }
 
-    public static Icon ExtractIcon(java.lang.String filePath, int id, boolean smallIcon) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.io.IOException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  Icon ExtractIcon(java.lang.String filePath, int id, boolean smallIcon) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.io.IOException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractIcon = null;
@@ -297,7 +297,7 @@ public class Icon extends MarshalByRefObject implements system.runtime.serializa
         }
     }
 
-    public static Icon ExtractIcon(java.lang.String filePath, int id, int size) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.io.IOException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static  Icon ExtractIcon(java.lang.String filePath, int id, int size) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.io.IOException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExtractIcon = null;

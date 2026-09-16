@@ -234,7 +234,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
     
     // Methods section
     
-    public static int GetLineNumber(XmlNode node) throws Throwable {
+    public static  int GetLineNumber(XmlNode node) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLineNumber = null;
@@ -274,7 +274,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
         }
     }
 
-    public static int GetLineNumber(XmlReader reader) throws Throwable {
+    public static  int GetLineNumber(XmlReader reader) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetLineNumber = null;
@@ -314,7 +314,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
         }
     }
 
-    public static java.lang.String GetFilename(XmlNode node) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public static  java.lang.String GetFilename(XmlNode node) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFilename = null;
@@ -328,7 +328,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
         }
     }
 
-    public static java.lang.String GetFilename(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public static  java.lang.String GetFilename(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFilename = null;

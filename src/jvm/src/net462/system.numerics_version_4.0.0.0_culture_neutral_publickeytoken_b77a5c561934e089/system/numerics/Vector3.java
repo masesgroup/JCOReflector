@@ -205,7 +205,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Single Distance(Vector3 value1, Vector3 value2) throws Throwable {
+    public static  Single Distance(Vector3 value1, Vector3 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDistance = null;
@@ -220,7 +220,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Single DistanceSquared(Vector3 value1, Vector3 value2) throws Throwable {
+    public static  Single DistanceSquared(Vector3 value1, Vector3 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDistanceSquared = null;
@@ -235,7 +235,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Single Dot(Vector3 vector1, Vector3 vector2) throws Throwable {
+    public static  Single Dot(Vector3 vector1, Vector3 vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDot = null;
@@ -280,7 +280,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Abs(Vector3 value) throws Throwable {
+    public static  Vector3 Abs(Vector3 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAbs = null;
@@ -295,7 +295,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Add(Vector3 left, Vector3 right) throws Throwable {
+    public static  Vector3 Add(Vector3 left, Vector3 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -310,7 +310,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Clamp(Vector3 value1, Vector3 min, Vector3 max) throws Throwable {
+    public static  Vector3 Clamp(Vector3 value1, Vector3 min, Vector3 max) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClamp = null;
@@ -325,7 +325,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Cross(Vector3 vector1, Vector3 vector2) throws Throwable {
+    public static  Vector3 Cross(Vector3 vector1, Vector3 vector2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCross = null;
@@ -340,7 +340,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Divide(Vector3 left, Single divisor) throws Throwable {
+    public static  Vector3 Divide(Vector3 left, Single divisor) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -355,7 +355,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Divide(Vector3 left, Vector3 right) throws Throwable {
+    public static  Vector3 Divide(Vector3 left, Vector3 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivide = null;
@@ -370,7 +370,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Lerp(Vector3 value1, Vector3 value2, Single amount) throws Throwable {
+    public static  Vector3 Lerp(Vector3 value1, Vector3 value2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLerp = null;
@@ -385,7 +385,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Max(Vector3 value1, Vector3 value2) throws Throwable {
+    public static  Vector3 Max(Vector3 value1, Vector3 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMax = null;
@@ -400,7 +400,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Min(Vector3 value1, Vector3 value2) throws Throwable {
+    public static  Vector3 Min(Vector3 value1, Vector3 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMin = null;
@@ -415,7 +415,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Multiply(Single left, Vector3 right) throws Throwable {
+    public static  Vector3 Multiply(Single left, Vector3 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -430,7 +430,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Multiply(Vector3 left, Single right) throws Throwable {
+    public static  Vector3 Multiply(Vector3 left, Single right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -445,7 +445,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Multiply(Vector3 left, Vector3 right) throws Throwable {
+    public static  Vector3 Multiply(Vector3 left, Vector3 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -460,7 +460,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Negate(Vector3 value) throws Throwable {
+    public static  Vector3 Negate(Vector3 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNegate = null;
@@ -475,7 +475,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Normalize(Vector3 value) throws Throwable {
+    public static  Vector3 Normalize(Vector3 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalize = null;
@@ -490,7 +490,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Reflect(Vector3 vector, Vector3 normal) throws Throwable {
+    public static  Vector3 Reflect(Vector3 vector, Vector3 normal) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReflect = null;
@@ -505,7 +505,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 SquareRoot(Vector3 value) throws Throwable {
+    public static  Vector3 SquareRoot(Vector3 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSquareRoot = null;
@@ -520,7 +520,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Subtract(Vector3 left, Vector3 right) throws Throwable {
+    public static  Vector3 Subtract(Vector3 left, Vector3 right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;
@@ -535,7 +535,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Transform(Vector3 position, Matrix4x4 matrix) throws Throwable {
+    public static  Vector3 Transform(Vector3 position, Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -550,7 +550,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 Transform(Vector3 value, Quaternion rotation) throws Throwable {
+    public static  Vector3 Transform(Vector3 value, Quaternion rotation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -565,7 +565,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public static Vector3 TransformNormal(Vector3 normal, Matrix4x4 matrix) throws Throwable {
+    public static  Vector3 TransformNormal(Vector3 normal, Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransformNormal = null;

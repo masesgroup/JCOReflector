@@ -176,7 +176,7 @@ public class ProductHeaderValue extends NetObject implements system.ICloneable {
     
     // Methods section
     
-    public static boolean TryParse(java.lang.String input, JCORefOut<ProductHeaderValue> parsedValue) throws Throwable {
+    public static  boolean TryParse(java.lang.String input, JCORefOut<ProductHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -190,7 +190,7 @@ public class ProductHeaderValue extends NetObject implements system.ICloneable {
         }
     }
 
-    public static ProductHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
+    public static  ProductHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

@@ -152,7 +152,7 @@ public class Buffer extends NetObject  {
     
     // Methods section
     
-    public static byte GetByte(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  byte GetByte(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetByte = null;
@@ -192,7 +192,7 @@ public class Buffer extends NetObject  {
         }
     }
 
-    public static int ByteLength(Array array) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static  int ByteLength(Array array) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectByteLength = null;
@@ -232,7 +232,7 @@ public class Buffer extends NetObject  {
         }
     }
 
-    public static void BlockCopy(Array src, int srcOffset, Array dst, int dstOffset, int count) throws Throwable {
+    public static  void BlockCopy(Array src, int srcOffset, Array dst, int dstOffset, int count) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -242,7 +242,7 @@ public class Buffer extends NetObject  {
         }
     }
 
-    public static void SetByte(Array array, int index, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static  void SetByte(Array array, int index, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

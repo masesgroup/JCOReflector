@@ -450,7 +450,7 @@ public class PrintQueue extends PrintSystemObject  {
         }
     }
 
-    public static XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> width, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> height) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException {
+    public static  XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> width, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> height) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateXpsDocumentWriter = null;
@@ -465,7 +465,7 @@ public class PrintQueue extends PrintSystemObject  {
         }
     }
 
-    public static XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<PrintDocumentImageableArea> documentImageableArea, JCORefOut<PageRangeSelection> pageRangeSelection, JCORefOut<PageRange> pageRange) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintQueueException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
+    public static  XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<PrintDocumentImageableArea> documentImageableArea, JCORefOut<PageRangeSelection> pageRangeSelection, JCORefOut<PageRange> pageRange) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintQueueException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateXpsDocumentWriter = null;
@@ -480,7 +480,7 @@ public class PrintQueue extends PrintSystemObject  {
         }
     }
 
-    public static XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<PrintDocumentImageableArea> documentImageableArea) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintQueueException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
+    public static  XpsDocumentWriter CreateXpsDocumentWriter(JCORefOut<PrintDocumentImageableArea> documentImageableArea) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintQueueException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateXpsDocumentWriter = null;
@@ -495,7 +495,7 @@ public class PrintQueue extends PrintSystemObject  {
         }
     }
 
-    public static XpsDocumentWriter CreateXpsDocumentWriter(PrintQueue printQueue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
+    public static  XpsDocumentWriter CreateXpsDocumentWriter(PrintQueue printQueue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateXpsDocumentWriter = null;
@@ -510,7 +510,7 @@ public class PrintQueue extends PrintSystemObject  {
         }
     }
 
-    public static XpsDocumentWriter CreateXpsDocumentWriter(java.lang.String jobDescription, JCORefOut<PrintDocumentImageableArea> documentImageableArea, JCORefOut<PageRangeSelection> pageRangeSelection, JCORefOut<PageRange> pageRange) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException {
+    public static  XpsDocumentWriter CreateXpsDocumentWriter(java.lang.String jobDescription, JCORefOut<PrintDocumentImageableArea> documentImageableArea, JCORefOut<PageRangeSelection> pageRangeSelection, JCORefOut<PageRange> pageRange) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateXpsDocumentWriter = null;
@@ -525,7 +525,7 @@ public class PrintQueue extends PrintSystemObject  {
         }
     }
 
-    public static XpsDocumentWriter CreateXpsDocumentWriter(java.lang.String jobDescription, JCORefOut<PrintDocumentImageableArea> documentImageableArea) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException {
+    public static  XpsDocumentWriter CreateXpsDocumentWriter(java.lang.String jobDescription, JCORefOut<PrintDocumentImageableArea> documentImageableArea) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateXpsDocumentWriter = null;

@@ -154,7 +154,7 @@ public class Versioned extends NetObject  {
     
     // Methods section
     
-    public static boolean IsNumeric(NetObject Expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException {
+    public static  boolean IsNumeric(NetObject Expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNumeric = null;
@@ -168,7 +168,7 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static NetObject CallByName(NetObject Instance, java.lang.String MethodName, CallType UseCallType, NetObject... Arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMemberException, system.InvalidCastException, system.FormatException, system.OverflowException, system.MissingMethodException, system.NullReferenceException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
+    public static  NetObject CallByName(NetObject Instance, java.lang.String MethodName, CallType UseCallType, NetObject... Arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMemberException, system.InvalidCastException, system.FormatException, system.OverflowException, system.MissingMethodException, system.NullReferenceException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, system.RankException, microsoft.visualbasic.compilerservices.InternalErrorException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCallByName = null;
@@ -183,7 +183,7 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public static  java.lang.String SystemTypeName(java.lang.String VbName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSystemTypeName = null;
@@ -197,7 +197,7 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static java.lang.String TypeName(NetObject Expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static  java.lang.String TypeName(NetObject Expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTypeName = null;
@@ -211,7 +211,7 @@ public class Versioned extends NetObject  {
         }
     }
 
-    public static java.lang.String VbTypeName(java.lang.String SystemName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  java.lang.String VbTypeName(java.lang.String SystemName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVbTypeName = null;

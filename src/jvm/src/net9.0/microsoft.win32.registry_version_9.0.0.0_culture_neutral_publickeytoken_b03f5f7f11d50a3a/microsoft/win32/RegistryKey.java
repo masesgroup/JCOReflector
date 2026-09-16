@@ -270,7 +270,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static RegistryKey FromHandle(SafeRegistryHandle handle, RegistryView view) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static  RegistryKey FromHandle(SafeRegistryHandle handle, RegistryView view) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromHandle = null;
@@ -285,7 +285,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static RegistryKey FromHandle(SafeRegistryHandle handle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static  RegistryKey FromHandle(SafeRegistryHandle handle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromHandle = null;
@@ -300,7 +300,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static RegistryKey OpenBaseKey(RegistryHive hKey, RegistryView view) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  RegistryKey OpenBaseKey(RegistryHive hKey, RegistryView view) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenBaseKey = null;
@@ -315,7 +315,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static RegistryKey OpenRemoteBaseKey(RegistryHive hKey, java.lang.String machineName, RegistryView view) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException {
+    public static  RegistryKey OpenRemoteBaseKey(RegistryHive hKey, java.lang.String machineName, RegistryView view) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenRemoteBaseKey = null;
@@ -330,7 +330,7 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static RegistryKey OpenRemoteBaseKey(RegistryHive hKey, java.lang.String machineName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException {
+    public static  RegistryKey OpenRemoteBaseKey(RegistryHive hKey, java.lang.String machineName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenRemoteBaseKey = null;

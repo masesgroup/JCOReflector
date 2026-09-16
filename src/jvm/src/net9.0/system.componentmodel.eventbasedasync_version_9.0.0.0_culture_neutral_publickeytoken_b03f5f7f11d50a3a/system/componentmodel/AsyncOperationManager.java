@@ -153,7 +153,7 @@ public class AsyncOperationManager extends NetObject  {
     
     // Methods section
     
-    public static AsyncOperation CreateOperation(NetObject userSuppliedState) throws Throwable {
+    public static  AsyncOperation CreateOperation(NetObject userSuppliedState) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateOperation = null;

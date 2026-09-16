@@ -215,7 +215,7 @@ public class OracleBoolean extends ValueType  {
         }
     }
 
-    public static OracleBoolean And(OracleBoolean x, OracleBoolean y) throws Throwable {
+    public static  OracleBoolean And(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAnd = null;
@@ -230,7 +230,7 @@ public class OracleBoolean extends ValueType  {
         }
     }
 
-    public static OracleBoolean Equals(OracleBoolean x, OracleBoolean y) throws Throwable {
+    public static  OracleBoolean Equals(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -245,7 +245,7 @@ public class OracleBoolean extends ValueType  {
         }
     }
 
-    public static OracleBoolean NotEquals(OracleBoolean x, OracleBoolean y) throws Throwable {
+    public static  OracleBoolean NotEquals(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNotEquals = null;
@@ -260,7 +260,7 @@ public class OracleBoolean extends ValueType  {
         }
     }
 
-    public static OracleBoolean OnesComplement(OracleBoolean x) throws Throwable {
+    public static  OracleBoolean OnesComplement(OracleBoolean x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnesComplement = null;
@@ -275,7 +275,7 @@ public class OracleBoolean extends ValueType  {
         }
     }
 
-    public static OracleBoolean Or(OracleBoolean x, OracleBoolean y) throws Throwable {
+    public static  OracleBoolean Or(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOr = null;
@@ -290,7 +290,7 @@ public class OracleBoolean extends ValueType  {
         }
     }
 
-    public static OracleBoolean Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotSupportedException {
+    public static  OracleBoolean Parse(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -305,7 +305,7 @@ public class OracleBoolean extends ValueType  {
         }
     }
 
-    public static OracleBoolean Xor(OracleBoolean x, OracleBoolean y) throws Throwable {
+    public static  OracleBoolean Xor(OracleBoolean x, OracleBoolean y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXor = null;

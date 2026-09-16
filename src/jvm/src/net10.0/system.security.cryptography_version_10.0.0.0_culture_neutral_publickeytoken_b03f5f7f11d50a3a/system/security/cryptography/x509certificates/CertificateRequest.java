@@ -333,7 +333,7 @@ public class CertificateRequest extends NetObject  {
         }
     }
 
-    public static CertificateRequest LoadSigningRequest(byte[] pkcs10, HashAlgorithmName signerHashAlgorithm, CertificateRequestLoadOptions options, RSASignaturePadding signerSignaturePadding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public static  CertificateRequest LoadSigningRequest(byte[] pkcs10, HashAlgorithmName signerHashAlgorithm, CertificateRequestLoadOptions options, RSASignaturePadding signerSignaturePadding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadSigningRequest = null;
@@ -348,7 +348,7 @@ public class CertificateRequest extends NetObject  {
         }
     }
 
-    public static CertificateRequest LoadSigningRequest(JCORefOut dupParam0, HashAlgorithmName dupParam1, CertificateRequestLoadOptions dupParam2, RSASignaturePadding dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public static  CertificateRequest LoadSigningRequest(JCORefOut dupParam0, HashAlgorithmName dupParam1, CertificateRequestLoadOptions dupParam2, RSASignaturePadding dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadSigningRequest = null;
@@ -363,7 +363,7 @@ public class CertificateRequest extends NetObject  {
         }
     }
 
-    public static CertificateRequest LoadSigningRequestPem(java.lang.String pkcs10Pem, HashAlgorithmName signerHashAlgorithm, CertificateRequestLoadOptions options, RSASignaturePadding signerSignaturePadding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public static  CertificateRequest LoadSigningRequestPem(java.lang.String pkcs10Pem, HashAlgorithmName signerHashAlgorithm, CertificateRequestLoadOptions options, RSASignaturePadding signerSignaturePadding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadSigningRequestPem = null;

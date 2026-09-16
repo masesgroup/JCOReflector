@@ -155,7 +155,7 @@ public class SocketTaskExtensions extends NetObject  {
     
     // Methods section
     
-    public static Task ConnectAsync(Socket socket, EndPoint remoteEP) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.net.sockets.SocketException, system.NotSupportedException, system.FormatException {
+    public static  Task ConnectAsync(Socket socket, EndPoint remoteEP) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.net.sockets.SocketException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConnectAsync = null;
@@ -170,7 +170,7 @@ public class SocketTaskExtensions extends NetObject  {
         }
     }
 
-    public static Task ConnectAsync(Socket socket, IPAddress address, int port) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.net.sockets.SocketException, system.NotSupportedException, system.FormatException {
+    public static  Task ConnectAsync(Socket socket, IPAddress address, int port) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.net.sockets.SocketException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConnectAsync = null;
@@ -185,7 +185,7 @@ public class SocketTaskExtensions extends NetObject  {
         }
     }
 
-    public static Task ConnectAsync(Socket socket, IPAddress[] addresses, int port) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.net.sockets.SocketException, system.NotSupportedException, system.AccessViolationException {
+    public static  Task ConnectAsync(Socket socket, IPAddress[] addresses, int port) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.net.sockets.SocketException, system.NotSupportedException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConnectAsync = null;
@@ -200,7 +200,7 @@ public class SocketTaskExtensions extends NetObject  {
         }
     }
 
-    public static Task ConnectAsync(Socket socket, java.lang.String host, int port) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.net.sockets.SocketException, system.NotSupportedException, system.FormatException {
+    public static  Task ConnectAsync(Socket socket, java.lang.String host, int port) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.net.sockets.SocketException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConnectAsync = null;

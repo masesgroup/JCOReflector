@@ -154,7 +154,7 @@ public class DependencyPropertyHelper extends NetObject  {
     
     // Methods section
     
-    public static boolean IsTemplatedValueDynamic(DependencyObject elementInTemplate, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  boolean IsTemplatedValueDynamic(DependencyObject elementInTemplate, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsTemplatedValueDynamic = null;
@@ -168,7 +168,7 @@ public class DependencyPropertyHelper extends NetObject  {
         }
     }
 
-    public static ValueSource GetValueSource(DependencyObject dependencyObject, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static  ValueSource GetValueSource(DependencyObject dependencyObject, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetValueSource = null;

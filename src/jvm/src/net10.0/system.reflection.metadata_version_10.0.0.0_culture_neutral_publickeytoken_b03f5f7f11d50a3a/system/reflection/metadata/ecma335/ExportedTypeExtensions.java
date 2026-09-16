@@ -152,7 +152,7 @@ public class ExportedTypeExtensions extends NetObject  {
     
     // Methods section
     
-    public static int GetTypeDefinitionId(ExportedType exportedType) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException {
+    public static  int GetTypeDefinitionId(ExportedType exportedType) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypeDefinitionId = null;

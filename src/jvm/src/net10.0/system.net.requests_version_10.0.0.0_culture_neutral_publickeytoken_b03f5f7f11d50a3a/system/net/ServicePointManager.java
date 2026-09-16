@@ -160,7 +160,7 @@ public class ServicePointManager extends NetObject  {
     
     // Methods section
     
-    public static ServicePoint FindServicePoint(java.lang.String uriString, IWebProxy proxy) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
+    public static  ServicePoint FindServicePoint(java.lang.String uriString, IWebProxy proxy) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFindServicePoint = null;
@@ -175,7 +175,7 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
-    public static ServicePoint FindServicePoint(Uri address, IWebProxy proxy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException, system.FormatException, system.InvalidTimeZoneException {
+    public static  ServicePoint FindServicePoint(Uri address, IWebProxy proxy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException, system.FormatException, system.InvalidTimeZoneException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFindServicePoint = null;
@@ -190,7 +190,7 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
-    public static ServicePoint FindServicePoint(Uri address) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.UriFormatException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
+    public static  ServicePoint FindServicePoint(Uri address) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.UriFormatException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFindServicePoint = null;
@@ -205,7 +205,7 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
-    public static void SetTcpKeepAlive(boolean enabled, int keepAliveTime, int keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static  void SetTcpKeepAlive(boolean enabled, int keepAliveTime, int keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

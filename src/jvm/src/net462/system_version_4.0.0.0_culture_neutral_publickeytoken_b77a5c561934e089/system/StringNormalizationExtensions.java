@@ -152,7 +152,7 @@ public class StringNormalizationExtensions extends NetObject  {
     
     // Methods section
     
-    public static boolean IsNormalized(java.lang.String value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public static  boolean IsNormalized(java.lang.String value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNormalized = null;
@@ -166,7 +166,7 @@ public class StringNormalizationExtensions extends NetObject  {
         }
     }
 
-    public static boolean IsNormalized(java.lang.String value, NormalizationForm normalizationForm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public static  boolean IsNormalized(java.lang.String value, NormalizationForm normalizationForm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsNormalized = null;
@@ -180,7 +180,7 @@ public class StringNormalizationExtensions extends NetObject  {
         }
     }
 
-    public static java.lang.String Normalize(java.lang.String value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public static  java.lang.String Normalize(java.lang.String value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalize = null;
@@ -194,7 +194,7 @@ public class StringNormalizationExtensions extends NetObject  {
         }
     }
 
-    public static java.lang.String Normalize(java.lang.String value, NormalizationForm normalizationForm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public static  java.lang.String Normalize(java.lang.String value, NormalizationForm normalizationForm) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalize = null;

@@ -159,7 +159,7 @@ public class DataBinder extends NetObject  {
     
     // Methods section
     
-    public static boolean IsBindableType(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public static  boolean IsBindableType(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsBindableType = null;
@@ -173,7 +173,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static NetObject Eval(NetObject container, java.lang.String expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException {
+    public static  NetObject Eval(NetObject container, java.lang.String expression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEval = null;
@@ -188,7 +188,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static NetObject GetDataItem(NetObject container) throws Throwable, system.ArgumentNullException {
+    public static  NetObject GetDataItem(NetObject container) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataItem = null;
@@ -203,7 +203,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static NetObject GetDataItem(NetObject container, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> foundDataItem) throws Throwable, system.ArgumentNullException {
+    public static  NetObject GetDataItem(NetObject container, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> foundDataItem) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDataItem = null;
@@ -218,7 +218,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static NetObject GetIndexedPropertyValue(NetObject container, java.lang.String expr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.web.HttpException {
+    public static  NetObject GetIndexedPropertyValue(NetObject container, java.lang.String expr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetIndexedPropertyValue = null;
@@ -233,7 +233,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static NetObject GetPropertyValue(NetObject container, java.lang.String propName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.web.HttpException {
+    public static  NetObject GetPropertyValue(NetObject container, java.lang.String propName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPropertyValue = null;
@@ -248,7 +248,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static java.lang.String Eval(NetObject container, java.lang.String expression, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException {
+    public static  java.lang.String Eval(NetObject container, java.lang.String expression, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEval = null;
@@ -262,7 +262,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static java.lang.String GetIndexedPropertyValue(NetObject container, java.lang.String propName, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.web.HttpException {
+    public static  java.lang.String GetIndexedPropertyValue(NetObject container, java.lang.String propName, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetIndexedPropertyValue = null;
@@ -276,7 +276,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPropertyValue(NetObject container, java.lang.String propName, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.web.HttpException, system.FormatException {
+    public static  java.lang.String GetPropertyValue(NetObject container, java.lang.String propName, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.web.HttpException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPropertyValue = null;

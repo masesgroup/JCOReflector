@@ -227,7 +227,7 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
-    public static boolean IsUpToDate(Task hostTask, UpToDateCheckType upToDateCheckType, ITaskItem[] readTLogNames, ITaskItem[] writeTLogNames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static  boolean IsUpToDate(Task hostTask, UpToDateCheckType upToDateCheckType, ITaskItem[] readTLogNames, ITaskItem[] writeTLogNames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsUpToDate = null;
@@ -241,7 +241,7 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
-    public static boolean IsUpToDate(TaskLoggingHelper Log, UpToDateCheckType upToDateCheckType, FlatTrackingData inputs, FlatTrackingData outputs) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OverflowException, system.resources.MissingManifestResourceException {
+    public static  boolean IsUpToDate(TaskLoggingHelper Log, UpToDateCheckType upToDateCheckType, FlatTrackingData inputs, FlatTrackingData outputs) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OverflowException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsUpToDate = null;
@@ -270,7 +270,7 @@ public class FlatTrackingData extends NetObject  {
         }
     }
 
-    public static void FinalizeTLogs(boolean trackedOperationsSucceeded, ITaskItem[] readTLogNames, ITaskItem[] writeTLogNames, ITaskItem[] trackedFilesToRemoveFromTLogs) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static  void FinalizeTLogs(boolean trackedOperationsSucceeded, ITaskItem[] readTLogNames, ITaskItem[] writeTLogNames, ITaskItem[] trackedFilesToRemoveFromTLogs) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

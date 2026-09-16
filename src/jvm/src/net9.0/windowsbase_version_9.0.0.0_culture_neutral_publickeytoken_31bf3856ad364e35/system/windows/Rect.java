@@ -255,7 +255,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static boolean Equals(Rect rect1, Rect rect2) throws Throwable {
+    public static  boolean Equals(Rect rect1, Rect rect2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEquals = null;
@@ -311,7 +311,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Inflate(Rect rect, double width, double height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  Rect Inflate(Rect rect, double width, double height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInflate = null;
@@ -326,7 +326,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Inflate(Rect rect, Size size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  Rect Inflate(Rect rect, Size size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInflate = null;
@@ -341,7 +341,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Intersect(Rect rect1, Rect rect2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Rect Intersect(Rect rect1, Rect rect2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIntersect = null;
@@ -356,7 +356,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Offset(Rect rect, double offsetX, double offsetY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  Rect Offset(Rect rect, double offsetX, double offsetY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOffset = null;
@@ -371,7 +371,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Offset(Rect rect, Vector offsetVector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+    public static  Rect Offset(Rect rect, Vector offsetVector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOffset = null;
@@ -386,7 +386,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
+    public static  Rect Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -401,7 +401,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Transform(Rect rect, Matrix matrix) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Rect Transform(Rect rect, Matrix matrix) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransform = null;
@@ -416,7 +416,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Union(Rect rect, Point point) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Rect Union(Rect rect, Point point) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnion = null;
@@ -431,7 +431,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Rect Union(Rect rect1, Rect rect2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static  Rect Union(Rect rect1, Rect rect2) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnion = null;

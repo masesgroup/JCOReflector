@@ -154,7 +154,7 @@ public class XsltFunctions extends NetObject  {
     
     // Methods section
     
-    public static boolean Contains(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  boolean Contains(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectContains = null;
@@ -168,7 +168,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static boolean Lang(java.lang.String value, XPathNavigator context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public static  boolean Lang(java.lang.String value, XPathNavigator context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLang = null;
@@ -182,7 +182,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static boolean StartsWith(java.lang.String s1, java.lang.String s2) throws Throwable {
+    public static  boolean StartsWith(java.lang.String s1, java.lang.String s2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartsWith = null;
@@ -196,7 +196,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static double MSStringCompare(java.lang.String s1, java.lang.String s2, java.lang.String lang, java.lang.String options) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public static  double MSStringCompare(java.lang.String s1, java.lang.String s2, java.lang.String lang, java.lang.String options) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMSStringCompare = null;
@@ -236,7 +236,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static double Round(double value) throws Throwable {
+    public static  double Round(double value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRound = null;
@@ -276,7 +276,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String BaseUri(XPathNavigator navigator) throws Throwable {
+    public static  java.lang.String BaseUri(XPathNavigator navigator) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBaseUri = null;
@@ -290,7 +290,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String MSFormatDateTime(java.lang.String dateTime, java.lang.String format, java.lang.String lang, boolean isDate) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public static  java.lang.String MSFormatDateTime(java.lang.String dateTime, java.lang.String format, java.lang.String lang, boolean isDate) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMSFormatDateTime = null;
@@ -304,7 +304,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String MSLocalName(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  java.lang.String MSLocalName(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMSLocalName = null;
@@ -318,7 +318,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String MSNamespaceUri(java.lang.String name, XPathNavigator currentNode) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  java.lang.String MSNamespaceUri(java.lang.String name, XPathNavigator currentNode) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMSNamespaceUri = null;
@@ -332,7 +332,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String MSUtc(java.lang.String dateTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static  java.lang.String MSUtc(java.lang.String dateTime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMSUtc = null;
@@ -346,7 +346,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String NormalizeSpace(java.lang.String value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  java.lang.String NormalizeSpace(java.lang.String value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNormalizeSpace = null;
@@ -360,7 +360,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String OuterXml(XPathNavigator navigator) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.ArgumentException {
+    public static  java.lang.String OuterXml(XPathNavigator navigator) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOuterXml = null;
@@ -374,7 +374,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String Substring(java.lang.String value, double startIndex) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  java.lang.String Substring(java.lang.String value, double startIndex) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubstring = null;
@@ -388,7 +388,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String Substring(java.lang.String value, double startIndex, double length) throws Throwable, system.ArgumentOutOfRangeException {
+    public static  java.lang.String Substring(java.lang.String value, double startIndex, double length) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubstring = null;
@@ -402,7 +402,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String SubstringAfter(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  java.lang.String SubstringAfter(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubstringAfter = null;
@@ -416,7 +416,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String SubstringBefore(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static  java.lang.String SubstringBefore(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubstringBefore = null;
@@ -430,7 +430,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static java.lang.String Translate(java.lang.String arg, java.lang.String mapString, java.lang.String transString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static  java.lang.String Translate(java.lang.String arg, java.lang.String mapString, java.lang.String transString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTranslate = null;
@@ -444,7 +444,7 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
-    public static XPathItem SystemProperty(XmlQualifiedName name) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static  XPathItem SystemProperty(XmlQualifiedName name) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSystemProperty = null;

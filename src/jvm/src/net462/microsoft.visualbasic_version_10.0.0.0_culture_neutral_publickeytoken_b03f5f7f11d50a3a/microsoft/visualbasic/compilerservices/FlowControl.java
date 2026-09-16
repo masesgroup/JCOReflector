@@ -156,7 +156,7 @@ public class FlowControl extends NetObject  {
     
     // Methods section
     
-    public static boolean ForEachNextObj(JCORefOut<NetObject> obj, IEnumerator enumerator) throws Throwable {
+    public static  boolean ForEachNextObj(JCORefOut<NetObject> obj, IEnumerator enumerator) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForEachNextObj = null;
@@ -170,7 +170,7 @@ public class FlowControl extends NetObject  {
         }
     }
 
-    public static boolean ForLoopInitObj(NetObject Counter, NetObject Start, NetObject Limit, NetObject StepValue, JCORefOut<NetObject> LoopForResult, JCORefOut<NetObject> CounterResult) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
+    public static  boolean ForLoopInitObj(NetObject Counter, NetObject Start, NetObject Limit, NetObject StepValue, JCORefOut<NetObject> LoopForResult, JCORefOut<NetObject> CounterResult) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForLoopInitObj = null;
@@ -184,7 +184,7 @@ public class FlowControl extends NetObject  {
         }
     }
 
-    public static boolean ForNextCheckDec(Decimal count, Decimal limit, Decimal StepValue) throws Throwable {
+    public static  boolean ForNextCheckDec(Decimal count, Decimal limit, Decimal StepValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForNextCheckDec = null;
@@ -198,7 +198,7 @@ public class FlowControl extends NetObject  {
         }
     }
 
-    public static boolean ForNextCheckObj(NetObject Counter, NetObject LoopObj, JCORefOut<NetObject> CounterResult) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
+    public static  boolean ForNextCheckObj(NetObject Counter, NetObject LoopObj, JCORefOut<NetObject> CounterResult) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForNextCheckObj = null;
@@ -212,7 +212,7 @@ public class FlowControl extends NetObject  {
         }
     }
 
-    public static boolean ForNextCheckR4(Single count, Single limit, Single StepValue) throws Throwable {
+    public static  boolean ForNextCheckR4(Single count, Single limit, Single StepValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForNextCheckR4 = null;
@@ -226,7 +226,7 @@ public class FlowControl extends NetObject  {
         }
     }
 
-    public static boolean ForNextCheckR8(double count, double limit, double StepValue) throws Throwable {
+    public static  boolean ForNextCheckR8(double count, double limit, double StepValue) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForNextCheckR8 = null;
@@ -240,7 +240,7 @@ public class FlowControl extends NetObject  {
         }
     }
 
-    public static IEnumerator ForEachInArr(Array ary) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  IEnumerator ForEachInArr(Array ary) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForEachInArr = null;
@@ -255,7 +255,7 @@ public class FlowControl extends NetObject  {
         }
     }
 
-    public static IEnumerator ForEachInObj(NetObject obj) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  IEnumerator ForEachInObj(NetObject obj) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectForEachInObj = null;
@@ -270,7 +270,7 @@ public class FlowControl extends NetObject  {
         }
     }
 
-    public static void CheckForSyncLockOnValueType(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static  void CheckForSyncLockOnValueType(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -673,7 +673,7 @@ namespace MASES.JCOReflector.Engine
             }
             catch (Exception e)
             {
-                JobManager.AppendToConsole(LogLevel.Error, "Error exporting {0}: {1}", typeToExport.Name, e.Message);
+                JobManager.AppendToConsole(LogLevel.Error, $"Error exporting {typeToExport.Name}: {e}");
                 throw;
             }
         }
@@ -1223,10 +1223,21 @@ namespace MASES.JCOReflector.Engine
                 bool isManaged = true;
                 foreach (var parameter in parameters)
                 {
+                    // A parameter is generic if it is a raw generic parameter (T) OR an array of generic parameters (T[])
+                    bool isParamGeneric = EnableGenerics && (parameter.ParameterType.IsGenericParameter ||
+                                         (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
                     // Handle generic parameter types (e.g. T) by emitting their direct name, otherwise convert normally
-                    string paramType = EnableGenerics && parameter.ParameterType.IsGenericParameter
-                        ? parameter.ParameterType.Name
+                    string paramType = isParamGeneric
+                        ? (parameter.ParameterType.IsArray ? parameter.ParameterType.GetElementType().Name : parameter.ParameterType.Name)
                         : ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+
+                    if (isParamGeneric)
+                    {
+                        isArray = parameter.ParameterType.IsArray;
+                        isPrimitive = false;
+                        isManaged = true;
+                        isSpecial = false;
+                    }
 
                     if (!isManaged) break; // found not managed type, stop here
 
@@ -1709,19 +1720,32 @@ namespace MASES.JCOReflector.Engine
                         foreach (var parameter in parameters)
                         {
                             string paramType = string.Empty;
-                            bool isParamGeneric = EnableGenerics && parameter.ParameterType.IsGenericParameter;
+
+                            // A parameter is generic if it is a raw generic parameter (T) OR an array of generic parameters (T[])
+                            bool isParamGeneric = EnableGenerics && (parameter.ParameterType.IsGenericParameter ||
+                                                 (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
+
                             if (isParamGeneric)
                             {
-                                paramType = parameter.ParameterType.Name; // Evaluates to "T" or "K" literal signature
+                                if (parameter.ParameterType.IsArray)
+                                {
+                                    paramType = parameter.ParameterType.GetElementType().Name;
+                                    isArray = true;
+                                }
+                                else
+                                {
+                                    paramType = parameter.ParameterType.Name;
+                                    isArray = false;
+                                }
                                 isPrimitive = false;
                                 isManaged = true;
                                 isSpecial = false;
-                                isArray = false;
                             }
                             else
                             {
                                 paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                             }
+
                             hasNativeArrayInParameter |= isArray && isPrimitive;
                             bool useRefOut = false;
                             if (!EnableRefOutParameters)
@@ -1829,19 +1853,32 @@ namespace MASES.JCOReflector.Engine
                             foreach (var parameter in parameters)
                             {
                                 string paramType = string.Empty;
-                                bool isParamGeneric = EnableGenerics && parameter.ParameterType.IsGenericParameter;
+
+                                // A parameter is generic if it is a raw generic parameter (T) OR an array of generic parameters (T[])
+                                bool isParamGeneric = EnableGenerics && (parameter.ParameterType.IsGenericParameter ||
+                                                     (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
+
                                 if (isParamGeneric)
                                 {
-                                    paramType = parameter.ParameterType.Name;
+                                    if (parameter.ParameterType.IsArray)
+                                    {
+                                        paramType = parameter.ParameterType.GetElementType().Name;
+                                        isArray = true;
+                                    }
+                                    else
+                                    {
+                                        paramType = parameter.ParameterType.Name;
+                                        isArray = false;
+                                    }
                                     isPrimitive = false;
                                     isManaged = true;
                                     isSpecial = false;
-                                    isArray = false;
                                 }
                                 else
                                 {
                                     paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                                 }
+
                                 bool isNativeArrayInParameter = isArray && isPrimitive;
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                                 var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position);

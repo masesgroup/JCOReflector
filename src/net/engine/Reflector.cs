@@ -376,7 +376,8 @@ namespace MASES.JCOReflector.Engine
                                                                   .Replace(Const.Options.Enable_Duplicate_Method_Native_Array_With_JCORefOut_Value, EnableDuplicateMethodNativeArrayWithJCRefOut ? "true" : "false")
                                                                   .Replace(Const.Options.Enable_Inheritance_Value, EnableInheritance ? "true" : "false")
                                                                   .Replace(Const.Options.Enable_Interface_Inheritance_Value, EnableInterfaceInheritance ? "true" : "false")
-                                                                  .Replace(Const.Options.Enable_RefOut_Parameters_Value, EnableRefOutParameters ? "true" : "false");
+                                                                  .Replace(Const.Options.Enable_RefOut_Parameters_Value, EnableRefOutParameters ? "true" : "false")
+                                                                  .Replace(Const.Options.Enable_Generics_Parameters_Value, EnableGenerics ? "true" : "false");
 
             writeFile(jcoBridgeOptionsFile, jcoBridgeOptionsContent);
         }

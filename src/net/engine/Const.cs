@@ -752,6 +752,7 @@ namespace MASES.JCOReflector.Engine
             public const string Enable_Inheritance_Value = "Enable_Inheritance_Value";
             public const string Enable_Interface_Inheritance_Value = "Enable_Interface_Inheritance_Value";
             public const string Enable_RefOut_Parameters_Value = "Enable_RefOut_Parameters_Value";
+            public const string Enable_Generics_Parameters_Value = "Enable_Generics_Parameters_Value";
         }
     }
 }

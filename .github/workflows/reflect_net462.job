@@ -21,5 +21,6 @@
   <EnableInheritance>true</EnableInheritance>
   <EnableInterfaceInheritance>true</EnableInterfaceInheritance>
   <EnableRefOutParameters>true</EnableRefOutParameters>
+  <EnableGenerics>true</EnableGenerics>
   <DryRun>false</DryRun>
 </ReflectorEventArgs>

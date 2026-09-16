@@ -1790,9 +1790,9 @@ namespace MASES.JCOReflector.Engine
                             newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.Name);
                         }
                         // --- REPLACEMENT PIPELINE FOR METHOD TEMPLATE TAGS ---
-                        string modifierKeyword = item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD + " " : string.Empty;
+                        string modifierKeyword = item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty;
                         string finalModifier = modifierKeyword + methodGenericMarker;
-                        methodStr = templateToUse.Replace("METHOD_MODIFIER_KEYWORD", finalModifier)
+                        methodStr = templateToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, finalModifier)
                         .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                         .Replace(Const.Methods.METHOD_NAME, methodName)
                         .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
@@ -1879,7 +1879,7 @@ namespace MASES.JCOReflector.Engine
                                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
                             }
                             execParamStr = execParams.ToString();
-                            dupMethodStr = templateToUse.Replace("METHOD_MODIFIER_KEYWORD", finalModifier)
+                            dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, finalModifier)
                             .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                             .Replace(Const.Methods.METHOD_NAME, methodName)
                             .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
@@ -1890,14 +1890,14 @@ namespace MASES.JCOReflector.Engine
                             .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                             if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
                             {
-                                dupMethodInterfaceStr = templateInterfaceToUse.Replace("METHOD_MODIFIER_KEYWORD", methodGenericMarker)
+                                dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, methodGenericMarker)
                                 .Replace(Const.Methods.METHOD_NAME, methodName)
                                 .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                 .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                 .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
                                 .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                             }
-                            dupMethodSignature = templateInterfaceToUse.Replace("METHOD_MODIFIER_KEYWORD", methodGenericMarker)
+                            dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, methodGenericMarker)
                             .Replace(Const.Methods.METHOD_NAME, methodName)
                             .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
                             .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)

@@ -161,7 +161,7 @@ public class BitmapFrame extends BitmapSource  {
     
     // Methods section
     
-    public static BitmapFrame Create(Stream bitmapStream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
+    public static BitmapFrame Create(Stream bitmapStream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.io.FileFormatException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -176,7 +176,7 @@ public class BitmapFrame extends BitmapSource  {
         }
     }
 
-    public static BitmapFrame Create(Stream bitmapStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
+    public static BitmapFrame Create(Stream bitmapStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.io.FileFormatException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -191,7 +191,7 @@ public class BitmapFrame extends BitmapSource  {
         }
     }
 
-    public static BitmapFrame Create(Uri bitmapUri, RequestCachePolicy uriCachePolicy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
+    public static BitmapFrame Create(Uri bitmapUri, RequestCachePolicy uriCachePolicy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.io.FileFormatException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -206,7 +206,7 @@ public class BitmapFrame extends BitmapSource  {
         }
     }
 
-    public static BitmapFrame Create(Uri bitmapUri, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
+    public static BitmapFrame Create(Uri bitmapUri, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.io.FileFormatException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -221,7 +221,7 @@ public class BitmapFrame extends BitmapSource  {
         }
     }
 
-    public static BitmapFrame Create(Uri bitmapUri, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
+    public static BitmapFrame Create(Uri bitmapUri, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileFormatException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -236,7 +236,7 @@ public class BitmapFrame extends BitmapSource  {
         }
     }
 
-    public static BitmapFrame Create(Uri bitmapUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
+    public static BitmapFrame Create(Uri bitmapUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileFormatException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

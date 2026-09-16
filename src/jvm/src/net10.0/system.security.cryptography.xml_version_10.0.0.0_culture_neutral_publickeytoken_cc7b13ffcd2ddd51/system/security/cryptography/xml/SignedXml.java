@@ -157,7 +157,7 @@ public class SignedXml extends NetObject  {
 
     // Constructors section
     
-    public SignedXml() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+    public SignedXml() throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -167,7 +167,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public SignedXml(XmlDocument document) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+    public SignedXml(XmlDocument document) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -177,7 +177,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public SignedXml(XmlElement elem) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+    public SignedXml(XmlElement elem) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -191,7 +191,7 @@ public class SignedXml extends NetObject  {
     
     // Methods section
     
-    public boolean CheckSignature() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.BadImageFormatException, system.security.cryptography.CryptographicException, system.RankException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.XmlException, system.xml.xpath.XPathException {
+    public boolean CheckSignature() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.BadImageFormatException, system.security.cryptography.CryptographicException, system.RankException, system.diagnostics.UnreachableException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.XmlException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -205,7 +205,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public boolean CheckSignature(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.schema.XmlSchemaException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
+    public boolean CheckSignature(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.schema.XmlSchemaException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -219,7 +219,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public boolean CheckSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.schema.XmlSchemaException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
+    public boolean CheckSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.schema.XmlSchemaException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -233,7 +233,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public boolean CheckSignature(X509Certificate2 certificate, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.formats.asn1.AsnContentException, system.FormatException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.OutOfMemoryException, system.BadImageFormatException, system.TypeLoadException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.xpath.XPathException {
+    public boolean CheckSignature(X509Certificate2 certificate, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.formats.asn1.AsnContentException, system.FormatException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.OutOfMemoryException, system.BadImageFormatException, system.diagnostics.UnreachableException, system.TypeLoadException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -247,7 +247,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public boolean CheckSignatureReturningKey(JCORefOut<AsymmetricAlgorithm> signingKey) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.BadImageFormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.TypeLoadException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.xpath.XPathException {
+    public boolean CheckSignatureReturningKey(JCORefOut<AsymmetricAlgorithm> signingKey) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.BadImageFormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.TypeLoadException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignatureReturningKey = null;
@@ -276,7 +276,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.TypeLoadException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException {
+    public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.TypeLoadException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetXml = null;
@@ -311,7 +311,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public void ComputeSignature() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.xml.XmlException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.xml.xpath.XPathException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public void ComputeSignature() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.xml.XmlException, system.diagnostics.UnreachableException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.xml.xpath.XPathException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -321,7 +321,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public void ComputeSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.xml.XmlException, system.NullReferenceException, system.TypeLoadException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public void ComputeSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.xml.XmlException, system.NullReferenceException, system.diagnostics.UnreachableException, system.TypeLoadException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -331,7 +331,7 @@ public class SignedXml extends NetObject  {
         }
     }
 
-    public void LoadXml(XmlElement value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.TypeLoadException, system.OutOfMemoryException, system.FormatException {
+    public void LoadXml(XmlElement value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.diagnostics.UnreachableException, system.TypeLoadException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

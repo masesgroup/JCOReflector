@@ -3242,11 +3242,11 @@ namespace MASES.JCOReflector.Engine
                 innerType = type.GetElementType();
             }
 
-            // FIX: Guard against generic parameters (like TKey, TValue) which have a null FullName
-            if (innerType.IsGenericParameter || (innerType.IsArray && innerType.GetElementType().IsGenericParameter))
+            // TOTAL FIX FOR BUG #3: Secure against ANY type parameter or constructed type with a null FullName
+            if (innerType.FullName == null || innerType.IsGenericParameter || (innerType.IsArray && innerType.GetElementType().IsGenericParameter))
             {
                 isPrimitive = false;
-                // Fallback to name extraction safely to bypass NullReferenceException
+                // Fallback safely using Name to completely bypass NullReferenceException inside string manipulation methods
                 string genericName = innerType.IsArray ? innerType.GetElementType().Name : innerType.Name;
                 return CheckForSpecialNames(genericName, innerType, out needImport);
             }

@@ -309,6 +309,7 @@ namespace MASES.JCOReflector.Engine
             {
                 ReflectorInterfaceTemplate,
                 ReflectorInterfaceClassTemplate,
+                ReflectorGenericInterfaceClassTemplate,
                 ReflectorInterfaceEventTemplate,
                 ReflectorInterfaceMethodTemplate,
                 ReflectorInterfaceGetTemplate,
@@ -317,8 +318,10 @@ namespace MASES.JCOReflector.Engine
 
                 ReflectorThrowableClassTemplate,
                 ReflectorClassTemplate,
+                ReflectorClassGenericTemplate,
 
                 ReflectorClassConstructorTemplate,
+                ReflectorClassGenericConstructorTemplate,
 
                 ReflectorClassVoidMethodTemplate,
                 ReflectorClassNativeMethodTemplate,
@@ -350,6 +353,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorEnumFlagsTemplate,
 
                 ReflectorEnumeratorTemplate,
+                ReflectorGenericEnumeratorTemplate,
                 ReflectorEnumerableTemplate,
                 ReflectorEnumerableDeprecatedTemplate,
                 ReflectorEnumerableNativeNextTemplate,
@@ -358,10 +362,15 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassEventTemplate,
 
                 VoidDelegateClassTemplate,
+                VoidGenericDelegateClassTemplate,
                 VoidDelegateInterfaceTemplate,
+                VoidGenericDelegateInterfaceTemplate,
                 NativeDelegateClassTemplate,
+                NativeGenericDelegateClassTemplate,
                 ObjectDelegateClassTemplate,
+                ObjectGenericDelegateClassTemplate,
                 NonVoidDelegateInterfaceTemplate,
+                NonVoidGenericDelegateInterfaceTemplate,
 
                 ManifestTemplate,
 
@@ -401,6 +410,7 @@ namespace MASES.JCOReflector.Engine
 
             public const string ReflectorInterfaceTemplate = "JCObjectReflectorInterface.template";
             public const string ReflectorInterfaceClassTemplate = "JCObjectReflectorInterfaceClass.template";
+            public const string ReflectorGenericInterfaceClassTemplate = "JCObjectReflectorGenericInterfaceClass.template";
             public const string ReflectorInterfaceEventTemplate = "JCObjectReflectorInterfaceEvent.template";
             public const string ReflectorInterfaceMethodTemplate = "JCObjectReflectorInterfaceMethod.template";
             public const string ReflectorInterfaceGetTemplate = "JCObjectReflectorInterfaceGetProperty.template";
@@ -409,8 +419,10 @@ namespace MASES.JCOReflector.Engine
 
             public const string ReflectorThrowableClassTemplate = "JCObjectReflectorThrowableClass.template";
             public const string ReflectorClassTemplate = "JCObjectReflectorClass.template";
+            public const string ReflectorClassGenericTemplate = "JCObjectReflectorClassGeneric.template";
 
             public const string ReflectorClassConstructorTemplate = "JCObjectReflectorClassConstructor.template";
+            public const string ReflectorClassGenericConstructorTemplate = "JCObjectReflectorClassGenericConstructor.template";
 
             public const string ReflectorClassVoidMethodTemplate = "JCObjectReflectorClassVoidMethod.template";
             public const string ReflectorClassNativeMethodTemplate = "JCObjectReflectorClassNativeMethod.template";
@@ -442,6 +454,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorEnumFlagsTemplate = "JCObjectReflectorEnumFlags.template";
 
             public const string ReflectorEnumeratorTemplate = "JCObjectReflectorEnumerator.template";
+            public const string ReflectorGenericEnumeratorTemplate = "JCObjectReflectorGenericEnumerator.template";
             public const string ReflectorEnumerableTemplate = "JCObjectReflectorClassEnumerable.template";
             public const string ReflectorEnumerableDeprecatedTemplate = "JCObjectReflectorClassEnumerableDeprecated.template";
             public const string ReflectorEnumerableNativeNextTemplate = "JCObjectReflectorEnumeratorNativeNext.template";
@@ -451,10 +464,15 @@ namespace MASES.JCOReflector.Engine
 
 
             public const string VoidDelegateClassTemplate = "JCObjectReflectorVoidDelegateClass.template";
+            public const string VoidGenericDelegateClassTemplate = "JCObjectReflectorVoidGenericDelegateClass.template";
             public const string VoidDelegateInterfaceTemplate = "JCObjectReflectorVoidDelegateInterface.template";
+            public const string VoidGenericDelegateInterfaceTemplate = "JCObjectReflectorVoidGenericDelegateInterface.template";
             public const string NativeDelegateClassTemplate = "JCObjectReflectorNativeDelegateClass.template";
+            public const string NativeGenericDelegateClassTemplate = "JCObjectReflectorNativeGenericDelegateClass.template";
             public const string ObjectDelegateClassTemplate = "JCObjectReflectorObjectDelegateClass.template";
+            public const string ObjectGenericDelegateClassTemplate = "JCObjectReflectorObjectGenericDelegateClass.template";
             public const string NonVoidDelegateInterfaceTemplate = "JCObjectReflectorNonVoidDelegateInterface.template";
+            public const string NonVoidGenericDelegateInterfaceTemplate = "JCObjectReflectorNonVoidGenericDelegateInterface.template";
 
             public const string ManifestTemplate = "JCOManifest.template";
 
@@ -495,6 +513,8 @@ namespace MASES.JCOReflector.Engine
             public const string PACKAGE_CLASS_ABSTRACT_PROTO = "abstract ";
             public const string PACKAGE_CLASS_IMPLEMENTS_PROTO = "implements ";
             public const string PACKAGE_CLASS_IMPLEMENTS_ITERABLE = "Iterable<{0}>";
+            public const string GENERIC_CLASS_PARAMETERS = "GENERIC_CLASS_PARAMETERS";
+            
         }
 
         public class Parameters
@@ -550,6 +570,8 @@ namespace MASES.JCOReflector.Engine
 
             public const string METHOD_INTERFACE_NAME = "METHOD_INTERFACE_NAME";
             public const string METHOD_ENUMERATOR_NAME = "METHOD_ENUMERATOR_NAME";
+            public const string GENERIC_METHOD_PARAMETERS = "GENERIC_METHOD_PARAMETERS";
+            public const string GENERIC_METHOD_ARGUMENTS = "GENERIC_METHOD_ARGUMENTS";
         }
 
         public class Properties
@@ -597,6 +619,9 @@ namespace MASES.JCOReflector.Engine
             public const string DELEGATE_DYNAMIC_INVOKE_SECTION = "DELEGATE_DYNAMIC_INVOKE_SECTION";
 
             public const string INVOKE_PARAMETER = "{0}, ";
+
+            public const string INVOKE_PARAMETER_GENERIC = ", {0} == null ? null : ((IJCOBridgeReflected){0}).getJCOInstance()";
+
             public const string INPUT_INVOKE_PARAMETER = "{0} {1}, ";
             public const string CONVERTER_BLOCK_PARAMETER_PRIMITIVE = "            {0} {1} = argsFromJCOBridge[{2}] == null ? null : ({0})argsFromJCOBridge[{2}];";
 

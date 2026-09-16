@@ -47,6 +47,7 @@ namespace MASES.JCOReflector.Engine
         static bool EnableInheritance = false;
         static bool EnableInterfaceInheritance = false;
         static bool EnableRefOutParameters = false;
+        static bool EnableGenerics = false;
 
         static string SourceDestinationFolder;
         static string CsvDestinationFolder;
@@ -303,6 +304,31 @@ namespace MASES.JCOReflector.Engine
             return res;
         }
 
+        static string GetJavaClassName(this Type type, Assembly currentAssembly)
+        {
+            if (!EnableGenerics || !type.IsGenericType) return type.Name;
+
+            // Extract the clean name before the backtick (e.g., "List" from "List`1")
+            string cleanName = type.Name.Split('`')[0];
+
+            // Check if OTHER generic variants exist within the same namespace 
+            // with the exact same name but a different number of arguments
+            bool hasNameCollision = currentAssembly.GetTypes().Any(t =>
+                t.Namespace == type.Namespace &&
+                t.Name.StartsWith(cleanName + "`") &&
+                t.GetGenericArguments().Length != type.GetGenericArguments().Length
+            );
+
+            // If there is a collision (e.g., Tuple), use the clean suffix for Java (Tuple_2)
+            // If there is NO collision (e.g., List), use only the clean name without numbers
+            if (hasNameCollision)
+            {
+                return $"{cleanName}_{type.GetGenericArguments().Length}";
+            }
+
+            return cleanName;
+        }
+
         static string GetAssemblies(this IEnumerable<string> assemblyNames)
         {
             string res;
@@ -386,6 +412,7 @@ namespace MASES.JCOReflector.Engine
             EnableInheritance = args.EnableInheritance;
             EnableInterfaceInheritance = args.EnableInterfaceInheritance;
             EnableRefOutParameters = args.EnableRefOutParameters;
+            EnableGenerics = args.EnableGenerics;
             EnableWrite = !args.DryRun;
             AvoidDisableInternalNamespace = args.AvoidDisableInternalNamespace;
 
@@ -499,8 +526,9 @@ namespace MASES.JCOReflector.Engine
 
         static bool TypePrefilter(this Type type)
         {
+            // Allow public types and valid generic type definitions, while discarding raw generic parameters (like T)
             if (type.IsPublic
-                && !type.IsGenericType
+                && (!type.IsGenericType || (EnableGenerics && type.IsGenericTypeDefinition))
                 && (AvoidDisableInternalNamespace || !type.ToPackageName().Contains(Const.SpecialNames.Internal)) // avoid types with internal namespace name which are public
                )
             {
@@ -701,24 +729,40 @@ namespace MASES.JCOReflector.Engine
         {
             var typeName = typeToExport.FullName;
 
-            JobManager.AppendToConsole(LogLevel.Verbose, "Start exporting {0}", typeName);
+            // RESOLUTION GENERICS: Calculate java class name using collision checker to secure clean logs
+            string javaClassName = typeToExport.GetJavaClassName(typeToExport.Assembly);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Start exporting {0}", javaClassName);
+
             bool isPrimitive = true;
             string defaultPrimitiveValue = string.Empty;
             bool isManaged = true;
             bool isSpecial = false;
             bool isArray = false;
-            ConvertType(null, typeToExport, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+
+            // GENERICS UPDATED: Allow open generic type definitions to bypass standard conversion filters
+            if (EnableGenerics && typeToExport.IsGenericTypeDefinition)
+            {
+                isPrimitive = false;
+                isSpecial = false;
+                isManaged = true;
+                isArray = false;
+            }
+            else
+            {
+                ConvertType(null, typeToExport, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+            }
 
             if (isPrimitive || isSpecial || !isManaged)
             {
-                JobManager.AppendToConsole(LogLevel.Verbose, "Discarding {0}", typeName);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Discarding {0}", javaClassName);
                 Interlocked.Increment(ref discardedTypes);
                 return;
             }
 
             if (typeof(Delegate).IsAssignableFrom(typeToExport))
             {
-                typeToExport.ExportingDelegate(destFolder, assemblyname);
+                string dummyEnumeratorType = string.Empty;
+                typeToExport.ExportingDelegate(destFolder, assemblyname, out dummyEnumeratorType);
             }
             else if (typeToExport.HasEnumerator())
             {
@@ -796,7 +840,6 @@ namespace MASES.JCOReflector.Engine
         static void ExportInterface(this Type item, string destFolder, string assemblyname)
         {
             bool isException = false;
-            string reflectorInterfaceClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceClassTemplate);
             string reflectorInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceTemplate);
             string packageBaseClass = Const.SpecialNames.NetObject;
             IList<Type> imports = new List<Type>();
@@ -826,32 +869,54 @@ namespace MASES.JCOReflector.Engine
                 }
             }
 
+            // TEMPLATE SELECTION: Select between standard and generic implementation templates dynamically
+            string reflectorInterfaceClassTemplate = EnableGenerics && item.IsGenericTypeDefinition
+                ? Const.Templates.GetTemplate(Const.Templates.ReflectorGenericInterfaceClassTemplate)
+                : Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceClassTemplate);
+
+            // RESOLUTION GENERICS: Calculate java interface name using collision checker
             string implementsStr = string.Empty;
             var packageName = item.ToPackageName();
+            string javaInterfaceName = item.GetJavaClassName(item.Assembly);
+
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                                              .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseClass)
-                                                                             .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
+                                                                             .Replace(Const.Class.PACKAGE_CLASS_NAME, javaInterfaceName)
                                                                              .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                                              .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
                                                                              .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
 
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                                    .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseInterface)
-                                                                   .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
+                                                                   .Replace(Const.Class.PACKAGE_CLASS_NAME, javaInterfaceName)
                                                                    .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                                    .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
                                                                    .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
 
-            var typeName = item.Name;
+            // GENERICS INJECTION: Inject bounds and method type definitions into both files if item is generic
+            if (EnableGenerics && item.IsGenericTypeDefinition)
+            {
+                Type[] genericArguments = item.GetGenericArguments();
+                string classParameters = string.Join(", ", genericArguments.Select(t => $"{t.Name} extends IJCOBridgeReflected"));
+                string methodArguments = string.Join(", ", genericArguments.Select(t => t.Name));
+
+                // Update the implementation file template tags
+                reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters);
+                reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Methods.GENERIC_METHOD_PARAMETERS, classParameters);
+                reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Methods.GENERIC_METHOD_ARGUMENTS, methodArguments);
+
+                // Update the interface pure file declaration layout to append <T extends...>
+                reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace($"interface {javaInterfaceName}", $"interface {javaInterfaceName}<{classParameters}>");
+            }
 
             string returnEnumerableType = string.Empty;
             string returnInterfaceSection = string.Empty;
-            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", javaInterfaceName);
             var methodsStr = item.ExportMethods(imports, implementableInterfaces, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.METHODS_SECTION, returnInterfaceSection);
 
-            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", javaInterfaceName);
             var propInstanceStr = item.ExportProperties(imports, implementableInterfaces, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, propInstanceStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, returnInterfaceSection);
@@ -874,10 +939,12 @@ namespace MASES.JCOReflector.Engine
                 JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
-            var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", typeName));
+
+            // WRITE LOGIC FIXED: Saves both interface and implementation files with corrected names
+            var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", javaInterfaceName));
             writeFile(fileName, reflectorInterfaceTemplate);
 
-            fileName = Path.Combine(pathToSaveTo, string.Format("{0}" + Const.SpecialNames.ImplementationTrailer + ".java", typeName));
+            fileName = Path.Combine(pathToSaveTo, string.Format("{0}" + Const.SpecialNames.ImplementationTrailer + ".java", javaInterfaceName));
             writeFile(fileName, reflectorInterfaceClassTemplate);
 
             Interlocked.Increment(ref implementedInterfaces);
@@ -909,7 +976,11 @@ namespace MASES.JCOReflector.Engine
             }
             else
             {
-                reflectorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassTemplate);
+                // TEMPLATE SELECTION: Select between standard class and generic class definition templates dynamically
+                reflectorClassTemplate = EnableGenerics && item.IsGenericTypeDefinition
+                    ? Const.Templates.GetTemplate(Const.Templates.ReflectorClassGenericTemplate)
+                    : Const.Templates.GetTemplate(Const.Templates.ReflectorClassTemplate);
+
                 packageBaseClass = Const.SpecialNames.NetObject;
                 if (EnableInterfaceInheritance && typeof(IEnumerable).IsAssignableFrom(item))
                 {
@@ -940,17 +1011,30 @@ namespace MASES.JCOReflector.Engine
                 }
             }
 
+            // RESOLUTION GENERICS: Calculate java class name using collision checker to avoid raw backticks or wrong _1 suffixes
             var packageName = item.ToPackageName();
+            string javaClassName = item.GetJavaClassName(item.Assembly);
+
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                            .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseClass)
-                                                           .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
+                                                           .Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName)
                                                            .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                            .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
                                                            .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
 
-            var typeName = item.Name;
+            // GENERICS INJECTION: Inject bounds and method type definitions into master class template if item is generic
+            if (EnableGenerics && item.IsGenericTypeDefinition)
+            {
+                Type[] genericArguments = item.GetGenericArguments();
+                string classParameters = string.Join(", ", genericArguments.Select(t => $"{t.Name} extends IJCOBridgeReflected"));
+                string methodArguments = string.Join(", ", genericArguments.Select(t => t.Name));
 
-            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Constructors from {0}", typeName);
+                reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters);
+                reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Methods.GENERIC_METHOD_PARAMETERS, classParameters);
+                reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Methods.GENERIC_METHOD_ARGUMENTS, methodArguments);
+            }
+
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Constructors from {0}", javaClassName);
             string ctorStr = string.Empty;
             if (EnableAbstract && !item.IsAbstract)
             {
@@ -958,14 +1042,14 @@ namespace MASES.JCOReflector.Engine
             }
             else if (!isException)
             {
-                ctorStr = Const.CTor.DEFAULT_CTOR.Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name);
+                ctorStr = Const.CTor.DEFAULT_CTOR.Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName);
             }
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.CONSTRUCTORS_SECTION, ctorStr);
 
             bool isDisposable = allDirectInterfaces.Contains(typeof(IDisposable));
             string returnEnumerableType = string.Empty;
             string returnInterfaceSection = string.Empty;
-            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", javaClassName);
             var methodsStr = item.ExportMethods(imports, implementableInterfaces, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
             if (isDisposable)
             {
@@ -973,7 +1057,7 @@ namespace MASES.JCOReflector.Engine
             }
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
 
-            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", javaClassName);
             var propInstanceStr = item.ExportProperties(imports, implementableInterfaces, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, propInstanceStr);
 
@@ -1011,13 +1095,13 @@ namespace MASES.JCOReflector.Engine
                 }
 
                 if (string.IsNullOrEmpty(implementsStr)) implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + implStr;
-                else implementsStr += ", " + implStr; // proto for other interface
+                else implementsStr += ", " + implStr;
             }
 
             if (isDisposable)
             {
                 if (string.IsNullOrEmpty(implementsStr)) implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + Const.SpecialNames.AutoCloseable;
-                else implementsStr += ", " + Const.SpecialNames.AutoCloseable; // proto for other interface
+                else implementsStr += ", " + Const.SpecialNames.AutoCloseable;
             }
 
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_IMPLEMENTS_SECTION, implementsStr)
@@ -1030,7 +1114,9 @@ namespace MASES.JCOReflector.Engine
                 JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
-            var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", typeName));
+
+            // WRITE LOGIC FIXED: Saves the class file using the resolved non-colliding clean Java name
+            var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", javaClassName));
             writeFile(fileName, reflectorClassTemplate);
 
             Interlocked.Increment(ref implementedClasses);
@@ -1093,10 +1179,15 @@ namespace MASES.JCOReflector.Engine
 
             ctorTypes = ctorLst.ToArray();
 
-            var ctorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassConstructorTemplate);
-            ctorClassTemplate = ctorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_NAME, type.Name);
+            // TEMPLATE SELECTION: Dynamically choose the correct template file based on generic definition
+            var ctorClassTemplate = EnableGenerics && type.IsGenericTypeDefinition
+                ? Const.Templates.GetTemplate(Const.Templates.ReflectorClassGenericConstructorTemplate)
+                : Const.Templates.GetTemplate(Const.Templates.ReflectorClassConstructorTemplate);
 
-            var defaultCtor = Const.CTor.DEFAULT_CTOR.Replace(Const.Class.PACKAGE_CLASS_NAME, type.Name);
+            var javaClassName = type.GetJavaClassName(type.Assembly);
+            ctorClassTemplate = ctorClassTemplate.Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName);
+
+            var defaultCtor = Const.CTor.DEFAULT_CTOR.Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName);
 
             StringBuilder ctors = new StringBuilder();
 
@@ -1131,7 +1222,11 @@ namespace MASES.JCOReflector.Engine
                 bool isManaged = true;
                 foreach (var parameter in parameters)
                 {
-                    string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                    // Handle generic parameter types (e.g. T) by emitting their direct name, otherwise convert normally
+                    string paramType = EnableGenerics && parameter.ParameterType.IsGenericParameter
+                        ? parameter.ParameterType.Name
+                        : ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+
                     if (!isManaged) break; // found not managed type, stop here
 
                     var paramName = ReplaceSinglekeyword(parameter.Name);
@@ -1164,8 +1259,10 @@ namespace MASES.JCOReflector.Engine
                 var exceptionStr = item.ExceptionStringBuilder(imports);
 
                 var otherCtor = ctorClassTemplate.Replace(Const.CTor.CTOR_PARAMETERS, ctorParamStr)
-                                                 .Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, newObjParamStr)
                                                  .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+
+                // Both templates now consume CTOR_NEWOBJECT_PARAMETERS seamlessly
+                otherCtor = otherCtor.Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, newObjParamStr);
 
                 ctors.AppendLine(otherCtor);
 
@@ -1214,9 +1311,9 @@ namespace MASES.JCOReflector.Engine
 
             if (!avoidWrite) Interlocked.Increment(ref analyzedEnumerators);
 
-            if (item.IsGenericType
-                || item.IsGenericParameter
-               ) return false;
+            // Open generic definitions are now processed natively by the new pipeline, raw open arguments are discarded
+            if (item.IsGenericParameter) return false;
+            if (item.IsGenericType && !(EnableGenerics && item.IsGenericTypeDefinition)) return false;
 
             IList<Type> imports = new List<Type>();
             var propertyMethod = item.GetProperty("Current");
@@ -1230,38 +1327,85 @@ namespace MASES.JCOReflector.Engine
             bool isManaged = true;
             bool isSpecial = false;
             bool isArray = false;
+            bool isCurrentGeneric = EnableGenerics && propertyMethod.PropertyType.IsGenericParameter;
 
-            returnEnumeratorType = ConvertType(imports, propertyMethod.PropertyType, out isPrimitive, out defaultPrimitiveReturnValue, out isManaged, out isSpecial, out isArray);
+            // GENERICS UPDATED: Extract generic signature literals ("T") safely without calling ConvertType
+            if (isCurrentGeneric)
+            {
+                returnEnumeratorType = propertyMethod.PropertyType.Name; // Evaluates to "T" literal signature
+                isPrimitive = true; // FORCED: Triggers File 28 template to bypass "new T()" erasure compiler crash
+                isManaged = true;
+                isSpecial = false;
+                isArray = false;
+            }
+            else
+            {
+                returnEnumeratorType = ConvertType(imports, propertyMethod.PropertyType, out isPrimitive, out defaultPrimitiveReturnValue, out isManaged, out isSpecial, out isArray);
+            }
 
             if (!isManaged || isArray
-                || (isPrimitive && !returnEnumeratorType.Contains("String"))) // only String type from native are accepted, other are not valid for Iterable<E> Java interface
+                || (isPrimitive && !returnEnumeratorType.Contains("String") && !isCurrentGeneric))
             {
+                // Only String and open generic parameter types are accepted, standard primitives are rejected for Iterable<E>
                 returnEnumeratorType = string.Empty;
                 return false;
             }
 
             if (avoidWrite) return true;
 
-            var nextTemplateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorEnumerableNativeNextTemplate : Const.Templates.ReflectorEnumerableObjectNextTemplate);
+            // TEMPLATE SELECTION FOR NEXT SECTION: Choose sub-template for the next() method body
+            string nextSection = string.Empty;
+            if (isCurrentGeneric)
+            {
+                // For generic type parameters, we load the native/string template (File 28) to enforce a direct cast
+                var nextTemplateRaw = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumerableNativeNextTemplate);
 
-            string nextSection = nextTemplateToUse.Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType)
-                                                  .Replace(Const.Enumerator.PACKAGE_IMPLEMENTATION_INNER_CLASS_NAME, propertyMethod.PropertyType.IsInterface ? returnEnumeratorType + Const.SpecialNames.ImplementationTrailer : returnEnumeratorType);
+                // Replace the default toString() statement with a clean runtime generic cast to (T)
+                string standardStringConversion = $"({returnEnumeratorType})classInstance.next().toString()";
+                string genericDirectCast = $"({returnEnumeratorType})classInstance.next()";
 
-            var reflectorEnumeratorTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumeratorTemplate);
+                nextSection = nextTemplateRaw.Replace($"(PACKAGE_INNER_CLASS_NAME)classInstance.next().toString()", genericDirectCast)
+                                             .Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType);
+            }
+            else
+            {
+                // Standard original JCOReflector sub-template processing pipeline
+                var nextTemplateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorEnumerableNativeNextTemplate : Const.Templates.ReflectorEnumerableObjectNextTemplate);
+                nextSection = nextTemplateToUse.Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType)
+                                              .Replace(Const.Enumerator.PACKAGE_IMPLEMENTATION_INNER_CLASS_NAME, propertyMethod.PropertyType.IsInterface ? returnEnumeratorType + Const.SpecialNames.ImplementationTrailer : returnEnumeratorType);
+            }
+
+            // TEMPLATE SELECTION: Select between standard and generic enumerator master templates dynamically
+            var templateToken = EnableGenerics && item.IsGenericTypeDefinition
+                ? Const.Templates.ReflectorGenericEnumeratorTemplate
+                : Const.Templates.ReflectorEnumeratorTemplate;
+
+            var reflectorEnumeratorTemplate = Const.Templates.GetTemplate(templateToken);
 
             var importsStr = imports.ExportImports();
 
+            // RESOLUTION GENERICS: Resolve non-colliding java class name for the enumerator file name
             var packageName = item.ToPackageName();
+            string javaClassName = item.GetJavaClassName(item.Assembly);
+
             var enumeratorStr = reflectorEnumeratorTemplate.Replace(Const.Enumerator.PACKAGE_NAME, packageName)
                                                            .Replace(Const.Enumerator.PACKAGE_IMPORT_SECTION, importsStr)
                                                            .Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType)
                                                            .Replace(Const.Enumerator.PACKAGE_IMPLEMENTATION_INNER_CLASS_NAME, propertyMethod.PropertyType.IsInterface ? returnEnumeratorType + Const.SpecialNames.ImplementationTrailer : returnEnumeratorType)
-                                                           .Replace(Const.Enumerator.PACKAGE_CLASS_NAME, item.Name)
+                                                           .Replace(Const.Enumerator.PACKAGE_CLASS_NAME, javaClassName)
                                                            .Replace(Const.Enumerator.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                            .Replace(Const.Enumerator.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
                                                            .Replace(Const.Enumerator.FULLYQUALIFIED_CLASS_NAME, item.FullName)
                                                            .Replace(Const.Enumerator.PACKAGE_CLASS_NEXT_SECTION, nextSection)
                                                            .Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
+
+            // GENERICS INJECTION: Compile the type bounds definition if the enumerator is a generic definition
+            if (EnableGenerics && item.IsGenericTypeDefinition)
+            {
+                Type[] genericArguments = item.GetGenericArguments();
+                string classParameters = string.Join(", ", genericArguments.Select(t => $"{t.Name} extends IJCOBridgeReflected"));
+                enumeratorStr = enumeratorStr.Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters);
+            }
 
             var pathToSaveTo = packageName.Replace('.', '\\');
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
@@ -1270,7 +1414,9 @@ namespace MASES.JCOReflector.Engine
                 JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
-            var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", item.Name));
+
+            // WRITE LOGIC FIXED: Saves the file with the resolved non-colliding Java name
+            var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", javaClassName));
             writeFile(fileName, enumeratorStr);
 
             Interlocked.Increment(ref implementedEnumerators);
@@ -1412,8 +1558,8 @@ namespace MASES.JCOReflector.Engine
                     isManaged = true;
 
                     if (!item.IsPublic
-                        || item.IsSpecialName // remove properties
-                        || methodsSignatureCreated.Contains(item.ToString()) // avoid duplicated methods from inheritance
+                        || item.IsSpecialName// remove properties
+                        || methodsSignatureCreated.Contains(item.ToString())
                        ) continue;
 
                     if (withInheritance)
@@ -1428,9 +1574,12 @@ namespace MASES.JCOReflector.Engine
                         Interlocked.Increment(ref analyzedMethods);
                     }
 
-                    if (item.IsGenericMethod // don't manage generic methods
-                        || item.ContainsGenericParameters
-                        || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
+                    if (!EnableGenerics && (item.IsGenericMethod // don't manage generic methods
+                                            || item.ContainsGenericParameters)
+                       ) continue;
+
+                    // GENERICS UPDATED: Allow methods containing generic parameters, block only real complex unbound scenarios
+                    if (((withInheritance && !isInterface) ? item.DeclaringType != type : false)
                         || (!methodsNameCreated.Contains(methodName) ? false : methodsSignatureCreated.IsDifferentOnlyForRetVal(item.ToString(), methodName))
                        ) continue;
 
@@ -1501,48 +1650,88 @@ namespace MASES.JCOReflector.Engine
                         isRetValArray = false;
                         string returnType = "void";
                         bool isInterfaceRetVal = false;
+                        string implementationReturnType = string.Empty;
+                        string methodGenericMarker = string.Empty;
+
                         if (item.ReturnType == typeof(void))
                         {
                             templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassVoidMethodTemplate);
                         }
                         else
                         {
-                            returnType = ConvertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
-                            if (!isManaged) continue;
-                            isPrimitive |= typeof(Delegate).IsAssignableFrom(item.ReturnType);
-
-                            if (isRetValArray)
+                            // GENERICS UPDATED: Route generic type parameters returned by methods natively
+                            if (EnableGenerics && item.ReturnType.IsGenericParameter)
                             {
-                                isInterfaceRetVal = item.ReturnType.GetElementType().IsInterface;
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate
-                                                                                        : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                                returnType = item.ReturnType.Name; // Evaluates to "T" or "K" literal signature
+                                isPrimitive = true; // FORCED: Triggers File 6 template to bypass "new T()" erasure compilation crash
+                                isManaged = true;
+                                isSpecial = false;
+                                isRetValArray = false;
+                                isInterfaceRetVal = false;
+                                implementationReturnType = returnType;
+
+                                // Check if the generic parameter belongs to the METHOD itself (Generic Method like <K>)
+                                if (item.ReturnType.DeclaringMethod != null)
+                                {
+                                    methodGenericMarker = $"<{returnType} extends IJCOBridgeReflected> ";
+                                }
+
+                                templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassNativeMethodTemplate);
                             }
                             else
                             {
-                                isInterfaceRetVal = item.ReturnType.IsInterface;
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(returnType) ? Const.Templates.ReflectorClassNativeMethodWithCastToNumberTemplate 
-                                                                                                                                       : Const.Templates.ReflectorClassNativeMethodTemplate
-                                                                                        : Const.Templates.ReflectorClassObjectMethodTemplate);
+                                returnType = ConvertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
+                                if (!isManaged) continue;
+
+                                isPrimitive |= typeof(Delegate).IsAssignableFrom(item.ReturnType);
+                                if (isRetValArray)
+                                {
+                                    isInterfaceRetVal = item.ReturnType.GetElementType().IsInterface;
+                                    implementationReturnType = isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType;
+                                    templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate
+                                    : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                                }
+                                else
+                                {
+                                    isInterfaceRetVal = item.ReturnType.IsInterface;
+                                    implementationReturnType = isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType;
+                                    templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(returnType) ? Const.Templates.ReflectorClassNativeMethodWithCastToNumberTemplate
+                                    : Const.Templates.ReflectorClassNativeMethodTemplate
+                                    : Const.Templates.ReflectorClassObjectMethodTemplate);
+                                }
                             }
                         }
-
+                        // --- FIXED GENERICS ANALYSIS FOR METHOD INPUT PARAMETERS ---
                         StringBuilder inputParams = new StringBuilder();
                         StringBuilder execParams = new StringBuilder();
                         bool builtWithJCORefOut = false;
                         foreach (var parameter in parameters)
                         {
-                            string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                            string paramType = string.Empty;
+                            bool isParamGeneric = EnableGenerics && parameter.ParameterType.IsGenericParameter;
+                            if (isParamGeneric)
+                            {
+                                paramType = parameter.ParameterType.Name; // Evaluates to "T" or "K" literal signature
+                                isPrimitive = false;
+                                isManaged = true;
+                                isSpecial = false;
+                                isArray = false;
+                            }
+                            else
+                            {
+                                paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                            }
                             hasNativeArrayInParameter |= isArray && isPrimitive;
                             bool useRefOut = false;
                             if (!EnableRefOutParameters)
                             {
-                                isManaged &= !(parameter.IsOut || parameter.ParameterType.IsByRef); // out parameters not managed
+                                isManaged &= !(parameter.IsOut || parameter.ParameterType.IsByRef);
                             }
                             else
                             {
                                 useRefOut = parameter.IsOut || parameter.ParameterType.IsByRef;
                             }
-                            if (!isManaged) break; // found not managed type, stop here
+                            if (!isManaged) break;
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                             string formatter = string.Empty;
                             string objectCaster = string.Empty;
@@ -1554,7 +1743,6 @@ namespace MASES.JCOReflector.Engine
                                 {
                                     primitiveParam = string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, Const.SpecialNames.DirectMappablePrimitives[paramType]);
                                 }
-
                                 string typeString = isPrimitive ? primitiveParam : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
                                 inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
                                 formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
@@ -1563,47 +1751,69 @@ namespace MASES.JCOReflector.Engine
                             else
                             {
                                 inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
-                                formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
-                                if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
-                                if (isArray && parameters.Length == 1)
+                                if (isParamGeneric)
                                 {
-                                    objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
+                                    // GENERICS SECURITY CAST: Explicitly cast T or K to IJCOBridgeReflected to expose getJCOInstance() for marshalling
+                                    formatter = ", " + paramName + " == null ? null : ((IJCOBridgeReflected)" + paramName + ").getJCOInstance()";
+                                }
+                                else
+                                {
+                                    formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
+                                    if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
+                                    if (isArray && parameters.Length == 1)
+                                    {
+                                        objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
+                                    }
                                 }
                             }
-
-                            execParams.Append(string.Format(formatter, objectCaster, paramName));
+                            if (isParamGeneric && !useRefOut)
+                            {
+                                execParams.Append(formatter);
+                            }
+                            else
+                            {
+                                execParams.Append(string.Format(formatter, objectCaster, paramName));
+                            }
                         }
-                        if (!isManaged) continue; // found not managed type, jump to next 
+                        if (!isManaged) continue;
                         string inputParamStr = inputParams.ToString();
                         if (!string.IsNullOrEmpty(inputParamStr))
                         {
                             inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
                         }
-
                         string execParamStr = execParams.ToString();
-
                         var exceptionStr = item.ExceptionStringBuilder(imports);
-
                         bool isNewMethodVal = (withInheritance && !isInterface) ? type.IsNewMethod(item, allMethods) : false;
                         string newMethodName = string.Empty;
                         if (isNewMethodVal)
                         {
                             newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.Name);
                         }
-
-                        methodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                                 .Replace(Const.Methods.METHOD_NAME, methodName)
-                                                 .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                                                 .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
-                                                 .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                                 .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                                 .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
-                                                 .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
-                                                 .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
-
+                        // --- REPLACEMENT PIPELINE FOR METHOD TEMPLATE TAGS ---
+                        string modifierKeyword = item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD + " " : string.Empty;
+                        string finalModifier = modifierKeyword + methodGenericMarker;
+                        methodStr = templateToUse.Replace("METHOD_MODIFIER_KEYWORD", finalModifier)
+                        .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                        .Replace(Const.Methods.METHOD_NAME, methodName)
+                        .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                        .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, implementationReturnType)
+                        .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                        .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                        .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
+                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                        // --- GENERICS INJECTION FOR PURE INTERFACE METHOD SIGNATURE ---
                         if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
                         {
-                            methodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                            // If the method uses a generic parameter belonging to the method itself, inject the bound declaration
+                            string interfaceGenericMarker = string.Empty;
+                            if (item.ReturnType.IsGenericParameter && item.ReturnType.DeclaringMethod != null)
+                            {
+                                interfaceGenericMarker = $"<{returnType} extends IJCOBridgeReflected> ";
+                            }
+
+                            // We handle the modifier replacement by injecting the generic marker if present
+                            methodInterfaceStr = templateInterfaceToUse.Replace("public ", $"public {interfaceGenericMarker}")
+                                                                       .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                                        .Replace(Const.Methods.METHOD_NAME, methodName)
                                                                        .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                                        .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
@@ -1611,22 +1821,31 @@ namespace MASES.JCOReflector.Engine
                                                                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                         }
 
-                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter && !builtWithJCORefOut) // && !exportingMethodsDuplicateAvoidance(type, methodName))
+                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter && !builtWithJCORefOut)
                         {
-                            // needs a duplication in method signature
                             inputParams = new StringBuilder();
                             execParams = new StringBuilder();
-
                             foreach (var parameter in parameters)
                             {
-                                string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                                string paramType = string.Empty;
+                                bool isParamGeneric = EnableGenerics && parameter.ParameterType.IsGenericParameter;
+                                if (isParamGeneric)
+                                {
+                                    paramType = parameter.ParameterType.Name;
+                                    isPrimitive = false;
+                                    isManaged = true;
+                                    isSpecial = false;
+                                    isArray = false;
+                                }
+                                else
+                                {
+                                    paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                                }
                                 bool isNativeArrayInParameter = isArray && isPrimitive;
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
-                                var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position); // change name to avoid confusion made by parameter name when a duplicated method is searched
-
+                                var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position);
                                 string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
                                 if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
-
                                 if (isNativeArrayInParameter)
                                 {
                                     inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.Parameters.JCORefOutType, paramName));
@@ -1635,58 +1854,60 @@ namespace MASES.JCOReflector.Engine
                                 else
                                 {
                                     inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
+                                    if (isParamGeneric)
+                                    {
+                                        formatter = ", " + paramName + " == null ? null : ((IJCOBridgeReflected)" + paramName + ").getJCOInstance()";
+                                    }
                                 }
-
                                 string objectCaster = string.Empty;
                                 if (isArray && parameters.Length == 1)
                                 {
                                     objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
                                 }
-
-                                execParams.Append(string.Format(formatter, objectCaster, paramName));
+                                if (isParamGeneric)
+                                {
+                                    execParams.Append(formatter);
+                                }
+                                else
+                                {
+                                    execParams.Append(string.Format(formatter, objectCaster, paramName));
+                                }
                             }
                             inputParamStr = inputParams.ToString();
                             if (!string.IsNullOrEmpty(inputParamStr))
                             {
                                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
                             }
-
                             execParamStr = execParams.ToString();
-
-                            dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                                        .Replace(Const.Methods.METHOD_NAME, methodName)
-                                                        .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                                                        .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
-                                                        .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                                        .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                                        .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
-                                                        .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
-                                                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
-
+                            dupMethodStr = templateToUse.Replace("METHOD_MODIFIER_KEYWORD", finalModifier)
+                            .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                            .Replace(Const.Methods.METHOD_NAME, methodName)
+                            .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                            .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, implementationReturnType)
+                            .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                            .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                            .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
+                            .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                             if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
                             {
-                                dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                                                              .Replace(Const.Methods.METHOD_NAME, methodName)
-                                                                              .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
-                                                                              .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                                                              .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                                dupMethodInterfaceStr = templateInterfaceToUse.Replace("METHOD_MODIFIER_KEYWORD", methodGenericMarker)
+                                .Replace(Const.Methods.METHOD_NAME, methodName)
+                                .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
+                                .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                             }
-
-                            dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                                                       .Replace(Const.Methods.METHOD_NAME, methodName)
-                                                                       .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
-                                                                       .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                                                       .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                                                       .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
-
+                            dupMethodSignature = templateInterfaceToUse.Replace("METHOD_MODIFIER_KEYWORD", methodGenericMarker)
+                            .Replace(Const.Methods.METHOD_NAME, methodName)
+                            .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
+                            .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                            .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                            .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
                             Interlocked.Increment(ref implementedDuplicatedMethods);
                         }
                     }
-
                     methodsSignatureCreated.Add(signToAdd);
                     methodsNameCreated.Add(item.Name);
-
                     if (isInterface)
                     {
                         methodInterfaceBuilder.AppendLine(methodInterfaceStr);
@@ -1695,14 +1916,12 @@ namespace MASES.JCOReflector.Engine
                             methodInterfaceBuilder.AppendLine(dupMethodInterfaceStr);
                         }
                     }
-
                     methodBuilder.AppendLine(methodStr);
                     if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
                     {
                         methodBuilder.AppendLine(dupMethodStr);
                         methodsDuplicatedCreated.Add(dupMethodSignature);
                     }
-
                     if (withInheritance)
                     {
                         if (item.DeclaringType == type)
@@ -1717,7 +1936,7 @@ namespace MASES.JCOReflector.Engine
                 }
             }
             else if (!EnableInterfaceInheritance) return string.Empty;
-
+            // --- Note: Interface Inheritance Traversing cycle code continues here untouched according to original layout ---
             if (!isInterface && EnableInheritance && EnableInterfaceInheritance)
             {
                 foreach (var implementableInterface in implementableInterfaces.ToArray())
@@ -1761,6 +1980,9 @@ namespace MASES.JCOReflector.Engine
                             || interfaceMethod.IsSpecialName // remove properties
                             || methodsSignatureCreated.Contains(interfaceMethod.ToString()) // avoid duplicated methods from inheritance
                            ) continue;
+
+                        // FIX: Add protection for interface methods signature traversing when EnableGenerics is false
+                        if (!EnableGenerics && (interfaceMethod.IsGenericMethod || interfaceMethod.ContainsGenericParameters)) continue;
 
                         if (interfaceMethod.IsGenericMethod // don't manage generic methods
                             || interfaceMethod.ContainsGenericParameters
@@ -2009,7 +2231,6 @@ namespace MASES.JCOReflector.Engine
             }
 
             returnInterfaceSection = methodInterfaceBuilder.ToString();
-
             return methodBuilder.ToString();
         }
 
@@ -2188,15 +2409,28 @@ namespace MASES.JCOReflector.Engine
                        ) continue;
 
                     string propertyType = "void";
+                    bool isPropertyGeneric = EnableGenerics && item.PropertyType.IsGenericParameter;
 
-                    propertyType = ConvertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
-                    if (!isManaged) continue; // found not managed type, jump to next 
+                    // GENERICS UPDATED: Extract generic signature literals ("T") safely without calling ConvertType
+                    if (isPropertyGeneric)
+                    {
+                        propertyType = item.PropertyType.Name;
+                        isPrimitive = true; // Forces File 18/19 templates to trigger a clean explicit Java runtime cast (T)
+                        isManaged = true;
+                        isSpecial = false;
+                        isArray = false;
+                    }
+                    else
+                    {
+                        propertyType = ConvertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                        if (!isManaged) continue; // found not managed type, jump to next 
+                    }
 
                     bool isPropertyTypeInterface = isArray ? item.PropertyType.GetElementType().IsInterface : item.PropertyType.IsInterface;
 
                     if (item.CanRead) // get
                     {
-                        if (item.GetMethod.GetParameters().Length != 0) continue; // only get without parameters are managed
+                        if (item.GetMethod.GetParameters().Length != 0) continue;
                         isPrimitive |= typeof(Delegate).IsAssignableFrom(item.PropertyType);
 
                         var exceptionStr = item.GetMethod.ExceptionStringBuilder(imports);
@@ -2220,13 +2454,13 @@ namespace MASES.JCOReflector.Engine
                         {
                             if (isArray)
                             {
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate 
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate
                                                                                         : Const.Templates.ReflectorClassObjectArrayGetTemplate);
                             }
                             else
                             {
                                 templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(propertyType) ? Const.Templates.ReflectorClassNativeGetWithCastToNumberTemplate
-                                                                                                                                         : Const.Templates.ReflectorClassNativeGetTemplate 
+                                                                                                                                         : Const.Templates.ReflectorClassNativeGetTemplate
                                                                                         : Const.Templates.ReflectorClassObjectGetTemplate);
                             }
 
@@ -2257,13 +2491,21 @@ namespace MASES.JCOReflector.Engine
                         {
                             templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetTemplate);
                             var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+
+                            // GENERICS UPDATED: Inject marshalling cast for generic property parameters inside the compiled output string
+                            if (isPropertyGeneric)
+                            {
+                                // Overwrite the raw variable injection with the secure IJCOBridgeReflected marshalling token
+                                string standardValueToken = $", {propertyName}";
+                                string genericValueCaster = $", {propertyName} == null ? null : ((IJCOBridgeReflected){propertyName}).getJCOInstance()";
+
+                                propertyStr = propertyStr.Replace(standardValueToken, genericValueCaster);
+                            }
                             propertyBuilder.AppendLine(propertyStr);
                         }
                     }
-
                     propertiesSignaturesCreated.Add(item.ToString());
                     propertiesNameCreated.Add(item.Name);
-
                     if (withInheritance)
                     {
                         if (item.DeclaringType == type)
@@ -2278,7 +2520,7 @@ namespace MASES.JCOReflector.Engine
                 }
             }
             else if (!EnableInterfaceInheritance) return string.Empty;
-
+            // --- Note: Interface Inheritance Traversing cycle code continues here untouched according to original layout ---
             if (!isInterface && EnableInheritance && EnableInterfaceInheritance)
             {
                 foreach (var implementableInterface in implementableInterfaces.ToArray())
@@ -2403,17 +2645,17 @@ namespace MASES.JCOReflector.Engine
             }
 
             returnInterfaceSection = propertyInterfaceBuilder.ToString();
-
             return propertyBuilder.ToString();
         }
 
-        static bool ExportingDelegate(this Type item, string destFolder, string assemblyname, bool avoidWrite = false)
+        static bool ExportingDelegate(this Type item, string destFolder, string assemblyname, out string returnEnumeratorType, bool avoidWrite = false)
         {
+            returnEnumeratorType = string.Empty;
+
             if (!avoidWrite) Interlocked.Increment(ref analyzedDelegates);
 
-            if (item.IsGenericType
-                || item.IsGenericParameter
-               ) return false;
+            if (item.IsGenericParameter) return false;
+            if (item.IsGenericType && !(EnableGenerics && item.IsGenericTypeDefinition)) return false;
 
             IList<Type> imports = new List<Type>();
             var invokeMethod = item.GetMethod("Invoke");
@@ -2421,7 +2663,7 @@ namespace MASES.JCOReflector.Engine
             if (invokeMethod == null) return false;
 
             var packageName = item.ToPackageName();
-            var delegateName = item.Name;
+            string javaClassName = item.GetJavaClassName(item.Assembly);
 
             var parameters = invokeMethod.GetParameters();
             string returnType = "void";
@@ -2436,29 +2678,64 @@ namespace MASES.JCOReflector.Engine
             bool isRetValArray = false;
             bool isArray = false;
             bool isManaged = true;
-            if (invokeMethod.ReturnType == typeof(void))
+
+            // --- ALIGNED GENERIC TEMPLATE BRANCHING CHANNELS INSIDE ExportingDelegate ---
+            if (EnableGenerics && invokeMethod.ReturnType.IsGenericParameter)
             {
-                classTemplateToUse = Const.Templates.GetTemplate(Const.Templates.VoidDelegateClassTemplate);
-                interfaceTemplateToUse = Const.Templates.GetTemplate(Const.Templates.VoidDelegateInterfaceTemplate);
+                returnType = invokeMethod.ReturnType.Name;
+                isRetValPrimitive = true; // Forced as primitive to guarantee clean runtime cast statements bypassing wrappers
+                isManaged = true;
+                isSpecial = false;
+                isRetValArray = false;
+                isInterfaceRetVal = false;
+
+                classTemplateToUse = EnableGenerics && item.IsGenericTypeDefinition
+                    ? Const.Templates.GetTemplate(Const.Templates.ObjectGenericDelegateClassTemplate)
+                    : Const.Templates.GetTemplate(Const.Templates.ObjectDelegateClassTemplate);
+
+                interfaceTemplateToUse = EnableGenerics && item.IsGenericTypeDefinition
+                    ? Const.Templates.GetTemplate(Const.Templates.NonVoidGenericDelegateInterfaceTemplate)
+                    : Const.Templates.GetTemplate(Const.Templates.NonVoidDelegateInterfaceTemplate);
+
+                dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassNativeMethodTemplate);
+            }
+            else if (invokeMethod.ReturnType == typeof(void))
+            {
+                classTemplateToUse = EnableGenerics && item.IsGenericTypeDefinition
+                    ? Const.Templates.GetTemplate(Const.Templates.VoidGenericDelegateClassTemplate)
+                    : Const.Templates.GetTemplate(Const.Templates.VoidDelegateClassTemplate);
+
+                interfaceTemplateToUse = EnableGenerics && item.IsGenericTypeDefinition
+                    ? Const.Templates.GetTemplate(Const.Templates.VoidGenericDelegateInterfaceTemplate)
+                    : Const.Templates.GetTemplate(Const.Templates.VoidDelegateInterfaceTemplate);
+
                 dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassVoidMethodTemplate);
             }
             else
             {
                 returnType = ConvertType(imports, invokeMethod.ReturnType, out isRetValPrimitive, out defaultPrimitiveReturnValue, out isManaged, out isSpecial, out isRetValArray);
                 if (!isManaged) return false;
-                classTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.NativeDelegateClassTemplate : Const.Templates.ObjectDelegateClassTemplate);
-                interfaceTemplateToUse = Const.Templates.GetTemplate(Const.Templates.NonVoidDelegateInterfaceTemplate);
+
+                // FIXED LOGIC: Branch dynamically to NativeGenericDelegateClassTemplate when return type is a standard primitive (e.g. Comparison returning int)
+                classTemplateToUse = EnableGenerics && item.IsGenericTypeDefinition
+                    ? Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.NativeGenericDelegateClassTemplate : Const.Templates.ObjectGenericDelegateClassTemplate)
+                    : Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.NativeDelegateClassTemplate : Const.Templates.ObjectDelegateClassTemplate);
+
+                interfaceTemplateToUse = EnableGenerics && item.IsGenericTypeDefinition
+                    ? Const.Templates.GetTemplate(Const.Templates.NonVoidGenericDelegateInterfaceTemplate)
+                    : Const.Templates.GetTemplate(Const.Templates.NonVoidDelegateInterfaceTemplate);
+
                 if (isRetValArray)
                 {
                     isInterfaceRetVal = invokeMethod.ReturnType.GetElementType().IsInterface;
-                    dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate 
+                    dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate
                                                                                                : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
                 }
                 else
                 {
                     isInterfaceRetVal = invokeMethod.ReturnType.IsInterface;
                     dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? IsPrivitiveConvertibleFromNumber(returnType) ? Const.Templates.ReflectorClassNativeMethodWithCastToNumberTemplate
-                                                                                                                                              : Const.Templates.ReflectorClassNativeMethodTemplate 
+                                                                                                                                              : Const.Templates.ReflectorClassNativeMethodTemplate
                                                                                                : Const.Templates.ReflectorClassObjectMethodTemplate);
                 }
             }
@@ -2471,12 +2748,27 @@ namespace MASES.JCOReflector.Engine
             string defaultPrimitiveValue = string.Empty;
             foreach (var parameter in parameters)
             {
-                string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                string paramType = string.Empty;
+                bool isDelegateParamGeneric = EnableGenerics && parameter.ParameterType.IsGenericParameter;
+
+                if (isDelegateParamGeneric)
+                {
+                    paramType = parameter.ParameterType.Name;
+                    isPrimitive = true;
+                    isSpecial = false;
+                    isArray = false;
+                    isManaged = true;
+                }
+                else
+                {
+                    paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                }
+
                 if (!EnableRefOutParameters)
                 {
-                    isManaged &= !(parameter.IsOut || parameter.ParameterType.IsByRef); // out parameters not managed
+                    isManaged &= !(parameter.IsOut || parameter.ParameterType.IsByRef);
                 }
-                if (!isManaged) break; // found not managed type, stop here
+                if (!isManaged) break;
 
                 var paramName = ReplaceSinglekeyword(parameter.Name);
 
@@ -2494,11 +2786,27 @@ namespace MASES.JCOReflector.Engine
                 }
                 else
                 {
-                    converterBlock.AppendLine(string.Format(isPrimitive ? Const.Delegates.CONVERTER_BLOCK_PARAMETER_PRIMITIVE : Const.Delegates.CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE, parameter.ParameterType.IsInterface ? paramType + Const.SpecialNames.ImplementationTrailer : paramType, paramName, paramCounter));
+                    if (isDelegateParamGeneric)
+                    {
+                        string genericConverterLine = $"{paramType} {paramName} = (argsFromJCOBridge[{paramCounter}] == null) ? null : ({paramType})argsFromJCOBridge[{paramCounter}];";
+                        converterBlock.AppendLine("            " + genericConverterLine);
+                    }
+                    else
+                    {
+                        converterBlock.AppendLine(string.Format(isPrimitive ? Const.Delegates.CONVERTER_BLOCK_PARAMETER_PRIMITIVE : Const.Delegates.CONVERTER_BLOCK_PARAMETER_NONPRIMITIVE, parameter.ParameterType.IsInterface ? paramType + Const.SpecialNames.ImplementationTrailer : paramType, paramName, paramCounter));
+                    }
                 }
 
                 inputParams.Append(string.Format(Const.Delegates.INPUT_INVOKE_PARAMETER, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType, paramName));
-                execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER, paramName));
+
+                if (isDelegateParamGeneric)
+                {
+                    execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER_GENERIC, paramName));
+                }
+                else
+                {
+                    execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER, paramName));
+                }
 
                 string dynamicFormatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
                 if (!isPrimitive && isArray) dynamicFormatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
@@ -2523,43 +2831,49 @@ namespace MASES.JCOReflector.Engine
             {
                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
             }
-
             string execParamStr = execParams.ToString();
-            if (!string.IsNullOrEmpty(execParamStr))
+            if (!string.IsNullOrEmpty(execParamStr) && !invokeMethod.ReturnType.IsGenericParameter)
             {
                 execParamStr = execParamStr.Substring(0, execParamStr.Length - 2);
             }
-
             var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
-
             var importsStr = imports.ExportImports();
-
-            var strReturnStatement = Const.Delegates.DELEGATE_RETURN_STATEMENT_OBJECT;
+            // FIXED RETURN LOGIC: Build safe, compiler-checked return strings based on whether return type is a real primitive or not
+            var strReturnStatement = isRetValPrimitive ? "return retVal;" : Const.Delegates.DELEGATE_RETURN_STATEMENT_OBJECT;
             if (isRetValArray)
             {
                 strReturnStatement = Const.Delegates.DELEGATE_RETURN_STATEMENT_OBJECT_ARRAY.Replace(Const.Delegates.DELEGATE_RETURN_STATEMENTTYPE, returnType);
             }
-
+            else if (invokeMethod.ReturnType.IsGenericParameter)
+            {
+                strReturnStatement = $"return (retVal == null) ? null : ({returnType})retVal;";
+            }
+            // SEPARATE COMPUTATION FOR GENERIC PARAMETERS AND ARGUMENTS (FIX BUG #2)
+            string classParameters = string.Empty;
+            string methodArguments = string.Empty;
+            if (EnableGenerics && item.IsGenericTypeDefinition)
+            {
+                Type[] genericArguments = item.GetGenericArguments();
+                classParameters = string.Join(", ", genericArguments.Select(t => $"{t.Name} extends IJCOBridgeReflected"));
+                methodArguments = string.Join(", ", genericArguments.Select(t => t.Name));
+            }
+            // 1. Process and save the pure Java interface file
             var interfaceStr = interfaceTemplateToUse.Replace(Const.Delegates.PACKAGE_NAME, packageName)
                                                      .Replace(Const.Delegates.FULLYQUALIFIED_CLASS_NAME, item.FullName)
                                                      .Replace(Const.Delegates.PACKAGE_IMPORT_SECTION, importsStr)
-                                                     .Replace(Const.Delegates.PACKAGE_CLASS_NAME, delegateName)
+                                                     .Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName) // Pure name replacement, handles the IPACKAGE_CLASS_NAME substring correctly
+                                                     .Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters) // Resolves placeholder inside the <...> block
                                                      .Replace(Const.Delegates.DELEGATE_RETURN_TYPE, (isRetValArray) ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                      .Replace(Const.Delegates.DELEGATE_PARAMETERS, inputParamStr)
                                                      .Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
-
             var pathToSaveTo = packageName.Replace('.', '\\');
+        
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
-            if (!Directory.Exists(pathToSaveTo))
-            {
-                JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
-                Directory.CreateDirectory(pathToSaveTo);
-            }
-            var fileName = Path.Combine(pathToSaveTo, string.Format("I{0}.java", delegateName));
+            if (!Directory.Exists(pathToSaveTo)) Directory.CreateDirectory(pathToSaveTo);
+            var fileName = Path.Combine(pathToSaveTo, string.Format("I{0}.java", javaClassName));
             writeFile(fileName, interfaceStr);
-
-            importsStr += string.Format(Const.Imports.IMPORT, packageName, string.Format("I{0}", delegateName));
-
+            // 2. Process and save the Java delegate implementation class file
+            importsStr += string.Format(Const.Imports.IMPORT, packageName, string.Format("I{0}", javaClassName));
             string dynamicInvokeExecParamStr = dynamicInvokeExecParams.ToString();
             var dynamicInvokeStr = dynamicInvokeTemplateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, Const.SpecialNames.METHOD_DYNAMICINVOKE_NAME)
                                                              .Replace(Const.Methods.METHOD_NAME, Const.SpecialNames.METHOD_DYNAMICINVOKE_NAME)
@@ -2570,10 +2884,11 @@ namespace MASES.JCOReflector.Engine
                                                              .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, string.Empty)
                                                              .Replace(Const.Methods.METHOD_OBJECT, Const.Class.INSTANCE_CLASS_NAME)
                                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
-
             var delegateStr = classTemplateToUse.Replace(Const.Delegates.PACKAGE_NAME, packageName)
                                                 .Replace(Const.Delegates.PACKAGE_IMPORT_SECTION, importsStr)
-                                                .Replace(Const.Delegates.PACKAGE_CLASS_NAME, delegateName)
+                                                .Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName) // Pure name replacement, does not corrupt interface substring
+                                                .Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters) // Resolves the class declaration layout: class ... <...>
+                                                .Replace(Const.Methods.GENERIC_METHOD_ARGUMENTS, methodArguments) // Resolves usages like IPACKAGE_CLASS_NAME<...> without duplicating constraints
                                                 .Replace(Const.Delegates.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                 .Replace(Const.Delegates.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
                                                 .Replace(Const.Delegates.FULLYQUALIFIED_CLASS_NAME, item.FullName)
@@ -2583,22 +2898,14 @@ namespace MASES.JCOReflector.Engine
                                                 .Replace(Const.Delegates.DELEGATE_RETURN_STATEMENT, strReturnStatement)
                                                 .Replace(Const.Delegates.DELEGATE_RETURN_TYPE, (isRetValArray) ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                 .Replace(Const.Delegates.DELEGATE_PRIMITIVE_DEFAULT_VALUE, defaultPrimitiveReturnValue)
-                                                .Replace(Const.Delegates.DELEGATE_PRIMITIVE_DEFAULT_VALUE, defaultPrimitiveReturnValue)
                                                 .Replace(Const.Delegates.DELEGATE_DYNAMIC_INVOKE_SECTION, dynamicInvokeStr)
                                                 .Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
-
             pathToSaveTo = packageName.Replace('.', '\\');
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
-            if (!Directory.Exists(pathToSaveTo))
-            {
-                JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
-                Directory.CreateDirectory(pathToSaveTo);
-            }
-            fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", delegateName));
+            if (!Directory.Exists(pathToSaveTo)) Directory.CreateDirectory(pathToSaveTo);
+            fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", javaClassName));
             writeFile(fileName, delegateStr);
-
             Interlocked.Increment(ref implementedDelegates);
-
             return true;
         }
 
@@ -2733,7 +3040,9 @@ namespace MASES.JCOReflector.Engine
                 StringBuilder inputParams = new StringBuilder();
                 StringBuilder execParams = new StringBuilder();
 
-                if (!item.EventHandlerType.ExportingDelegate(destFolder, assemblyname, true)) continue;
+                // FIXED PIPELINE CHANNELS: Added required out string parameter to match updated ExportingDelegate signature
+                string dummyEnumeratorType = string.Empty;
+                if (!item.EventHandlerType.ExportingDelegate(destFolder, assemblyname, out dummyEnumeratorType, true)) continue;
 
                 eventType = ConvertType(imports, item.EventHandlerType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray);
                 if (!isConcrete) continue; // found not managed type, jump to next 
@@ -2745,10 +3054,12 @@ namespace MASES.JCOReflector.Engine
                     newEventName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, eventName, type.Name);
                 }
 
+                // RESOLUTION GENERICS: Resolve non-colliding java name for the handler delegate type
+                string javaHandlerName = item.EventHandlerType.GetJavaClassName(item.EventHandlerType.Assembly);
 
                 var eventStr = templateToUse.Replace(Const.Events.EVENT_JAVA_NAME, isNewEventVal ? newEventName : eventName)
                                             .Replace(Const.Events.EVENT_NAME, eventName)
-                                            .Replace(Const.Events.EVENT_HANDLER_TYPE, item.EventHandlerType.Name)
+                                            .Replace(Const.Events.EVENT_HANDLER_TYPE, javaHandlerName)
                                             .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, statics ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
                                             .Replace(Const.Events.EVENT_OBJECT, statics ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME);
 
@@ -2759,7 +3070,7 @@ namespace MASES.JCOReflector.Engine
                 {
                     var eventInterfaceStr = templateInterfaceToUse.Replace(Const.Events.EVENT_JAVA_NAME, isNewEventVal ? newEventName : eventName)
                                                                   .Replace(Const.Events.EVENT_NAME, eventName)
-                                                                  .Replace(Const.Events.EVENT_HANDLER_TYPE, item.EventHandlerType.Name)
+                                                                  .Replace(Const.Events.EVENT_HANDLER_TYPE, javaHandlerName)
                                                                   .Replace(Const.Events.METHOD_MODIFIER_KEYWORD, statics ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
                                                                   .Replace(Const.Events.EVENT_OBJECT, statics ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME);
 
@@ -2843,21 +3154,27 @@ namespace MASES.JCOReflector.Engine
             {
                 return true;
             }
-            if (!innerType.IsPublic // only public types are managed expect when used in out/ref
-                || !(innerType.IsAnsiClass || innerType.IsClass || innerType.IsEnum)
-                 || (EnableAbstract ? false : (innerType.IsAbstract && !innerType.IsSealed)) // discard real abstract class for now, but abstract/sealed classes are what in .NET are "public static class"
-                                                                                             //  || type.IsInterface // discard interfaces for now
-                 || innerType.IsGenericType || innerType.IsGenericParameter)
+
+            // FIX: If EnableGenerics is false, fallback immediately to the original native scart rule for any generic element
+            if (!EnableGenerics && (innerType.IsGenericType || innerType.IsGenericParameter))
+            {
+                return false;
+            }
+
+            // GENERICS UPDATED: Allow open generic definitions and generic parameters (like T or K) to pass the management filters
+            if (!innerType.IsPublic && !innerType.IsGenericParameter // only public types or generic parameters are managed except when used in out/ref
+                || !(innerType.IsAnsiClass || innerType.IsClass || innerType.IsEnum || innerType.IsInterface || innerType.IsGenericParameter)
+                || (EnableAbstract ? false : (innerType.IsAbstract && !innerType.IsSealed)) // discard real abstract class for now, but abstract/sealed classes are what in .NET are "public static class"
+               )
             {
                 return false;
             }
             if (typeof(Delegate).IsAssignableFrom(innerType)) // delegate types are managed only with events
             {
-                return innerType.ExportingDelegate(null, null, true);
+                string dummyEnumeratorType = string.Empty;
+                return innerType.ExportingDelegate(null, null, out dummyEnumeratorType, true);
             }
             if (innerType.Name.Contains("IntPtr") || innerType.Name.Contains("*"))
-                return false;
-            if (innerType.Name.Contains("`")) // last chance to check for generics
                 return false;
 
             return true;

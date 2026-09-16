@@ -1494,7 +1494,9 @@ namespace MASES.JCOReflector.Engine
         static bool AvoidExportMethods(this Type type, MethodInfo method)
         {
             if (!EnableRefOutParameters) return false;
-            var fullname = type.FullName;
+
+            // FIX: Fallback to Name if FullName is null (common for open generic types)
+            var fullname = type.FullName ?? type.Name;
             var methodName = method.Name;
             string[] methodNamesToCheck;
             if (Const.SpecialNames.ExportingAvoidanceMap.TryGetValue(fullname, out methodNamesToCheck))
@@ -2354,7 +2356,9 @@ namespace MASES.JCOReflector.Engine
         static bool AvoidExportProperties(this Type type, PropertyInfo method)
         {
             if (!EnableRefOutParameters) return false;
-            var fullname = type.FullName;
+
+            // FIX: Fallback to Name if FullName is null (common for open generic types)
+            var fullname = type.FullName ?? type.Name;
             var propertyName = method.Name;
             string[] propertyNamesToCheck;
             if (Const.SpecialNames.ExportingAvoidanceMap.TryGetValue(fullname, out propertyNamesToCheck))

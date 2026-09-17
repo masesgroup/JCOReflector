@@ -200,7 +200,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
         }
     }
 
-    public void Find() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.SecurityException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.ApplicationException, system.OverflowException {
+    public void Find() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.SecurityException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.io.FileFormatException, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

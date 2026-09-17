@@ -152,7 +152,7 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
 
     // Constructors section
     
-    public FixedDocumentSequence() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.net.WebException, system.io.IOException, system.ApplicationException, system.io.FileFormatException, system.MulticastNotSupportedException {
+    public FixedDocumentSequence() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.io.FileFormatException, system.net.WebException, system.io.IOException, system.ApplicationException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

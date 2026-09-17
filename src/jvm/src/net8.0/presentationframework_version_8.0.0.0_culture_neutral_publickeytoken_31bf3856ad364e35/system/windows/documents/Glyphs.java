@@ -164,7 +164,7 @@ public class Glyphs extends FrameworkElement  {
     
     // Methods section
     
-    public GlyphRun ToGlyphRun() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.componentmodel.InvalidEnumArgumentException, system.io.FileFormatException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException {
+    public GlyphRun ToGlyphRun() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.io.FileFormatException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToGlyphRun = null;

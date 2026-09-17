@@ -1145,7 +1145,7 @@ namespace MASES.JCOReflector.Engine
                         ConvertType(imports, expType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray, false);
                         if (!isSpecial && isConcrete)
                         {
-                            expBuilder.AppendFormat(Const.Exceptions.SINGLE_EXCEPTION_PROTO, expType.ToPackageName(), expType.Name);
+                            expBuilder.AppendFormat(Const.Exceptions.SINGLE_EXCEPTION_PROTO, expType.ToPackageName(), expType.GetJavaClassName(expType.Assembly));
                         }
                     }
                     exceptionStr = expBuilder.ToString();
@@ -1654,7 +1654,7 @@ namespace MASES.JCOReflector.Engine
 
                             if (!isInterface && EnableInheritance && EnableInterfaceInheritance && type.GetInterfaces().Contains(typeof(IEnumerable)))
                             {
-                                enumeratorMethodName += type.Name;
+                                enumeratorMethodName += type.GetJavaClassName(type.Assembly);
                                 signToAdd = signToAdd.Replace(Const.SpecialNames.METHOD_GETENUMERATOR_NAME, enumeratorMethodName);
                             }
 
@@ -2117,7 +2117,7 @@ namespace MASES.JCOReflector.Engine
                             {
                                 //returnEnumeratorType = string.Empty;
                                 returnType = Const.SpecialNames.NetIEnumerator;
-                                methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.Name)
+                                methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.GetJavaClassName(implementableInterface.Assembly))
                                                          .Replace(Const.Methods.METHOD_ENUMERATOR_NAME, enumeratorMethodName)
                                                          .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                                          .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, interfaceMethod.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
@@ -2140,10 +2140,10 @@ namespace MASES.JCOReflector.Engine
 
                                 if (EnableInheritance && EnableInterfaceInheritance && type.GetInterfaces().Contains(typeof(IEnumerable)))
                                 {
-                                    enumeratorMethodName += type.Name;
+                                    enumeratorMethodName += type.GetJavaClassName(type.Assembly);
                                 }
 
-                                methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.Name)
+                                methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.GetJavaClassName(implementableInterface.Assembly))
                                                          .Replace(Const.Methods.METHOD_ENUMERATOR_NAME, enumeratorMethodName)
                                                          .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                                          .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, interfaceMethod.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
@@ -2271,7 +2271,7 @@ namespace MASES.JCOReflector.Engine
                                 newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.GetJavaClassName(type.Assembly));
                             }
 
-                            methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.Name)
+                            methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.GetJavaClassName(implementableInterface.Assembly))
                                                      .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                      .Replace(Const.Methods.METHOD_NAME, methodName)
                                                      .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)

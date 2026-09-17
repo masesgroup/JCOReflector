@@ -3149,7 +3149,8 @@ namespace MASES.JCOReflector.Engine
                 {
                     subItem = item.GetElementType();
                 }
-                var name = subItem.Name;
+                // FIX: Resolve clean non-colliding name for import statements to filter out backticks (`1, `2)
+                var name = subItem.GetJavaClassName(subItem.Assembly);
                 if (string.IsNullOrWhiteSpace(name)) continue; // bypass empty name which leads to error in some cases
                 if (subItem.IsInterface)
                 {
@@ -3253,9 +3254,10 @@ namespace MASES.JCOReflector.Engine
 
             // Original JCOReflector string resolution workflow execution
             var fullName = (isArray) ? innerType.FullName.Substring(0, innerType.FullName.IndexOf(Const.SpecialNames.ArrayTrailer)) : innerType.FullName;
-            string typeName = innerType.Name;
+            // FIX: Ensure the short name string drops the backtick token by using our collision checker resolver
+            string resolvedCleanName = innerType.GetJavaClassName(innerType.Assembly);
+            var name = (isArray) ? resolvedCleanName : resolvedCleanName;
 
-            var name = (isArray) ? typeName.Substring(0, typeName.IndexOf(Const.SpecialNames.ArrayTrailer)) : typeName;
             string retType = string.Empty;
             switch (fullName)
             {

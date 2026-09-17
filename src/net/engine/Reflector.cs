@@ -3274,6 +3274,8 @@ namespace MASES.JCOReflector.Engine
         static string ExportImports(this IList<Type> imports)
         {
             StringBuilder importsToExport = new StringBuilder();
+            var emitted = new HashSet<string>();
+
             foreach (var item in imports)
             {
                 var subItem = item;
@@ -3281,23 +3283,25 @@ namespace MASES.JCOReflector.Engine
                 {
                     subItem = item.GetElementType();
                 }
-                // FIX: Resolve clean non-colliding name for import statements to filter out backticks (`1, `2)
                 var name = subItem.GetJavaClassName(subItem.Assembly);
-                if (string.IsNullOrWhiteSpace(name)) continue; // bypass empty name which leads to error in some cases
+                if (string.IsNullOrWhiteSpace(name)) continue;
+
                 if (subItem.IsInterface)
                 {
                     if (subItem.IsManagedType(0, 1) && subItem != typeof(IEnumerator) && subItem != typeof(IEnumerable))
                     {
-                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name));
-                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name + Const.SpecialNames.ImplementationTrailer));
+                        string line1 = string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name);
+                        string line2 = string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name + Const.SpecialNames.ImplementationTrailer);
+                        if (emitted.Add(line1)) importsToExport.AppendLine(line1);
+                        if (emitted.Add(line2)) importsToExport.AppendLine(line2);
                     }
                 }
                 else if (subItem.IsManagedType(0, 1))
                 {
-                    importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name));
+                    string line = string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name);
+                    if (emitted.Add(line)) importsToExport.AppendLine(line);
                 }
             }
-
             return importsToExport.ToString();
         }
 

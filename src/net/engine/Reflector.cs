@@ -866,12 +866,12 @@ namespace MASES.JCOReflector.Engine
                     if (inter == typeof(IEnumerable))
                     {
                         packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
-                        packageBaseInterface += string.Format(", {0}", inter.Name);
+                        packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                     }
                     else if (inter == typeof(IEnumerator)) 
                     {
                         packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
-                        packageBaseInterface += string.Format(", {0}", inter.Name);
+                        packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                     }
                     else packageBaseInterface += string.Format(", {0}", inter.ToPackageName() + "." + inter.GetJavaClassName(item.Assembly));
                     imports.Add(inter);

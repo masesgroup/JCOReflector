@@ -863,9 +863,17 @@ namespace MASES.JCOReflector.Engine
                 withInheritance = true;
                 foreach (var inter in implementableInterfaces)
                 {
-                    if (inter == typeof(IEnumerable)) packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
-                    if (inter == typeof(IEnumerator)) packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
-                    packageBaseInterface += string.Format(", {0}", inter.ToPackageName() + "." + inter.GetJavaClassName(item.Assembly));
+                    if (inter == typeof(IEnumerable))
+                    {
+                        packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
+                        packageBaseInterface += string.Format(", {0}", inter.Name);
+                    }
+                    else if (inter == typeof(IEnumerator)) 
+                    {
+                        packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
+                        packageBaseInterface += string.Format(", {0}", inter.Name);
+                    }
+                    else packageBaseInterface += string.Format(", {0}", inter.ToPackageName() + "." + inter.GetJavaClassName(item.Assembly));
                     imports.Add(inter);
                 }
             }

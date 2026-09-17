@@ -1667,6 +1667,16 @@ namespace MASES.JCOReflector.Engine
                         string implementationReturnType = string.Empty;
                         string methodGenericMarker = string.Empty;
 
+                        if (EnableGenerics && item.IsGenericMethod)
+                        {
+                            Type[] methodGenericArgs = item.GetGenericArguments();
+                            if (methodGenericArgs.Length > 0)
+                            {
+                                // Compiles the exact Java declarationLayout: "<T extends IJCOBridgeReflected>"
+                                methodGenericMarker = $"<{string.Join(", ", methodGenericArgs.Select(t => $"{t.Name} extends IJCOBridgeReflected"))}> ";
+                            }
+                        }
+
                         if (item.ReturnType == typeof(void))
                         {
                             templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassVoidMethodTemplate);
@@ -1746,6 +1756,12 @@ namespace MASES.JCOReflector.Engine
                             else
                             {
                                 paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+
+                                // FIX: If the parameter type is a constructed generic type (e.g. IComparer`1), strip the backtick for Java
+                                if (paramType.Contains("`"))
+                                {
+                                    paramType = paramType.Split('`')[0];
+                                }
                             }
 
                             hasNativeArrayInParameter |= isArray && isPrimitive;
@@ -2785,6 +2801,8 @@ namespace MASES.JCOReflector.Engine
             StringBuilder converterBlock = new StringBuilder();
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
+            // FIX: Use a structured string list instead of manual string concatenation to avoid commas placement bugs
+            List<string> invokeParamsList = new List<string>();
             StringBuilder dynamicInvokeExecParams = new StringBuilder();
             int paramCounter = 0;
             string defaultPrimitiveValue = string.Empty;
@@ -2841,13 +2859,17 @@ namespace MASES.JCOReflector.Engine
 
                 inputParams.Append(string.Format(Const.Delegates.INPUT_INVOKE_PARAMETER, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType, paramName));
 
+                // FIXED PIPELINE: Populate the list tightly without hardcoded leading or trailing commas
                 if (isDelegateParamGeneric)
                 {
-                    execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER_GENERIC, paramName));
+                    // Ensure the execution call to getJCOInstance() maintains tight brackets validation
+                    invokeParamsList.Add($"{paramName} == null ? null : ((IJCOBridgeReflected){paramName}).getJCOInstance()");
                 }
                 else
                 {
-                    execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER, paramName));
+                    // Original JCOReflector parameter marshalling syntax token format mapping
+                    string cleanInvokeParam = string.Format(Const.Delegates.INVOKE_PARAMETER, paramName).Trim().TrimStart(',').Trim();
+                    invokeParamsList.Add(cleanInvokeParam);
                 }
 
                 string dynamicFormatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
@@ -2873,11 +2895,9 @@ namespace MASES.JCOReflector.Engine
             {
                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
             }
-            string execParamStr = execParams.ToString();
-            if (!string.IsNullOrEmpty(execParamStr) && !invokeMethod.ReturnType.IsGenericParameter)
-            {
-                execParamStr = execParamStr.Substring(0, execParamStr.Length - 2);
-            }
+            // TOTAL FIX FOR COMMAS AND BRACKETS COMPVISIBILITY: Compile the parameters string safely in one shot
+            string execParamStr = string.Join(", ", invokeParamsList);
+
             var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
             var importsStr = imports.ExportImports();
             // FIXED RETURN LOGIC: Build safe, compiler-checked return strings based on whether return type is a real primitive or not

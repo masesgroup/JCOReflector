@@ -1231,6 +1231,12 @@ namespace MASES.JCOReflector.Engine
                         ? (parameter.ParameterType.IsArray ? parameter.ParameterType.GetElementType().Name : parameter.ParameterType.Name)
                         : ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
 
+                    // FIX: If the constructor parameter type is a constructed generic type (e.g. IEqualityComparer`1), strip the backtick for Java
+                    if (!isParamGeneric && !string.IsNullOrEmpty(paramType) && paramType.Contains("`"))
+                    {
+                        paramType = paramType.Split('`')[0];
+                    }
+
                     if (isParamGeneric)
                     {
                         isArray = parameter.ParameterType.IsArray;
@@ -1266,23 +1272,19 @@ namespace MASES.JCOReflector.Engine
                 if (!string.IsNullOrEmpty(newObjParamStr))
                 {
                     newObjParamStr = newObjParamStr.Substring(2);
+
+                    // FIXED VIA TEMPLATE OPTIMIZATION: Premettere la virgola e lo spazio in testa solo se servono
+                    newObjParamStr = ", " + newObjParamStr;
                 }
 
                 var exceptionStr = item.ExceptionStringBuilder(imports);
 
+                // Replaces parameters and thrown exceptions seamlessly
                 var otherCtor = ctorClassTemplate.Replace(Const.CTor.CTOR_PARAMETERS, ctorParamStr)
                                                  .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
 
-                // FIX: If the constructor has 0 parameters, strip the trailing call comma from initializeGenericArguments to prevent syntax errors
-                if (string.IsNullOrEmpty(newObjParamStr))
-                {
-                    otherCtor = otherCtor.Replace(", " + Const.CTor.CTOR_NEWOBJECT_PARAMETERS, string.Empty)
-                                         .Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, string.Empty);
-                }
-                else
-                {
-                    otherCtor = otherCtor.Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, newObjParamStr);
-                }
+                // TOTAL FIX VIA TARGETED INJECTION: One single replacement shot handles both empty and loaded constructors
+                otherCtor = otherCtor.Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, newObjParamStr);
 
                 ctors.AppendLine(otherCtor);
 
@@ -1844,7 +1846,21 @@ namespace MASES.JCOReflector.Engine
                         {
                             inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
                         }
-                        string execParamStr = execParams.ToString();
+
+                        // --- TOTAL SANITIZATION FOR METHOD INVOKE PARAMETERS (FIXES JAVA BRACE TRUNCATION) ---
+                        string execParamStr = execParams.ToString().Trim();
+
+                        // Ensure there are no loose or broken generic concatenation tokens leftover
+                        if (execParamStr.StartsWith(","))
+                        {
+                            execParamStr = execParamStr.Substring(1).Trim();
+                        }
+
+                        // If the final string is not empty, ensure it starts with a clean comma space separator for classInstance.Invoke
+                        if (!string.IsNullOrEmpty(execParamStr) && !execParamStr.StartsWith(","))
+                        {
+                            execParamStr = ", " + execParamStr;
+                        }
                         var exceptionStr = item.ExceptionStringBuilder(imports);
                         bool isNewMethodVal = (withInheritance && !isInterface) ? type.IsNewMethod(item, allMethods) : false;
                         string newMethodName = string.Empty;
@@ -1958,7 +1974,17 @@ namespace MASES.JCOReflector.Engine
                             {
                                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
                             }
-                            execParamStr = execParams.ToString();
+
+                            // --- TOTAL SANITIZATION FOR INTERFACE METHOD INVOKE PARAMETERS ---
+                            execParamStr = execParams.ToString().Trim();
+                            if (execParamStr.StartsWith(","))
+                            {
+                                execParamStr = execParamStr.Substring(1).Trim();
+                            }
+                            if (!string.IsNullOrEmpty(execParamStr) && !execParamStr.StartsWith(","))
+                            {
+                                execParamStr = ", " + execParamStr;
+                            }
                             dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, finalModifier)
                                                         .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                         .Replace(Const.Methods.METHOD_NAME, methodName)
@@ -2215,7 +2241,20 @@ namespace MASES.JCOReflector.Engine
                                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
                             }
 
-                            string execParamStr = execParams.ToString();
+                            // --- TOTAL SANITIZATION FOR INHERITED DEPRECATED METHOD INVOKE PARAMETERS ---
+                            string execParamStr = execParams.ToString().Trim();
+
+                            // Drop any loose leading comma if present at the start of the token
+                            if (execParamStr.StartsWith(","))
+                            {
+                                execParamStr = execParamStr.Substring(1).Trim();
+                            }
+
+                            // Ensure it starts with a clean comma space separator for duplicate method Invoke text layout
+                            if (!string.IsNullOrEmpty(execParamStr) && !execParamStr.StartsWith(","))
+                            {
+                                execParamStr = ", " + execParamStr;
+                            }
 
                             var exceptionStr = interfaceMethod.ExceptionStringBuilder(imports);
 

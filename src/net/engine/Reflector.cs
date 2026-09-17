@@ -306,28 +306,51 @@ namespace MASES.JCOReflector.Engine
 
         static string GetJavaClassName(this Type type, Assembly currentAssembly)
         {
-            if (!EnableGenerics || !type.IsGenericType) return type.Name;
-
-            // Extract the clean name before the backtick (e.g., "List" from "List`1")
-            string cleanName = type.Name.Split('`')[0];
-
-            // Check if OTHER generic variants exist within the same namespace 
-            // with the exact same name but a different number of arguments
-            bool hasNameCollision = currentAssembly.GetTypes().Any(t =>
-                t.Namespace == type.Namespace &&
-                t.Name.StartsWith(cleanName + "`") &&
-                t.GetGenericArguments().Length != type.GetGenericArguments().Length
-            );
-
-            // If there is a collision (e.g., Tuple), use the clean suffix for Java (Tuple_2)
-            // If there is NO collision (e.g., List), use only the clean name without numbers
-            if (hasNameCollision)
+            if (!EnableGenerics)
             {
-                return $"{cleanName}_{type.GetGenericArguments().Length}";
+                return type.Name.Contains('`') ? type.Name.Split('`')[0] : type.Name;
             }
 
-            return cleanName;
+            // If the type name contains the .NET backtick, it is a generic definition or constructed type
+            if (type.Name.Contains('`'))
+            {
+                string[] parts = type.Name.Split('`');
+                string cleanName = parts[0];
+                string arity = parts[1];
+
+                // Append the exact arity number using the underscore layout (e.g., ObjectSecurity_1, List_1)
+                return \$"{cleanName}_{arity}";
+            }
+
+            // Standard non-generic types keep their native pure name untouched (e.g., ObjectSecurity)
+            return type.Name;
         }
+
+
+        //static string GetJavaClassName(this Type type, Assembly currentAssembly)
+        //{
+        //    if (!EnableGenerics || !type.IsGenericType) return type.Name;
+        //
+        //    // Extract the clean name before the backtick (e.g., "List" from "List`1")
+        //    string cleanName = type.Name.Split('`')[0];
+        //
+        //    // Check if OTHER generic variants exist within the same namespace 
+        //    // with the exact same name but a different number of arguments
+        //    bool hasNameCollision = currentAssembly.GetTypes().Any(t =>
+        //        t.Namespace == type.Namespace &&
+        //        t.Name.StartsWith(cleanName + "`") &&
+        //        t.GetGenericArguments().Length != type.GetGenericArguments().Length
+        //    );
+        //
+        //    // If there is a collision (e.g., Tuple), use the clean suffix for Java (Tuple_2)
+        //    // If there is NO collision (e.g., List), use only the clean name without numbers
+        //    if (hasNameCollision)
+        //    {
+        //        return $"{cleanName}_{type.GetGenericArguments().Length}";
+        //    }
+        //
+        //    return cleanName;
+        //}
 
         static string GetAssemblies(this IEnumerable<string> assemblyNames)
         {

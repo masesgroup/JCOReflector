@@ -1272,19 +1272,18 @@ namespace MASES.JCOReflector.Engine
                 if (!string.IsNullOrEmpty(newObjParamStr))
                 {
                     newObjParamStr = newObjParamStr.Substring(2);
-
-                    // FIXED VIA TEMPLATE OPTIMIZATION: Premettere la virgola e lo spazio in testa solo se servono
-                    newObjParamStr = ", " + newObjParamStr;
                 }
+
+                string newObjParamStrGeneric = string.IsNullOrEmpty(newObjParamStr) ? string.Empty : ", " + newObjParamStr;
 
                 var exceptionStr = item.ExceptionStringBuilder(imports);
 
+                bool isGenericCtor = EnableGenerics && type.IsGenericTypeDefinition;
                 // Replaces parameters and thrown exceptions seamlessly
                 var otherCtor = ctorClassTemplate.Replace(Const.CTor.CTOR_PARAMETERS, ctorParamStr)
                                                  .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
-
                 // TOTAL FIX VIA TARGETED INJECTION: One single replacement shot handles both empty and loaded constructors
-                otherCtor = otherCtor.Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, newObjParamStr);
+                otherCtor = otherCtor.Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, isGenericCtor ? newObjParamStrGeneric : newObjParamStr);
 
                 ctors.AppendLine(otherCtor);
 
@@ -2193,6 +2192,13 @@ namespace MASES.JCOReflector.Engine
                             foreach (var parameter in parameters)
                             {
                                 string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+
+                                // FIX: Strip backticks from constructed generic parameter signatures inside inherited methods for Java
+                                if (!string.IsNullOrEmpty(paramType) && paramType.Contains("`"))
+                                {
+                                    paramType = paramType.Split('`')[0];
+                                }
+
                                 hasNativeArrayInParameter |= isArray && isPrimitive;
                                 bool useRefOut = false;
                                 if (!EnableRefOutParameters)

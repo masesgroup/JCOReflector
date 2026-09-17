@@ -1273,8 +1273,16 @@ namespace MASES.JCOReflector.Engine
                 var otherCtor = ctorClassTemplate.Replace(Const.CTor.CTOR_PARAMETERS, ctorParamStr)
                                                  .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
 
-                // Both templates now consume CTOR_NEWOBJECT_PARAMETERS seamlessly
-                otherCtor = otherCtor.Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, newObjParamStr);
+                // FIX: If the constructor has 0 parameters, strip the trailing call comma from initializeGenericArguments to prevent syntax errors
+                if (string.IsNullOrEmpty(newObjParamStr))
+                {
+                    otherCtor = otherCtor.Replace(", " + Const.CTor.CTOR_NEWOBJECT_PARAMETERS, string.Empty)
+                                         .Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, string.Empty);
+                }
+                else
+                {
+                    otherCtor = otherCtor.Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, newObjParamStr);
+                }
 
                 ctors.AppendLine(otherCtor);
 
@@ -1707,6 +1715,12 @@ namespace MASES.JCOReflector.Engine
                                 returnType = ConvertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
                                 if (!isManaged) continue;
 
+                                // FIX: Strip backticks from the return type signature for Java (e.g. ReadOnlyCollection`1 -> ReadOnlyCollection)
+                                if (returnType.Contains("`"))
+                                {
+                                    returnType = returnType.Split('`')[0];
+                                }
+
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(item.ReturnType);
                                 if (isRetValArray)
                                 {
@@ -1722,6 +1736,12 @@ namespace MASES.JCOReflector.Engine
                                     templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(returnType) ? Const.Templates.ReflectorClassNativeMethodWithCastToNumberTemplate
                                     : Const.Templates.ReflectorClassNativeMethodTemplate
                                     : Const.Templates.ReflectorClassObjectMethodTemplate);
+                                }
+
+                                // FIX: Ensure implementationReturnType also drops the backtick if present
+                                if (implementationReturnType.Contains("`"))
+                                {
+                                    implementationReturnType = implementationReturnType.Split('`')[0];
                                 }
                             }
                         }
@@ -1836,25 +1856,29 @@ namespace MASES.JCOReflector.Engine
                         string modifierKeyword = item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty;
                         string finalModifier = modifierKeyword + methodGenericMarker;
                         methodStr = templateToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, finalModifier)
-                        .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                        .Replace(Const.Methods.METHOD_NAME, methodName)
-                        .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                        .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, implementationReturnType)
-                        .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                        .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                        .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
-                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                                                 .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                 .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                 .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                 .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, implementationReturnType)
+                                                 .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                 .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                 .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
+                                                 .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                         // --- GENERICS INJECTION FOR PURE INTERFACE METHOD SIGNATURE ---
                         if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
                         {
                             // If the method uses a generic parameter belonging to the method itself, inject the bound declaration
                             string interfaceGenericMarker = string.Empty;
-                            if (item.ReturnType.IsGenericParameter && item.ReturnType.DeclaringMethod != null)
+                            if (EnableGenerics && item.IsGenericMethod)
                             {
-                                interfaceGenericMarker = $"<{returnType} extends IJCOBridgeReflected> ";
+                                Type[] methodGenericArgs = item.GetGenericArguments();
+                                if (methodGenericArgs.Length > 0)
+                                {
+                                    interfaceGenericMarker = $"<{string.Join(", ", methodGenericArgs.Select(t => $"{t.Name} extends IJCOBridgeReflected"))}> ";
+                                }
                             }
 
-                            // We handle the modifier replacement by injecting the generic marker if present
+                            // We handle the modifier replacement by injecting the generic marker if present right after public statement
                             methodInterfaceStr = templateInterfaceToUse.Replace("public ", $"public {interfaceGenericMarker}")
                                                                        .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                                        .Replace(Const.Methods.METHOD_NAME, methodName)
@@ -1936,29 +1960,29 @@ namespace MASES.JCOReflector.Engine
                             }
                             execParamStr = execParams.ToString();
                             dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, finalModifier)
-                            .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                            .Replace(Const.Methods.METHOD_NAME, methodName)
-                            .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                            .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, implementationReturnType)
-                            .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                            .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                            .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
-                            .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                                                        .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                        .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                        .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                        .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, implementationReturnType)
+                                                        .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                        .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                        .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
+                                                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                             if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
                             {
                                 dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, methodGenericMarker)
-                                .Replace(Const.Methods.METHOD_NAME, methodName)
-                                .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
-                                .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                                                                              .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                              .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
+                                                                              .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                              .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                             }
                             dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, methodGenericMarker)
-                            .Replace(Const.Methods.METHOD_NAME, methodName)
-                            .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
-                            .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                            .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                            .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
+                                                                       .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                       .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
+                                                                       .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                       .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                       .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
                             Interlocked.Increment(ref implementedDuplicatedMethods);
                         }
                     }
@@ -2116,6 +2140,13 @@ namespace MASES.JCOReflector.Engine
                             {
                                 returnType = ConvertType(imports, interfaceMethod.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
                                 if (!isManaged) continue;
+
+                                // FIX: Strip backticks from the interface return type signature for Java (ReadOnlyCollection`1 -> ReadOnlyCollection)
+                                if (returnType.Contains("`"))
+                                {
+                                    returnType = returnType.Split('`')[0];
+                                }
+
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(interfaceMethod.ReturnType);
 
                                 if (isRetValArray)

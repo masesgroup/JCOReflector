@@ -319,7 +319,7 @@ namespace MASES.JCOReflector.Engine
                 string arity = parts[1];
 
                 // Append the exact arity number using the underscore layout (e.g., ObjectSecurity_1, List_1)
-                return \$"{cleanName}_{arity}";
+                return $"{cleanName}_{arity}";
             }
 
             // Standard non-generic types keep their native pure name untouched (e.g., ObjectSecurity)

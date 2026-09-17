@@ -3252,11 +3252,19 @@ namespace MASES.JCOReflector.Engine
                 return CheckForSpecialNames(genericName, innerType, out needImport);
             }
 
-            // Original JCOReflector string resolution workflow execution
-            var fullName = (isArray) ? innerType.FullName.Substring(0, innerType.FullName.IndexOf(Const.SpecialNames.ArrayTrailer)) : innerType.FullName;
-            // FIX: Ensure the short name string drops the backtick token by using our collision checker resolver
-            string resolvedCleanName = innerType.GetJavaClassName(innerType.Assembly);
-            var name = (isArray) ? resolvedCleanName : resolvedCleanName;
+            // --- FIXED HIGH-PRECISION ARRAY ELEMENT EXTRACTION (Risolve il bug di IList`1[][]) ---
+            var baseElementType = innerType;
+            while (baseElementType.IsArray)
+            {
+                baseElementType = baseElementType.GetElementType();
+            }
+
+            // Extract the clean full name of the underlying type, dropping the array layout trailing brackets
+            var fullName = isArray ? baseElementType.FullName : innerType.FullName;
+
+            // Resolve the clean non-colliding Java name directly from the base element type (e.g., "IList" from "IList`1[][]")
+            string resolvedCleanName = baseElementType.GetJavaClassName(baseElementType.Assembly);
+            var name = isArray ? resolvedCleanName : resolvedCleanName;
 
             string retType = string.Empty;
             switch (fullName)

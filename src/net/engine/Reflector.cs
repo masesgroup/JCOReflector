@@ -865,7 +865,7 @@ namespace MASES.JCOReflector.Engine
                 {
                     if (inter == typeof(IEnumerable)) packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
                     if (inter == typeof(IEnumerator)) packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
-                    packageBaseInterface += string.Format(", {0}", inter.Name);
+                    packageBaseInterface += string.Format(", {0}", inter.GetJavaClassName(item.Assembly));
                     imports.Add(inter);
                 }
             }
@@ -1007,7 +1007,7 @@ namespace MASES.JCOReflector.Engine
                 withInheritance = true;
                 if (item.BaseType.IsManagedType(0, 1) && item.BaseType != typeof(object) && item.BaseType != typeof(Exception) && item.BaseType != typeof(Type))
                 {
-                    packageBaseClass = item.BaseType.Name;
+                    packageBaseClass = item.BaseType.GetJavaClassName(item.Assembly);
                     imports.Add(item.BaseType);
                 }
             }
@@ -1865,7 +1865,7 @@ namespace MASES.JCOReflector.Engine
                         string newMethodName = string.Empty;
                         if (isNewMethodVal)
                         {
-                            newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.Name);
+                            newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.GetJavaClassName(type.Assembly));
                         }
                         // --- REPLACEMENT PIPELINE FOR METHOD TEMPLATE TAGS ---
                         string modifierKeyword = item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty;
@@ -2268,7 +2268,7 @@ namespace MASES.JCOReflector.Engine
                             string newMethodName = string.Empty;
                             if (isNewMethodVal)
                             {
-                                newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.Name);
+                                newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.GetJavaClassName(type.Assembly));
                             }
 
                             methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.Name)
@@ -2573,7 +2573,7 @@ namespace MASES.JCOReflector.Engine
                         string newPropertyName = string.Empty;
                         if (isNewPropertyVal)
                         {
-                            newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
+                            newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.GetJavaClassName(type.Assembly));
                         }
 
                         if (withInheritance ? (isInterface && (item.GetMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
@@ -2610,7 +2610,7 @@ namespace MASES.JCOReflector.Engine
                         string newPropertyName = string.Empty;
                         if (isNewPropertyVal)
                         {
-                            newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
+                            newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.GetJavaClassName(type.Assembly));
                         }
 
                         if (withInheritance ? (isInterface && (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
@@ -2731,7 +2731,7 @@ namespace MASES.JCOReflector.Engine
                             string newPropertyName = string.Empty;
                             if (isNewPropertyVal)
                             {
-                                newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, implementableInterface.Name);
+                                newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, implementableInterface.GetJavaClassName(type.Assembly));
                             }
 
                             if (withInheritance ? (isInterface || (item.GetMethod.GetBaseDefinition().DeclaringType == implementableInterface)) : true)
@@ -2757,7 +2757,7 @@ namespace MASES.JCOReflector.Engine
                             string newPropertyName = string.Empty;
                             if (isNewPropertyVal)
                             {
-                                newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
+                                newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.GetJavaClassName(type.Assembly));
                             }
 
                             if (withInheritance ? (isInterface || (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : true)
@@ -3194,7 +3194,7 @@ namespace MASES.JCOReflector.Engine
                 string newEventName = string.Empty;
                 if (isNewEventVal)
                 {
-                    newEventName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, eventName, type.Name);
+                    newEventName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, eventName, type.GetJavaClassName(type.Assembly));
                 }
 
                 // RESOLUTION GENERICS: Resolve non-colliding java name for the handler delegate type
@@ -3349,7 +3349,9 @@ namespace MASES.JCOReflector.Engine
             {
                 isPrimitive = false;
                 // Fallback safely using Name to completely bypass NullReferenceException inside string manipulation methods
-                string genericName = innerType.IsArray ? innerType.GetElementType().Name : innerType.Name;
+                string genericName = innerType.IsArray
+                    ? innerType.GetElementType().GetJavaClassName(innerType.GetElementType().Assembly)
+                    : innerType.GetJavaClassName(innerType.Assembly);
                 return CheckForSpecialNames(genericName, innerType, out needImport);
             }
 

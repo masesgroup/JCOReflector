@@ -239,7 +239,7 @@ public class Color extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Color Add(Color color1, Color color2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public static Color Add(Color color1, Color color2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.FileFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -269,7 +269,7 @@ public class Color extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Color FromAValues(Single a, Single[] values, Uri profileUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public static Color FromAValues(Single a, Single[] values, Uri profileUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.UriFormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromAValues = null;
@@ -314,7 +314,7 @@ public class Color extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Color FromValues(Single[] values, Uri profileUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.net.WebException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
+    public static Color FromValues(Single[] values, Uri profileUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.io.FileNotFoundException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromValues = null;
@@ -329,7 +329,7 @@ public class Color extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Color Multiply(Color color, Single coefficient) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.io.FileNotFoundException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public static Color Multiply(Color color, Single coefficient) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.io.FileFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.io.FileNotFoundException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMultiply = null;
@@ -344,7 +344,7 @@ public class Color extends ValueType implements system.IFormattable {
         }
     }
 
-    public static Color Subtract(Color color1, Color color2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public static Color Subtract(Color color1, Color color2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.FileFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSubtract = null;

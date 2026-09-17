@@ -266,7 +266,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public int GetFirstVisibleLineIndex() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.security.SecurityException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException {
+    public int GetFirstVisibleLineIndex() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.io.FileFormatException, system.security.SecurityException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFirstVisibleLineIndex = null;
@@ -306,7 +306,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public int GetLastVisibleLineIndex() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.UriFormatException, system.security.SecurityException, system.componentmodel.Win32Exception {
+    public int GetLastVisibleLineIndex() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.UriFormatException, system.io.FileFormatException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetLastVisibleLineIndex = null;

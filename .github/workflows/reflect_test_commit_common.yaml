@@ -159,6 +159,13 @@ jobs:
       - name: Reflect ${{ matrix.framework }} Java files
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_${{ matrix.framework }}.job
 
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Java_source_${{ matrix.framework }}
+          path: ./src/jvm/${{ matrix.framework }}/*.*
+          retention-days: 7
+
       - name: Build Java files ${{ matrix.framework }}
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd

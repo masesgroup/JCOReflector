@@ -16,6 +16,6 @@
   <EnableInheritance>true</EnableInheritance>
   <EnableInterfaceInheritance>true</EnableInterfaceInheritance>
   <EnableRefOutParameters>true</EnableRefOutParameters>
-  <EnableGenerics>true</EnableGenerics>
+  <EnableGenerics>false</EnableGenerics>
   <DryRun>false</DryRun>
 </ReflectorEventArgs>

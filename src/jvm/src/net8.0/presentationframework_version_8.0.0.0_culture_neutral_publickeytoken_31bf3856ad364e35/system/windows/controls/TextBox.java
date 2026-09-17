@@ -266,7 +266,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public int GetFirstVisibleLineIndex() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.UriFormatException, system.componentmodel.Win32Exception {
+    public int GetFirstVisibleLineIndex() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.UriFormatException, system.io.FileFormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFirstVisibleLineIndex = null;
@@ -306,7 +306,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public int GetLastVisibleLineIndex() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.componentmodel.Win32Exception {
+    public int GetLastVisibleLineIndex() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.io.FileFormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetLastVisibleLineIndex = null;

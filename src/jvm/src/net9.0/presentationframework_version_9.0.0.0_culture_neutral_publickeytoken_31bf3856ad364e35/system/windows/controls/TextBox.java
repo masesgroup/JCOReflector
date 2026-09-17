@@ -266,7 +266,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public int GetFirstVisibleLineIndex() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.componentmodel.Win32Exception {
+    public int GetFirstVisibleLineIndex() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.io.FileFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFirstVisibleLineIndex = null;
@@ -306,7 +306,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public int GetLastVisibleLineIndex() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.componentmodel.Win32Exception {
+    public int GetLastVisibleLineIndex() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetLastVisibleLineIndex = null;

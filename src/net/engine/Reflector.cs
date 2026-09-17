@@ -865,7 +865,7 @@ namespace MASES.JCOReflector.Engine
                 {
                     if (inter == typeof(IEnumerable)) packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
                     if (inter == typeof(IEnumerator)) packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
-                    packageBaseInterface += string.Format(", {0}", inter.GetJavaClassName(item.Assembly));
+                    packageBaseInterface += string.Format(", {0}", inter.ToPackageName() + "." + inter.GetJavaClassName(item.Assembly));
                     imports.Add(inter);
                 }
             }
@@ -3348,11 +3348,13 @@ namespace MASES.JCOReflector.Engine
             if (innerType.FullName == null || innerType.IsGenericParameter || (innerType.IsArray && innerType.GetElementType().IsGenericParameter))
             {
                 isPrimitive = false;
-                // Fallback safely using Name to completely bypass NullReferenceException inside string manipulation methods
+                bool isBareGenericParameter = innerType.IsGenericParameter || (innerType.IsArray && innerType.GetElementType().IsGenericParameter);
                 string genericName = innerType.IsArray
                     ? innerType.GetElementType().GetJavaClassName(innerType.GetElementType().Assembly)
                     : innerType.GetJavaClassName(innerType.Assembly);
-                return CheckForSpecialNames(genericName, innerType, out needImport);
+                string result = CheckForSpecialNames(genericName, innerType, out needImport);
+                if (isBareGenericParameter) needImport = false; // T / TOutput sono variabili di tipo Java, mai classi importabili
+                return result;
             }
 
             // --- FIXED HIGH-PRECISION ARRAY ELEMENT EXTRACTION (Risolve il bug di IList`1[][]) ---

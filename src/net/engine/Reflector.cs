@@ -2801,8 +2801,6 @@ namespace MASES.JCOReflector.Engine
             StringBuilder converterBlock = new StringBuilder();
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
-            // FIX: Use a structured string list instead of manual string concatenation to avoid commas placement bugs
-            List<string> invokeParamsList = new List<string>();
             StringBuilder dynamicInvokeExecParams = new StringBuilder();
             int paramCounter = 0;
             string defaultPrimitiveValue = string.Empty;
@@ -2859,17 +2857,16 @@ namespace MASES.JCOReflector.Engine
 
                 inputParams.Append(string.Format(Const.Delegates.INPUT_INVOKE_PARAMETER, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType, paramName));
 
-                // FIXED PIPELINE: Populate the list tightly without hardcoded leading or trailing commas
+                // HIGH-PRECISION INJECTION: Accumulate parameter marshalling tokens using safe trailing formatting
                 if (isDelegateParamGeneric)
                 {
-                    // Ensure the execution call to getJCOInstance() maintains tight brackets validation
-                    invokeParamsList.Add($"{paramName} == null ? null : ((IJCOBridgeReflected){paramName}).getJCOInstance()");
+                    // For generic parameters we manually append the secure token with a trailing comma to align with JCOReflector pipeline
+                    execParams.Append($"{paramName} == null ? null : ((IJCOBridgeReflected){paramName}).getJCOInstance(), ");
                 }
                 else
                 {
-                    // Original JCOReflector parameter marshalling syntax token format mapping
-                    string cleanInvokeParam = string.Format(Const.Delegates.INVOKE_PARAMETER, paramName).Trim().TrimStart(',').Trim();
-                    invokeParamsList.Add(cleanInvokeParam);
+                    // For standard types, we directly append the original layout format string (which handles its own commas or spacing)
+                    execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER, paramName));
                 }
 
                 string dynamicFormatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
@@ -2895,8 +2892,16 @@ namespace MASES.JCOReflector.Engine
             {
                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
             }
-            // TOTAL FIX FOR COMMAS AND BRACKETS COMPVISIBILITY: Compile the parameters string safely in one shot
-            string execParamStr = string.Join(", ", invokeParamsList);
+            // TOTAL SANITIZATION FOR DELEGATES PARAMETERS (FIX BOTH GENERICS AND STANDARD PLACEMENTS)
+            string execParamStr = execParams.ToString().Trim();
+
+            // Drop any loose trailing comma and spaces if present at the end of the compiled token
+            if (execParamStr.EndsWith(",")) execParamStr = execParamStr.Substring(0, execParamStr.Length - 1).Trim();
+            if (execParamStr.EndsWith(", ")) execParamStr = execParamStr.Substring(0, execParamStr.Length - 2).Trim();
+
+            // Drop any duplicate loose leading comma if the framework formatting generated an overlap at the start
+            if (execParamStr.StartsWith(",")) execParamStr = execParamStr.Substring(1).Trim();
+            if (execParamStr.StartsWith(", ")) execParamStr = execParamStr.Substring(2).Trim();
 
             var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
             var importsStr = imports.ExportImports();

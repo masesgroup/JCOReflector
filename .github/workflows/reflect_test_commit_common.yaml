@@ -163,7 +163,7 @@ jobs:
         with:
           if-no-files-found: ignore
           name: Java_source_${{ matrix.framework }}
-          path: ./src/jvm/${{ matrix.framework }}/*.*
+          path: ./src/jvm/src/${{ matrix.framework }}/*.*
           retention-days: 7
 
       - name: Build Java files ${{ matrix.framework }}

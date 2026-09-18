@@ -133,9 +133,9 @@ public class PACKAGE_CLASS_NAMEImplementation<GENERIC_CLASS_PARAMETERS> extends 
      * @return {@link PACKAGE_CLASS_NAME} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static PACKAGE_CLASS_NAME cast(IJCOBridgeReflected from) throws Throwable {
+    public static PACKAGE_CLASS_NAMEImplementation cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new PACKAGE_CLASS_NAME(from.getJCOInstance());
+        return new PACKAGE_CLASS_NAMEImplementation(from.getJCOInstance());
     }
 
     // Methods section

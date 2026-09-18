@@ -65,6 +65,7 @@
     <EmbeddedResource Include="JCObjectReflectorObjectDelegateClass.template" />
     <EmbeddedResource Include="JCObjectReflectorNativeDelegateClass.template" />
     <EmbeddedResource Include="JCObjectReflectorNonVoidDelegateInterface.template" />
+    <EmbeddedResource Include="JCObjectReflectorThrowableGenericClass.template" />
     <EmbeddedResource Include="JCObjectReflectorVoidGenericDelegateInterface.template" />
     <EmbeddedResource Include="JCObjectReflectorVoidGenericDelegateClass.template" />
     <EmbeddedResource Include="JCObjectReflectorVoidDelegateInterface.template" />

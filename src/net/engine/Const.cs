@@ -318,6 +318,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorInterfaceSetTemplate,
 
                 ReflectorThrowableClassTemplate,
+                ReflectorThrowableGenericClassTemplate,
                 ReflectorClassTemplate,
                 ReflectorClassGenericTemplate,
 
@@ -420,6 +421,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorInterfaceSetTemplate = "JCObjectReflectorInterfaceSetProperty.template";
 
             public const string ReflectorThrowableClassTemplate = "JCObjectReflectorThrowableClass.template";
+            public const string ReflectorThrowableGenericClassTemplate = "JCObjectReflectorThrowableGenericClass.template";
             public const string ReflectorClassTemplate = "JCObjectReflectorClass.template";
             public const string ReflectorClassGenericTemplate = "JCObjectReflectorClassGeneric.template";
 

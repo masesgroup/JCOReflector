@@ -1003,7 +1003,14 @@ namespace MASES.JCOReflector.Engine
             {
                 isException = true;
                 Interlocked.Increment(ref implementedExceptions);
-                reflectorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorThrowableClassTemplate);
+                // Same generic/non-generic split already applied to ordinary classes: an exception type
+                // can itself be generic (e.g. FaultException<TDetail>), and without its own <TDetail
+                // extends IJCOBridgeReflected> on the class declaration, every member referencing TDetail
+                // fails with "cannot find symbol" even though the constructor/property templates already
+                // emit TDetail correctly.
+                reflectorClassTemplate = EnableGenerics && item.IsGenericTypeDefinition
+                    ? Const.Templates.GetTemplate(Const.Templates.ReflectorThrowableGenericClassTemplate)
+                    : Const.Templates.GetTemplate(Const.Templates.ReflectorThrowableClassTemplate);
                 packageBaseClass = Const.SpecialNames.NetException;
             }
             else

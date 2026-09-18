@@ -112,8 +112,10 @@ public class NetObject implements IJCOBridgeReflected {
                 java.lang.reflect.Type[] actualTypeArguments = parameterized.getActualTypeArguments();
                 
                 StringBuilder clrGenericsSpec = new StringBuilder("[");
+                Class<?>[] resolvedClasses = new Class<?>[actualTypeArguments.length];
                 for (int i = 0; i < actualTypeArguments.length; i++) {
                     java.lang.Class<?> actualClass = (java.lang.Class<?>) actualTypeArguments[i];
+                    resolvedClasses[i] = actualClass;
 
                     // Read the static "className" field via reflection instead of instantiating a throwaway
                     // object: works for interfaces, exceptions, or any class without a no-arg constructor.
@@ -130,13 +132,6 @@ public class NetObject implements IJCOBridgeReflected {
                     if (i < actualTypeArguments.length - 1) {
                         clrGenericsSpec.append(", ");
                     }
-                }
-                StringBuilder clrGenericsSpec = new StringBuilder("[");
-                Class<?>[] resolvedClasses = new Class<?>[actualTypeArguments.length];
-                for (int i = 0; i < actualTypeArguments.length; i++) {
-                    java.lang.Class<?> actualClass = (java.lang.Class<?>) actualTypeArguments[i];
-                    resolvedClasses[i] = actualClass;
-                    ...
                 }
                 clrGenericsSpec.append("]");
                 this.genericArgumentClasses = resolvedClasses; // cache for later "new T(...)" replacements

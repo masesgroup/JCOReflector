@@ -2984,6 +2984,10 @@ namespace MASES.JCOReflector.Engine
             StringBuilder dynamicInvokeExecParams = new StringBuilder();
             int paramCounter = 0;
             string defaultPrimitiveValue = string.Empty;
+            // Replaces the two ad-hoc comma conventions above: every parameter contributes a bare
+            // expression token (no leading/trailing comma), and the single Join below owns all
+            // separators. This removes the mismatch that produced "Invoke(sender, , e)".
+            List<string> execParamTokens = new List<string>();
             foreach (var parameter in parameters)
             {
                 string paramType = string.Empty;
@@ -3041,14 +3045,17 @@ namespace MASES.JCOReflector.Engine
                 if (isDelegateParamGeneric)
                 {
                     // converterBlock has already produced a correctly-typed Tn argN variable above;
-                    // callerInstance.Invoke(...) is a plain Java call and expects that Tn value as-is,
-                    // not re-wrapped toward the bridge.
-                    execParams.Append(string.Format(", {0}", paramName));
+                    // callerInstance.Invoke(...) is a plain Java call and expects that Tn value as-is.
+                    execParamTokens.Add(paramName);
                 }
                 else
                 {
-                    // For standard types, we directly append the original layout format string (which handles its own commas or spacing)
-                    execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER, paramName));
+                    // Const.Delegates.INVOKE_PARAMETER may embed its own leading or trailing comma;
+                    // strip it here so every token is a bare expression, letting the Join below own
+                    // all separators consistently.
+                    string rawToken = string.Format(Const.Delegates.INVOKE_PARAMETER, paramName).Trim();
+                    rawToken = rawToken.Trim(',', ' ');
+                    execParamTokens.Add(rawToken);
                 }
 
                 string dynamicFormatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
@@ -3074,16 +3081,8 @@ namespace MASES.JCOReflector.Engine
             {
                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
             }
-            // TOTAL SANITIZATION FOR DELEGATES PARAMETERS (FIX BOTH GENERICS AND STANDARD PLACEMENTS)
-            string execParamStr = execParams.ToString().Trim();
 
-            // Drop any loose trailing comma and spaces if present at the end of the compiled token
-            if (execParamStr.EndsWith(",")) execParamStr = execParamStr.Substring(0, execParamStr.Length - 1).Trim();
-            if (execParamStr.EndsWith(", ")) execParamStr = execParamStr.Substring(0, execParamStr.Length - 2).Trim();
-
-            // Drop any duplicate loose leading comma if the framework formatting generated an overlap at the start
-            if (execParamStr.StartsWith(",")) execParamStr = execParamStr.Substring(1).Trim();
-            if (execParamStr.StartsWith(", ")) execParamStr = execParamStr.Substring(2).Trim();
+            string execParamStr = string.Join(", ", execParamTokens);
 
             var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
             var importsStr = imports.ExportImports();

@@ -1571,6 +1571,11 @@ namespace MASES.JCOReflector.Engine
             List<string> methodsSignatureCreated = new List<string>();
             List<string> methodsNameCreated = new List<string>();
             List<string> methodsDuplicatedCreated = new List<string>();
+            // Tracks method signatures as they appear AFTER Java type erasure (raw parameter types,
+            // no generic type arguments). Two distinct .NET overloads can still collapse onto the same
+            // erased Java signature (e.g. WhenAny(IEnumerable<Task>) vs WhenAny<TResult>(IEnumerable<Task<TResult>>)
+            // both become WhenAny(IEnumerable_1)) — Java cannot declare both, so the second one is dropped.
+            HashSet<string> javaErasedSignaturesCreated = new HashSet<string>();
 
             bool isPrimitive = true;
             string defaultPrimitiveValue = string.Empty;
@@ -1643,6 +1648,21 @@ namespace MASES.JCOReflector.Engine
                     if (methodName == "GetHashCode" && parameters.Length == 0) continue;
                     if (methodName == "GetType" && parameters.Length == 0) continue;
                     if (methodName == "Equals" && parameters.Length == 1 && parameters[0].ParameterType == typeof(object)) continue;
+
+                    // JAVA LANGUAGE LIMIT: a static member cannot reference a generic parameter that belongs
+                    // to the enclosing class (Java erasure keeps a single shared class per raw type, unlike
+                    // .NET where each closed generic instantiation has its own static state). Only skip when
+                    // the parameter belongs to the class (DeclaringMethod == null); a method-level generic
+                    // parameter (DeclaringMethod != null) is fine on a static method and is handled elsewhere.
+                    bool referencesClassLevelGenericParameter =
+                        (item.ReturnType.IsGenericParameter && item.ReturnType.DeclaringMethod == null) ||
+                        parameters.Any(p => p.ParameterType.IsGenericParameter && p.ParameterType.DeclaringMethod == null);
+
+                    if (item.IsStatic && referencesClassLevelGenericParameter)
+                    {
+                        // Not representable in Java: a static context cannot see the class's own type parameter.
+                        continue;
+                    }
 
                     string methodInterfaceStr = string.Empty;
                     string dupMethodInterfaceStr = string.Empty;
@@ -1781,6 +1801,9 @@ namespace MASES.JCOReflector.Engine
                         StringBuilder inputParams = new StringBuilder();
                         StringBuilder execParams = new StringBuilder();
                         bool builtWithJCORefOut = false;
+                        // Raw parameter types only (no variable names, no array/varargs decoration beyond
+                        // "[]"), used later to detect Java erasure collisions between .NET overloads.
+                        List<string> erasedParamTypes = new List<string>();
                         foreach (var parameter in parameters)
                         {
                             string paramType = string.Empty;
@@ -1815,6 +1838,10 @@ namespace MASES.JCOReflector.Engine
                                     paramType = paramType.Split('`')[0];
                                 }
                             }
+
+                            // Record the erased parameter type as it will actually appear in the generated
+                            // Java signature (array-ness matters for erasure, generic arguments don't).
+                            erasedParamTypes.Add(isArray ? paramType + "[]" : paramType);
 
                             hasNativeArrayInParameter |= isArray && isPrimitive;
                             bool useRefOut = false;
@@ -1871,6 +1898,14 @@ namespace MASES.JCOReflector.Engine
                             }
                         }
                         if (!isManaged) continue;
+
+                        // JAVA LANGUAGE LIMIT: after erasure, this overload's signature may be identical to
+                        // one already emitted for the same method name, even though the two .NET overloads
+                        // are genuinely distinct (e.g. one closes a generic argument, the other doesn't).
+                        // Java cannot declare both, so keep only the first one encountered.
+                        string javaErasedSignature = methodName + "(" + string.Join(",", erasedParamTypes) + ")";
+                        if (!javaErasedSignaturesCreated.Add(javaErasedSignature)) continue;
+
                         string inputParamStr = inputParams.ToString();
                         if (!string.IsNullOrEmpty(inputParamStr))
                         {
@@ -2052,6 +2087,7 @@ namespace MASES.JCOReflector.Engine
                             methodInterfaceBuilder.AppendLine(dupMethodInterfaceStr);
                         }
                     }
+
                     methodBuilder.AppendLine(methodStr);
                     if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
                     {

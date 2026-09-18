@@ -1793,8 +1793,21 @@ namespace MASES.JCOReflector.Engine
                                 {
                                     isInterfaceRetVal = item.ReturnType.GetElementType().IsInterface;
                                     implementationReturnType = isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType;
-                                    templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate
-                                    : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+
+                                    // "new T(...)" is never legal Java: if the array element is a generic parameter that
+                                    // belongs to the CLASS (not this method), route to the reflective-instantiation variant.
+                                    var arrayElementType = item.ReturnType.GetElementType();
+                                    if (EnableGenerics && arrayElementType.IsGenericParameter && arrayElementType.DeclaringMethod == null)
+                                    {
+                                        int genericArgIndex = Array.IndexOf(type.GetGenericArguments(), arrayElementType);
+                                        templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassObjectArrayGenericMethodTemplate)
+                                                                        .Replace("GENERIC_ARGUMENT_INDEX", genericArgIndex.ToString());
+                                    }
+                                    else
+                                    {
+                                        templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate
+                                                                                                  : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                                    }
                                 }
                                 else
                                 {
@@ -3027,8 +3040,10 @@ namespace MASES.JCOReflector.Engine
                 // HIGH-PRECISION INJECTION: Accumulate parameter marshalling tokens using safe trailing formatting
                 if (isDelegateParamGeneric)
                 {
-                    // For generic parameters we manually append the secure token with a trailing comma to align with JCOReflector pipeline
-                    execParams.Append($"{paramName} == null ? null : ((IJCOBridgeReflected){paramName}).getJCOInstance(), ");
+                    // converterBlock has already produced a correctly-typed Tn argN variable above;
+                    // callerInstance.Invoke(...) is a plain Java call and expects that Tn value as-is,
+                    // not re-wrapped toward the bridge.
+                    execParams.Append(string.Format(", {0}", paramName));
                 }
                 else
                 {

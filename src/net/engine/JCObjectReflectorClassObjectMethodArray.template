@@ -7,12 +7,9 @@
             retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
             JCObject resultingObjects = (JCObject)retObjectMETHOD_NAME;
             for (java.lang.Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(this.<METHOD_IMPLEMENTATION_RETURN_TYPE>instantiateGenericArgument(GENERIC_ARGUMENT_INDEX, resultingObject));
+			    resultingArrayList.add(new METHOD_IMPLEMENTATION_RETURN_TYPE(resultingObject));
             }
-            // "new METHOD_RETURN_TYPE[...]" is never legal Java when METHOD_RETURN_TYPE is a
-            // class-level generic parameter (erasure); build it reflectively instead.
-            @SuppressWarnings("unchecked")
-            METHOD_RETURN_TYPE[] resultingArray = (METHOD_RETURN_TYPE[]) java.lang.reflect.Array.newInstance(genericArgumentClasses[GENERIC_ARGUMENT_INDEX], resultingArrayList.size());
+            METHOD_RETURN_TYPE[] resultingArray = new METHOD_RETURN_TYPE[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {

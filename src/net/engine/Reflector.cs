@@ -1222,6 +1222,9 @@ namespace MASES.JCOReflector.Engine
             var defaultCtor = Const.CTor.DEFAULT_CTOR.Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName);
 
             StringBuilder ctors = new StringBuilder();
+            // Same erasure-collision guard used in ExportMethods: two distinct .NET constructor
+            // overloads can still collapse onto the same erased Java signature.
+            HashSet<string> javaErasedCtorSignaturesCreated = new HashSet<string>();
 
             bool hasDefaultCtor = false;
 
@@ -1246,6 +1249,7 @@ namespace MASES.JCOReflector.Engine
 
                 StringBuilder ctorParams = new StringBuilder();
                 StringBuilder newObjectParams = new StringBuilder();
+                List<string> erasedCtorParamTypes = new List<string>();
 
                 bool isPrimitive = true;
                 string defaultPrimitiveValue = string.Empty;
@@ -1278,6 +1282,8 @@ namespace MASES.JCOReflector.Engine
 
                     if (!isManaged) break; // found not managed type, stop here
 
+                    erasedCtorParamTypes.Add(isArray ? paramType + "[]" : paramType);
+
                     var paramName = ReplaceSinglekeyword(parameter.Name);
                     isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                     ctorParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
@@ -1292,7 +1298,13 @@ namespace MASES.JCOReflector.Engine
                     }
                     newObjectParams.Append(string.Format(formatter, objectCaster, paramName));
                 }
-                if (!isManaged) continue; // found not managed type, jump to next 
+                if (!isManaged) continue; // found not managed type, jump to next
+
+                // JAVA LANGUAGE LIMIT: keep only the first constructor overload that reaches
+                // this erased Java signature; a later one identical after erasure can't coexist.
+                string javaErasedCtorSignature = "(" + string.Join(",", erasedCtorParamTypes) + ")";
+                if (!javaErasedCtorSignaturesCreated.Add(javaErasedCtorSignature)) continue;
+
                 string ctorParamStr = ctorParams.ToString();
                 if (!string.IsNullOrEmpty(ctorParamStr))
                 {
@@ -1655,8 +1667,8 @@ namespace MASES.JCOReflector.Engine
                     // the parameter belongs to the class (DeclaringMethod == null); a method-level generic
                     // parameter (DeclaringMethod != null) is fine on a static method and is handled elsewhere.
                     bool referencesClassLevelGenericParameter =
-                        (item.ReturnType.IsGenericParameter && item.ReturnType.DeclaringMethod == null) ||
-                        parameters.Any(p => p.ParameterType.IsGenericParameter && p.ParameterType.DeclaringMethod == null);
+                        ContainsClassLevelGenericParameter(item.ReturnType) ||
+                        parameters.Any(p => ContainsClassLevelGenericParameter(p.ParameterType));
 
                     if (item.IsStatic && referencesClassLevelGenericParameter)
                     {
@@ -1754,8 +1766,11 @@ namespace MASES.JCOReflector.Engine
                                 isInterfaceRetVal = false;
                                 implementationReturnType = returnType;
 
-                                // Check if the generic parameter belongs to the METHOD itself (Generic Method like <K>)
-                                if (item.ReturnType.DeclaringMethod != null)
+                                // Don't overwrite the marker already built from ALL of item.GetGenericArguments():
+                                // it already covers this case (a generic method always has DeclaringMethod != null
+                                // on its own type parameters). Overwriting here dropped every other type parameter
+                                // besides the return type's own (e.g. CreateWrapperOfType<T, TWrapper> lost T).
+                                if (item.ReturnType.DeclaringMethod != null && string.IsNullOrEmpty(methodGenericMarker))
                                 {
                                     methodGenericMarker = $"<{returnType} extends IJCOBridgeReflected> ";
                                 }
@@ -1875,8 +1890,17 @@ namespace MASES.JCOReflector.Engine
                                 inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
                                 if (isParamGeneric)
                                 {
-                                    // GENERICS SECURITY CAST: Explicitly cast T or K to IJCOBridgeReflected to expose getJCOInstance() for marshalling
-                                    formatter = ", " + paramName + " == null ? null : ((IJCOBridgeReflected)" + paramName + ").getJCOInstance()";
+                                    if (isArray)
+                                    {
+                                        // T[] cannot be cast directly to IJCOBridgeReflected (an array is never assignable
+                                        // to it); marshal it element-by-element like any other non-primitive array.
+                                        formatter = ", " + paramName + " == null ? null : toObjectFromArray(" + paramName + ")";
+                                    }
+                                    else
+                                    {
+                                        // GENERICS SECURITY CAST: Explicitly cast T or K to IJCOBridgeReflected to expose getJCOInstance() for marshalling
+                                        formatter = ", " + paramName + " == null ? null : ((IJCOBridgeReflected)" + paramName + ").getJCOInstance()";
+                                    }
                                 }
                                 else
                                 {
@@ -3339,6 +3363,18 @@ namespace MASES.JCOReflector.Engine
                 }
             }
             return importsToExport.ToString();
+        }
+
+        // Recursively checks whether a type references, anywhere in its structure (arrays, by-ref,
+        // or as a generic argument of a constructed type like JCORefOut<T>), a generic parameter that
+        // belongs to the enclosing CLASS rather than to the current method.
+        static bool ContainsClassLevelGenericParameter(Type t)
+        {
+            if (t == null) return false;
+            if (t.IsGenericParameter) return t.DeclaringMethod == null;
+            if (t.HasElementType) return ContainsClassLevelGenericParameter(t.GetElementType()); // arrays, by-ref (out/ref)
+            if (t.IsGenericType) return t.GetGenericArguments().Any(ContainsClassLevelGenericParameter);
+            return false;
         }
 
         static bool IsManagedType(this Type type, int recursion, int limit)

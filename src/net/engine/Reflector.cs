@@ -2646,6 +2646,12 @@ namespace MASES.JCOReflector.Engine
                         || (!propertiesNameCreated.Contains(propertyName) ? false : propertiesSignaturesCreated.IsDifferentOnlyForRetVal(item.ToString(), propertyName))
                        ) continue;
 
+                    // Same Java-language limit as for static methods: a static property cannot see the
+                    // class's own generic type parameter (see ExportMethods for the full rationale).
+                    bool referencesClassLevelGenericParameter = ContainsClassLevelGenericParameter(item.PropertyType);
+                    if (item.GetMethod != null && item.GetMethod.IsStatic && referencesClassLevelGenericParameter) continue;
+                    if (item.SetMethod != null && item.SetMethod.IsStatic && referencesClassLevelGenericParameter) continue;
+
                     string propertyType = "void";
                     bool isPropertyGeneric = EnableGenerics && item.PropertyType.IsGenericParameter;
 

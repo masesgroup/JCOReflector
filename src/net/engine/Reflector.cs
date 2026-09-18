@@ -1100,6 +1100,30 @@ namespace MASES.JCOReflector.Engine
             {
                 foreach (var interfaceType in implementableInterfaces)
                 {
+                    // If any abstract member of this interface is NOT satisfied by a public method on
+                    // the type (e.g. satisfied only via an explicit interface implementation, which the
+                    // CLR always represents as a private target method), Java cannot see this class as
+                    // genuinely implementing the interface — declaring "implements InterfaceType" here
+                    // would then require Java to find a matching public method that doesn't exist,
+                    // and the class would fail to compile unless it were abstract. Such a member is
+                    // still reachable in the generated code through the ToIXxx(...) deprecated-stub
+                    // path built elsewhere, so skip only the "implements" declaration, not the type.
+                    bool hasUnsatisfiedMember;
+                    try
+                    {
+                        var map = item.GetInterfaceMap(interfaceType);
+                        hasUnsatisfiedMember = map.TargetMethods.Any(m => m == null || !m.IsPublic);
+                    }
+                    catch (ArgumentException)
+                    {
+                        // GetInterfaceMap can throw for some interfaces on certain runtimes/assemblies
+                        // (e.g. an interface implemented only by a base type in a different assembly);
+                        // fall back to the previous behavior rather than blocking the class entirely.
+                        hasUnsatisfiedMember = false;
+                    }
+
+                    if (hasUnsatisfiedMember) continue;
+
                     var nameToAdd = interfaceType.ToPackageName() + "." + interfaceType.GetJavaClassName(interfaceType.Assembly);
 
                     if (string.IsNullOrEmpty(implementsStr))
@@ -2645,6 +2669,12 @@ namespace MASES.JCOReflector.Engine
                         || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
                         || (!propertiesNameCreated.Contains(propertyName) ? false : propertiesSignaturesCreated.IsDifferentOnlyForRetVal(item.ToString(), propertyName))
                        ) continue;
+
+                    // Same Java-language limit as for static methods: a static property cannot see the
+                    // class's own generic type parameter (see ExportMethods for the full rationale).
+                    bool referencesClassLevelGenericParameter = ContainsClassLevelGenericParameter(item.PropertyType);
+                    if (item.GetMethod != null && item.GetMethod.IsStatic && referencesClassLevelGenericParameter) continue;
+                    if (item.SetMethod != null && item.SetMethod.IsStatic && referencesClassLevelGenericParameter) continue;
 
                     string propertyType = "void";
                     bool isPropertyGeneric = EnableGenerics && item.PropertyType.IsGenericParameter;

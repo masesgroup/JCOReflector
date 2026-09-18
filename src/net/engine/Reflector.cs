@@ -306,28 +306,51 @@ namespace MASES.JCOReflector.Engine
 
         static string GetJavaClassName(this Type type, Assembly currentAssembly)
         {
-            if (!EnableGenerics || !type.IsGenericType) return type.Name;
-
-            // Extract the clean name before the backtick (e.g., "List" from "List`1")
-            string cleanName = type.Name.Split('`')[0];
-
-            // Check if OTHER generic variants exist within the same namespace 
-            // with the exact same name but a different number of arguments
-            bool hasNameCollision = currentAssembly.GetTypes().Any(t =>
-                t.Namespace == type.Namespace &&
-                t.Name.StartsWith(cleanName + "`") &&
-                t.GetGenericArguments().Length != type.GetGenericArguments().Length
-            );
-
-            // If there is a collision (e.g., Tuple), use the clean suffix for Java (Tuple_2)
-            // If there is NO collision (e.g., List), use only the clean name without numbers
-            if (hasNameCollision)
+            if (!EnableGenerics)
             {
-                return $"{cleanName}_{type.GetGenericArguments().Length}";
+                return type.Name.Contains('`') ? type.Name.Split('`')[0] : type.Name;
             }
 
-            return cleanName;
+            // If the type name contains the .NET backtick, it is a generic definition or constructed type
+            if (type.Name.Contains('`'))
+            {
+                string[] parts = type.Name.Split('`');
+                string cleanName = parts[0];
+                string arity = parts[1];
+
+                // Append the exact arity number using the underscore layout (e.g., ObjectSecurity_1, List_1)
+                return $"{cleanName}_{arity}";
+            }
+
+            // Standard non-generic types keep their native pure name untouched (e.g., ObjectSecurity)
+            return type.Name;
         }
+
+
+        //static string GetJavaClassName(this Type type, Assembly currentAssembly)
+        //{
+        //    if (!EnableGenerics || !type.IsGenericType) return type.Name;
+        //
+        //    // Extract the clean name before the backtick (e.g., "List" from "List`1")
+        //    string cleanName = type.Name.Split('`')[0];
+        //
+        //    // Check if OTHER generic variants exist within the same namespace 
+        //    // with the exact same name but a different number of arguments
+        //    bool hasNameCollision = currentAssembly.GetTypes().Any(t =>
+        //        t.Namespace == type.Namespace &&
+        //        t.Name.StartsWith(cleanName + "`") &&
+        //        t.GetGenericArguments().Length != type.GetGenericArguments().Length
+        //    );
+        //
+        //    // If there is a collision (e.g., Tuple), use the clean suffix for Java (Tuple_2)
+        //    // If there is NO collision (e.g., List), use only the clean name without numbers
+        //    if (hasNameCollision)
+        //    {
+        //        return $"{cleanName}_{type.GetGenericArguments().Length}";
+        //    }
+        //
+        //    return cleanName;
+        //}
 
         static string GetAssemblies(this IEnumerable<string> assemblyNames)
         {
@@ -1199,6 +1222,9 @@ namespace MASES.JCOReflector.Engine
             var defaultCtor = Const.CTor.DEFAULT_CTOR.Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName);
 
             StringBuilder ctors = new StringBuilder();
+            // Same erasure-collision guard used in ExportMethods: two distinct .NET constructor
+            // overloads can still collapse onto the same erased Java signature.
+            HashSet<string> javaErasedCtorSignaturesCreated = new HashSet<string>();
 
             bool hasDefaultCtor = false;
 
@@ -1223,6 +1249,7 @@ namespace MASES.JCOReflector.Engine
 
                 StringBuilder ctorParams = new StringBuilder();
                 StringBuilder newObjectParams = new StringBuilder();
+                List<string> erasedCtorParamTypes = new List<string>();
 
                 bool isPrimitive = true;
                 string defaultPrimitiveValue = string.Empty;
@@ -1255,6 +1282,8 @@ namespace MASES.JCOReflector.Engine
 
                     if (!isManaged) break; // found not managed type, stop here
 
+                    erasedCtorParamTypes.Add(isArray ? paramType + "[]" : paramType);
+
                     var paramName = ReplaceSinglekeyword(parameter.Name);
                     isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                     ctorParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
@@ -1269,7 +1298,13 @@ namespace MASES.JCOReflector.Engine
                     }
                     newObjectParams.Append(string.Format(formatter, objectCaster, paramName));
                 }
-                if (!isManaged) continue; // found not managed type, jump to next 
+                if (!isManaged) continue; // found not managed type, jump to next
+
+                // JAVA LANGUAGE LIMIT: keep only the first constructor overload that reaches
+                // this erased Java signature; a later one identical after erasure can't coexist.
+                string javaErasedCtorSignature = "(" + string.Join(",", erasedCtorParamTypes) + ")";
+                if (!javaErasedCtorSignaturesCreated.Add(javaErasedCtorSignature)) continue;
+
                 string ctorParamStr = ctorParams.ToString();
                 if (!string.IsNullOrEmpty(ctorParamStr))
                 {
@@ -1548,6 +1583,11 @@ namespace MASES.JCOReflector.Engine
             List<string> methodsSignatureCreated = new List<string>();
             List<string> methodsNameCreated = new List<string>();
             List<string> methodsDuplicatedCreated = new List<string>();
+            // Tracks method signatures as they appear AFTER Java type erasure (raw parameter types,
+            // no generic type arguments). Two distinct .NET overloads can still collapse onto the same
+            // erased Java signature (e.g. WhenAny(IEnumerable<Task>) vs WhenAny<TResult>(IEnumerable<Task<TResult>>)
+            // both become WhenAny(IEnumerable_1)) — Java cannot declare both, so the second one is dropped.
+            HashSet<string> javaErasedSignaturesCreated = new HashSet<string>();
 
             bool isPrimitive = true;
             string defaultPrimitiveValue = string.Empty;
@@ -1620,6 +1660,21 @@ namespace MASES.JCOReflector.Engine
                     if (methodName == "GetHashCode" && parameters.Length == 0) continue;
                     if (methodName == "GetType" && parameters.Length == 0) continue;
                     if (methodName == "Equals" && parameters.Length == 1 && parameters[0].ParameterType == typeof(object)) continue;
+
+                    // JAVA LANGUAGE LIMIT: a static member cannot reference a generic parameter that belongs
+                    // to the enclosing class (Java erasure keeps a single shared class per raw type, unlike
+                    // .NET where each closed generic instantiation has its own static state). Only skip when
+                    // the parameter belongs to the class (DeclaringMethod == null); a method-level generic
+                    // parameter (DeclaringMethod != null) is fine on a static method and is handled elsewhere.
+                    bool referencesClassLevelGenericParameter =
+                        ContainsClassLevelGenericParameter(item.ReturnType) ||
+                        parameters.Any(p => ContainsClassLevelGenericParameter(p.ParameterType));
+
+                    if (item.IsStatic && referencesClassLevelGenericParameter)
+                    {
+                        // Not representable in Java: a static context cannot see the class's own type parameter.
+                        continue;
+                    }
 
                     string methodInterfaceStr = string.Empty;
                     string dupMethodInterfaceStr = string.Empty;
@@ -1711,8 +1766,11 @@ namespace MASES.JCOReflector.Engine
                                 isInterfaceRetVal = false;
                                 implementationReturnType = returnType;
 
-                                // Check if the generic parameter belongs to the METHOD itself (Generic Method like <K>)
-                                if (item.ReturnType.DeclaringMethod != null)
+                                // Don't overwrite the marker already built from ALL of item.GetGenericArguments():
+                                // it already covers this case (a generic method always has DeclaringMethod != null
+                                // on its own type parameters). Overwriting here dropped every other type parameter
+                                // besides the return type's own (e.g. CreateWrapperOfType<T, TWrapper> lost T).
+                                if (item.ReturnType.DeclaringMethod != null && string.IsNullOrEmpty(methodGenericMarker))
                                 {
                                     methodGenericMarker = $"<{returnType} extends IJCOBridgeReflected> ";
                                 }
@@ -1735,8 +1793,21 @@ namespace MASES.JCOReflector.Engine
                                 {
                                     isInterfaceRetVal = item.ReturnType.GetElementType().IsInterface;
                                     implementationReturnType = isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType;
-                                    templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate
-                                    : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+
+                                    // "new T(...)" is never legal Java: if the array element is a generic parameter that
+                                    // belongs to the CLASS (not this method), route to the reflective-instantiation variant.
+                                    var arrayElementType = item.ReturnType.GetElementType();
+                                    if (EnableGenerics && arrayElementType.IsGenericParameter && arrayElementType.DeclaringMethod == null)
+                                    {
+                                        int genericArgIndex = Array.IndexOf(type.GetGenericArguments(), arrayElementType);
+                                        templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassObjectArrayGenericMethodTemplate)
+                                                                        .Replace("GENERIC_ARGUMENT_INDEX", genericArgIndex.ToString());
+                                    }
+                                    else
+                                    {
+                                        templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate
+                                                                                                  : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                                    }
                                 }
                                 else
                                 {
@@ -1758,6 +1829,9 @@ namespace MASES.JCOReflector.Engine
                         StringBuilder inputParams = new StringBuilder();
                         StringBuilder execParams = new StringBuilder();
                         bool builtWithJCORefOut = false;
+                        // Raw parameter types only (no variable names, no array/varargs decoration beyond
+                        // "[]"), used later to detect Java erasure collisions between .NET overloads.
+                        List<string> erasedParamTypes = new List<string>();
                         foreach (var parameter in parameters)
                         {
                             string paramType = string.Empty;
@@ -1793,6 +1867,10 @@ namespace MASES.JCOReflector.Engine
                                 }
                             }
 
+                            // Record the erased parameter type as it will actually appear in the generated
+                            // Java signature (array-ness matters for erasure, generic arguments don't).
+                            erasedParamTypes.Add(isArray ? paramType + "[]" : paramType);
+
                             hasNativeArrayInParameter |= isArray && isPrimitive;
                             bool useRefOut = false;
                             if (!EnableRefOutParameters)
@@ -1825,8 +1903,17 @@ namespace MASES.JCOReflector.Engine
                                 inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
                                 if (isParamGeneric)
                                 {
-                                    // GENERICS SECURITY CAST: Explicitly cast T or K to IJCOBridgeReflected to expose getJCOInstance() for marshalling
-                                    formatter = ", " + paramName + " == null ? null : ((IJCOBridgeReflected)" + paramName + ").getJCOInstance()";
+                                    if (isArray)
+                                    {
+                                        // T[] cannot be cast directly to IJCOBridgeReflected (an array is never assignable
+                                        // to it); marshal it element-by-element like any other non-primitive array.
+                                        formatter = ", " + paramName + " == null ? null : toObjectFromArray(" + paramName + ")";
+                                    }
+                                    else
+                                    {
+                                        // GENERICS SECURITY CAST: Explicitly cast T or K to IJCOBridgeReflected to expose getJCOInstance() for marshalling
+                                        formatter = ", " + paramName + " == null ? null : ((IJCOBridgeReflected)" + paramName + ").getJCOInstance()";
+                                    }
                                 }
                                 else
                                 {
@@ -1848,6 +1935,14 @@ namespace MASES.JCOReflector.Engine
                             }
                         }
                         if (!isManaged) continue;
+
+                        // JAVA LANGUAGE LIMIT: after erasure, this overload's signature may be identical to
+                        // one already emitted for the same method name, even though the two .NET overloads
+                        // are genuinely distinct (e.g. one closes a generic argument, the other doesn't).
+                        // Java cannot declare both, so keep only the first one encountered.
+                        string javaErasedSignature = methodName + "(" + string.Join(",", erasedParamTypes) + ")";
+                        if (!javaErasedSignaturesCreated.Add(javaErasedSignature)) continue;
+
                         string inputParamStr = inputParams.ToString();
                         if (!string.IsNullOrEmpty(inputParamStr))
                         {
@@ -2029,6 +2124,7 @@ namespace MASES.JCOReflector.Engine
                             methodInterfaceBuilder.AppendLine(dupMethodInterfaceStr);
                         }
                     }
+
                     methodBuilder.AppendLine(methodStr);
                     if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
                     {
@@ -2888,6 +2984,10 @@ namespace MASES.JCOReflector.Engine
             StringBuilder dynamicInvokeExecParams = new StringBuilder();
             int paramCounter = 0;
             string defaultPrimitiveValue = string.Empty;
+            // Replaces the two ad-hoc comma conventions above: every parameter contributes a bare
+            // expression token (no leading/trailing comma), and the single Join below owns all
+            // separators. This removes the mismatch that produced "Invoke(sender, , e)".
+            List<string> execParamTokens = new List<string>();
             foreach (var parameter in parameters)
             {
                 string paramType = string.Empty;
@@ -2944,13 +3044,18 @@ namespace MASES.JCOReflector.Engine
                 // HIGH-PRECISION INJECTION: Accumulate parameter marshalling tokens using safe trailing formatting
                 if (isDelegateParamGeneric)
                 {
-                    // For generic parameters we manually append the secure token with a trailing comma to align with JCOReflector pipeline
-                    execParams.Append($"{paramName} == null ? null : ((IJCOBridgeReflected){paramName}).getJCOInstance(), ");
+                    // converterBlock has already produced a correctly-typed Tn argN variable above;
+                    // callerInstance.Invoke(...) is a plain Java call and expects that Tn value as-is.
+                    execParamTokens.Add(paramName);
                 }
                 else
                 {
-                    // For standard types, we directly append the original layout format string (which handles its own commas or spacing)
-                    execParams.Append(string.Format(Const.Delegates.INVOKE_PARAMETER, paramName));
+                    // Const.Delegates.INVOKE_PARAMETER may embed its own leading or trailing comma;
+                    // strip it here so every token is a bare expression, letting the Join below own
+                    // all separators consistently.
+                    string rawToken = string.Format(Const.Delegates.INVOKE_PARAMETER, paramName).Trim();
+                    rawToken = rawToken.Trim(',', ' ');
+                    execParamTokens.Add(rawToken);
                 }
 
                 string dynamicFormatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
@@ -2976,16 +3081,8 @@ namespace MASES.JCOReflector.Engine
             {
                 inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
             }
-            // TOTAL SANITIZATION FOR DELEGATES PARAMETERS (FIX BOTH GENERICS AND STANDARD PLACEMENTS)
-            string execParamStr = execParams.ToString().Trim();
 
-            // Drop any loose trailing comma and spaces if present at the end of the compiled token
-            if (execParamStr.EndsWith(",")) execParamStr = execParamStr.Substring(0, execParamStr.Length - 1).Trim();
-            if (execParamStr.EndsWith(", ")) execParamStr = execParamStr.Substring(0, execParamStr.Length - 2).Trim();
-
-            // Drop any duplicate loose leading comma if the framework formatting generated an overlap at the start
-            if (execParamStr.StartsWith(",")) execParamStr = execParamStr.Substring(1).Trim();
-            if (execParamStr.StartsWith(", ")) execParamStr = execParamStr.Substring(2).Trim();
+            string execParamStr = string.Join(", ", execParamTokens);
 
             var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
             var importsStr = imports.ExportImports();
@@ -3251,6 +3348,8 @@ namespace MASES.JCOReflector.Engine
         static string ExportImports(this IList<Type> imports)
         {
             StringBuilder importsToExport = new StringBuilder();
+            var emitted = new HashSet<string>();
+
             foreach (var item in imports)
             {
                 var subItem = item;
@@ -3258,24 +3357,38 @@ namespace MASES.JCOReflector.Engine
                 {
                     subItem = item.GetElementType();
                 }
-                // FIX: Resolve clean non-colliding name for import statements to filter out backticks (`1, `2)
                 var name = subItem.GetJavaClassName(subItem.Assembly);
-                if (string.IsNullOrWhiteSpace(name)) continue; // bypass empty name which leads to error in some cases
+                if (string.IsNullOrWhiteSpace(name)) continue;
+
                 if (subItem.IsInterface)
                 {
                     if (subItem.IsManagedType(0, 1) && subItem != typeof(IEnumerator) && subItem != typeof(IEnumerable))
                     {
-                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name));
-                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name + Const.SpecialNames.ImplementationTrailer));
+                        string line1 = string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name);
+                        string line2 = string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name + Const.SpecialNames.ImplementationTrailer);
+                        if (emitted.Add(line1)) importsToExport.AppendLine(line1);
+                        if (emitted.Add(line2)) importsToExport.AppendLine(line2);
                     }
                 }
                 else if (subItem.IsManagedType(0, 1))
                 {
-                    importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name));
+                    string line = string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name);
+                    if (emitted.Add(line)) importsToExport.AppendLine(line);
                 }
             }
-
             return importsToExport.ToString();
+        }
+
+        // Recursively checks whether a type references, anywhere in its structure (arrays, by-ref,
+        // or as a generic argument of a constructed type like JCORefOut<T>), a generic parameter that
+        // belongs to the enclosing CLASS rather than to the current method.
+        static bool ContainsClassLevelGenericParameter(Type t)
+        {
+            if (t == null) return false;
+            if (t.IsGenericParameter) return t.DeclaringMethod == null;
+            if (t.HasElementType) return ContainsClassLevelGenericParameter(t.GetElementType()); // arrays, by-ref (out/ref)
+            if (t.IsGenericType) return t.GetGenericArguments().Any(ContainsClassLevelGenericParameter);
+            return false;
         }
 
         static bool IsManagedType(this Type type, int recursion, int limit)

@@ -321,6 +321,13 @@ namespace MASES.JCOReflector.Engine
             return "<" + string.Join(", ", args.Select(a => a.Name)) + ">";
         }
 
+        // Same rationale as above, minimal form: NetObject.Equals(IJCOBridgeReflected) and
+        // Equals(IJCOBridgeReflected,IJCOBridgeReflected) are the only two erasure clashes we've hit.
+        static bool ClashesWithNetObjectEquals(string methodName, int paramCount)
+        {
+            return methodName == "Equals" && (paramCount == 1 || paramCount == 2);
+        }
+
         static string GetJavaClassName(this Type type, Assembly currentAssembly)
         {
             if (!EnableGenerics)
@@ -2031,6 +2038,22 @@ namespace MASES.JCOReflector.Engine
                         {
                             newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.GetJavaClassName(type.Assembly));
                         }
+
+                        // NetObject exposes Equals(IJCOBridgeReflected) and Equals(IJCOBridgeReflected,IJCOBridgeReflected).
+                        // A generated Equals(T)/Equals(T,T) on a generic type (IEquatable<T>, IEqualityComparer<T>...)
+                        // erases to the exact same signature, and Java rejects the pair ("have the same erasure, yet
+                        // neither overrides the other"). Rename the generic one instead of losing it: reuses the same
+                        // "use newMethodName for the Java-visible name, keep methodName for the real .NET Invoke/Get
+                        // call" switch already used for the "new" keyword case above.
+                        bool clashesWithNetObjectEquals = EnableGenerics && methodName == "Equals"
+                            && (parameters.Length == 1 || parameters.Length == 2)
+                            && parameters.All(p => p.ParameterType.IsGenericParameter);
+                        if (clashesWithNetObjectEquals)
+                        {
+                            newMethodName = methodName + "Generic";
+                            isNewMethodVal = true;
+                        }
+
                         // --- REPLACEMENT PIPELINE FOR METHOD TEMPLATE TAGS ---
                         string modifierKeyword = item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty;
                         string finalModifier = modifierKeyword + methodGenericMarker;
@@ -2055,6 +2078,21 @@ namespace MASES.JCOReflector.Engine
                                 {
                                     interfaceGenericMarker = $"<{string.Join(", ", methodGenericArgs.Select(t => $"{t.Name} extends IJCOBridgeReflected"))}> ";
                                 }
+                            }
+
+                            // NetObject exposes Equals(IJCOBridgeReflected) and Equals(IJCOBridgeReflected,IJCOBridgeReflected).
+                            // A generated Equals(T)/Equals(T,T) on a generic type (IEquatable<T>, IEqualityComparer<T>...)
+                            // erases to the exact same signature, and Java rejects the pair ("have the same erasure, yet
+                            // neither overrides the other"). Rename the generic one instead of losing it: reuses the same
+                            // "use newMethodName for the Java-visible name, keep methodName for the real .NET Invoke/Get
+                            // call" switch already used for the "new" keyword case above.
+                            clashesWithNetObjectEquals = EnableGenerics && methodName == "Equals"
+                                && (parameters.Length == 1 || parameters.Length == 2)
+                                && parameters.All(p => p.ParameterType.IsGenericParameter);
+                            if (clashesWithNetObjectEquals)
+                            {
+                                newMethodName = methodName + "Generic";
+                                isNewMethodVal = true;
                             }
 
                             // We handle the modifier replacement by injecting the generic marker if present right after public statement
@@ -2148,6 +2186,22 @@ namespace MASES.JCOReflector.Engine
                             {
                                 execParamStr = ", " + execParamStr;
                             }
+
+                            // NetObject exposes Equals(IJCOBridgeReflected) and Equals(IJCOBridgeReflected,IJCOBridgeReflected).
+                            // A generated Equals(T)/Equals(T,T) on a generic type (IEquatable<T>, IEqualityComparer<T>...)
+                            // erases to the exact same signature, and Java rejects the pair ("have the same erasure, yet
+                            // neither overrides the other"). Rename the generic one instead of losing it: reuses the same
+                            // "use newMethodName for the Java-visible name, keep methodName for the real .NET Invoke/Get
+                            // call" switch already used for the "new" keyword case above.
+                            clashesWithNetObjectEquals = EnableGenerics && methodName == "Equals"
+                                && (parameters.Length == 1 || parameters.Length == 2)
+                                && parameters.All(p => p.ParameterType.IsGenericParameter);
+                            if (clashesWithNetObjectEquals)
+                            {
+                                newMethodName = methodName + "Generic";
+                                isNewMethodVal = true;
+                            }
+
                             dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, finalModifier)
                                                         .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                         .Replace(Const.Methods.METHOD_NAME, methodName)
@@ -2354,6 +2408,9 @@ namespace MASES.JCOReflector.Engine
                             StringBuilder inputParams = new StringBuilder();
                             StringBuilder execParams = new StringBuilder();
                             bool builtWithJCORefOut = false;
+                            // Same format used by the real ExportMethods loop's javaErasedSignaturesCreated, so the
+                            // comparison below is apples-to-apples.
+                            List<string> erasedParamTypes = new List<string>();
                             foreach (var parameter in parameters)
                             {
                                 string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
@@ -2363,6 +2420,10 @@ namespace MASES.JCOReflector.Engine
                                 {
                                     paramType = paramType.Split('`')[0];
                                 }
+
+                                // Record the erased parameter type exactly as ExportMethods does, so a collision against a
+                                // real public method (see stubErasedSignature below) can actually be detected.
+                                erasedParamTypes.Add(isArray ? paramType + "[]" : paramType);
 
                                 hasNativeArrayInParameter |= isArray && isPrimitive;
                                 bool useRefOut = false;
@@ -2436,6 +2497,34 @@ namespace MASES.JCOReflector.Engine
                                 newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.GetJavaClassName(type.Assembly));
                             }
 
+                            // This deprecated stub represents a .NET explicit interface implementation, which is never
+                            // publicly visible on the concrete type in .NET. Promoting it to a public Java method can
+                            // still erase-clash with a real, non-explicit public method the type genuinely has (e.g.
+                            // Collection<T>'s explicit IList.Add(object):int vs SyndicationElementExtensionCollection's
+                            // own public Add(object):void). Since the stub only throws UnsupportedOperationException
+                            // anyway, rename it on collision instead of losing either method.
+                            string stubErasedSignature = methodName + "(" + string.Join(",", erasedParamTypes) + ")";
+                            if (javaErasedSignaturesCreated.Contains(stubErasedSignature))
+                            {
+                                newMethodName = methodName + "From" + implementableInterface.GetJavaClassName(implementableInterface.Assembly);
+                                isNewMethodVal = true;
+                            }
+
+                            // NetObject exposes Equals(IJCOBridgeReflected) and Equals(IJCOBridgeReflected,IJCOBridgeReflected).
+                            // A generated Equals(T)/Equals(T,T) on a generic type (IEquatable<T>, IEqualityComparer<T>...)
+                            // erases to the exact same signature, and Java rejects the pair ("have the same erasure, yet
+                            // neither overrides the other"). Rename the generic one instead of losing it: reuses the same
+                            // "use newMethodName for the Java-visible name, keep methodName for the real .NET Invoke/Get
+                            // call" switch already used for the "new" keyword case above.
+                            bool clashesWithNetObjectEquals = EnableGenerics && methodName == "Equals"
+                                && (parameters.Length == 1 || parameters.Length == 2)
+                                && parameters.All(p => p.ParameterType.IsGenericParameter);
+                            if (clashesWithNetObjectEquals)
+                            {
+                                newMethodName = methodName + "Generic";
+                                isNewMethodVal = true;
+                            }
+
                             methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.GetJavaClassName(implementableInterface.Assembly))
                                                      .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                      .Replace(Const.Methods.METHOD_NAME, methodName)
@@ -2488,6 +2577,21 @@ namespace MASES.JCOReflector.Engine
                                 }
 
                                 execParamStr = execParams.ToString();
+
+                                // NetObject exposes Equals(IJCOBridgeReflected) and Equals(IJCOBridgeReflected,IJCOBridgeReflected).
+                                // A generated Equals(T)/Equals(T,T) on a generic type (IEquatable<T>, IEqualityComparer<T>...)
+                                // erases to the exact same signature, and Java rejects the pair ("have the same erasure, yet
+                                // neither overrides the other"). Rename the generic one instead of losing it: reuses the same
+                                // "use newMethodName for the Java-visible name, keep methodName for the real .NET Invoke/Get
+                                // call" switch already used for the "new" keyword case above.
+                                clashesWithNetObjectEquals = EnableGenerics && methodName == "Equals"
+                                    && (parameters.Length == 1 || parameters.Length == 2)
+                                    && parameters.All(p => p.ParameterType.IsGenericParameter);
+                                if (clashesWithNetObjectEquals)
+                                {
+                                    newMethodName = methodName + "Generic";
+                                    isNewMethodVal = true;
+                                }
 
                                 dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                             .Replace(Const.Methods.METHOD_NAME, methodName)

@@ -63,7 +63,8 @@ namespace MASES.JCOReflector.Engine
             "classType",
             "classInstance",
             "native",
-            "switch"
+            "switch",
+            "this"
         };
 
         public class SpecialNames
@@ -105,26 +106,34 @@ namespace MASES.JCOReflector.Engine
 
             static SpecialNames()
             {
-                ExportingAvoidanceMap.Add("System.Net.Http.Headers.MediaTypeWithQualityHeaderValue", new string[] { "TryParse" });
-                ExportingAvoidanceMap.Add("System.Net.Http.Headers.NameValueWithParametersHeaderValue", new string[] { "TryParse" });
-                ExportingAvoidanceMap.Add("System.Net.Http.Headers.TransferCodingWithQualityHeaderValue", new string[] { "TryParse" });
-                ExportingAvoidanceMap.Add("Microsoft.VisualBasic.FileSystem", new string[] { "FileGet", "Input" });
-                ExportingAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
-                ExportingAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
-                ExportingAvoidanceMap.Add("System.Threading.Interlocked", new string[] { "Decrement", "Increment"
+                ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.MediaTypeWithQualityHeaderValue$", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.NameValueWithParametersHeaderValue$", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.TransferCodingWithQualityHeaderValue$", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add(@"^Microsoft\.VisualBasic\.FileSystem$", new string[] { "FileGet", "Input" });
+                ExportingAvoidanceMap.Add(@"^System\.Threading\.Thread$", new string[] { "VolatileRead" });
+                ExportingAvoidanceMap.Add(@"^System\.Threading\.Volatile$", new string[] { "Read" });
+                ExportingAvoidanceMap.Add(@"^System\.Threading\.Interlocked$", new string[] { "Decrement", "Increment"
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
-                                                                                         , "Read"
+                                                                                 , "Read"
 #endif
-                });
+    });
 #if NET7_0 || NET8_0 || NET9_0 || NET10_0
-                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.JavaScript.JSMarshalerArgument", new string[] { "ToManaged" });
+                ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.JavaScript\.JSMarshalerArgument$", new string[] { "ToManaged" });
+
+                // Generic math (C# 11 "static abstract members in interfaces"): no Java equivalent for a
+                // static abstract interface member, and the operator interfaces bind TResult=bool, which
+                // never satisfies our IJCOBridgeReflected bound. One pattern for the whole .NET 7+ family
+                // instead of one entry per interface — the arity (`1, `2, `3...) differs by interface and
+                // has changed across .NET versions, \d+ matches any of them.
+                ExportingAvoidanceMap.Add(@"^System\.Numerics\.I\w+`\d+$", null);
+                ExportingAvoidanceMap.Add(@"^System\.I(Span|Utf8Span)?Parsable`\d+$", null);
 #endif
 #if NET8_0 || NET9_0 || NET10_0
-                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceType", null);
+                ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Marshalling\.IIUnknownInterfaceType$", null);
 #endif
 #if NET10_0
-                ExportingAvoidanceMap.Add("System.MemoryExtensions", null);
-                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Java.JavaMarshal", new string[] { "Initialize" });
+                ExportingAvoidanceMap.Add(@"^System\.MemoryExtensions$", null);
+                ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Java\.JavaMarshal$", new string[] { "Initialize" });
 #endif
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");
@@ -309,6 +318,7 @@ namespace MASES.JCOReflector.Engine
             {
                 ReflectorInterfaceTemplate,
                 ReflectorInterfaceClassTemplate,
+                ReflectorGenericInterfaceClassTemplate,
                 ReflectorInterfaceEventTemplate,
                 ReflectorInterfaceMethodTemplate,
                 ReflectorInterfaceGetTemplate,
@@ -317,8 +327,10 @@ namespace MASES.JCOReflector.Engine
 
                 ReflectorThrowableClassTemplate,
                 ReflectorClassTemplate,
+                ReflectorClassGenericTemplate,
 
                 ReflectorClassConstructorTemplate,
+                ReflectorClassGenericConstructorTemplate,
 
                 ReflectorClassVoidMethodTemplate,
                 ReflectorClassNativeMethodTemplate,
@@ -326,6 +338,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassNativeMethodWithCastToNumberTemplate,
                 ReflectorClassObjectMethodTemplate,
                 ReflectorClassObjectArrayMethodTemplate,
+                ReflectorClassObjectArrayGenericMethodTemplate,
 
                 ReflectorClassVoidMethodDeprecatedTemplate,
                 ReflectorClassNativeMethodDeprecatedTemplate,
@@ -339,6 +352,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassNativeArrayGetTemplate,
                 ReflectorClassObjectGetTemplate,
                 ReflectorClassObjectArrayGetTemplate,
+                ReflectorClassObjectArrayGenericGetTemplate,
 
                 ReflectorClassSetDeprecatedTemplate,
                 ReflectorClassNativeGetDeprecatedTemplate,
@@ -350,6 +364,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorEnumFlagsTemplate,
 
                 ReflectorEnumeratorTemplate,
+                ReflectorGenericEnumeratorTemplate,
                 ReflectorEnumerableTemplate,
                 ReflectorEnumerableDeprecatedTemplate,
                 ReflectorEnumerableNativeNextTemplate,
@@ -358,10 +373,15 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassEventTemplate,
 
                 VoidDelegateClassTemplate,
+                VoidGenericDelegateClassTemplate,
                 VoidDelegateInterfaceTemplate,
+                VoidGenericDelegateInterfaceTemplate,
                 NativeDelegateClassTemplate,
+                NativeGenericDelegateClassTemplate,
                 ObjectDelegateClassTemplate,
+                ObjectGenericDelegateClassTemplate,
                 NonVoidDelegateInterfaceTemplate,
+                NonVoidGenericDelegateInterfaceTemplate,
 
                 ManifestTemplate,
 
@@ -401,6 +421,7 @@ namespace MASES.JCOReflector.Engine
 
             public const string ReflectorInterfaceTemplate = "JCObjectReflectorInterface.template";
             public const string ReflectorInterfaceClassTemplate = "JCObjectReflectorInterfaceClass.template";
+            public const string ReflectorGenericInterfaceClassTemplate = "JCObjectReflectorGenericInterfaceClass.template";
             public const string ReflectorInterfaceEventTemplate = "JCObjectReflectorInterfaceEvent.template";
             public const string ReflectorInterfaceMethodTemplate = "JCObjectReflectorInterfaceMethod.template";
             public const string ReflectorInterfaceGetTemplate = "JCObjectReflectorInterfaceGetProperty.template";
@@ -409,8 +430,10 @@ namespace MASES.JCOReflector.Engine
 
             public const string ReflectorThrowableClassTemplate = "JCObjectReflectorThrowableClass.template";
             public const string ReflectorClassTemplate = "JCObjectReflectorClass.template";
+            public const string ReflectorClassGenericTemplate = "JCObjectReflectorClassGeneric.template";
 
             public const string ReflectorClassConstructorTemplate = "JCObjectReflectorClassConstructor.template";
+            public const string ReflectorClassGenericConstructorTemplate = "JCObjectReflectorClassGenericConstructor.template";
 
             public const string ReflectorClassVoidMethodTemplate = "JCObjectReflectorClassVoidMethod.template";
             public const string ReflectorClassNativeMethodTemplate = "JCObjectReflectorClassNativeMethod.template";
@@ -418,6 +441,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorClassNativeArrayMethodTemplate = "JCObjectReflectorClassNativeMethodArray.template";
             public const string ReflectorClassObjectMethodTemplate = "JCObjectReflectorClassObjectMethod.template";
             public const string ReflectorClassObjectArrayMethodTemplate = "JCObjectReflectorClassObjectMethodArray.template";
+            public const string ReflectorClassObjectArrayGenericMethodTemplate = "JCObjectReflectorClassObjectMethodArrayGeneric.template";
 
             public const string ReflectorClassVoidMethodDeprecatedTemplate = "JCObjectReflectorClassVoidMethodDeprecated.template";
             public const string ReflectorClassNativeMethodDeprecatedTemplate = "JCObjectReflectorClassNativeMethodDeprecated.template";
@@ -431,6 +455,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorClassNativeArrayGetTemplate = "JCObjectReflectorClassNativeGetPropertyArray.template";
             public const string ReflectorClassObjectGetTemplate = "JCObjectReflectorClassObjectGetProperty.template";
             public const string ReflectorClassObjectArrayGetTemplate = "JCObjectReflectorClassObjectGetPropertyArray.template";
+            public const string ReflectorClassObjectArrayGenericGetTemplate = "JCObjectReflectorClassObjectGetPropertyArrayGeneric.template";
 
             public const string ReflectorClassSetDeprecatedTemplate = "JCObjectReflectorClassSetPropertyDeprecated.template";
             public const string ReflectorClassNativeGetDeprecatedTemplate = "JCObjectReflectorClassNativeGetPropertyDeprecated.template";
@@ -442,6 +467,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorEnumFlagsTemplate = "JCObjectReflectorEnumFlags.template";
 
             public const string ReflectorEnumeratorTemplate = "JCObjectReflectorEnumerator.template";
+            public const string ReflectorGenericEnumeratorTemplate = "JCObjectReflectorGenericEnumerator.template";
             public const string ReflectorEnumerableTemplate = "JCObjectReflectorClassEnumerable.template";
             public const string ReflectorEnumerableDeprecatedTemplate = "JCObjectReflectorClassEnumerableDeprecated.template";
             public const string ReflectorEnumerableNativeNextTemplate = "JCObjectReflectorEnumeratorNativeNext.template";
@@ -451,10 +477,15 @@ namespace MASES.JCOReflector.Engine
 
 
             public const string VoidDelegateClassTemplate = "JCObjectReflectorVoidDelegateClass.template";
+            public const string VoidGenericDelegateClassTemplate = "JCObjectReflectorVoidGenericDelegateClass.template";
             public const string VoidDelegateInterfaceTemplate = "JCObjectReflectorVoidDelegateInterface.template";
+            public const string VoidGenericDelegateInterfaceTemplate = "JCObjectReflectorVoidGenericDelegateInterface.template";
             public const string NativeDelegateClassTemplate = "JCObjectReflectorNativeDelegateClass.template";
+            public const string NativeGenericDelegateClassTemplate = "JCObjectReflectorNativeGenericDelegateClass.template";
             public const string ObjectDelegateClassTemplate = "JCObjectReflectorObjectDelegateClass.template";
+            public const string ObjectGenericDelegateClassTemplate = "JCObjectReflectorObjectGenericDelegateClass.template";
             public const string NonVoidDelegateInterfaceTemplate = "JCObjectReflectorNonVoidDelegateInterface.template";
+            public const string NonVoidGenericDelegateInterfaceTemplate = "JCObjectReflectorNonVoidGenericDelegateInterface.template";
 
             public const string ManifestTemplate = "JCOManifest.template";
 
@@ -495,6 +526,8 @@ namespace MASES.JCOReflector.Engine
             public const string PACKAGE_CLASS_ABSTRACT_PROTO = "abstract ";
             public const string PACKAGE_CLASS_IMPLEMENTS_PROTO = "implements ";
             public const string PACKAGE_CLASS_IMPLEMENTS_ITERABLE = "Iterable<{0}>";
+            public const string GENERIC_CLASS_PARAMETERS = "GENERIC_CLASS_PARAMETERS";
+            
         }
 
         public class Parameters
@@ -550,6 +583,8 @@ namespace MASES.JCOReflector.Engine
 
             public const string METHOD_INTERFACE_NAME = "METHOD_INTERFACE_NAME";
             public const string METHOD_ENUMERATOR_NAME = "METHOD_ENUMERATOR_NAME";
+            public const string GENERIC_METHOD_PARAMETERS = "GENERIC_METHOD_PARAMETERS";
+            public const string GENERIC_METHOD_ARGUMENTS = "GENERIC_METHOD_ARGUMENTS";
         }
 
         public class Properties
@@ -597,6 +632,9 @@ namespace MASES.JCOReflector.Engine
             public const string DELEGATE_DYNAMIC_INVOKE_SECTION = "DELEGATE_DYNAMIC_INVOKE_SECTION";
 
             public const string INVOKE_PARAMETER = "{0}, ";
+
+            public const string INVOKE_PARAMETER_GENERIC = ", {0} == null ? null : ((IJCOBridgeReflected){0}).getJCOInstance()";
+
             public const string INPUT_INVOKE_PARAMETER = "{0} {1}, ";
             public const string CONVERTER_BLOCK_PARAMETER_PRIMITIVE = "            {0} {1} = argsFromJCOBridge[{2}] == null ? null : ({0})argsFromJCOBridge[{2}];";
 
@@ -727,6 +765,7 @@ namespace MASES.JCOReflector.Engine
             public const string Enable_Inheritance_Value = "Enable_Inheritance_Value";
             public const string Enable_Interface_Inheritance_Value = "Enable_Interface_Inheritance_Value";
             public const string Enable_RefOut_Parameters_Value = "Enable_RefOut_Parameters_Value";
+            public const string Enable_Generics_Parameters_Value = "Enable_Generics_Parameters_Value";
         }
     }
 }

@@ -1683,6 +1683,7 @@ namespace MASES.JCOReflector.Engine
         public bool EnableInheritance { get; set; }
         public bool EnableInterfaceInheritance { get; set; }
         public bool EnableRefOutParameters { get; set; }
+        public bool EnableGenerics { get; set; }
         public bool DryRun { get; set; }
         public bool AvoidReportAndStatistics { get; set; }
         public bool AvoidDisableInternalNamespace { get; set; }

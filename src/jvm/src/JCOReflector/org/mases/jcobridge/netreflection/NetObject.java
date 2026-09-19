@@ -62,6 +62,100 @@ public class NetObject implements IJCOBridgeReflected {
         }
     }
 
+    // --- COLD-PATH AND HOT-PATH MANAGEMENT FOR CLR GENERICS ---
+    private static final java.util.concurrent.ConcurrentHashMap<Class<?>, String> clrGenericNameCache = new java.util.concurrent.ConcurrentHashMap<>();
+
+    // Stores the concrete Class<?> resolved for each generic type argument (T, K, ...),
+    // captured once in initializeGenericArguments via the anonymous-subclass trick.
+    // Needed because "new T(...)" is never legal Java: erasure removes T at runtime,
+    // so any later code that must instantiate a wrapper of type T has to go through here.
+    protected Class<?>[] genericArgumentClasses;
+
+    // Reflectively builds an instance of the i-th generic type argument, wrapping a native
+    // handle returned from the bridge. Equivalent to "new T(nativeHandle)" where "new T(...)"
+    // itself is illegal Java.
+    @SuppressWarnings("unchecked")
+    protected <X> X instantiateGenericArgument(int index, Object nativeHandle) throws Throwable {
+        if (genericArgumentClasses == null || index >= genericArgumentClasses.length) {
+            throw new IllegalStateException(
+                "JCOReflector Error: generic argument classes were never resolved (was initializeGenericArguments called?).");
+        }
+        try {
+            java.lang.reflect.Constructor<?> ctor = genericArgumentClasses[index].getConstructor(java.lang.Object.class);
+            return (X) ctor.newInstance(nativeHandle);
+        } catch (java.lang.reflect.InvocationTargetException ite) {
+            Throwable cause = ite.getCause();
+            throw (cause != null) ? cause : ite;
+        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException e) {
+            throw new IllegalArgumentException(
+                "JCOReflector Error: generic type argument " + genericArgumentClasses[index].getName() +
+                " does not expose a public constructor accepting a single Object parameter.", e);
+        }
+    }
+
+    /**
+     * Dynamically initializes the native CLR instance by resolving type parameters and calling NewObject with constructor arguments.
+     * @param genericJCOClassName The full name of the .NET generic type (e.g., "System.Collections.Generic.List`1")
+     * @param constructorArgs The parameters to pass to the CLR constructor
+     */
+    protected void initializeGenericArguments(String genericJCOClassName, Object... constructorArgs) throws Throwable {
+        Class<?> currentClass = getClass();
+        
+        // Check the cache to see if this anonymous class has already been analyzed
+        String fullGenericClrName = clrGenericNameCache.get(currentClass);
+        
+        if (fullGenericClrName == null) {
+            java.lang.reflect.Type superclass = currentClass.getGenericSuperclass();
+            
+            if (superclass instanceof java.lang.reflect.ParameterizedType) {
+                java.lang.reflect.ParameterizedType parameterized = (java.lang.reflect.ParameterizedType) superclass;
+                java.lang.reflect.Type[] actualTypeArguments = parameterized.getActualTypeArguments();
+                
+                StringBuilder clrGenericsSpec = new StringBuilder("[");
+                Class<?>[] resolvedClasses = new Class<?>[actualTypeArguments.length];
+                for (int i = 0; i < actualTypeArguments.length; i++) {
+                    java.lang.Class<?> actualClass = (java.lang.Class<?>) actualTypeArguments[i];
+                    resolvedClasses[i] = actualClass;
+
+                    // Read the static "className" field via reflection instead of instantiating a throwaway
+                    // object: works for interfaces, exceptions, or any class without a no-arg constructor.
+                    String typeClrName;
+                    try {
+                        typeClrName = (String) actualClass.getField("className").get(null);
+                    } catch (NoSuchFieldException | IllegalAccessException e) {
+                        throw new IllegalArgumentException(
+                            "JCOReflector Error: generic type argument " + actualClass.getName() +
+                            " does not expose a public static 'className' field (is it a reflected .NET type?).", e);
+                    }
+                    clrGenericsSpec.append(typeClrName);
+
+                    if (i < actualTypeArguments.length - 1) {
+                        clrGenericsSpec.append(", ");
+                    }
+                }
+                clrGenericsSpec.append("]");
+                this.genericArgumentClasses = resolvedClasses; // cache for later "new T(...)" replacements
+                
+                // Compose the final name (e.g., "System.Collections.Generic.List`1[System.String]")
+                fullGenericClrName = genericJCOClassName + clrGenericsSpec.toString();
+                clrGenericNameCache.put(currentClass, fullGenericClrName);
+            } else {
+                throw new IllegalArgumentException(
+                    "JCOReflector Error: Generic instances require the anonymous class curly braces syntax {}.\n" +
+                    "Correct example: new " + currentClass.getSuperclass().getSimpleName() + "<T>() {}"
+                );
+            }
+        }
+        
+        // Get the concrete type dynamically from the bridge and invoke NewObject correctly
+        try {
+            JCType concreteType = JCOBridgeInstance.getInstance(getJCOAssemblyName()).GetType(fullGenericClrName);
+            this.classInstance = (JCObject) concreteType.NewObject(constructorArgs);
+        } catch (JCNativeException e) {
+            throw translateException(e);
+        }
+    }
+
     public final static NetObject Null = new NetObject();
 
     public NetObject() {

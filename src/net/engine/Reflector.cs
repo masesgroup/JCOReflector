@@ -304,6 +304,23 @@ namespace MASES.JCOReflector.Engine
             return res;
         }
 
+        // Builds the "<Arg1, Arg2>" suffix for a constructed generic interface reference used in an
+        // extends/implements clause (e.g. turning raw "IEnumerable_1" into "IEnumerable_1<T>").
+        // Leaving it raw makes Java erase the whole inherited chain to raw types, which is exactly
+        // what produces "Iterable cannot be inherited with different arguments: <> and <NetObject>"
+        // whenever two different inheritance paths reach the same supertype, one raw and one not.
+        // Only covers the case where every type argument is itself a plain generic parameter already
+        // in scope (T, TKey, TValue...). A constructed argument like KeyValuePair<TKey,TValue> (as in
+        // IDictionary<TKey,TValue> : ICollection<KeyValuePair<TKey,TValue>>) is left raw here — that
+        // needs the fuller recursive type-name resolver we still haven't written.
+        static string BuildGenericInterfaceSuffix(Type interfaceType)
+        {
+            if (!EnableGenerics || !interfaceType.IsGenericType) return string.Empty;
+            var args = interfaceType.GetGenericArguments();
+            if (args.Any(a => !a.IsGenericParameter)) return string.Empty;
+            return "<" + string.Join(", ", args.Select(a => a.Name)) + ">";
+        }
+
         static string GetJavaClassName(this Type type, Assembly currentAssembly)
         {
             if (!EnableGenerics)
@@ -325,7 +342,6 @@ namespace MASES.JCOReflector.Engine
             // Standard non-generic types keep their native pure name untouched (e.g., ObjectSecurity)
             return type.Name;
         }
-
 
         //static string GetJavaClassName(this Type type, Assembly currentAssembly)
         //{
@@ -896,7 +912,7 @@ namespace MASES.JCOReflector.Engine
                         packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
                         packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                     }
-                    else packageBaseInterface += string.Format(", {0}", inter.ToPackageName() + "." + inter.GetJavaClassName(item.Assembly));
+                    else packageBaseInterface += string.Format(", {0}", inter.ToPackageName() + "." + inter.GetJavaClassName(item.Assembly) + BuildGenericInterfaceSuffix(inter));
                     imports.Add(inter);
                 }
             }
@@ -1003,14 +1019,9 @@ namespace MASES.JCOReflector.Engine
             {
                 isException = true;
                 Interlocked.Increment(ref implementedExceptions);
-                // Same generic/non-generic split already applied to ordinary classes: an exception type
-                // can itself be generic (e.g. FaultException<TDetail>), and without its own <TDetail
-                // extends IJCOBridgeReflected> on the class declaration, every member referencing TDetail
-                // fails with "cannot find symbol" even though the constructor/property templates already
-                // emit TDetail correctly.
-                reflectorClassTemplate = EnableGenerics && item.IsGenericTypeDefinition
-                    ? Const.Templates.GetTemplate(Const.Templates.ReflectorThrowableGenericClassTemplate)
-                    : Const.Templates.GetTemplate(Const.Templates.ReflectorThrowableClassTemplate);
+                // A generic class can never extend java.lang.Throwable (JLS 8.1.2) — exceptions are
+                // always generated as plain, non-generic classes, whatever their .NET type looks like.
+                reflectorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorThrowableClassTemplate);
                 packageBaseClass = Const.SpecialNames.NetException;
             }
             else
@@ -1131,7 +1142,7 @@ namespace MASES.JCOReflector.Engine
 
                     if (hasUnsatisfiedMember) continue;
 
-                    var nameToAdd = interfaceType.ToPackageName() + "." + interfaceType.GetJavaClassName(interfaceType.Assembly);
+                    var nameToAdd = interfaceType.ToPackageName() + "." + interfaceType.GetJavaClassName(interfaceType.Assembly) + BuildGenericInterfaceSuffix(interfaceType);
 
                     if (string.IsNullOrEmpty(implementsStr))
                     {
@@ -1243,7 +1254,7 @@ namespace MASES.JCOReflector.Engine
             ctorTypes = ctorLst.ToArray();
 
             // TEMPLATE SELECTION: Dynamically choose the correct template file based on generic definition
-            var ctorClassTemplate = EnableGenerics && type.IsGenericTypeDefinition
+            var ctorClassTemplate = EnableGenerics && !isException && type.IsGenericTypeDefinition
                 ? Const.Templates.GetTemplate(Const.Templates.ReflectorClassGenericConstructorTemplate)
                 : Const.Templates.GetTemplate(Const.Templates.ReflectorClassConstructorTemplate);
 
@@ -1289,16 +1300,35 @@ namespace MASES.JCOReflector.Engine
                 bool isManaged = true;
                 foreach (var parameter in parameters)
                 {
-                    // A parameter is generic if it is a raw generic parameter (T) OR an array of generic parameters (T[])
-                    bool isParamGeneric = EnableGenerics && (parameter.ParameterType.IsGenericParameter ||
+                    // A generic class-level parameter is only representable as a real Java type variable when
+                    // the class declares its own <T> — never possible for an exception (a generic class cannot
+                    // extend java.lang.Throwable). For exceptions, fall back to the bound (IJCOBridgeReflected).
+                    bool isClassLevelGenericParam = (parameter.ParameterType.IsGenericParameter && parameter.ParameterType.DeclaringMethod == null) ||
+                                                     (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter && parameter.ParameterType.GetElementType().DeclaringMethod == null);
+
+                    bool isParamGeneric = EnableGenerics && !isException && (parameter.ParameterType.IsGenericParameter ||
                                          (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
-                    // Handle generic parameter types (e.g. T) by emitting their direct name, otherwise convert normally
-                    string paramType = isParamGeneric
-                        ? (parameter.ParameterType.IsArray ? parameter.ParameterType.GetElementType().Name : parameter.ParameterType.Name)
-                        : ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+
+                    string paramType;
+                    if (isException && isClassLevelGenericParam)
+                    {
+                        paramType = parameter.ParameterType.IsArray ? "IJCOBridgeReflected" : "IJCOBridgeReflected";
+                        isPrimitive = false;
+                        isManaged = true;
+                        isSpecial = false;
+                        isArray = parameter.ParameterType.IsArray;
+                    }
+                    else if (isParamGeneric)
+                    {
+                        paramType = parameter.ParameterType.IsArray ? parameter.ParameterType.GetElementType().Name : parameter.ParameterType.Name;
+                    }
+                    else
+                    {
+                        paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                    }
 
                     // FIX: If the constructor parameter type is a constructed generic type (e.g. IEqualityComparer`1), strip the backtick for Java
-                    if (!isParamGeneric && !string.IsNullOrEmpty(paramType) && paramType.Contains("`"))
+                    if (!isParamGeneric && !isClassLevelGenericParam && !string.IsNullOrEmpty(paramType) && paramType.Contains("`"))
                     {
                         paramType = paramType.Split('`')[0];
                     }
@@ -1352,7 +1382,7 @@ namespace MASES.JCOReflector.Engine
 
                 var exceptionStr = item.ExceptionStringBuilder(imports);
 
-                bool isGenericCtor = EnableGenerics && type.IsGenericTypeDefinition;
+                bool isGenericCtor = EnableGenerics && !isException && type.IsGenericTypeDefinition;
                 // Replaces parameters and thrown exceptions seamlessly
                 var otherCtor = ctorClassTemplate.Replace(Const.CTor.CTOR_PARAMETERS, ctorParamStr)
                                                  .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
@@ -2684,10 +2714,19 @@ namespace MASES.JCOReflector.Engine
                     if (item.SetMethod != null && item.SetMethod.IsStatic && referencesClassLevelGenericParameter) continue;
 
                     string propertyType = "void";
-                    bool isPropertyGeneric = EnableGenerics && item.PropertyType.IsGenericParameter;
+                    bool isPropertyGeneric = EnableGenerics && !isException && item.PropertyType.IsGenericParameter;
 
-                    // GENERICS UPDATED: Extract generic signature literals ("T") safely without calling ConvertType
-                    if (isPropertyGeneric)
+                    if (isException && item.PropertyType.IsGenericParameter && item.PropertyType.DeclaringMethod == null)
+                    {
+                        // Same reasoning as ExportConstructors: an exception class can never declare its own
+                        // <TDetail>, so its class-level generic parameter falls back to the bound here too.
+                        propertyType = "IJCOBridgeReflected";
+                        isPrimitive = false;
+                        isManaged = true;
+                        isSpecial = false;
+                        isArray = false;
+                    }
+                    else if (isPropertyGeneric)
                     {
                         propertyType = item.PropertyType.Name;
                         isPrimitive = true; // Forces File 18/19 templates to trigger a clean explicit Java runtime cast (T)

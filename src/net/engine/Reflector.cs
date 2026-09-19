@@ -313,18 +313,23 @@ namespace MASES.JCOReflector.Engine
             var baseType = type.BaseType;
             while (baseType != null && baseType != typeof(object))
             {
-                var candidates = baseType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly)
-                                          .Where(m => m.Name == methodName && m.GetParameters().Length == paramCount);
-                foreach (var candidate in candidates)
-                {
-                    // Only a real clash if every corresponding parameter is itself a generic
-                    // parameter (erases to the same bound) on both sides.
-                    bool allGeneric = candidate.GetParameters().All(p => p.ParameterType.IsGenericParameter);
-                    if (allGeneric) return true;
-                }
+                if (HasGenericErasureClash(baseType, methodName, paramCount)) return true;
                 baseType = baseType.BaseType;
             }
+            // Same check across every interface in the hierarchy (e.g. IDictionary<TKey,TValue>.Remove(TKey)
+            // vs the inherited ICollection<KeyValuePair<TKey,TValue>>.Remove(T)).
+            foreach (var iface in type.GetInterfaces())
+            {
+                if (HasGenericErasureClash(iface, methodName, paramCount)) return true;
+            }
             return false;
+        }
+
+        static bool HasGenericErasureClash(Type candidateType, string methodName, int paramCount)
+        {
+            var candidates = candidateType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly)
+                                           .Where(m => m.Name == methodName && m.GetParameters().Length == paramCount);
+            return candidates.Any(c => c.GetParameters().All(p => p.ParameterType.IsGenericParameter));
         }
 
         // Recursively builds the Java "<Arg1, Arg2>" text for a type used in an extends/implements
@@ -333,33 +338,29 @@ namespace MASES.JCOReflector.Engine
         // family): IDictionary<TKey,TValue> : ICollection<KeyValuePair<TKey,TValue>> can't just take
         // the plain-generic-parameter shortcut (BuildGenericInterfaceSuffix) because its argument,
         // KeyValuePair<TKey,TValue>, is itself a constructed type, not a bare parameter.
-        static string ResolveGenericTypeName(Type t, Type contextOwner)
+        static string ResolveGenericTypeName(Type t, IList<Type> imports)
         {
-            // A generic parameter already in scope on the type/method we're generating for a plain name.
             if (t.IsGenericParameter) return t.Name;
 
-            // Not generic at all: just its Java simple name (handles arrays, primitives, everything ConvertType-free).
             if (!t.IsGenericType)
             {
-                return t.IsArray
-                    ? ResolveGenericTypeName(t.GetElementType(), contextOwner) + "[]"
-                    : t.GetJavaClassName(t.Assembly);
+                if (t.IsArray) return ResolveGenericTypeName(t.GetElementType(), imports) + "[]";
+                if (!imports.Contains(t)) imports.Add(t); // was missing: this is why DependencyProperty/Location_1 were never imported
+                return t.GetJavaClassName(t.Assembly);
             }
 
-            // Constructed generic type: resolve the container name, then each argument recursively.
+            if (!imports.Contains(t)) imports.Add(t);
             string containerName = t.GetJavaClassName(t.Assembly);
             var args = t.GetGenericArguments();
-            string argsText = string.Join(", ", args.Select(a => ResolveGenericTypeName(a, contextOwner)));
+            string argsText = string.Join(", ", args.Select(a => ResolveGenericTypeName(a, imports)));
             return containerName + "<" + argsText + ">";
         }
 
         // Full "package.Name<Args>" text for a supertype/interface reference in an extends/implements
         // clause or as a base class.
-        static string BuildQualifiedGenericTypeName(Type t, Type contextOwner)
+        static string BuildQualifiedGenericTypeName(Type t, IList<Type> imports)
         {
-            string simple = ResolveGenericTypeName(t, contextOwner);
-            // ResolveGenericTypeName already returns a plain name for generic parameters, which never
-            // need (and can't take) a package prefix.
+            string simple = ResolveGenericTypeName(t, imports);
             if (t.IsGenericParameter) return simple;
             int genericMarker = simple.IndexOf('<');
             string containerPart = genericMarker >= 0 ? simple.Substring(0, genericMarker) : simple;
@@ -937,6 +938,12 @@ namespace MASES.JCOReflector.Engine
             List<Type> implementableInterfaces = new List<Type>();
             foreach (var interfaceType in allDirectInterfaces)
             {
+                // Same avoidance map used for methods/properties: an interface whose entry has a null
+                // method list (e.g. the generic-math family) is excluded entirely, not just its members —
+                // it should never appear in an extends/implements clause either.
+                var interfaceFullName = interfaceType.FullName ?? interfaceType.Name;
+                if (CheckExportingAvoidanceMap(interfaceFullName, string.Empty)) continue;
+
                 if (interfaceType.IsManagedType(0, 1))
                 {
                     implementableInterfaces.Add(interfaceType);
@@ -958,7 +965,7 @@ namespace MASES.JCOReflector.Engine
                         packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
                         packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                     }
-                    else packageBaseInterface += string.Format(", {0}", BuildQualifiedGenericTypeName(inter, item));
+                    else packageBaseInterface += string.Format(", {0}", BuildQualifiedGenericTypeName(inter, imports));
                     imports.Add(inter);
                 }
             }
@@ -1102,7 +1109,7 @@ namespace MASES.JCOReflector.Engine
                 withInheritance = true;
                 if (item.BaseType.IsManagedType(0, 1) && item.BaseType != typeof(object) && item.BaseType != typeof(Exception) && item.BaseType != typeof(Type))
                 {
-                    packageBaseClass = BuildQualifiedGenericTypeName(item.BaseType, item);
+                    packageBaseClass = BuildQualifiedGenericTypeName(item.BaseType, imports);
                     imports.Add(item.BaseType);
                 }
             }
@@ -1188,7 +1195,7 @@ namespace MASES.JCOReflector.Engine
 
                     if (hasUnsatisfiedMember) continue;
 
-                    var nameToAdd = BuildQualifiedGenericTypeName(interfaceType, item);
+                    var nameToAdd = BuildQualifiedGenericTypeName(interfaceType, imports);
 
                     if (string.IsNullOrEmpty(implementsStr))
                     {
@@ -1650,20 +1657,24 @@ namespace MASES.JCOReflector.Engine
             return false;
         }
 
+        static bool CheckExportingAvoidanceMap(string fullname, string methodPropertyName)
+        {
+            foreach (var entry in Const.SpecialNames.ExportingAvoidanceMap)
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(fullname, entry.Key)) continue;
+                return entry.Value == null || entry.Value.Contains(methodPropertyName);
+            }
+
+            return false;
+        }
+
         static bool AvoidExportMethods(this Type type, MethodInfo method)
         {
             if (!EnableRefOutParameters) return false;
 
             // FIX: Fallback to Name if FullName is null (common for open generic types)
             var fullname = type.FullName ?? type.Name;
-            var methodName = method.Name;
-            string[] methodNamesToCheck;
-            if (Const.SpecialNames.ExportingAvoidanceMap.TryGetValue(fullname, out methodNamesToCheck))
-            {
-                return methodNamesToCheck == null || methodNamesToCheck.Contains(methodName);
-            }
-
-            return false;
+            return CheckExportingAvoidanceMap(fullname, method.Name);
         }
 
         static string ExportMethods(this Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, string destFolder, string assemblyname, out string returnEnumeratorType, out string returnInterfaceSection)
@@ -2761,20 +2772,13 @@ namespace MASES.JCOReflector.Engine
             }
         }
 
-        static bool AvoidExportProperties(this Type type, PropertyInfo method)
+        static bool AvoidExportProperties(this Type type, PropertyInfo property)
         {
             if (!EnableRefOutParameters) return false;
 
             // FIX: Fallback to Name if FullName is null (common for open generic types)
             var fullname = type.FullName ?? type.Name;
-            var propertyName = method.Name;
-            string[] propertyNamesToCheck;
-            if (Const.SpecialNames.ExportingAvoidanceMap.TryGetValue(fullname, out propertyNamesToCheck))
-            {
-                return propertyNamesToCheck == null || propertyNamesToCheck.Contains(propertyName);
-            }
-
-            return false;
+            return CheckExportingAvoidanceMap(fullname, property.Name);
         }
 
         static string ExportProperties(this Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, bool isException, string destFolder, string assemblyname, out string returnInterfaceSection)

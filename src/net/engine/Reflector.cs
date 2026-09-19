@@ -310,14 +310,24 @@ namespace MASES.JCOReflector.Engine
         // Collection<TItem>.Remove(TItem) — different in .NET, identical after Java erasure).
         static bool ClashesWithBaseClassMethod(Type type, string methodName, int paramCount)
         {
+            // Base-CLASS chain only. A class correctly implementing an interface method is expected
+            // to share that method's erasure — scanning type.GetInterfaces() here produced a false
+            // positive (Collection<T>.Remove(T) implementing ICollection<T>.Remove(T) looked like a
+            // "clash" and got renamed too, then collided with the rename it wasn't meant to need).
             var baseType = type.BaseType;
             while (baseType != null && baseType != typeof(object))
             {
                 if (HasGenericErasureClash(baseType, methodName, paramCount)) return true;
                 baseType = baseType.BaseType;
             }
-            // Same check across every interface in the hierarchy (e.g. IDictionary<TKey,TValue>.Remove(TKey)
-            // vs the inherited ICollection<KeyValuePair<TKey,TValue>>.Remove(T)).
+            return false;
+        }
+
+        // Separate check, interface-to-interface ancestors only (IDictionary<TKey,TValue>.Remove(TKey)
+        // vs the inherited ICollection<KeyValuePair<TKey,TValue>>.Remove(T)) — use this one only when
+        // generating an INTERFACE's own declaration in ExportInterface, never for a class implementing it.
+        static bool ClashesWithBaseInterfaceMethod(Type type, string methodName, int paramCount)
+        {
             foreach (var iface in type.GetInterfaces())
             {
                 if (HasGenericErasureClash(iface, methodName, paramCount)) return true;
@@ -2010,10 +2020,6 @@ namespace MASES.JCOReflector.Engine
                                 }
                             }
 
-                            // Record the erased parameter type as it will actually appear in the generated
-                            // Java signature (array-ness matters for erasure, generic arguments don't).
-                            erasedParamTypes.Add(isArray ? paramType + "[]" : paramType);
-
                             hasNativeArrayInParameter |= isArray && isPrimitive;
                             bool useRefOut = false;
                             if (!EnableRefOutParameters)
@@ -2025,6 +2031,14 @@ namespace MASES.JCOReflector.Engine
                                 useRefOut = parameter.IsOut || parameter.ParameterType.IsByRef;
                             }
                             if (!isManaged) break;
+
+                            // Record the erased parameter type as it will actually appear in the generated
+                            // Java signature. JCORefOut<T> and JCORefOut<NetObject> erase to the same
+                            // "JCORefOut" regardless of what's inside — record the wrapper itself for a
+                            // by-ref/out parameter, not the inner paramType, or two overloads that only
+                            // differ inside a JCORefOut<...> won't be seen as colliding.
+                            erasedParamTypes.Add(useRefOut ? "JCORefOut" : (isArray ? paramType + "[]" : paramType));
+
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                             string formatter = string.Empty;
                             string objectCaster = string.Empty;
@@ -2129,7 +2143,8 @@ namespace MASES.JCOReflector.Engine
                             isNewMethodVal = true;
                         }
 
-                        bool clashesWithBase = EnableGenerics && ClashesWithBaseClassMethod(type, methodName, parameters.Length)
+                        bool clashesWithBase = EnableGenerics && !isInterface && parameters.Length > 0
+                            && ClashesWithBaseClassMethod(type, methodName, parameters.Length)
                             && parameters.All(p => p.ParameterType.IsGenericParameter);
                         if (clashesWithBase)
                         {
@@ -2504,10 +2519,6 @@ namespace MASES.JCOReflector.Engine
                                     paramType = paramType.Split('`')[0];
                                 }
 
-                                // Record the erased parameter type exactly as ExportMethods does, so a collision against a
-                                // real public method (see stubErasedSignature below) can actually be detected.
-                                erasedParamTypes.Add(isArray ? paramType + "[]" : paramType);
-
                                 hasNativeArrayInParameter |= isArray && isPrimitive;
                                 bool useRefOut = false;
                                 if (!EnableRefOutParameters)
@@ -2519,6 +2530,13 @@ namespace MASES.JCOReflector.Engine
                                     useRefOut = parameter.IsOut || parameter.ParameterType.IsByRef;
                                 }
                                 if (!isManaged) break; // found not managed type, stop here
+                                // Record the erased parameter type as it will actually appear in the generated
+                                // Java signature. JCORefOut<T> and JCORefOut<NetObject> erase to the same
+                                // "JCORefOut" regardless of what's inside — record the wrapper itself for a
+                                // by-ref/out parameter, not the inner paramType, or two overloads that only
+                                // differ inside a JCORefOut<...> won't be seen as colliding.
+                                erasedParamTypes.Add(useRefOut ? "JCORefOut" : (isArray ? paramType + "[]" : paramType));
+
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                                 string formatter = string.Empty;
                                 string objectCaster = string.Empty;

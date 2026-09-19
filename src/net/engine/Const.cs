@@ -106,26 +106,34 @@ namespace MASES.JCOReflector.Engine
 
             static SpecialNames()
             {
-                ExportingAvoidanceMap.Add("System.Net.Http.Headers.MediaTypeWithQualityHeaderValue", new string[] { "TryParse" });
-                ExportingAvoidanceMap.Add("System.Net.Http.Headers.NameValueWithParametersHeaderValue", new string[] { "TryParse" });
-                ExportingAvoidanceMap.Add("System.Net.Http.Headers.TransferCodingWithQualityHeaderValue", new string[] { "TryParse" });
-                ExportingAvoidanceMap.Add("Microsoft.VisualBasic.FileSystem", new string[] { "FileGet", "Input" });
-                ExportingAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
-                ExportingAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
-                ExportingAvoidanceMap.Add("System.Threading.Interlocked", new string[] { "Decrement", "Increment"
+                ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.MediaTypeWithQualityHeaderValue$", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.NameValueWithParametersHeaderValue$", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.TransferCodingWithQualityHeaderValue$", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add(@"^Microsoft\.VisualBasic\.FileSystem$", new string[] { "FileGet", "Input" });
+                ExportingAvoidanceMap.Add(@"^System\.Threading\.Thread$", new string[] { "VolatileRead" });
+                ExportingAvoidanceMap.Add(@"^System\.Threading\.Volatile$", new string[] { "Read" });
+                ExportingAvoidanceMap.Add(@"^System\.Threading\.Interlocked$", new string[] { "Decrement", "Increment"
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
-                                                                                         , "Read"
+                                                                                 , "Read"
 #endif
-                });
+    });
 #if NET7_0 || NET8_0 || NET9_0 || NET10_0
-                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.JavaScript.JSMarshalerArgument", new string[] { "ToManaged" });
+                ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.JavaScript\.JSMarshalerArgument$", new string[] { "ToManaged" });
+
+                // Generic math (C# 11 "static abstract members in interfaces"): no Java equivalent for a
+                // static abstract interface member, and the operator interfaces bind TResult=bool, which
+                // never satisfies our IJCOBridgeReflected bound. One pattern for the whole .NET 7+ family
+                // instead of one entry per interface — the arity (`1, `2, `3...) differs by interface and
+                // has changed across .NET versions, \d+ matches any of them.
+                ExportingAvoidanceMap.Add(@"^System\.Numerics\.I\w+`\d+$", null);
+                ExportingAvoidanceMap.Add(@"^System\.I(Span|Utf8Span)?Parsable`\d+$", null);
 #endif
 #if NET8_0 || NET9_0 || NET10_0
-                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceType", null);
+                ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Marshalling\.IIUnknownInterfaceType$", null);
 #endif
 #if NET10_0
-                ExportingAvoidanceMap.Add("System.MemoryExtensions", null);
-                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Java.JavaMarshal", new string[] { "Initialize" });
+                ExportingAvoidanceMap.Add(@"^System\.MemoryExtensions$", null);
+                ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Java\.JavaMarshal$", new string[] { "Initialize" });
 #endif
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");
@@ -344,6 +352,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassNativeArrayGetTemplate,
                 ReflectorClassObjectGetTemplate,
                 ReflectorClassObjectArrayGetTemplate,
+                ReflectorClassObjectArrayGenericGetTemplate,
 
                 ReflectorClassSetDeprecatedTemplate,
                 ReflectorClassNativeGetDeprecatedTemplate,
@@ -446,6 +455,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorClassNativeArrayGetTemplate = "JCObjectReflectorClassNativeGetPropertyArray.template";
             public const string ReflectorClassObjectGetTemplate = "JCObjectReflectorClassObjectGetProperty.template";
             public const string ReflectorClassObjectArrayGetTemplate = "JCObjectReflectorClassObjectGetPropertyArray.template";
+            public const string ReflectorClassObjectArrayGenericGetTemplate = "JCObjectReflectorClassObjectGetPropertyArrayGeneric.template";
 
             public const string ReflectorClassSetDeprecatedTemplate = "JCObjectReflectorClassSetPropertyDeprecated.template";
             public const string ReflectorClassNativeGetDeprecatedTemplate = "JCObjectReflectorClassNativeGetPropertyDeprecated.template";

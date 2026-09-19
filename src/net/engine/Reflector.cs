@@ -328,6 +328,69 @@ namespace MASES.JCOReflector.Engine
             return methodName == "Equals" && (paramCount == 1 || paramCount == 2);
         }
 
+        // True when generating "methodName" with this parameter list on "type" would erase-clash
+        // with a same-named method already present on an ancestor class in the same generated
+        // hierarchy (e.g. KeyedCollection<TKey,TItem>.Remove(TKey) vs the inherited
+        // Collection<TItem>.Remove(TItem) — different in .NET, identical after Java erasure).
+        static bool ClashesWithBaseClassMethod(Type type, string methodName, int paramCount)
+        {
+            var baseType = type.BaseType;
+            while (baseType != null && baseType != typeof(object))
+            {
+                var candidates = baseType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly)
+                                          .Where(m => m.Name == methodName && m.GetParameters().Length == paramCount);
+                foreach (var candidate in candidates)
+                {
+                    // Only a real clash if every corresponding parameter is itself a generic
+                    // parameter (erases to the same bound) on both sides.
+                    bool allGeneric = candidate.GetParameters().All(p => p.ParameterType.IsGenericParameter);
+                    if (allGeneric) return true;
+                }
+                baseType = baseType.BaseType;
+            }
+            return false;
+        }
+
+        // Recursively builds the Java "<Arg1, Arg2>" text for a type used in an extends/implements
+        // clause, or as a base type. Needed because leaving any supertype raw poisons the whole
+        // inherited chain to raw types (the "Iterable cannot be inherited with different arguments"
+        // family): IDictionary<TKey,TValue> : ICollection<KeyValuePair<TKey,TValue>> can't just take
+        // the plain-generic-parameter shortcut (BuildGenericInterfaceSuffix) because its argument,
+        // KeyValuePair<TKey,TValue>, is itself a constructed type, not a bare parameter.
+        static string ResolveGenericTypeName(Type t, Type contextOwner)
+        {
+            // A generic parameter already in scope on the type/method we're generating for a plain name.
+            if (t.IsGenericParameter) return t.Name;
+
+            // Not generic at all: just its Java simple name (handles arrays, primitives, everything ConvertType-free).
+            if (!t.IsGenericType)
+            {
+                return t.IsArray
+                    ? ResolveGenericTypeName(t.GetElementType(), contextOwner) + "[]"
+                    : t.GetJavaClassName(t.Assembly);
+            }
+
+            // Constructed generic type: resolve the container name, then each argument recursively.
+            string containerName = t.GetJavaClassName(t.Assembly);
+            var args = t.GetGenericArguments();
+            string argsText = string.Join(", ", args.Select(a => ResolveGenericTypeName(a, contextOwner)));
+            return containerName + "<" + argsText + ">";
+        }
+
+        // Full "package.Name<Args>" text for a supertype/interface reference in an extends/implements
+        // clause or as a base class.
+        static string BuildQualifiedGenericTypeName(Type t, Type contextOwner)
+        {
+            string simple = ResolveGenericTypeName(t, contextOwner);
+            // ResolveGenericTypeName already returns a plain name for generic parameters, which never
+            // need (and can't take) a package prefix.
+            if (t.IsGenericParameter) return simple;
+            int genericMarker = simple.IndexOf('<');
+            string containerPart = genericMarker >= 0 ? simple.Substring(0, genericMarker) : simple;
+            string argsPart = genericMarker >= 0 ? simple.Substring(genericMarker) : string.Empty;
+            return t.ToPackageName() + "." + containerPart + argsPart;
+        }
+
         static string GetJavaClassName(this Type type, Assembly currentAssembly)
         {
             if (!EnableGenerics)
@@ -919,7 +982,7 @@ namespace MASES.JCOReflector.Engine
                         packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
                         packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                     }
-                    else packageBaseInterface += string.Format(", {0}", inter.ToPackageName() + "." + inter.GetJavaClassName(item.Assembly) + BuildGenericInterfaceSuffix(inter));
+                    else packageBaseInterface += string.Format(", {0}", BuildQualifiedGenericTypeName(inter, item));
                     imports.Add(inter);
                 }
             }
@@ -1063,7 +1126,7 @@ namespace MASES.JCOReflector.Engine
                 withInheritance = true;
                 if (item.BaseType.IsManagedType(0, 1) && item.BaseType != typeof(object) && item.BaseType != typeof(Exception) && item.BaseType != typeof(Type))
                 {
-                    packageBaseClass = item.BaseType.GetJavaClassName(item.Assembly);
+                    packageBaseClass = BuildQualifiedGenericTypeName(item.BaseType, item);
                     imports.Add(item.BaseType);
                 }
             }
@@ -1149,7 +1212,7 @@ namespace MASES.JCOReflector.Engine
 
                     if (hasUnsatisfiedMember) continue;
 
-                    var nameToAdd = interfaceType.ToPackageName() + "." + interfaceType.GetJavaClassName(interfaceType.Assembly) + BuildGenericInterfaceSuffix(interfaceType);
+                    var nameToAdd = BuildQualifiedGenericTypeName(interfaceType, item);
 
                     if (string.IsNullOrEmpty(implementsStr))
                     {
@@ -2051,6 +2114,14 @@ namespace MASES.JCOReflector.Engine
                         if (clashesWithNetObjectEquals)
                         {
                             newMethodName = methodName + "Generic";
+                            isNewMethodVal = true;
+                        }
+
+                        bool clashesWithBase = EnableGenerics && ClashesWithBaseClassMethod(type, methodName, parameters.Length)
+                            && parameters.All(p => p.ParameterType.IsGenericParameter);
+                        if (clashesWithBase)
+                        {
+                            newMethodName = methodName + "ByKey";
                             isNewMethodVal = true;
                         }
 

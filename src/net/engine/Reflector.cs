@@ -304,30 +304,6 @@ namespace MASES.JCOReflector.Engine
             return res;
         }
 
-        // Builds the "<Arg1, Arg2>" suffix for a constructed generic interface reference used in an
-        // extends/implements clause (e.g. turning raw "IEnumerable_1" into "IEnumerable_1<T>").
-        // Leaving it raw makes Java erase the whole inherited chain to raw types, which is exactly
-        // what produces "Iterable cannot be inherited with different arguments: <> and <NetObject>"
-        // whenever two different inheritance paths reach the same supertype, one raw and one not.
-        // Only covers the case where every type argument is itself a plain generic parameter already
-        // in scope (T, TKey, TValue...). A constructed argument like KeyValuePair<TKey,TValue> (as in
-        // IDictionary<TKey,TValue> : ICollection<KeyValuePair<TKey,TValue>>) is left raw here — that
-        // needs the fuller recursive type-name resolver we still haven't written.
-        static string BuildGenericInterfaceSuffix(Type interfaceType)
-        {
-            if (!EnableGenerics || !interfaceType.IsGenericType) return string.Empty;
-            var args = interfaceType.GetGenericArguments();
-            if (args.Any(a => !a.IsGenericParameter)) return string.Empty;
-            return "<" + string.Join(", ", args.Select(a => a.Name)) + ">";
-        }
-
-        // Same rationale as above, minimal form: NetObject.Equals(IJCOBridgeReflected) and
-        // Equals(IJCOBridgeReflected,IJCOBridgeReflected) are the only two erasure clashes we've hit.
-        static bool ClashesWithNetObjectEquals(string methodName, int paramCount)
-        {
-            return methodName == "Equals" && (paramCount == 1 || paramCount == 2);
-        }
-
         // True when generating "methodName" with this parameter list on "type" would erase-clash
         // with a same-named method already present on an ancestor class in the same generated
         // hierarchy (e.g. KeyedCollection<TKey,TItem>.Remove(TKey) vs the inherited

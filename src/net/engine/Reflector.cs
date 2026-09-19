@@ -332,6 +332,20 @@ namespace MASES.JCOReflector.Engine
             return candidates.Any(c => c.GetParameters().All(p => p.ParameterType.IsGenericParameter));
         }
 
+        // True when `t` can never satisfy our IJCOBridgeReflected bound: a primitive, or a .NET type
+        // natively mapped onto a plain Java type (currently just System.String -> java.lang.String).
+        // Any generic reference that needs one of these as a type argument can't be parameterized at
+        // all — same raw-fallback compromise already accepted for cast() and for exception
+        // class-level parameters (TDetail -> IJCOBridgeReflected).
+        static bool ViolatesReflectedBound(Type t)
+        {
+            if (t.IsGenericParameter) return false; // already in scope, always correctly bounded
+            if (t.IsPrimitive) return true;
+            if (t == typeof(string)) return true;
+            if (t.IsGenericType) return t.GetGenericArguments().Any(ViolatesReflectedBound);
+            return false;
+        }
+
         // Recursively builds the Java "<Arg1, Arg2>" text for a type used in an extends/implements
         // clause, or as a base type. Needed because leaving any supertype raw poisons the whole
         // inherited chain to raw types (the "Iterable cannot be inherited with different arguments"
@@ -341,12 +355,14 @@ namespace MASES.JCOReflector.Engine
         static string ResolveGenericTypeName(Type t, IList<Type> imports)
         {
             if (t.IsGenericParameter) return t.Name;
-            if (t == typeof(Type)) return Const.SpecialNames.NetType; // hand-written runtime class, never generated as its own file
+
+            // System.Type is a hand-written runtime class (NetType), never generated as its own file.
+            if (t == typeof(Type)) return Const.SpecialNames.NetType;
 
             if (!t.IsGenericType)
             {
                 if (t.IsArray) return ResolveGenericTypeName(t.GetElementType(), imports) + "[]";
-                if (!imports.Contains(t)) imports.Add(t); // was missing: this is why DependencyProperty/Location_1 were never imported
+                if (!imports.Contains(t)) imports.Add(t);
                 return t.GetJavaClassName(t.Assembly);
             }
 
@@ -361,8 +377,16 @@ namespace MASES.JCOReflector.Engine
         // clause or as a base class.
         static string BuildQualifiedGenericTypeName(Type t, IList<Type> imports)
         {
+            if (t.IsGenericParameter) return t.Name;
+
+            // Any argument (recursively) that can't satisfy IJCOBridgeReflected (a primitive, or
+            // System.String) forces the whole reference back to raw instead of parameterized.
+            if (t.IsGenericType && ViolatesReflectedBound(t))
+            {
+                return t.ToPackageName() + "." + t.GetJavaClassName(t.Assembly);
+            }
+
             string simple = ResolveGenericTypeName(t, imports);
-            if (t.IsGenericParameter) return simple;
             int genericMarker = simple.IndexOf('<');
             string containerPart = genericMarker >= 0 ? simple.Substring(0, genericMarker) : simple;
             string argsPart = genericMarker >= 0 ? simple.Substring(genericMarker) : string.Empty;

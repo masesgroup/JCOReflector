@@ -341,6 +341,7 @@ namespace MASES.JCOReflector.Engine
         static string ResolveGenericTypeName(Type t, IList<Type> imports)
         {
             if (t.IsGenericParameter) return t.Name;
+            if (t == typeof(Type)) return Const.SpecialNames.NetType; // hand-written runtime class, never generated as its own file
 
             if (!t.IsGenericType)
             {

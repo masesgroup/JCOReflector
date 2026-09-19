@@ -344,6 +344,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassNativeArrayGetTemplate,
                 ReflectorClassObjectGetTemplate,
                 ReflectorClassObjectArrayGetTemplate,
+                ReflectorClassObjectArrayGenericGetTemplate,
 
                 ReflectorClassSetDeprecatedTemplate,
                 ReflectorClassNativeGetDeprecatedTemplate,
@@ -446,6 +447,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorClassNativeArrayGetTemplate = "JCObjectReflectorClassNativeGetPropertyArray.template";
             public const string ReflectorClassObjectGetTemplate = "JCObjectReflectorClassObjectGetProperty.template";
             public const string ReflectorClassObjectArrayGetTemplate = "JCObjectReflectorClassObjectGetPropertyArray.template";
+            public const string ReflectorClassObjectArrayGenericGetTemplate = "JCObjectReflectorClassObjectGetPropertyArrayGeneric.template";
 
             public const string ReflectorClassSetDeprecatedTemplate = "JCObjectReflectorClassSetPropertyDeprecated.template";
             public const string ReflectorClassNativeGetDeprecatedTemplate = "JCObjectReflectorClassNativeGetPropertyDeprecated.template";

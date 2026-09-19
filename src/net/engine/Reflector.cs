@@ -2768,8 +2768,18 @@ namespace MASES.JCOReflector.Engine
                         {
                             if (isArray)
                             {
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate
-                                                                                        : Const.Templates.ReflectorClassObjectArrayGetTemplate);
+                                var arrayElementType = item.PropertyType.GetElementType();
+                                if (EnableGenerics && arrayElementType.IsGenericParameter && arrayElementType.DeclaringMethod == null)
+                                {
+                                    int genericArgIndex = Array.IndexOf(type.GetGenericArguments(), arrayElementType);
+                                    templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassObjectArrayGenericGetTemplate)
+                                                                    .Replace("GENERIC_ARGUMENT_INDEX", genericArgIndex.ToString());
+                                }
+                                else
+                                {
+                                    templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate 
+                                                                                            : Const.Templates.ReflectorClassObjectArrayGetTemplate);
+                                }
                             }
                             else
                             {

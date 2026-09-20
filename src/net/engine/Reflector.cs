@@ -1000,15 +1000,27 @@ namespace MASES.JCOReflector.Engine
             if (EnableInheritance)
             {
                 withInheritance = true;
+                bool hasGenericEnumerable = implementableInterfaces.Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>));
+                bool hasGenericEnumerator = implementableInterfaces.Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerator<>));
+
                 foreach (var inter in implementableInterfaces)
                 {
                     if (inter == typeof(IEnumerable))
                     {
+                        if (hasGenericEnumerable)
+                        {
+                            // IEnumerable<T>, se presente in questa lista, estende già la IEnumerable speciale
+                            // nel proprio file: ri-elencarla qui a parte crea un secondo percorso verso Iterable
+                            // che può disaccordarsi dal primo (raw vs Iterable<NetObject>) ogni volta che
+                            // IEnumerable<T> stesso è dovuto tornare raw per un argomento che viola il bound.
+                            continue;
+                        }
                         packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
                         packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                     }
-                    else if (inter == typeof(IEnumerator)) 
+                    else if (inter == typeof(IEnumerator))
                     {
+                        if (hasGenericEnumerator) continue; // stesso ragionamento
                         packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
                         packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                     }

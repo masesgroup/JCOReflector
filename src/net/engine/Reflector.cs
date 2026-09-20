@@ -1583,12 +1583,14 @@ namespace MASES.JCOReflector.Engine
             string nextSection = string.Empty;
             if (isCurrentGeneric)
             {
-                // For generic type parameters, we load the native/string template (File 28) to enforce a direct cast
                 var nextTemplateRaw = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumerableNativeNextTemplate);
 
-                // Replace the default toString() statement with a clean runtime generic cast to (T)
-                string standardStringConversion = $"({returnEnumeratorType})classInstance.next().toString()";
-                string genericDirectCast = $"({returnEnumeratorType})classInstance.next()";
+                // "(T)classInstance.next()" is never legal Java: classInstance.next() returns a raw JCObject,
+                // unrelated to T as far as the compiler knows. Build it reflectively instead, via the
+                // Class<T> captured at construction time — same mechanism used everywhere else for a
+                // class-level generic parameter (instantiateGenericArgument).
+                int genericArgIndex = Array.IndexOf(item.GetGenericArguments(), propertyMethod.PropertyType);
+                string genericDirectCast = $"this.<{returnEnumeratorType}>instantiateGenericArgument({genericArgIndex}, classInstance.next())";
 
                 nextSection = nextTemplateRaw.Replace($"(PACKAGE_INNER_CLASS_NAME)classInstance.next().toString()", genericDirectCast)
                                              .Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType);

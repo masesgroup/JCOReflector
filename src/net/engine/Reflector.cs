@@ -3008,6 +3008,18 @@ namespace MASES.JCOReflector.Engine
                             }
 
                             var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+
+                            // Same reasoning as ExportConstructors: IJCOBridgeReflected has no "...Implementation" class
+                            // of its own (it's the root interface, not one of our reflected interfaces) — needInterfaceImplementation
+                            // would have to append a suffix that names a class which doesn't exist. Wrap the native value
+                            // in NetObject instead (it always implements IJCOBridgeReflected), keeping the declared
+                            // return type as IJCOBridgeReflected in the method signature.
+                            bool isExceptionGenericProperty = isException && item.PropertyType.IsGenericParameter && item.PropertyType.DeclaringMethod == null;
+                            if (isExceptionGenericProperty)
+                            {
+                                propertyStr = propertyStr.Replace("new IJCOBridgeReflected(", "new NetObject(");
+                            }
+
                             propertyBuilder.AppendLine(propertyStr);
                         }
                     }
@@ -3044,6 +3056,18 @@ namespace MASES.JCOReflector.Engine
 
                                 propertyStr = propertyStr.Replace(standardValueToken, genericValueCaster);
                             }
+
+                            // Same reasoning as ExportConstructors: IJCOBridgeReflected has no "...Implementation" class
+                            // of its own (it's the root interface, not one of our reflected interfaces) — needInterfaceImplementation
+                            // would have to append a suffix that names a class which doesn't exist. Wrap the native value
+                            // in NetObject instead (it always implements IJCOBridgeReflected), keeping the declared
+                            // return type as IJCOBridgeReflected in the method signature.
+                            bool isExceptionGenericProperty = isException && item.PropertyType.IsGenericParameter && item.PropertyType.DeclaringMethod == null;
+                            if (isExceptionGenericProperty)
+                            {
+                                propertyStr = propertyStr.Replace("new IJCOBridgeReflected(", "new NetObject(");
+                            }
+
                             propertyBuilder.AppendLine(propertyStr);
                         }
                     }
@@ -3724,7 +3748,12 @@ namespace MASES.JCOReflector.Engine
             {
                 return true;
             }
-
+#if NET5_0_OR_GREATER
+            // ref structs (Span<T>, ReadOnlySpan<T>...) can never cross the bridge as an object — same
+            // reasoning as the TypePrefilter exclusion, but this is the gate that actually stops them
+            // from being accepted as a parameter or return type of some OTHER method.
+            if (innerType.IsByRefLike) return false;
+#endif
             // FIX: If EnableGenerics is false, fallback immediately to the original native scart rule for any generic element
             if (!EnableGenerics && (innerType.IsGenericType || innerType.IsGenericParameter))
             {

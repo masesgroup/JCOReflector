@@ -648,6 +648,12 @@ namespace MASES.JCOReflector.Engine
 
         static bool TypePrefilter(this Type type)
         {
+            // ref structs (Span<T>, ReadOnlySpan<T>, and any future ones) wrap a native pointer/stack
+            // reference that cannot survive being boxed or passed through the bridge as an object —
+            // JCOBridge has no way to represent them at all, generics or not. Exclude the whole type.
+#if NET5_0_OR_GREATER
+            if (type.IsByRefLike) return false;
+#endif
             // Allow public types and valid generic type definitions, while discarding raw generic parameters (like T)
             if (type.IsPublic
                 && (!type.IsGenericType || (EnableGenerics && type.IsGenericTypeDefinition))
@@ -1368,6 +1374,7 @@ namespace MASES.JCOReflector.Engine
                 if (!item.IsConstructor) continue;
 
                 var parameters = item.GetParameters();
+
                 if (isException)
                 {
                     if (parameters.Length == 0) continue;
@@ -1808,6 +1815,20 @@ namespace MASES.JCOReflector.Engine
                        ) continue;
 
                     var parameters = item.GetParameters();
+
+                    bool returnHasMethodLevelGenericParam =
+                        (item.ReturnType.IsGenericParameter && item.ReturnType.DeclaringMethod != null) ||
+                        (item.ReturnType.IsArray && item.ReturnType.GetElementType().IsGenericParameter && item.ReturnType.GetElementType().DeclaringMethod != null);
+
+                    if (EnableGenerics && returnHasMethodLevelGenericParam)
+                    {
+                        // Not representable in Java: only a CLASS-level T can be resolved at runtime, via the
+                        // Class<T> captured by the anonymous-subclass trick at construction time
+                        // (instantiateGenericArgument). A method's own <T> has no such capture point — there's
+                        // no "new instance of T" or "array of T" we can build reflectively — so the member is
+                        // skipped entirely rather than emitting invalid Java.
+                        continue;
+                    }
 
                     if (methodName == "ToString" && parameters.Length == 0) continue;
                     if (methodName == "GetHashCode" && parameters.Length == 0) continue;

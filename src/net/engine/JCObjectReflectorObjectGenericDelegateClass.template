@@ -115,7 +115,7 @@ public class PACKAGE_CLASS_NAME<GENERIC_CLASS_PARAMETERS> extends JCDelegate imp
         {
 DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK
 
-            java.lang.Object retVal = null;
+            DELEGATE_RETURN_TYPE retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(DELEGATE_INVOKE_PARAMETERS);
             } else {
@@ -135,7 +135,7 @@ DELEGATE_RETURN_STATEMENT
         {
 DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK
 
-            java.lang.Object retVal = null;
+            DELEGATE_RETURN_TYPE retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(DELEGATE_INVOKE_PARAMETERS);
             } else {

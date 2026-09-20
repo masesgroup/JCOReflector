@@ -654,6 +654,12 @@ namespace MASES.JCOReflector.Engine
 #if NET5_0_OR_GREATER
             if (type.IsByRefLike) return false;
 #endif
+            // Whole-type exclusions from ExportingAvoidanceMap (entries with a null member list) must also
+            // stop the type itself from being exported as its own file — skipping just its members left
+            // the type's Implementation class generated anyway, still missing methods it inherits from
+            // non-excluded interfaces like IComparable/IFormattable.
+            if (CheckExportingAvoidanceMap(type.FullName ?? type.Name, string.Empty)) return false;
+
             // Allow public types and valid generic type definitions, while discarding raw generic parameters (like T)
             if (type.IsPublic
                 && (!type.IsGenericType || (EnableGenerics && type.IsGenericTypeDefinition))
@@ -2960,12 +2966,13 @@ namespace MASES.JCOReflector.Engine
                     if (item.SetMethod != null && item.SetMethod.IsStatic && referencesClassLevelGenericParameter) continue;
 
                     string propertyType = "void";
+                    var unwrappedPropertyType = item.PropertyType.IsByRef ? item.PropertyType.GetElementType() : item.PropertyType;
                     bool isPropertyGeneric = EnableGenerics && !isException && item.PropertyType.IsGenericParameter;
+                    bool isByRefClassGenericProperty = EnableGenerics && !isException && item.PropertyType.IsByRef
+                        && unwrappedPropertyType.IsGenericParameter && unwrappedPropertyType.DeclaringMethod == null;
 
                     if (isException && item.PropertyType.IsGenericParameter && item.PropertyType.DeclaringMethod == null)
                     {
-                        // Same reasoning as ExportConstructors: an exception class can never declare its own
-                        // <TDetail>, so its class-level generic parameter falls back to the bound here too.
                         propertyType = "IJCOBridgeReflected";
                         isPrimitive = false;
                         isManaged = true;
@@ -2976,6 +2983,17 @@ namespace MASES.JCOReflector.Engine
                     {
                         propertyType = item.PropertyType.Name;
                         isPrimitive = true; // Forces File 18/19 templates to trigger a clean explicit Java runtime cast (T)
+                        isManaged = true;
+                        isSpecial = false;
+                        isArray = false;
+                    }
+                    else if (isByRefClassGenericProperty)
+                    {
+                        // "ref T" (ValueRef and similar .NET 8+ properties) where T belongs to the CLASS:
+                        // "new T(...)" is illegal, but T is resolvable via instantiateGenericArgument
+                        // (same mechanism already used for methods returning "ref T").
+                        propertyType = unwrappedPropertyType.Name;
+                        isPrimitive = false;
                         isManaged = true;
                         isSpecial = false;
                         isArray = false;
@@ -3029,9 +3047,18 @@ namespace MASES.JCOReflector.Engine
                             }
                             else
                             {
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(propertyType) ? Const.Templates.ReflectorClassNativeGetWithCastToNumberTemplate
-                                                                                                                                         : Const.Templates.ReflectorClassNativeGetTemplate
-                                                                                        : Const.Templates.ReflectorClassObjectGetTemplate);
+                                if (isByRefClassGenericProperty)
+                                {
+                                    int genericArgIndex = Array.IndexOf(type.GetGenericArguments(), unwrappedPropertyType);
+                                    templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassObjectGetGenericTemplate)
+                                                                    .Replace("GENERIC_ARGUMENT_INDEX", genericArgIndex.ToString());
+                                }
+                                else
+                                {
+                                    templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(propertyType) ? Const.Templates.ReflectorClassNativeGetWithCastToNumberTemplate
+                                                                                                                                             : Const.Templates.ReflectorClassNativeGetTemplate
+                                                                                            : Const.Templates.ReflectorClassObjectGetTemplate);
+                                }
                             }
 
                             var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);

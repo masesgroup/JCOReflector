@@ -369,6 +369,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassNativeGetWithCastToNumberTemplate,
                 ReflectorClassNativeArrayGetTemplate,
                 ReflectorClassObjectGetTemplate,
+                ReflectorClassObjectGetGenericTemplate,
                 ReflectorClassObjectArrayGetTemplate,
                 ReflectorClassObjectArrayGenericGetTemplate,
 
@@ -473,6 +474,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorClassNativeGetWithCastToNumberTemplate = "JCObjectReflectorClassNativeGetPropertyWithCastToNumber.template";
             public const string ReflectorClassNativeArrayGetTemplate = "JCObjectReflectorClassNativeGetPropertyArray.template";
             public const string ReflectorClassObjectGetTemplate = "JCObjectReflectorClassObjectGetProperty.template";
+            public const string ReflectorClassObjectGetGenericTemplate = "JCObjectReflectorClassObjectGetPropertyGeneric.template";
             public const string ReflectorClassObjectArrayGetTemplate = "JCObjectReflectorClassObjectGetPropertyArray.template";
             public const string ReflectorClassObjectArrayGenericGetTemplate = "JCObjectReflectorClassObjectGetPropertyArrayGeneric.template";
 

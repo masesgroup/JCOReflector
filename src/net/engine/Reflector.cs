@@ -1000,20 +1000,38 @@ namespace MASES.JCOReflector.Engine
             if (EnableInheritance)
             {
                 withInheritance = true;
+                bool hasGenericEnumerable = implementableInterfaces.Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>));
+                bool hasGenericEnumerator = implementableInterfaces.Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerator<>));
+
                 foreach (var inter in implementableInterfaces)
                 {
                     if (inter == typeof(IEnumerable))
                     {
                         packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
-                        packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
+                        if (!hasGenericEnumerable)
+                        {
+                            // IEnumerable<T>, se presente in questa lista, estende già la IEnumerable speciale
+                            // nel proprio file — ri-elencarla qui crea un secondo percorso verso Iterable che può
+                            // disaccordarsi dal primo (raw vs Iterable<NetObject>). packageBaseClass va comunque
+                            // sempre assegnata: è lei a far ereditare GetEnumerator() dalla classe helper.
+                            packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
+                            imports.Add(inter);
+                        }
                     }
-                    else if (inter == typeof(IEnumerator)) 
+                    else if (inter == typeof(IEnumerator))
                     {
                         packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
-                        packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
+                        if (!hasGenericEnumerator)
+                        {
+                            packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
+                            imports.Add(inter);
+                        }
                     }
-                    else packageBaseInterface += string.Format(", {0}", BuildQualifiedGenericTypeName(inter, imports));
-                    imports.Add(inter);
+                    else
+                    {
+                        packageBaseInterface += string.Format(", {0}", BuildQualifiedGenericTypeName(inter, imports));
+                        imports.Add(inter);
+                    }
                 }
             }
 

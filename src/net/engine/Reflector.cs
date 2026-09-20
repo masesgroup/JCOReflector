@@ -1850,6 +1850,22 @@ namespace MASES.JCOReflector.Engine
                         continue;
                     }
 
+                    // "new T(...)"/"new T[...]" are never legal Java: only a CLASS-level T can be resolved at
+                    // runtime, via the Class<T> captured by the anonymous-subclass trick at construction time
+                    // (instantiateGenericArgument/genericArgumentClasses). A method's own <T> (e.g. static
+                    // Array.Empty<T>(), MemoryMarshal.GetArrayDataReference<T>(T[])) has no such capture point —
+                    // unwrap "ref T" (a by-ref return) first, since MemoryMarshal.GetArrayDataReference and
+                    // friends return "ref T", not "T" directly.
+                    var unwrappedReturnTypeForSkipCheck = item.ReturnType.IsByRef ? item.ReturnType.GetElementType() : item.ReturnType;
+                    bool returnHasMethodLevelGenericParam =
+                        (unwrappedReturnTypeForSkipCheck.IsGenericParameter && unwrappedReturnTypeForSkipCheck.DeclaringMethod != null) ||
+                        (unwrappedReturnTypeForSkipCheck.IsArray && unwrappedReturnTypeForSkipCheck.GetElementType().IsGenericParameter && unwrappedReturnTypeForSkipCheck.GetElementType().DeclaringMethod != null);
+
+                    if (EnableGenerics && returnHasMethodLevelGenericParam)
+                    {
+                        continue;
+                    }
+
                     string methodInterfaceStr = string.Empty;
                     string dupMethodInterfaceStr = string.Empty;
                     string methodStr = string.Empty;
@@ -1929,6 +1945,8 @@ namespace MASES.JCOReflector.Engine
                         }
                         else
                         {
+                            var unwrappedReturnType = item.ReturnType.IsByRef ? item.ReturnType.GetElementType() : item.ReturnType;
+
                             // GENERICS UPDATED: Route generic type parameters returned by methods natively
                             if (EnableGenerics && item.ReturnType.IsGenericParameter)
                             {
@@ -1950,6 +1968,24 @@ namespace MASES.JCOReflector.Engine
                                 }
 
                                 templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassNativeMethodTemplate);
+                            }
+                            else if (EnableGenerics && item.ReturnType.IsByRef && unwrappedReturnType.IsGenericParameter && unwrappedReturnType.DeclaringMethod == null)
+                            {
+                                // "ref T" (ItemRef, PeekRef, GetValueRefOrNullRef...) where T belongs to the
+                                // CLASS: "new T(...)" is illegal, but T IS resolvable via instantiateGenericArgument
+                                // (same mechanism already used for array elements), since the class-level Class<T>
+                                // was captured at construction time.
+                                returnType = unwrappedReturnType.Name;
+                                isPrimitive = false;
+                                isManaged = true;
+                                isSpecial = false;
+                                isRetValArray = false;
+                                isInterfaceRetVal = false;
+                                implementationReturnType = returnType;
+
+                                int genericArgIndex = Array.IndexOf(type.GetGenericArguments(), unwrappedReturnType);
+                                templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassObjectMethodGenericTemplate)
+                                                                .Replace("GENERIC_ARGUMENT_INDEX", genericArgIndex.ToString());
                             }
                             else
                             {

@@ -354,6 +354,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassNativeArrayMethodTemplate,
                 ReflectorClassNativeMethodWithCastToNumberTemplate,
                 ReflectorClassObjectMethodTemplate,
+                ReflectorClassObjectMethodGenericTemplate,
                 ReflectorClassObjectArrayMethodTemplate,
                 ReflectorClassObjectArrayGenericMethodTemplate,
 
@@ -457,6 +458,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorClassNativeMethodWithCastToNumberTemplate = "JCObjectReflectorClassNativeMethodWithCastToNumber.template";
             public const string ReflectorClassNativeArrayMethodTemplate = "JCObjectReflectorClassNativeMethodArray.template";
             public const string ReflectorClassObjectMethodTemplate = "JCObjectReflectorClassObjectMethod.template";
+            public const string ReflectorClassObjectMethodGenericTemplate = "JCObjectReflectorClassObjectMethodGeneric.template";
             public const string ReflectorClassObjectArrayMethodTemplate = "JCObjectReflectorClassObjectMethodArray.template";
             public const string ReflectorClassObjectArrayGenericMethodTemplate = "JCObjectReflectorClassObjectMethodArrayGeneric.template";
 

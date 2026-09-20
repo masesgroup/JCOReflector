@@ -114,9 +114,9 @@ namespace MASES.JCOReflector.Engine
                 ExportingAvoidanceMap.Add(@"^System\.Threading\.Volatile$", new string[] { "Read" });
                 ExportingAvoidanceMap.Add(@"^System\.Threading\.Interlocked$", new string[] { "Decrement", "Increment"
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
-                                                                                 , "Read"
+                                                                                              , "Read"
 #endif
-    });
+                                                                                            });
 #if NET7_0 || NET8_0 || NET9_0 || NET10_0
                 ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.JavaScript\.JSMarshalerArgument$", new string[] { "ToManaged" });
 
@@ -135,6 +135,23 @@ namespace MASES.JCOReflector.Engine
                 ExportingAvoidanceMap.Add(@"^System\.MemoryExtensions$", null);
                 ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Java\.JavaMarshal$", new string[] { "Initialize" });
 #endif
+                // TEMPORARY: parked here to unblock compilation. Each of these is either a genuine Java
+                // erasure limit (two .NET members that can't coexist once type arguments are erased) or a
+                // bug not yet root-caused — revisit before removing.
+                ExportingAvoidanceMap.Add(@"^System\.ServiceModel\.Syndication\.SyndicationElementExtensionCollection$", new string[] { "Add" });
+                ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.ICollection`1$", new string[] { "Add", "Remove" });
+                ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.IEqualityComparer`1$", new string[] { "Equals" });
+                ExportingAvoidanceMap.Add(@"^System\.Collections\.Immutable\.ImmutableArray`1$", new string[] { "AddRange" });
+                ExportingAvoidanceMap.Add(@"^System\.Runtime\.Intrinsics\.X86\.Sse41$", new string[] { "Extract" });
+                ExportingAvoidanceMap.Add(@"^System\.Guid$", new string[] { "TryFormat" });
+                ExportingAvoidanceMap.Add(@"^System\.Version$", new string[] { "TryFormat" });
+                ExportingAvoidanceMap.Add(@"^System\.Text\.Rune$", new string[] { "TryFormat" });
+                ExportingAvoidanceMap.Add(@"^System\.Net\.IPAddress$", new string[] { "TryFormat" });
+                ExportingAvoidanceMap.Add(@"^System\.Net\.IPNetwork$", new string[] { "TryFormat" });
+                ExportingAvoidanceMap.Add(@"^System\.Span`1$", new string[] { "GetPinnableReference" });
+                ExportingAvoidanceMap.Add(@"^System\.ReadOnlySpan`1$", new string[] { "GetPinnableReference" });
+
+
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");
                 DirectMappablePrimitives.Add("short", "java.util.concurrent.atomic.AtomicReference<java.lang.Short>");
@@ -337,6 +354,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassNativeArrayMethodTemplate,
                 ReflectorClassNativeMethodWithCastToNumberTemplate,
                 ReflectorClassObjectMethodTemplate,
+                ReflectorClassObjectMethodGenericTemplate,
                 ReflectorClassObjectArrayMethodTemplate,
                 ReflectorClassObjectArrayGenericMethodTemplate,
 
@@ -351,6 +369,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassNativeGetWithCastToNumberTemplate,
                 ReflectorClassNativeArrayGetTemplate,
                 ReflectorClassObjectGetTemplate,
+                ReflectorClassObjectGetGenericTemplate,
                 ReflectorClassObjectArrayGetTemplate,
                 ReflectorClassObjectArrayGenericGetTemplate,
 
@@ -440,6 +459,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorClassNativeMethodWithCastToNumberTemplate = "JCObjectReflectorClassNativeMethodWithCastToNumber.template";
             public const string ReflectorClassNativeArrayMethodTemplate = "JCObjectReflectorClassNativeMethodArray.template";
             public const string ReflectorClassObjectMethodTemplate = "JCObjectReflectorClassObjectMethod.template";
+            public const string ReflectorClassObjectMethodGenericTemplate = "JCObjectReflectorClassObjectMethodGeneric.template";
             public const string ReflectorClassObjectArrayMethodTemplate = "JCObjectReflectorClassObjectMethodArray.template";
             public const string ReflectorClassObjectArrayGenericMethodTemplate = "JCObjectReflectorClassObjectMethodArrayGeneric.template";
 
@@ -454,6 +474,7 @@ namespace MASES.JCOReflector.Engine
             public const string ReflectorClassNativeGetWithCastToNumberTemplate = "JCObjectReflectorClassNativeGetPropertyWithCastToNumber.template";
             public const string ReflectorClassNativeArrayGetTemplate = "JCObjectReflectorClassNativeGetPropertyArray.template";
             public const string ReflectorClassObjectGetTemplate = "JCObjectReflectorClassObjectGetProperty.template";
+            public const string ReflectorClassObjectGetGenericTemplate = "JCObjectReflectorClassObjectGetPropertyGeneric.template";
             public const string ReflectorClassObjectArrayGetTemplate = "JCObjectReflectorClassObjectGetPropertyArray.template";
             public const string ReflectorClassObjectArrayGenericGetTemplate = "JCObjectReflectorClassObjectGetPropertyArrayGeneric.template";
 

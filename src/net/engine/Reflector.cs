@@ -310,14 +310,24 @@ namespace MASES.JCOReflector.Engine
         // Collection<TItem>.Remove(TItem) — different in .NET, identical after Java erasure).
         static bool ClashesWithBaseClassMethod(Type type, string methodName, int paramCount)
         {
+            // Base-CLASS chain only. A class correctly implementing an interface method is expected
+            // to share that method's erasure — scanning type.GetInterfaces() here produced a false
+            // positive (Collection<T>.Remove(T) implementing ICollection<T>.Remove(T) looked like a
+            // "clash" and got renamed too, then collided with the rename it wasn't meant to need).
             var baseType = type.BaseType;
             while (baseType != null && baseType != typeof(object))
             {
                 if (HasGenericErasureClash(baseType, methodName, paramCount)) return true;
                 baseType = baseType.BaseType;
             }
-            // Same check across every interface in the hierarchy (e.g. IDictionary<TKey,TValue>.Remove(TKey)
-            // vs the inherited ICollection<KeyValuePair<TKey,TValue>>.Remove(T)).
+            return false;
+        }
+
+        // Separate check, interface-to-interface ancestors only (IDictionary<TKey,TValue>.Remove(TKey)
+        // vs the inherited ICollection<KeyValuePair<TKey,TValue>>.Remove(T)) — use this one only when
+        // generating an INTERFACE's own declaration in ExportInterface, never for a class implementing it.
+        static bool ClashesWithBaseInterfaceMethod(Type type, string methodName, int paramCount)
+        {
             foreach (var iface in type.GetInterfaces())
             {
                 if (HasGenericErasureClash(iface, methodName, paramCount)) return true;
@@ -332,6 +342,20 @@ namespace MASES.JCOReflector.Engine
             return candidates.Any(c => c.GetParameters().All(p => p.ParameterType.IsGenericParameter));
         }
 
+        // True when `t` can never satisfy our IJCOBridgeReflected bound: a primitive, or a .NET type
+        // natively mapped onto a plain Java type (currently just System.String -> java.lang.String).
+        // Any generic reference that needs one of these as a type argument can't be parameterized at
+        // all — same raw-fallback compromise already accepted for cast() and for exception
+        // class-level parameters (TDetail -> IJCOBridgeReflected).
+        static bool ViolatesReflectedBound(Type t)
+        {
+            if (t.IsGenericParameter) return false; // already in scope, always correctly bounded
+            if (t.IsPrimitive) return true;
+            if (t == typeof(string)) return true;
+            if (t.IsGenericType) return t.GetGenericArguments().Any(ViolatesReflectedBound);
+            return false;
+        }
+
         // Recursively builds the Java "<Arg1, Arg2>" text for a type used in an extends/implements
         // clause, or as a base type. Needed because leaving any supertype raw poisons the whole
         // inherited chain to raw types (the "Iterable cannot be inherited with different arguments"
@@ -342,10 +366,13 @@ namespace MASES.JCOReflector.Engine
         {
             if (t.IsGenericParameter) return t.Name;
 
+            // System.Type is a hand-written runtime class (NetType), never generated as its own file.
+            if (t == typeof(Type)) return Const.SpecialNames.NetType;
+
             if (!t.IsGenericType)
             {
                 if (t.IsArray) return ResolveGenericTypeName(t.GetElementType(), imports) + "[]";
-                if (!imports.Contains(t)) imports.Add(t); // was missing: this is why DependencyProperty/Location_1 were never imported
+                if (!imports.Contains(t)) imports.Add(t);
                 return t.GetJavaClassName(t.Assembly);
             }
 
@@ -360,8 +387,16 @@ namespace MASES.JCOReflector.Engine
         // clause or as a base class.
         static string BuildQualifiedGenericTypeName(Type t, IList<Type> imports)
         {
+            if (t.IsGenericParameter) return t.Name;
+
+            // Any argument (recursively) that can't satisfy IJCOBridgeReflected (a primitive, or
+            // System.String) forces the whole reference back to raw instead of parameterized.
+            if (t.IsGenericType && ViolatesReflectedBound(t))
+            {
+                return t.ToPackageName() + "." + t.GetJavaClassName(t.Assembly);
+            }
+
             string simple = ResolveGenericTypeName(t, imports);
-            if (t.IsGenericParameter) return simple;
             int genericMarker = simple.IndexOf('<');
             string containerPart = genericMarker >= 0 ? simple.Substring(0, genericMarker) : simple;
             string argsPart = genericMarker >= 0 ? simple.Substring(genericMarker) : string.Empty;
@@ -613,6 +648,18 @@ namespace MASES.JCOReflector.Engine
 
         static bool TypePrefilter(this Type type)
         {
+            // ref structs (Span<T>, ReadOnlySpan<T>, and any future ones) wrap a native pointer/stack
+            // reference that cannot survive being boxed or passed through the bridge as an object —
+            // JCOBridge has no way to represent them at all, generics or not. Exclude the whole type.
+#if NET5_0_OR_GREATER
+            if (type.IsByRefLike) return false;
+#endif
+            // Whole-type exclusions from ExportingAvoidanceMap (entries with a null member list) must also
+            // stop the type itself from being exported as its own file — skipping just its members left
+            // the type's Implementation class generated anyway, still missing methods it inherits from
+            // non-excluded interfaces like IComparable/IFormattable.
+            if (CheckExportingAvoidanceMap(type.FullName ?? type.Name, string.Empty)) return false;
+
             // Allow public types and valid generic type definitions, while discarding raw generic parameters (like T)
             if (type.IsPublic
                 && (!type.IsGenericType || (EnableGenerics && type.IsGenericTypeDefinition))
@@ -1333,6 +1380,7 @@ namespace MASES.JCOReflector.Engine
                 if (!item.IsConstructor) continue;
 
                 var parameters = item.GetParameters();
+
                 if (isException)
                 {
                     if (parameters.Length == 0) continue;
@@ -1764,7 +1812,7 @@ namespace MASES.JCOReflector.Engine
                     }
 
                     if (!EnableGenerics && (item.IsGenericMethod // don't manage generic methods
-                                            || item.ContainsGenericParameters)
+                        || item.ContainsGenericParameters)
                        ) continue;
 
                     // GENERICS UPDATED: Allow methods containing generic parameters, block only real complex unbound scenarios
@@ -1773,6 +1821,27 @@ namespace MASES.JCOReflector.Engine
                        ) continue;
 
                     var parameters = item.GetParameters();
+
+                    // "new T(...)"/"new T[...]" are never legal Java: only a CLASS-level T can be resolved at
+                    // runtime, via the Class<T> captured by the anonymous-subclass trick at construction time
+                    // (instantiateGenericArgument/genericArgumentClasses). A method's own <T> (e.g. static
+                    // Array.Empty<T>(), MemoryMarshal.GetArrayDataReference<T>(T[])) has no such capture point —
+                    // unwrap "ref T" (a by-ref return) first, since MemoryMarshal.GetArrayDataReference and
+                    // friends return "ref T", not "T" directly.
+                    var unwrappedReturnTypeForSkipCheck = item.ReturnType.IsByRef ? item.ReturnType.GetElementType() : item.ReturnType;
+                    bool returnHasMethodLevelGenericParam =
+                        (unwrappedReturnTypeForSkipCheck.IsGenericParameter && unwrappedReturnTypeForSkipCheck.DeclaringMethod != null) ||
+                        (unwrappedReturnTypeForSkipCheck.IsArray && unwrappedReturnTypeForSkipCheck.GetElementType().IsGenericParameter && unwrappedReturnTypeForSkipCheck.GetElementType().DeclaringMethod != null);
+
+                    if (EnableGenerics && returnHasMethodLevelGenericParam)
+                    {
+                        // Not representable in Java: only a CLASS-level T can be resolved at runtime, via the
+                        // Class<T> captured by the anonymous-subclass trick at construction time
+                        // (instantiateGenericArgument). A method's own <T> has no such capture point — there's
+                        // no "new instance of T" or "array of T" we can build reflectively — so the member is
+                        // skipped entirely rather than emitting invalid Java.
+                        continue;
+                    }
 
                     if (methodName == "ToString" && parameters.Length == 0) continue;
                     if (methodName == "GetHashCode" && parameters.Length == 0) continue;
@@ -1873,6 +1942,8 @@ namespace MASES.JCOReflector.Engine
                         }
                         else
                         {
+                            var unwrappedReturnType = item.ReturnType.IsByRef ? item.ReturnType.GetElementType() : item.ReturnType;
+
                             // GENERICS UPDATED: Route generic type parameters returned by methods natively
                             if (EnableGenerics && item.ReturnType.IsGenericParameter)
                             {
@@ -1894,6 +1965,24 @@ namespace MASES.JCOReflector.Engine
                                 }
 
                                 templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassNativeMethodTemplate);
+                            }
+                            else if (EnableGenerics && item.ReturnType.IsByRef && unwrappedReturnType.IsGenericParameter && unwrappedReturnType.DeclaringMethod == null)
+                            {
+                                // "ref T" (ItemRef, PeekRef, GetValueRefOrNullRef...) where T belongs to the
+                                // CLASS: "new T(...)" is illegal, but T IS resolvable via instantiateGenericArgument
+                                // (same mechanism already used for array elements), since the class-level Class<T>
+                                // was captured at construction time.
+                                returnType = unwrappedReturnType.Name;
+                                isPrimitive = false;
+                                isManaged = true;
+                                isSpecial = false;
+                                isRetValArray = false;
+                                isInterfaceRetVal = false;
+                                implementationReturnType = returnType;
+
+                                int genericArgIndex = Array.IndexOf(type.GetGenericArguments(), unwrappedReturnType);
+                                templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassObjectMethodGenericTemplate)
+                                                                .Replace("GENERIC_ARGUMENT_INDEX", genericArgIndex.ToString());
                             }
                             else
                             {
@@ -1985,10 +2074,6 @@ namespace MASES.JCOReflector.Engine
                                 }
                             }
 
-                            // Record the erased parameter type as it will actually appear in the generated
-                            // Java signature (array-ness matters for erasure, generic arguments don't).
-                            erasedParamTypes.Add(isArray ? paramType + "[]" : paramType);
-
                             hasNativeArrayInParameter |= isArray && isPrimitive;
                             bool useRefOut = false;
                             if (!EnableRefOutParameters)
@@ -2000,6 +2085,14 @@ namespace MASES.JCOReflector.Engine
                                 useRefOut = parameter.IsOut || parameter.ParameterType.IsByRef;
                             }
                             if (!isManaged) break;
+
+                            // Record the erased parameter type as it will actually appear in the generated
+                            // Java signature. JCORefOut<T> and JCORefOut<NetObject> erase to the same
+                            // "JCORefOut" regardless of what's inside — record the wrapper itself for a
+                            // by-ref/out parameter, not the inner paramType, or two overloads that only
+                            // differ inside a JCORefOut<...> won't be seen as colliding.
+                            erasedParamTypes.Add(useRefOut ? "JCORefOut" : (isArray ? paramType + "[]" : paramType));
+
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                             string formatter = string.Empty;
                             string objectCaster = string.Empty;
@@ -2104,7 +2197,8 @@ namespace MASES.JCOReflector.Engine
                             isNewMethodVal = true;
                         }
 
-                        bool clashesWithBase = EnableGenerics && ClashesWithBaseClassMethod(type, methodName, parameters.Length)
+                        bool clashesWithBase = EnableGenerics && !isInterface && parameters.Length > 0
+                            && ClashesWithBaseClassMethod(type, methodName, parameters.Length)
                             && parameters.All(p => p.ParameterType.IsGenericParameter);
                         if (clashesWithBase)
                         {
@@ -2479,10 +2573,6 @@ namespace MASES.JCOReflector.Engine
                                     paramType = paramType.Split('`')[0];
                                 }
 
-                                // Record the erased parameter type exactly as ExportMethods does, so a collision against a
-                                // real public method (see stubErasedSignature below) can actually be detected.
-                                erasedParamTypes.Add(isArray ? paramType + "[]" : paramType);
-
                                 hasNativeArrayInParameter |= isArray && isPrimitive;
                                 bool useRefOut = false;
                                 if (!EnableRefOutParameters)
@@ -2494,6 +2584,13 @@ namespace MASES.JCOReflector.Engine
                                     useRefOut = parameter.IsOut || parameter.ParameterType.IsByRef;
                                 }
                                 if (!isManaged) break; // found not managed type, stop here
+                                // Record the erased parameter type as it will actually appear in the generated
+                                // Java signature. JCORefOut<T> and JCORefOut<NetObject> erase to the same
+                                // "JCORefOut" regardless of what's inside — record the wrapper itself for a
+                                // by-ref/out parameter, not the inner paramType, or two overloads that only
+                                // differ inside a JCORefOut<...> won't be seen as colliding.
+                                erasedParamTypes.Add(useRefOut ? "JCORefOut" : (isArray ? paramType + "[]" : paramType));
+
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                                 string formatter = string.Empty;
                                 string objectCaster = string.Empty;
@@ -2869,12 +2966,13 @@ namespace MASES.JCOReflector.Engine
                     if (item.SetMethod != null && item.SetMethod.IsStatic && referencesClassLevelGenericParameter) continue;
 
                     string propertyType = "void";
+                    var unwrappedPropertyType = item.PropertyType.IsByRef ? item.PropertyType.GetElementType() : item.PropertyType;
                     bool isPropertyGeneric = EnableGenerics && !isException && item.PropertyType.IsGenericParameter;
+                    bool isByRefClassGenericProperty = EnableGenerics && !isException && item.PropertyType.IsByRef
+                        && unwrappedPropertyType.IsGenericParameter && unwrappedPropertyType.DeclaringMethod == null;
 
                     if (isException && item.PropertyType.IsGenericParameter && item.PropertyType.DeclaringMethod == null)
                     {
-                        // Same reasoning as ExportConstructors: an exception class can never declare its own
-                        // <TDetail>, so its class-level generic parameter falls back to the bound here too.
                         propertyType = "IJCOBridgeReflected";
                         isPrimitive = false;
                         isManaged = true;
@@ -2885,6 +2983,17 @@ namespace MASES.JCOReflector.Engine
                     {
                         propertyType = item.PropertyType.Name;
                         isPrimitive = true; // Forces File 18/19 templates to trigger a clean explicit Java runtime cast (T)
+                        isManaged = true;
+                        isSpecial = false;
+                        isArray = false;
+                    }
+                    else if (isByRefClassGenericProperty)
+                    {
+                        // "ref T" (ValueRef and similar .NET 8+ properties) where T belongs to the CLASS:
+                        // "new T(...)" is illegal, but T is resolvable via instantiateGenericArgument
+                        // (same mechanism already used for methods returning "ref T").
+                        propertyType = unwrappedPropertyType.Name;
+                        isPrimitive = false;
                         isManaged = true;
                         isSpecial = false;
                         isArray = false;
@@ -2938,12 +3047,33 @@ namespace MASES.JCOReflector.Engine
                             }
                             else
                             {
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(propertyType) ? Const.Templates.ReflectorClassNativeGetWithCastToNumberTemplate
-                                                                                                                                         : Const.Templates.ReflectorClassNativeGetTemplate
-                                                                                        : Const.Templates.ReflectorClassObjectGetTemplate);
+                                if (isByRefClassGenericProperty)
+                                {
+                                    int genericArgIndex = Array.IndexOf(type.GetGenericArguments(), unwrappedPropertyType);
+                                    templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassObjectGetGenericTemplate)
+                                                                    .Replace("GENERIC_ARGUMENT_INDEX", genericArgIndex.ToString());
+                                }
+                                else
+                                {
+                                    templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(propertyType) ? Const.Templates.ReflectorClassNativeGetWithCastToNumberTemplate
+                                                                                                                                             : Const.Templates.ReflectorClassNativeGetTemplate
+                                                                                            : Const.Templates.ReflectorClassObjectGetTemplate);
+                                }
                             }
 
                             var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+
+                            // Same reasoning as ExportConstructors: IJCOBridgeReflected has no "...Implementation" class
+                            // of its own (it's the root interface, not one of our reflected interfaces) — needInterfaceImplementation
+                            // would have to append a suffix that names a class which doesn't exist. Wrap the native value
+                            // in NetObject instead (it always implements IJCOBridgeReflected), keeping the declared
+                            // return type as IJCOBridgeReflected in the method signature.
+                            bool isExceptionGenericProperty = isException && item.PropertyType.IsGenericParameter && item.PropertyType.DeclaringMethod == null;
+                            if (isExceptionGenericProperty)
+                            {
+                                propertyStr = propertyStr.Replace("new IJCOBridgeReflected(", "new NetObject(");
+                            }
+
                             propertyBuilder.AppendLine(propertyStr);
                         }
                     }
@@ -2980,6 +3110,18 @@ namespace MASES.JCOReflector.Engine
 
                                 propertyStr = propertyStr.Replace(standardValueToken, genericValueCaster);
                             }
+
+                            // Same reasoning as ExportConstructors: IJCOBridgeReflected has no "...Implementation" class
+                            // of its own (it's the root interface, not one of our reflected interfaces) — needInterfaceImplementation
+                            // would have to append a suffix that names a class which doesn't exist. Wrap the native value
+                            // in NetObject instead (it always implements IJCOBridgeReflected), keeping the declared
+                            // return type as IJCOBridgeReflected in the method signature.
+                            bool isExceptionGenericProperty = isException && item.PropertyType.IsGenericParameter && item.PropertyType.DeclaringMethod == null;
+                            if (isExceptionGenericProperty)
+                            {
+                                propertyStr = propertyStr.Replace("new IJCOBridgeReflected(", "new NetObject(");
+                            }
+
                             propertyBuilder.AppendLine(propertyStr);
                         }
                     }
@@ -3660,7 +3802,12 @@ namespace MASES.JCOReflector.Engine
             {
                 return true;
             }
-
+#if NET5_0_OR_GREATER
+            // ref structs (Span<T>, ReadOnlySpan<T>...) can never cross the bridge as an object — same
+            // reasoning as the TypePrefilter exclusion, but this is the gate that actually stops them
+            // from being accepted as a parameter or return type of some OTHER method.
+            if (innerType.IsByRefLike) return false;
+#endif
             // FIX: If EnableGenerics is false, fallback immediately to the original native scart rule for any generic element
             if (!EnableGenerics && (innerType.IsGenericType || innerType.IsGenericParameter))
             {

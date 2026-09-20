@@ -1806,7 +1806,7 @@ namespace MASES.JCOReflector.Engine
                     }
 
                     if (!EnableGenerics && (item.IsGenericMethod // don't manage generic methods
-                                            || item.ContainsGenericParameters)
+                        || item.ContainsGenericParameters)
                        ) continue;
 
                     // GENERICS UPDATED: Allow methods containing generic parameters, block only real complex unbound scenarios
@@ -1816,9 +1816,16 @@ namespace MASES.JCOReflector.Engine
 
                     var parameters = item.GetParameters();
 
+                    // "new T(...)"/"new T[...]" are never legal Java: only a CLASS-level T can be resolved at
+                    // runtime, via the Class<T> captured by the anonymous-subclass trick at construction time
+                    // (instantiateGenericArgument/genericArgumentClasses). A method's own <T> (e.g. static
+                    // Array.Empty<T>(), MemoryMarshal.GetArrayDataReference<T>(T[])) has no such capture point —
+                    // unwrap "ref T" (a by-ref return) first, since MemoryMarshal.GetArrayDataReference and
+                    // friends return "ref T", not "T" directly.
+                    var unwrappedReturnTypeForSkipCheck = item.ReturnType.IsByRef ? item.ReturnType.GetElementType() : item.ReturnType;
                     bool returnHasMethodLevelGenericParam =
-                        (item.ReturnType.IsGenericParameter && item.ReturnType.DeclaringMethod != null) ||
-                        (item.ReturnType.IsArray && item.ReturnType.GetElementType().IsGenericParameter && item.ReturnType.GetElementType().DeclaringMethod != null);
+                        (unwrappedReturnTypeForSkipCheck.IsGenericParameter && unwrappedReturnTypeForSkipCheck.DeclaringMethod != null) ||
+                        (unwrappedReturnTypeForSkipCheck.IsArray && unwrappedReturnTypeForSkipCheck.GetElementType().IsGenericParameter && unwrappedReturnTypeForSkipCheck.GetElementType().DeclaringMethod != null);
 
                     if (EnableGenerics && returnHasMethodLevelGenericParam)
                     {
@@ -1847,22 +1854,6 @@ namespace MASES.JCOReflector.Engine
                     if (item.IsStatic && referencesClassLevelGenericParameter)
                     {
                         // Not representable in Java: a static context cannot see the class's own type parameter.
-                        continue;
-                    }
-
-                    // "new T(...)"/"new T[...]" are never legal Java: only a CLASS-level T can be resolved at
-                    // runtime, via the Class<T> captured by the anonymous-subclass trick at construction time
-                    // (instantiateGenericArgument/genericArgumentClasses). A method's own <T> (e.g. static
-                    // Array.Empty<T>(), MemoryMarshal.GetArrayDataReference<T>(T[])) has no such capture point —
-                    // unwrap "ref T" (a by-ref return) first, since MemoryMarshal.GetArrayDataReference and
-                    // friends return "ref T", not "T" directly.
-                    var unwrappedReturnTypeForSkipCheck = item.ReturnType.IsByRef ? item.ReturnType.GetElementType() : item.ReturnType;
-                    bool returnHasMethodLevelGenericParam =
-                        (unwrappedReturnTypeForSkipCheck.IsGenericParameter && unwrappedReturnTypeForSkipCheck.DeclaringMethod != null) ||
-                        (unwrappedReturnTypeForSkipCheck.IsArray && unwrappedReturnTypeForSkipCheck.GetElementType().IsGenericParameter && unwrappedReturnTypeForSkipCheck.GetElementType().DeclaringMethod != null);
-
-                    if (EnableGenerics && returnHasMethodLevelGenericParam)
-                    {
                         continue;
                     }
 

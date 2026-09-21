@@ -53,7 +53,7 @@ import system.activities.statements.FlowNode;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FlowDecision extends FlowNode  {
+public class FlowDecision extends system.activities.statements.FlowNode  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

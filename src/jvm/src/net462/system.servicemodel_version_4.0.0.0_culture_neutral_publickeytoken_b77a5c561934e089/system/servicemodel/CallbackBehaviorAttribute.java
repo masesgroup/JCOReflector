@@ -45,8 +45,6 @@ import system.servicemodel.dispatcher.ClientRuntime;
 import system.servicemodel.dispatcher.EndpointDispatcher;
 import system.servicemodel.ConcurrencyMode;
 import system.transactions.IsolationLevel;
-import system.servicemodel.description.IEndpointBehavior;
-import system.servicemodel.description.IEndpointBehaviorImplementation;
 
 
 /**
@@ -61,7 +59,7 @@ import system.servicemodel.description.IEndpointBehaviorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CallbackBehaviorAttribute extends Attribute implements system.servicemodel.description.IEndpointBehavior {
+public class CallbackBehaviorAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

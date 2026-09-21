@@ -46,8 +46,6 @@ import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.componentmodel.design.DesignerActionListCollection;
 import system.componentmodel.design.DesignerVerbCollection;
-import system.componentmodel.design.IDesignerFilter;
-import system.componentmodel.design.IDesignerFilterImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.componentmodel.design.IDesignerFilterImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ComponentDesigner extends NetObject implements system.componentmodel.design.IDesignerFilter, AutoCloseable {
+public class ComponentDesigner extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

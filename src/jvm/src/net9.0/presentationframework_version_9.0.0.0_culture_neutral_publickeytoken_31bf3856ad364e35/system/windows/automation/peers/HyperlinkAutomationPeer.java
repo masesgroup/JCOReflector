@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.automation.peers.TextElementAutomationPeer;
 import system.windows.documents.Hyperlink;
 import system.windows.automation.peers.PatternInterface;
-import system.windows.automation.provider.IInvokeProvider;
-import system.windows.automation.provider.IInvokeProviderImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.automation.provider.IInvokeProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HyperlinkAutomationPeer extends TextElementAutomationPeer implements system.windows.automation.provider.IInvokeProvider {
+public class HyperlinkAutomationPeer extends system.windows.automation.peers.TextElementAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

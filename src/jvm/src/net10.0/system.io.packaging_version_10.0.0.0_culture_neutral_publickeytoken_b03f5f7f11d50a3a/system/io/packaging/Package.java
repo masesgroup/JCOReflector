@@ -51,8 +51,6 @@ import system.io.packaging.PackageRelationship;
 import system.io.packaging.TargetMode;
 import system.io.packaging.PackageRelationshipCollection;
 import system.io.packaging.PackageProperties;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -67,7 +65,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Package extends NetObject implements system.IDisposable, AutoCloseable {
+public class Package extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.IO.Packaging, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -55,7 +55,7 @@ import system.windows.UIElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AdornerDecorator extends Decorator  {
+public class AdornerDecorator extends system.windows.controls.Decorator  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

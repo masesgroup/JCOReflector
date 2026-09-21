@@ -51,10 +51,6 @@ import system.windows.controls.StyleSelector;
 import system.windows.data.BindingGroup;
 import system.windows.DataTemplate;
 import system.windows.Style;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
-import system.windows.controls.primitives.IContainItemStorage;
-import system.windows.controls.primitives.IContainItemStorageImplementation;
 
 
 /**
@@ -69,7 +65,7 @@ import system.windows.controls.primitives.IContainItemStorageImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ItemsControl extends Control implements system.windows.markup.IAddChild, system.windows.controls.primitives.IContainItemStorage {
+public class ItemsControl extends system.windows.controls.Control  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

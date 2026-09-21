@@ -53,7 +53,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TabInfo extends ValueType  {
+public class TabInfo extends system.ValueType  {
     /**
      * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

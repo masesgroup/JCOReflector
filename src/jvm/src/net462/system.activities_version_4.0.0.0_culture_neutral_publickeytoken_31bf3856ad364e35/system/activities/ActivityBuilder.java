@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.activities.ActivityPropertyReference;
 import system.activities.Activity;
 import system.Version;
-import system.activities.debugger.IDebuggableWorkflowTree;
-import system.activities.debugger.IDebuggableWorkflowTreeImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.activities.debugger.IDebuggableWorkflowTreeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityBuilder extends NetObject implements system.activities.debugger.IDebuggableWorkflowTree {
+public class ActivityBuilder extends NetObject  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

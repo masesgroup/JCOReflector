@@ -61,7 +61,7 @@ import system.windows.media.ColorContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ColorTypeConverter extends ExpandableObjectConverter  {
+public class ColorTypeConverter extends system.componentmodel.ExpandableObjectConverter  {
     /**
      * Fully assembly qualified name: ReachFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

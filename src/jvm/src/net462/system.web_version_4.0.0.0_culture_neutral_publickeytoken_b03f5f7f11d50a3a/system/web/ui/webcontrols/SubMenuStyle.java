@@ -48,8 +48,6 @@ import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.TypeConverter;
 import system.web.ui.webcontrols.Unit;
-import system.componentmodel.ICustomTypeDescriptor;
-import system.componentmodel.ICustomTypeDescriptorImplementation;
 
 
 /**
@@ -64,7 +62,7 @@ import system.componentmodel.ICustomTypeDescriptorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SubMenuStyle extends Style implements system.componentmodel.ICustomTypeDescriptor {
+public class SubMenuStyle extends system.web.ui.webcontrols.Style  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

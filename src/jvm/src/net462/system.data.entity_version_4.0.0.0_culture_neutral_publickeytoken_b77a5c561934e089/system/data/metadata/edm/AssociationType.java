@@ -54,7 +54,7 @@ import system.data.metadata.edm.BuiltInTypeKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssociationType extends RelationshipType  {
+public class AssociationType extends system.data.metadata.edm.RelationshipType  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -62,7 +62,7 @@ import system.servicemodel.security.WSSecurityTokenSerializer;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
+public class WSSecurityTokenSerializer extends system.identitymodel.selectors.SecurityTokenSerializer  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

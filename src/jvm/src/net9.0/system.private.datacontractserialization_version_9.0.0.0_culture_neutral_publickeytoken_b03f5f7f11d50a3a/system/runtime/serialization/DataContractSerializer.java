@@ -60,7 +60,7 @@ import system.xml.XmlWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataContractSerializer extends XmlObjectSerializer  {
+public class DataContractSerializer extends system.runtime.serialization.XmlObjectSerializer  {
     /**
      * Fully assembly qualified name: System.Private.DataContractSerialization, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -56,7 +56,7 @@ import system.io.pipes.PipeTransmissionMode;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AnonymousPipeClientStream extends PipeStream  {
+public class AnonymousPipeClientStream extends system.io.pipes.PipeStream  {
     /**
      * Fully assembly qualified name: System.IO.Pipes, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

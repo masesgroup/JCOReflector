@@ -44,8 +44,6 @@ import system.servicemodel.description.OperationDescription;
 import system.servicemodel.channels.BindingParameterCollection;
 import system.servicemodel.dispatcher.ClientOperation;
 import system.servicemodel.dispatcher.DispatchOperation;
-import system.servicemodel.description.IOperationBehavior;
-import system.servicemodel.description.IOperationBehaviorImplementation;
 
 
 /**
@@ -60,7 +58,7 @@ import system.servicemodel.description.IOperationBehaviorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TransactionFlowAttribute extends Attribute implements system.servicemodel.description.IOperationBehavior {
+public class TransactionFlowAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

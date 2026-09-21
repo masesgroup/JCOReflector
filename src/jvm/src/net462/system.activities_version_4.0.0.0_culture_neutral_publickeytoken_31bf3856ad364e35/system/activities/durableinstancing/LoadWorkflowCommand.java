@@ -53,7 +53,7 @@ import system.runtime.durableinstancing.InstancePersistenceCommand;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class LoadWorkflowCommand extends InstancePersistenceCommand  {
+public class LoadWorkflowCommand extends system.runtime.durableinstancing.InstancePersistenceCommand  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

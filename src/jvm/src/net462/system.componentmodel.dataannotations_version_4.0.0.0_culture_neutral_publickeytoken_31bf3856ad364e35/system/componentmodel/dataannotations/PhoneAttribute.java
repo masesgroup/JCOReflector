@@ -53,7 +53,7 @@ import system.componentmodel.dataannotations.DataTypeAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PhoneAttribute extends DataTypeAttribute  {
+public class PhoneAttribute extends system.componentmodel.dataannotations.DataTypeAttribute  {
     /**
      * Fully assembly qualified name: System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

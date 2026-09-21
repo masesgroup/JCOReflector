@@ -43,12 +43,6 @@ import system.windows.automation.peers.DataGridAutomationPeer;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
-import system.windows.automation.provider.IInvokeProvider;
-import system.windows.automation.provider.IInvokeProviderImplementation;
-import system.windows.automation.provider.IScrollItemProvider;
-import system.windows.automation.provider.IScrollItemProviderImplementation;
-import system.windows.automation.provider.IItemContainerProvider;
-import system.windows.automation.provider.IItemContainerProviderImplementation;
 
 
 /**
@@ -63,7 +57,7 @@ import system.windows.automation.provider.IItemContainerProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridItemAutomationPeer extends ItemAutomationPeer implements system.windows.automation.provider.IInvokeProvider, system.windows.automation.provider.IScrollItemProvider, system.windows.automation.provider.IItemContainerProvider {
+public class DataGridItemAutomationPeer extends system.windows.automation.peers.ItemAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

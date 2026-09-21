@@ -39,8 +39,6 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.linq.XNode;
-import system.collections.IEqualityComparer;
-import system.collections.IEqualityComparerImplementation;
 
 
 /**
@@ -55,7 +53,7 @@ import system.collections.IEqualityComparerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XNodeEqualityComparer extends NetObject implements system.collections.IEqualityComparer {
+public class XNodeEqualityComparer extends NetObject  {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

@@ -40,8 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.net.WebRequest;
 import system.Uri;
-import system.net.IWebRequestCreate;
-import system.net.IWebRequestCreateImplementation;
 
 
 /**
@@ -56,7 +54,7 @@ import system.net.IWebRequestCreateImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PackWebRequestFactory extends NetObject implements system.net.IWebRequestCreate {
+public class PackWebRequestFactory extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

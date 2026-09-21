@@ -42,8 +42,6 @@ import system.net.IPAddress;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.net.sockets.AddressFamily;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IPAddress extends NetObject implements system.IFormattable {
+public class IPAddress extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.Primitives, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

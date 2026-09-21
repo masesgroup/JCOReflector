@@ -43,8 +43,6 @@ import system.componentmodel.design.DesignerActionListCollection;
 import system.web.ui.design.DesignerDataSourceView;
 import system.web.ui.design.IDataSourceDesigner;
 import system.web.ui.design.IDataSourceDesignerImplementation;
-import system.web.ui.design.IDataSourceProvider;
-import system.web.ui.design.IDataSourceProviderImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.web.ui.design.IDataSourceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataBoundControlDesigner extends BaseDataBoundControlDesigner implements system.web.ui.design.IDataSourceProvider {
+public class DataBoundControlDesigner extends system.web.ui.design.webcontrols.BaseDataBoundControlDesigner  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

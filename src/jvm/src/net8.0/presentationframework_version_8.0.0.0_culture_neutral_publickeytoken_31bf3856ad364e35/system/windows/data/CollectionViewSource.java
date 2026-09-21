@@ -47,10 +47,6 @@ import system.EventArgs;
 import system.componentmodel.SortDescriptionCollection;
 import system.globalization.CultureInfo;
 import system.windows.data.FilterEventHandler;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
-import system.windows.IWeakEventListener;
-import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -65,7 +61,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CollectionViewSource extends DependencyObject implements system.componentmodel.ISupportInitialize, system.windows.IWeakEventListener {
+public class CollectionViewSource extends system.windows.DependencyObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

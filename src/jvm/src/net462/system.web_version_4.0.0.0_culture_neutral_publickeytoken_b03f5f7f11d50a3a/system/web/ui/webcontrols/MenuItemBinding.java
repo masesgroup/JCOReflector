@@ -38,8 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -54,7 +52,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MenuItemBinding extends NetObject implements system.ICloneable {
+public class MenuItemBinding extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

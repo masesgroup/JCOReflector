@@ -57,7 +57,7 @@ import system.windows.forms.LinkBehavior;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolStripLabel extends ToolStripItem  {
+public class ToolStripLabel extends system.windows.forms.ToolStripItem  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

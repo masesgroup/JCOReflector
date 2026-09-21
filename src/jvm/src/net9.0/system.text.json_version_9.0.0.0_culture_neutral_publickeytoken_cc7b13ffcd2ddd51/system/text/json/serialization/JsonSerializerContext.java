@@ -40,8 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.text.json.JsonSerializerOptions;
-import system.text.json.serialization.metadata.IJsonTypeInfoResolver;
-import system.text.json.serialization.metadata.IJsonTypeInfoResolverImplementation;
 
 
 /**
@@ -56,7 +54,7 @@ import system.text.json.serialization.metadata.IJsonTypeInfoResolverImplementati
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JsonSerializerContext extends NetObject implements system.text.json.serialization.metadata.IJsonTypeInfoResolver {
+public class JsonSerializerContext extends NetObject  {
     /**
      * Fully assembly qualified name: System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

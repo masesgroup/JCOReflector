@@ -53,7 +53,7 @@ import system.windows.documents.documentstructures.BlockElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NamedElement extends BlockElement  {
+public class NamedElement extends system.windows.documents.documentstructures.BlockElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

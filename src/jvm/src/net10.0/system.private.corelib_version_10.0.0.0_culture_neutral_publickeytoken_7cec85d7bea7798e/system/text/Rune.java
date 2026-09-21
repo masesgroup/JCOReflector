@@ -46,10 +46,6 @@ import system.globalization.UnicodeCategory;
 import system.globalization.CultureInfo;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
-import system.IComparable;
-import system.IComparableImplementation;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -64,7 +60,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Rune extends ValueType implements system.IComparable, system.IFormattable {
+public class Rune extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

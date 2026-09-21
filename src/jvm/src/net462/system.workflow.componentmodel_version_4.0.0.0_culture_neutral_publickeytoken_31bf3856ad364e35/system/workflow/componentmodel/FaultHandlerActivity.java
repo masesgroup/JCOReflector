@@ -42,8 +42,6 @@ import system.workflow.componentmodel.CompositeActivity;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.workflow.componentmodel.compiler.AccessTypes;
-import system.workflow.componentmodel.IDynamicPropertyTypeProvider;
-import system.workflow.componentmodel.IDynamicPropertyTypeProviderImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.workflow.componentmodel.IDynamicPropertyTypeProviderImplementation
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FaultHandlerActivity extends CompositeActivity implements system.workflow.componentmodel.IDynamicPropertyTypeProvider {
+public class FaultHandlerActivity extends system.workflow.componentmodel.CompositeActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

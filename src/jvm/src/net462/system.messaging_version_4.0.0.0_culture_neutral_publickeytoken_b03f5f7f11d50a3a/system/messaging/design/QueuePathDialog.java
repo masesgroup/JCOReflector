@@ -59,7 +59,7 @@ import system.messaging.MessageQueue;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class QueuePathDialog extends Form  {
+public class QueuePathDialog extends system.windows.forms.Form  {
     /**
      * Fully assembly qualified name: System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

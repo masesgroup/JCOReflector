@@ -55,7 +55,7 @@ import system.xml.XmlElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class KeyInfoEncryptedKey extends KeyInfoClause  {
+public class KeyInfoEncryptedKey extends system.security.cryptography.xml.KeyInfoClause  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

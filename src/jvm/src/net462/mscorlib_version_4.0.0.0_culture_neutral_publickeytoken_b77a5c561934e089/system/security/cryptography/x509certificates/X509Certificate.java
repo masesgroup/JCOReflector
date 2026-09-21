@@ -45,10 +45,6 @@ import system.runtime.serialization.StreamingContext;
 import system.security.cryptography.x509certificates.X509Certificate;
 import system.security.cryptography.x509certificates.X509ContentType;
 import system.security.cryptography.HashAlgorithmName;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -63,7 +59,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509Certificate extends NetObject implements system.runtime.serialization.IDeserializationCallback, system.runtime.serialization.ISerializable, AutoCloseable {
+public class X509Certificate extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

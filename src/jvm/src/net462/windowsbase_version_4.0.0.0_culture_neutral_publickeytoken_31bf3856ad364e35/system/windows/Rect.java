@@ -46,8 +46,6 @@ import system.windows.Rect;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.windows.media.Matrix;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Rect extends ValueType implements system.IFormattable {
+public class Rect extends system.ValueType  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

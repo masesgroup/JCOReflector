@@ -43,8 +43,6 @@ import system.collections.specialized.NameValueCollection;
 import system.drawing.Color;
 import system.web.ui.webcontrols.BorderStyle;
 import system.web.ui.webcontrols.Unit;
-import system.web.ui.IPostBackDataHandler;
-import system.web.ui.IPostBackDataHandlerImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.web.ui.IPostBackDataHandlerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DropDownList extends ListControl implements system.web.ui.IPostBackDataHandler {
+public class DropDownList extends system.web.ui.webcontrols.ListControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

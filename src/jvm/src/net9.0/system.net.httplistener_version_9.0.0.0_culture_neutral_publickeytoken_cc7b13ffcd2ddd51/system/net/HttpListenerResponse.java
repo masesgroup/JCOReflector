@@ -45,8 +45,6 @@ import system.net.CookieCollection;
 import system.net.WebHeaderCollection;
 import system.text.Encoding;
 import system.Version;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -61,7 +59,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpListenerResponse extends NetObject implements system.IDisposable, AutoCloseable {
+public class HttpListenerResponse extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.HttpListener, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

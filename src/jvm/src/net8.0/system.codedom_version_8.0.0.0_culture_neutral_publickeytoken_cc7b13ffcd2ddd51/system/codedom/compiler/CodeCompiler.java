@@ -42,8 +42,6 @@ import system.codedom.compiler.CodeGenerator;
 import system.codedom.compiler.CompilerResults;
 import system.codedom.compiler.CompilerParameters;
 import system.codedom.CodeCompileUnit;
-import system.codedom.compiler.ICodeCompiler;
-import system.codedom.compiler.ICodeCompilerImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.codedom.compiler.ICodeCompilerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeCompiler extends CodeGenerator implements system.codedom.compiler.ICodeCompiler {
+public class CodeCompiler extends system.codedom.compiler.CodeGenerator  {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

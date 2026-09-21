@@ -51,8 +51,6 @@ import system.componentmodel.PropertyDescriptorCollection;
 import system.data.DataViewManager;
 import system.componentmodel.ListChangedEventHandler;
 import system.EventHandler;
-import system.componentmodel.ITypedList;
-import system.componentmodel.ITypedListImplementation;
 
 
 /**
@@ -67,7 +65,7 @@ import system.componentmodel.ITypedListImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataView extends MarshalByValueComponent implements system.componentmodel.ITypedList {
+public class DataView extends system.componentmodel.MarshalByValueComponent  {
     /**
      * Fully assembly qualified name: System.Data.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

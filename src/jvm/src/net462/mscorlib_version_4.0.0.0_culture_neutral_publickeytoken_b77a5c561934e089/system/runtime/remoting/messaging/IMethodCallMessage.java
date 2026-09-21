@@ -59,7 +59,7 @@ import system.runtime.remoting.messaging.LogicalCallContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IMethodCallMessage extends IJCOBridgeReflected, IMethodMessage, IMessage {
+public interface IMethodCallMessage extends IJCOBridgeReflected, system.runtime.remoting.messaging.IMethodMessage, system.runtime.remoting.messaging.IMessage {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

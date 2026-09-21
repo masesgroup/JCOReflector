@@ -38,8 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.IComparer;
-import system.collections.IComparerImplementation;
 
 
 /**
@@ -54,7 +52,7 @@ import system.collections.IComparerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XPathMessageFilterElementComparer extends NetObject implements system.collections.IComparer {
+public class XPathMessageFilterElementComparer extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

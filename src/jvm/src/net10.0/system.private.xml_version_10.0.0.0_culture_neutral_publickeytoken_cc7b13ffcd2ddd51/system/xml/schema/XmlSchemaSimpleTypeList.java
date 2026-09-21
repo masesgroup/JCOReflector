@@ -55,7 +55,7 @@ import system.xml.XmlQualifiedName;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
+public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTypeContent  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

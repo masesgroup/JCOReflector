@@ -46,8 +46,6 @@ import system.windows.controls.primitives.PlacementMode;
 import system.windows.controls.primitives.PopupAnimation;
 import system.windows.Rect;
 import system.EventHandler;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Popup extends FrameworkElement implements system.windows.markup.IAddChild {
+public class Popup extends system.windows.FrameworkElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

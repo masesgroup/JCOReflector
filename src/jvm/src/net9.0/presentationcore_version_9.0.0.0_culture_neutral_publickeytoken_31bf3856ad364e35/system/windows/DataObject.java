@@ -56,8 +56,6 @@ import system.runtime.interopservices.comtypes.IEnumFORMATETC;
 import system.runtime.interopservices.comtypes.IEnumFORMATETCImplementation;
 import system.runtime.interopservices.comtypes.DATADIR;
 import system.runtime.interopservices.comtypes.STGMEDIUM;
-import system.runtime.interopservices.comtypes.IDataObject;
-import system.runtime.interopservices.comtypes.IDataObjectImplementation;
 
 
 /**
@@ -72,7 +70,7 @@ import system.runtime.interopservices.comtypes.IDataObjectImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataObject extends NetObject implements system.runtime.interopservices.comtypes.IDataObject {
+public class DataObject extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

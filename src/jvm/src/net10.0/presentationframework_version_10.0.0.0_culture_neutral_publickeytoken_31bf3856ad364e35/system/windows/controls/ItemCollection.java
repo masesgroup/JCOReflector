@@ -44,8 +44,6 @@ import system.IDisposableImplementation;
 import system.Array;
 import system.EventArgs;
 import system.componentmodel.SortDescriptionCollection;
-import system.windows.IWeakEventListener;
-import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -60,7 +58,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ItemCollection extends CollectionView implements system.windows.IWeakEventListener {
+public class ItemCollection extends system.windows.data.CollectionView  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

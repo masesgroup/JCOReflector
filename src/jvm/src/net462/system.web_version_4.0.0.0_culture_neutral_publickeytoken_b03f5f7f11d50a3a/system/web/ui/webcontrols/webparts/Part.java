@@ -44,8 +44,6 @@ import system.web.ui.webcontrols.webparts.PartChromeState;
 import system.web.ui.webcontrols.webparts.PartChromeType;
 import system.web.ui.INamingContainer;
 import system.web.ui.INamingContainerImplementation;
-import system.web.ui.webcontrols.ICompositeControlDesignerAccessor;
-import system.web.ui.webcontrols.ICompositeControlDesignerAccessorImplementation;
 
 
 /**
@@ -60,7 +58,7 @@ import system.web.ui.webcontrols.ICompositeControlDesignerAccessorImplementation
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Part extends Panel implements system.web.ui.INamingContainer, system.web.ui.webcontrols.ICompositeControlDesignerAccessor {
+public class Part extends system.web.ui.webcontrols.Panel implements system.web.ui.INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

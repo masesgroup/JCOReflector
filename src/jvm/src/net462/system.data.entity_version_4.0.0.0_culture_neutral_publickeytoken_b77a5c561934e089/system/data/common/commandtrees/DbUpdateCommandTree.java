@@ -54,7 +54,7 @@ import system.data.common.commandtrees.DbExpression;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbUpdateCommandTree extends DbModificationCommandTree  {
+public class DbUpdateCommandTree extends system.data.common.commandtrees.DbModificationCommandTree  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -69,7 +69,7 @@ import system.windows.forms.design.SelectionRules;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ControlDesigner extends ComponentDesigner  {
+public class ControlDesigner extends system.componentmodel.design.ComponentDesigner  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

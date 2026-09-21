@@ -45,8 +45,6 @@ import system.windows.media.Geometry;
 import system.windows.Rect;
 import system.windows.markup.XmlLanguage;
 import system.windows.Point;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -61,7 +59,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GlyphRun extends NetObject implements system.componentmodel.ISupportInitialize {
+public class GlyphRun extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

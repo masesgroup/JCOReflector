@@ -64,7 +64,7 @@ import system.runtime.serialization.EmitTypeInformation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataContractJsonSerializer extends XmlObjectSerializer  {
+public class DataContractJsonSerializer extends system.runtime.serialization.XmlObjectSerializer  {
     /**
      * Fully assembly qualified name: System.Private.DataContractSerialization, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

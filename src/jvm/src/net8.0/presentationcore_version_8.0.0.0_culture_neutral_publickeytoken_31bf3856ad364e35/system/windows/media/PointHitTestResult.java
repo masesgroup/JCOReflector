@@ -55,7 +55,7 @@ import system.windows.Point;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PointHitTestResult extends HitTestResult  {
+public class PointHitTestResult extends system.windows.media.HitTestResult  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

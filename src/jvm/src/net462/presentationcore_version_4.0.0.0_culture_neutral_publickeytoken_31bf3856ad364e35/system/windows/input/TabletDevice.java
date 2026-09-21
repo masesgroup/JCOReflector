@@ -59,7 +59,7 @@ import system.windows.PresentationSource;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TabletDevice extends InputDevice  {
+public class TabletDevice extends system.windows.input.InputDevice  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

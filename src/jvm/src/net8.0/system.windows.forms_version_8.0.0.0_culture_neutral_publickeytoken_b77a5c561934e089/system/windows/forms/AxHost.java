@@ -70,8 +70,6 @@ import system.windows.forms.PaintEventHandler;
 import system.windows.forms.QueryAccessibilityHelpEventHandler;
 import system.windows.forms.QueryContinueDragEventHandler;
 import system.windows.forms.UICuesEventHandler;
-import system.componentmodel.ICustomTypeDescriptor;
-import system.componentmodel.ICustomTypeDescriptorImplementation;
 
 
 /**
@@ -86,7 +84,7 @@ import system.componentmodel.ICustomTypeDescriptorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AxHost extends Control implements system.componentmodel.ICustomTypeDescriptor {
+public class AxHost extends system.windows.forms.Control  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

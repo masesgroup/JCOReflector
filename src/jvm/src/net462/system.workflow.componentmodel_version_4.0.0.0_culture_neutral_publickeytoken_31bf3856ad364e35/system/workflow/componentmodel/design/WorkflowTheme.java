@@ -47,8 +47,6 @@ import system.componentmodel.design.serialization.IDesignerSerializationManagerI
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.workflow.componentmodel.design.AmbientTheme;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -63,7 +61,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowTheme extends NetObject implements system.IDisposable, AutoCloseable {
+public class WorkflowTheme extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

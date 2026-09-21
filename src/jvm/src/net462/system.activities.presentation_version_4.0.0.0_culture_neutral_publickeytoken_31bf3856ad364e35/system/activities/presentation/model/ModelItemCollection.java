@@ -55,7 +55,7 @@ import system.collections.specialized.NotifyCollectionChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModelItemCollection extends ModelItem  {
+public class ModelItemCollection extends system.activities.presentation.model.ModelItem  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

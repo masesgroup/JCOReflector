@@ -42,10 +42,6 @@ import system.Array;
 import system.componentmodel.ICollectionView;
 import system.componentmodel.ICollectionViewImplementation;
 import system.EventArgs;
-import system.componentmodel.ICollectionViewFactory;
-import system.componentmodel.ICollectionViewFactoryImplementation;
-import system.windows.IWeakEventListener;
-import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -60,7 +56,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompositeCollection extends NetObjectEnumerable implements system.componentmodel.ICollectionViewFactory, system.windows.IWeakEventListener {
+public class CompositeCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

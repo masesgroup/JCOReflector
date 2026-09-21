@@ -53,7 +53,7 @@ import microsoft.win32.safehandles.SafeHandleMinusOneIsInvalid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SafeSocketHandle extends SafeHandleMinusOneIsInvalid  {
+public class SafeSocketHandle extends microsoft.win32.safehandles.SafeHandleMinusOneIsInvalid  {
     /**
      * Fully assembly qualified name: System.Net.Sockets, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

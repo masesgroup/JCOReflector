@@ -46,8 +46,6 @@ import system.io.TextWriter;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.web.configuration.HttpCapabilitiesProvider;
-import system.web.ui.IFilterResolutionService;
-import system.web.ui.IFilterResolutionServiceImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.web.ui.IFilterResolutionServiceImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFilterResolutionService {
+public class HttpCapabilitiesBase extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

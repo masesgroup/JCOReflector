@@ -54,7 +54,7 @@ import system.windows.input.RoutedUICommand;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DocumentViewer extends DocumentViewerBase  {
+public class DocumentViewer extends system.windows.controls.primitives.DocumentViewerBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

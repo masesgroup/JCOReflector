@@ -54,7 +54,7 @@ import system.componentmodel.ListSortDirection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SortDescription extends ValueType  {
+public class SortDescription extends system.ValueType  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

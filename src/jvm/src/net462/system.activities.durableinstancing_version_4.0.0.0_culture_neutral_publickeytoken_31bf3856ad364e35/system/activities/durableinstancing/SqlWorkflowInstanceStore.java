@@ -57,7 +57,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlWorkflowInstanceStore extends InstanceStore  {
+public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.InstanceStore  {
     /**
      * Fully assembly qualified name: System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

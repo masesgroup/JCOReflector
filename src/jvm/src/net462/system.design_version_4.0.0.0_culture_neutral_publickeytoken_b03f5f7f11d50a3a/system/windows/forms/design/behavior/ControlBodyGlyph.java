@@ -60,7 +60,7 @@ import system.drawing.Point;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ControlBodyGlyph extends ComponentGlyph  {
+public class ControlBodyGlyph extends system.windows.forms.design.behavior.ComponentGlyph  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

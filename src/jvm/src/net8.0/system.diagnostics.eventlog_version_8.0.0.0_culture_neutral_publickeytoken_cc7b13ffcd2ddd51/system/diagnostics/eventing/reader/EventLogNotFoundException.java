@@ -52,7 +52,7 @@ import system.diagnostics.eventing.reader.EventLogException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventLogNotFoundException extends EventLogException {
+public class EventLogNotFoundException extends system.diagnostics.eventing.reader.EventLogException {
     /**
      * Fully assembly qualified name: System.Diagnostics.EventLog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

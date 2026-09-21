@@ -54,7 +54,7 @@ import system.servicemodel.activation.ServiceHostFactoryBase;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ServiceRoute extends Route  {
+public class ServiceRoute extends system.web.routing.Route  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

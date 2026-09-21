@@ -66,14 +66,6 @@ import system.web.ui.webcontrols.DetailsViewModeEventHandler;
 import system.web.ui.webcontrols.DetailsViewPageEventHandler;
 import system.web.ui.webcontrols.DetailsViewUpdatedEventHandler;
 import system.web.ui.webcontrols.DetailsViewUpdateEventHandler;
-import system.web.ui.webcontrols.ICallbackContainer;
-import system.web.ui.webcontrols.ICallbackContainerImplementation;
-import system.web.ui.ICallbackEventHandler;
-import system.web.ui.ICallbackEventHandlerImplementation;
-import system.web.ui.IPostBackEventHandler;
-import system.web.ui.IPostBackEventHandlerImplementation;
-import system.web.ui.webcontrols.IPostBackContainer;
-import system.web.ui.webcontrols.IPostBackContainerImplementation;
 
 
 /**
@@ -88,7 +80,7 @@ import system.web.ui.webcontrols.IPostBackContainerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DetailsView extends CompositeDataBoundControl implements system.web.ui.webcontrols.ICallbackContainer, system.web.ui.ICallbackEventHandler, system.web.ui.IPostBackEventHandler, system.web.ui.webcontrols.IPostBackContainer {
+public class DetailsView extends system.web.ui.webcontrols.CompositeDataBoundControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

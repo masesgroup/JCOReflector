@@ -49,8 +49,6 @@ import system.codedom.CodeExpression;
 import system.codedom.CodeNamespace;
 import system.codedom.CodeStatement;
 import system.codedom.CodeTypeDeclaration;
-import system.codedom.compiler.ICodeGenerator;
-import system.codedom.compiler.ICodeGeneratorImplementation;
 
 
 /**
@@ -65,7 +63,7 @@ import system.codedom.compiler.ICodeGeneratorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeGenerator extends NetObject implements system.codedom.compiler.ICodeGenerator {
+public class CodeGenerator extends NetObject  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

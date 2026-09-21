@@ -55,8 +55,6 @@ import system.runtime.serialization.StreamingContext;
 import system.transactions.IsolationLevel;
 import system.transactions.TransactionInformation;
 import system.transactions.TransactionCompletedEventHandler;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -71,7 +69,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Transaction extends NetObject implements system.runtime.serialization.ISerializable, AutoCloseable {
+public class Transaction extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Transactions.Local, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

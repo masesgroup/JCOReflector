@@ -42,10 +42,6 @@ import system.windows.automation.peers.ItemAutomationPeer;
 import system.windows.controls.DataGridColumn;
 import system.windows.automation.peers.DataGridColumnHeadersPresenterAutomationPeer;
 import system.windows.automation.peers.PatternInterface;
-import system.windows.automation.provider.IInvokeProvider;
-import system.windows.automation.provider.IInvokeProviderImplementation;
-import system.windows.automation.provider.IScrollItemProvider;
-import system.windows.automation.provider.IScrollItemProviderImplementation;
 
 
 /**
@@ -60,7 +56,7 @@ import system.windows.automation.provider.IScrollItemProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer implements system.windows.automation.provider.IInvokeProvider, system.windows.automation.provider.IScrollItemProvider {
+public class DataGridColumnHeaderItemAutomationPeer extends system.windows.automation.peers.ItemAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

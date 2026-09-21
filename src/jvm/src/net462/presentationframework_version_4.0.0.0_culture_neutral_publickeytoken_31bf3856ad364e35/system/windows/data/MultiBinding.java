@@ -45,8 +45,6 @@ import system.windows.data.IMultiValueConverter;
 import system.windows.data.IMultiValueConverterImplementation;
 import system.windows.data.UpdateSourceExceptionFilterCallback;
 import system.windows.data.UpdateSourceTrigger;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -61,7 +59,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MultiBinding extends BindingBase implements system.windows.markup.IAddChild {
+public class MultiBinding extends system.windows.data.BindingBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

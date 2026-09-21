@@ -47,8 +47,6 @@ import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.TypeConverter;
 import system.Version;
-import system.componentmodel.ICustomTypeDescriptor;
-import system.componentmodel.ICustomTypeDescriptorImplementation;
 
 
 /**
@@ -63,7 +61,7 @@ import system.componentmodel.ICustomTypeDescriptorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DynamicActivity extends Activity implements system.componentmodel.ICustomTypeDescriptor {
+public class DynamicActivity extends system.activities.Activity  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

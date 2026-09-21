@@ -42,8 +42,6 @@ import system.windows.media.media3d.Visual3D;
 import system.windows.media.media3d.Model3D;
 import system.windows.media.media3d.Transform3D;
 import system.windows.media.media3d.Visual3DCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModelVisual3D extends Visual3D implements system.windows.markup.IAddChild {
+public class ModelVisual3D extends system.windows.media.media3d.Visual3D  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

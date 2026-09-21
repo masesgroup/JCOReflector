@@ -52,7 +52,7 @@ import system.net.http.HttpIOException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpProtocolException extends HttpIOException {
+public class HttpProtocolException extends system.net.http.HttpIOException {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

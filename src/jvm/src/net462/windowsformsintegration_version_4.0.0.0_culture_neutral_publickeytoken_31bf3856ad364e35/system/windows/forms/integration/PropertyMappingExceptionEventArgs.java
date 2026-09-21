@@ -53,7 +53,7 @@ import system.windows.forms.integration.IntegrationExceptionEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PropertyMappingExceptionEventArgs extends IntegrationExceptionEventArgs  {
+public class PropertyMappingExceptionEventArgs extends system.windows.forms.integration.IntegrationExceptionEventArgs  {
     /**
      * Fully assembly qualified name: WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

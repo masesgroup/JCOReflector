@@ -53,7 +53,7 @@ import system.text.json.serialization.JsonAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JsonExtensionDataAttribute extends JsonAttribute  {
+public class JsonExtensionDataAttribute extends system.text.json.serialization.JsonAttribute  {
     /**
      * Fully assembly qualified name: System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

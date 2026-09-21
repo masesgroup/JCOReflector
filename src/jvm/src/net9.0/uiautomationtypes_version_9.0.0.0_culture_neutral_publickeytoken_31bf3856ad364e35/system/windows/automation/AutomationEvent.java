@@ -54,7 +54,7 @@ import system.windows.automation.AutomationEvent;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AutomationEvent extends AutomationIdentifier  {
+public class AutomationEvent extends system.windows.automation.AutomationIdentifier  {
     /**
      * Fully assembly qualified name: UIAutomationTypes, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

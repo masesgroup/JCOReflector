@@ -44,8 +44,6 @@ import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.SecurityElement;
 import system.Array;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -60,7 +58,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PermissionSet extends NetObjectEnumerable implements system.runtime.serialization.IDeserializationCallback {
+public class PermissionSet extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

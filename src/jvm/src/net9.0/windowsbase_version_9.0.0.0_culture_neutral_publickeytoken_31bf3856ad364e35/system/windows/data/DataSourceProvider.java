@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.EventHandler;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataSourceProvider extends NetObject implements system.componentmodel.ISupportInitialize {
+public class DataSourceProvider extends NetObject  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

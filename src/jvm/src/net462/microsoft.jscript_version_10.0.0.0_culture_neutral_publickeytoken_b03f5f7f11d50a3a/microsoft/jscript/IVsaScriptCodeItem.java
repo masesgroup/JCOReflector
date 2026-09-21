@@ -57,7 +57,7 @@ import system.codedom.CodeObject;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IVsaScriptCodeItem extends IJCOBridgeReflected, IJSVsaCodeItem, IJSVsaItem {
+public interface IVsaScriptCodeItem extends IJCOBridgeReflected, microsoft.jscript.vsa.IJSVsaCodeItem, microsoft.jscript.vsa.IJSVsaItem {
     /**
      * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

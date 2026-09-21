@@ -44,8 +44,6 @@ import system.componentmodel.design.serialization.CodeDomLocalizationModel;
 import system.globalization.CultureInfo;
 import system.componentmodel.design.serialization.IDesignerSerializationManager;
 import system.componentmodel.design.serialization.IDesignerSerializationManagerImplementation;
-import system.componentmodel.design.serialization.IDesignerSerializationProvider;
-import system.componentmodel.design.serialization.IDesignerSerializationProviderImplementation;
 
 
 /**
@@ -60,7 +58,7 @@ import system.componentmodel.design.serialization.IDesignerSerializationProvider
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeDomLocalizationProvider extends NetObject implements system.componentmodel.design.serialization.IDesignerSerializationProvider, AutoCloseable {
+public class CodeDomLocalizationProvider extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

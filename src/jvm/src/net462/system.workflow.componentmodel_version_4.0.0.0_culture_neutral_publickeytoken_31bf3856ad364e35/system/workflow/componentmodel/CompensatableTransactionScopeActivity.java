@@ -42,8 +42,6 @@ import system.workflow.componentmodel.CompositeActivity;
 import system.workflow.componentmodel.ActivityExecutionStatus;
 import system.workflow.componentmodel.ActivityExecutionContext;
 import system.workflow.componentmodel.WorkflowTransactionOptions;
-import system.workflow.componentmodel.ICompensatableActivity;
-import system.workflow.componentmodel.ICompensatableActivityImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.workflow.componentmodel.ICompensatableActivityImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompensatableTransactionScopeActivity extends CompositeActivity implements system.workflow.componentmodel.ICompensatableActivity {
+public class CompensatableTransactionScopeActivity extends system.workflow.componentmodel.CompositeActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

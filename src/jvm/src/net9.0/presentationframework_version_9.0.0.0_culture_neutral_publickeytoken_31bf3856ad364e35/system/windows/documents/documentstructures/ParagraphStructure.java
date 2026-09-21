@@ -40,8 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.windows.documents.documentstructures.SemanticBasicElement;
 import system.windows.documents.documentstructures.NamedElement;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -56,7 +54,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ParagraphStructure extends SemanticBasicElement implements system.windows.markup.IAddChild {
+public class ParagraphStructure extends system.windows.documents.documentstructures.SemanticBasicElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

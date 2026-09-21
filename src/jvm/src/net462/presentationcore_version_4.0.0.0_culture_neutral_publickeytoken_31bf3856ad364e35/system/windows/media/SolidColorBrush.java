@@ -56,7 +56,7 @@ import system.windows.media.SolidColorBrush;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SolidColorBrush extends Brush  {
+public class SolidColorBrush extends system.windows.media.Brush  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -57,7 +57,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CurrentChangedEventManager extends WeakEventManager  {
+public class CurrentChangedEventManager extends system.windows.WeakEventManager  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

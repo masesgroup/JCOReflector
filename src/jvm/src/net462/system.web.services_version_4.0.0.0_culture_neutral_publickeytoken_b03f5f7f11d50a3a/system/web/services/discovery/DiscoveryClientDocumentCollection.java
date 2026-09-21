@@ -55,7 +55,7 @@ import system.collections.ICollectionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DiscoveryClientDocumentCollection extends DictionaryBase  {
+public class DiscoveryClientDocumentCollection extends system.collections.DictionaryBase  {
     /**
      * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

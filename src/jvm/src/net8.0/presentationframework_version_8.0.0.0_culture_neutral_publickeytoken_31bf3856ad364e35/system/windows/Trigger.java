@@ -42,10 +42,6 @@ import system.windows.TriggerBase;
 import system.windows.markup.XamlSetTypeConverterEventArgs;
 import system.windows.DependencyProperty;
 import system.windows.SetterBaseCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -60,7 +56,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Trigger extends TriggerBase implements system.windows.markup.IAddChild, system.componentmodel.ISupportInitialize {
+public class Trigger extends system.windows.TriggerBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

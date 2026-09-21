@@ -44,8 +44,6 @@ import system.componentmodel.IBindingListImplementation;
 import system.componentmodel.NewItemPlaceholderPosition;
 import system.componentmodel.SortDescriptionCollection;
 import system.windows.data.GroupDescriptionSelectorCallback;
-import system.collections.IComparer;
-import system.collections.IComparerImplementation;
 
 
 /**
@@ -60,7 +58,7 @@ import system.collections.IComparerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BindingListCollectionView extends CollectionView implements system.collections.IComparer {
+public class BindingListCollectionView extends system.windows.data.CollectionView  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

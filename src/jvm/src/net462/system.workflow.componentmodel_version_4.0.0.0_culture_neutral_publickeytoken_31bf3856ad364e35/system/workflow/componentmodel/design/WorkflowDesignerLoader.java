@@ -56,7 +56,7 @@ import system.workflow.componentmodel.Activity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowDesignerLoader extends BasicDesignerLoader  {
+public class WorkflowDesignerLoader extends system.componentmodel.design.serialization.BasicDesignerLoader  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

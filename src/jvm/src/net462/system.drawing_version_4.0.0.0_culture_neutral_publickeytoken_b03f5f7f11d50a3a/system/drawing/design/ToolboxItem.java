@@ -52,8 +52,6 @@ import system.drawing.Bitmap;
 import system.reflection.AssemblyName;
 import system.drawing.design.ToolboxComponentsCreatedEventHandler;
 import system.drawing.design.ToolboxComponentsCreatingEventHandler;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -68,7 +66,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolboxItem extends NetObject implements system.runtime.serialization.ISerializable {
+public class ToolboxItem extends NetObject  {
     /**
      * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

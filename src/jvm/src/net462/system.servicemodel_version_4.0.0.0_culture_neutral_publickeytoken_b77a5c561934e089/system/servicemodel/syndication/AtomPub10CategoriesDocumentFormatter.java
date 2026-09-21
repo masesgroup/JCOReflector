@@ -43,8 +43,6 @@ import system.servicemodel.syndication.CategoriesDocument;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.xml.schema.XmlSchema;
-import system.xml.serialization.IXmlSerializable;
-import system.xml.serialization.IXmlSerializableImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.xml.serialization.IXmlSerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AtomPub10CategoriesDocumentFormatter extends CategoriesDocumentFormatter implements system.xml.serialization.IXmlSerializable {
+public class AtomPub10CategoriesDocumentFormatter extends system.servicemodel.syndication.CategoriesDocumentFormatter  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -56,7 +56,7 @@ import system.drawing.design.PaintValueEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FontNameEditor extends UITypeEditor  {
+public class FontNameEditor extends system.drawing.design.UITypeEditor  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -62,7 +62,7 @@ import system.threading.tasks.ValueTask;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ZLibStream extends Stream  {
+public class ZLibStream extends system.io.Stream  {
     /**
      * Fully assembly qualified name: System.IO.Compression, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

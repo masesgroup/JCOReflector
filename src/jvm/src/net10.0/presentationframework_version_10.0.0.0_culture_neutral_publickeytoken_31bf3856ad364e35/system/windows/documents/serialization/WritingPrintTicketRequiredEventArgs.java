@@ -55,7 +55,7 @@ import system.printing.PrintTicket;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WritingPrintTicketRequiredEventArgs extends EventArgs  {
+public class WritingPrintTicketRequiredEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

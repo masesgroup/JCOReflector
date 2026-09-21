@@ -57,7 +57,7 @@ import system.servicemodel.WSMessageEncoding;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BasicHttpsBinding extends HttpBindingBase  {
+public class BasicHttpsBinding extends system.servicemodel.HttpBindingBase  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

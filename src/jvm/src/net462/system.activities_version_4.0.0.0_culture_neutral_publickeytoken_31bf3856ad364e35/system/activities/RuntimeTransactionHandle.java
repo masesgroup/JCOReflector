@@ -45,10 +45,6 @@ import system.activities.CodeActivityContext;
 import system.activities.NativeActivityContext;
 import system.activities.BookmarkCallback;
 import system.activities.RegistrationContext;
-import system.activities.IExecutionProperty;
-import system.activities.IExecutionPropertyImplementation;
-import system.activities.IPropertyRegistrationCallback;
-import system.activities.IPropertyRegistrationCallbackImplementation;
 
 
 /**
@@ -63,7 +59,7 @@ import system.activities.IPropertyRegistrationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RuntimeTransactionHandle extends Handle implements system.activities.IExecutionProperty, system.activities.IPropertyRegistrationCallback {
+public class RuntimeTransactionHandle extends system.activities.Handle  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

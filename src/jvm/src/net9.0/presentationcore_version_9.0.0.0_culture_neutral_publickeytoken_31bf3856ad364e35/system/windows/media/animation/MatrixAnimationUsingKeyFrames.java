@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.media.animation.MatrixAnimationBase;
 import system.windows.media.animation.MatrixAnimationUsingKeyFrames;
 import system.windows.media.animation.MatrixKeyFrameCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MatrixAnimationUsingKeyFrames extends MatrixAnimationBase implements system.windows.markup.IAddChild {
+public class MatrixAnimationUsingKeyFrames extends system.windows.media.animation.MatrixAnimationBase  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

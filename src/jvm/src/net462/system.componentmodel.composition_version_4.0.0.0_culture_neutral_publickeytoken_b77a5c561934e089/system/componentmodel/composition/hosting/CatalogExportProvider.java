@@ -55,7 +55,7 @@ import system.componentmodel.composition.hosting.CompositionOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CatalogExportProvider extends ExportProvider implements AutoCloseable {
+public class CatalogExportProvider extends system.componentmodel.composition.hosting.ExportProvider implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

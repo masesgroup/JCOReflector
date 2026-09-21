@@ -43,10 +43,6 @@ import system.windows.DependencyObject;
 import system.windows.documents.IDocumentPaginatorSource;
 import system.windows.documents.IDocumentPaginatorSourceImplementation;
 import system.EventHandler;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 
 
 /**
@@ -61,7 +57,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DocumentViewerBase extends Control implements system.windows.markup.IAddChild, system.IServiceProvider {
+public class DocumentViewerBase extends system.windows.controls.Control  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

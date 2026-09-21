@@ -46,8 +46,6 @@ import system.collections.ICollectionImplementation;
 import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.EventDescriptorCollection;
-import system.componentmodel.design.IEventBindingService;
-import system.componentmodel.design.IEventBindingServiceImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.componentmodel.design.IEventBindingServiceImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventBindingService extends NetObject implements system.componentmodel.design.IEventBindingService {
+public class EventBindingService extends NetObject  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

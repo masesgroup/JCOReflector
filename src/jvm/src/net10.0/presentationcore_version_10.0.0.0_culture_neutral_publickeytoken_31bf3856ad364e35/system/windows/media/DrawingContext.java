@@ -54,8 +54,6 @@ import system.windows.media.effects.BitmapEffect;
 import system.windows.media.effects.BitmapEffectInput;
 import system.windows.media.GuidelineSet;
 import system.windows.media.Transform;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -70,7 +68,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DrawingContext extends DispatcherObject implements system.IDisposable, AutoCloseable {
+public class DrawingContext extends system.windows.threading.DispatcherObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

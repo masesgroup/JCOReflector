@@ -65,8 +65,6 @@ import system.web.profile.ProfileBase;
 import system.web.RequestNotification;
 import system.web.sessionstate.HttpSessionState;
 import system.web.TraceContext;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 
 
 /**
@@ -81,7 +79,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpContext extends NetObject implements system.IServiceProvider {
+public class HttpContext extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -38,8 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.configuration.install.IManagedInstaller;
-import system.configuration.install.IManagedInstallerImplementation;
 
 
 /**
@@ -54,7 +52,7 @@ import system.configuration.install.IManagedInstallerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ManagedInstallerClass extends NetObject implements system.configuration.install.IManagedInstaller {
+public class ManagedInstallerClass extends NetObject  {
     /**
      * Fully assembly qualified name: System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

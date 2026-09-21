@@ -47,8 +47,6 @@ import system.runtime.serialization.StreamingContext;
 import system.management.ManagementPath;
 import system.management.PropertyDataCollection;
 import system.management.QualifierDataCollection;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -63,7 +61,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ManagementBaseObject extends Component implements system.runtime.serialization.ISerializable {
+public class ManagementBaseObject extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

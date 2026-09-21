@@ -41,10 +41,6 @@ import java.util.ArrayList;
 import system.windows.FrameworkContentElement;
 import system.windows.documents.DocumentPaginator;
 import system.windows.documents.PageContentCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 
 
 /**
@@ -59,7 +55,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FixedDocument extends FrameworkContentElement implements system.windows.markup.IAddChild, system.IServiceProvider {
+public class FixedDocument extends system.windows.FrameworkContentElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -55,7 +55,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StandardBindingReliableSessionElement extends ServiceModelConfigurationElement  {
+public class StandardBindingReliableSessionElement extends system.servicemodel.configuration.ServiceModelConfigurationElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

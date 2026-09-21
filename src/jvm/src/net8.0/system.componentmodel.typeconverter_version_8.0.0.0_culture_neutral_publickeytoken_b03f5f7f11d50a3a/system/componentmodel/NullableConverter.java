@@ -60,7 +60,7 @@ import system.collections.IDictionaryImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NullableConverter extends TypeConverter  {
+public class NullableConverter extends system.componentmodel.TypeConverter  {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -55,7 +55,7 @@ import system.formats.tar.TarEntryType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UstarTarEntry extends PosixTarEntry  {
+public class UstarTarEntry extends system.formats.tar.PosixTarEntry  {
     /**
      * Fully assembly qualified name: System.Formats.Tar, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

@@ -43,8 +43,6 @@ import system.windows.data.RelativeSourceMode;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.windows.data.RelativeSource;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RelativeSource extends MarkupExtension implements system.componentmodel.ISupportInitialize {
+public class RelativeSource extends system.windows.markup.MarkupExtension  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

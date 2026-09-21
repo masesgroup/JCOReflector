@@ -47,8 +47,6 @@ import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
 import system.drawing.design.ToolboxItemCollection;
 import system.drawing.design.ToolboxItemCreatorCallback;
-import system.componentmodel.design.IComponentDiscoveryService;
-import system.componentmodel.design.IComponentDiscoveryServiceImplementation;
 
 
 /**
@@ -63,7 +61,7 @@ import system.componentmodel.design.IComponentDiscoveryServiceImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolboxService extends NetObject implements system.componentmodel.design.IComponentDiscoveryService {
+public class ToolboxService extends NetObject  {
     /**
      * Fully assembly qualified name: System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

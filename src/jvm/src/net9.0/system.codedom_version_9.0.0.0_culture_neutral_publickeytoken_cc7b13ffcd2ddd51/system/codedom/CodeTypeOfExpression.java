@@ -54,7 +54,7 @@ import system.codedom.CodeTypeReference;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeTypeOfExpression extends CodeExpression  {
+public class CodeTypeOfExpression extends system.codedom.CodeExpression  {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

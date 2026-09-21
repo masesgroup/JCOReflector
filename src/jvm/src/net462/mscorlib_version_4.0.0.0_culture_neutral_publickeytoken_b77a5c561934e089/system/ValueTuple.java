@@ -44,12 +44,6 @@ import system.collections.IEqualityComparer;
 import system.collections.IEqualityComparerImplementation;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
-import system.collections.IStructuralEquatable;
-import system.collections.IStructuralEquatableImplementation;
-import system.collections.IStructuralComparable;
-import system.collections.IStructuralComparableImplementation;
-import system.IComparable;
-import system.IComparableImplementation;
 
 
 /**
@@ -64,7 +58,7 @@ import system.IComparableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ValueTuple extends ValueType implements system.collections.IStructuralEquatable, system.collections.IStructuralComparable, system.IComparable {
+public class ValueTuple extends system.ValueType  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -43,10 +43,6 @@ import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.componentmodel.design.serialization.INameCreationService;
-import system.componentmodel.design.serialization.INameCreationServiceImplementation;
-import system.componentmodel.design.serialization.IDesignerSerializationService;
-import system.componentmodel.design.serialization.IDesignerSerializationServiceImplementation;
 
 
 /**
@@ -61,7 +57,7 @@ import system.componentmodel.design.serialization.IDesignerSerializationServiceI
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeDomDesignerLoader extends BasicDesignerLoader implements system.componentmodel.design.serialization.INameCreationService, system.componentmodel.design.serialization.IDesignerSerializationService {
+public class CodeDomDesignerLoader extends system.componentmodel.design.serialization.BasicDesignerLoader  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

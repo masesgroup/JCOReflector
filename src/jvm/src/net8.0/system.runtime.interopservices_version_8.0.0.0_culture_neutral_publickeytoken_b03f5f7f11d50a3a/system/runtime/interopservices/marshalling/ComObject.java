@@ -40,10 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.RuntimeTypeHandle;
 import system.runtime.interopservices.marshalling.VirtualMethodTableInfo;
-import system.runtime.interopservices.IDynamicInterfaceCastable;
-import system.runtime.interopservices.IDynamicInterfaceCastableImplementation;
-import system.runtime.interopservices.marshalling.IUnmanagedVirtualMethodTableProvider;
-import system.runtime.interopservices.marshalling.IUnmanagedVirtualMethodTableProviderImplementation;
 
 
 /**
@@ -58,7 +54,7 @@ import system.runtime.interopservices.marshalling.IUnmanagedVirtualMethodTablePr
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ComObject extends NetObject implements system.runtime.interopservices.IDynamicInterfaceCastable, system.runtime.interopservices.marshalling.IUnmanagedVirtualMethodTableProvider {
+public class ComObject extends NetObject  {
     /**
      * Fully assembly qualified name: System.Runtime.InteropServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

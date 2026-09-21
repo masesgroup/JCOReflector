@@ -54,7 +54,7 @@ import system.diagnostics.ProcessThread;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ProcessThreadCollection extends ReadOnlyCollectionBase  {
+public class ProcessThreadCollection extends system.collections.ReadOnlyCollectionBase  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -39,8 +39,6 @@ import java.util.ArrayList;
 
 // Import section
 import system.globalization.TextInfo;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -55,7 +53,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextInfo extends NetObject implements system.runtime.serialization.IDeserializationCallback {
+public class TextInfo extends NetObject  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

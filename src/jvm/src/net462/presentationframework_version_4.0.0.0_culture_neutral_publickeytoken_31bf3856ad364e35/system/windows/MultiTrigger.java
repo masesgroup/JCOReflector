@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.TriggerBase;
 import system.windows.ConditionCollection;
 import system.windows.SetterBaseCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MultiTrigger extends TriggerBase implements system.windows.markup.IAddChild {
+public class MultiTrigger extends system.windows.TriggerBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -56,7 +56,7 @@ import system.windows.media.media3d.PointLight;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PointLight extends PointLightBase  {
+public class PointLight extends system.windows.media.media3d.PointLightBase  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

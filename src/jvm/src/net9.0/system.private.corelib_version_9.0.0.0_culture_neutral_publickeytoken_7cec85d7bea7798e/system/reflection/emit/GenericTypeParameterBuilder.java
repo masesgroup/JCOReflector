@@ -56,7 +56,7 @@ import system.reflection.GenericParameterAttributes;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GenericTypeParameterBuilder extends TypeInfo  {
+public class GenericTypeParameterBuilder extends system.reflection.TypeInfo  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

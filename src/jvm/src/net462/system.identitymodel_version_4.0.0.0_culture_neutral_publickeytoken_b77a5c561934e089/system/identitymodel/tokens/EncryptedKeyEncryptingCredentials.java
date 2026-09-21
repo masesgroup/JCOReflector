@@ -54,7 +54,7 @@ import system.security.cryptography.x509certificates.X509Certificate2;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EncryptedKeyEncryptingCredentials extends EncryptingCredentials  {
+public class EncryptedKeyEncryptingCredentials extends system.identitymodel.tokens.EncryptingCredentials  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

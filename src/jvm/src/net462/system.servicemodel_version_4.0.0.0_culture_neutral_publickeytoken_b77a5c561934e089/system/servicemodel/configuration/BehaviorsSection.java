@@ -55,7 +55,7 @@ import system.servicemodel.configuration.ServiceBehaviorElementCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BehaviorsSection extends ConfigurationSection  {
+public class BehaviorsSection extends system.configuration.ConfigurationSection  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

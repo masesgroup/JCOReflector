@@ -59,7 +59,7 @@ import system.workflow.componentmodel.serialization.ActivitySurrogateSelector;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivitySurrogateSelector extends SurrogateSelector  {
+public class ActivitySurrogateSelector extends system.runtime.serialization.SurrogateSelector  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

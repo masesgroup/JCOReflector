@@ -40,8 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.webcontrols.MenuItem;
 import system.web.ui.webcontrols.MenuItemCollection;
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -56,7 +54,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MenuItem extends NetObject implements system.ICloneable {
+public class MenuItem extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

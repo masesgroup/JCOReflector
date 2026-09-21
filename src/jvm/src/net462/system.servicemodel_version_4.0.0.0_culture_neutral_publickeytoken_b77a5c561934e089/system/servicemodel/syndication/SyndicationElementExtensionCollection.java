@@ -39,9 +39,6 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.XmlReader;
-import system.runtime.serialization.DataContractSerializer;
-import system.xml.serialization.XmlSerializer;
-import system.runtime.serialization.XmlObjectSerializer;
 
 
 /**
@@ -167,66 +164,6 @@ public class SyndicationElementExtensionCollection extends NetObjectEnumerable  
             return new XmlReader(objGetReaderAtElementExtensions);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReaderAtElementExtensions != null ? retObjectGetReaderAtElementExtensions.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(NetObject extension) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new java.lang.UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", extension == null ? null : extension.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(NetObject dataContractExtension, DataContractSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new java.lang.UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", dataContractExtension == null ? null : dataContractExtension.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(NetObject xmlSerializerExtension, XmlSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.io.FileNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.TypeLoadException, system.UnauthorizedAccessException {
-        if (classInstance == null)
-            throw new java.lang.UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", xmlSerializerExtension == null ? null : xmlSerializerExtension.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(java.lang.String outerName, java.lang.String outerNamespace, NetObject dataContractExtension) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new java.lang.UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", outerName, outerNamespace, dataContractExtension == null ? null : dataContractExtension.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(java.lang.String outerName, java.lang.String outerNamespace, NetObject dataContractExtension, XmlObjectSerializer dataContractSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new java.lang.UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", outerName, outerNamespace, dataContractExtension == null ? null : dataContractExtension.getJCOInstance(), dataContractSerializer == null ? null : dataContractSerializer.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Add(XmlReader xmlReader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new java.lang.UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", xmlReader == null ? null : xmlReader.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

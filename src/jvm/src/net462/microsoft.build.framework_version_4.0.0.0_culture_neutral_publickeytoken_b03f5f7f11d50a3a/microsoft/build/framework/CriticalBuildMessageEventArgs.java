@@ -54,7 +54,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CriticalBuildMessageEventArgs extends BuildMessageEventArgs  {
+public class CriticalBuildMessageEventArgs extends microsoft.build.framework.BuildMessageEventArgs  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

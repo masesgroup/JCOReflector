@@ -57,7 +57,7 @@ import system.windows.forms.IWin32WindowImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WindowsFormsComponentEditor extends ComponentEditor  {
+public class WindowsFormsComponentEditor extends system.componentmodel.ComponentEditor  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

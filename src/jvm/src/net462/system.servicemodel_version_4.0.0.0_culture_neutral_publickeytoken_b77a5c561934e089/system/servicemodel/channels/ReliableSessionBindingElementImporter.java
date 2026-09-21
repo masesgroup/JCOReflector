@@ -40,8 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.MetadataImporter;
 import system.servicemodel.description.PolicyConversionContext;
-import system.servicemodel.description.IPolicyImportExtension;
-import system.servicemodel.description.IPolicyImportExtensionImplementation;
 
 
 /**
@@ -56,7 +54,7 @@ import system.servicemodel.description.IPolicyImportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ReliableSessionBindingElementImporter extends NetObject implements system.servicemodel.description.IPolicyImportExtension {
+public class ReliableSessionBindingElementImporter extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

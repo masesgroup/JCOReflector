@@ -53,7 +53,7 @@ import system.io.packaging.Package;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ZipPackage extends Package  {
+public class ZipPackage extends system.io.packaging.Package  {
     /**
      * Fully assembly qualified name: System.IO.Packaging, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

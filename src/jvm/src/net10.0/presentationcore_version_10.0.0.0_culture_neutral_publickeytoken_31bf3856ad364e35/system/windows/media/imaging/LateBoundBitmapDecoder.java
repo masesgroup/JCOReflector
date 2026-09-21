@@ -161,7 +161,7 @@ public class LateBoundBitmapDecoder extends BitmapDecoder  {
     
     // Properties section
     
-    public BitmapDecoder getDecoder() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.UriFormatException, system.componentmodel.Win32Exception, system.threading.ThreadStateException, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
+    public BitmapDecoder getDecoder() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.UriFormatException, system.io.FileFormatException, system.componentmodel.Win32Exception, system.threading.ThreadStateException, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecoder = null;

@@ -224,7 +224,7 @@ public class Window extends ContentControl  {
         }
     }
 
-    public void Hide() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.net.WebException {
+    public void Hide() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.io.FileFormatException, system.net.WebException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -234,7 +234,7 @@ public class Window extends ContentControl  {
         }
     }
 
-    public void Show() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.threading.ThreadStateException, system.net.WebException {
+    public void Show() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.threading.ThreadStateException, system.io.FileFormatException, system.net.WebException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -612,7 +612,7 @@ public class Window extends ContentControl  {
         }
     }
 
-    public void setThemeMode(ThemeMode ThemeMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.UriFormatException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.diagnostics.UnreachableException, system.net.WebException, system.net.CookieException {
+    public void setThemeMode(ThemeMode ThemeMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.UriFormatException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.diagnostics.UnreachableException, system.io.FileFormatException, system.net.WebException, system.net.CookieException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

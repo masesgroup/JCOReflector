@@ -150,7 +150,8 @@ namespace MASES.JCOReflector.Engine
                 ExportingAvoidanceMap.Add(@"^System\.Net\.IPNetwork$", new string[] { "TryFormat" });
                 ExportingAvoidanceMap.Add(@"^System\.Span`1$", new string[] { "GetPinnableReference" });
                 ExportingAvoidanceMap.Add(@"^System\.ReadOnlySpan`1$", new string[] { "GetPinnableReference" });
-
+                ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.IAlternateEqualityComparer`2$", null);
+                ExportingAvoidanceMap.Add(@"^System\.Windows\.Markup\.INameScopeDictionary$", null);
 
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");

@@ -470,6 +470,73 @@ namespace MASES.JCOReflector.Engine
             return res;
         }
 
+        static void PrepareExclusion()
+        {
+            Const.SpecialNames.ExportingAvoidanceMap.Clear();
+
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.MediaTypeWithQualityHeaderValue$", new string[] { "TryParse" });
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.NameValueWithParametersHeaderValue$", new string[] { "TryParse" });
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.TransferCodingWithQualityHeaderValue$", new string[] { "TryParse" });
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^Microsoft\.VisualBasic\.FileSystem$", new string[] { "FileGet", "Input" });
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Threading\.Thread$", new string[] { "VolatileRead" });
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Threading\.Volatile$", new string[] { "Read" });
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Threading\.Interlocked$", new string[] { "Decrement", "Increment"
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+                                                                                              , "Read"
+#endif
+                                                                                            });
+#if NET7_0 || NET8_0 || NET9_0 || NET10_0
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.JavaScript\.JSMarshalerArgument$", new string[] { "ToManaged" });
+            if (EnableGenerics)
+            {
+                // Generic math (C# 11 "static abstract members in interfaces"): no Java equivalent for a
+                // static abstract interface member, and the operator interfaces bind TResult=bool, which
+                // never satisfies our IJCOBridgeReflected bound. One pattern for the whole .NET 7+ family
+                // instead of one entry per interface — the arity (`1, `2, `3...) differs by interface and
+                // has changed across .NET versions, \d+ matches any of them.
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Numerics\.I\w+`\d+$", null);
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.I(Span|Utf8Span)?Parsable`\d+$", null);
+            }
+#endif
+#if NET8_0 || NET9_0 || NET10_0
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Marshalling\.IIUnknownInterfaceType$", null);
+#endif
+#if NET10_0
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.MemoryExtensions$", null);
+            Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Java\.JavaMarshal$", new string[] { "Initialize" });
+#endif
+            if (EnableGenerics)
+            {
+                // TEMPORARY: parked here to unblock compilation. Each of these is either a genuine Java
+                // erasure limit (two .NET members that can't coexist once type arguments are erased) or a
+                // bug not yet root-caused — revisit before removing.
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.ServiceModel\.Syndication\.SyndicationElementExtensionCollection$", new string[] { "Add" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.ICollection`1$", new string[] { "Add", "Remove" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.IEqualityComparer`1$", new string[] { "Equals" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Immutable\.ImmutableArray`1$", new string[] { "AddRange" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Runtime\.Intrinsics\.X86\.Sse41$", new string[] { "Extract" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Guid$", new string[] { "TryFormat" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Version$", new string[] { "TryFormat" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Text\.Rune$", new string[] { "TryFormat" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.IPAddress$", new string[] { "TryFormat" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.IPNetwork$", new string[] { "TryFormat" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Span`1$", new string[] { "GetPinnableReference" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.ReadOnlySpan`1$", new string[] { "GetPinnableReference" });
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.IAlternateEqualityComparer`2$", null);
+                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Windows\.Markup\.INameScopeDictionary$", null);
+            }
+
+            Const.SpecialNames.DirectMappablePrimitives.Clear();
+
+            Const.SpecialNames.DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
+            Const.SpecialNames.DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");
+            Const.SpecialNames.DirectMappablePrimitives.Add("short", "java.util.concurrent.atomic.AtomicReference<java.lang.Short>");
+            Const.SpecialNames.DirectMappablePrimitives.Add("float", "java.util.concurrent.atomic.AtomicReference<java.lang.Float>");
+            Const.SpecialNames.DirectMappablePrimitives.Add("double", "java.util.concurrent.atomic.AtomicReference<java.lang.Double>");
+            Const.SpecialNames.DirectMappablePrimitives.Add("int", "java.util.concurrent.atomic.AtomicInteger");
+            Const.SpecialNames.DirectMappablePrimitives.Add("long", "java.util.concurrent.atomic.AtomicLong");
+        }
+
         static void WriteExtraClasses(ReflectorEventArgs args)
         {
             string destFolder = assemblyDestinationFolder(SourceDestinationFolder, new AssemblyName(Const.SpecialNames.JCOReflectorGeneratedFolder), SplitByAssembly);
@@ -538,6 +605,7 @@ namespace MASES.JCOReflector.Engine
             EnableWrite = !args.DryRun;
             AvoidDisableInternalNamespace = args.AvoidDisableInternalNamespace;
 
+            PrepareExclusion();
             WriteExtraClasses(args);
 
             string reportStr = string.Empty;

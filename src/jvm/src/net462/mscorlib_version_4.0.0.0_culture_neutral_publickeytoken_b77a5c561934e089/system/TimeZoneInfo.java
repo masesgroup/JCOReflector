@@ -44,10 +44,6 @@ import system.DateTimeOffset;
 import system.TimeSpan;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -62,7 +58,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TimeZoneInfo extends NetObject implements system.runtime.serialization.ISerializable, system.runtime.serialization.IDeserializationCallback {
+public class TimeZoneInfo extends NetObject  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

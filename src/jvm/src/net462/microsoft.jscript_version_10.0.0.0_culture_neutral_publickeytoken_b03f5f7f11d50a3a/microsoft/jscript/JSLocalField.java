@@ -57,7 +57,7 @@ import system.globalization.CultureInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JSLocalField extends JSVariableField  {
+public class JSLocalField extends microsoft.jscript.JSVariableField  {
     /**
      * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

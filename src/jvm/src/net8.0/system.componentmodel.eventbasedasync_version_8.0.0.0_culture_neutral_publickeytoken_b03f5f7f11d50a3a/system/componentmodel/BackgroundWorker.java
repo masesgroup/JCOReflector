@@ -56,7 +56,7 @@ import system.componentmodel.RunWorkerCompletedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BackgroundWorker extends Component  {
+public class BackgroundWorker extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.ComponentModel.EventBasedAsync, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

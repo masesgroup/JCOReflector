@@ -46,8 +46,6 @@ import system.componentmodel.IComponentImplementation;
 import system.componentmodel.design.ViewTechnology;
 import system.drawing.design.ToolboxItem;
 import system.windows.forms.design.SelectionRules;
-import system.drawing.design.IToolboxUser;
-import system.drawing.design.IToolboxUserImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.drawing.design.IToolboxUserImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DocumentDesigner extends ScrollableControlDesigner implements system.drawing.design.IToolboxUser {
+public class DocumentDesigner extends system.windows.forms.design.ScrollableControlDesigner  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

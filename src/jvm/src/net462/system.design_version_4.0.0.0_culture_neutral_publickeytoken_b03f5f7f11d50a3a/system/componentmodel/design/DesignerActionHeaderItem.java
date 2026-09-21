@@ -53,7 +53,7 @@ import system.componentmodel.design.DesignerActionTextItem;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DesignerActionHeaderItem extends DesignerActionTextItem  {
+public class DesignerActionHeaderItem extends system.componentmodel.design.DesignerActionTextItem  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

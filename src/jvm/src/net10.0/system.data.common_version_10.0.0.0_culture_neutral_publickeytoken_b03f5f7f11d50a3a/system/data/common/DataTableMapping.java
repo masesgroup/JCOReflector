@@ -46,8 +46,6 @@ import system.data.DataTable;
 import system.data.MissingSchemaAction;
 import system.data.DataSet;
 import system.data.common.DataColumnMappingCollection;
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataTableMapping extends MarshalByRefObject implements system.ICloneable {
+public class DataTableMapping extends system.MarshalByRefObject  {
     /**
      * Fully assembly qualified name: System.Data.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

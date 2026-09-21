@@ -40,8 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.windows.ResourceKey;
 import system.reflection.Assembly;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -56,7 +54,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TemplateKey extends ResourceKey implements system.componentmodel.ISupportInitialize {
+public class TemplateKey extends system.windows.ResourceKey  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

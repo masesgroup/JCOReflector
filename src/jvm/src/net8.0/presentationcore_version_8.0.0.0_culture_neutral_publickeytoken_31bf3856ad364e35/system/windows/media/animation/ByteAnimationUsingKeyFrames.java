@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.media.animation.ByteAnimationBase;
 import system.windows.media.animation.ByteAnimationUsingKeyFrames;
 import system.windows.media.animation.ByteKeyFrameCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ByteAnimationUsingKeyFrames extends ByteAnimationBase implements system.windows.markup.IAddChild {
+public class ByteAnimationUsingKeyFrames extends system.windows.media.animation.ByteAnimationBase  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

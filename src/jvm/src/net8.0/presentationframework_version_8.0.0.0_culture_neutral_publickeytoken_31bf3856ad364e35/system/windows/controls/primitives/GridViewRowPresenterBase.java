@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.FrameworkElement;
 import system.EventArgs;
 import system.windows.controls.GridViewColumnCollection;
-import system.windows.IWeakEventListener;
-import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GridViewRowPresenterBase extends FrameworkElement implements system.windows.IWeakEventListener {
+public class GridViewRowPresenterBase extends system.windows.FrameworkElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

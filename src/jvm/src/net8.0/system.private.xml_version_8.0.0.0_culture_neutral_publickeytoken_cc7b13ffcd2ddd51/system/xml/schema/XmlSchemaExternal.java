@@ -55,7 +55,7 @@ import system.xml.XmlAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaExternal extends XmlSchemaObject  {
+public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

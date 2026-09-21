@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.automation.peers.ItemsControlAutomationPeer;
 import system.windows.controls.TreeViewItem;
 import system.windows.automation.peers.PatternInterface;
-import system.windows.automation.provider.IScrollItemProvider;
-import system.windows.automation.provider.IScrollItemProviderImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.automation.provider.IScrollItemProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TreeViewItemAutomationPeer extends ItemsControlAutomationPeer implements system.windows.automation.provider.IScrollItemProvider {
+public class TreeViewItemAutomationPeer extends system.windows.automation.peers.ItemsControlAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

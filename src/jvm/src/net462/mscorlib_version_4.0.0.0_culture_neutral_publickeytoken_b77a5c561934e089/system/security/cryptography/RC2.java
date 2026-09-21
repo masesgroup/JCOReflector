@@ -54,7 +54,7 @@ import system.security.cryptography.RC2;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RC2 extends SymmetricAlgorithm  {
+public class RC2 extends system.security.cryptography.SymmetricAlgorithm  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

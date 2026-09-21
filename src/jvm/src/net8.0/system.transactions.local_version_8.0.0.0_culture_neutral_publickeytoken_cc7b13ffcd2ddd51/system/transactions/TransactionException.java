@@ -52,7 +52,7 @@ import system.SystemException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TransactionException extends SystemException {
+public class TransactionException extends system.SystemException {
     /**
      * Fully assembly qualified name: System.Transactions.Local, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

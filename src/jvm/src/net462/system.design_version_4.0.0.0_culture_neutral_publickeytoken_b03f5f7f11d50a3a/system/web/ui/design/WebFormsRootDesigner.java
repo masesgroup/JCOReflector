@@ -50,10 +50,6 @@ import system.collections.IDictionaryImplementation;
 import system.globalization.CultureInfo;
 import system.web.ui.design.WebFormsReferenceManager;
 import system.EventHandler;
-import system.IDisposable;
-import system.IDisposableImplementation;
-import system.componentmodel.design.IDesignerFilter;
-import system.componentmodel.design.IDesignerFilterImplementation;
 
 
 /**
@@ -68,7 +64,7 @@ import system.componentmodel.design.IDesignerFilterImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebFormsRootDesigner extends NetObject implements system.IDisposable, system.componentmodel.design.IDesignerFilter, AutoCloseable {
+public class WebFormsRootDesigner extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

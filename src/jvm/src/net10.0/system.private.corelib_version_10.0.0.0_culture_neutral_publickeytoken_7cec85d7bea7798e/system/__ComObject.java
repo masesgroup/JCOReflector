@@ -40,8 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.MarshalByRefObject;
 import system.RuntimeTypeHandle;
-import system.runtime.interopservices.IDynamicInterfaceCastable;
-import system.runtime.interopservices.IDynamicInterfaceCastableImplementation;
 
 
 /**
@@ -56,7 +54,7 @@ import system.runtime.interopservices.IDynamicInterfaceCastableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class __ComObject extends MarshalByRefObject implements system.runtime.interopservices.IDynamicInterfaceCastable {
+public class __ComObject extends system.MarshalByRefObject  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

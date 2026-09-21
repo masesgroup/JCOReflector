@@ -55,7 +55,7 @@ import system.xml.XmlNodeList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConfigurationBasedIssuerNameRegistry extends IssuerNameRegistry  {
+public class ConfigurationBasedIssuerNameRegistry extends system.identitymodel.tokens.IssuerNameRegistry  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

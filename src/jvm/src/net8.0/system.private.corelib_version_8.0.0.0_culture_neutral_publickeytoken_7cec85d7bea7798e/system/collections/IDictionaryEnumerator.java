@@ -52,7 +52,7 @@ import system.collections.DictionaryEntry;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IDictionaryEnumerator extends IJCOBridgeReflected, IEnumerator {
+public interface IDictionaryEnumerator extends IJCOBridgeReflected, org.mases.jcobridge.netreflection.IEnumerator {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

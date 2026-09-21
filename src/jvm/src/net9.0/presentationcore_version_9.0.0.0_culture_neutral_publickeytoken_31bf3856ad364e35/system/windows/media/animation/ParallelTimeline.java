@@ -55,7 +55,7 @@ import system.windows.media.animation.SlipBehavior;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ParallelTimeline extends TimelineGroup  {
+public class ParallelTimeline extends system.windows.media.animation.TimelineGroup  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

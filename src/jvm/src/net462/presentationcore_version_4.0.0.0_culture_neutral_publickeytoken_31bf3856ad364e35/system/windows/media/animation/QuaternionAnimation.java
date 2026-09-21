@@ -59,7 +59,7 @@ import system.windows.media.animation.IEasingFunctionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class QuaternionAnimation extends QuaternionAnimationBase  {
+public class QuaternionAnimation extends system.windows.media.animation.QuaternionAnimationBase  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

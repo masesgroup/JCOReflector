@@ -62,7 +62,7 @@ import system.net.quic.QuicStreamType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class QuicStream extends Stream  {
+public class QuicStream extends system.io.Stream  {
     /**
      * Fully assembly qualified name: System.Net.Quic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -42,8 +42,6 @@ import system.windows.media.animation.Timeline;
 import system.windows.media.animation.ClockGroup;
 import system.windows.media.animation.TimelineGroup;
 import system.windows.media.animation.TimelineCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TimelineGroup extends Timeline implements system.windows.markup.IAddChild {
+public class TimelineGroup extends system.windows.media.animation.Timeline  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

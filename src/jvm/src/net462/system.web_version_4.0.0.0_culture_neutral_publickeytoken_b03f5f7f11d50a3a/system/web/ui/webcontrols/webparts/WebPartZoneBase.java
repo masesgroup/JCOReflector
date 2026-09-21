@@ -53,8 +53,6 @@ import system.web.ui.webcontrols.webparts.WebPartMenuStyle;
 import system.web.ui.webcontrols.webparts.WebPartVerb;
 import system.web.ui.webcontrols.webparts.WebPartVerbRenderMode;
 import system.web.ui.webcontrols.webparts.WebPartVerbsEventHandler;
-import system.web.ui.IPostBackEventHandler;
-import system.web.ui.IPostBackEventHandlerImplementation;
 
 
 /**
@@ -69,7 +67,7 @@ import system.web.ui.IPostBackEventHandlerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackEventHandler {
+public class WebPartZoneBase extends system.web.ui.webcontrols.webparts.WebZone  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

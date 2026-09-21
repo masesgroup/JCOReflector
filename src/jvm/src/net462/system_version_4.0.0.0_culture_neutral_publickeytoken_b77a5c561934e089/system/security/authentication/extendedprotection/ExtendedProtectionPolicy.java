@@ -46,8 +46,6 @@ import system.collections.ICollectionImplementation;
 import system.security.authentication.extendedprotection.ServiceNameCollection;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ExtendedProtectionPolicy extends NetObject implements system.runtime.serialization.ISerializable {
+public class ExtendedProtectionPolicy extends NetObject  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -81,7 +81,7 @@ import system.windows.controls.SelectedCellsChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGrid extends MultiSelector  {
+public class DataGrid extends system.windows.controls.primitives.MultiSelector  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -48,8 +48,6 @@ import system.windows.media.FontFamily;
 import system.windows.documents.TextPointer;
 import system.windows.documents.Typography;
 import system.windows.media.TextEffectCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -64,7 +62,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextElement extends FrameworkContentElement implements system.windows.markup.IAddChild {
+public class TextElement extends system.windows.FrameworkContentElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

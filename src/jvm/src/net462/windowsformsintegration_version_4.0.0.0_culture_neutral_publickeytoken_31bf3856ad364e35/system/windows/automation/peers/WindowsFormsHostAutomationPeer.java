@@ -54,7 +54,7 @@ import system.windows.forms.integration.WindowsFormsHost;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WindowsFormsHostAutomationPeer extends FrameworkElementAutomationPeer  {
+public class WindowsFormsHostAutomationPeer extends system.windows.automation.peers.FrameworkElementAutomationPeer  {
     /**
      * Fully assembly qualified name: WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

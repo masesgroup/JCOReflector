@@ -55,7 +55,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Reference extends MarkupExtension  {
+public class Reference extends system.windows.markup.MarkupExtension  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

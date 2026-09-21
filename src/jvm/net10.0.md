@@ -310,27 +310,27 @@ Parsed assemblies are:
 > * System.DirectoryServices, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
 > * Analyzed Types = 28975
->   * Enumerators = 26
+>   * Enumerators = 24
 >   * Delegates = 368
 >   * Classes
->     * Constructors = 6927
->     * Methods = 37539
->     * Properties = 19150
+>     * Constructors = 6918
+>     * Methods = 37468
+>     * Properties = 19123
 >     * Events = 1828
-> * Implemented Types = 7529
->   * Enumerators = 24
+> * Implemented Types = 7519
+>   * Enumerators = 23
 >   * Delegates = 368
 >   * Enums = 1281
 >     * Flags = 275
->   * Interfaces = 379
->   * Classes = 5477
+>   * Interfaces = 378
+>   * Classes = 5469
 >     * Exceptions = 240
->     * Constructors = 5967
->     * Methods = 22126
+>     * Constructors = 5964
+>     * Methods = 22062
 >       * Duplicated Methods = 898
->     * Properties = 17828
+>     * Properties = 17810
 >     * Events = 1720
-> * Discarded Types = 21444
+> * Discarded Types = 21455
 >   * Non Public = 21044
 >   * Generic = 343
 >   * Internals = 20

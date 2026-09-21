@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.media.animation.ObjectAnimationBase;
 import system.windows.media.animation.ObjectAnimationUsingKeyFrames;
 import system.windows.media.animation.ObjectKeyFrameCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ObjectAnimationUsingKeyFrames extends ObjectAnimationBase implements system.windows.markup.IAddChild {
+public class ObjectAnimationUsingKeyFrames extends system.windows.media.animation.ObjectAnimationBase  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

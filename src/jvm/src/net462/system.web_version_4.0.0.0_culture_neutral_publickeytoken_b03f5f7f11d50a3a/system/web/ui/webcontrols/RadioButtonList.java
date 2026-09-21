@@ -49,8 +49,6 @@ import system.web.ui.webcontrols.RepeatLayout;
 import system.web.ui.webcontrols.TextAlign;
 import system.web.ui.INamingContainer;
 import system.web.ui.INamingContainerImplementation;
-import system.web.ui.IPostBackDataHandler;
-import system.web.ui.IPostBackDataHandlerImplementation;
 
 
 /**
@@ -65,7 +63,7 @@ import system.web.ui.IPostBackDataHandlerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RadioButtonList extends ListControl implements system.web.ui.INamingContainer, system.web.ui.IPostBackDataHandler {
+public class RadioButtonList extends system.web.ui.webcontrols.ListControl implements system.web.ui.INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

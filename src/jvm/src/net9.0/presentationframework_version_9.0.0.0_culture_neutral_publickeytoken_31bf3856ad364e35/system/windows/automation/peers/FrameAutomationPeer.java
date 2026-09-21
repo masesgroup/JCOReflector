@@ -54,7 +54,7 @@ import system.windows.controls.Frame;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FrameAutomationPeer extends FrameworkElementAutomationPeer  {
+public class FrameAutomationPeer extends system.windows.automation.peers.FrameworkElementAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

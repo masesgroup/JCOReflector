@@ -43,8 +43,6 @@ import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.windows.media.Brush;
 import system.windows.media.Transform;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Brush extends Animatable implements system.IFormattable {
+public class Brush extends system.windows.media.animation.Animatable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

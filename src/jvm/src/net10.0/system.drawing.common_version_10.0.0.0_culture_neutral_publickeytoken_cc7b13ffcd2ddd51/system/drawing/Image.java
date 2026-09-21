@@ -58,8 +58,6 @@ import system.Single;
 import system.drawing.imaging.ColorPalette;
 import system.drawing.Size;
 import system.drawing.SizeF;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -74,7 +72,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Image extends MarshalByRefObject implements system.runtime.serialization.ISerializable, AutoCloseable {
+public class Image extends system.MarshalByRefObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

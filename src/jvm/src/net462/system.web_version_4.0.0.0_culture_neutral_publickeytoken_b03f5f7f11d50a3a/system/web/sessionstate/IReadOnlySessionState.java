@@ -53,7 +53,7 @@ import system.web.sessionstate.IRequiresSessionStateImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IReadOnlySessionState extends IJCOBridgeReflected, IRequiresSessionState {
+public interface IReadOnlySessionState extends IJCOBridgeReflected, system.web.sessionstate.IRequiresSessionState {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

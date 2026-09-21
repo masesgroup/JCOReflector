@@ -41,10 +41,6 @@ import java.util.ArrayList;
 import system.io.FileStream;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -59,7 +55,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StrongNameKeyPair extends NetObject implements system.runtime.serialization.IDeserializationCallback, system.runtime.serialization.ISerializable {
+public class StrongNameKeyPair extends NetObject  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

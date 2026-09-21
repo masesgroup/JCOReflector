@@ -53,7 +53,7 @@ import system.identitymodel.configuration.ConfigurationElementInterceptor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IssuerNameRegistryElement extends ConfigurationElementInterceptor  {
+public class IssuerNameRegistryElement extends system.identitymodel.configuration.ConfigurationElementInterceptor  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

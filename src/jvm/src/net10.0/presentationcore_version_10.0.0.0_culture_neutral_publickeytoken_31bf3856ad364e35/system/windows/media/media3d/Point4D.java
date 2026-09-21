@@ -43,8 +43,6 @@ import system.windows.media.media3d.Point4D;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.windows.media.media3d.Matrix3D;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Point4D extends ValueType implements system.IFormattable {
+public class Point4D extends system.ValueType  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

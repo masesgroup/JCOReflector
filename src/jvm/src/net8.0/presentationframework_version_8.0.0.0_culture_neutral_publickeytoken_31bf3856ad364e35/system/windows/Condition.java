@@ -42,8 +42,6 @@ import system.windows.data.BindingBase;
 import system.windows.DependencyProperty;
 import system.windows.markup.XamlSetMarkupExtensionEventArgs;
 import system.windows.markup.XamlSetTypeConverterEventArgs;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Condition extends NetObject implements system.componentmodel.ISupportInitialize {
+public class Condition extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

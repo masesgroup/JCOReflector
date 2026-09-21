@@ -61,8 +61,6 @@ import system.windows.navigation.NavigationStoppedEventHandler;
 import system.windows.SessionEndingCancelEventHandler;
 import system.windows.StartupEventHandler;
 import system.windows.threading.DispatcherUnhandledExceptionEventHandler;
-import system.windows.markup.IQueryAmbient;
-import system.windows.markup.IQueryAmbientImplementation;
 
 
 /**
@@ -77,7 +75,7 @@ import system.windows.markup.IQueryAmbientImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Application extends DispatcherObject implements system.windows.markup.IQueryAmbient {
+public class Application extends system.windows.threading.DispatcherObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

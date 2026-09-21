@@ -62,7 +62,7 @@ import system.runtime.serialization.IDataContractSurrogateImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataContractSerializer extends XmlObjectSerializer  {
+public class DataContractSerializer extends system.runtime.serialization.XmlObjectSerializer  {
     /**
      * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -57,7 +57,7 @@ import system.windows.xps.serialization.XpsSerializationProgressChangedEventHand
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XpsSerializationManager extends PackageSerializationManager  {
+public class XpsSerializationManager extends system.windows.xps.serialization.PackageSerializationManager  {
     /**
      * Fully assembly qualified name: ReachFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

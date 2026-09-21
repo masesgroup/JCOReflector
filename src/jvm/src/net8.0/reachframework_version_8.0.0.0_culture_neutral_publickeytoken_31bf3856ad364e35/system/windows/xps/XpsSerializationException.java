@@ -52,7 +52,7 @@ import system.windows.xps.XpsException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XpsSerializationException extends XpsException {
+public class XpsSerializationException extends system.windows.xps.XpsException {
     /**
      * Fully assembly qualified name: ReachFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -42,8 +42,6 @@ import system.web.ui.webcontrols.Image;
 import system.web.ui.webcontrols.HotSpotCollection;
 import system.web.ui.webcontrols.HotSpotMode;
 import system.web.ui.webcontrols.ImageMapEventHandler;
-import system.web.ui.IPostBackEventHandler;
-import system.web.ui.IPostBackEventHandlerImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.web.ui.IPostBackEventHandlerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ImageMap extends Image implements system.web.ui.IPostBackEventHandler {
+public class ImageMap extends system.web.ui.webcontrols.Image  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

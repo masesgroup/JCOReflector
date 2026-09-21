@@ -53,7 +53,7 @@ import system.MarshalByRefObject;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GraphicsContainer extends MarshalByRefObject  {
+public class GraphicsContainer extends system.MarshalByRefObject  {
     /**
      * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -51,10 +51,6 @@ import system.servicemodel.description.WsdlEndpointConversionContext;
 import system.runtime.serialization.DataContractResolver;
 import system.runtime.serialization.IDataContractSurrogate;
 import system.runtime.serialization.IDataContractSurrogateImplementation;
-import system.servicemodel.description.IOperationBehavior;
-import system.servicemodel.description.IOperationBehaviorImplementation;
-import system.servicemodel.description.IWsdlExportExtension;
-import system.servicemodel.description.IWsdlExportExtensionImplementation;
 
 
 /**
@@ -69,7 +65,7 @@ import system.servicemodel.description.IWsdlExportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataContractSerializerOperationBehavior extends NetObject implements system.servicemodel.description.IOperationBehavior, system.servicemodel.description.IWsdlExportExtension {
+public class DataContractSerializerOperationBehavior extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -46,8 +46,6 @@ import system.workflow.componentmodel.compiler.AccessTypes;
 import system.workflow.activities.WorkflowRoleCollection;
 import system.workflow.componentmodel.WorkflowParameterBindingCollection;
 import system.workflow.runtime.CorrelationToken;
-import system.workflow.componentmodel.IDynamicPropertyTypeProvider;
-import system.workflow.componentmodel.IDynamicPropertyTypeProviderImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.workflow.componentmodel.IDynamicPropertyTypeProviderImplementation
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HandleExternalEventActivity extends Activity implements system.workflow.componentmodel.IDynamicPropertyTypeProvider {
+public class HandleExternalEventActivity extends system.workflow.componentmodel.Activity  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

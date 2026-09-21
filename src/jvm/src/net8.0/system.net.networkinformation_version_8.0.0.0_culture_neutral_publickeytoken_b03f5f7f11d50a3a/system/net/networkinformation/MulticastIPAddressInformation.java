@@ -56,7 +56,7 @@ import system.net.networkinformation.SuffixOrigin;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MulticastIPAddressInformation extends IPAddressInformation  {
+public class MulticastIPAddressInformation extends system.net.networkinformation.IPAddressInformation  {
     /**
      * Fully assembly qualified name: System.Net.NetworkInformation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

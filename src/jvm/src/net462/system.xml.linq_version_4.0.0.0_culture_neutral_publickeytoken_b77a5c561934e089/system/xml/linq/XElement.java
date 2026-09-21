@@ -53,8 +53,6 @@ import system.io.TextWriter;
 import system.xml.XmlWriter;
 import system.xml.schema.XmlSchema;
 import system.xml.XmlNodeType;
-import system.xml.serialization.IXmlSerializable;
-import system.xml.serialization.IXmlSerializableImplementation;
 
 
 /**
@@ -69,7 +67,7 @@ import system.xml.serialization.IXmlSerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XElement extends XContainer implements system.xml.serialization.IXmlSerializable {
+public class XElement extends system.xml.linq.XContainer  {
     /**
      * Fully assembly qualified name: System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

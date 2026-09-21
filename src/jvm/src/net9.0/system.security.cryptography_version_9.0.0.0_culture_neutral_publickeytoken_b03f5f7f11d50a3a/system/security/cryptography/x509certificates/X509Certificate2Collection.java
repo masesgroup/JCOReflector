@@ -58,7 +58,7 @@ import system.security.cryptography.x509certificates.X509KeyStorageFlags;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509Certificate2Collection extends X509CertificateCollection  {
+public class X509Certificate2Collection extends system.security.cryptography.x509certificates.X509CertificateCollection  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

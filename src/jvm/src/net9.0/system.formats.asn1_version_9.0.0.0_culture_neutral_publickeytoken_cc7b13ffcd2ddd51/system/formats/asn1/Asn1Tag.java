@@ -56,7 +56,7 @@ import system.formats.asn1.Asn1Tag;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Asn1Tag extends ValueType  {
+public class Asn1Tag extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Formats.Asn1, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

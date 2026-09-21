@@ -42,8 +42,6 @@ import system.servicemodel.channels.BindingElement;
 import system.servicemodel.description.MetadataExporter;
 import system.servicemodel.description.PolicyConversionContext;
 import system.Uri;
-import system.servicemodel.description.IPolicyExportExtension;
-import system.servicemodel.description.IPolicyExportExtensionImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.servicemodel.description.IPolicyExportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompositeDuplexBindingElement extends BindingElement implements system.servicemodel.description.IPolicyExportExtension {
+public class CompositeDuplexBindingElement extends system.servicemodel.channels.BindingElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

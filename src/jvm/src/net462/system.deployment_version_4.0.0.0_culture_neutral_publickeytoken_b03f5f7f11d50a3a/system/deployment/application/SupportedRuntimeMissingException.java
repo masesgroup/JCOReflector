@@ -54,7 +54,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SupportedRuntimeMissingException extends DependentPlatformMissingException {
+public class SupportedRuntimeMissingException extends system.deployment.application.DependentPlatformMissingException {
     /**
      * Fully assembly qualified name: System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

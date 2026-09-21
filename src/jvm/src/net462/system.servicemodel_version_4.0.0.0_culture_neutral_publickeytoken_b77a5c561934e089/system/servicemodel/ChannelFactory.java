@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.servicemodel.channels.CommunicationObject;
 import system.servicemodel.description.ClientCredentials;
 import system.servicemodel.description.ServiceEndpoint;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ChannelFactory extends CommunicationObject implements system.IDisposable, AutoCloseable {
+public class ChannelFactory extends system.servicemodel.channels.CommunicationObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

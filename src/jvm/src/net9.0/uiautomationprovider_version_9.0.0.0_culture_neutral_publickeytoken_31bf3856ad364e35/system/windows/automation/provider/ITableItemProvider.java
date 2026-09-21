@@ -55,7 +55,7 @@ import system.windows.automation.provider.IRawElementProviderSimpleImplementatio
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ITableItemProvider extends IJCOBridgeReflected, IGridItemProvider {
+public interface ITableItemProvider extends IJCOBridgeReflected, system.windows.automation.provider.IGridItemProvider {
     /**
      * Fully assembly qualified name: UIAutomationProvider, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

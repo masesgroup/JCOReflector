@@ -42,8 +42,6 @@ import system.workflow.componentmodel.DependencyProperty;
 import system.workflow.componentmodel.PropertyMetadata;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DependencyProperty extends NetObject implements system.runtime.serialization.ISerializable {
+public class DependencyProperty extends NetObject  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

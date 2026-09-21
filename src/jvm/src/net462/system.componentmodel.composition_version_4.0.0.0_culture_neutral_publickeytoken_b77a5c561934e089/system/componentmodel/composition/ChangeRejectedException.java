@@ -52,7 +52,7 @@ import system.componentmodel.composition.CompositionException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ChangeRejectedException extends CompositionException {
+public class ChangeRejectedException extends system.componentmodel.composition.CompositionException {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

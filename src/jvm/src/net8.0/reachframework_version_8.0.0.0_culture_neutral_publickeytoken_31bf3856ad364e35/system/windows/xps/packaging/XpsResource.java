@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.xps.packaging.XpsPartBase;
 import system.io.Stream;
 import system.Uri;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XpsResource extends XpsPartBase implements system.IDisposable, AutoCloseable {
+public class XpsResource extends system.windows.xps.packaging.XpsPartBase implements AutoCloseable {
     /**
      * Fully assembly qualified name: ReachFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

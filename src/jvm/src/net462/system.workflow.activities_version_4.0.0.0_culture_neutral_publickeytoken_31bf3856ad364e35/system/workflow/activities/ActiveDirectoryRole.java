@@ -43,10 +43,6 @@ import system.workflow.activities.ActiveDirectoryRole;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 import system.directoryservices.DirectoryEntry;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -61,7 +57,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.serialization.ISerializable, system.IDisposable, AutoCloseable {
+public class ActiveDirectoryRole extends system.workflow.activities.WorkflowRole implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.io.Stream;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SerializationStore extends NetObject implements system.IDisposable, AutoCloseable {
+public class SerializationStore extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

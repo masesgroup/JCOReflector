@@ -58,7 +58,7 @@ import system.windows.media.animation.IEasingFunctionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ByteAnimation extends ByteAnimationBase  {
+public class ByteAnimation extends system.windows.media.animation.ByteAnimationBase  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

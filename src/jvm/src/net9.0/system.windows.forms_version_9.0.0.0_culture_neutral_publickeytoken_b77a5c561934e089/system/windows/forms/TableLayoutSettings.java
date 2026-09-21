@@ -46,8 +46,6 @@ import system.windows.forms.layout.LayoutEngine;
 import system.windows.forms.TableLayoutColumnStyleCollection;
 import system.windows.forms.TableLayoutPanelGrowStyle;
 import system.windows.forms.TableLayoutRowStyleCollection;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TableLayoutSettings extends LayoutSettings implements system.runtime.serialization.ISerializable {
+public class TableLayoutSettings extends system.windows.forms.LayoutSettings  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

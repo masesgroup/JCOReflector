@@ -49,8 +49,6 @@ import system.web.sessionstate.HttpSessionState;
 import system.web.TraceContext;
 import system.web.ui.AttributeCollection;
 import system.web.ui.ControlCachePolicy;
-import system.web.ui.IAttributeAccessor;
-import system.web.ui.IAttributeAccessorImplementation;
 
 
 /**
@@ -65,7 +63,7 @@ import system.web.ui.IAttributeAccessorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UserControl extends TemplateControl implements system.web.ui.IAttributeAccessor {
+public class UserControl extends system.web.ui.TemplateControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

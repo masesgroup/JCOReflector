@@ -49,10 +49,6 @@ import system.servicemodel.description.PolicyConversionContext;
 import system.servicemodel.channels.CompressionFormat;
 import system.servicemodel.channels.MessageVersion;
 import system.xml.XmlDictionaryReaderQuotas;
-import system.servicemodel.description.IWsdlExportExtension;
-import system.servicemodel.description.IWsdlExportExtensionImplementation;
-import system.servicemodel.description.IPolicyExportExtension;
-import system.servicemodel.description.IPolicyExportExtensionImplementation;
 
 
 /**
@@ -67,7 +63,7 @@ import system.servicemodel.description.IPolicyExportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BinaryMessageEncodingBindingElement extends MessageEncodingBindingElement implements system.servicemodel.description.IWsdlExportExtension, system.servicemodel.description.IPolicyExportExtension {
+public class BinaryMessageEncodingBindingElement extends system.servicemodel.channels.MessageEncodingBindingElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

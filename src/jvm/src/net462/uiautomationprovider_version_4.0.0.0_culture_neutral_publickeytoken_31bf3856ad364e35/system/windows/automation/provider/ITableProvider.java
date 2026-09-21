@@ -56,7 +56,7 @@ import system.windows.automation.RowOrColumnMajor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ITableProvider extends IJCOBridgeReflected, IGridProvider {
+public interface ITableProvider extends IJCOBridgeReflected, system.windows.automation.provider.IGridProvider {
     /**
      * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

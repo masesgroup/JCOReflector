@@ -53,7 +53,7 @@ import system.windows.threading.DispatcherEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DispatcherUnhandledExceptionFilterEventArgs extends DispatcherEventArgs  {
+public class DispatcherUnhandledExceptionFilterEventArgs extends system.windows.threading.DispatcherEventArgs  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

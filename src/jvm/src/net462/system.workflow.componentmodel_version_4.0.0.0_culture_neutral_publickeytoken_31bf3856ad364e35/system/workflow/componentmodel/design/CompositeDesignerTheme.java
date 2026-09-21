@@ -61,7 +61,7 @@ import system.workflow.componentmodel.design.LineAnchor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompositeDesignerTheme extends ActivityDesignerTheme  {
+public class CompositeDesignerTheme extends system.workflow.componentmodel.design.ActivityDesignerTheme  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

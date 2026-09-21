@@ -57,7 +57,7 @@ import system.workflow.activities.rules.RuleExecution;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RuleStatementAction extends RuleAction  {
+public class RuleStatementAction extends system.workflow.activities.rules.RuleAction  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

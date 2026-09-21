@@ -49,10 +49,6 @@ import system.EventArgs;
 import system.windows.controls.primitives.GeneratorStatus;
 import system.EventHandler;
 import system.windows.controls.primitives.ItemsChangedEventHandler;
-import system.windows.controls.primitives.IItemContainerGenerator;
-import system.windows.controls.primitives.IItemContainerGeneratorImplementation;
-import system.windows.IWeakEventListener;
-import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -67,7 +63,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ItemContainerGenerator extends NetObject implements system.windows.controls.primitives.IItemContainerGenerator, system.windows.IWeakEventListener {
+public class ItemContainerGenerator extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

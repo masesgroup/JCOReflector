@@ -54,7 +54,7 @@ import system.security.cryptography.xml.TransformChain;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class KeyReference extends EncryptedReference  {
+public class KeyReference extends system.security.cryptography.xml.EncryptedReference  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

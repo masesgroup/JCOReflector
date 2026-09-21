@@ -46,10 +46,6 @@ import system.servicemodel.dispatcher.DispatchOperation;
 import system.servicemodel.description.WsdlExporter;
 import system.servicemodel.description.WsdlContractConversionContext;
 import system.servicemodel.description.WsdlEndpointConversionContext;
-import system.servicemodel.description.IOperationBehavior;
-import system.servicemodel.description.IOperationBehaviorImplementation;
-import system.servicemodel.description.IWsdlExportExtension;
-import system.servicemodel.description.IWsdlExportExtensionImplementation;
 
 
 /**
@@ -64,7 +60,7 @@ import system.servicemodel.description.IWsdlExportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSerializerOperationBehavior extends NetObject implements system.servicemodel.description.IOperationBehavior, system.servicemodel.description.IWsdlExportExtension {
+public class XmlSerializerOperationBehavior extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

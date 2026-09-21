@@ -54,7 +54,7 @@ import system.workflow.componentmodel.Activity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CorrelationToken extends DependencyObject  {
+public class CorrelationToken extends system.workflow.componentmodel.DependencyObject  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

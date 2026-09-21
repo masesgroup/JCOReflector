@@ -62,7 +62,7 @@ import system.identitymodel.selectors.X509CertificateValidator;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
+public class SamlSecurityTokenHandler extends system.identitymodel.tokens.SecurityTokenHandler  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -62,7 +62,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MemoryCache extends ObjectCache implements AutoCloseable {
+public class MemoryCache extends system.runtime.caching.ObjectCache implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -46,10 +46,6 @@ import system.drawing.design.ToolboxItem;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.windows.forms.Control;
-import system.drawing.design.IToolboxUser;
-import system.drawing.design.IToolboxUserImplementation;
-import system.componentmodel.design.ITypeDescriptorFilterService;
-import system.componentmodel.design.ITypeDescriptorFilterServiceImplementation;
 
 
 /**
@@ -64,7 +60,7 @@ import system.componentmodel.design.ITypeDescriptorFilterServiceImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ComponentDocumentDesigner extends ComponentDesigner implements system.drawing.design.IToolboxUser, system.componentmodel.design.ITypeDescriptorFilterService {
+public class ComponentDocumentDesigner extends system.componentmodel.design.ComponentDesigner  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

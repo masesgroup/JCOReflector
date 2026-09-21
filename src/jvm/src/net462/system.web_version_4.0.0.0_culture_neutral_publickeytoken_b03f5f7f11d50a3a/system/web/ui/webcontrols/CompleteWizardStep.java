@@ -54,7 +54,7 @@ import system.web.ui.webcontrols.WizardStepType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompleteWizardStep extends TemplatedWizardStep  {
+public class CompleteWizardStep extends system.web.ui.webcontrols.TemplatedWizardStep  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

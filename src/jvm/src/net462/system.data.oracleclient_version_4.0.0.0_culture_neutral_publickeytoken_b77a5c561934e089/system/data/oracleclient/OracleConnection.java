@@ -49,8 +49,6 @@ import system.enterpriseservices.ITransactionImplementation;
 import system.transactions.Transaction;
 import system.data.ConnectionState;
 import system.data.oracleclient.OracleInfoMessageEventHandler;
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -65,7 +63,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class OracleConnection extends DbConnection implements system.ICloneable {
+public class OracleConnection extends system.data.common.DbConnection  {
     /**
      * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

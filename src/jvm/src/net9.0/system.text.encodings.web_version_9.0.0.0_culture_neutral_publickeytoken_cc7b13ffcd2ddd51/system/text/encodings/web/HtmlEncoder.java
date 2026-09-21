@@ -56,7 +56,7 @@ import system.text.unicode.UnicodeRange;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HtmlEncoder extends TextEncoder  {
+public class HtmlEncoder extends system.text.encodings.web.TextEncoder  {
     /**
      * Fully assembly qualified name: System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

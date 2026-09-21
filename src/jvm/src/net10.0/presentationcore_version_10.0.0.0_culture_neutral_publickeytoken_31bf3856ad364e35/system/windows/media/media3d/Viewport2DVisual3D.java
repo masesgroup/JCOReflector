@@ -57,7 +57,7 @@ import system.windows.media.Visual;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Viewport2DVisual3D extends Visual3D  {
+public class Viewport2DVisual3D extends system.windows.media.media3d.Visual3D  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -52,7 +52,7 @@ import system.runtime.interopservices.ExternalException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CheckoutException extends ExternalException {
+public class CheckoutException extends system.runtime.interopservices.ExternalException {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

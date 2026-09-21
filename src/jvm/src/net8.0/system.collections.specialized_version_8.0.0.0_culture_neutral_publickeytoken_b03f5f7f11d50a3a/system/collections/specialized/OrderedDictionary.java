@@ -46,8 +46,6 @@ import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class OrderedDictionary extends NetObjectEnumerable implements system.runtime.serialization.IDeserializationCallback {
+public class OrderedDictionary extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Collections.Specialized, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

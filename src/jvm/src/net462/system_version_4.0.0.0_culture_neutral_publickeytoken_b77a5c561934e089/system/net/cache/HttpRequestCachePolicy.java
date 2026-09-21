@@ -57,7 +57,7 @@ import system.net.cache.HttpRequestCacheLevel;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpRequestCachePolicy extends RequestCachePolicy  {
+public class HttpRequestCachePolicy extends system.net.cache.RequestCachePolicy  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

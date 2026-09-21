@@ -57,7 +57,7 @@ import system.windows.forms.AccessibleObject;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SequentialActivityDesigner extends StructuredCompositeActivityDesigner  {
+public class SequentialActivityDesigner extends system.workflow.componentmodel.design.StructuredCompositeActivityDesigner  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

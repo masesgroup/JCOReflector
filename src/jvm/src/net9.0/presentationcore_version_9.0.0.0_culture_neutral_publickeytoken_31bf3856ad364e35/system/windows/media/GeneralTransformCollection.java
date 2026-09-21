@@ -56,7 +56,7 @@ import system.Array;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GeneralTransformCollection extends Animatable  {
+public class GeneralTransformCollection extends system.windows.media.animation.Animatable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

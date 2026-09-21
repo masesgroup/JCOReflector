@@ -61,7 +61,7 @@ import microsoft.build.framework.ITaskItemImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IVbcHostObject4 extends IJCOBridgeReflected, IVbcHostObject3, IVbcHostObject2, IVbcHostObject, ITaskHost {
+public interface IVbcHostObject4 extends IJCOBridgeReflected, microsoft.build.tasks.hosting.IVbcHostObject3, microsoft.build.tasks.hosting.IVbcHostObject2, microsoft.build.tasks.hosting.IVbcHostObject, microsoft.build.framework.ITaskHost {
     /**
      * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

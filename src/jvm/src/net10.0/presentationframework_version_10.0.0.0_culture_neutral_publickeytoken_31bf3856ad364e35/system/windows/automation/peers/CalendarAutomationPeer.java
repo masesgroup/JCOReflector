@@ -43,8 +43,6 @@ import system.windows.controls.Calendar;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
-import system.windows.automation.provider.IItemContainerProvider;
-import system.windows.automation.provider.IItemContainerProviderImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.windows.automation.provider.IItemContainerProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CalendarAutomationPeer extends FrameworkElementAutomationPeer implements system.windows.automation.provider.IItemContainerProvider {
+public class CalendarAutomationPeer extends system.windows.automation.peers.FrameworkElementAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

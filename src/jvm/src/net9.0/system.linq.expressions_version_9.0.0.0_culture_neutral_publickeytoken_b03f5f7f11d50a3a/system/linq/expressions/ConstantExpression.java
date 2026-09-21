@@ -54,7 +54,7 @@ import system.linq.expressions.ExpressionType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConstantExpression extends Expression  {
+public class ConstantExpression extends system.linq.expressions.Expression  {
     /**
      * Fully assembly qualified name: System.Linq.Expressions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

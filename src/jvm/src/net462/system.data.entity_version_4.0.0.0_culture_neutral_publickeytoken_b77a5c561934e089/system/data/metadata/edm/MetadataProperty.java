@@ -56,7 +56,7 @@ import system.data.metadata.edm.TypeUsage;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MetadataProperty extends MetadataItem  {
+public class MetadataProperty extends system.data.metadata.edm.MetadataItem  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

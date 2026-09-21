@@ -54,8 +54,6 @@ import system.web.ui.TemplateControl;
 import system.web.ui.ValidateRequestMode;
 import system.web.ui.ViewStateMode;
 import system.EventHandler;
-import system.web.ui.IParserAccessor;
-import system.web.ui.IParserAccessorImplementation;
 
 
 /**
@@ -70,7 +68,7 @@ import system.web.ui.IParserAccessorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Control extends NetObject implements system.web.ui.IParserAccessor, AutoCloseable {
+public class Control extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

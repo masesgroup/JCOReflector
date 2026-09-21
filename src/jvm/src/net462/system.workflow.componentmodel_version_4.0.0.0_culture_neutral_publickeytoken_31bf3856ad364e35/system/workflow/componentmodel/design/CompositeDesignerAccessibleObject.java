@@ -56,7 +56,7 @@ import system.windows.forms.AccessibleStates;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompositeDesignerAccessibleObject extends ActivityDesignerAccessibleObject  {
+public class CompositeDesignerAccessibleObject extends system.workflow.componentmodel.design.ActivityDesignerAccessibleObject  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

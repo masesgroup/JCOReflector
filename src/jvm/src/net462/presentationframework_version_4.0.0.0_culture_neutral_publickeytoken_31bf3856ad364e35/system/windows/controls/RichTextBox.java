@@ -46,8 +46,6 @@ import system.windows.documents.LogicalDirection;
 import system.windows.Point;
 import system.windows.documents.TextRange;
 import system.windows.documents.TextSelection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RichTextBox extends TextBoxBase implements system.windows.markup.IAddChild {
+public class RichTextBox extends system.windows.controls.primitives.TextBoxBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

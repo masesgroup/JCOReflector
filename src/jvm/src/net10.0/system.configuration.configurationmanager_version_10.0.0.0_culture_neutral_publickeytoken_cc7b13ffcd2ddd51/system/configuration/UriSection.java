@@ -56,7 +56,7 @@ import system.configuration.SchemeSettingElementCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UriSection extends ConfigurationSection  {
+public class UriSection extends system.configuration.ConfigurationSection  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

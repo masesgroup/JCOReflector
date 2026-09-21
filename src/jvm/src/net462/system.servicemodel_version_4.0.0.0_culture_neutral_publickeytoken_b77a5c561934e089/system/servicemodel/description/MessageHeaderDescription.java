@@ -53,7 +53,7 @@ import system.servicemodel.description.MessagePartDescription;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MessageHeaderDescription extends MessagePartDescription  {
+public class MessageHeaderDescription extends system.servicemodel.description.MessagePartDescription  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

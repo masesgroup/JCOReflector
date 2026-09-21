@@ -66,7 +66,7 @@ import system.servicemodel.security.tokens.SupportingTokenParameters;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SecurityBindingElement extends BindingElement  {
+public class SecurityBindingElement extends system.servicemodel.channels.BindingElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

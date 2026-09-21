@@ -50,8 +50,6 @@ import system.xml.schema.XmlSchemaType;
 import system.xml.schema.XmlSchemaSet;
 import system.xml.XmlWriter;
 import system.xml.schema.XmlSchema;
-import system.xml.serialization.IXmlSerializable;
-import system.xml.serialization.IXmlSerializableImplementation;
 
 
 /**
@@ -66,7 +64,7 @@ import system.xml.serialization.IXmlSerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XPathMessageFilter extends MessageFilter implements system.xml.serialization.IXmlSerializable {
+public class XPathMessageFilter extends system.servicemodel.dispatcher.MessageFilter  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

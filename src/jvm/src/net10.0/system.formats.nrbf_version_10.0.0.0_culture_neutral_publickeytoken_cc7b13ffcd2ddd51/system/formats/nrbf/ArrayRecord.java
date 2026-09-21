@@ -55,7 +55,7 @@ import system.formats.nrbf.SerializationRecordId;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ArrayRecord extends SerializationRecord  {
+public class ArrayRecord extends system.formats.nrbf.SerializationRecord  {
     /**
      * Fully assembly qualified name: System.Formats.Nrbf, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

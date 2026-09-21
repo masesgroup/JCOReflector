@@ -40,8 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.dynamic.DynamicMetaObject;
 import system.linq.expressions.Expression;
-import system.dynamic.IDynamicMetaObjectProvider;
-import system.dynamic.IDynamicMetaObjectProviderImplementation;
 
 
 /**
@@ -56,7 +54,7 @@ import system.dynamic.IDynamicMetaObjectProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ExpandoObject extends NetObjectEnumerable implements system.dynamic.IDynamicMetaObjectProvider {
+public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Linq.Expressions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

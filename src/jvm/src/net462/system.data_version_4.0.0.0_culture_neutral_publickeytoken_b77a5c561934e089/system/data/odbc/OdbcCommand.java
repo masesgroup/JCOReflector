@@ -47,8 +47,6 @@ import system.data.odbc.OdbcParameter;
 import system.data.CommandType;
 import system.data.odbc.OdbcParameterCollection;
 import system.data.UpdateRowSource;
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -63,7 +61,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class OdbcCommand extends DbCommand implements system.ICloneable {
+public class OdbcCommand extends system.data.common.DbCommand  {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

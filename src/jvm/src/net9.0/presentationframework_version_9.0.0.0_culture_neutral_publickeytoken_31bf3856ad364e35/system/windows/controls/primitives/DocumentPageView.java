@@ -44,10 +44,6 @@ import system.windows.documents.DocumentPage;
 import system.windows.documents.DocumentPaginator;
 import system.windows.media.Stretch;
 import system.EventHandler;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -62,7 +58,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DocumentPageView extends FrameworkElement implements system.IServiceProvider, system.IDisposable, AutoCloseable {
+public class DocumentPageView extends system.windows.FrameworkElement implements AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

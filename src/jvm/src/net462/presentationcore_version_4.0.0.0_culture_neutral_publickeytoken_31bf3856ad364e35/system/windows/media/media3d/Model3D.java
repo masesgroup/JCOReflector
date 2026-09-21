@@ -44,8 +44,6 @@ import system.IFormatProviderImplementation;
 import system.windows.media.media3d.Model3D;
 import system.windows.media.media3d.Rect3D;
 import system.windows.media.media3d.Transform3D;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -60,7 +58,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Model3D extends Animatable implements system.IFormattable {
+public class Model3D extends system.windows.media.animation.Animatable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

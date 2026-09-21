@@ -53,7 +53,7 @@ import system.formats.tar.PosixTarEntry;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PaxGlobalExtendedAttributesTarEntry extends PosixTarEntry  {
+public class PaxGlobalExtendedAttributesTarEntry extends system.formats.tar.PosixTarEntry  {
     /**
      * Fully assembly qualified name: System.Formats.Tar, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

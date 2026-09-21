@@ -46,8 +46,6 @@ import system.data.SchemaType;
 import system.data.IDataParameter;
 import system.data.IDataParameterImplementation;
 import system.data.common.DbCommand;
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbDataAdapter extends DataAdapter implements system.ICloneable {
+public class DbDataAdapter extends system.data.common.DataAdapter  {
     /**
      * Fully assembly qualified name: System.Data.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

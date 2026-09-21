@@ -50,8 +50,6 @@ import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.TypeConverter;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
-import system.componentmodel.ICustomTypeDescriptor;
-import system.componentmodel.ICustomTypeDescriptorImplementation;
 
 
 /**
@@ -66,7 +64,7 @@ import system.componentmodel.ICustomTypeDescriptorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbConnectionStringBuilder extends NetObjectEnumerable implements system.componentmodel.ICustomTypeDescriptor {
+public class DbConnectionStringBuilder extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Data.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -57,7 +57,7 @@ import system.security.SecurityElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PnrpPermission extends CodeAccessPermission  {
+public class PnrpPermission extends system.security.CodeAccessPermission  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

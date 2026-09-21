@@ -55,7 +55,7 @@ import system.security.cryptography.x509certificates.X509Certificate2;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509NTAuthChainTrustValidator extends X509CertificateValidator  {
+public class X509NTAuthChainTrustValidator extends system.identitymodel.selectors.X509CertificateValidator  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -43,8 +43,6 @@ import system.data.objects.dataclasses.IEntityChangeTracker;
 import system.data.objects.dataclasses.IEntityChangeTrackerImplementation;
 import system.data.EntityKey;
 import system.data.EntityState;
-import system.data.objects.dataclasses.IEntityWithChangeTracker;
-import system.data.objects.dataclasses.IEntityWithChangeTrackerImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.data.objects.dataclasses.IEntityWithChangeTrackerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EntityObject extends StructuralObject implements system.data.objects.dataclasses.IEntityWithChangeTracker {
+public class EntityObject extends system.data.objects.dataclasses.StructuralObject  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

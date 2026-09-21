@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.data.DbType;
 import system.TypeCode;
 import system.data.ParameterDirection;
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Parameter extends NetObject implements system.ICloneable {
+public class Parameter extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

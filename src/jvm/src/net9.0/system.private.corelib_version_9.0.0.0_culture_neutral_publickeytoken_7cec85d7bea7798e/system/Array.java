@@ -43,10 +43,6 @@ import system.collections.IComparer;
 import system.collections.IComparerImplementation;
 import system.collections.IEqualityComparer;
 import system.collections.IEqualityComparerImplementation;
-import system.collections.IStructuralComparable;
-import system.collections.IStructuralComparableImplementation;
-import system.collections.IStructuralEquatable;
-import system.collections.IStructuralEquatableImplementation;
 
 
 /**
@@ -61,7 +57,7 @@ import system.collections.IStructuralEquatableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Array extends NetObjectEnumerable implements system.collections.IStructuralComparable, system.collections.IStructuralEquatable {
+public class Array extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

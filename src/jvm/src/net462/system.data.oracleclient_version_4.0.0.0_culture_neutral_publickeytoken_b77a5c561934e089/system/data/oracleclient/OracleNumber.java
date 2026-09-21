@@ -56,7 +56,7 @@ import system.data.oracleclient.OracleBoolean;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class OracleNumber extends ValueType  {
+public class OracleNumber extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

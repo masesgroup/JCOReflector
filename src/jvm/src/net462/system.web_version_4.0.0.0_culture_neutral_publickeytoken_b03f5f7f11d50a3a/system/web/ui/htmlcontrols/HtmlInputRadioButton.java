@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.web.ui.htmlcontrols.HtmlInputControl;
 import system.collections.specialized.NameValueCollection;
 import system.EventHandler;
-import system.web.ui.IPostBackDataHandler;
-import system.web.ui.IPostBackDataHandlerImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.web.ui.IPostBackDataHandlerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HtmlInputRadioButton extends HtmlInputControl implements system.web.ui.IPostBackDataHandler {
+public class HtmlInputRadioButton extends system.web.ui.htmlcontrols.HtmlInputControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

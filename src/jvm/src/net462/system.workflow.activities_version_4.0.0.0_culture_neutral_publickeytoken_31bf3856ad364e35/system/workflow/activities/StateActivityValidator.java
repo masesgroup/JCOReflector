@@ -58,7 +58,7 @@ import system.workflow.componentmodel.compiler.ValidationManager;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StateActivityValidator extends CompositeActivityValidator  {
+public class StateActivityValidator extends system.workflow.componentmodel.compiler.CompositeActivityValidator  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

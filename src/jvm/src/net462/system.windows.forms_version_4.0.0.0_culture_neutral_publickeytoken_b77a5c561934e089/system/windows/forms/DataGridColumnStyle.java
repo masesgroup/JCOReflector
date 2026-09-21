@@ -45,8 +45,6 @@ import system.windows.forms.AccessibleObject;
 import system.windows.forms.DataGridTableStyle;
 import system.windows.forms.HorizontalAlignment;
 import system.EventHandler;
-import system.windows.forms.IDataGridColumnStyleEditingNotificationService;
-import system.windows.forms.IDataGridColumnStyleEditingNotificationServiceImplementation;
 
 
 /**
@@ -61,7 +59,7 @@ import system.windows.forms.IDataGridColumnStyleEditingNotificationServiceImplem
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridColumnStyle extends Component implements system.windows.forms.IDataGridColumnStyleEditingNotificationService {
+public class DataGridColumnStyle extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

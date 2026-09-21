@@ -54,7 +54,7 @@ import system.io.Stream;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class VirtualFile extends VirtualFileBase  {
+public class VirtualFile extends system.web.hosting.VirtualFileBase  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

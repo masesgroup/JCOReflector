@@ -46,8 +46,6 @@ import system.windows.controls.DataTemplateSelector;
 import system.windows.DataTemplate;
 import system.windows.ResourceKey;
 import system.windows.Style;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GridView extends ViewBase implements system.windows.markup.IAddChild {
+public class GridView extends system.windows.controls.ViewBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

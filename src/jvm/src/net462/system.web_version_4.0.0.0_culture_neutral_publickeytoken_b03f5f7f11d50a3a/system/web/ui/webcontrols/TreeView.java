@@ -51,12 +51,6 @@ import system.web.ui.webcontrols.TreeNodeTypes;
 import system.web.ui.webcontrols.TreeViewImageSet;
 import system.EventHandler;
 import system.web.ui.webcontrols.TreeNodeEventHandler;
-import system.web.ui.IPostBackEventHandler;
-import system.web.ui.IPostBackEventHandlerImplementation;
-import system.web.ui.IPostBackDataHandler;
-import system.web.ui.IPostBackDataHandlerImplementation;
-import system.web.ui.ICallbackEventHandler;
-import system.web.ui.ICallbackEventHandlerImplementation;
 
 
 /**
@@ -71,7 +65,7 @@ import system.web.ui.ICallbackEventHandlerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TreeView extends HierarchicalDataBoundControl implements system.web.ui.IPostBackEventHandler, system.web.ui.IPostBackDataHandler, system.web.ui.ICallbackEventHandler {
+public class TreeView extends system.web.ui.webcontrols.HierarchicalDataBoundControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

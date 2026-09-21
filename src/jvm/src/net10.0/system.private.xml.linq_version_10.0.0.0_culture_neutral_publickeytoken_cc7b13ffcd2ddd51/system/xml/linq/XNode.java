@@ -62,7 +62,7 @@ import system.xml.linq.XNodeEqualityComparer;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XNode extends XObject  {
+public class XNode extends system.xml.linq.XObject  {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

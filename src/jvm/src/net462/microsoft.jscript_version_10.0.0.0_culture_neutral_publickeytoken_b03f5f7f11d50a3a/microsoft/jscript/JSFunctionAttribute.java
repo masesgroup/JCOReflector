@@ -55,7 +55,7 @@ import microsoft.jscript.JSBuiltin;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JSFunctionAttribute extends Attribute  {
+public class JSFunctionAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

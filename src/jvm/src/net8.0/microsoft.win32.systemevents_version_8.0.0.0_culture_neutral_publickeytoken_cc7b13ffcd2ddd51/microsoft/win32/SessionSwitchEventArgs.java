@@ -54,7 +54,7 @@ import microsoft.win32.SessionSwitchReason;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SessionSwitchEventArgs extends EventArgs  {
+public class SessionSwitchEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: Microsoft.Win32.SystemEvents, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

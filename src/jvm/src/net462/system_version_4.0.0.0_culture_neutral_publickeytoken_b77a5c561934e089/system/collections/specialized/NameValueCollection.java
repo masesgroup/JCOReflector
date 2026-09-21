@@ -61,7 +61,7 @@ import system.Array;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NameValueCollection extends NameObjectCollectionBase  {
+public class NameValueCollection extends system.collections.specialized.NameObjectCollectionBase  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -43,8 +43,6 @@ import system.reflection.EventInfo;
 import system.reflection.FieldInfo;
 import system.reflection.MethodInfo;
 import system.reflection.PropertyInfo;
-import system.reflection.IReflectableType;
-import system.reflection.IReflectableTypeImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.reflection.IReflectableTypeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TypeInfo extends NetObject implements system.reflection.IReflectableType {
+public class TypeInfo extends NetObject  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

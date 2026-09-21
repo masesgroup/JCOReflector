@@ -55,7 +55,7 @@ import system.codedom.CodeStatementCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeConditionStatement extends CodeStatement  {
+public class CodeConditionStatement extends system.codedom.CodeStatement  {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

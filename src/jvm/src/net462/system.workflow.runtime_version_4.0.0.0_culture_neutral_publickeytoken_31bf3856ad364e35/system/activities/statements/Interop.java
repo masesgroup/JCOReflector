@@ -46,8 +46,6 @@ import system.Attribute;
 import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.TypeConverter;
-import system.componentmodel.ICustomTypeDescriptor;
-import system.componentmodel.ICustomTypeDescriptorImplementation;
 
 
 /**
@@ -62,7 +60,7 @@ import system.componentmodel.ICustomTypeDescriptorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Interop extends NativeActivity implements system.componentmodel.ICustomTypeDescriptor {
+public class Interop extends system.activities.NativeActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

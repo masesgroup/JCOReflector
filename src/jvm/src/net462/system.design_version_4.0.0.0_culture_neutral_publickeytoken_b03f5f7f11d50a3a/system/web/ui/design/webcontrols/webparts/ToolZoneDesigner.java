@@ -56,7 +56,7 @@ import system.componentmodel.design.DesignerActionListCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolZoneDesigner extends WebZoneDesigner  {
+public class ToolZoneDesigner extends system.web.ui.design.webcontrols.webparts.WebZoneDesigner  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

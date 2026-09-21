@@ -59,7 +59,7 @@ import system.componentmodel.IContainerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IValueSerializerContext extends IJCOBridgeReflected, ITypeDescriptorContext, IServiceProvider {
+public interface IValueSerializerContext extends IJCOBridgeReflected, system.componentmodel.ITypeDescriptorContext, system.IServiceProvider {
     /**
      * Fully assembly qualified name: System.Xaml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

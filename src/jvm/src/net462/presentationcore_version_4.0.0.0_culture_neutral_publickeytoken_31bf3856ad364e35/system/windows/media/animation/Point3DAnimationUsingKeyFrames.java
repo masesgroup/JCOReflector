@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.media.animation.Point3DAnimationBase;
 import system.windows.media.animation.Point3DAnimationUsingKeyFrames;
 import system.windows.media.animation.Point3DKeyFrameCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Point3DAnimationUsingKeyFrames extends Point3DAnimationBase implements system.windows.markup.IAddChild {
+public class Point3DAnimationUsingKeyFrames extends system.windows.media.animation.Point3DAnimationBase  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

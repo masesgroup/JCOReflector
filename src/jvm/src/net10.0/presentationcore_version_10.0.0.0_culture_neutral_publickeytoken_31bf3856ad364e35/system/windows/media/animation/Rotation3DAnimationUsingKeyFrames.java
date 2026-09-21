@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.windows.media.animation.Rotation3DAnimationBase;
 import system.windows.media.animation.Rotation3DAnimationUsingKeyFrames;
 import system.windows.media.animation.Rotation3DKeyFrameCollection;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase implements system.windows.markup.IAddChild {
+public class Rotation3DAnimationUsingKeyFrames extends system.windows.media.animation.Rotation3DAnimationBase  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -43,8 +43,6 @@ import system.collections.specialized.NameValueCollection;
 import system.web.ui.webcontrols.AutoCompleteType;
 import system.web.ui.webcontrols.TextBoxMode;
 import system.EventHandler;
-import system.web.ui.IPostBackDataHandler;
-import system.web.ui.IPostBackDataHandlerImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.web.ui.IPostBackDataHandlerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextBox extends WebControl implements system.web.ui.IPostBackDataHandler {
+public class TextBox extends system.web.ui.webcontrols.WebControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

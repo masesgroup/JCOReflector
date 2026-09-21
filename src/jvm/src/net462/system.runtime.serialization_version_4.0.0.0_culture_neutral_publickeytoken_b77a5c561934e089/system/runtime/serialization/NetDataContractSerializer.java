@@ -64,7 +64,7 @@ import system.runtime.serialization.SerializationBinder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NetDataContractSerializer extends XmlObjectSerializer  {
+public class NetDataContractSerializer extends system.runtime.serialization.XmlObjectSerializer  {
     /**
      * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

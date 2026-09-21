@@ -44,8 +44,6 @@ import system.Uri;
 import system.windows.controls.UIElementCollection;
 import system.windows.media.Brush;
 import system.windows.Rect;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -60,7 +58,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FixedPage extends FrameworkElement implements system.windows.markup.IAddChild {
+public class FixedPage extends system.windows.FrameworkElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

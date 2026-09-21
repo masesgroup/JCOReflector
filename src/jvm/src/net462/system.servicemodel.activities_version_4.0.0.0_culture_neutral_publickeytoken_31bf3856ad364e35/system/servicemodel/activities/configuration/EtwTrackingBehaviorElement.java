@@ -53,7 +53,7 @@ import system.servicemodel.configuration.BehaviorExtensionElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EtwTrackingBehaviorElement extends BehaviorExtensionElement  {
+public class EtwTrackingBehaviorElement extends system.servicemodel.configuration.BehaviorExtensionElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

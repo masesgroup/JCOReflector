@@ -56,7 +56,7 @@ import system.reflection.emit.CustomAttributeBuilder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EnumBuilder extends TypeInfo  {
+public class EnumBuilder extends system.reflection.TypeInfo  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

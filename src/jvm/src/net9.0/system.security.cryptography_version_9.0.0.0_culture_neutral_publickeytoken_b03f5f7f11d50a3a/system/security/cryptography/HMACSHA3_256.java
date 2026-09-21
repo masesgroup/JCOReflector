@@ -54,7 +54,7 @@ import system.io.Stream;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HMACSHA3_256 extends HMAC  {
+public class HMACSHA3_256 extends system.security.cryptography.HMAC  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

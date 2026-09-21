@@ -54,7 +54,7 @@ import microsoft.build.tasks.deployment.manifestutilities.ProxyStub;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssemblyManifest extends Manifest  {
+public class AssemblyManifest extends microsoft.build.tasks.deployment.manifestutilities.Manifest  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

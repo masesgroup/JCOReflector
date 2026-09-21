@@ -54,10 +54,6 @@ import system.windows.media.FontFamily;
 import system.windows.media.TextEffectCollection;
 import system.windows.TextAlignment;
 import system.windows.Thickness;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -72,7 +68,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FlowDocument extends FrameworkContentElement implements system.IServiceProvider, system.windows.markup.IAddChild {
+public class FlowDocument extends system.windows.FrameworkContentElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

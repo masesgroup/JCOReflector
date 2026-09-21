@@ -53,7 +53,7 @@ import system.workflow.activities.WorkflowRole;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebWorkflowRole extends WorkflowRole  {
+public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

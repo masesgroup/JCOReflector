@@ -103,7 +103,7 @@ namespace MASES.JCOReflector.Engine
 
             public static Dictionary<string, string[]> ExportingAvoidanceMap = new Dictionary<string, string[]>();
             public static Dictionary<string, string> DirectMappablePrimitives = new Dictionary<string, string>();
-
+/*
             static SpecialNames()
             {
                 ExportingAvoidanceMap.Add(@"^System\.Net\.Http\.Headers\.MediaTypeWithQualityHeaderValue$", new string[] { "TryParse" });
@@ -114,7 +114,7 @@ namespace MASES.JCOReflector.Engine
                 ExportingAvoidanceMap.Add(@"^System\.Threading\.Volatile$", new string[] { "Read" });
                 ExportingAvoidanceMap.Add(@"^System\.Threading\.Interlocked$", new string[] { "Decrement", "Increment"
 #if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
-                                                                                              , "Read"
+                                                                                          , "Read"
 #endif
                                                                                             });
 #if NET7_0 || NET8_0 || NET9_0 || NET10_0
@@ -161,6 +161,7 @@ namespace MASES.JCOReflector.Engine
                 DirectMappablePrimitives.Add("int", "java.util.concurrent.atomic.AtomicInteger");
                 DirectMappablePrimitives.Add("long", "java.util.concurrent.atomic.AtomicLong");
             }
+*/
         }
 
         public class FileNameAndDirectory

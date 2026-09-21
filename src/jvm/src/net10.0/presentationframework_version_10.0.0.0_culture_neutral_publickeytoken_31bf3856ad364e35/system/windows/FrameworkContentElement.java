@@ -420,7 +420,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
         }
     }
 
-    public void UpdateDefaultStyle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.Win32Exception, system.net.WebException, system.io.IOException, system.InvalidCastException {
+    public void UpdateDefaultStyle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.Win32Exception, system.io.FileFormatException, system.net.WebException, system.io.IOException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

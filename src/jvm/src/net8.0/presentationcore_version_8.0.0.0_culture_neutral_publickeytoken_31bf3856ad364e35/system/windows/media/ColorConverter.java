@@ -191,7 +191,7 @@ public class ColorConverter extends TypeConverter  {
         }
     }
 
-    public NetObject ConvertFrom(ITypeDescriptorContext td, CultureInfo ci, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.diagnostics.UnreachableException, system.net.WebException, system.io.IOException, system.io.FileNotFoundException, system.AccessViolationException {
+    public NetObject ConvertFrom(ITypeDescriptorContext td, CultureInfo ci, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.diagnostics.UnreachableException, system.io.FileFormatException, system.net.WebException, system.io.IOException, system.io.FileNotFoundException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConvertFrom = null;
@@ -206,7 +206,7 @@ public class ColorConverter extends TypeConverter  {
         }
     }
 
-    public static NetObject ConvertFromStringNewColorConverter(java.lang.String value) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.net.WebException, system.io.FileNotFoundException, system.NotSupportedException, system.AccessViolationException {
+    public static NetObject ConvertFromStringNewColorConverter(java.lang.String value) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.io.FileFormatException, system.net.WebException, system.io.FileNotFoundException, system.NotSupportedException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConvertFromString = null;

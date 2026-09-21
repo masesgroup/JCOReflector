@@ -291,7 +291,7 @@ public class PackageDigitalSignature extends NetObject  {
         }
     }
 
-    public void setSignature(Signature Signature) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException {
+    public void setSignature(Signature Signature) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

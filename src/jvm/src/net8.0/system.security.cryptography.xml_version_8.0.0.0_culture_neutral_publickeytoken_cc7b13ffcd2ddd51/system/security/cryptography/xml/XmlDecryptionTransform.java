@@ -162,7 +162,7 @@ public class XmlDecryptionTransform extends Transform  {
     
     // Methods section
     
-    public NetObject GetOutput() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.xml.XmlException {
+    public NetObject GetOutput() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.diagnostics.UnreachableException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetOutput = null;

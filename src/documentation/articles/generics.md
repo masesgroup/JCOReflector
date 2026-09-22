@@ -6,7 +6,7 @@ _description: Current state of .NET generics support in JCOReflector — what is
 # Generics support (experimental)
 
 > [!WARNING]
-> Support for .NET generic types and members is **experimental**. It is controlled by an engine-level `EnableGenerics` switch, disabled by default. Enabling it changes the shape of the generated Java code (see [Impact on non-generic output](#impact-on-non-generic-output) below) and is not yet recommended for production reflection runs. This page documents the current state as of this writing and will be updated as the feature matures.
+> Support for .NET generic types and members is **experimental**. It is controlled by an engine-level `EnableGenerics` switch. Enabling it changes the shape of the generated Java code (see [Impact on non-generic output](#impact-on-non-generic-output) below) and is not yet recommended for production reflection runs. This page documents the current state as of this writing and will be updated as the feature matures.
 
 ## Why generics needed dedicated work
 

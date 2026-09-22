@@ -1241,7 +1241,8 @@ namespace MASES.JCOReflector.Engine
                 withInheritance = true;
                 if (item.BaseType.IsManagedType(0, 1) && item.BaseType != typeof(object) && item.BaseType != typeof(Exception) && item.BaseType != typeof(Type))
                 {
-                    packageBaseClass = BuildQualifiedGenericTypeName(item.BaseType, imports);
+                    packageBaseClass = EnableGenerics ? BuildQualifiedGenericTypeName(item.BaseType, imports)
+                                                      : item.BaseType.Name;
                     imports.Add(item.BaseType);
                 }
             }

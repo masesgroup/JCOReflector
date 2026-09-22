@@ -55,7 +55,7 @@ import system.windows.CoerceValueCallback;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UIPropertyMetadata extends PropertyMetadata  {
+public class UIPropertyMetadata extends system.windows.PropertyMetadata  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

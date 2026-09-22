@@ -55,7 +55,7 @@ import system.transactions.IsolationLevel;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TransactionScope extends NativeActivity  {
+public class TransactionScope extends system.activities.NativeActivity  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

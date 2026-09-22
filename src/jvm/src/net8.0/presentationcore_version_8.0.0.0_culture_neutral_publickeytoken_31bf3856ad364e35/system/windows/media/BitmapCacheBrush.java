@@ -56,7 +56,7 @@ import system.windows.media.BitmapCache;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BitmapCacheBrush extends Brush  {
+public class BitmapCacheBrush extends system.windows.media.Brush  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

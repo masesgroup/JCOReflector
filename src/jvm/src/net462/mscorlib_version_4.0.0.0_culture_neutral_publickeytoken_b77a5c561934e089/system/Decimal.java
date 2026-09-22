@@ -67,7 +67,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Decimal extends ValueType implements system.runtime.serialization.IDeserializationCallback {
+public class Decimal extends system.ValueType implements IDeserializationCallback {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

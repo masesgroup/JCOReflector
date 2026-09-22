@@ -57,7 +57,7 @@ import system.windows.controls.DataGridEditAction;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridCellEditEndingEventArgs extends EventArgs  {
+public class DataGridCellEditEndingEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

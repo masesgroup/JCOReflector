@@ -55,7 +55,7 @@ import system.windows.media.animation.Int16AnimationBase;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Int16AnimationBase extends AnimationTimeline  {
+public class Int16AnimationBase extends system.windows.media.animation.AnimationTimeline  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -59,7 +59,7 @@ import system.reflection.Module;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PersistedAssemblyBuilder extends AssemblyBuilder  {
+public class PersistedAssemblyBuilder extends system.reflection.emit.AssemblyBuilder  {
     /**
      * Fully assembly qualified name: System.Reflection.Emit, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

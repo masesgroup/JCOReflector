@@ -62,7 +62,7 @@ import system.net.sockets.TransmitFileOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
+public class SocketAsyncEventArgs extends system.EventArgs implements AutoCloseable {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -57,7 +57,7 @@ import system.windows.media.media3d.Rect3D;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GeneralTransform3DTo2D extends Freezable  {
+public class GeneralTransform3DTo2D extends system.windows.Freezable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -54,7 +54,7 @@ import system.runtime.caching.configuration.MemoryCacheSection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CachingSectionGroup extends ConfigurationSectionGroup  {
+public class CachingSectionGroup extends system.configuration.ConfigurationSectionGroup  {
     /**
      * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

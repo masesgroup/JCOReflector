@@ -59,7 +59,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FixedDocument extends FrameworkContentElement implements system.windows.markup.IAddChild, system.IServiceProvider {
+public class FixedDocument extends system.windows.FrameworkContentElement implements IAddChild, IServiceProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

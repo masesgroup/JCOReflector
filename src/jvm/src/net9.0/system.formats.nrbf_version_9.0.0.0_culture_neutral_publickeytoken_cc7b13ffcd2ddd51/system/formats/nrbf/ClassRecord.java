@@ -65,7 +65,7 @@ import system.reflection.metadata.TypeName;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ClassRecord extends SerializationRecord  {
+public class ClassRecord extends system.formats.nrbf.SerializationRecord  {
     /**
      * Fully assembly qualified name: System.Formats.Nrbf, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

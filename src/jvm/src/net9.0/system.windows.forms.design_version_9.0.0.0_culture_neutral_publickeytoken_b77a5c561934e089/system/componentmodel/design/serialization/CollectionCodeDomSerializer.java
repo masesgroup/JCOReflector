@@ -55,7 +55,7 @@ import system.componentmodel.design.serialization.IDesignerSerializationManagerI
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CollectionCodeDomSerializer extends CodeDomSerializer  {
+public class CollectionCodeDomSerializer extends system.componentmodel.design.serialization.CodeDomSerializer  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

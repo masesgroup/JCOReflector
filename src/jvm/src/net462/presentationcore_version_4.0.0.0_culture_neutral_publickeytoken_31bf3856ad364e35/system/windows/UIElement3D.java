@@ -79,7 +79,7 @@ import system.windows.RoutedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UIElement3D extends Visual3D  {
+public class UIElement3D extends system.windows.media.media3d.Visual3D  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

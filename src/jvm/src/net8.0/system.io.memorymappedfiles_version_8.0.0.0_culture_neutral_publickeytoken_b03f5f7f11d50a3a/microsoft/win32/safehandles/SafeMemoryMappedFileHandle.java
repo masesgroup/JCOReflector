@@ -53,7 +53,7 @@ import microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SafeMemoryMappedFileHandle extends SafeHandleZeroOrMinusOneIsInvalid  {
+public class SafeMemoryMappedFileHandle extends microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid  {
     /**
      * Fully assembly qualified name: System.IO.MemoryMappedFiles, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

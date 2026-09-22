@@ -55,7 +55,7 @@ import system.servicemodel.msmqintegration.MsmqMessageSerializationFormat;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MsmqIntegrationBindingElement extends MsmqBindingElementBase  {
+public class MsmqIntegrationBindingElement extends system.servicemodel.configuration.MsmqBindingElementBase  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

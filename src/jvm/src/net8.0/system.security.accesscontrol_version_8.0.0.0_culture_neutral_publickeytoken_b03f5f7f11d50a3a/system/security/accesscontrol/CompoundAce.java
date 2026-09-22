@@ -56,7 +56,7 @@ import system.security.principal.SecurityIdentifier;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompoundAce extends KnownAce  {
+public class CompoundAce extends system.security.accesscontrol.KnownAce  {
     /**
      * Fully assembly qualified name: System.Security.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

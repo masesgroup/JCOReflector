@@ -53,7 +53,7 @@ import system.runtime.durableinstancing.InstanceStoreQueryResult;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivatableWorkflowsQueryResult extends InstanceStoreQueryResult  {
+public class ActivatableWorkflowsQueryResult extends system.runtime.durableinstancing.InstanceStoreQueryResult  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

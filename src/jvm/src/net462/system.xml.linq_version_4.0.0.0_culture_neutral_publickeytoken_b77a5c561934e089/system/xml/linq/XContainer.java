@@ -56,7 +56,7 @@ import system.xml.XmlWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XContainer extends XNode  {
+public class XContainer extends system.xml.linq.XNode  {
     /**
      * Fully assembly qualified name: System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

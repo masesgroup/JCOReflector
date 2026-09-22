@@ -62,7 +62,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RichTextBox extends TextBoxBase implements system.windows.markup.IAddChild {
+public class RichTextBox extends system.windows.controls.primitives.TextBoxBase implements IAddChild {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

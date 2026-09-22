@@ -133,7 +133,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridView extends Control implements system.componentmodel.ISupportInitialize {
+public class DataGridView extends system.windows.forms.Control implements ISupportInitialize {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

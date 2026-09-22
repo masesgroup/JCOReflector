@@ -61,7 +61,7 @@ import system.windows.markup.IQueryAmbientImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Style extends DispatcherObject implements system.windows.markup.IAddChild, system.windows.markup.IQueryAmbient {
+public class Style extends system.windows.threading.DispatcherObject implements IAddChild, IQueryAmbient {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

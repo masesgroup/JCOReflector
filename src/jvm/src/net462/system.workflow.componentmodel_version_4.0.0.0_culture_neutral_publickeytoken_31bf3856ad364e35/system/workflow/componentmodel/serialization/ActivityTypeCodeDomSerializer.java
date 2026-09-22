@@ -58,7 +58,7 @@ import system.collections.ICollectionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityTypeCodeDomSerializer extends TypeCodeDomSerializer  {
+public class ActivityTypeCodeDomSerializer extends system.componentmodel.design.serialization.TypeCodeDomSerializer  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

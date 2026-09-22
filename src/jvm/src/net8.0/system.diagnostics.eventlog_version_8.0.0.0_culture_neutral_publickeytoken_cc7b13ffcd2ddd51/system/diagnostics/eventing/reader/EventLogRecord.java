@@ -55,7 +55,7 @@ import system.security.principal.SecurityIdentifier;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventLogRecord extends EventRecord  {
+public class EventLogRecord extends system.diagnostics.eventing.reader.EventRecord  {
     /**
      * Fully assembly qualified name: System.Diagnostics.EventLog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

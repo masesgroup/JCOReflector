@@ -62,7 +62,7 @@ import system.net.websockets.WebSocketState;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ClientWebSocket extends WebSocket  {
+public class ClientWebSocket extends system.net.websockets.WebSocket  {
     /**
      * Fully assembly qualified name: System.Net.WebSockets.Client, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

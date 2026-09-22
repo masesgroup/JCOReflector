@@ -43,7 +43,6 @@ import system.text.json.JsonSerializerOptions;
 import system.text.json.JsonValueKind;
 import system.text.json.nodes.JsonArray;
 import system.io.Stream;
-import system.text.json.Utf8JsonReader;
 import system.text.json.nodes.JsonObject;
 import system.text.json.nodes.JsonValue;
 import system.text.json.Utf8JsonWriter;

@@ -54,7 +54,7 @@ import system.workflow.componentmodel.WorkflowTransactionOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TransactionScopeActivity extends CompositeActivity  {
+public class TransactionScopeActivity extends system.workflow.componentmodel.CompositeActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

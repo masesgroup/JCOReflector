@@ -54,7 +54,7 @@ import system.windows.automation.peers.TabControlAutomationPeer;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TabItemAutomationPeer extends SelectorItemAutomationPeer  {
+public class TabItemAutomationPeer extends system.windows.automation.peers.SelectorItemAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

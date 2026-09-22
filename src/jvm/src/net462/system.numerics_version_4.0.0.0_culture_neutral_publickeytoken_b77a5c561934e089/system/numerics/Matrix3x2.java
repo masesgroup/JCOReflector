@@ -56,7 +56,7 @@ import system.numerics.Vector2;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Matrix3x2 extends ValueType  {
+public class Matrix3x2 extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

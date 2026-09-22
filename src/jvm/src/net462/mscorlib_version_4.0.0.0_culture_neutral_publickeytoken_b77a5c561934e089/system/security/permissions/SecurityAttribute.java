@@ -56,7 +56,7 @@ import system.security.permissions.SecurityAction;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SecurityAttribute extends Attribute  {
+public class SecurityAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

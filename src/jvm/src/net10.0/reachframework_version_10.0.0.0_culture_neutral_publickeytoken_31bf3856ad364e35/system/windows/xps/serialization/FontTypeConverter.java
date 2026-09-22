@@ -58,7 +58,7 @@ import system.globalization.CultureInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FontTypeConverter extends ExpandableObjectConverter  {
+public class FontTypeConverter extends system.componentmodel.ExpandableObjectConverter  {
     /**
      * Fully assembly qualified name: ReachFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

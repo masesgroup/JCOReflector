@@ -62,7 +62,7 @@ import system.componentmodel.MemberDescriptor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeDomComponentSerializationService extends ComponentSerializationService  {
+public class CodeDomComponentSerializationService extends system.componentmodel.design.serialization.ComponentSerializationService  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

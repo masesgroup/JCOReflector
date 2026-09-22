@@ -53,7 +53,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RequiredAttributeAttribute extends Attribute  {
+public class RequiredAttributeAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.Runtime.CompilerServices.VisualC, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

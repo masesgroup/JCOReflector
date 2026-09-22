@@ -56,7 +56,7 @@ import system.threading.SendOrPostCallback;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DispatcherSynchronizationContext extends SynchronizationContext  {
+public class DispatcherSynchronizationContext extends system.threading.SynchronizationContext  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

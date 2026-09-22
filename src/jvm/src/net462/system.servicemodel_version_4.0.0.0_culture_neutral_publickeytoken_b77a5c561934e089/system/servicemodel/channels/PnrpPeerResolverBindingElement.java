@@ -56,7 +56,7 @@ import system.servicemodel.PeerResolver;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PnrpPeerResolverBindingElement extends PeerResolverBindingElement  {
+public class PnrpPeerResolverBindingElement extends system.servicemodel.channels.PeerResolverBindingElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

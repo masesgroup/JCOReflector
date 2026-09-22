@@ -53,7 +53,7 @@ import system.security.cryptography.MaskGenerationMethod;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PKCS1MaskGenerationMethod extends MaskGenerationMethod  {
+public class PKCS1MaskGenerationMethod extends system.security.cryptography.MaskGenerationMethod  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

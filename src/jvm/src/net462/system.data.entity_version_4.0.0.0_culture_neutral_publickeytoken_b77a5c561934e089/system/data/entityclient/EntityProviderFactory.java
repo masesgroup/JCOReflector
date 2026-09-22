@@ -63,7 +63,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EntityProviderFactory extends DbProviderFactory implements system.IServiceProvider {
+public class EntityProviderFactory extends system.data.common.DbProviderFactory implements IServiceProvider {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

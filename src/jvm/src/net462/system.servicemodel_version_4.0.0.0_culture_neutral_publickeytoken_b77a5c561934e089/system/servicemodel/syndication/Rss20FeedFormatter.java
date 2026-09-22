@@ -59,7 +59,7 @@ import system.xml.serialization.IXmlSerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Rss20FeedFormatter extends SyndicationFeedFormatter implements system.xml.serialization.IXmlSerializable {
+public class Rss20FeedFormatter extends system.servicemodel.syndication.SyndicationFeedFormatter implements IXmlSerializable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -72,7 +72,7 @@ import system.runtime.interopservices.comtypes.IDataObjectImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataObject extends NetObject implements system.runtime.interopservices.comtypes.IDataObject {
+public class DataObject extends NetObject implements IDataObject {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

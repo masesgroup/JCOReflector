@@ -54,7 +54,7 @@ import system.windows.controls.FlowDocumentPageViewer;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FlowDocumentPageViewerAutomationPeer extends DocumentViewerBaseAutomationPeer  {
+public class FlowDocumentPageViewerAutomationPeer extends system.windows.automation.peers.DocumentViewerBaseAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

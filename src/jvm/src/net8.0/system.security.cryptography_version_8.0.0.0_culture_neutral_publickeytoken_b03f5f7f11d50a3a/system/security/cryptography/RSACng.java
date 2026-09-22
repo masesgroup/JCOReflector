@@ -59,7 +59,7 @@ import system.security.cryptography.KeySizes;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RSACng extends RSA  {
+public class RSACng extends system.security.cryptography.RSA  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

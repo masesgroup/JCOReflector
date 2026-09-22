@@ -54,7 +54,7 @@ import system.Single;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InertiaTranslationBehavior2D extends InertiaParameters2D  {
+public class InertiaTranslationBehavior2D extends system.windows.input.manipulations.InertiaParameters2D  {
     /**
      * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

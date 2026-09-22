@@ -55,7 +55,7 @@ import system.windows.data.BindingExpressionBase;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BindingFailedEventArgs extends EventArgs  {
+public class BindingFailedEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

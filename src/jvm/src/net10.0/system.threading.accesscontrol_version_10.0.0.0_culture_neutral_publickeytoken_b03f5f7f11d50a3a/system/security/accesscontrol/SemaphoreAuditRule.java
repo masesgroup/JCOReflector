@@ -56,7 +56,7 @@ import system.security.accesscontrol.AuditFlags;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SemaphoreAuditRule extends AuditRule  {
+public class SemaphoreAuditRule extends system.security.accesscontrol.AuditRule  {
     /**
      * Fully assembly qualified name: System.Threading.AccessControl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

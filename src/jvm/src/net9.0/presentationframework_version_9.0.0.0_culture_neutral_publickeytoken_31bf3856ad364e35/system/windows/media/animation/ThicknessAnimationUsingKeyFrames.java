@@ -57,7 +57,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ThicknessAnimationUsingKeyFrames extends ThicknessAnimationBase implements system.windows.markup.IAddChild {
+public class ThicknessAnimationUsingKeyFrames extends system.windows.media.animation.ThicknessAnimationBase implements IAddChild {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

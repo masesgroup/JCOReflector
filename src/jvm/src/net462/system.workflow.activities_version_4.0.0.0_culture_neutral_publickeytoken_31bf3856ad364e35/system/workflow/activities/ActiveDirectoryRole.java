@@ -61,7 +61,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.serialization.ISerializable, system.IDisposable, AutoCloseable {
+public class ActiveDirectoryRole extends system.workflow.activities.WorkflowRole implements ISerializable, IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

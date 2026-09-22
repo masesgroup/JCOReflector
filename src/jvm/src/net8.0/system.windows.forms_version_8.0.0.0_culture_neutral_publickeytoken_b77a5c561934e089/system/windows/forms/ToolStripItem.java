@@ -92,7 +92,7 @@ import system.windows.forms.IDropTargetImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolStripItem extends BindableComponent implements system.windows.forms.IDropTarget {
+public class ToolStripItem extends system.windows.forms.BindableComponent implements IDropTarget {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

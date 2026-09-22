@@ -55,7 +55,7 @@ import system.windows.media.media3d.Vector3D;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RayHitTestParameters extends HitTestParameters3D  {
+public class RayHitTestParameters extends system.windows.media.media3d.HitTestParameters3D  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

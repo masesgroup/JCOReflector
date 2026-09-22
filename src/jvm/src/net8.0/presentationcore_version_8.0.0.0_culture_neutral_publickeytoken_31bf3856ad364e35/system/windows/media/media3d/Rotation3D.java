@@ -58,7 +58,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Rotation3D extends Animatable implements system.IFormattable {
+public class Rotation3D extends system.windows.media.animation.Animatable implements IFormattable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

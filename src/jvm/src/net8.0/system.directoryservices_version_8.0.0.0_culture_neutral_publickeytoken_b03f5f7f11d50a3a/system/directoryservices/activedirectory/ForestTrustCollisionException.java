@@ -55,7 +55,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ForestTrustCollisionException extends ActiveDirectoryOperationException {
+public class ForestTrustCollisionException extends system.directoryservices.activedirectory.ActiveDirectoryOperationException {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

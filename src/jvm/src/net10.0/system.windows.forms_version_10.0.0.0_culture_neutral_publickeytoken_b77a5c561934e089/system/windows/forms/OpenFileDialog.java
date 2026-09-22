@@ -54,7 +54,7 @@ import system.io.Stream;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class OpenFileDialog extends FileDialog  {
+public class OpenFileDialog extends system.windows.forms.FileDialog  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

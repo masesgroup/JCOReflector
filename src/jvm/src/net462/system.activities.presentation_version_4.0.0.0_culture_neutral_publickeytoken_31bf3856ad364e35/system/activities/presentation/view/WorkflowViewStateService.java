@@ -56,7 +56,7 @@ import system.activities.presentation.view.ViewStateChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowViewStateService extends ViewStateService  {
+public class WorkflowViewStateService extends system.activities.presentation.view.ViewStateService  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

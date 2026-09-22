@@ -59,7 +59,7 @@ import system.windows.forms.MeasureItemEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MenuItem extends Menu  {
+public class MenuItem extends system.windows.forms.Menu  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

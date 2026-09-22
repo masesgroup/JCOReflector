@@ -58,7 +58,7 @@ import system.collections.IDictionaryImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ListBindingConverter extends TypeConverter  {
+public class ListBindingConverter extends system.componentmodel.TypeConverter  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

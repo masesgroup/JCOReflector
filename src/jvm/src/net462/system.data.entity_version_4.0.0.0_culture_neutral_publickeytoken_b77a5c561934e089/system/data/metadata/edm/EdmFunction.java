@@ -55,7 +55,7 @@ import system.data.metadata.edm.FunctionParameter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EdmFunction extends EdmType  {
+public class EdmFunction extends system.data.metadata.edm.EdmType  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

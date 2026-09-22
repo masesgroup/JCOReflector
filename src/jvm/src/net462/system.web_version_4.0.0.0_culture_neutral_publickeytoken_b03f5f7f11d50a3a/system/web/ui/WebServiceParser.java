@@ -54,7 +54,7 @@ import system.web.HttpContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebServiceParser extends SimpleWebHandlerParser  {
+public class WebServiceParser extends system.web.ui.SimpleWebHandlerParser  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

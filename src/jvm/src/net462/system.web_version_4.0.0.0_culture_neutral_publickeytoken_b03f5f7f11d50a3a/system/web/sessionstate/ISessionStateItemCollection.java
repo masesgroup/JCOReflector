@@ -54,7 +54,7 @@ import system.Array;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ISessionStateItemCollection extends IJCOBridgeReflected, ICollection, IEnumerable {
+public interface ISessionStateItemCollection extends IJCOBridgeReflected, system.collections.ICollection, org.mases.jcobridge.netreflection.IEnumerable {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

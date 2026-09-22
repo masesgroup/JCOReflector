@@ -57,7 +57,7 @@ import system.windows.media.Matrix;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Transform extends GeneralTransform  {
+public class Transform extends system.windows.media.GeneralTransform  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

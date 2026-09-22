@@ -54,7 +54,7 @@ import system.windows.media.media3d.Model3D;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModelUIElement3D extends UIElement3D  {
+public class ModelUIElement3D extends system.windows.UIElement3D  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

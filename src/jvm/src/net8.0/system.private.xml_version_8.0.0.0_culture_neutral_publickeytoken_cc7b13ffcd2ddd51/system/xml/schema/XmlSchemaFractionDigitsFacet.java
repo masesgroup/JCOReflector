@@ -53,7 +53,7 @@ import system.xml.schema.XmlSchemaNumericFacet;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaFractionDigitsFacet extends XmlSchemaNumericFacet  {
+public class XmlSchemaFractionDigitsFacet extends system.xml.schema.XmlSchemaNumericFacet  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

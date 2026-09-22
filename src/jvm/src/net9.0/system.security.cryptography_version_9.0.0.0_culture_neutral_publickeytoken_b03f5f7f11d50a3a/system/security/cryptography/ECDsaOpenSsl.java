@@ -55,7 +55,7 @@ import system.security.cryptography.SafeEvpPKeyHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ECDsaOpenSsl extends ECDsa  {
+public class ECDsaOpenSsl extends system.security.cryptography.ECDsa  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

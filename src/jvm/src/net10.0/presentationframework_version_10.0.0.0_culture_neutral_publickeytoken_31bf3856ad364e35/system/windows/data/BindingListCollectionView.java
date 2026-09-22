@@ -60,7 +60,7 @@ import system.collections.IComparerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BindingListCollectionView extends CollectionView implements system.collections.IComparer {
+public class BindingListCollectionView extends system.windows.data.CollectionView implements IComparer {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

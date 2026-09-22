@@ -56,7 +56,7 @@ import system.windows.media.GeometryCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GeometryGroup extends Geometry  {
+public class GeometryGroup extends system.windows.media.Geometry  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

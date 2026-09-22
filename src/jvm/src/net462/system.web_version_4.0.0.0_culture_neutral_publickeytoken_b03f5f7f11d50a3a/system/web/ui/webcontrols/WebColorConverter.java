@@ -56,7 +56,7 @@ import system.globalization.CultureInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebColorConverter extends ColorConverter  {
+public class WebColorConverter extends system.drawing.ColorConverter  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

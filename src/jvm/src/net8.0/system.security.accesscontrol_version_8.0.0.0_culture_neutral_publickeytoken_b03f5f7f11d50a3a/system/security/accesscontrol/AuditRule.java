@@ -54,7 +54,7 @@ import system.security.accesscontrol.AuditFlags;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AuditRule extends AuthorizationRule  {
+public class AuditRule extends system.security.accesscontrol.AuthorizationRule  {
     /**
      * Fully assembly qualified name: System.Security.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

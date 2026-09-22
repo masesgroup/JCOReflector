@@ -54,7 +54,7 @@ import system.transactions.Transaction;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TransactionEventArgs extends EventArgs  {
+public class TransactionEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Transactions.Local, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

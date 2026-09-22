@@ -57,7 +57,7 @@ import system.servicemodel.dispatcher.IClientMessageFormatterImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ClientOperation extends ClientOperationCompatBase  {
+public class ClientOperation extends system.servicemodel.dispatcher.ClientOperationCompatBase  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

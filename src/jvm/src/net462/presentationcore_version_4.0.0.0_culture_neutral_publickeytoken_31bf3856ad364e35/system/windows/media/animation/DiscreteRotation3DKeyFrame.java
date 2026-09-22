@@ -55,7 +55,7 @@ import system.windows.media.animation.KeyTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DiscreteRotation3DKeyFrame extends Rotation3DKeyFrame  {
+public class DiscreteRotation3DKeyFrame extends system.windows.media.animation.Rotation3DKeyFrame  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

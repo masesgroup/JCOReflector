@@ -56,7 +56,7 @@ import system.security.cryptography.KeySizes;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DSACng extends DSA  {
+public class DSACng extends system.security.cryptography.DSA  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

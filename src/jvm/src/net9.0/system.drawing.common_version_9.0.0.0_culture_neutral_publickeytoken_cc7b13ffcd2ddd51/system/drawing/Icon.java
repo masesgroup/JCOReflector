@@ -61,7 +61,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Icon extends MarshalByRefObject implements system.runtime.serialization.ISerializable, AutoCloseable {
+public class Icon extends system.MarshalByRefObject implements ISerializable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

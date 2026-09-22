@@ -57,7 +57,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class QuaternionAnimationUsingKeyFrames extends QuaternionAnimationBase implements system.windows.markup.IAddChild {
+public class QuaternionAnimationUsingKeyFrames extends system.windows.media.animation.QuaternionAnimationBase implements IAddChild {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

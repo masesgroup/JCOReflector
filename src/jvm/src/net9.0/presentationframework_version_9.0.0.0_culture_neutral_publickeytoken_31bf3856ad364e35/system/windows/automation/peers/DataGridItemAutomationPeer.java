@@ -63,7 +63,7 @@ import system.windows.automation.provider.IItemContainerProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridItemAutomationPeer extends ItemAutomationPeer implements system.windows.automation.provider.IInvokeProvider, system.windows.automation.provider.IScrollItemProvider, system.windows.automation.provider.IItemContainerProvider {
+public class DataGridItemAutomationPeer extends system.windows.automation.peers.ItemAutomationPeer implements IInvokeProvider, IScrollItemProvider, IItemContainerProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

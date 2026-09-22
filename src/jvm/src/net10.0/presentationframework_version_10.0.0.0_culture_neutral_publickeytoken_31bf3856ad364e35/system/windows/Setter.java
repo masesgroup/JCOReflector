@@ -58,7 +58,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Setter extends SetterBase implements system.componentmodel.ISupportInitialize {
+public class Setter extends system.windows.SetterBase implements ISupportInitialize {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

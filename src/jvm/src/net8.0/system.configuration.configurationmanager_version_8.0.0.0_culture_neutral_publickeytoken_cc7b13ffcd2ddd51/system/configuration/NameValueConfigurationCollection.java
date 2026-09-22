@@ -54,7 +54,7 @@ import system.configuration.NameValueConfigurationElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NameValueConfigurationCollection extends ConfigurationElementCollection  {
+public class NameValueConfigurationCollection extends system.configuration.ConfigurationElementCollection  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

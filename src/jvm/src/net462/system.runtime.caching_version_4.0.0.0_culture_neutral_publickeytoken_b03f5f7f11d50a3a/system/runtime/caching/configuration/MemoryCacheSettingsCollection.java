@@ -55,7 +55,7 @@ import system.configuration.ConfigurationElementCollectionType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MemoryCacheSettingsCollection extends ConfigurationElementCollection  {
+public class MemoryCacheSettingsCollection extends system.configuration.ConfigurationElementCollection  {
     /**
      * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

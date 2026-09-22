@@ -53,7 +53,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SpinWait extends ValueType  {
+public class SpinWait extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

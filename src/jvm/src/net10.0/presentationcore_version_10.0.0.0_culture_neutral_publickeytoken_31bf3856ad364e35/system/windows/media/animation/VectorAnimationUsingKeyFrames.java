@@ -57,7 +57,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class VectorAnimationUsingKeyFrames extends VectorAnimationBase implements system.windows.markup.IAddChild {
+public class VectorAnimationUsingKeyFrames extends system.windows.media.animation.VectorAnimationBase implements IAddChild {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

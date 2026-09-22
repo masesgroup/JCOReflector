@@ -57,7 +57,7 @@ import system.activities.presentation.WorkflowViewElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowViewService extends ViewService  {
+public class WorkflowViewService extends system.activities.presentation.services.ViewService  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

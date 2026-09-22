@@ -58,7 +58,7 @@ import system.xaml.permissions.XamlAccessLevel;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XamlObjectWriterSettings extends XamlWriterSettings  {
+public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

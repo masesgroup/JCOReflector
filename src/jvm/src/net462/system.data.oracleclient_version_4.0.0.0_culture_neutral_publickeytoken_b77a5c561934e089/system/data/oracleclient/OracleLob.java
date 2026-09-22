@@ -58,7 +58,7 @@ import system.data.oracleclient.OracleType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class OracleLob extends Stream  {
+public class OracleLob extends system.io.Stream  {
     /**
      * Fully assembly qualified name: System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

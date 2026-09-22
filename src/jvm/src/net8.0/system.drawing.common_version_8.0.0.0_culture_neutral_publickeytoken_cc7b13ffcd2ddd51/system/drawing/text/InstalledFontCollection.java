@@ -53,7 +53,7 @@ import system.drawing.text.FontCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InstalledFontCollection extends FontCollection  {
+public class InstalledFontCollection extends system.drawing.text.FontCollection  {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

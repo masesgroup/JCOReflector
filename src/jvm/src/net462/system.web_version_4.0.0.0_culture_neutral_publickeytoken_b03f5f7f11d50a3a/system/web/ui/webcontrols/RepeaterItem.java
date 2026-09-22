@@ -56,7 +56,7 @@ import system.web.ui.INamingContainerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RepeaterItem extends Control implements system.web.ui.INamingContainer {
+public class RepeaterItem extends system.web.ui.Control implements INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

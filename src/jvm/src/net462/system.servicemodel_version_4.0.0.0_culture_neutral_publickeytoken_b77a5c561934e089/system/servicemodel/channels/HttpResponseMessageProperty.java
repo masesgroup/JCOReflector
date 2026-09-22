@@ -42,8 +42,6 @@ import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
 import system.net.HttpStatusCode;
 import system.net.WebHeaderCollection;
-import system.servicemodel.channels.IMessageProperty;
-import system.servicemodel.channels.IMessagePropertyImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.servicemodel.channels.IMessagePropertyImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpResponseMessageProperty extends NetObject implements system.servicemodel.channels.IMessageProperty {
+public class HttpResponseMessageProperty extends NetObject implements IMessageProperty {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -56,7 +56,7 @@ import system.security.IPermissionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConfigurationPermissionAttribute extends CodeAccessSecurityAttribute  {
+public class ConfigurationPermissionAttribute extends system.security.permissions.CodeAccessSecurityAttribute  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

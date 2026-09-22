@@ -62,7 +62,7 @@ import system.xml.serialization.XmlMembersMapping;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlCodeExporter extends CodeExporter  {
+public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

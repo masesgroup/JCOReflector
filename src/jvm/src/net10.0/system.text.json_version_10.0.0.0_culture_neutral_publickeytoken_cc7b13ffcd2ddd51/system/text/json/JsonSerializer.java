@@ -45,7 +45,6 @@ import system.io.Stream;
 import system.text.json.JsonDocument;
 import system.text.json.JsonElement;
 import system.text.json.nodes.JsonNode;
-import system.text.json.Utf8JsonReader;
 import system.threading.tasks.Task;
 import system.io.pipelines.PipeWriter;
 import system.threading.CancellationToken;
@@ -448,51 +447,6 @@ public class JsonSerializer extends NetObject  {
         java.lang.Object retObjectDeserialize = null;
         try {
             retObjectDeserialize = classType.Invoke("Deserialize", node == null ? null : node.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            JCObject objDeserialize = (JCObject)retObjectDeserialize;
-            return new NetObject(objDeserialize);
-        } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject Deserialize(JCORefOut<Utf8JsonReader> reader, JsonTypeInfo jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.text.json.JsonException {
-        if (classType == null)
-            throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectDeserialize = null;
-        try {
-            retObjectDeserialize = classType.Invoke("Deserialize", reader.getJCRefOut(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
-            JCObject objDeserialize = (JCObject)retObjectDeserialize;
-            return new NetObject(objDeserialize);
-        } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject Deserialize(JCORefOut<Utf8JsonReader> reader, NetType returnType, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.text.json.JsonException {
-        if (classType == null)
-            throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectDeserialize = null;
-        try {
-            retObjectDeserialize = classType.Invoke("Deserialize", reader.getJCRefOut(), returnType == null ? null : returnType.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            JCObject objDeserialize = (JCObject)retObjectDeserialize;
-            return new NetObject(objDeserialize);
-        } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject Deserialize(JCORefOut<Utf8JsonReader> reader, NetType returnType, JsonSerializerContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.text.json.JsonException {
-        if (classType == null)
-            throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectDeserialize = null;
-        try {
-            retObjectDeserialize = classType.Invoke("Deserialize", reader.getJCRefOut(), returnType == null ? null : returnType.getJCOInstance(), context == null ? null : context.getJCOInstance());
             JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
         } catch (java.lang.ClassCastException cce) {

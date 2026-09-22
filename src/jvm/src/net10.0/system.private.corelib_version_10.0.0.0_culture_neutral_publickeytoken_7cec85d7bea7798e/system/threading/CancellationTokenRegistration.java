@@ -56,7 +56,7 @@ import system.threading.CancellationToken;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CancellationTokenRegistration extends ValueType implements AutoCloseable {
+public class CancellationTokenRegistration extends system.ValueType implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

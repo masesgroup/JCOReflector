@@ -67,7 +67,7 @@ import system.xml.XmlNodeType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XDocument extends XContainer  {
+public class XDocument extends system.xml.linq.XContainer  {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

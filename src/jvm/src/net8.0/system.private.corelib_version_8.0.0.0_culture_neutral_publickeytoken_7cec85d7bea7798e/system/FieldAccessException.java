@@ -52,7 +52,7 @@ import system.MemberAccessException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FieldAccessException extends MemberAccessException {
+public class FieldAccessException extends system.MemberAccessException {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

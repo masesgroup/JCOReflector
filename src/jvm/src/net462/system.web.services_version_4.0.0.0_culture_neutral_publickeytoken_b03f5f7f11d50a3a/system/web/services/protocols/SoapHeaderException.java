@@ -54,7 +54,7 @@ import system.web.services.protocols.SoapFaultSubCode;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SoapHeaderException extends SoapException {
+public class SoapHeaderException extends system.web.services.protocols.SoapException {
     /**
      * Fully assembly qualified name: System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

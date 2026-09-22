@@ -68,7 +68,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IDuplexChannel extends IJCOBridgeReflected, IInputChannel, IChannel, ICommunicationObject, IOutputChannel {
+public interface IDuplexChannel extends IJCOBridgeReflected, system.servicemodel.channels.IInputChannel, system.servicemodel.channels.IChannel, system.servicemodel.ICommunicationObject, system.servicemodel.channels.IOutputChannel {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

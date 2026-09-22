@@ -54,7 +54,7 @@ import system.windows.automation.provider.ProviderOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IRawElementProviderAdviseEvents extends IJCOBridgeReflected, IRawElementProviderSimple {
+public interface IRawElementProviderAdviseEvents extends IJCOBridgeReflected, system.windows.automation.provider.IRawElementProviderSimple {
     /**
      * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -53,8 +53,6 @@ import system.windows.forms.HScrollBar;
 import system.windows.forms.VScrollBar;
 import system.workflow.componentmodel.design.ActivityDesigner;
 import system.EventHandler;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 import system.windows.forms.IMessageFilter;
 import system.windows.forms.IMessageFilterImplementation;
 
@@ -71,7 +69,7 @@ import system.windows.forms.IMessageFilterImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowView extends UserControl implements system.IServiceProvider, system.windows.forms.IMessageFilter {
+public class WorkflowView extends UserControl implements IServiceProvider, IMessageFilter {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

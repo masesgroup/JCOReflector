@@ -60,7 +60,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebProxy extends NetObject implements system.runtime.serialization.ISerializable {
+public class WebProxy extends NetObject implements ISerializable {
     /**
      * Fully assembly qualified name: System.Net.WebProxy, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

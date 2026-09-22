@@ -57,7 +57,7 @@ import microsoft.build.framework.ITaskHostImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ICancelableTask extends IJCOBridgeReflected, ITask {
+public interface ICancelableTask extends IJCOBridgeReflected, microsoft.build.framework.ITask {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

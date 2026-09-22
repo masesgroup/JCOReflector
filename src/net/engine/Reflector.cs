@@ -1076,12 +1076,8 @@ namespace MASES.JCOReflector.Engine
                     if (inter == typeof(IEnumerable))
                     {
                         packageBaseClass = Const.SpecialNames.NetIEnumerable + Const.SpecialNames.ImplementationTrailer;
-                        if (!hasGenericEnumerable)
+                        if (!EnableGenerics || !hasGenericEnumerable)
                         {
-                            // IEnumerable<T>, se presente in questa lista, estende già la IEnumerable speciale
-                            // nel proprio file — ri-elencarla qui crea un secondo percorso verso Iterable che può
-                            // disaccordarsi dal primo (raw vs Iterable<NetObject>). packageBaseClass va comunque
-                            // sempre assegnata: è lei a far ereditare GetEnumerator() dalla classe helper.
                             packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                             imports.Add(inter);
                         }
@@ -1089,7 +1085,7 @@ namespace MASES.JCOReflector.Engine
                     else if (inter == typeof(IEnumerator))
                     {
                         packageBaseClass = Const.SpecialNames.NetIEnumerator + Const.SpecialNames.ImplementationTrailer;
-                        if (!hasGenericEnumerator)
+                        if (!EnableGenerics || !hasGenericEnumerator)
                         {
                             packageBaseInterface += string.Format(", {0}", "org.mases.jcobridge.netreflection." + inter.Name);
                             imports.Add(inter);
@@ -1097,7 +1093,10 @@ namespace MASES.JCOReflector.Engine
                     }
                     else
                     {
-                        packageBaseInterface += string.Format(", {0}", BuildQualifiedGenericTypeName(inter, imports));
+                        var nameToAdd = EnableGenerics
+                            ? BuildQualifiedGenericTypeName(inter, imports)
+                            : inter.ToPackageName() + "." + inter.GetJavaClassName(item.Assembly);
+                        packageBaseInterface += string.Format(", {0}", nameToAdd);
                         imports.Add(inter);
                     }
                 }
@@ -1304,31 +1303,34 @@ namespace MASES.JCOReflector.Engine
             {
                 foreach (var interfaceType in implementableInterfaces)
                 {
-                    // If any abstract member of this interface is NOT satisfied by a public method on
-                    // the type (e.g. satisfied only via an explicit interface implementation, which the
-                    // CLR always represents as a private target method), Java cannot see this class as
-                    // genuinely implementing the interface — declaring "implements InterfaceType" here
-                    // would then require Java to find a matching public method that doesn't exist,
-                    // and the class would fail to compile unless it were abstract. Such a member is
-                    // still reachable in the generated code through the ToIXxx(...) deprecated-stub
-                    // path built elsewhere, so skip only the "implements" declaration, not the type.
-                    bool hasUnsatisfiedMember;
-                    try
+                    if (EnableGenerics)
                     {
-                        var map = item.GetInterfaceMap(interfaceType);
-                        hasUnsatisfiedMember = map.TargetMethods.Any(m => m == null || !m.IsPublic);
-                    }
-                    catch (ArgumentException)
-                    {
-                        // GetInterfaceMap can throw for some interfaces on certain runtimes/assemblies
-                        // (e.g. an interface implemented only by a base type in a different assembly);
-                        // fall back to the previous behavior rather than blocking the class entirely.
-                        hasUnsatisfiedMember = false;
+                        // If any abstract member of this interface is NOT satisfied by a public method on
+                        // the type (e.g. satisfied only via an explicit interface implementation, which the
+                        // CLR always represents as a private target method), Java cannot see this class as
+                        // genuinely implementing the interface. Still reachable through the ToIXxx(...)
+                        // deprecated-stub path built elsewhere, so skip only the "implements" declaration.
+                        // Gated behind EnableGenerics: this check did not exist before this feature, and
+                        // EnableGenerics=false must reproduce the exact pre-generics output.
+                        bool hasUnsatisfiedMember;
+                        try
+                        {
+                            var map = item.GetInterfaceMap(interfaceType);
+                            hasUnsatisfiedMember = map.TargetMethods.Any(m => m == null || !m.IsPublic);
+                        }
+                        catch (ArgumentException)
+                        {
+                            hasUnsatisfiedMember = false;
+                        }
+
+                        if (hasUnsatisfiedMember) continue;
                     }
 
-                    if (hasUnsatisfiedMember) continue;
-
-                    var nameToAdd = BuildQualifiedGenericTypeName(interfaceType, imports);
+                    // Pre-generics behavior when the flag is off: plain name relying on the import below —
+                    // no package qualification, since none was needed before this feature existed.
+                    var nameToAdd = EnableGenerics
+                        ? BuildQualifiedGenericTypeName(interfaceType, imports)
+                        : interfaceType.GetJavaClassName(interfaceType.Assembly);
 
                     if (string.IsNullOrEmpty(implementsStr))
                     {

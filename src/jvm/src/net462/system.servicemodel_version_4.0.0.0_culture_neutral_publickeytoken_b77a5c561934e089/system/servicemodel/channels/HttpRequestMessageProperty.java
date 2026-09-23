@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
 import system.net.WebHeaderCollection;
-import system.servicemodel.channels.IMessageProperty;
-import system.servicemodel.channels.IMessagePropertyImplementation;
 
 
 /**
@@ -57,7 +55,7 @@ import system.servicemodel.channels.IMessagePropertyImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpRequestMessageProperty extends NetObject implements IMessageProperty {
+public class HttpRequestMessageProperty extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

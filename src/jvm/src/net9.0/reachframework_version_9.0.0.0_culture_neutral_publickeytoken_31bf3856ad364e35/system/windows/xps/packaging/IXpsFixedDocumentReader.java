@@ -60,7 +60,7 @@ import system.windows.xps.packaging.XpsThumbnail;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IXpsFixedDocumentReader extends IJCOBridgeReflected, IDocumentStructureProvider {
+public interface IXpsFixedDocumentReader extends IJCOBridgeReflected, system.windows.xps.packaging.IDocumentStructureProvider {
     /**
      * Fully assembly qualified name: ReachFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

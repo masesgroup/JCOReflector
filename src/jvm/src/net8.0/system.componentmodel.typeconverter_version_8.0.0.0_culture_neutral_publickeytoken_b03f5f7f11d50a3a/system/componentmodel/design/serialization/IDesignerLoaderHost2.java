@@ -71,7 +71,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IDesignerLoaderHost2 extends IJCOBridgeReflected, IDesignerLoaderHost, IDesignerHost, IServiceContainer, IServiceProvider {
+public interface IDesignerLoaderHost2 extends IJCOBridgeReflected, system.componentmodel.design.serialization.IDesignerLoaderHost, system.componentmodel.design.IDesignerHost, system.componentmodel.design.IServiceContainer, system.IServiceProvider {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

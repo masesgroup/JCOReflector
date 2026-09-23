@@ -88,7 +88,7 @@ import system.web.ui.webcontrols.IPostBackContainerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DetailsView extends CompositeDataBoundControl implements system.web.ui.webcontrols.ICallbackContainer, system.web.ui.ICallbackEventHandler, system.web.ui.IPostBackEventHandler, system.web.ui.webcontrols.IPostBackContainer {
+public class DetailsView extends CompositeDataBoundControl implements ICallbackContainer, ICallbackEventHandler, IPostBackEventHandler, IPostBackContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

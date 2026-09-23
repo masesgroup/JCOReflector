@@ -56,7 +56,7 @@ import system.windows.controls.primitives.IContainItemStorageImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GroupItem extends ContentControl implements system.windows.controls.primitives.IContainItemStorage {
+public class GroupItem extends ContentControl implements IContainItemStorage {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

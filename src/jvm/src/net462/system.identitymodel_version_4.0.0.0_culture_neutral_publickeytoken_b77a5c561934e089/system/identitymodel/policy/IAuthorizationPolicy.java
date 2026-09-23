@@ -55,7 +55,7 @@ import system.identitymodel.claims.ClaimSet;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IAuthorizationPolicy extends IJCOBridgeReflected, IAuthorizationComponent {
+public interface IAuthorizationPolicy extends IJCOBridgeReflected, system.identitymodel.policy.IAuthorizationComponent {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

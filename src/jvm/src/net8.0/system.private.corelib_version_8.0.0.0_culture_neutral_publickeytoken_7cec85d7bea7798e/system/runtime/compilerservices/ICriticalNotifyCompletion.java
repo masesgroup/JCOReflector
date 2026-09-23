@@ -54,7 +54,7 @@ import system.Action;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ICriticalNotifyCompletion extends IJCOBridgeReflected, INotifyCompletion {
+public interface ICriticalNotifyCompletion extends IJCOBridgeReflected, system.runtime.compilerservices.INotifyCompletion {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

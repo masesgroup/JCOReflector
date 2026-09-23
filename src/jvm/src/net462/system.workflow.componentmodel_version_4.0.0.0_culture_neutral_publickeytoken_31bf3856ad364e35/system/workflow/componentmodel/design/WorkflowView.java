@@ -53,8 +53,6 @@ import system.windows.forms.HScrollBar;
 import system.windows.forms.VScrollBar;
 import system.workflow.componentmodel.design.ActivityDesigner;
 import system.EventHandler;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 import system.windows.forms.IMessageFilter;
 import system.windows.forms.IMessageFilterImplementation;
 

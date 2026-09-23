@@ -39,7 +39,6 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.MemberInfo;
-import system.TypedReference;
 import system.reflection.FieldInfo;
 import system.RuntimeFieldHandle;
 import system.RuntimeTypeHandle;
@@ -191,21 +190,6 @@ public class FieldInfo extends MemberInfo  {
         }
     }
 
-    public NetObject GetValueDirect(TypedReference obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new java.lang.UnsupportedOperationException("classInstance is null.");
-        java.lang.Object retObjectGetValueDirect = null;
-        try {
-            retObjectGetValueDirect = classInstance.Invoke("GetValueDirect", obj == null ? null : obj.getJCOInstance());
-            JCObject objGetValueDirect = (JCObject)retObjectGetValueDirect;
-            return new NetObject(objGetValueDirect);
-        } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValueDirect != null ? retObjectGetValueDirect.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static FieldInfo GetFieldFromHandle(RuntimeFieldHandle handle, RuntimeTypeHandle declaringType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -308,16 +292,6 @@ public class FieldInfo extends MemberInfo  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", obj == null ? null : obj.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void SetValueDirect(TypedReference obj, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new java.lang.UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetValueDirect", obj == null ? null : obj.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

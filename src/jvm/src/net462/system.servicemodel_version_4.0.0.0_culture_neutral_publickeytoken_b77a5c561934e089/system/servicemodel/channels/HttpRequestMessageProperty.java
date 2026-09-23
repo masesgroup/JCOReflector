@@ -41,8 +41,6 @@ import java.util.ArrayList;
 import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
 import system.net.WebHeaderCollection;
-import system.servicemodel.channels.IMessageProperty;
-import system.servicemodel.channels.IMessagePropertyImplementation;
 
 
 /**

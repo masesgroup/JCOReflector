@@ -44,8 +44,6 @@ import system.IServiceProviderImplementation;
 import system.workflow.componentmodel.design.ITypeFilterProvider;
 import system.workflow.componentmodel.design.ITypeFilterProviderImplementation;
 import system.workflow.componentmodel.compiler.TypeProvider;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 
 
 /**

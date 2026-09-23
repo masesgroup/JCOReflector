@@ -55,7 +55,7 @@ import system.diagnostics.metrics.MeterOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IMeterFactory extends IJCOBridgeReflected, IDisposable {
+public interface IMeterFactory extends IJCOBridgeReflected, system.IDisposable {
     /**
      * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

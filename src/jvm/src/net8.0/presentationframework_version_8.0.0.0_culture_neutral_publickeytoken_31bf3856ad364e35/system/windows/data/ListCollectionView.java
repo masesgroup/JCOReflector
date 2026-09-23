@@ -46,8 +46,6 @@ import system.collections.IComparerImplementation;
 import system.componentmodel.NewItemPlaceholderPosition;
 import system.componentmodel.SortDescriptionCollection;
 import system.windows.data.GroupDescriptionSelectorCallback;
-import system.collections.IComparer;
-import system.collections.IComparerImplementation;
 
 
 /**

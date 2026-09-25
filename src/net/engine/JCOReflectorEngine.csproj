@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>MASES.JCOReflectorEngine</AssemblyName>
     <RootNamespace>MASES.JCOReflector.Engine</RootNamespace>
@@ -43,20 +43,33 @@
     </ItemGroup>
   </Target-->
   <ItemGroup>
+    <EmbeddedResource Include="JCObjectReflectorClassGenericConstructor.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassGeneric.template" />
     <EmbeddedResource Include="JCObjectReflectorClassEnumerable.template" />
     <EmbeddedResource Include="JCObjectReflectorClassEvent.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeGetPropertyWithCastToNumber.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeGetPropertyArray.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeMethodWithCastToNumber.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeMethodArray.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassObjectGetPropertyGeneric.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassObjectGetPropertyArrayGeneric.template" />
     <EmbeddedResource Include="JCObjectReflectorClassObjectGetPropertyArray.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassObjectMethodGeneric.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassObjectMethodArrayGeneric.template" />
     <EmbeddedResource Include="JCObjectReflectorClassObjectMethodArray.template" />
+    <EmbeddedResource Include="JCObjectReflectorGenericEnumerator.template" />
     <EmbeddedResource Include="JCObjectReflectorEnumeratorNativeNext.template" />
     <EmbeddedResource Include="JCObjectReflectorEnumeratorObjectNext.template" />
     <EmbeddedResource Include="JCObjectReflectorEnumerator.template" />
+    <EmbeddedResource Include="JCObjectReflectorGenericInterfaceClass.template" />
+    <EmbeddedResource Include="JCObjectReflectorNativeGenericDelegateClass.template" />
+    <EmbeddedResource Include="JCObjectReflectorNonVoidGenericDelegateInterface.template" />
+    <EmbeddedResource Include="JCObjectReflectorObjectGenericDelegateClass.template" />
     <EmbeddedResource Include="JCObjectReflectorObjectDelegateClass.template" />
     <EmbeddedResource Include="JCObjectReflectorNativeDelegateClass.template" />
     <EmbeddedResource Include="JCObjectReflectorNonVoidDelegateInterface.template" />
+    <EmbeddedResource Include="JCObjectReflectorVoidGenericDelegateInterface.template" />
+    <EmbeddedResource Include="JCObjectReflectorVoidGenericDelegateClass.template" />
     <EmbeddedResource Include="JCObjectReflectorVoidDelegateInterface.template" />
     <EmbeddedResource Include="JCObjectReflectorVoidDelegateClass.template" />
     <EmbeddedResource Include="JCOManifest.template" />
@@ -115,8 +128,5 @@
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.401" PrivateAssets="All" />
   </ItemGroup>
 </Project>

@@ -250,10 +250,13 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 
 ### Not implemented in reflector:
 
-- Generic types
 - Method decoration (Attributes)
 - Unsafe methods
 - Fields
+
+### Generics support (experimental)
+
+.NET generic types and members (classes, interfaces, delegates) can optionally be reflected into parameterized Java generics, instead of being discarded as before. The feature is opt-in and has known limitations driven by real differences between .NET's reified generics and Java's type erasure (some .NET generic APIs — `ref struct`s, "generic math" interfaces, method-level type parameters — have no representable Java equivalent and are intentionally skipped). See [Generics support](src/documentation/articles/generics.md) for the full picture.
 
 ### Limitations
 

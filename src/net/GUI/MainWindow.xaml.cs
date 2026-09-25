@@ -105,6 +105,16 @@ namespace MASES.JCOReflector.GUI
         public static readonly DependencyProperty EnableRefOutParametersProperty =
             DependencyProperty.Register("EnableRefOutParameters", typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
 
+        public bool EnableGenerics
+        {
+            get { return (bool)GetValue(EnableGenericsProperty); }
+            set { SetValue(EnableGenericsProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for EnableAbstract.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty EnableGenericsProperty =
+            DependencyProperty.Register("EnableGenerics", typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
+
         public MainWindow()
         {
             InitializeComponent();
@@ -181,6 +191,7 @@ namespace MASES.JCOReflector.GUI
                 EnableInheritance = cbEnableInheritance.IsChecked.Value,
                 EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value,
                 EnableRefOutParameters = cbEnableRefOutParameters.IsChecked.Value,
+                EnableGenerics = cbEnableGenerics.IsChecked.Value,
                 AvoidDisableInternalNamespace = cbAvoidDisableInternalNamespace.IsChecked.Value,
                 DryRun = cbDryRun.IsChecked.Value
             };

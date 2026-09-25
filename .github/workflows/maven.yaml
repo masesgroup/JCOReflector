@@ -77,12 +77,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v7
 
-      - name: Install gpg secret key
-        run: |
-          cat <(echo -e "${{ secrets.MAVEN_GPG_PRIVATE_KEY }}") | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
-        shell: bash
-
       - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: |
@@ -122,7 +116,7 @@ jobs:
         run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.9 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
-        run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress "-Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }}" "-Dgpg.arguments=--pinentry-mode=loopback" --batch-mode deploy
+        run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress "-Dgpg-passphrase-env-var=${{ env.MAVEN_GPG_PASSPHRASE }}" "-Dgpg.arguments=--pinentry-mode=loopback" --batch-mode deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME_CHANGE_2025 }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN_CHANGE_2025 }}

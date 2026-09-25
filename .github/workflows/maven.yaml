@@ -125,6 +125,9 @@ jobs:
       - name: Debug settings.xml
         run: cat ~/.m2/settings.xml
 
+      - name: List imported GPG keys
+        run: gpg --list-secret-keys --keyid-format LONG
+
       - name: Test GPG passphrase directly
         shell: bash
         run: |

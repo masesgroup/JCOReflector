@@ -122,6 +122,17 @@ jobs:
         shell: bash
         run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.9 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
+      - name: Debug settings.xml
+        run: cat ~/.m2/settings.xml
+
+      - name: Test GPG passphrase directly
+        shell: bash
+        run: |
+          echo "test" > test.txt
+          gpg --batch --pinentry-mode loopback --passphrase "$MAVEN_GPG_PASSPHRASE" --local-user 679A5993CCB1CF99 --output test.sig --sign test.txt && echo "PASSPHRASE OK"
+        env:
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
         run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress --batch-mode deploy
         env:

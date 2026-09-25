@@ -71,7 +71,7 @@ jobs:
         run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.9 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
-        run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress "-Dgpg.arguments=--pinentry-mode=loopback" --batch-mode deploy
+        run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} "-Dgpg.arguments=--pinentry-mode=loopback" --batch-mode deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME_CHANGE_2025 }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN_CHANGE_2025 }}

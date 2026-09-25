@@ -87,7 +87,7 @@ jobs:
         shell: bash
         run: |
           echo "test" > test.txt
-          gpg --batch --pinentry-mode loopback --passphrase "$MAVEN_GPG_PASSPHRASE" --local-user 679A5993CCB1CF99 --output test.sig --sign test.txt && echo "PASSPHRASE OK"
+          gpg --batch --pinentry-mode loopback --passphrase "$MAVEN_GPG_PASSPHRASE" --local-user A47E094E88A8E688 --output test.sig --sign test.txt && echo "PASSPHRASE OK"
         env:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 

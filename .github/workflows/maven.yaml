@@ -117,7 +117,8 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
           JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 # see https://stackoverflow.com/questions/3017695/how-can-i-configure-encoding-in-maven
 
-      - name: Install local file to be used within Javadoc section of generated POM 
+      - name: Install local file to be used within Javadoc section of generated POM
+        shell: bash
         run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.9 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central

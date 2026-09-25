@@ -123,7 +123,7 @@ jobs:
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
         shell: bash
-        run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress --batch-mode -Dgpg.homedir="C:\Users\runneradmin\.gnupg" deploy
+        run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress --batch-mode -Dgpg.homedir="/c/Users/runneradmin/.gnupg" -Dgpg.arguments="--pinentry-mode=loopback" deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME_CHANGE_2025 }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN_CHANGE_2025 }}

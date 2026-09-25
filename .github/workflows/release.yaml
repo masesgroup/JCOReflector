@@ -56,10 +56,15 @@ jobs:
           java-version: 8
           cache: 'maven'
           server-id: central # Value of the distributionManagement/repository/id field of the pom.xml, old value was ossrh
-          server-username: MAVEN_USERNAME # env variable for username in deploy
-          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          server-username-env-var: ${{ env.MAVEN_USERNAME }} # env variable for username in deploy
+          server-password-env-var: ${{ env.MAVEN_CENTRAL_TOKEN }} # env variable for token in deploy
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
-          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+          gpg-passphrase-env-var: ${{ env.MAVEN_GPG_PASSPHRASE }} # env variable for GPG private key passphrase
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME_CHANGE_2025 }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN_CHANGE_2025 }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+          JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 # see https://stackoverflow.com/questions/3017695/how-can-i-configure-encoding-in-maven
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
@@ -67,7 +72,7 @@ jobs:
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
         shell: bash
-        run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        run: mvn --file ./src/jvm/src/${{ matrix.framework }}.xml --no-transfer-progress --batch-mode -Dgpg-passphrase-env-var=${{ env.MAVEN_GPG_PASSPHRASE }} deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME_CHANGE_2025 }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN_CHANGE_2025 }}

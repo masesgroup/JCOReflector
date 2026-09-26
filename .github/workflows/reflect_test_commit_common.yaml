@@ -435,7 +435,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
 
       - name: Build Java test source file for ${{ matrix.framework }}
-        run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
+        run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
@@ -446,6 +446,30 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -732,7 +756,31 @@ jobs:
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Java test source file
-        run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
+        run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}

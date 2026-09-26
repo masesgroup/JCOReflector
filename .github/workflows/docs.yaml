@@ -255,7 +255,11 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           branch-suffix: short-commit-hash
-          add-paths: .\*.*
+          add-paths: |
+            docs/net8.0
+            docs/net9.0
+            docs/net10.0
+            docs/net462
           commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           title: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           body: Automated changes by GitHub action

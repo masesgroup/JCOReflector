@@ -122,9 +122,6 @@ jobs:
         shell: bash
         run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.9 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
-      - name: Debug settings.xml
-        run: cat ~/.m2/settings.xml
-
       - name: List imported GPG keys
         run: gpg --list-secret-keys --keyid-format LONG
 

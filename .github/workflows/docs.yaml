@@ -256,6 +256,7 @@ jobs:
         with:
           branch-suffix: short-commit-hash
           add-paths: |
+            docs
             docs/net8.0
             docs/net9.0
             docs/net10.0

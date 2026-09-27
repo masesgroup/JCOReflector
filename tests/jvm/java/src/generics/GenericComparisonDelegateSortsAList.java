@@ -61,20 +61,26 @@ public class GenericComparisonDelegateSortsAList {
      * distinct from the generic-parameter-return case.
      */
     static void testGenericComparisonDelegateSortsAList() throws Throwable {
-        List_1<system.Object> list = new List_1<system.Object>() {};
-        // ... populate with a handful of comparable elements ...
+        List_1<system.Object> list = new List_1<system.Object>() {
+            @Override
+            public void Insert(int index, system.Object item) throws Throwable {
+                super.Insert(index, item);
+            }
+        };
 
-        IComparer_1<system.Object> comparer = new IComparer_1Implementation<system.Object>(list.getJCOInstance()) {
+        IComparer_1<system.Object> comparer = new IComparer_1<system.Object>() {
             @Override
             public int Compare(system.Object x, system.Object y) throws Throwable {
-                if (x == null && y == null) return 0;
-                if (x == null) return -1;
-                if (y == null) return 1;
-                return 0; 
+                return 0;
             }
+
+            @Override public String getJCOAssemblyName() { return List_1.assemblyFullName; }
+            @Override public String getJCOClassName() { return "System.Collections.Generic.IComparer`1"; }
+            @Override public String getJCOObjectName() { return "System.Collections.Generic.IComparer`1"; }
+            @Override public java.lang.Object getJCOInstance() { return null; }
+            @Override public JCType getJCOType() { return null; }
         };
 
         list.Sort(comparer);
     }
-
 }

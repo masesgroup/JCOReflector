@@ -62,11 +62,14 @@ public class GenericDictionaryWithTwoTypeArguments {
      * raw, unparameterized form (see the "Bound limitations" section of the generics article).
      */
     static void testGenericDictionaryWithTwoTypeArguments() throws Throwable {
-        // CORREZIONE: Forniamo l'override esplicito di Add per risolvere il Name Clash delle firme
         Dictionary_2<system.Object, system.Object> dict = new Dictionary_2<system.Object, system.Object>() {
             @Override
             public void Add(system.Object key, system.Object value) throws Throwable {
                 super.Add(key, value);
+            }
+            @Override
+            public boolean ContainsKey(system.Object key) throws Throwable {
+                return super.ContainsKey(key);
             }
         };
         system.Object key = new system.Object();

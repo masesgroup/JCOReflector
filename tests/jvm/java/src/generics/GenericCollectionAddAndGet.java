@@ -60,14 +60,20 @@ public class GenericCollectionAddAndGet {
      * collection whose element type is itself a reflected class.
      */
     static void testGenericCollectionAddAndGet() throws Throwable {
-        List_1<system.Object> list = new List_1<system.Object>() {};
+        List_1<system.Object> list = new List_1<system.Object>() {
+            @Override
+            public void Insert(int index, system.Object item) throws Throwable {
+                super.Insert(index, item);
+            }
+        };
+
         system.Object item = new system.Object();
         list.Add(item);
+        
         if (list.getCount() != 1) throw new AssertionError("Expected 1 element after Add");
         
         system.Object[] array = list.ToArray();
         system.Object fetched = array[0];
         if (fetched == null) throw new AssertionError("Expected a non-null element back");
     }
-
 }

@@ -62,9 +62,15 @@ public class GenericDictionaryWithTwoTypeArguments {
      * raw, unparameterized form (see the "Bound limitations" section of the generics article).
      */
     static void testGenericDictionaryWithTwoTypeArguments() throws Throwable {
-        Dictionary_2<Object, Object> dict = new Dictionary_2<Object, Object>() {};
-        Object key = new Object();
-        Object value = new Object();
+        // CORREZIONE: Forniamo l'override esplicito di Add per risolvere il Name Clash delle firme
+        Dictionary_2<system.Object, system.Object> dict = new Dictionary_2<system.Object, system.Object>() {
+            @Override
+            public void Add(system.Object key, system.Object value) throws Throwable {
+                super.Add(key, value);
+            }
+        };
+        system.Object key = new system.Object();
+        system.Object value = new system.Object();
         dict.Add(key, value);
         if (dict.getCount() != 1) throw new AssertionError("Expected 1 entry after Add");
     }

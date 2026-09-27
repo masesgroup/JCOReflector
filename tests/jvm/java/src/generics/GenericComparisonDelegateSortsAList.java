@@ -61,9 +61,9 @@ public class GenericComparisonDelegateSortsAList {
      * distinct from the generic-parameter-return case.
      */
     static void testGenericComparisonDelegateSortsAList() throws Throwable {
-        List_1<Object> list = new List_1<Object>() {};
+        List_1<system.Object> list = new List_1<system.Object>() {};
         // ... populate with a handful of comparable elements ...
-        Comparison_1<Object> comparison = new Comparison_1<Object>(
+        Comparison_1<system.Object> comparison = new Comparison_1<system.Object>(
             (a, b) -> 0 /* replace with a real comparison once a concrete comparable type is chosen */
         );
         list.Sort(comparison);

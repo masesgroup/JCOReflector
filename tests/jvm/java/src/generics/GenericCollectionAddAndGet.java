@@ -60,20 +60,25 @@ public class GenericCollectionAddAndGet {
      * collection whose element type is itself a reflected class.
      */
     static void testGenericCollectionAddAndGet() throws Throwable {
-        List_1<system.Object> list = new List_1<system.Object>() {
+        List_1<system.Guid> list = new List_1<system.Guid>() {
             @Override
-            public void Insert(int index, system.Object item) throws Throwable {
+            public void Insert(int index, system.Guid item) throws Throwable {
                 super.Insert(index, item);
             }
         };
 
-        system.Object item = new system.Object();
-        list.Add(item);
-        
+        system.Guid item = new system.Guid();
+		try
+		{
+			list.Add(item);
+        }
+		catch (java.lang.UnsupportedOperationException e) {
+			throw e;
+		}
         if (list.getCount() != 1) throw new AssertionError("Expected 1 element after Add");
         
-        system.Object[] array = list.ToArray();
-        system.Object fetched = array[0];
+        system.Guid[] array = list.ToArray();
+        system.Guid fetched = array[0];
         if (fetched == null) throw new AssertionError("Expected a non-null element back");
     }
 }

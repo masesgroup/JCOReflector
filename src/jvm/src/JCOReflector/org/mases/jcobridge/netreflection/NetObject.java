@@ -105,7 +105,6 @@ public class NetObject implements IJCOBridgeReflected {
         String fullGenericClrName = clrGenericNameCache.get(currentClass);
         
         if (fullGenericClrName == null) {
-            JCOBridgeInstance.EventLog("Building generic arguments for " + currentClass.toString());
             java.lang.reflect.Type superclass = currentClass.getGenericSuperclass();
             
             if (superclass instanceof java.lang.reflect.ParameterizedType) {
@@ -139,7 +138,6 @@ public class NetObject implements IJCOBridgeReflected {
                 
                 // Compose the final name (e.g., "System.Collections.Generic.List`1[System.String]")
                 fullGenericClrName = genericJCOClassName + clrGenericsSpec.toString();
-                JCOBridgeInstance.EventLog("Generic arguments for " + currentClass.toString() + " built " + fullGenericClrName);
                 clrGenericNameCache.put(currentClass, fullGenericClrName);
             } else {
                 throw new IllegalArgumentException(

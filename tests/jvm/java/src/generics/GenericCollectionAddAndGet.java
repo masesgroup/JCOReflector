@@ -67,7 +67,7 @@ public class GenericCollectionAddAndGet {
             }
         };
 
-        system.Guid item = new system.Guid();
+        system.Guid item = new system.Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}");
 		try
 		{
 			list.Add(item);
@@ -80,5 +80,6 @@ public class GenericCollectionAddAndGet {
         system.Guid[] array = list.ToArray();
         system.Guid fetched = array[0];
         if (fetched == null) throw new AssertionError("Expected a non-null element back");
+		if (!fetched.Equals(item)) throw new AssertionError("Expected a non-null element back");
     }
 }

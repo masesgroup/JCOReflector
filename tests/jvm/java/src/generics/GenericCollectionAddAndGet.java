@@ -60,11 +60,11 @@ public class GenericCollectionAddAndGet {
      * collection whose element type is itself a reflected class.
      */
     static void testGenericCollectionAddAndGet() throws Throwable {
-        List_1<NetObject> list = new List_1<NetObject>() {};
-        NetObject item = new NetObject();
+        List_1<Object> list = new List_1<Object>() {};
+        Object item = new Object();
         list.Add(item);
         if (list.getCount() != 1) throw new AssertionError("Expected 1 element after Add");
-        NetObject fetched = list.getItem(0);
+        Object fetched = list.getItem(0);
         if (fetched == null) throw new AssertionError("Expected a non-null element back");
     }
 }

@@ -62,9 +62,9 @@ public class GenericDictionaryWithTwoTypeArguments {
      * raw, unparameterized form (see the "Bound limitations" section of the generics article).
      */
     static void testGenericDictionaryWithTwoTypeArguments() throws Throwable {
-        Dictionary_2<NetObject, NetObject> dict = new Dictionary_2<NetObject, NetObject>() {};
-        NetObject key = new NetObject();
-        NetObject value = new NetObject();
+        Dictionary_2<Object, Object> dict = new Dictionary_2<Object, Object>() {};
+        Object key = new Object();
+        Object value = new Object();
         dict.Add(key, value);
         if (dict.getCount() != 1) throw new AssertionError("Expected 1 entry after Add");
     }

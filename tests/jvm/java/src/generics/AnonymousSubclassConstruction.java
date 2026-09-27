@@ -61,7 +61,7 @@ public class AnonymousSubclassConstruction {
      * afterwards. This is the idiom every other generic-construction test below relies on.
      */
     static void testAnonymousSubclassConstruction() throws Throwable {
-        List_1<NetObject> list = new List_1<NetObject>() {};
+        List_1<Object> list = new List_1<Object>() {};
         if (list == null) throw new AssertionError("Expected a non-null List_1 instance");
     }
 }

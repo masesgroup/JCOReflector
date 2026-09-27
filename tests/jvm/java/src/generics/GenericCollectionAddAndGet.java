@@ -60,12 +60,14 @@ public class GenericCollectionAddAndGet {
      * collection whose element type is itself a reflected class.
      */
     static void testGenericCollectionAddAndGet() throws Throwable {
-        // CORREZIONE: Specifichiamo system.Object per risolvere l'ambiguità con java.lang.Object
         List_1<system.Object> list = new List_1<system.Object>() {};
         system.Object item = new system.Object();
         list.Add(item);
         if (list.getCount() != 1) throw new AssertionError("Expected 1 element after Add");
-        system.Object fetched = list.getItem(0);
+        
+        system.Object[] array = list.ToArray();
+        system.Object fetched = array[0];
         if (fetched == null) throw new AssertionError("Expected a non-null element back");
     }
+
 }

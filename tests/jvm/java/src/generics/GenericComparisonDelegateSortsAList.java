@@ -63,9 +63,18 @@ public class GenericComparisonDelegateSortsAList {
     static void testGenericComparisonDelegateSortsAList() throws Throwable {
         List_1<system.Object> list = new List_1<system.Object>() {};
         // ... populate with a handful of comparable elements ...
-        Comparison_1<system.Object> comparison = new Comparison_1<system.Object>(
-            (a, b) -> 0 /* replace with a real comparison once a concrete comparable type is chosen */
-        );
-        list.Sort(comparison);
+
+        IComparer_1<system.Object> comparer = new IComparer_1Implementation<system.Object>(list.getJCOInstance()) {
+            @Override
+            public int Compare(system.Object x, system.Object y) throws Throwable {
+                if (x == null && y == null) return 0;
+                if (x == null) return -1;
+                if (y == null) return 1;
+                return 0; 
+            }
+        };
+
+        list.Sort(comparer);
     }
+
 }

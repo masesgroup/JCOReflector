@@ -435,6 +435,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
 
       - name: Build Java test source file for ${{ matrix.framework }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - name: Prepare extra argument
@@ -605,6 +606,7 @@ jobs:
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Scala test source file for ${{ matrix.framework }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
         shell: cmd
         run: |
           cd ./tests/jvm/scala
@@ -756,6 +758,7 @@ jobs:
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Java test source file
+        continue-on-error: ${{ inputs.ForceExecution == true }}
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
@@ -907,6 +910,7 @@ jobs:
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Scala test source file
+        continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
           source "$HOME/.sdkman/bin/sdkman-init.sh"
           mkdir ./tests/jvm/scala/output
@@ -1046,6 +1050,7 @@ jobs:
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Scala test source file
+        continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
           mkdir ./tests/jvm/scala/output
           ${{ env.SCALA_BIN }}/scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*

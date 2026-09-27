@@ -98,13 +98,14 @@ public class NetObject implements IJCOBridgeReflected {
      * @param genericJCOClassName The full name of the .NET generic type (e.g., "System.Collections.Generic.List`1")
      * @param constructorArgs The parameters to pass to the CLR constructor
      */
-    protected void initializeGenericArguments(String genericJCOClassName, Object... constructorArgs) throws Throwable {
+    protected JCObject initializeGenericArguments(String genericJCOClassName, Object... constructorArgs) throws Throwable {
         Class<?> currentClass = getClass();
         
         // Check the cache to see if this anonymous class has already been analyzed
         String fullGenericClrName = clrGenericNameCache.get(currentClass);
         
         if (fullGenericClrName == null) {
+            JCOBridgeInstance.EventLog("Building generic arguments for " + currentClass.toString());
             java.lang.reflect.Type superclass = currentClass.getGenericSuperclass();
             
             if (superclass instanceof java.lang.reflect.ParameterizedType) {
@@ -138,6 +139,7 @@ public class NetObject implements IJCOBridgeReflected {
                 
                 // Compose the final name (e.g., "System.Collections.Generic.List`1[System.String]")
                 fullGenericClrName = genericJCOClassName + clrGenericsSpec.toString();
+                JCOBridgeInstance.EventLog("Generic arguments for " + currentClass.toString() + " built " + fullGenericClrName);
                 clrGenericNameCache.put(currentClass, fullGenericClrName);
             } else {
                 throw new IllegalArgumentException(
@@ -149,8 +151,9 @@ public class NetObject implements IJCOBridgeReflected {
         
         // Get the concrete type dynamically from the bridge and invoke NewObject correctly
         try {
+            
             JCType concreteType = JCOBridgeInstance.getInstance(getJCOAssemblyName()).GetType(fullGenericClrName);
-            this.classInstance = (JCObject) concreteType.NewObject(constructorArgs);
+            return (JCObject) concreteType.NewObject(constructorArgs);
         } catch (JCNativeException e) {
             throw translateException(e);
         }

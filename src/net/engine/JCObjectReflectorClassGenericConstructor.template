@@ -3,7 +3,8 @@
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             // Pass the constructor arguments directly into the initialization method
-            initializeGenericArguments(getJCOClassName()CTOR_NEWOBJECT_PARAMETERS);
+            JCObject instance = initializeGenericArguments(getJCOClassName()CTOR_NEWOBJECT_PARAMETERS);
+            setJCOInstance(instance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

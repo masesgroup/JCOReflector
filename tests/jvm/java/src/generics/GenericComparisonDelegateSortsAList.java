@@ -61,15 +61,27 @@ public class GenericComparisonDelegateSortsAList {
      * Comparison<T> returns int, which required its own "Native" generic delegate template
      * distinct from the generic-parameter-return case.
      */
-	static void testGenericComparisonDelegateSortsAList() throws Throwable {
-		List_1<system.Object> list = new List_1<system.Object>() {
-			@Override
-			public void Insert(int index, system.Object item) throws Throwable {
-				super.Insert(index, item);
-			}
-		};
+    static void testGenericComparisonDelegateSortsAList() throws Throwable {
+        List_1<system.Object> list = new List_1<system.Object>() {
+            @Override
+            public void Insert(int index, system.Object item) throws Throwable {
+                super.Insert(index, item);
+            }
+        };
 
-		Comparison_1<system.Object> comparison = new Comparison_1<system.Object>((a, b) -> 0);
-		list.Sort(comparison);
-	}
+        IComparer_1<system.Object> comparer = new IComparer_1<system.Object>() {
+            @Override
+            public int Compare(system.Object x, system.Object y) throws Throwable {
+                return 0;
+            }
+
+            @Override public String getJCOAssemblyName() { return List_1.assemblyFullName; }
+            @Override public String getJCOClassName() { return "System.Collections.Generic.IComparer`1"; }
+            @Override public String getJCOObjectName() { return "System.Collections.Generic.IComparer`1"; }
+            @Override public java.lang.Object getJCOInstance() { return null; }
+            @Override public JCType getJCOType() { return null; }
+        };
+
+        list.Sort(comparer);
+    }
 }

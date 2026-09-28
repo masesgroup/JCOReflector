@@ -68,13 +68,7 @@ public class GenericCollectionAddAndGet {
         };
 
         system.Guid item = new system.Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}");
-		try
-		{
-			list.Add(item);
-        }
-		catch (java.lang.UnsupportedOperationException e) {
-			throw e;
-		}
+		list.Add(item);
         if (list.getCount() != 1) throw new AssertionError("Expected 1 element after Add");
         
         system.Guid[] array = list.ToArray();

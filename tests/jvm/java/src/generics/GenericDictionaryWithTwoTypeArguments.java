@@ -62,16 +62,7 @@ public class GenericDictionaryWithTwoTypeArguments {
      * raw, unparameterized form (see the "Bound limitations" section of the generics article).
      */
     static void testGenericDictionaryWithTwoTypeArguments() throws Throwable {
-        Dictionary_2<system.Object, system.Object> dict = new Dictionary_2<system.Object, system.Object>() {
-            @Override
-            public void Add(system.Object key, system.Object value) throws Throwable {
-                super.Add(key, value);
-            }
-            @Override
-            public boolean ContainsKey(system.Object key) throws Throwable {
-                return super.ContainsKey(key);
-            }
-        };
+        Dictionary_2<system.Object, system.Object> dict = new Dictionary_2<system.Object, system.Object>() {};
         system.Object key = new system.Object();
         system.Object value = new system.Object();
         dict.Add(key, value);

@@ -60,12 +60,7 @@ public class GenericCollectionAddAndGet {
      * collection whose element type is itself a reflected class.
      */
     static void testGenericCollectionAddAndGet() throws Throwable {
-        List_1<system.Guid> list = new List_1<system.Guid>() {
-            @Override
-            public void Insert(int index, system.Guid item) throws Throwable {
-                super.Insert(index, item);
-            }
-        };
+        List_1<system.Guid> list = new List_1<system.Guid>() {};
 
         system.Guid item = new system.Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}");
 		list.Add(item);

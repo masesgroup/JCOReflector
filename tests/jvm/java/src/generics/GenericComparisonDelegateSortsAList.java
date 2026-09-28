@@ -62,12 +62,7 @@ public class GenericComparisonDelegateSortsAList {
      * distinct from the generic-parameter-return case.
      */
     static void testGenericComparisonDelegateSortsAList() throws Throwable {
-        List_1<system.Object> list = new List_1<system.Object>() {
-            @Override
-            public void Insert(int index, system.Object item) throws Throwable {
-                super.Insert(index, item);
-            }
-        };
+        List_1<system.Object> list = new List_1<system.Object>() {};
 
         IComparer_1<system.Object> comparer = new IComparer_1<system.Object>() {
             @Override

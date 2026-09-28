@@ -60,10 +60,18 @@ public class RemoveByKeyRenameOnKeyedCollection {
      * types, which would otherwise erase to the same signature as the inherited
      * Collection<TItem>.Remove(TItem)/Contains(TItem).
      */
-    static void testRemoveByKeyRenameOnKeyedCollection() throws Throwable {
-        // Replace with a concrete KeyedCollection<TKey,TItem>-derived reflected type once one
-        // is chosen for the test assemblies; this only documents which method names to call.
-        // collection.RemoveByKey(key);
-        // collection.ContainsByKey(key);
-    }
+	static void testRemoveByKeyRenameOnKeyedCollection() throws Exception {
+		ClassLoader cl = RemoveByKeyRenameOnKeyedCollection.class.getClassLoader();
+		Class<?> keyed = Class.forName("system.collections.objectmodel.KeyedCollection_2", false, cl);
+		Class<?> collection = Class.forName("system.collections.objectmodel.Collection_1", false, cl);
+
+		keyed.getMethod("RemoveByKey", IJCOBridgeReflected.class);
+		keyed.getMethod("ContainsByKey", IJCOBridgeReflected.class);
+
+		// Remove/Contains must now resolve to the base class, i.e. not be hidden by the keyed overloads.
+		if (keyed.getMethod("Remove", IJCOBridgeReflected.class).getDeclaringClass() != collection)
+			throw new AssertionError("KeyedCollection_2 still redeclares Remove(T)");
+		if (keyed.getMethod("Contains", IJCOBridgeReflected.class).getDeclaringClass() != collection)
+			throw new AssertionError("KeyedCollection_2 still redeclares Contains(T)");
+	}
 }

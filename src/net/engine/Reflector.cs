@@ -512,7 +512,7 @@ namespace MASES.JCOReflector.Engine
                 // bug not yet root-caused — revisit before removing.
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.ServiceModel\.Syndication\.SyndicationElementExtensionCollection$", new string[] { "Add" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.ICollection`1$", new string[] { "Add", "Remove" });
-                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.IEqualityComparer`1$", new string[] { "Equals" });
+                //Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.IEqualityComparer`1$", new string[] { "Equals" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Immutable\.ImmutableArray`1$", new string[] { "AddRange" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Runtime\.Intrinsics\.X86\.Sse41$", new string[] { "Extract" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Guid$", new string[] { "TryFormat" });
@@ -3504,7 +3504,9 @@ namespace MASES.JCOReflector.Engine
                 {
                     if (isDelegateParamGeneric)
                     {
-                        string genericConverterLine = $"{paramType} {paramName} = (argsFromJCOBridge[{paramCounter}] == null) ? null : ({paramType})argsFromJCOBridge[{paramCounter}];";
+                        int genericArgIndex = Array.IndexOf(item.GetGenericArguments(), parameter.ParameterType);
+                        string genericConverterLine = $"{paramType} {paramName} = (argsFromJCOBridge[{paramCounter}] == null) ? null : " +
+                            $"NetGenericHelper.<{paramType}>instantiate(NetGenericHelper.resolveTypeArguments(getClass()), {genericArgIndex}, argsFromJCOBridge[{paramCounter}]);";
                         converterBlock.AppendLine("            " + genericConverterLine);
                     }
                     else

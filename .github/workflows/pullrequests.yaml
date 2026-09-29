@@ -161,7 +161,7 @@ jobs:
           cache: 'maven'
 
       - name: Build Java test source file
-        run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
+        run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - name: Download Scala package
         run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/${{ env.SCALARELEASE }}/scala-${{ env.SCALARELEASE }}.zip

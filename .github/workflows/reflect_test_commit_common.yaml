@@ -79,7 +79,7 @@ on:
       SPECIAL_SETTINGS_PASSWORD:
         required: true
 env:
-    SCALARELEASE: 2.13.13
+    SCALARELEASE: 2.13.18
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
@@ -205,7 +205,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Download Scala package
-        run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/${{ env.SCALARELEASE }}/scala-${{ env.SCALARELEASE }}.zip
+        run: C:\msys64\usr\bin\wget.exe https://github.com/scala/scala/releases/download/v${{ env.SCALARELEASE }}/scala-${{ env.SCALARELEASE }}.zip
 
       - name: Expand Scala package
         run: Expand-Archive -LiteralPath '.\scala-${{ env.SCALARELEASE }}.zip' -DestinationPath .\bin\ -Force
@@ -374,6 +374,21 @@ jobs:
             jdk_version: 11
           - os: windows-11-arm
             jdk_version: 17
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: temurin
+            jdk_version: 25
           - jdk_vendor: microsoft
             jdk_version: 8
           - jdk_vendor: oracle
@@ -527,6 +542,21 @@ jobs:
             jdk_version: 11
           - os: windows-11-arm
             jdk_version: 17
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: temurin
+            jdk_version: 25
           - jdk_vendor: microsoft
             jdk_version: 8
           - jdk_vendor: oracle

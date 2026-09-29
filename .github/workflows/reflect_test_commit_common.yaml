@@ -79,7 +79,7 @@ on:
       SPECIAL_SETTINGS_PASSWORD:
         required: true
 env:
-    SCALARELEASE: 2.13.13
+    SCALARELEASE: 2.13.18
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:

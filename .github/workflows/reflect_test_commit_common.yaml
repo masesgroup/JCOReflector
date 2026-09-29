@@ -198,7 +198,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Download Scala package
-        run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/${{ env.SCALARELEASE }}/scala-${{ env.SCALARELEASE }}.zip
+        run: C:\msys64\usr\bin\wget.exe https://github.com/scala/scala/releases/download/v${{ env.SCALARELEASE }}/scala-${{ env.SCALARELEASE }}.zip
 
       - name: Expand Scala package
         run: Expand-Archive -LiteralPath '.\scala-${{ env.SCALARELEASE }}.zip' -DestinationPath .\bin\ -Force

@@ -55,7 +55,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RangeHeaderValue extends NetObject implements ICloneable {
+public class RangeHeaderValue extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

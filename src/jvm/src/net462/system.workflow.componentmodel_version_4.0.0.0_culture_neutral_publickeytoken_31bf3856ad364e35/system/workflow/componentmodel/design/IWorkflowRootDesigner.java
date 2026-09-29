@@ -62,7 +62,7 @@ import system.workflow.componentmodel.design.CompositeActivityDesigner;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IWorkflowRootDesigner extends IJCOBridgeReflected, IRootDesigner, IDesigner, IDisposable {
+public interface IWorkflowRootDesigner extends IJCOBridgeReflected, system.componentmodel.design.IRootDesigner, system.componentmodel.design.IDesigner, system.IDisposable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

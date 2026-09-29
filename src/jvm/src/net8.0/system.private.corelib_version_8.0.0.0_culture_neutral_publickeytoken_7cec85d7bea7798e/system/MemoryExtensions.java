@@ -38,8 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.text.SpanLineEnumerator;
-import system.text.SpanRuneEnumerator;
 
 
 /**

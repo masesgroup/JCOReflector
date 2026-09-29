@@ -60,7 +60,7 @@ import system.web.ui.IFilterResolutionServiceImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TemplateControl extends Control implements system.web.ui.INamingContainer, system.web.ui.IFilterResolutionService {
+public class TemplateControl extends Control implements INamingContainer, IFilterResolutionService {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

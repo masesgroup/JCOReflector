@@ -984,7 +984,7 @@ namespace MASES.JCOReflector.Engine
             {
                 foreach (var interfaceType in implementableInterfaces)
                 {
-                    var nameToAdd = interfaceType.ToPackageName() + "." + interfaceType.Name;
+                    var nameToAdd = interfaceType.Name;
 
                     if (string.IsNullOrEmpty(implementsStr))
                     {

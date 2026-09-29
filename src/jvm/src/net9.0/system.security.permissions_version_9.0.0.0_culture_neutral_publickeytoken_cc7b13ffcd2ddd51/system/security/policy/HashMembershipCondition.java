@@ -64,7 +64,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HashMembershipCondition extends NetObject implements system.runtime.serialization.IDeserializationCallback, system.runtime.serialization.ISerializable {
+public class HashMembershipCondition extends NetObject implements IDeserializationCallback, ISerializable {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

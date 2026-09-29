@@ -60,7 +60,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TypeBrowserDialog extends Form implements system.IServiceProvider {
+public class TypeBrowserDialog extends Form implements IServiceProvider {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

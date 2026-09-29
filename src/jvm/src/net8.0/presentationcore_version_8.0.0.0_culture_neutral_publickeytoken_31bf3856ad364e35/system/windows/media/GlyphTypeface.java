@@ -63,7 +63,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GlyphTypeface extends NetObject implements system.componentmodel.ISupportInitialize {
+public class GlyphTypeface extends NetObject implements ISupportInitialize {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -190,7 +190,7 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
     
     // Methods section
     
-    public Stream GetFontStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotSupportedException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.IOException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.OverflowException, system.FormatException {
+    public Stream GetFontStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotSupportedException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.IOException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFontStream = null;

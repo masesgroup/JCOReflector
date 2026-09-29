@@ -65,7 +65,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextBox extends TextBoxBase implements system.windows.markup.IAddChild {
+public class TextBox extends TextBoxBase implements IAddChild {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -266,7 +266,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public int GetFirstVisibleLineIndex() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.componentmodel.Win32Exception {
+    public int GetFirstVisibleLineIndex() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.io.FileFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFirstVisibleLineIndex = null;
@@ -306,7 +306,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public int GetLastVisibleLineIndex() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.componentmodel.Win32Exception {
+    public int GetLastVisibleLineIndex() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetLastVisibleLineIndex = null;

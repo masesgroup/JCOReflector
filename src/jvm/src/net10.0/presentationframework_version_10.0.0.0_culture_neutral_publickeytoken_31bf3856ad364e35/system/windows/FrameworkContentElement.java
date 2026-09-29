@@ -76,7 +76,7 @@ import system.windows.markup.IQueryAmbientImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FrameworkContentElement extends ContentElement implements system.windows.markup.IQueryAmbient {
+public class FrameworkContentElement extends ContentElement implements IQueryAmbient {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -420,7 +420,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
         }
     }
 
-    public void UpdateDefaultStyle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.Win32Exception, system.net.WebException, system.io.IOException, system.InvalidCastException {
+    public void UpdateDefaultStyle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.componentmodel.Win32Exception, system.io.FileFormatException, system.net.WebException, system.io.IOException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

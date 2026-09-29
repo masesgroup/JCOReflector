@@ -59,7 +59,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FixedDocumentSequence extends FrameworkContentElement implements system.windows.markup.IAddChild, system.IServiceProvider {
+public class FixedDocumentSequence extends FrameworkContentElement implements IAddChild, IServiceProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -152,7 +152,7 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
 
     // Constructors section
     
-    public FixedDocumentSequence() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException, system.net.WebException, system.NotImplementedException, system.io.IOException, system.ApplicationException, system.io.FileFormatException, system.NullReferenceException, system.MulticastNotSupportedException {
+    public FixedDocumentSequence() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException, system.io.FileFormatException, system.net.WebException, system.NotImplementedException, system.io.IOException, system.ApplicationException, system.NullReferenceException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

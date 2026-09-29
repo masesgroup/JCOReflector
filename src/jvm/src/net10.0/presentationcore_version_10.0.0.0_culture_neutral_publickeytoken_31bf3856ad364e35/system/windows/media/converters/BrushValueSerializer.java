@@ -190,7 +190,7 @@ public class BrushValueSerializer extends ValueSerializer  {
         }
     }
 
-    public NetObject ConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.UriFormatException, system.net.WebException, system.io.FileNotFoundException, system.ArrayTypeMismatchException {
+    public NetObject ConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.UriFormatException, system.io.FileFormatException, system.net.WebException, system.io.FileNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConvertFromString = null;

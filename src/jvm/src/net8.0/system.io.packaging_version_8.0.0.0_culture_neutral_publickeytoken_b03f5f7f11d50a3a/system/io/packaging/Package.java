@@ -67,7 +67,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Package extends NetObject implements system.IDisposable, AutoCloseable {
+public class Package extends NetObject implements IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.IO.Packaging, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

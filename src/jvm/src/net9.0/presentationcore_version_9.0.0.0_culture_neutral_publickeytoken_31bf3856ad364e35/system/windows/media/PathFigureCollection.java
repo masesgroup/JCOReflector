@@ -60,7 +60,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PathFigureCollection extends Animatable implements system.IFormattable {
+public class PathFigureCollection extends Animatable implements IFormattable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

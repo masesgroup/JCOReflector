@@ -59,7 +59,7 @@ import system.windows.automation.provider.IItemContainerProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CalendarAutomationPeer extends FrameworkElementAutomationPeer implements system.windows.automation.provider.IItemContainerProvider {
+public class CalendarAutomationPeer extends FrameworkElementAutomationPeer implements IItemContainerProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

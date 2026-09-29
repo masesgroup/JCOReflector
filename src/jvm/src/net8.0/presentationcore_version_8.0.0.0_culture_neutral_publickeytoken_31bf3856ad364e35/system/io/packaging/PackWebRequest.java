@@ -178,7 +178,7 @@ public class PackWebRequest extends WebRequest  {
         }
     }
 
-    public WebRequest GetInnerRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.net.WebException, system.RankException, system.componentmodel.Win32Exception, system.net.CookieException {
+    public WebRequest GetInnerRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.net.WebException, system.RankException, system.componentmodel.Win32Exception, system.net.CookieException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetInnerRequest = null;
@@ -193,7 +193,7 @@ public class PackWebRequest extends WebRequest  {
         }
     }
 
-    public WebResponse GetResponse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.net.WebException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UriFormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.RankException, system.componentmodel.Win32Exception, system.net.CookieException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.io.IOException {
+    public WebResponse GetResponse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.net.WebException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UriFormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.RankException, system.componentmodel.Win32Exception, system.net.CookieException, system.FormatException, system.net.sockets.SocketException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetResponse = null;

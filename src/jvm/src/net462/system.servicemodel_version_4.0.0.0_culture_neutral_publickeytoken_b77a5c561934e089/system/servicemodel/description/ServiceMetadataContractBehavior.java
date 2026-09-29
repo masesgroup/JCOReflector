@@ -59,7 +59,7 @@ import system.servicemodel.description.IContractBehaviorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ServiceMetadataContractBehavior extends NetObject implements system.servicemodel.description.IContractBehavior {
+public class ServiceMetadataContractBehavior extends NetObject implements IContractBehavior {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

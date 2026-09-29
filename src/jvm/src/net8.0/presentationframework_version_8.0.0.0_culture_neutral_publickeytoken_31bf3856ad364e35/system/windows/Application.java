@@ -77,7 +77,7 @@ import system.windows.markup.IQueryAmbientImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Application extends DispatcherObject implements system.windows.markup.IQueryAmbient {
+public class Application extends DispatcherObject implements IQueryAmbient {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -264,7 +264,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public NetObject FindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.net.WebException, system.InvalidCastException, system.OverflowException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.security.SecurityException, system.windows.ResourceReferenceKeyNotFoundException {
+    public NetObject FindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.io.FileFormatException, system.net.WebException, system.InvalidCastException, system.OverflowException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.security.SecurityException, system.windows.ResourceReferenceKeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindResource = null;
@@ -294,7 +294,7 @@ public class Application extends DispatcherObject implements system.windows.mark
         }
     }
 
-    public NetObject TryFindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.net.WebException, system.InvalidCastException, system.OverflowException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.security.SecurityException {
+    public NetObject TryFindResource(NetObject resourceKey) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.io.FileFormatException, system.net.WebException, system.InvalidCastException, system.OverflowException, system.globalization.CultureNotFoundException, system.reflection.AmbiguousMatchException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryFindResource = null;

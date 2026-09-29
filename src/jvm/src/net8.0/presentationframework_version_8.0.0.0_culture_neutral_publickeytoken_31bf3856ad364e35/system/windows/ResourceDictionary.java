@@ -434,7 +434,7 @@ public class ResourceDictionary extends NetObjectEnumerable  {
         }
     }
 
-    public void setSource(Uri Source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException {
+    public void setSource(Uri Source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.OutOfMemoryException, system.io.FileFormatException, system.NotSupportedException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.FormatException, system.net.sockets.SocketException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

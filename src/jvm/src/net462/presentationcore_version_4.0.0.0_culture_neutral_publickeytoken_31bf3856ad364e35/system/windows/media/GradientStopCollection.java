@@ -60,7 +60,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GradientStopCollection extends Animatable implements system.IFormattable {
+public class GradientStopCollection extends Animatable implements IFormattable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -289,7 +289,7 @@ public class GradientStopCollection extends Animatable implements system.IFormat
         }
     }
 
-    public static GradientStopCollection Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.net.WebException, system.NotImplementedException, system.io.FileNotFoundException, system.NotSupportedException, system.AccessViolationException {
+    public static GradientStopCollection Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.FormatException, system.NullReferenceException, system.OverflowException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileFormatException, system.net.WebException, system.NotImplementedException, system.io.FileNotFoundException, system.NotSupportedException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;

@@ -55,7 +55,7 @@ import system.collections.IEqualityComparerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XNodeEqualityComparer extends NetObject implements system.collections.IEqualityComparer {
+public class XNodeEqualityComparer extends NetObject implements IEqualityComparer {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

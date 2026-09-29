@@ -59,7 +59,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FixedDocumentSequence extends FrameworkContentElement implements system.windows.markup.IAddChild, system.IServiceProvider {
+public class FixedDocumentSequence extends FrameworkContentElement implements IAddChild, IServiceProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -152,7 +152,7 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
 
     // Constructors section
     
-    public FixedDocumentSequence() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.net.WebException, system.io.IOException, system.ApplicationException, system.io.FileFormatException, system.MulticastNotSupportedException {
+    public FixedDocumentSequence() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.io.FileFormatException, system.net.WebException, system.io.IOException, system.ApplicationException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

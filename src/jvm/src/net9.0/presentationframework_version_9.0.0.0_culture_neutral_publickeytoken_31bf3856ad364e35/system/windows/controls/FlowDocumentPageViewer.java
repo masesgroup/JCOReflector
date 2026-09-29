@@ -192,7 +192,7 @@ public class FlowDocumentPageViewer extends DocumentViewerBase  {
         }
     }
 
-    public void OnApplyTemplate() throws Throwable, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.ApplicationException, system.FormatException, system.UriFormatException, system.OverflowException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException {
+    public void OnApplyTemplate() throws Throwable, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.io.FileFormatException, system.ApplicationException, system.FormatException, system.UriFormatException, system.OverflowException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -65,7 +65,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CollectionViewSource extends DependencyObject implements system.componentmodel.ISupportInitialize, system.windows.IWeakEventListener {
+public class CollectionViewSource extends DependencyObject implements ISupportInitialize, IWeakEventListener {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

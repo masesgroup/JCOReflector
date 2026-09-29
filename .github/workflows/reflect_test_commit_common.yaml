@@ -374,6 +374,21 @@ jobs:
             jdk_version: 11
           - os: windows-11-arm
             jdk_version: 17
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: temurin
+            jdk_version: 25
           - jdk_vendor: microsoft
             jdk_version: 8
           - jdk_vendor: oracle
@@ -503,6 +518,21 @@ jobs:
             jdk_version: 11
           - os: windows-11-arm
             jdk_version: 17
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: temurin
+            jdk_version: 25
           - jdk_vendor: microsoft
             jdk_version: 8
           - jdk_vendor: oracle

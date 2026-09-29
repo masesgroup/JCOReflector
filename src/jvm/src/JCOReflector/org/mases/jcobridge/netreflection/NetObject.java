@@ -98,7 +98,7 @@ public class NetObject implements IJCOBridgeReflected {
      * @param genericJCOClassName The full name of the .NET generic type (e.g., "System.Collections.Generic.List`1")
      * @param constructorArgs The parameters to pass to the CLR constructor
      */
-    protected void initializeGenericArguments(String genericJCOClassName, Object... constructorArgs) throws Throwable {
+    protected JCObject initializeGenericArguments(String genericJCOClassName, Object... constructorArgs) throws Throwable {
         Class<?> currentClass = getClass();
         
         // Check the cache to see if this anonymous class has already been analyzed
@@ -149,8 +149,9 @@ public class NetObject implements IJCOBridgeReflected {
         
         // Get the concrete type dynamically from the bridge and invoke NewObject correctly
         try {
+            
             JCType concreteType = JCOBridgeInstance.getInstance(getJCOAssemblyName()).GetType(fullGenericClrName);
-            this.classInstance = (JCObject) concreteType.NewObject(constructorArgs);
+            return (JCObject) concreteType.NewObject(constructorArgs);
         } catch (JCNativeException e) {
             throw translateException(e);
         }

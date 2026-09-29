@@ -600,9 +600,16 @@ namespace MASES.JCOReflector.Engine
                             JobManager.AppendToConsole(LogLevel.Error, errorData);
                         }
 
-                        if (checkForErrors && (errorData.Contains(" errors") || outputData.Contains(" errors")))
+                        if (checkForErrors)
                         {
-                            throw new InvalidOperationException("Invoked process ended reporting errors.");
+                            string pattern = @"(\d+)\s*(errors?)";
+                            Match match = Regex.Match(errorData, pattern, RegexOptions.IgnoreCase);
+                            if (match.Success)
+                            {
+                                string errNumber = match.Groups[1].Value;
+                                string errIdentifier = match.Groups[2].Value;
+                                throw new InvalidOperationException($"Invoked process ended reporting {errNumber} {errIdentifier}.");
+                            }
                         }
                     }
                 }

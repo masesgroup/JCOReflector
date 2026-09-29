@@ -603,7 +603,7 @@ namespace MASES.JCOReflector.Engine
                         if (checkForErrors)
                         {
                             string pattern = @"(\d+)\s*(errors?)";
-                            Match match = Regex.Match(errorData, pattern, RegexOptions.IgnoreCase);
+                            System.Text.RegularExpressions.Match match = System.Text.RegularExpressions.Regex.Match(errorData, pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                             if (match.Success)
                             {
                                 string errNumber = match.Groups[1].Value;

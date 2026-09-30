@@ -69,21 +69,25 @@ public class GenericComparisonDelegateSortsAList {
 
 		Comparison_1<system.Object> comparison = new Comparison_1<system.Object>() {
 			@Override public java.lang.String getJCOClassName() {
-				java.lang.System.out.println("@Override public String getJCOClassName()");
-				return closedName + ", " + Comparison_1.assemblyFullName;
+				java.lang.String delegateClassName = closedName + ", " + Comparison_1.assemblyFullName;
+				java.lang.System.out.println("@Override public String getJCOClassName() returns " + delegateClassName);
+				return delegateClassName;
 			}
 			@Override public java.lang.String getJCOObjectName() {
-				java.lang.System.out.println("@Override public String getJCOObjectName()");
-				return closedName + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+				java.lang.String delegateObjectName = closedName + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+				java.lang.System.out.println("@Override public String getJCOObjectName() returns " + delegateObjectName);
+				return delegateObjectName;
 			}
 			@Override public java.lang.String getDelegateTypeName() {
-				java.lang.System.out.println("@Override public String getDelegateTypeName()");
-				return closedName + ", " + Comparison_1.assemblyFullName;
+				java.lang.String delegateTypeName = closedName + ", " + Comparison_1.assemblyFullName;
+				java.lang.System.out.println("@Override public String getDelegateTypeName() returns " + delegateTypeName);
+				return delegateTypeName;
 			}
 			@Override public JCType getDelegateType() {
 				try {
-					java.lang.System.out.println("@Override public JCType getDelegateType()");
-					return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(getDelegateTypeName());
+					java.lang.String delegateTypeName = getDelegateTypeName();
+					java.lang.System.out.println("@Override public JCType getDelegateType() for " + delegateTypeName);
+					return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(delegateTypeName);
 				} catch (Throwable t) { throw new IllegalStateException(t); }
 			}
 			@Override public int Invoke(system.Object x, system.Object y) {

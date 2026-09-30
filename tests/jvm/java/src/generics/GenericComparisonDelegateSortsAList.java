@@ -73,7 +73,7 @@ public class GenericComparisonDelegateSortsAList {
 			}
 			@Override public JCType getDelegateType() {
 				try {
-					return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(closedName);
+					return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(getDelegateTypeName());
 				} catch (Throwable t) { throw new IllegalStateException(t); }
 			}
 			@Override public int Invoke(system.Object x, system.Object y) {

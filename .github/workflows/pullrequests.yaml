@@ -174,5 +174,12 @@ jobs:
         run: |
           cd ./tests/jvm/scala
           mkdir output
-          ..\..\..\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
+          ..\..\..\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/generics/* ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
 
+      - name: Build Kotlin test source file
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force ./tests/jvm/kotlin/output | Out-Null
+          $cp = (Get-ChildItem ./bin/${{ matrix.framework }} -Filter *.jar -Recurse | ForEach-Object FullName) -join ';'
+          $src = Get-ChildItem ./tests/jvm/kotlin/src/main/kotlin -Filter *.kt -Recurse | ForEach-Object FullName
+          kotlinc -cp $cp -include-runtime -d ./tests/jvm/kotlin/output/kotlintests.jar $src

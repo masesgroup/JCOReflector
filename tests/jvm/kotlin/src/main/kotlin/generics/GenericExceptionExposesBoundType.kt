@@ -21,35 +21,37 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
+package generics
 
-package generics;
-
-import org.mases.jcobridge.netreflection.*;
-
-import system.*;
-import system.collections.generic.*;
-import system.collections.objectmodel.*;
+import org.mases.jcobridge.netreflection.*
+import system.*
+import system.collections.generic.*
+import system.collections.objectmodel.*
+import kotlin.system.exitProcess
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
- * <p>
+ * 
+ * 
  * Each method is a self-contained, independent check for one specific mechanism discussed
  * while this feature was implemented. They are written as plain static methods on purpose,
  * so they can be dropped into whatever test harness the project actually uses (JUnit, plain
- * {@code main}, or something else) without depending on a particular framework.
- * <p>
+ * `main`, or something else) without depending on a particular framework.
+ * 
+ * 
  */
-public class GenericExceptionExposesBoundType {
-
-    public static void main(String[] args) throws Throwable {
-        JCOReflector.setCommandLineArgs(args);
+object GenericExceptionExposesBoundType {
+    @Throws(Throwable::class)
+    @JvmStatic
+    fun main(args: Array<kotlin.String>) {
+        JCOReflector.setCommandLineArgs(args)
         try {
-            testGenericExceptionExposesBoundType();
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
-            System.exit(-1);
+            testGenericExceptionExposesBoundType()
+            Console.WriteLine("Exiting with success")
+            Environment.Exit(0)
+        } catch (tre: Throwable) {
+            tre.printStackTrace()
+            exitProcess(-1)
         }
     }
 
@@ -58,20 +60,24 @@ public class GenericExceptionExposesBoundType {
      * FaultException<TDetail>) can never become a generic Java class (a generic class cannot
      * extend Throwable), so its class-level type parameter is always exposed as its bound,
      * IJCOBridgeReflected, rather than as a real type variable.
-     */
-	static void testGenericExceptionExposesBoundType() throws Throwable {
-		Class<?> ex;
-		try {
-			ex = Class.forName("system.servicemodel.FaultException_1", false,
-							   GenericExceptionExposesBoundType.class.getClassLoader());
-		} catch (ClassNotFoundException notAvailable) {
-			Console.WriteLine("FaultException_1 not available in this framework, skipping");
-			return;
-		}
-		// A generic Java class can't extend Throwable, so it must be plain, non-generic...
-		if (ex.getTypeParameters().length != 0) throw new AssertionError("FaultException_1 must not be generic");
-		// ...and its class-level type parameter is exposed as the bound.
-		if (ex.getMethod("getDetail").getReturnType() != IJCOBridgeReflected.class)
-			throw new AssertionError("getDetail() must return IJCOBridgeReflected");
-	}
+    </TDetail> */
+    @Throws(Throwable::class)
+    fun testGenericExceptionExposesBoundType() {
+        val ex: Class<*>?
+        try {
+            ex = Class.forName(
+                "system.servicemodel.FaultException_1", false,
+                GenericExceptionExposesBoundType::class.java.getClassLoader()
+            )
+        } catch (notAvailable: ClassNotFoundException) {
+            Console.WriteLine("FaultException_1 not available in this framework, skipping")
+            return
+        }
+        // A generic Java class can't extend Throwable, so it must be plain, non-generic...
+        if (ex.getTypeParameters().size != 0) throw AssertionError("FaultException_1 must not be generic")
+        // ...and its class-level type parameter is exposed as the bound.
+        if (ex.getMethod("getDetail")
+                .getReturnType() != IJCOBridgeReflected::class.java
+        ) throw AssertionError("getDetail() must return IJCOBridgeReflected")
+    }
 }

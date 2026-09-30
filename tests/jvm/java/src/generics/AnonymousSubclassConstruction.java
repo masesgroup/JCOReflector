@@ -38,8 +38,6 @@ import system.collections.objectmodel.*;
  * so they can be dropped into whatever test harness the project actually uses (JUnit, plain
  * {@code main}, or something else) without depending on a particular framework.
  * <p>
- * NOT YET WIRED INTO THE REAL TEST SUITE — this is a starting point to discuss and adapt
- * once the real test project structure/conventions are confirmed.
  */
 public class AnonymousSubclassConstruction {
 

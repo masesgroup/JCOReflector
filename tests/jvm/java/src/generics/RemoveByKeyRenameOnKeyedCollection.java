@@ -38,8 +38,6 @@ import system.collections.objectmodel.*;
  * so they can be dropped into whatever test harness the project actually uses (JUnit, plain
  * {@code main}, or something else) without depending on a particular framework.
  * <p>
- * NOT YET WIRED INTO THE REAL TEST SUITE — this is a starting point to discuss and adapt
- * once the real test project structure/conventions are confirmed.
  */
 public class RemoveByKeyRenameOnKeyedCollection {
 
@@ -65,8 +63,8 @@ public class RemoveByKeyRenameOnKeyedCollection {
 		Class<?> keyed = Class.forName("system.collections.objectmodel.KeyedCollection_2", false, cl);
 		Class<?> collection = Class.forName("system.collections.objectmodel.Collection_1", false, cl);
 
-		keyed.getMethod("RemoveByKey", IJCOBridgeReflected.class);
-		keyed.getMethod("ContainsByKey", IJCOBridgeReflected.class);
+        keyed.getMethod("RemoveByKey", IJCOBridgeReflected.class);
+        keyed.getMethod("ContainsByKey", IJCOBridgeReflected.class);
 
 		// Remove/Contains must now resolve to the base class, i.e. not be hidden by the keyed overloads.
 		if (keyed.getMethod("Remove", IJCOBridgeReflected.class).getDeclaringClass() != collection)

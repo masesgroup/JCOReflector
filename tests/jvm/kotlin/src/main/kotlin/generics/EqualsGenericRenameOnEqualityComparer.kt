@@ -21,35 +21,37 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
+package generics
 
-package generics;
-
-import org.mases.jcobridge.netreflection.*;
-
-import system.*;
-import system.collections.generic.*;
-import system.collections.objectmodel.*;
+import org.mases.jcobridge.netreflection.*
+import system.*
+import system.collections.generic.*
+import system.collections.objectmodel.*
+import kotlin.system.exitProcess
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
- * <p>
+ * 
+ * 
  * Each method is a self-contained, independent check for one specific mechanism discussed
  * while this feature was implemented. They are written as plain static methods on purpose,
  * so they can be dropped into whatever test harness the project actually uses (JUnit, plain
- * {@code main}, or something else) without depending on a particular framework.
- * <p>
+ * `main`, or something else) without depending on a particular framework.
+ * 
+ * 
  */
-public class EqualsGenericRenameOnEqualityComparer {
-
-    public static void main(String[] args) throws Throwable {
-        JCOReflector.setCommandLineArgs(args);
+object EqualsGenericRenameOnEqualityComparer {
+    @Throws(Throwable::class)
+    @JvmStatic
+    fun main(args: Array<kotlin.String>) {
+        JCOReflector.setCommandLineArgs(args)
         try {
-            testEqualsGenericRenameOnEqualityComparer();
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
-            System.exit(-1);
+            testEqualsGenericRenameOnEqualityComparer()
+            Console.WriteLine("Exiting with success")
+            Environment.Exit(0)
+        } catch (tre: Throwable) {
+            tre.printStackTrace()
+            exitProcess(-1)
         }
     }
 
@@ -58,21 +60,23 @@ public class EqualsGenericRenameOnEqualityComparer {
      * erase to the same signature as NetObject.Equals(IJCOBridgeReflected[,IJCOBridgeReflected])
      * is exposed under a different name so both remain callable.
      */
-	static void testEqualsGenericRenameOnEqualityComparer() throws Exception {
-		ClassLoader cl = EqualsGenericRenameOnEqualityComparer.class.getClassLoader();
-		Class<?> comparer = Class.forName("system.collections.generic.IEqualityComparer_1", false, cl);
-		comparer.getMethod("EqualsGeneric", IJCOBridgeReflected.class, IJCOBridgeReflected.class);
-		assertMissing(comparer, "Equals", IJCOBridgeReflected.class, IJCOBridgeReflected.class);
+    @Throws(Exception::class)
+    fun testEqualsGenericRenameOnEqualityComparer() {
+        val cl = EqualsGenericRenameOnEqualityComparer::class.java.getClassLoader()
+        val comparer = Class.forName("system.collections.generic.IEqualityComparer_1", false, cl)
+        comparer.getMethod("EqualsGeneric", IJCOBridgeReflected::class.java, IJCOBridgeReflected::class.java)
+        assertMissing(comparer, "Equals", IJCOBridgeReflected::class.java, IJCOBridgeReflected::class.java)
 
-		Class<?> equatable = Class.forName("system.IEquatable_1", false, cl);
-		equatable.getMethod("EqualsGeneric", IJCOBridgeReflected.class);
-		assertMissing(equatable, "Equals", IJCOBridgeReflected.class);
-	}
+        val equatable = Class.forName("system.IEquatable_1", false, cl)
+        equatable.getMethod("EqualsGeneric", IJCOBridgeReflected::class.java)
+        assertMissing(equatable, "Equals", IJCOBridgeReflected::class.java)
+    }
 
-	static void assertMissing(Class<?> c, String name, Class<?>... params) {
-		try {
-			c.getMethod(name, params);
-			throw new AssertionError(c.getSimpleName() + "." + name + " should have been renamed");
-		} catch (NoSuchMethodException expected) { }
-	}
+    fun assertMissing(c: Class<*>, name: String, vararg params: Class<*>?) {
+        try {
+            c.getMethod(name, *params)
+            throw AssertionError(c.getSimpleName() + "." + name + " should have been renamed")
+        } catch (expected: NoSuchMethodException) {
+        }
+    }
 }

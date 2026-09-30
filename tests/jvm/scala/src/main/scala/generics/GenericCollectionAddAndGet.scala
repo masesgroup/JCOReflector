@@ -22,13 +22,13 @@
  *  SOFTWARE.
  */
 
-package generics;
+package generics
 
-import org.mases.jcobridge.netreflection.*;
+import org.mases.jcobridge.netreflection._
+import system._
+import system.collections.generic._
+import system.collections.objectmodel._
 
-import system.*;
-import system.collections.generic.*;
-import system.collections.objectmodel.*;
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
@@ -39,35 +39,34 @@ import system.collections.objectmodel.*;
  * {@code main}, or something else) without depending on a particular framework.
  * <p>
  */
-public class MissingAnonymousSubclassFails {
-
-    public static void main(String[] args) throws Throwable {
-        JCOReflector.setCommandLineArgs(args);
-        try {
-            testMissingAnonymousSubclassFails();
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
-            System.exit(-1);
-        }
+object GenericCollectionAddAndGet {
+  @throws[Throwable]
+  def main(args: Array[String]): Unit = {
+    JCOReflector.setCommandLineArgs(args)
+    try {
+      testGenericCollectionAddAndGet()
+      Console.WriteLine("Exiting with success")
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+        System.exit(-1)
     }
+  }
 
-    /**
-     * Regression test for the anonymous-subclass requirement itself: constructing a generic
-     * reflected type WITHOUT the trailing {} must fail fast with a clear message, not with a
-     * confusing NPE or ClassCastException somewhere downstream.
-     */
-    static void testMissingAnonymousSubclassFails() {
-        boolean threw = false;
-        try {
-            // Deliberately missing the trailing "{}" anonymous-subclass syntax.
-            List_1<system.Object> list = new List_1<system.Object>();
-        } catch (IllegalArgumentException expected) {
-            threw = true;
-        } catch (Throwable unexpected) {
-            throw new AssertionError("Expected IllegalArgumentException, got " + unexpected, unexpected);
-        }
-        if (!threw) throw new AssertionError("Expected construction without {} to fail");
-    }
+  /**
+   * Exercises the basic class-level generic parameter path: Add/get on a generic
+   * collection whose element type is itself a reflected class.
+   */
+  @throws[Throwable]
+  private[generics] def testGenericCollectionAddAndGet(): Unit = {
+    val list = new List_1[Guid]() {}
+    val item = new Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}")
+    list.Add(item)
+    if (list.getCount ne 1) throw new AssertionError("Expected 1 element after Add")
+    val array = list.ToArray
+    val fetched = array(0)
+    if (fetched == null) throw new AssertionError("Expected a non-null element back")
+    if (!fetched.Equals(item)) throw new AssertionError("Expected a non-null element back")
+  }
 }

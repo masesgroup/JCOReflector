@@ -641,8 +641,40 @@ jobs:
         run: |
           cd ./tests/jvm/scala
           mkdir output
-          ..\..\..\bin\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
-              
+          ..\..\..\bin\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/generics/* ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
+
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+     
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -691,6 +723,213 @@ jobs:
         with:
           if-no-files-found: ignore
           name: Errors_scala_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ./**/hs_err_*
+          retention-days: 1
+
+  kotlin_tests_windows:
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
+        exclude:
+          - os: windows-11-arm
+            framework: net462
+          - os: windows-11-arm
+            jdk_version: 8
+          - os: windows-11-arm
+            jdk_version: 11
+          - os: windows-11-arm
+            jdk_version: 17
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: temurin
+            jdk_version: 25
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
+          - jdk_vendor: graalvm
+            jdk_version: 11
+
+    runs-on: ${{ matrix.os }}
+    env:
+      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
+        if: ${{ matrix.os == 'windows-11-arm' }}
+        run: choco install zstandard
+
+      - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ matrix.framework }}_${{ github.sha }}
+
+      - name: Restore Scala bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_scala_${{ env.SCALARELEASE }}_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v6
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+
+      - name: Build Kotlin test source file
+        shell: pwsh
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        run: |
+          New-Item -ItemType Directory -Force ./tests/jvm/kotlin/output | Out-Null
+          $cp = (Get-ChildItem ./bin/${{ matrix.framework }} -Filter *.jar -Recurse | ForEach-Object FullName) -join ';'
+          $src = Get-ChildItem ./tests/jvm/kotlin/src/main/kotlin -Filter *.kt -Recurse | ForEach-Object FullName
+          kotlinc -cp $cp -include-runtime -d ./tests/jvm/kotlin/output/kotlintests.jar $src
+      
+      - shell: cmd
+        run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstructionKt ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+  
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+     
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+    
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: cd ./tests/jvm/scala && rmdir output /s /q
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Errors_kotlin_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
           path: ./**/hs_err_*
           retention-days: 1
 
@@ -944,7 +1183,31 @@ jobs:
         run: |
           source "$HOME/.sdkman/bin/sdkman-init.sh"
           mkdir ./tests/jvm/scala/output
-          scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
+          scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/generics/* ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -981,7 +1244,160 @@ jobs:
       - uses: actions/upload-artifact@v7
         with:
           if-no-files-found: ignore
-          name: Errors_java_tests_linux_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          name: Errors_scala_tests_linux_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ./**/hs_err_*
+          retention-days: 1
+
+  kotlin_tests_linux:
+    if: ${{ inputs.EnableLinuxTests }}
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
+        exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
+          - jdk_vendor: graalvm
+            jdk_version: 11
+
+    runs-on: ${{ matrix.os }}
+    env:
+      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net9.0'
+        with:
+          dotnet-version: |
+            9.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Restore JCOReflector bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v6
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+
+      - name: Build Kotlin test source file
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        run: |
+          mkdir -p ./tests/jvm/kotlin/output
+          CP=$(find ./bin/${{ matrix.framework }} -name '*.jar' | tr '\n' ':')
+          kotlinc -cp "$CP" -include-runtime -d ./tests/jvm/kotlin/output/kotlintests.jar \
+            ./tests/jvm/kotlin/src/main/kotlin/generics/* \
+            ./tests/jvm/kotlin/src/main/kotlin/hierarchy/* \
+            ./tests/jvm/kotlin/src/main/kotlin/mscorlib/* \
+            ./tests/jvm/kotlin/src/main/kotlin/nettest/* \
+            ./tests/jvm/kotlin/src/main/kotlin/refout/*
+      
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+    
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: rm -rf ./tests/jvm/scala/output
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Errors_kotlin_tests_linux_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
           path: ./**/hs_err_*
           retention-days: 1
 
@@ -1083,7 +1499,31 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
           mkdir ./tests/jvm/scala/output
-          ${{ env.SCALA_BIN }}/scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
+          ${{ env.SCALA_BIN }}/scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/generics/* ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
+
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1124,8 +1564,169 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
+  kotlin_tests_mac:
+    if: ${{ inputs.EnableMacOSTests }}
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
+        exclude:
+          - jdk_vendor: temurin
+            jdk_version: 8
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
+          - jdk_vendor: graalvm
+            jdk_version: 11
+
+    runs-on: ${{ matrix.os }}
+    env:
+      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net8.0'
+        with:
+          dotnet-version: |
+            8.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net9.0'
+        with:
+          dotnet-version: |
+            9.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v6
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+
+      - name: Build Kotlin test source file
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        run: |
+          mkdir -p ./tests/jvm/kotlin/output
+          CP=$(find ./bin/${{ matrix.framework }} -name '*.jar' | tr '\n' ':')
+          kotlinc -cp "$CP" -include-runtime -d ./tests/jvm/kotlin/output/kotlintests.jar \
+            ./tests/jvm/kotlin/src/main/kotlin/generics/* \
+            ./tests/jvm/kotlin/src/main/kotlin/hierarchy/* \
+            ./tests/jvm/kotlin/src/main/kotlin/mscorlib/* \
+            ./tests/jvm/kotlin/src/main/kotlin/nettest/* \
+            ./tests/jvm/kotlin/src/main/kotlin/refout/*
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+    
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: rm -rf ./tests/jvm/scala/output
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Errors_kotlin_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ./**/hs_err_*
+          retention-days: 1
+
   execute_finalize:
-    needs: [java_tests_windows, scala_tests_windows, java_tests_unix, scala_tests_linux, scala_tests_mac]
+    needs: [java_tests_windows, scala_tests_windows, kotlin_tests_windows, java_tests_unix, scala_tests_linux, kotlin_tests_linux, scala_tests_mac, kotlin_tests_mac]
     if: |
       always() &&
       !contains(needs.*.result, 'failure') &&

@@ -21,35 +21,37 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
+package generics
 
-package generics;
-
-import org.mases.jcobridge.netreflection.*;
-
-import system.*;
-import system.collections.generic.*;
-import system.collections.objectmodel.*;
+import org.mases.jcobridge.netreflection.*
+import system.*
+import system.collections.generic.*
+import system.collections.objectmodel.*
+import kotlin.system.exitProcess
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
- * <p>
+ * 
+ * 
  * Each method is a self-contained, independent check for one specific mechanism discussed
  * while this feature was implemented. They are written as plain static methods on purpose,
  * so they can be dropped into whatever test harness the project actually uses (JUnit, plain
- * {@code main}, or something else) without depending on a particular framework.
- * <p>
+ * `main`, or something else) without depending on a particular framework.
+ * 
+ * 
  */
-public class MissingAnonymousSubclassFails {
-
-    public static void main(String[] args) throws Throwable {
-        JCOReflector.setCommandLineArgs(args);
+object MissingAnonymousSubclassFails {
+    @Throws(Throwable::class)
+    @JvmStatic
+    fun main(args: Array<kotlin.String>) {
+        JCOReflector.setCommandLineArgs(args)
         try {
-            testMissingAnonymousSubclassFails();
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
-            System.exit(-1);
+            testMissingAnonymousSubclassFails()
+            Console.WriteLine("Exiting with success")
+            Environment.Exit(0)
+        } catch (tre: Throwable) {
+            tre.printStackTrace()
+            exitProcess(-1)
         }
     }
 
@@ -58,16 +60,16 @@ public class MissingAnonymousSubclassFails {
      * reflected type WITHOUT the trailing {} must fail fast with a clear message, not with a
      * confusing NPE or ClassCastException somewhere downstream.
      */
-    static void testMissingAnonymousSubclassFails() {
-        boolean threw = false;
+    fun testMissingAnonymousSubclassFails() {
+        var threw = false
         try {
             // Deliberately missing the trailing "{}" anonymous-subclass syntax.
-            List_1<system.Object> list = new List_1<system.Object>();
-        } catch (IllegalArgumentException expected) {
-            threw = true;
-        } catch (Throwable unexpected) {
-            throw new AssertionError("Expected IllegalArgumentException, got " + unexpected, unexpected);
+            val list: List_1<system.Object?> = List_1<system.Object?>()
+        } catch (expected: IllegalArgumentException) {
+            threw = true
+        } catch (unexpected: Throwable) {
+            throw AssertionError("Expected IllegalArgumentException, got $unexpected", unexpected)
         }
-        if (!threw) throw new AssertionError("Expected construction without {} to fail");
+        if (!threw) throw AssertionError("Expected construction without {} to fail")
     }
 }

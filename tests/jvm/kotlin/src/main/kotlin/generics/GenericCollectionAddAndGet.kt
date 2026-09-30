@@ -21,35 +21,39 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
+package generics
 
-package generics;
-
-import org.mases.jcobridge.netreflection.*;
-
-import system.*;
-import system.collections.generic.*;
-import system.collections.objectmodel.*;
+import org.mases.jcobridge.netreflection.*
+import system.*
+import system.collections.generic.*
+import system.collections.objectmodel.*
+import kotlin.system.exitProcess
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
- * <p>
+ * 
+ * 
  * Each method is a self-contained, independent check for one specific mechanism discussed
  * while this feature was implemented. They are written as plain static methods on purpose,
  * so they can be dropped into whatever test harness the project actually uses (JUnit, plain
- * {@code main}, or something else) without depending on a particular framework.
- * <p>
+ * `main`, or something else) without depending on a particular framework.
+ * 
+ * 
+ * NOT YET WIRED INTO THE REAL TEST SUITE — this is a starting point to discuss and adapt
+ * once the real test project structure/conventions are confirmed.
  */
-public class GenericCollectionAddAndGet {
-
-    public static void main(String[] args) throws Throwable {
-        JCOReflector.setCommandLineArgs(args);
+object GenericCollectionAddAndGet {
+    @Throws(Throwable::class)
+    @JvmStatic
+    fun main(args: Array<kotlin.String>) {
+        JCOReflector.setCommandLineArgs(args)
         try {
-            testGenericCollectionAddAndGet();
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
-            System.exit(-1);
+            testGenericCollectionAddAndGet()
+            Console.WriteLine("Exiting with success")
+            Environment.Exit(0)
+        } catch (tre: Throwable) {
+            tre.printStackTrace()
+            exitProcess(-1)
         }
     }
 
@@ -57,16 +61,17 @@ public class GenericCollectionAddAndGet {
      * Exercises the basic class-level generic parameter path: Add/get on a generic
      * collection whose element type is itself a reflected class.
      */
-    static void testGenericCollectionAddAndGet() throws Throwable {
-        List_1<system.Guid> list = new List_1<system.Guid>() {};
+    @Throws(Throwable::class)
+    fun testGenericCollectionAddAndGet() {
+        val list: List_1<system.Guid?> = object : List_1<system.Guid?>() {}
 
-        system.Guid item = new system.Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}");
-		list.Add(item);
-        if (list.getCount() != 1) throw new AssertionError("Expected 1 element after Add");
-        
-        system.Guid[] array = list.ToArray();
-        system.Guid fetched = array[0];
-        if (fetched == null) throw new AssertionError("Expected a non-null element back");
-		if (!fetched.Equals(item)) throw new AssertionError("Expected a non-null element back");
+        val item: system.Guid = Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}")
+        list.Add(item)
+        if (list.getCount() !== 1) throw AssertionError("Expected 1 element after Add")
+
+        val array: Array<system.Guid> = list.ToArray()
+        val fetched: system.Guid = array[0]
+        if (fetched == null) throw AssertionError("Expected a non-null element back")
+        if (!fetched.Equals(item)) throw AssertionError("Expected a non-null element back")
     }
 }

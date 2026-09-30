@@ -22,13 +22,10 @@
  *  SOFTWARE.
  */
 
-package generics;
+package generics
 
-import org.mases.jcobridge.netreflection.*;
+import org.mases.jcobridge.netreflection._
 
-import system.*;
-import system.collections.generic.*;
-import system.collections.objectmodel.*;
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
@@ -39,35 +36,35 @@ import system.collections.objectmodel.*;
  * {@code main}, or something else) without depending on a particular framework.
  * <p>
  */
-public class MissingAnonymousSubclassFails {
-
-    public static void main(String[] args) throws Throwable {
-        JCOReflector.setCommandLineArgs(args);
-        try {
-            testMissingAnonymousSubclassFails();
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
-            System.exit(-1);
-        }
+object RemoveByKeyRenameOnKeyedCollection {
+  @throws[Throwable]
+  def main(args: Array[String]): Unit = {
+    JCOReflector.setCommandLineArgs(args)
+    try {
+      testRemoveByKeyRenameOnKeyedCollection()
+      Console.WriteLine("Exiting with success")
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+        System.exit(-1)
     }
+  }
 
-    /**
-     * Regression test for the anonymous-subclass requirement itself: constructing a generic
-     * reflected type WITHOUT the trailing {} must fail fast with a clear message, not with a
-     * confusing NPE or ClassCastException somewhere downstream.
-     */
-    static void testMissingAnonymousSubclassFails() {
-        boolean threw = false;
-        try {
-            // Deliberately missing the trailing "{}" anonymous-subclass syntax.
-            List_1<system.Object> list = new List_1<system.Object>();
-        } catch (IllegalArgumentException expected) {
-            threw = true;
-        } catch (Throwable unexpected) {
-            throw new AssertionError("Expected IllegalArgumentException, got " + unexpected, unexpected);
-        }
-        if (!threw) throw new AssertionError("Expected construction without {} to fail");
-    }
+  /**
+   * Exercises the RemoveByKey()/ContainsByKey() rename on KeyedCollection<TKey,TItem>-derived
+   * types, which would otherwise erase to the same signature as the inherited
+   * Collection<TItem>.Remove(TItem)/Contains(TItem).
+   */
+  @throws[Exception]
+  private[generics] def testRemoveByKeyRenameOnKeyedCollection(): Unit = {
+    val cl = classOf[RemoveByKeyRenameOnKeyedCollection].getClassLoader
+    val keyed = Class.forName("system.collections.objectmodel.KeyedCollection_2", false, cl)
+    val collection = Class.forName("system.collections.objectmodel.Collection_1", false, cl)
+    keyed.getMethod("RemoveByKey", classOf[IJCOBridgeReflected])
+    keyed.getMethod("ContainsByKey", classOf[IJCOBridgeReflected])
+    // Remove/Contains must now resolve to the base class, i.e. not be hidden by the keyed overloads.
+    if (keyed.getMethod("Remove", classOf[IJCOBridgeReflected]).getDeclaringClass ne collection) throw new AssertionError("KeyedCollection_2 still redeclares Remove(T)")
+    if (keyed.getMethod("Contains", classOf[IJCOBridgeReflected]).getDeclaringClass ne collection) throw new AssertionError("KeyedCollection_2 still redeclares Contains(T)")
+  }
 }

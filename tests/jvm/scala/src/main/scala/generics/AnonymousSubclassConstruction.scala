@@ -22,13 +22,13 @@
  *  SOFTWARE.
  */
 
-package generics;
+package generics
 
-import org.mases.jcobridge.netreflection.*;
+import org.mases.jcobridge.netreflection._
+import system._
+import system.collections.generic._
+import system.collections.objectmodel._
 
-import system.*;
-import system.collections.generic.*;
-import system.collections.objectmodel.*;
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
@@ -39,35 +39,29 @@ import system.collections.objectmodel.*;
  * {@code main}, or something else) without depending on a particular framework.
  * <p>
  */
-public class MissingAnonymousSubclassFails {
-
-    public static void main(String[] args) throws Throwable {
-        JCOReflector.setCommandLineArgs(args);
-        try {
-            testMissingAnonymousSubclassFails();
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
-            System.exit(-1);
-        }
+object AnonymousSubclassConstruction {
+  @throws[Throwable]
+  def main(args: Array[String]): Unit = {
+    JCOReflector.setCommandLineArgs(args)
+    try {
+      testAnonymousSubclassConstruction()
+      Console.WriteLine("Exiting with success")
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+        System.exit(-1)
     }
+  }
 
-    /**
-     * Regression test for the anonymous-subclass requirement itself: constructing a generic
-     * reflected type WITHOUT the trailing {} must fail fast with a clear message, not with a
-     * confusing NPE or ClassCastException somewhere downstream.
-     */
-    static void testMissingAnonymousSubclassFails() {
-        boolean threw = false;
-        try {
-            // Deliberately missing the trailing "{}" anonymous-subclass syntax.
-            List_1<system.Object> list = new List_1<system.Object>();
-        } catch (IllegalArgumentException expected) {
-            threw = true;
-        } catch (Throwable unexpected) {
-            throw new AssertionError("Expected IllegalArgumentException, got " + unexpected, unexpected);
-        }
-        if (!threw) throw new AssertionError("Expected construction without {} to fail");
-    }
+  /**
+   * Baseline: a reflected generic class can be constructed using the required
+   * "anonymous subclass" syntax (trailing {}), and behaves like an ordinary instance
+   * afterwards. This is the idiom every other generic-construction test below relies on.
+   */
+  @throws[Throwable]
+  private[generics] def testAnonymousSubclassConstruction(): Unit = {
+    val list = new List_1[system.Object]() {}
+    if (list == null) throw new AssertionError("Expected a non-null List_1 instance")
+  }
 }

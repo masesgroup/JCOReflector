@@ -22,13 +22,10 @@
  *  SOFTWARE.
  */
 
-package generics;
+package generics
 
-import org.mases.jcobridge.netreflection.*;
+import org.mases.jcobridge.netreflection._
 
-import system.*;
-import system.collections.generic.*;
-import system.collections.objectmodel.*;
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
@@ -39,35 +36,39 @@ import system.collections.objectmodel.*;
  * {@code main}, or something else) without depending on a particular framework.
  * <p>
  */
-public class MissingAnonymousSubclassFails {
-
-    public static void main(String[] args) throws Throwable {
-        JCOReflector.setCommandLineArgs(args);
-        try {
-            testMissingAnonymousSubclassFails();
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
-            System.exit(-1);
-        }
+object GenericExceptionExposesBoundType {
+  @throws[Throwable]
+  def main(args: Array[String]): Unit = {
+    JCOReflector.setCommandLineArgs(args)
+    try {
+      testGenericExceptionExposesBoundType()
+      Console.WriteLine("Exiting with success")
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+        System.exit(-1)
     }
+  }
 
-    /**
-     * Regression test for the anonymous-subclass requirement itself: constructing a generic
-     * reflected type WITHOUT the trailing {} must fail fast with a clear message, not with a
-     * confusing NPE or ClassCastException somewhere downstream.
-     */
-    static void testMissingAnonymousSubclassFails() {
-        boolean threw = false;
-        try {
-            // Deliberately missing the trailing "{}" anonymous-subclass syntax.
-            List_1<system.Object> list = new List_1<system.Object>();
-        } catch (IllegalArgumentException expected) {
-            threw = true;
-        } catch (Throwable unexpected) {
-            throw new AssertionError("Expected IllegalArgumentException, got " + unexpected, unexpected);
-        }
-        if (!threw) throw new AssertionError("Expected construction without {} to fail");
+  /**
+   * Exercises the exception-specific fallback: a generic .NET exception (e.g.
+   * FaultException<TDetail>) can never become a generic Java class (a generic class cannot
+   * extend Throwable), so its class-level type parameter is always exposed as its bound,
+   * IJCOBridgeReflected, rather than as a real type variable.
+   */
+  @throws[Throwable]
+  private[generics] def testGenericExceptionExposesBoundType(): Unit = {
+    var ex: Class[_] = null
+    try ex = Class.forName("system.servicemodel.FaultException_1", false, classOf[GenericExceptionExposesBoundType].getClassLoader)
+    catch {
+      case notAvailable: ClassNotFoundException =>
+        Console.WriteLine("FaultException_1 not available in this framework, skipping")
+        return
     }
+    // A generic Java class can't extend Throwable, so it must be plain, non-generic...
+    if (ex.getTypeParameters.length != 0) throw new AssertionError("FaultException_1 must not be generic")
+    // ...and its class-level type parameter is exposed as the bound.
+    if (ex.getMethod("getDetail").getReturnType ne classOf[IJCOBridgeReflected]) throw new AssertionError("getDetail() must return IJCOBridgeReflected")
+  }
 }

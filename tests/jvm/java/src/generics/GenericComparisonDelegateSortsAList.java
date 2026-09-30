@@ -76,7 +76,7 @@ public class GenericComparisonDelegateSortsAList {
 					return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(closedName);
 				} catch (Throwable t) { throw new IllegalStateException(t); }
 			}
-			@Override public int Invoke(system.Object x, system.Object y) {
+			@Override public Object DelegateInvoked(system.Object x, system.Object y) {
 				calls.incrementAndGet();
 				return 0;
 			}

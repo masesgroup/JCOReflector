@@ -68,11 +68,21 @@ public class GenericComparisonDelegateSortsAList {
 		final String closedName = "System.Comparison`1[System.Object]";
 
 		Comparison_1<system.Object> comparison = new Comparison_1<system.Object>() {
-			@Override public String getDelegateTypeName() {
+			@Override public java.lang.String getJCOClassName() {
+				java.lang.System.out.println("@Override public String getJCOClassName()");
+				return closedName + ", " + Comparison_1.assemblyFullName;
+			}
+			@Override public java.lang.String getJCOObjectName() {
+				java.lang.System.out.println("@Override public String getJCOObjectName()");
+				return closedName + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+			}
+			@Override public java.lang.String getDelegateTypeName() {
+				java.lang.System.out.println("@Override public String getDelegateTypeName()");
 				return closedName + ", " + Comparison_1.assemblyFullName;
 			}
 			@Override public JCType getDelegateType() {
 				try {
+					java.lang.System.out.println("@Override public JCType getDelegateType()");
 					return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(getDelegateTypeName());
 				} catch (Throwable t) { throw new IllegalStateException(t); }
 			}

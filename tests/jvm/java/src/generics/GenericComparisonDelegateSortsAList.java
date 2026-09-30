@@ -64,19 +64,25 @@ public class GenericComparisonDelegateSortsAList {
     static void testGenericComparisonDelegateSortsAList() throws Throwable {
         List_1<system.Object> list = new List_1<system.Object>() {};
 
-        IComparer_1<system.Object> comparer = new IComparer_1<system.Object>() {
-            @Override
-            public int Compare(system.Object x, system.Object y) throws Throwable {
-                return 0;
-            }
+		final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
+		final String closedName = "System.Comparison`1[System.Object]";
 
-            @Override public String getJCOAssemblyName() { return List_1.assemblyFullName; }
-            @Override public String getJCOClassName() { return "System.Collections.Generic.IComparer`1"; }
-            @Override public String getJCOObjectName() { return "System.Collections.Generic.IComparer`1"; }
-            @Override public java.lang.Object getJCOInstance() { return null; }
-            @Override public JCType getJCOType() { return null; }
-        };
-
-        list.Sort(comparer);
+		Comparison_1<system.Object> comparison = new Comparison_1<system.Object>() {
+			@Override public String getDelegateTypeName() {
+				return closedName + ", " + Comparison_1.assemblyFullName;
+			}
+			@Override public JCType getDelegateType() {
+				try {
+					return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(closedName);
+				} catch (Throwable t) { throw new IllegalStateException(t); }
+			}
+			@Override public int Invoke(system.Object x, system.Object y) {
+				calls.incrementAndGet();
+				return 0;
+			}
+		};
+		list.Add(new system.Object()); list.Add(new system.Object());
+		list.Sort(comparison);
+		if (calls.get() == 0) throw new AssertionError("Java comparison never invoked");
     }
 }

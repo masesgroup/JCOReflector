@@ -83,9 +83,7 @@ public class GenericComparisonDelegateSortsAList {
 				return 0;
 			}
 		};
-		java.lang.System.out.println("Adding elements");
 		list.Add(new system.Object()); list.Add(new system.Object());
-		java.lang.System.out.println("Invoking Sort");
 		list.Sort(comparison);
 		if (calls.get() == 0) throw new AssertionError("Java comparison never invoked");
     }

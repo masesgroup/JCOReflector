@@ -3918,7 +3918,17 @@ namespace MASES.JCOReflector.Engine
             if (typeof(Delegate).IsAssignableFrom(innerType)) // delegate types are managed only with events
             {
                 string dummyEnumeratorType = string.Empty;
-                return innerType.ExportingDelegate(null, null, out dummyEnumeratorType, true);
+                // A parameter/return type can be a CONSTRUCTED generic delegate closed over an in-scope
+                // type parameter (e.g. Comparison<T> as a parameter of List<T>.Sort, T being List<T>'s own
+                // class-level parameter) — that's valid, ordinary usage, not a request to export a new
+                // top-level file for a closed instantiation. Validate against the delegate's own generic
+                // type DEFINITION (Comparison<>), which is what ExportingDelegate can actually generate,
+                // instead of the constructed type itself — ExportingDelegate's own guard always rejects a
+                // non-definition generic type, since it's never meant to export one as its own file.
+                var delegateTypeToCheck = (EnableGenerics && innerType.IsGenericType && !innerType.IsGenericTypeDefinition)
+                    ? innerType.GetGenericTypeDefinition()
+                    : innerType;
+                return delegateTypeToCheck.ExportingDelegate(null, null, out dummyEnumeratorType, true);
             }
             if (innerType.Name.Contains("IntPtr") || innerType.Name.Contains("*"))
                 return false;

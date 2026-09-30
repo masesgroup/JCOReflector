@@ -2458,6 +2458,7 @@ namespace MASES.JCOReflector.Engine
                             {
                                 dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, methodGenericMarker)
                                                                               .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                              .Replace(Const.Methods.METHOD_JAVA_NAME, methodName)
                                                                               .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                                               .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                               .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
@@ -2465,6 +2466,7 @@ namespace MASES.JCOReflector.Engine
                             }
                             dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, methodGenericMarker)
                                                                        .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                       .Replace(Const.Methods.METHOD_JAVA_NAME, methodName)
                                                                        .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
                                                                        .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                        .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
@@ -2841,6 +2843,7 @@ namespace MASES.JCOReflector.Engine
 
                                 dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                             .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                            .Replace(Const.Methods.METHOD_JAVA_NAME, methodName)
                                                             .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                                             .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
                                                             .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
@@ -2851,6 +2854,7 @@ namespace MASES.JCOReflector.Engine
 
                                 dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                                            .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                           .Replace(Const.Methods.METHOD_JAVA_NAME, methodName)
                                                                            .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
                                                                            .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                            .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)

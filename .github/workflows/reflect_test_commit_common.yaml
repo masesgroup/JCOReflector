@@ -1066,6 +1066,9 @@ jobs:
       
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: cd ./tests/jvm/clojure && rmdir classes /s /q
         shell: cmd
@@ -1640,6 +1643,9 @@ jobs:
       
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
  
       - run: rm -rf ./tests/jvm/clojure/classes
 
@@ -2067,6 +2073,9 @@ jobs:
             clojure.lang.Compile $NAMESPACES
      
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
       - run: rm -rf ./tests/jvm/clojure/classes

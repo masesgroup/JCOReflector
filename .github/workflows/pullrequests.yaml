@@ -197,8 +197,14 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force tests/jvm/clojure/classes | Out-Null
+          $root = (Resolve-Path tests/jvm/clojure/src/main/clojure).Path
+          $namespaces = Get-ChildItem $root -Filter *.clj -Recurse | ForEach-Object {
+              $_.FullName.Substring($root.Length + 1) -replace '\.clj$','' -replace '[\\/]','.'
+          }
+          if (-not $namespaces) { throw "No Clojure test sources found" }
+          Write-Host "Compiling: $namespaces"
           java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
             "-Dclojure.compile.path=tests/jvm/clojure/classes" `
             "-Dclojure.compile.warn-on-reflection=true" `
-            clojure.lang.Compile mscorlib.hello-net mscorlib.hello-net-event
+            clojure.lang.Compile @namespaces
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

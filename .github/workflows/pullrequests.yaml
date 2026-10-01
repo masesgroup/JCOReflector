@@ -206,7 +206,6 @@ jobs:
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Clojure test source files
-        if: matrix.framework == 'net462' || matrix.framework == 'net8.0'
         shell: pwsh
         continue-on-error: ${{ inputs.ForceExecution == true || matrix.framework == 'net462' }}
         run: |

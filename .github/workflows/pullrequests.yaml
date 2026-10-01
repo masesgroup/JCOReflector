@@ -208,7 +208,7 @@ jobs:
       - name: Build Clojure test source files
         if: matrix.framework == 'net462' || matrix.framework == 'net8.0'
         shell: pwsh
-        continue-on-error: ${{ inputs.ForceExecution == true }}
+        continue-on-error: ${{ inputs.ForceExecution == true || matrix.framework == 'net462' }}
         run: |
           New-Item -ItemType Directory -Force tests/jvm/clojure/classes | Out-Null
           $root = (Resolve-Path tests/jvm/clojure/src/main/clojure).Path

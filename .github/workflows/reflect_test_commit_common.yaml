@@ -1053,11 +1053,35 @@ jobs:
             "-Dclojure.compile.path=tests/jvm/clojure/classes" `
             clojure.lang.Compile $namespaces
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+    
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: cd ./tests/jvm/clojure && rmdir classes /s /q
@@ -1618,13 +1642,37 @@ jobs:
           java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
             -Dclojure.compile.path=tests/jvm/clojure/classes \
             clojure.lang.Compile $NAMESPACES
-      
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+   
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+    
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
  
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: rm -rf ./tests/jvm/clojure/classes
 
       - uses: actions/upload-artifact@v7
@@ -2041,10 +2089,34 @@ jobs:
             -Dclojure.compile.path=tests/jvm/clojure/classes \
             clojure.lang.Compile $NAMESPACES
      
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+    
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
       - run: rm -rf ./tests/jvm/clojure/classes

@@ -850,11 +850,7 @@ jobs:
           Set-Content -Path kotlinc.args -Value $lines -Encoding ascii
           kotlinc '@kotlinc.args'
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      
-      - shell: cmd
-        run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstructionKt ${{ env.EXTRA_ARGUMENT }}
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-  
+
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}

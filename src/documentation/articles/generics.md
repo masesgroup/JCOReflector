@@ -50,6 +50,63 @@ Where two members would otherwise collide only because of erasure — not becaus
 
 Java forbids a generic class from extending `java.lang.Throwable`, without exception (JLS §8.1.2) — this is not something JCOReflector can work around. A .NET generic exception type (e.g. `FaultException<TDetail>`) is therefore always generated as a **plain, non-generic** Java class. Its class-level type parameter is exposed everywhere as its bound, `IJCOBridgeReflected`, instead of a real type variable — for example `FaultException_1.getDetail()` returns `IJCOBridgeReflected`, not `TDetail`. This is the one case where the generic parameter is always erased to its bound in the public API, by necessity rather than by choice.
 
+## Using generics from Clojure
+
+The anonymous-subclass idiom described above (`new List_1<Foo>(){}`) cannot be written in Clojure. `proxy`, `reify` and `gen-class` generate classes, but none of them writes the generic `Signature` attribute of the superclass, which is exactly what JCOReflector reads to recover the type arguments. A subclass produced by those forms looks, to the reflection code, like a raw `List_1`, so the type argument is lost and instantiating a generic class fails the same way it does in Java when the trailing `{}` is omitted.
+
+To fill that gap, the Clojure tests ship a small helper namespace, `generics.GenericSupport` (currently in `tests/jvm/clojure/src/main/clojure/generics/GenericSupport.clj`). It generates, at runtime, the same kind of class `javac` emits for an anonymous generic subclass.
+
+### The `new-generic` function
+
+```clojure
+(gs/new-generic super type-args)
+(gs/new-generic super type-args impls)
+```
+
+- `super` is the generated generic class to instantiate (for example `List_1` or `Comparison_1`).
+- `type-args` is a vector of classes, one per type parameter (for example `[system.Object]`). Each one must satisfy the `IJCOBridgeReflected` bound, so the [bound limitations](#bound-limitations) apply unchanged.
+- `impls` is an optional map from a method name to the Clojure function that implements it, for example `{"Invoke" (fn [x y] 0)}`. It is meant for delegates and for classes whose virtual methods must be overridden from Clojure.
+
+The return value is an instance of a public, no-argument subclass of `super`, whose `Signature` attribute is `Super<TypeArg1, ...>`.
+
+### How it works
+
+The helper builds the subclass bytecode with the ASM copy that ships inside Clojure (`clojure.asm`), so no extra dependency is needed:
+
+- The class has a public no-argument constructor that calls the superclass constructor, and a public field `impl` that holds a Clojure function.
+- For every method named in `impls`, the helper looks up the overridable method in the superclass hierarchy (public or protected, not static, not final, bridge and synthetic methods skipped) and overrides it. The override boxes the arguments, calls `impl` with the method name and the argument array, and converts the result back to the declared return type: `void` discards it, `boolean` and `char` are unboxed, the other primitives go through `java.lang.Number`, and reference types are cast.
+- The Clojure function receives the **boxed** arguments of the method, so a `Comparison<T>` delegate receives two objects and must return a number that is converted to `int`.
+- Generated classes are cached per combination of superclass, type arguments and overridden method names, so repeated calls with the same shape reuse one class. Generated class names have the form `generics/support/GenN`.
+
+### Example
+
+```clojure
+(ns example
+  (:require [generics.GenericSupport :as gs])
+  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected]
+           [system Comparison_1]
+           [system.collections.generic List_1]))
+
+;; a List<System.Object>
+(let [^List_1 lst (gs/new-generic List_1 [system.Object])
+      a (system.Object.)]
+  ;; see "Overload resolution" below for the type hint
+  (.Add lst ^IJCOBridgeReflected a))
+
+;; a Comparison<System.Object> delegate implemented by a Clojure function
+(def comparison
+  (gs/new-generic Comparison_1 [system.Object]
+                  {"Invoke" (fn [x y] 0)}))
+```
+
+### Limits of the helper
+
+- **Plain type arguments only.** The generated `Signature` lists each type argument as a simple class, so a type argument that is itself parameterized (`List<List<Foo>>`) cannot be expressed.
+- **Overrides are selected by name.** If several overridable methods share the same name, the helper picks the first non-bridge one it finds in the hierarchy. A single entry in `impls` cannot target a specific overload.
+- **Overload resolution is done by Clojure, not by `javac`.** Clojure sees only the erased signatures, so a call that `javac` resolves through the generic parameter (`Add(T)`) can be bound by Clojure to a more specific overload, for example an explicit-interface `Add(...)`, which throws `UnsupportedOperationException`. Hinting the arguments as `IJCOBridgeReflected`, as in the example above, forces the intended overload. When no hint is enough (for example `List_1.Sort` with a `Comparison_1`), select the method by reflection.
+- **Instances only.** The helper does not make static members or method-level type parameters reachable; the [exclusions listed above](#what-is-intentionally-not-reflected) are the same for every language.
+- **Experimental.** Like the feature it supports, the helper lives in the test sources and may change.
+
 ## Known gaps
 
 A small number of specific types remain excluded (via an internal avoidance list) pending further investigation, rather than being fully worked through:

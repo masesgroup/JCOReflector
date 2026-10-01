@@ -1054,14 +1054,14 @@ jobs:
         run: |
           New-Item -ItemType Directory -Force tests/jvm/clojure/classes | Out-Null
           $root = (Resolve-Path tests/jvm/clojure/src/main/clojure).Path
-          $namespaces = Get-ChildItem $root -Filter *.clj -Recurse | ForEach-Object {
+          $namespaces = @(Get-ChildItem $root -Filter *.clj -Recurse | ForEach-Object {
               $_.FullName.Substring($root.Length + 1) -replace '\.clj$','' -replace '[\\/]','.'
-          }
-          if (-not $namespaces) { throw "No Clojure test sources found" }
-          Write-Host "Compiling: $namespaces"
+          })
+          if ($namespaces.Count -eq 0) { throw "No Clojure test sources found" }
+          Write-Host "Compiling $($namespaces.Count) namespace(s): $($namespaces -join ' ')"
           java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
             "-Dclojure.compile.path=tests/jvm/clojure/classes" `
-            clojure.lang.Compile @namespaces
+            clojure.lang.Compile $namespaces
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
@@ -1638,7 +1638,7 @@ jobs:
             -Dclojure.compile.path=tests/jvm/clojure/classes \
             clojure.lang.Compile $NAMESPACES
       
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
       - run: rm -rf ./tests/jvm/clojure/classes
@@ -2066,7 +2066,7 @@ jobs:
             -Dclojure.compile.path=tests/jvm/clojure/classes \
             clojure.lang.Compile $NAMESPACES
      
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
       - run: rm -rf ./tests/jvm/clojure/classes

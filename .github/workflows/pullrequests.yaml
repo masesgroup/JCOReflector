@@ -193,18 +193,18 @@ jobs:
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
 
-      - name: Compile Clojure test source files
+      - name: Build Clojure test source files
         shell: pwsh
+        continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
           New-Item -ItemType Directory -Force tests/jvm/clojure/classes | Out-Null
           $root = (Resolve-Path tests/jvm/clojure/src/main/clojure).Path
-          $namespaces = Get-ChildItem $root -Filter *.clj -Recurse | ForEach-Object {
+          $namespaces = @(Get-ChildItem $root -Filter *.clj -Recurse | ForEach-Object {
               $_.FullName.Substring($root.Length + 1) -replace '\.clj$','' -replace '[\\/]','.'
-          }
-          if (-not $namespaces) { throw "No Clojure test sources found" }
-          Write-Host "Compiling: $namespaces"
+          })
+          if ($namespaces.Count -eq 0) { throw "No Clojure test sources found" }
+          Write-Host "Compiling: $($namespaces -join ' ')"
           java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
             "-Dclojure.compile.path=tests/jvm/clojure/classes" `
-            "-Dclojure.compile.warn-on-reflection=true" `
             clojure.lang.Compile @namespaces
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

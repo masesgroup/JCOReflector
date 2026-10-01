@@ -934,6 +934,134 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
+  clojure_tests_windows:
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
+        exclude:
+          - os: windows-11-arm
+            framework: net462
+          - os: windows-11-arm
+            jdk_version: 8
+          - os: windows-11-arm
+            jdk_version: 11
+          - os: windows-11-arm
+            jdk_version: 17
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: corretto
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 21
+          - os: windows-11-arm
+            jdk_vendor: oracle
+            jdk_version: 25
+          - os: windows-11-arm
+            jdk_vendor: temurin
+            jdk_version: 25
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
+          - jdk_vendor: graalvm
+            jdk_version: 11
+
+    runs-on: ${{ matrix.os }}
+    env:
+      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
+        if: ${{ matrix.os == 'windows-11-arm' }}
+        run: choco install zstandard
+
+      - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ matrix.framework }}_${{ github.sha }}
+
+      - name: Restore Scala bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_scala_${{ env.SCALARELEASE }}_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v6
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+
+      - name: Download Clojure
+        run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+      
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: cd ./tests/jvm/clojure && rmdir classes /s /q
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Errors_kotlin_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ./**/hs_err_*
+          retention-days: 1
+
   java_tests_unix:
     if: ${{ inputs.EnableLinuxTests || inputs.EnableMacOSTests }}
     needs: prepare_matrix_data
@@ -1402,6 +1530,99 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
+  clojure_tests_linux:
+    if: ${{ inputs.EnableLinuxTests }}
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
+        exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
+          - jdk_vendor: graalvm
+            jdk_version: 11
+
+    runs-on: ${{ matrix.os }}
+    env:
+      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net9.0'
+        with:
+          dotnet-version: |
+            9.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Restore JCOReflector bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v6
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+
+      - name: Download Clojure
+        run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+      
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: rm -rf ./tests/jvm/clojure/classes
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Errors_clojure_tests_linux_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ./**/hs_err_*
+          retention-days: 1
+
   scala_tests_mac:
     if: ${{ inputs.EnableMacOSTests }}
     needs: prepare_matrix_data
@@ -1726,8 +1947,101 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
+  clojure_tests_mac:
+    if: ${{ inputs.EnableLinuxTests }}
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
+        exclude:
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
+          - jdk_vendor: graalvm
+            jdk_version: 11
+
+    runs-on: ${{ matrix.os }}
+    env:
+      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net9.0'
+        with:
+          dotnet-version: |
+            9.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Restore JCOReflector bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v6
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+
+      - name: Download Clojure
+        run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+      
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: rm -rf ./tests/jvm/clojure/classes
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Errors_clojure_tests_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ./**/hs_err_*
+          retention-days: 1
+
   execute_finalize:
-    needs: [java_tests_windows, scala_tests_windows, kotlin_tests_windows, java_tests_unix, scala_tests_linux, kotlin_tests_linux, scala_tests_mac, kotlin_tests_mac]
+    needs: [java_tests_windows, scala_tests_windows, kotlin_tests_windows, clojure_tests_windows, java_tests_unix, scala_tests_linux, kotlin_tests_linux, clojure_tests_linux, scala_tests_mac, kotlin_tests_mac, clojure_tests_mac]
     if: |
       always() &&
       !contains(needs.*.result, 'failure') &&

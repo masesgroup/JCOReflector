@@ -25,10 +25,7 @@
   (try
     (with-open [^Timer timer (Timer.)]
       (^ElapsedEventHandler elapsed (timer-elapsed)
-
-            _ (.addElapsed timer elapsed)
-            _ (.setInterval timer 1000.0)
-
+	  
             ^ThreadStart starter
             (proxy [ThreadStart] []
               (Invoke []

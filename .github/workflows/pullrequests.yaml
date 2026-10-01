@@ -206,6 +206,7 @@ jobs:
         run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
 
       - name: Build Clojure test source files
+        if: matrix.framework == 'net462' || matrix.framework == 'net8.0'
         shell: pwsh
         continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
@@ -218,5 +219,5 @@ jobs:
           Write-Host "Compiling: $($namespaces -join ' ')"
           java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
             "-Dclojure.compile.path=tests/jvm/clojure/classes" `
-            clojure.lang.Compile @namespaces ${{ env.EXTRA_ARGUMENT }}
+            clojure.lang.Compile @namespaces
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

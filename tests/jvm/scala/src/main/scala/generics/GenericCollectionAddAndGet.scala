@@ -61,8 +61,8 @@ object GenericCollectionAddAndGet {
    */
   @throws[Throwable]
   private[generics] def testGenericCollectionAddAndGet(): Unit = {
-    val list = new List_1[Guid]() {}
-    val item = new Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}")
+    val list = new List_1[system.Guid]() {}
+    val item = new system.Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}")
     list.Add(item)
     if (list.getCount != 1) throw new AssertionError("Expected 1 element after Add")
     val array = list.ToArray

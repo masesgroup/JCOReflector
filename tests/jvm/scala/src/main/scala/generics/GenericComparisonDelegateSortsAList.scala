@@ -26,6 +26,7 @@ package generics
 
 import org.mases.jcobridge.netreflection._
 import org.mases.jcobridge._
+import system.Comparison_1
 import system.Console
 import system.Environment
 import system.collections.generic._

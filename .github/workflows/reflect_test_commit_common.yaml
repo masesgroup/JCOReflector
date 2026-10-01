@@ -1637,11 +1637,11 @@ jobs:
         run: |
           mkdir -p tests/jvm/clojure/classes
           
-          # 'sort -r' reverses the alphabetical order, ensuring Server and Client are processed before Socket
-          mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort -r)
+          # 'sort' senza opzioni ordina alfabeticamente dalla A alla Z, come fa Windows di default
+          mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort)
           
           if [ ${#NAMESPACES[@]} -eq 0 ]; then echo "No Clojure test sources found"; exit 1; fi
-          echo "Compiling in order: ${NAMESPACES[*]}"
+          echo "Compiling in Windows order: ${NAMESPACES[*]}"
           
           java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
             -Dclojure.compile.path=tests/jvm/clojure/classes \
@@ -2087,11 +2087,11 @@ jobs:
         run: |
           mkdir -p tests/jvm/clojure/classes
           
-          # 'sort -r' reverses the alphabetical order, ensuring Server and Client are processed before Socket
-          mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort -r)
+          # 'sort' senza opzioni ordina alfabeticamente dalla A alla Z, come fa Windows di default
+          mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort)
           
           if [ ${#NAMESPACES[@]} -eq 0 ]; then echo "No Clojure test sources found"; exit 1; fi
-          echo "Compiling in order: ${NAMESPACES[*]}"
+          echo "Compiling in Windows order: ${NAMESPACES[*]}"
           
           java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
             -Dclojure.compile.path=tests/jvm/clojure/classes \

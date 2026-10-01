@@ -21,58 +21,48 @@
 ;;  SOFTWARE.
 
 (ns nettest.HelloNETSocket
+  (:gen-class)
   (:require [nettest.HelloNETSocketClient :as client]
-            nettest.HelloNETSocketServer)
-  (:import (nettest HelloNETSocketClient HelloNETSocketServer)
-           (org.mases.jcobridge.netreflection JCOReflector)
-           (system Console Environment)
-           (system.threading ThreadStart))
-  (:gen-class
-   :name nettest.HelloNETSocket
-   :main true))
+            [nettest.HelloNETSocketServer :as server])
+  (:import [org.mases.jcobridge.netreflection JCOReflector]
+           [system Console Environment]
+           [system.threading ThreadStart]))
 
-;; system.threading.Thread keeps its fully qualified name to avoid the clash
-;; with java.lang.Thread, which is imported by default in every Clojure namespace.
+;; system.threading.Thread is written with the fully qualified name:
+;; importing it would clash with java.lang.Thread.
+
+(defn- parse-args [args]
+  (loop [[arg & more :as all] (seq args)
+         async? false
+         address "0.0.0.0"]
+    (cond
+      (empty? all)      {:async? async? :address address}
+      (= arg "-async")  (recur more async? address)
+      (= arg "-server") (recur (next more) async? (or (first more) address))
+      :else             (recur more async? address))))
+
+(defn- thread-start ^ThreadStart [f]
+  (proxy [ThreadStart] []
+    (Invoke [] (f))))
 
 (defn -main [& args]
   (JCOReflector/setCommandLineArgs (into-array String args))
   (try
-    (let [args (vec args)
-          [asyncMode ^String serverAddress]
-          (loop [x 0 asyncMode false serverAddress "0.0.0.0"]
-            (if (< x (count args))
-              (let [arg (nth args x)]
-                (cond
-                  (= arg "-async")  (recur (inc x) true serverAddress)
-                  (= arg "-server") (recur (+ x 2) asyncMode (nth args (inc x)))
-                  :else             (recur (inc x) asyncMode serverAddress)))
-              [asyncMode serverAddress]))
-
-          ;; create the server thread
-          threadServer (system.threading.Thread.
-                        (proxy [ThreadStart] []
-                          (Invoke []
-                            (HelloNETSocketServer/StartListening (boolean asyncMode) serverAddress (int 11000)))))
-          ;; create the client thread
-          threadClient (system.threading.Thread.
-                        (proxy [ThreadStart] []
-                          (Invoke []
-                            (HelloNETSocketClient/StartClient (boolean asyncMode) "localhost" (int 11000)))))]
-      ;; start threads
-      (.Start threadServer)
+    (let [{:keys [async? address]} (parse-args args)
+          thread-server (system.threading.Thread.
+                         (thread-start #(server/start-listening async? address 11000)))
+          thread-client (system.threading.Thread.
+                         (thread-start #(client/start-client async? "localhost" 11000)))]
+      (.Start thread-server)
       (system.threading.Thread/Sleep (int 5000))
-      (.Start threadClient)
-      ;; let it communicate
+      (.Start thread-client)
       (system.threading.Thread/Sleep (int 5000))
-      ;; trigger the thread closing procedure
-      (reset! client/run false)
+      (reset! client/run? false)
       (system.threading.Thread/Sleep (int 1000))
-      ;; wait for thread join, if not, close the test
-      (.Join threadServer (int 5000))
-      (.Join threadClient (int 5000))
-      ;; close the application
+      (.Join thread-server (int 5000))
+      (.Join thread-client (int 5000))
       (Console/WriteLine "Exiting with success")
-      (Environment/Exit (int 0)))
-    (catch Throwable e
-      (.printStackTrace e)
+      (Environment/Exit 0))
+    (catch Throwable tre
+      (.printStackTrace tre)
       (System/exit -1))))

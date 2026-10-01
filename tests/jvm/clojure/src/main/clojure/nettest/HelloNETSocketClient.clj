@@ -21,94 +21,72 @@
 ;;  SOFTWARE.
 
 (ns nettest.HelloNETSocketClient
-  (:import (java.util Arrays)
-           (org.mases.jcobridge.netreflection JCORefOut NetObject)
-           (system ArgumentNullException Console)
-           (system.net Dns IPAddress IPEndPoint)
-           (system.net.sockets AddressFamily ProtocolType Socket
-                               SocketAsyncEventArgs SocketException SocketType)
-           (system.text Encoding))
-  (:gen-class
-   :name nettest.HelloNETSocketClient
-   :main false
-   :methods [^:static [StartClient [boolean String int] void]]))
+  (:import [java.util Arrays]
+           [org.mases.jcobridge.netreflection JCORefOut NetObject]
+           [system ArgumentNullException Console]
+           [system.net Dns IPAddress IPEndPoint IPHostEntry]
+           [system.net.sockets AddressFamily ProtocolType Socket SocketAsyncEventArgs SocketException SocketType]
+           [system.text Encoding]))
 
-;; Based on examples from:
-;; https://docs.microsoft.com/en-us/dotnet/framework/network-programming/using-a-synchronous-client-socket
-;; https://docs.microsoft.com/en-us/dotnet/framework/network-programming/using-an-asynchronous-client-socket
+;; set to false by HelloNETSocket to ask the client to send the "abort" message
+(def run? (atom true))
 
-(def run (atom true))
-;; Incoming data from the client.
-(def data (atom nil))
+(defn- net-str ^NetObject [^String s] (NetObject. s))
 
-(defn- report [^Throwable e]
-  (Console/WriteLine (.getMessage e)))
-
-(defn -StartClient [asyncMode ^String address port]
-  ;; Data buffer for incoming data.
+(defn start-client [async-mode ^String address port]
   (let [bytes (byte-array 1024)]
-    ;; Connect to a remote device.
     (try
-      ;; Establish the remote endpoint for the socket.
-      ;; resolve the given ip address
-      (let [ipHostInfo           (Dns/GetHostEntry address)
-            ^IPAddress ipAddress (loop [addrs (seq (.getAddressList ipHostInfo))]
-                                   (when-let [^IPAddress available (first addrs)]
-                                     (.println System/out available)
-                                     (if (= (.ToString (.getAddressFamily available))
-                                            (.ToString AddressFamily/InterNetwork))
-                                       available
-                                       (recur (next addrs)))))]
-        (if (nil? ipAddress)
+      (let [^IPHostEntry host-info (Dns/GetHostEntry address)
+            ip-address (some (fn [^IPAddress a]
+                               (println a)
+                               (when (= (.ToString (.getAddressFamily a))
+                                        (.ToString AddressFamily/InterNetwork))
+                                 a))
+                             (.getAddressList host-info))]
+        (if (nil? ip-address)
           (Console/WriteLine (str "CLIENT: No Ip resolved for the address: " address))
-          (let [remoteEP (IPEndPoint. ipAddress (int port))
-                ;; connection counter
-                x        (volatile! 1)
-                exit     (volatile! false)]
+          (let [^IPAddress ip-address ip-address
+                remote-ep (IPEndPoint. ip-address (int port))
+                x (atom 1)
+                exit (atom false)]
             (while (not @exit)
               (try
-                ;; Create a TCP/IP socket.
-                (let [sender (Socket. (.getAddressFamily ipAddress) SocketType/Stream ProtocolType/Tcp)]
-                  ;; Connect the socket to the remote endpoint. Catch any errors.
-                  (.Connect sender (.getAddress remoteEP) (.getPort remoteEP)) ;; ipAddress, 80);
+                (let [^Socket sender (Socket. (.getAddressFamily ip-address) SocketType/Stream ProtocolType/Tcp)]
+                  (.Connect sender (.getAddress remote-ep) (.getPort remote-ep))
                   (Console/WriteLine (str "CLIENT: Client connection #" @x))
-                  (Console/WriteLine (str "CLIENT: Client socket connected to " (.toString ipAddress)))
-                  ;; Encode the data string into a byte array.
-                  (let [^bytes msg (if @run
-                                     (.getBytes "Communication OK please exit")
-                                     (do
-                                       ;; Do another run to Ask the server to close
-                                       (reset! run true)
-                                       (vreset! exit true)
-                                       (.getBytes "Communication OK please abort")))]
+                  (Console/WriteLine (str "CLIENT: Client socket connected to " (.toString ip-address)))
+                  (let [abort? (not @run?)
+                        msg (.getBytes ^String (if abort?
+                                                 "Communication OK please abort"
+                                                 "Communication OK please exit"))]
+                    (when abort?
+                      (reset! run? true)
+                      (reset! exit true))
                     (Console/WriteLine (str "CLIENT: Sent msg = " (Arrays/toString msg)))
-                    ;; Send the data through the socket.
-                    (.Send sender msg))
-                  ;; Receive the response from the remote device.
-                  (while (and (zero? (.getAvailable sender))
-                              (not (and @run @exit)))
-                    (Thread/sleep 1))
-                  (Console/WriteLine (str "CLIENT: Client bytes received " (.getAvailable sender)))
-                  (if asyncMode
-                    (let [;; define the async event object
-                          asea (SocketAsyncEventArgs.)]
-                      (.SetBuffer asea bytes 0 (alength bytes))
-                      (.ReceiveAsync sender asea)
-                      ;; decode and display the received data
-                      (let [^String message (.GetString (Encoding/getASCII) (.getBuffer asea) 0
-                                                        (.getBytesTransferred asea))]
-                        (when message
-                          (Console/WriteLine "CLIENT: Client data received {0}" (NetObject. message)))))
-                    (let [recBytes (.Receive sender (JCORefOut/Create bytes))
-                          ^String message (.GetString (Encoding/getASCII) bytes 0 recBytes)]
+                    (.Send sender msg)
+                    (loop []
+                      (when (and (zero? (.getAvailable sender))
+                                 (not (and @run? @exit)))
+                        (Thread/sleep 1)
+                        (recur)))
+                    (Console/WriteLine (str "CLIENT: Client bytes received " (.getAvailable sender)))
+                    (let [^String message
+                          (if async-mode
+                            (let [asea (SocketAsyncEventArgs.)]
+                              (.SetBuffer asea bytes (int 0) (alength bytes))
+                              (.ReceiveAsync sender asea)
+                              (.GetString (Encoding/getASCII) (.getBuffer asea) (int 0) (.getBytesTransferred asea)))
+                            (let [rec-bytes (.Receive sender (JCORefOut/Create bytes))]
+                              (.GetString (Encoding/getASCII) bytes (int 0) rec-bytes)))]
                       (when message
-                        (Console/WriteLine "CLIENT: Client data received {0}" (NetObject. message)))))
-                  (vswap! x inc)
-                  ;; force a closure after 50 connections if no external closure happened before
-                  (when (zero? (mod @x 50))
-                    (reset! run false)))
-                (catch ArgumentNullException e (report e))
-                (catch SocketException e (report e))))
+                        (Console/WriteLine "CLIENT: Client data received {0}" (net-str message))))
+                    (swap! x inc)
+                    (when (zero? (mod @x 50))
+                      (reset! run? false))))
+                (catch ArgumentNullException e
+                  (Console/WriteLine (.getMessage e)))
+                (catch SocketException e
+                  (Console/WriteLine (.getMessage e)))))
             (println "CLIENT: Client exited correctly"))))
       (catch Throwable e
         (.printStackTrace e)

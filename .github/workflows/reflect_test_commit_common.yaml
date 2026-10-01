@@ -485,6 +485,12 @@ jobs:
         
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -496,12 +502,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket
@@ -670,6 +670,14 @@ jobs:
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
      
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock
         shell: cmd
@@ -684,14 +692,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloIterator
-        shell: cmd
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy
-        shell: cmd
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -875,6 +875,14 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
+        shell: cmd
+        continue-on-error: ${{ inputs.ForceExecution == true }}
      
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock
         shell: cmd
@@ -889,14 +897,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator
-        shell: cmd
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
-        shell: cmd
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1049,10 +1049,41 @@ jobs:
           })
           if ($namespaces.Count -eq 0) { throw "No Clojure test sources found" }
           Write-Host "Compiling $($namespaces.Count) namespace(s): $($namespaces -join ' ')"
+          $classes = (Resolve-Path tests/jvm/clojure/classes).Path
           java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
-            "-Dclojure.compile.path=tests/jvm/clojure/classes" `
+            "-Dclojure.compile.path=$classes" `
             clojure.lang.Compile $namespaces
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" generics.AnonymousSubclassConstruction
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" generics.EqualsGenericRenameOnEqualityComparer
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" generics.GenericCollectionAddAndGet
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" generics.GenericComparisonDelegateSortsAList
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" generics.GenericDictionaryWithTwoTypeArguments
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" generics.GenericExceptionExposesBoundType
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" generics.MissingAnonymousSubclassFails
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" generics.RemoveByKeyRenameOnKeyedCollection
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1064,12 +1095,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloIterator
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-        
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-        
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" nettest.HelloNETSocket
@@ -1213,6 +1238,12 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1223,12 +1254,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloIterator
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1
@@ -1364,6 +1389,12 @@ jobs:
         
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1375,12 +1406,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket
@@ -1514,6 +1539,12 @@ jobs:
         
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1525,12 +1556,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket
@@ -1643,9 +1668,45 @@ jobs:
           echo "Compiling in order: ${NAMESPACES[*]}"
           
           java -cp './bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes' \
-            -Dclojure.compile.path=tests/jvm/clojure/classes \
+            -Dclojure.compile.path=$PWD/tests/jvm/clojure/classes \
             clojure.lang.Compile "${NAMESPACES[@]}"
-   
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.AnonymousSubclassConstruction
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.EqualsGenericRenameOnEqualityComparer
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.GenericCollectionAddAndGet
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.GenericComparisonDelegateSortsAList
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.GenericDictionaryWithTwoTypeArguments
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.GenericExceptionExposesBoundType
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.MissingAnonymousSubclassFails
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.RemoveByKeyRenameOnKeyedCollection
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+  
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
@@ -1656,12 +1717,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloIterator
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-        
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
- 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket
@@ -1806,6 +1861,12 @@ jobs:
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1816,12 +1877,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket
@@ -1963,6 +2018,12 @@ jobs:
         
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1974,12 +2035,6 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket
@@ -2092,9 +2147,39 @@ jobs:
           echo "Compiling in order: ${NAMESPACES[*]}"
           
           java -cp './bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes' \
-            -Dclojure.compile.path=tests/jvm/clojure/classes \
+            -Dclojure.compile.path=$PWD/tests/jvm/clojure/classes \
             clojure.lang.Compile "${NAMESPACES[@]}"
-     
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.AnonymousSubclassConstruction
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.EqualsGenericRenameOnEqualityComparer
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.GenericCollectionAddAndGet
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.GenericComparisonDelegateSortsAList
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.GenericDictionaryWithTwoTypeArguments
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.GenericExceptionExposesBoundType
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.MissingAnonymousSubclassFails
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.RemoveByKeyRenameOnKeyedCollection
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+ 
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
@@ -2107,12 +2192,6 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
-        continue-on-error: ${{ inputs.ForceExecution == true }}
- 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
-        continue-on-error: ${{ inputs.ForceExecution == true }}
-        
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
  

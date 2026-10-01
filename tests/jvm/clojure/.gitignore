@@ -1,0 +1,7 @@
+.idea/
+target/
+classes/
+*.log
+.classpath
+.project
+netreflected-tests.iml

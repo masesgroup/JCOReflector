@@ -21,97 +21,69 @@
 ;;  SOFTWARE.
 
 (ns nettest.HelloNETSocketServer
-  (:import (org.mases.jcobridge.netreflection JCORefOut NetObject)
-           (system Console)
-           (system.net Dns EndPoint IPAddress IPEndPoint)
-           (system.net.sockets ProtocolType Socket SocketAsyncEventArgs
-                               SocketError SocketShutdown SocketType)
-           (system.text Encoding))
-  (:gen-class
-   :name nettest.HelloNETSocketServer
-   :main false
-   :methods [^:static [StartListening [boolean String int] void]]))
+  (:import [org.mases.jcobridge.netreflection JCORefOut NetObject]
+           [system Console]
+           [system.net Dns EndPoint IPAddress IPEndPoint IPHostEntry]
+           [system.net.sockets ProtocolType Socket SocketAsyncEventArgs SocketError SocketShutdown SocketType]
+           [system.text Encoding]))
 
-;; Based on examples from:
-;; https://docs.microsoft.com/en-us/dotnet/framework/network-programming/using-a-synchronous-server-socket
-;; https://docs.microsoft.com/en-us/dotnet/framework/network-programming/using-an-asynchronous-server-socket
+(defn- net-str ^NetObject [^String s] (NetObject. s))
+(defn- net-int ^NetObject [n] (NetObject. (Integer/valueOf (int n))))
 
-(def run (atom true))
-;; Incoming data from the client.
-(def data (atom nil))
-
-(defn -StartListening [asyncMode ^String address port]
+(defn start-listening [async-mode ^String address port]
   (try
-    (let [ipHostInfo (Dns/GetHostEntry (Dns/GetHostName))]
-      ;; print available endpoints
+    (let [^IPHostEntry host-info (Dns/GetHostEntry (Dns/GetHostName))]
       (println "SERVER: List of available IP Endpoints:")
-      (doseq [^IPAddress ipAddressAvailable (.getAddressList ipHostInfo)]
-        (.println System/out ipAddressAvailable)))
+      (doseq [a (.getAddressList host-info)]
+        (println a)))
     (catch Throwable e
       (.printStackTrace e)))
 
-  ;; Data buffer for incoming data.
-  (let [bytes (byte-array 1024)]
-    ;; Establish the local endpoint for the socket.
-    ;; Dns.GetHostName returns the name of the host running the application.
+  (let [bytes (byte-array 1024)
+        run (atom true)
+        data (atom "")
+        x (atom 1)]
     (try
-      ;; parse ip address
-      (let [ipAddress     (IPAddress/Parse address)
-            localEndPoint (IPEndPoint. ipAddress (int port))
-            ;; Create a TCP/IP socket.
-            listener      (Socket. (.getAddressFamily ipAddress) SocketType/Stream ProtocolType/Tcp)
-            ;; connection counter
-            x             (volatile! 1)]
-        ;; Bind the socket to the local endpoint and
-        ;; listen for incoming connections.
-        (.Bind listener (EndPoint/cast localEndPoint))
+      (let [ip-address (IPAddress/Parse address)
+            local-end-point (IPEndPoint. ip-address (int port))
+            listener (Socket. (.getAddressFamily ip-address) SocketType/Stream ProtocolType/Tcp)]
+        (.Bind listener (EndPoint/cast local-end-point))
         (.Listen listener (int 10))
-        ;; Start listening for connections.
         (while @run
-          (Console/WriteLine "SERVER: Waiting for a connection... Step {0}"
-                             (NetObject. (Integer/valueOf (int @x))))
-          ;; Program is suspended while waiting for an incoming connection.
-          (let [handler (.Accept listener)]
+          (Console/WriteLine "SERVER: Waiting for a connection... Step {0}" (net-int @x))
+          (let [^Socket handler (.Accept listener)
+                receive (atom true)]
             (println (str "SERVER: Server connected to client: " (.ToString (.getRemoteEndPoint handler))))
             (reset! data "")
-
-            ;; An incoming connection needs to be processed.
-            (let [receive (volatile! true)]
-              (while (and @receive @run)
-                (let [^String dataNew
-                      (if asyncMode
-                        (let [asea (SocketAsyncEventArgs.)]
-                          (.SetBuffer asea bytes 0 (alength bytes))
-                          (.ReceiveAsync handler asea)
-                          (loop []
-                            (when (and (zero? (.getBytesTransferred asea)) @run)
-                              (if-not (.equalsIgnoreCase (.ToString (.getSocketError asea))
-                                                         (.ToString SocketError/Success))
-                                (vreset! receive false)
-                                (recur))))
-                          (.GetString (Encoding/getASCII) (.getBuffer asea) 0 (.getBytesTransferred asea)))
-                        (let [recBytes (.Receive handler (JCORefOut/Create bytes))]
-                          (.GetString (Encoding/getASCII) bytes 0 recBytes)))]
-
-                  (swap! data str dataNew)
-                  (println (str "SERVER: Received from Client " dataNew))
-                  (vswap! x inc)
-                  ;; echo received data
-                  (.Send handler (.getBytes dataNew))
-
-                  (let [^String d @data]
-                    (when (and (> (.length d) 4) (> (.indexOf d "exit") -1))
-                      (Console/WriteLine "SERVER: Connection Closed by the client")
-                      (vreset! receive false))
-                    (when (and (> (.length d) 4) (> (.indexOf d "abort") -1))
-                      (Console/WriteLine "SERVER: Server shutdown requested by the client")
-                      (reset! run false))))))
-            ;; Show the data on the console.
-            (when-let [d @data]
-              (Console/WriteLine "SERVER: Text received : {0}" (NetObject. d)))
+            (while (and @receive @run)
+              (let [^String data-new
+                    (if async-mode
+                      (let [asea (SocketAsyncEventArgs.)]
+                        (.SetBuffer asea bytes (int 0) (alength bytes))
+                        (.ReceiveAsync handler asea)
+                        (loop []
+                          (when (and (zero? (.getBytesTransferred asea)) @run)
+                            (if-not (.equalsIgnoreCase (.ToString (.getSocketError asea))
+                                                       (.ToString SocketError/Success))
+                              (reset! receive false)
+                              (recur))))
+                        (.GetString (Encoding/getASCII) (.getBuffer asea) (int 0) (.getBytesTransferred asea)))
+                      (let [rec-bytes (.Receive handler (JCORefOut/Create bytes))]
+                        (.GetString (Encoding/getASCII) bytes (int 0) rec-bytes)))]
+                (swap! data str data-new)
+                (println (str "SERVER: Received from Client " data-new))
+                (swap! x inc)
+                (.Send handler (.getBytes data-new))
+                (when (and (> (count @data) 4) (.contains ^String @data "exit"))
+                  (Console/WriteLine "SERVER: Connection Closed by the client")
+                  (reset! receive false))
+                (when (and (> (count @data) 4) (.contains ^String @data "abort"))
+                  (Console/WriteLine "SERVER: Server shutdown requested by the client")
+                  (reset! run false))))
+            (Console/WriteLine "SERVER: Text received : {0}" (net-str @data))
             (.Shutdown handler SocketShutdown/Both)
             (.Close handler (int 10)))))
       (catch Throwable e
         (.printStackTrace e)
-        (System/exit -1))))
-  (println "SERVER: Server exited correctly"))
+        (System/exit -1)))
+    (println "SERVER: Server exited correctly")))

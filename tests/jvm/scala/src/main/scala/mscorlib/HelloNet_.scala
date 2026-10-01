@@ -29,7 +29,7 @@ import system._
 import system.io._
 import system.text.Encoding
 
-object HelloNet {
+object HelloNet_ {
 	def main(args: scala.Array[String]): Unit = {
 		JCOReflector.setCommandLineArgs(args)
 		try {

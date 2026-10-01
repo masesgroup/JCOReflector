@@ -28,6 +28,7 @@
   Super<TypeArg1, ...>. Methods named in `impls` are overridden and forwarded to Clojure fns."
   (:import [clojure.asm ClassWriter Opcodes Type]
            [clojure.lang DynamicClassLoader]
+		   [java.lang.invoke MethodHandles]
            [java.lang.reflect Method Modifier]))
 
 (def ^:private cache (atom {}))
@@ -138,13 +139,33 @@
     (.visitEnd cw)
     (.toByteArray cw)))
 
+(defn- define-in-loader
+  "Defines the class in the class loader (and package) of super, so that it can be resolved by
+  name from the JVM. Java 9+: Lookup.defineClass. Java 8: ClassLoader.defineClass by reflection."
+  ^Class [^Class super ^String cname ^bytes bytes]
+  (let [binary-name (.replace cname \/ \.)
+        byte-array-class (Class/forName "[B")]
+    (try
+      (let [pli    (.getMethod java.lang.invoke.MethodHandles "privateLookupIn"
+                               (into-array Class [Class java.lang.invoke.MethodHandles$Lookup]))
+            lookup (.invoke pli nil (object-array [super (java.lang.invoke.MethodHandles/lookup)]))
+            dc     (.getMethod java.lang.invoke.MethodHandles$Lookup "defineClass"
+                               (into-array Class [byte-array-class]))]
+        (.invoke dc lookup (object-array [bytes])))
+      (catch NoSuchMethodException _
+        (let [dc (doto (.getDeclaredMethod ClassLoader "defineClass"
+                                           (into-array Class [String byte-array-class
+                                                              Integer/TYPE Integer/TYPE]))
+                   (.setAccessible true))]
+          (.invoke dc (.getClassLoader super)
+                   (object-array [binary-name bytes (int 0) (int (alength bytes))])))))))
+
 (defn- generic-class ^Class [^Class super type-args method-names]
   (let [k [super (vec type-args) (vec (sort method-names))]]
     (or (get @cache k)
-        (let [cname (str "generics/support/Gen" (swap! counter inc))
+        (let [cname (str (.replace (.getPackageName super) \. \/) "/DynamicGenerated" (swap! counter inc))
               bytes (generate-class super type-args cname method-names)
-              loader (DynamicClassLoader. (.getClassLoader super))
-              cls (.defineClass loader (.replace cname \/ \.) bytes nil)]
+              cls   (define-in-loader super cname bytes)]
           (swap! cache assoc k cls)
           cls))))
 

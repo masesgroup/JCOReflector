@@ -832,7 +832,7 @@ jobs:
 
       - name: Build Kotlin test source file
         shell: pwsh
-        continue-on-error: ${{ inputs.ForceExecution == true || matrix.framework == 'net462' }}
+        continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
           New-Item -ItemType Directory -Force ./tests/jvm/kotlin/output | Out-Null
           $cp  = (Get-ChildItem ./bin/${{ matrix.framework }} -Filter *.jar -Recurse |
@@ -1040,7 +1040,7 @@ jobs:
         
       - name: Build Clojure test source files
         shell: pwsh
-        continue-on-error: ${{ inputs.ForceExecution == true }}
+        continue-on-error: ${{ inputs.ForceExecution == true || matrix.framework == 'net462' }}
         run: |
           New-Item -ItemType Directory -Force tests/jvm/clojure/classes | Out-Null
           $root = (Resolve-Path tests/jvm/clojure/src/main/clojure).Path
@@ -1637,13 +1637,12 @@ jobs:
         run: |
           mkdir -p tests/jvm/clojure/classes
           
-          # 'sort' senza opzioni ordina alfabeticamente dalla A alla Z, come fa Windows di default
           mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort)
           
           if [ ${#NAMESPACES[@]} -eq 0 ]; then echo "No Clojure test sources found"; exit 1; fi
-          echo "Compiling in Windows order: ${NAMESPACES[*]}"
+          echo "Compiling in order: ${NAMESPACES[*]}"
           
-          java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
+          java -cp './bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes' \
             -Dclojure.compile.path=tests/jvm/clojure/classes \
             clojure.lang.Compile "${NAMESPACES[@]}"
    
@@ -2087,13 +2086,12 @@ jobs:
         run: |
           mkdir -p tests/jvm/clojure/classes
           
-          # 'sort' senza opzioni ordina alfabeticamente dalla A alla Z, come fa Windows di default
           mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort)
           
           if [ ${#NAMESPACES[@]} -eq 0 ]; then echo "No Clojure test sources found"; exit 1; fi
-          echo "Compiling in Windows order: ${NAMESPACES[*]}"
+          echo "Compiling in order: ${NAMESPACES[*]}"
           
-          java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
+          java -cp './bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes' \
             -Dclojure.compile.path=tests/jvm/clojure/classes \
             clojure.lang.Compile "${NAMESPACES[@]}"
      

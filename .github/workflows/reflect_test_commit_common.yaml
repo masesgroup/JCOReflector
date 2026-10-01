@@ -455,65 +455,65 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.AnonymousSubclassConstruction
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.EqualsGenericRenameOnEqualityComparer
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericCollectionAddAndGet
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericComparisonDelegateSortsAList
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericDictionaryWithTwoTypeArguments
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericExceptionExposesBoundType
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.MissingAnonymousSubclassFails
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - uses: actions/upload-artifact@v7
@@ -624,12 +624,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Scala test source file for ${{ matrix.framework }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -639,75 +639,75 @@ jobs:
           mkdir output
           ..\..\..\bin\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/generics/* ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.AnonymousSubclassConstruction
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericCollectionAddAndGet
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
      
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNET
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloIterator
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOutBase
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOut
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -823,12 +823,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Kotlin test source file
         shell: pwsh
@@ -844,75 +844,75 @@ jobs:
           kotlinc '@kotlinc.args'
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
      
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1028,12 +1028,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
@@ -1054,34 +1054,34 @@ jobs:
             clojure.lang.Compile $namespaces
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" nettest.HelloNETSocket -async
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: cd ./tests/jvm/clojure && rmdir classes /s /q
@@ -1178,69 +1178,69 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Java test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.AnonymousSubclassConstruction
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.EqualsGenericRenameOnEqualityComparer
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericCollectionAddAndGet
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericComparisonDelegateSortsAList
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericDictionaryWithTwoTypeArguments
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericExceptionExposesBoundType
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.MissingAnonymousSubclassFails
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1
         continue-on-error: ${{ inputs.ForceExecution == true }}
   
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - uses: actions/upload-artifact@v7
@@ -1327,12 +1327,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Scala test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1341,58 +1341,58 @@ jobs:
           mkdir ./tests/jvm/scala/output
           scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/generics/* ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
         
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.AnonymousSubclassConstruction
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericCollectionAddAndGet
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: rm -rf ./tests/jvm/scala/output
@@ -1472,12 +1472,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Kotlin test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1491,58 +1491,58 @@ jobs:
             ./tests/jvm/kotlin/src/main/kotlin/nettest/* \
             ./tests/jvm/kotlin/src/main/kotlin/refout/*
       
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: rm -rf ./tests/jvm/kotlin/output
@@ -1622,12 +1622,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
@@ -1643,34 +1643,34 @@ jobs:
             -Dclojure.compile.path=tests/jvm/clojure/classes \
             clojure.lang.Compile $NAMESPACES
    
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket -async
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: rm -rf ./tests/jvm/clojure/classes
@@ -1766,12 +1766,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Scala test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1779,58 +1779,58 @@ jobs:
           mkdir ./tests/jvm/scala/output
           ${{ env.SCALA_BIN }}/scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/generics/* ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.AnonymousSubclassConstruction
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.EqualsGenericRenameOnEqualityComparer
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericCollectionAddAndGet
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericComparisonDelegateSortsAList
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericDictionaryWithTwoTypeArguments
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.GenericExceptionExposesBoundType
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.MissingAnonymousSubclassFails
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: rm -rf ./tests/jvm/scala/output
@@ -1918,12 +1918,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Kotlin test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1937,58 +1937,58 @@ jobs:
             ./tests/jvm/kotlin/src/main/kotlin/nettest/* \
             ./tests/jvm/kotlin/src/main/kotlin/refout/*
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.AnonymousSubclassConstruction
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.EqualsGenericRenameOnEqualityComparer
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericCollectionAddAndGet
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericComparisonDelegateSortsAList
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericDictionaryWithTwoTypeArguments
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.GenericExceptionExposesBoundType
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.MissingAnonymousSubclassFails
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" generics.RemoveByKeyRenameOnKeyedCollection
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" nettest.HelloNETSocket -async
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: rm -rf ./tests/jvm/kotlin/output
@@ -2068,12 +2068,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
@@ -2089,34 +2089,34 @@ jobs:
             -Dclojure.compile.path=tests/jvm/clojure/classes \
             clojure.lang.Compile $NAMESPACES
      
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNET
         continue-on-error: ${{ inputs.ForceExecution == true }}
     
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloNETEvent
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloIterator
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloHierarchy
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" hierarchy.HelloInterfaces
         continue-on-error: ${{ inputs.ForceExecution == true }}
         
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" nettest.HelloNETSocket -async
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOutBase
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" refout.HelloRefOut
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
       - run: rm -rf ./tests/jvm/clojure/classes

@@ -198,12 +198,12 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net10.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Build Clojure test source files
         if: matrix.framework == 'net462' || matrix.framework == 'net8.0'

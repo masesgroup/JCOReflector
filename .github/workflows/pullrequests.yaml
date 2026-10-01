@@ -178,8 +178,14 @@ jobs:
 
       - name: Build Kotlin test source file
         shell: pwsh
+        continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
           New-Item -ItemType Directory -Force ./tests/jvm/kotlin/output | Out-Null
-          $cp = (Get-ChildItem ./bin/${{ matrix.framework }} -Filter *.jar -Recurse | ForEach-Object FullName) -join ';'
-          $src = Get-ChildItem ./tests/jvm/kotlin/src/main/kotlin -Filter *.kt -Recurse | ForEach-Object FullName
-          kotlinc -cp $cp -include-runtime -d ./tests/jvm/kotlin/output/kotlintests.jar $src
+          $cp  = (Get-ChildItem ./bin/${{ matrix.framework }} -Filter *.jar -Recurse |
+                  ForEach-Object { $_.FullName -replace '\\','/' }) -join ';'
+          $src = Get-ChildItem ./tests/jvm/kotlin/src/main/kotlin -Filter *.kt -Recurse |
+                  ForEach-Object { '"' + ($_.FullName -replace '\\','/') + '"' }
+          $lines = @('-cp', "`"$cp`"", '-include-runtime', '-d', '"./tests/jvm/kotlin/output/kotlintests.jar"') + $src
+          Set-Content -Path kotlinc.args -Value $lines -Encoding ascii
+          kotlinc '@kotlinc.args'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

@@ -923,7 +923,7 @@ jobs:
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: cd ./tests/jvm/scala && rmdir output /s /q
+      - run: cd ./tests/jvm/kotlin && rmdir output /s /q
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1393,7 +1393,7 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: rm -rf ./tests/jvm/scala/output
+      - run: rm -rf ./tests/jvm/kotlin/output
 
       - uses: actions/upload-artifact@v7
         with:
@@ -1717,7 +1717,7 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: rm -rf ./tests/jvm/scala/output
+      - run: rm -rf ./tests/jvm/kotlin/output
 
       - uses: actions/upload-artifact@v7
         with:

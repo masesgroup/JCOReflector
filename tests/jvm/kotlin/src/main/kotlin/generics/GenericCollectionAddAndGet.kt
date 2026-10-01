@@ -63,15 +63,15 @@ object GenericCollectionAddAndGet {
      */
     @Throws(Throwable::class)
     fun testGenericCollectionAddAndGet() {
-        val list: List_1<system.Guid?> = object : List_1<system.Guid?>() {}
+        val list = object : List_1<system.Guid>() {}
 
-        val item: system.Guid = Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}")
+        val item = Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}")
         list.Add(item)
-        if (list.getCount() !== 1) throw AssertionError("Expected 1 element after Add")
+        if (list.getCount() != 1) throw AssertionError("Expected 1 element after Add")
 
-        val array: Array<system.Guid> = list.ToArray()
-        val fetched: system.Guid = array[0]
+        val array = list.ToArray()
+        val fetched = array[0]
         if (fetched == null) throw AssertionError("Expected a non-null element back")
-        if (!fetched.Equals(item)) throw AssertionError("Expected a non-null element back")
+        if (!fetched.Equals(item)) throw AssertionError("Fetched element differs from the added one")
     }
 }

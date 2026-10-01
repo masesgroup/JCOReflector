@@ -68,6 +68,6 @@ object GenericCollectionAddAndGet {
     val array = list.ToArray
     val fetched = array(0)
     if (fetched == null) throw new AssertionError("Expected a non-null element back")
-    if (!fetched.Equals(item)) throw new AssertionError("Expected a non-null element back")
+    if (!fetched.Equals(item)) throw new AssertionError("Fetched element differs from the added on")
   }
 }

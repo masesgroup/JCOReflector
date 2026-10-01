@@ -62,7 +62,7 @@ object EqualsGenericRenameOnEqualityComparer {
      */
     @Throws(Exception::class)
     fun testEqualsGenericRenameOnEqualityComparer() {
-        val cl = EqualsGenericRenameOnEqualityComparer::class.java.getClassLoader()
+        val cl = EqualsGenericRenameOnEqualityComparer::class.java.classLoader
         val comparer = Class.forName("system.collections.generic.IEqualityComparer_1", false, cl)
         comparer.getMethod("EqualsGeneric", IJCOBridgeReflected::class.java, IJCOBridgeReflected::class.java)
         assertMissing(comparer, "Equals", IJCOBridgeReflected::class.java, IJCOBridgeReflected::class.java)
@@ -72,11 +72,12 @@ object EqualsGenericRenameOnEqualityComparer {
         assertMissing(equatable, "Equals", IJCOBridgeReflected::class.java)
     }
 
-    fun assertMissing(c: Class<*>, name: String, vararg params: Class<*>?) {
+    private fun assertMissing(c: Class<*>, name: kotlin.String, vararg params: Class<*>) {
         try {
             c.getMethod(name, *params)
-            throw AssertionError(c.getSimpleName() + "." + name + " should have been renamed")
         } catch (expected: NoSuchMethodException) {
+            return
         }
+        throw AssertionError(c.simpleName + "." + name + " should have been renamed")
     }
 }

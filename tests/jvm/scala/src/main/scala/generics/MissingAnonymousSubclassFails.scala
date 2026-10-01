@@ -64,12 +64,9 @@ object MissingAnonymousSubclassFails {
     var threw = false
     try {
       // Deliberately missing the trailing "{}" anonymous-subclass syntax.
-      val list = new List_1[system.Object]
-    }
-    catch
-    {
-      case expected: IllegalArgumentException =>
-        threw = true
+      new List_1[system.Object]()
+    } catch {
+      case _: IllegalArgumentException => threw = true
       case unexpected: Throwable =>
         throw new AssertionError("Expected IllegalArgumentException, got " + unexpected, unexpected)
     }

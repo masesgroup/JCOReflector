@@ -64,7 +64,7 @@ object MissingAnonymousSubclassFails {
         var threw = false
         try {
             // Deliberately missing the trailing "{}" anonymous-subclass syntax.
-            val list: List_1<system.Object?> = List_1<system.Object?>()
+            List_1<system.Object>()
         } catch (expected: IllegalArgumentException) {
             threw = true
         } catch (unexpected: Throwable) {

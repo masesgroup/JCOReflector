@@ -63,11 +63,10 @@ object GenericDictionaryWithTwoTypeArguments {
      */
     @Throws(Throwable::class)
     fun testGenericDictionaryWithTwoTypeArguments() {
-        val dict: Dictionary_2<system.Object?, system.Object?> =
-            object : Dictionary_2<system.Object?, system.Object?>() {}
-        val key: system.Object = system.Object()
-        val value: system.Object = system.Object()
+        val dict = object : Dictionary_2<system.Object, system.Object>() {}
+        val key = system.Object()
+        val value = system.Object()
         dict.Add(key, value)
-        if (dict.getCount() !== 1) throw AssertionError("Expected 1 entry after Add")
+        if (dict.getCount() != 1) throw AssertionError("Expected 1 entry after Add")
     }
 }

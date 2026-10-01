@@ -217,6 +217,6 @@ jobs:
           if ($namespaces.Count -eq 0) { throw "No Clojure test sources found" }
           Write-Host "Compiling: $($namespaces -join ' ')"
           java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
-            "-Dclojure.compile.path=tests/jvm/clojure/classes" ${{ env.EXTRA_ARGUMENT }} `
-            clojure.lang.Compile @namespaces
+            "-Dclojure.compile.path=tests/jvm/clojure/classes" `
+            clojure.lang.Compile @namespaces ${{ env.EXTRA_ARGUMENT }}
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

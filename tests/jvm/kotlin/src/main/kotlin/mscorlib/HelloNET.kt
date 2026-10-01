@@ -61,8 +61,10 @@ object HelloNET {
             Environment.Exit(0)
         } catch (fnfe: FileNotFoundException) {
             fnfe.printStackTrace()
+            System.exit(-1)
         } catch (tre: Throwable) {
             tre.printStackTrace()
+            System.exit(-1)
         }
     }
 }

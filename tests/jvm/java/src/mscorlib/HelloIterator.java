@@ -37,13 +37,12 @@ public class HelloIterator {
 
             String[] ld = Environment.GetLogicalDrives();
             for (String drive : ld) {
-                Console.WriteLine(drive); 
+                Console.WriteLine(drive);
                 //System.out.println(drive); viable Alternative
             }
             Console.WriteLine("Exiting with success");
             Environment.Exit(0);
-        }
-        catch (Throwable tre) {
+        } catch (Throwable tre) {
             tre.printStackTrace();
             System.exit(-1);
         }

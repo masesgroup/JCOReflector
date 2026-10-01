@@ -25,6 +25,7 @@
 package refout;
 
 import org.mases.jcobridge.netreflection.*;
+
 import java.util.concurrent.atomic.*;
 
 public class HelloRefOutBase {

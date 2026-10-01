@@ -62,7 +62,7 @@ object AnonymousSubclassConstruction {
      */
     @Throws(Throwable::class)
     fun testAnonymousSubclassConstruction() {
-        val list: List_1<system.Object?> = object : List_1<system.Object?>() {}
+        val list: List_1<system.Object> = object : List_1<system.Object>() {}
         if (list == null) throw AssertionError("Expected a non-null List_1 instance")
     }
 }

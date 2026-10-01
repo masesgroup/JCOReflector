@@ -151,7 +151,23 @@ DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK
     }
 
     public PACKAGE_CLASS_NAME() {
-        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super((String) null); // resolved lazily below, once the anonymous-subclass type arguments are known
+    }
+    
+    @Override
+    public String getDelegateTypeName() {
+        Class<?>[] typeArguments = NetGenericHelper.resolveTypeArguments(getClass());
+        return NetGenericHelper.buildClosedClrName(className, typeArguments) + ", "
+            + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+    }
+    
+    @Override
+    public JCType getDelegateType() {
+        try {
+            return JCOBridgeInstance.getInstance(assemblyFullName).GetType(getDelegateTypeName());
+        } catch (JCException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
     public PACKAGE_CLASS_NAME(IPACKAGE_CLASS_NAME<GENERIC_METHOD_ARGUMENTS> instance) {

@@ -65,30 +65,19 @@ object GenericComparisonDelegateSortsAList {
   @throws[Throwable]
   private[generics] def testGenericComparisonDelegateSortsAList(): Unit = {
     val list = new List_1[system.Object]() {}
-    val calls = new java.util.concurrent.atomic.AtomicInteger
-    val closedName = "System.Comparison`1[System.Object]"
+    list.Add(new system.Object())
+    list.Add(new system.Object())
+
+    val calls = new java.util.concurrent.atomic.AtomicInteger()
+
     val comparison = new Comparison_1[system.Object]() {
-      override def getDelegateTypeName: String = {
-        val delegateTypeName = closedName + ", " + Comparison_1.assemblyFullName
-        delegateTypeName
-      }
-
-      override def getDelegateType: JCType = try {
-        val delegateTypeName = getDelegateTypeName
-        JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(delegateTypeName)
-      } catch {
-        case t: Throwable =>
-          throw new IllegalStateException(t)
-      }
-
       override def Invoke(x: system.Object, y: system.Object): Int = {
-        calls.incrementAndGet
+        calls.incrementAndGet()
         0
       }
     }
-    list.Add(new system.Object)
-    list.Add(new system.Object)
     list.Sort(comparison)
-    if (calls.get == 0) throw new AssertionError("Java comparison never invoked")
+
+    if (calls.get() == 0) throw new AssertionError("Java comparison never invoked")
   }
 }

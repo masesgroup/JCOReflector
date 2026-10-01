@@ -59,30 +59,22 @@ public class GenericComparisonDelegateSortsAList {
      * Comparison<T> returns int, which required its own "Native" generic delegate template
      * distinct from the generic-parameter-return case.
      */
-    static void testGenericComparisonDelegateSortsAList() throws Throwable {
-        List_1<system.Object> list = new List_1<system.Object>() {};
+	static void testGenericComparisonDelegateSortsAList() throws Throwable {
+		List_1<system.Object> list = new List_1<system.Object>() {};
+		list.Add(new system.Object());
+		list.Add(new system.Object());
 
 		final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
-		final String closedName = "System.Comparison`1[System.Object]";
 
 		Comparison_1<system.Object> comparison = new Comparison_1<system.Object>() {
-			@Override public java.lang.String getDelegateTypeName() {
-				java.lang.String delegateTypeName = closedName + ", " + Comparison_1.assemblyFullName;
-				return delegateTypeName;
-			}
-			@Override public JCType getDelegateType() {
-				try {
-					java.lang.String delegateTypeName = getDelegateTypeName();
-					return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(delegateTypeName);
-				} catch (Throwable t) { throw new IllegalStateException(t); }
-			}
-			@Override public int Invoke(system.Object x, system.Object y) {
+			@Override
+			public int Invoke(system.Object x, system.Object y) {
 				calls.incrementAndGet();
 				return 0;
 			}
 		};
-		list.Add(new system.Object()); list.Add(new system.Object());
 		list.Sort(comparison);
+
 		if (calls.get() == 0) throw new AssertionError("Java comparison never invoked");
-    }
+	}
 }

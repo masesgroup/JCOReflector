@@ -64,35 +64,20 @@ object GenericComparisonDelegateSortsAList {
     </T> */
     @Throws(Throwable::class)
     fun testGenericComparisonDelegateSortsAList() {
-        val list: List_1<system.Object?> = object : List_1<system.Object?>() {}
+        val list = object : List_1<system.Object>() {}
+        list.Add(system.Object())
+        list.Add(system.Object())
 
         val calls = AtomicInteger()
-        val closedName = "System.Comparison`1[System.Object]"
 
-        val comparison: Comparison_1<system.Object?> = object : Comparison_1<system.Object?>() {
-            val delegateTypeName: String
-                get() {
-                    val delegateTypeName = closedName + ", " + Comparison_1.assemblyFullName
-                    return delegateTypeName
-                }
-            val delegateType: JCType
-                get() {
-                    try {
-                        val delegateTypeName = this.delegateTypeName
-                        return JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(delegateTypeName)
-                    } catch (t: Throwable) {
-                        throw IllegalStateException(t)
-                    }
-                }
-
-            public override fun Invoke(x: system.Object?, y: system.Object?): Int {
+        val comparison = object : Comparison_1<system.Object>() {
+            override fun Invoke(x: system.Object, y: system.Object): Int {
                 calls.incrementAndGet()
                 return 0
             }
         }
-        list.Add(system.Object())
-        list.Add(system.Object())
         list.Sort(comparison)
+
         if (calls.get() == 0) throw AssertionError("Java comparison never invoked")
     }
 }

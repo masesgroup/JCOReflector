@@ -679,7 +679,7 @@ jobs:
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -887,7 +887,7 @@ jobs:
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1213,7 +1213,7 @@ jobs:
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
@@ -1366,7 +1366,7 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
@@ -1529,7 +1529,7 @@ jobs:
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
@@ -1690,7 +1690,7 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+      - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/kotlin/output/kotlintests.jar" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}

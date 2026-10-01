@@ -832,7 +832,7 @@ jobs:
 
       - name: Build Kotlin test source file
         shell: pwsh
-        continue-on-error: ${{ inputs.ForceExecution == true }}
+        continue-on-error: ${{ inputs.ForceExecution == true || matrix.framework == 'net462' }}
         run: |
           New-Item -ItemType Directory -Force ./tests/jvm/kotlin/output | Out-Null
           $cp  = (Get-ChildItem ./bin/${{ matrix.framework }} -Filter *.jar -Recurse |
@@ -1636,12 +1636,16 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
           mkdir -p tests/jvm/clojure/classes
-          NAMESPACES=$(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g')
-          if [ -z "$NAMESPACES" ]; then echo "No Clojure test sources found"; exit 1; fi
-          echo "Compiling: $NAMESPACES"
+          
+          # 'sort -r' reverses the alphabetical order, ensuring Server and Client are processed before Socket
+          mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort -r)
+          
+          if [ ${#NAMESPACES[@]} -eq 0 ]; then echo "No Clojure test sources found"; exit 1; fi
+          echo "Compiling in order: ${NAMESPACES[*]}"
+          
           java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
             -Dclojure.compile.path=tests/jvm/clojure/classes \
-            clojure.lang.Compile $NAMESPACES
+            clojure.lang.Compile "${NAMESPACES[@]}"
    
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -2082,12 +2086,16 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
         run: |
           mkdir -p tests/jvm/clojure/classes
-          NAMESPACES=$(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g')
-          if [ -z "$NAMESPACES" ]; then echo "No Clojure test sources found"; exit 1; fi
-          echo "Compiling: $NAMESPACES"
+          
+          # 'sort -r' reverses the alphabetical order, ensuring Server and Client are processed before Socket
+          mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort -r)
+          
+          if [ ${#NAMESPACES[@]} -eq 0 ]; then echo "No Clojure test sources found"; exit 1; fi
+          echo "Compiling in order: ${NAMESPACES[*]}"
+          
           java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
             -Dclojure.compile.path=tests/jvm/clojure/classes \
-            clojure.lang.Compile $NAMESPACES
+            clojure.lang.Compile "${NAMESPACES[@]}"
      
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" mscorlib.HelloLock
         continue-on-error: ${{ inputs.ForceExecution == true }}

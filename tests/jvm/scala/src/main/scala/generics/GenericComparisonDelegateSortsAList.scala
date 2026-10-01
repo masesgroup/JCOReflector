@@ -68,12 +68,12 @@ object GenericComparisonDelegateSortsAList {
     val calls = new java.util.concurrent.atomic.AtomicInteger
     val closedName = "System.Comparison`1[System.Object]"
     val comparison = new Comparison_1[system.Object]() {
-      def getDelegateTypeName: String = {
+      override def getDelegateTypeName: String = {
         val delegateTypeName = closedName + ", " + Comparison_1.assemblyFullName
         delegateTypeName
       }
 
-      def getDelegateType: JCType = try {
+      override def getDelegateType: JCType = try {
         val delegateTypeName = getDelegateTypeName
         JCOBridgeInstance.getInstance(Comparison_1.assemblyFullName).GetType(delegateTypeName)
       } catch {
@@ -81,7 +81,7 @@ object GenericComparisonDelegateSortsAList {
           throw new IllegalStateException(t)
       }
 
-      def Invoke(x: system.Object, y: system.Object): Int = {
+      override def Invoke(x: system.Object, y: system.Object): Int = {
         calls.incrementAndGet
         0
       }

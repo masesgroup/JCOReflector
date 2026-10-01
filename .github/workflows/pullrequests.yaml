@@ -12,6 +12,8 @@ on:
 
 env:
     SCALARELEASE: 2.13.18
+    JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
@@ -193,6 +195,16 @@ jobs:
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
 
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:10" >> $GITHUB_ENV
+
       - name: Build Clojure test source files
         shell: pwsh
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -205,6 +217,6 @@ jobs:
           if ($namespaces.Count -eq 0) { throw "No Clojure test sources found" }
           Write-Host "Compiling: $($namespaces -join ' ')"
           java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
-            "-Dclojure.compile.path=tests/jvm/clojure/classes" `
+            "-Dclojure.compile.path=tests/jvm/clojure/classes" ${{ env.EXTRA_ARGUMENT }} `
             clojure.lang.Compile @namespaces
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

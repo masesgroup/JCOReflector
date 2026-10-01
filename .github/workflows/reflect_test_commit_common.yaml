@@ -80,7 +80,9 @@ on:
         required: true
 env:
     SCALARELEASE: 2.13.18
-
+    JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
   # This workflow contains a single job called "build"
@@ -401,9 +403,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
     
     steps:
       # Runs a set of commands using the runners shell
@@ -569,9 +568,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
       
     steps:
       # Runs a set of commands using the runners shell
@@ -771,9 +767,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
       
     steps:
       # Runs a set of commands using the runners shell
@@ -979,9 +972,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
       
     steps:
       # Runs a set of commands using the runners shell
@@ -1113,9 +1103,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -1262,9 +1249,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -1419,9 +1403,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -1572,9 +1553,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -1681,9 +1659,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -1844,9 +1819,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -2003,9 +1975,6 @@ jobs:
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
-    env:
-      JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

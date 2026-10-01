@@ -64,7 +64,7 @@ object GenericComparisonDelegateSortsAList {
   @throws[Throwable]
   private[generics] def testGenericComparisonDelegateSortsAList(): Unit = {
     val list = new List_1[system.Object]() {}
-    val calls = new AtomicInteger
+    val calls = new java.util.concurrent.atomic.AtomicInteger
     val closedName = "System.Comparison`1[System.Object]"
     val comparison = new Comparison_1[system.Object]() {
       def getDelegateTypeName: String = {

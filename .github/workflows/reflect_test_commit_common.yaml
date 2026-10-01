@@ -1047,6 +1047,22 @@ jobs:
 
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+        
+      - name: Build Clojure test source files
+        shell: pwsh
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        run: |
+          New-Item -ItemType Directory -Force tests/jvm/clojure/classes | Out-Null
+          $root = (Resolve-Path tests/jvm/clojure/src/main/clojure).Path
+          $namespaces = Get-ChildItem $root -Filter *.clj -Recurse | ForEach-Object {
+              $_.FullName.Substring($root.Length + 1) -replace '\.clj$','' -replace '[\\/]','.'
+          }
+          if (-not $namespaces) { throw "No Clojure test sources found" }
+          Write-Host "Compiling: $namespaces"
+          java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
+            "-Dclojure.compile.path=tests/jvm/clojure/classes" `
+            clojure.lang.Compile @namespaces
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1611,6 +1627,17 @@ jobs:
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
       
+      - name: Build Clojure test source files
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        run: |
+          mkdir -p tests/jvm/clojure/classes
+          NAMESPACES=$(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g')
+          if [ -z "$NAMESPACES" ]; then echo "No Clojure test sources found"; exit 1; fi
+          echo "Compiling: $NAMESPACES"
+          java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
+            -Dclojure.compile.path=tests/jvm/clojure/classes \
+            clojure.lang.Compile $NAMESPACES
+      
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
  
@@ -2027,7 +2054,18 @@ jobs:
 
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
-      
+     
+      - name: Build Clojure test source files
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        run: |
+          mkdir -p tests/jvm/clojure/classes
+          NAMESPACES=$(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g')
+          if [ -z "$NAMESPACES" ]; then echo "No Clojure test sources found"; exit 1; fi
+          echo "Compiling: $NAMESPACES"
+          java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes" \
+            -Dclojure.compile.path=tests/jvm/clojure/classes \
+            clojure.lang.Compile $NAMESPACES
+     
       - run: java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/classes" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
  

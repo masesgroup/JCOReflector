@@ -25,7 +25,8 @@
 package generics
 
 import org.mases.jcobridge.netreflection._
-import system._
+import system.Console
+import system.Environment
 import system.collections.generic._
 import system.collections.objectmodel._
 
@@ -63,7 +64,7 @@ object GenericCollectionAddAndGet {
     val list = new List_1[Guid]() {}
     val item = new Guid("{4E601116-3051-49CA-BA2B-5C47DF33B4C2}")
     list.Add(item)
-    if (list.getCount ne 1) throw new AssertionError("Expected 1 element after Add")
+    if (list.getCount != 1) throw new AssertionError("Expected 1 element after Add")
     val array = list.ToArray
     val fetched = array(0)
     if (fetched == null) throw new AssertionError("Expected a non-null element back")

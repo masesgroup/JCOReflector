@@ -25,7 +25,8 @@
 package generics
 
 import org.mases.jcobridge.netreflection._
-
+import system.Console
+import system.Environment
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
@@ -58,7 +59,7 @@ object RemoveByKeyRenameOnKeyedCollection {
    */
   @throws[Exception]
   private[generics] def testRemoveByKeyRenameOnKeyedCollection(): Unit = {
-    val cl = classOf[RemoveByKeyRenameOnKeyedCollection].getClassLoader
+    val cl = getClass.getClassLoader
     val keyed = Class.forName("system.collections.objectmodel.KeyedCollection_2", false, cl)
     val collection = Class.forName("system.collections.objectmodel.Collection_1", false, cl)
     keyed.getMethod("RemoveByKey", classOf[IJCOBridgeReflected])

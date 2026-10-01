@@ -25,7 +25,8 @@
 package generics
 
 import org.mases.jcobridge.netreflection._
-import system._
+import system.Console
+import system.Environment
 import system.collections.generic._
 import system.collections.objectmodel._
 

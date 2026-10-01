@@ -25,7 +25,8 @@
 package generics
 
 import org.mases.jcobridge.netreflection._
-import system._
+import system.Console
+import system.Environment
 import system.collections.generic._
 import system.collections.objectmodel._
 
@@ -66,6 +67,6 @@ object GenericDictionaryWithTwoTypeArguments {
     val key = new system.Object
     val value = new system.Object
     dict.Add(key, value)
-    if (dict.getCount ne 1) throw new AssertionError("Expected 1 entry after Add")
+    if (dict.getCount != 1) throw new AssertionError("Expected 1 entry after Add")
   }
 }

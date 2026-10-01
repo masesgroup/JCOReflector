@@ -25,7 +25,8 @@
 package generics
 
 import org.mases.jcobridge.netreflection._
-
+import system.Console
+import system.Environment
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
@@ -58,7 +59,7 @@ object EqualsGenericRenameOnEqualityComparer {
    */
   @throws[Exception]
   private[generics] def testEqualsGenericRenameOnEqualityComparer(): Unit = {
-    val cl = classOf[EqualsGenericRenameOnEqualityComparer].getClassLoader
+    val cl = getClass.getClassLoader
     val comparer = Class.forName("system.collections.generic.IEqualityComparer_1", false, cl)
     comparer.getMethod("EqualsGeneric", classOf[IJCOBridgeReflected], classOf[IJCOBridgeReflected])
     assertMissing(comparer, "Equals", classOf[IJCOBridgeReflected], classOf[IJCOBridgeReflected])
@@ -69,7 +70,7 @@ object EqualsGenericRenameOnEqualityComparer {
 
   private[generics] def assertMissing(c: Class[_], name: String, params: Class[_]*): Unit = {
     try {
-      c.getMethod(name, params)
+      c.getMethod(name, params: _*)
       throw new AssertionError(c.getSimpleName + "." + name + " should have been renamed")
     } catch {
       case expected: NoSuchMethodException =>

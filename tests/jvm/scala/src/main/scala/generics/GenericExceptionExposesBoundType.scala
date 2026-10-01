@@ -25,7 +25,8 @@
 package generics
 
 import org.mases.jcobridge.netreflection._
-
+import system.Console
+import system.Environment
 
 /**
  * Draft smoke tests for JCOReflector's experimental generics support.
@@ -60,7 +61,7 @@ object GenericExceptionExposesBoundType {
   @throws[Throwable]
   private[generics] def testGenericExceptionExposesBoundType(): Unit = {
     var ex: Class[_] = null
-    try ex = Class.forName("system.servicemodel.FaultException_1", false, classOf[GenericExceptionExposesBoundType].getClassLoader)
+    try ex = Class.forName("system.servicemodel.FaultException_1", false, getClass.getClassLoader)
     catch {
       case notAvailable: ClassNotFoundException =>
         Console.WriteLine("FaultException_1 not available in this framework, skipping")

@@ -32,13 +32,14 @@ import system.collections.generic.*;
 import system.collections.objectmodel.*;
 
 /**
- * Draft smoke tests for JCOReflector's experimental generics support.
+ * Smoke test for JCOReflector's experimental generics support.
  * <p>
- * Each method is a self-contained, independent check for one specific mechanism discussed
- * while this feature was implemented. They are written as plain static methods on purpose,
- * so they can be dropped into whatever test harness the project actually uses (JUnit, plain
- * {@code main}, or something else) without depending on a particular framework.
- * <p>
+ * Exercises a generic delegate with a primitive (non-generic-parameter) return type —
+ * Comparison<T> returns int — passed as a synchronous, value-returning callback to a
+ * generic method (List<T>.Sort). Both List_1 and Comparison_1 are constructed with the
+ * anonymous-subclass idiom ({@code new X<T>() {}}); the generated Comparison_1 class
+ * resolves its own closed CLR delegate type lazily via NetGenericHelper, so no manual
+ * type-name bookkeeping is needed here.
  */
 public class GenericComparisonDelegateSortsAList {
 
@@ -54,27 +55,22 @@ public class GenericComparisonDelegateSortsAList {
         }
     }
 
-    /**
-     * Exercises a generic delegate with a primitive (non-generic-parameter) return type —
-     * Comparison<T> returns int, which required its own "Native" generic delegate template
-     * distinct from the generic-parameter-return case.
-     */
-	static void testGenericComparisonDelegateSortsAList() throws Throwable {
-		List_1<system.Object> list = new List_1<system.Object>() {};
-		list.Add(new system.Object());
-		list.Add(new system.Object());
+    static void testGenericComparisonDelegateSortsAList() throws Throwable {
+        List_1<system.Object> list = new List_1<system.Object>() {};
+        list.Add(new system.Object());
+        list.Add(new system.Object());
 
-		final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
+        final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
 
-		Comparison_1<system.Object> comparison = new Comparison_1<system.Object>() {
-			@Override
-			public int Invoke(system.Object x, system.Object y) {
-				calls.incrementAndGet();
-				return 0;
-			}
-		};
-		list.Sort(comparison);
+        Comparison_1<system.Object> comparison = new Comparison_1<system.Object>() {
+            @Override
+            public int Invoke(system.Object x, system.Object y) {
+                calls.incrementAndGet();
+                return 0;
+            }
+        };
+        list.Sort(comparison);
 
-		if (calls.get() == 0) throw new AssertionError("Java comparison never invoked");
-	}
+        if (calls.get() == 0) throw new AssertionError("Java comparison never invoked");
+    }
 }

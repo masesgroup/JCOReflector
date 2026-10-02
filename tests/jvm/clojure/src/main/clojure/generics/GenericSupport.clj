@@ -27,8 +27,6 @@
   an anonymous generic subclass: a public no-arg subclass whose Signature is
   Super<TypeArg1, ...>. Methods named in `impls` are overridden and forwarded to Clojure fns."
   (:import [clojure.asm ClassWriter Opcodes Type]
-           [clojure.lang DynamicClassLoader]
-		   [java.lang.invoke MethodHandles]
            [java.lang.reflect Method Modifier]))
 
 (def ^:private cache (atom {}))
@@ -160,10 +158,19 @@
           (.invoke dc (.getClassLoader super)
                    (object-array [binary-name bytes (int 0) (int (alength bytes))])))))))
 
+(defn- package-name
+  "Package of a class, derived from its name (Class.getPackageName is Java 9+)."
+  ^String [^Class c]
+  (let [n (.getName c)
+        i (.lastIndexOf n ".")]
+    (if (neg? i) "" (subs n 0 i))))
+
 (defn- generic-class ^Class [^Class super type-args method-names]
   (let [k [super (vec type-args) (vec (sort method-names))]]
     (or (get @cache k)
-        (let [cname (str (.replace (.getPackageName super) \. \/) "/DynamicGenerated" (swap! counter inc))
+        (let [pkg   (package-name super)
+              cname (str (when-not (empty? pkg) (str (.replace pkg \. \/) "/"))
+                         "DynamicGenerated" (swap! counter inc))
               bytes (generate-class super type-args cname method-names)
               cls   (define-in-loader super cname bytes)]
           (swap! cache assoc k cls)

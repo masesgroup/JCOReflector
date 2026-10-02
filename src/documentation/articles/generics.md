@@ -23,6 +23,7 @@ The core difficulty is that **.NET generics and Java generics work differently a
 - Every type parameter is bounded by `IJCOBridgeReflected`, the marker interface implemented by every JCOReflector-generated class. This is what lets the generated code marshal a type argument back and forth across the bridge — and it is also the source of the most common limitation (see [Bound limitations](#bound-limitations) below).
 - Creating an instance of a generated generic class requires the Java "anonymous subclass" idiom, e.g. `new List_1<Foo>(nativeHandle){}` (note the trailing `{}`). This is a deliberate, well-established Java pattern (the same "super type token" trick used by libraries such as Gson and Guava) for recovering a type argument's `Class<?>` at runtime despite erasure: the JVM retains generic information on an anonymous subclass's supertype, even though it discards it everywhere else. Constructing an instance without the trailing `{}` throws a clear `IllegalArgumentException` explaining the required syntax.
 - The `Class<?>` recovered this way is cached on the instance (`genericArgumentClasses` in the shared `NetObject` base class) and reused whenever the generated code needs to build a new instance of a type parameter — for example when marshalling a returned array of `T`, or a `ref T` return value from newer .NET APIs — via a helper method (`instantiateGenericArgument`) that builds the instance reflectively instead of writing `new T(...)`, which Java forbids outright.
+- Generic **delegates** (`Comparison<T>`, `Func<T>`, and similar) work the same way from the caller's point of view, even though they extend `JCDelegate` rather than `NetObject`: a shared helper (`NetGenericHelper`) recovers the type argument from the anonymous subclass and lazily resolves the closed CLR delegate type the first time it's needed, instead of requiring the caller to build the closed type name by hand. See the [example](#example-sorting-a-list-with-a-generic-comparison-delegate) below.
 
 ## What is intentionally not reflected
 
@@ -80,6 +81,7 @@ The helper builds the subclass bytecode with the ASM copy that ships inside Cloj
 - For every method named in `impls`, the helper looks up the overridable method in the superclass hierarchy (public or protected, not static, not final, bridge and synthetic methods skipped) and overrides it. The override boxes the arguments, calls `impl` with the method name and the argument array, and converts the result back to the declared return type: `void` discards it, `boolean` and `char` are unboxed, the other primitives go through `java.lang.Number`, and reference types are cast.
 - The Clojure function receives the **boxed** arguments of the method, so a `Comparison<T>` delegate receives two objects and must return a number that is converted to `int`.
 - Generated classes are cached per combination of superclass, type arguments and overridden method names, so repeated calls with the same shape reuse one class.
+- **Generic classes and generic delegates need nothing different.** `NetObject` (generic classes) and `NetGenericHelper` (generic delegates, which extend `JCDelegate` instead) both read the type arguments from `getGenericSuperclass()` of the instance's class. The generated `Signature` is therefore all they require, whichever base class is involved.
 - **The generated class is defined in the same package and class loader as the superclass**, and is named `<package of super>.DynamicGeneratedN` (for example `system.collections.generic.DynamicGenerated1`). This is required: when an instance crosses the bridge, JCOBridge resolves the class by name to read its generic signature and decide which .NET type to allocate. A class that lives only in a private class loader cannot be resolved and the call fails with an exception whose message is just the generated class name. On Java 9 and later the class is defined with `MethodHandles.Lookup.defineClass`; a reflective fallback on `ClassLoader.defineClass` exists for Java 8.
 
 ### Example
@@ -105,7 +107,7 @@ The helper builds the subclass bytecode with the ASM copy that ships inside Cloj
 
 ### Limits of the helper
 
-- **Plain type arguments only.** The generated `Signature` lists each type argument as a simple class, so a type argument that is itself parameterized (`List<List<Foo>>`) cannot be expressed.
+- **Plain type arguments only.** The generated `Signature` lists each type argument as a simple class, so a type argument that is itself parameterized (`List<List<Foo>>`) cannot be expressed. The runtime side agrees: `NetGenericHelper` throws an `IllegalArgumentException` ("unsupported generic argument") for anything that is not a plain class.
 - **Overrides are selected by name.** If several overridable methods share the same name, the helper picks the first non-bridge one it finds in the hierarchy. A single entry in `impls` cannot target a specific overload.
 - **Overload resolution is done by Clojure, not by `javac`.** Clojure sees only the erased signatures, so a call that `javac` resolves through the generic parameter (`Add(T)`) can be bound by Clojure to a more specific overload, for example an explicit-interface `Add(...)`, which throws `UnsupportedOperationException`. Hinting the arguments as `IJCOBridgeReflected`, as in the example above, forces the intended overload. When no hint is enough (for example `List_1.Sort` with a `Comparison_1`), select the method by reflection.
 - **Instances only.** The helper does not make static members or method-level type parameters reachable; the [exclusions listed above](#what-is-intentionally-not-reflected) are the same for every language.
@@ -135,3 +137,28 @@ A whole-type entry (one without a member list) also stops the type itself from b
 ## Impact on non-generic output
 
 Regenerating with `EnableGenerics` disabled is intended to reproduce the pre-generics output exactly. As of this writing that guarantee does **not** yet fully hold: some fully-qualified class names appear where a simple name used to be (cosmetic), and — more importantly — some classes have been observed to lose an `implements` clause they should still have even with the switch off. This is an active, unresolved issue; do not rely on `EnableGenerics=false` output being byte-for-byte identical to a pre-generics build until this note is updated.
+
+## Example: sorting a list with a generic `Comparison` delegate
+
+This example exercises three mechanisms described above together: constructing a generic class (`List<T>`), passing a generic **delegate** as a synchronous, value-returning callback (`Comparison<T>`), and the anonymous-subclass idiom used for both. The full source lives at `tests/jvm/java/src/generics/GenericComparisonDelegateSortsAList.java`.
+
+```java
+List_1<system.Object> list = new List_1<system.Object>() {};
+list.Add(new system.Object());
+list.Add(new system.Object());
+
+final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
+
+Comparison_1<system.Object> comparison = new Comparison_1<system.Object>() {
+    @Override
+    public int Invoke(system.Object x, system.Object y) {
+        calls.incrementAndGet();
+        return 0;
+    }
+};
+list.Sort(comparison);
+
+if (calls.get() == 0) throw new AssertionError("Java comparison never invoked");
+```
+
+Note that, exactly as for `List_1<T>` itself, the delegate is constructed with the trailing `{}` and only `Invoke` needs to be overridden — the generated `Comparison_1` class resolves its own closed CLR delegate type (`System.Comparison\`1[System.Object]`) lazily, via the same anonymous-subclass capture used everywhere else, instead of requiring the caller to build that name by hand.

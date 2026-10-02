@@ -318,7 +318,6 @@ jobs:
       matrix_win_os: ${{ steps.set-matrix-win-os.outputs.matrix_win || steps.set-matrix-win-os-ext.outputs.matrix_win }}
       matrix_linux_os: ${{ steps.set-matrix-linux-os.outputs.matrix_linux || steps.set-matrix-linux-os-ext.outputs.matrix_linux }}
       matrix_mac_os: ${{ steps.set-matrix-mac-os.outputs.matrix_mac || steps.set-matrix-mac-os-ext.outputs.matrix_mac }}
-      matrix_unix_os: ${{ steps.set-matrix-unix-os.outputs.matrix_unix || steps.set-matrix-unix-os-ext.outputs.matrix_unix }}
     steps:
       - id: set-jdk-vendor
         if: ${{ inputs.ExecuteOnLargerJDKVendorSet == false }}
@@ -350,12 +349,6 @@ jobs:
       - id: set-matrix-mac-os-ext
         if: ${{ inputs.ExecuteOnMoreOSes == true }}
         run: echo "matrix_mac=[ 'macos-14', 'macos-15', 'macos-26' ]" >> $GITHUB_OUTPUT
-      - id: set-matrix-unix-os
-        if: ${{ inputs.ExecuteOnMoreOSes == false }}
-        run: echo "matrix_unix=[ 'ubuntu-24.04', 'macos-15' ]" >> $GITHUB_OUTPUT
-      - id: set-matrix-unix-os-ext
-        if: ${{ inputs.ExecuteOnMoreOSes == true }}
-        run: echo "matrix_unix=[ 'ubuntu-22.04', 'ubuntu-22.04-arm', 'ubuntu-24.04', 'ubuntu-24.04-arm', 'macos-14', 'macos-15', 'macos-26' ]" >> $GITHUB_OUTPUT
 
   java_tests_windows:
     if: ${{ inputs.EnableWindowsTests }}
@@ -1002,14 +995,6 @@ jobs:
           path: ./bin/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ matrix.framework }}_${{ github.sha }}
 
-      - name: Restore Scala bin from cache
-        uses: actions/cache/restore@v6
-        with:
-          fail-on-cache-miss: true
-          enableCrossOsArchive: true
-          path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_scala_${{ env.SCALARELEASE }}_${{ github.sha }}
-
       - name: Set up JDK distribution
         if: ${{ matrix.jdk_vendor != 'graalvm' }}
         uses: actions/setup-java@v6
@@ -1120,13 +1105,13 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
-  java_tests_unix:
+  java_tests_linux:
     if: ${{ inputs.EnableLinuxTests || inputs.EnableMacOSTests }}
     needs: prepare_matrix_data
     strategy:
       fail-fast: false
       matrix:
-        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_unix_os) }}
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
@@ -1740,6 +1725,162 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
+
+  java_tests_mac:
+    if: ${{ inputs.EnableLinuxTests || inputs.EnableMacOSTests }}
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
+        exclude:
+          - os: macos-14
+            jdk_vendor: temurin
+            jdk_version: 8
+          - os: macos-15
+            jdk_vendor: temurin
+            jdk_version: 8
+          - os: macos-26
+            jdk_vendor: temurin
+            jdk_version: 8
+          - jdk_vendor: microsoft
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 8
+          - jdk_vendor: oracle
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 8
+          - jdk_vendor: graalvm
+            jdk_version: 11
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net8.0'
+        with:
+          dotnet-version: |
+            8.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net9.0'
+        with:
+          dotnet-version: |
+            9.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v6
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Build Java test source file
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.AnonymousSubclassConstruction
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.EqualsGenericRenameOnEqualityComparer
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericCollectionAddAndGet
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericComparisonDelegateSortsAList
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericDictionaryWithTwoTypeArguments
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericExceptionExposesBoundType
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.MissingAnonymousSubclassFails
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.RemoveByKeyRenameOnKeyedCollection
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloLock
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNET
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNETEvent
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloIterator
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+    
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+  
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOutBase
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOut
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Errors_java_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ./**/hs_err_*
+          retention-days: 1
+
   scala_tests_mac:
     if: ${{ inputs.EnableMacOSTests }}
     needs: prepare_matrix_data
@@ -2214,7 +2355,7 @@ jobs:
           retention-days: 1
 
   execute_finalize:
-    needs: [java_tests_windows, scala_tests_windows, kotlin_tests_windows, clojure_tests_windows, java_tests_unix, scala_tests_linux, kotlin_tests_linux, clojure_tests_linux, scala_tests_mac, kotlin_tests_mac, clojure_tests_mac]
+    needs: [java_tests_windows, scala_tests_windows, kotlin_tests_windows, clojure_tests_windows, java_tests_linux, scala_tests_linux, kotlin_tests_linux, clojure_tests_linux, java_tests_mac, scala_tests_mac, kotlin_tests_mac, clojure_tests_mac]
     if: |
       always() &&
       !contains(needs.*.result, 'failure') &&

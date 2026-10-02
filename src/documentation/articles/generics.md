@@ -76,7 +76,8 @@ The helper builds the subclass bytecode with the ASM copy that ships inside Cloj
 - The class has a public no-argument constructor that calls the superclass constructor, and a public field `impl` that holds a Clojure function.
 - For every method named in `impls`, the helper looks up the overridable method in the superclass hierarchy (public or protected, not static, not final, bridge and synthetic methods skipped) and overrides it. The override boxes the arguments, calls `impl` with the method name and the argument array, and converts the result back to the declared return type: `void` discards it, `boolean` and `char` are unboxed, the other primitives go through `java.lang.Number`, and reference types are cast.
 - The Clojure function receives the **boxed** arguments of the method, so a `Comparison<T>` delegate receives two objects and must return a number that is converted to `int`.
-- Generated classes are cached per combination of superclass, type arguments and overridden method names, so repeated calls with the same shape reuse one class. Generated class names have the form `generics/support/GenN`.
+- Generated classes are cached per combination of superclass, type arguments and overridden method names, so repeated calls with the same shape reuse one class.
+- **The generated class is defined in the same package and class loader as the superclass**, and is named `<package of super>.DynamicGeneratedN` (for example `system.collections.generic.DynamicGenerated1`). This is required: when an instance crosses the bridge, JCOBridge resolves the class by name to read its generic signature and decide which .NET type to allocate. A class that lives only in a private class loader cannot be resolved and the call fails with an exception whose message is just the generated class name. On Java 9 and later the class is defined with `MethodHandles.Lookup.defineClass`; a reflective fallback on `ClassLoader.defineClass` exists for Java 8.
 
 ### Example
 
@@ -105,6 +106,7 @@ The helper builds the subclass bytecode with the ASM copy that ships inside Cloj
 - **Overrides are selected by name.** If several overridable methods share the same name, the helper picks the first non-bridge one it finds in the hierarchy. A single entry in `impls` cannot target a specific overload.
 - **Overload resolution is done by Clojure, not by `javac`.** Clojure sees only the erased signatures, so a call that `javac` resolves through the generic parameter (`Add(T)`) can be bound by Clojure to a more specific overload, for example an explicit-interface `Add(...)`, which throws `UnsupportedOperationException`. Hinting the arguments as `IJCOBridgeReflected`, as in the example above, forces the intended overload. When no hint is enough (for example `List_1.Sort` with a `Comparison_1`), select the method by reflection.
 - **Instances only.** The helper does not make static members or method-level type parameters reachable; the [exclusions listed above](#what-is-intentionally-not-reflected) are the same for every language.
+- **Java versions.** The Clojure generics tests pass on Java 11, 17, 21 and 25. On Java 8 the first version of the helper failed because it used `Class.getPackageName`, which was introduced in Java 9; the Java 8 path has not been verified since.
 - **Experimental.** Like the feature it supports, the helper lives in the test sources and may change.
 
 ## Known gaps

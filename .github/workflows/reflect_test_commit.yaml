@@ -41,7 +41,7 @@ on:
       EnableLinuxTests:
         description: 'Enable tests in Linux'
         required: false
-        default: false
+        default: true
         type: boolean
       EnableWindowsTests:
         description: 'Enable tests in Windows'
@@ -139,7 +139,7 @@ jobs:
       ExecuteOnMoreOSes: ${{ inputs.ExecuteOnMoreOSes || github.event_name == 'schedule' }}
       ExecuteOnLargerJDKVendorSet: ${{ inputs.ExecuteOnLargerJDKVendorSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
       ExecuteOnLargerJDKVersionSet: ${{ inputs.ExecuteOnLargerJDKVersionSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
-      EnableLinuxTests: true
+      EnableLinuxTests: ${{ github.event_name != 'workflow_dispatch' || inputs.EnableLinuxTests }}
       EnableWindowsTests: ${{ inputs.EnableWindowsTests || github.ref_name == 'master' || github.event_name == 'schedule' }}
       EnableMacOSTests: ${{ inputs.EnableMacOSTests || github.event_name == 'schedule' }}
       ForceExecution: ${{ inputs.ForceExecution || false }}

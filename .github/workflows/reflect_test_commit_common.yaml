@@ -1106,7 +1106,7 @@ jobs:
           retention-days: 1
 
   java_tests_linux:
-    if: ${{ inputs.EnableLinuxTests || inputs.EnableMacOSTests }}
+    if: ${{ inputs.EnableLinuxTests }}
     needs: prepare_matrix_data
     strategy:
       fail-fast: false
@@ -1725,9 +1725,8 @@ jobs:
           path: ./**/hs_err_*
           retention-days: 1
 
-
   java_tests_mac:
-    if: ${{ inputs.EnableLinuxTests || inputs.EnableMacOSTests }}
+    if: ${{ inputs.EnableMacOSTests }}
     needs: prepare_matrix_data
     strategy:
       fail-fast: false

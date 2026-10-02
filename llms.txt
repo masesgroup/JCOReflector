@@ -56,6 +56,9 @@ Clojure cannot declare the anonymous subclass `{}`: `proxy`, `reify` and `gen-cl
 ### 8. EnableGenerics Switch
 Generics support is controlled by the engine-level `EnableGenerics` switch and is experimental. Regenerating with the switch disabled is intended to reproduce the pre-generics output, but this is not yet guaranteed: some classes have been observed to lose an `implements` clause. Do not assume byte-for-byte identical output.
 
+### 9. JCOBridge Runtime Version
+Some generic scenarios depend on the JCOBridge runtime version. For example, passing a `Comparison<T>` delegate to `List<T>.Sort` requires JCOBridge 2.6.10 preview 4 or later. If a generic call fails on an older runtime, check the JCOBridge version before looking for a problem in the generated code.
+
 ## Related Projects
 - [JCOBridge](https://www.jcobridge.com/): The runtime engine powering JCOReflector — invocation, callback dispatch, reference lifecycle, and bulk transfer mechanics all live here
 - [JNet](https://github.com/masesgroup/JNet): Mirror project — call Java from .NET

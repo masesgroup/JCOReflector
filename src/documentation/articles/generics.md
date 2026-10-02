@@ -8,6 +8,9 @@ _description: Current state of .NET generics support in JCOReflector — what is
 > [!WARNING]
 > Support for .NET generic types and members is **experimental**. It is controlled by an engine-level `EnableGenerics` switch. Enabling it changes the shape of the generated Java code (see [Impact on non-generic output](#impact-on-non-generic-output) below) and is not yet recommended for production reflection runs. This page documents the current state as of this writing and will be updated as the feature matures.
 
+> [!NOTE]
+> Some generic scenarios depend on the JCOBridge runtime version. For example, passing a `Comparison<T>` delegate to `List<T>.Sort` requires JCOBridge 2.6.10 preview 4 or later.
+
 ## Why generics needed dedicated work
 
 Before this feature, JCOReflector discarded every .NET generic type and member during reflection: a generic class, interface, delegate, or method was simply not reflected. This kept the generated Java code simple, but excluded a large and important part of the .NET surface — collections (`List<T>`, `Dictionary<TKey,TValue>`), `Task<TResult>`, LINQ, and most modern .NET APIs are generic.
@@ -26,7 +29,7 @@ The core difficulty is that **.NET generics and Java generics work differently a
 Several categories of .NET generic APIs are excluded on purpose, because there is no correct way to represent them in Java — not because of a missing feature, but because of a hard language or runtime limit:
 
 - **`ref struct` types** (`Span<T>`, `ReadOnlySpan<T>`, and similar). These wrap a native pointer or stack reference that cannot be boxed, cannot cross the bridge as an object, and have no JVM equivalent. The type itself, and any member that uses it as a parameter or return type, is skipped entirely.
-- **"Generic math" interfaces** (`System.Numerics.INumber<TSelf>` and the whole family: `IBinaryInteger`, `IFloatingPointIeee754`, the `I*Operators` interfaces, plus `IParsable`/`ISpanParsable`/`IUtf8SpanParsable`). These rely on C# **static abstract interface members**, a language feature with no Java counterpart at all — a Java interface can never declare a static abstract member. Their operator interfaces are also bound to `TResult = bool`, which can never satisfy the `IJCOBridgeReflected` bound. The whole family is excluded.
+- **"Generic math" interfaces** (`System.Numerics.INumber<TSelf>` and the whole family: `IBinaryInteger`, `IFloatingPointIeee754`, the `I*Operators` interfaces, plus `IParsable`/`ISpanParsable`/`IUtf8SpanParsable`). These rely on C# **static abstract interface members**, a language feature with no Java counterpart at all — a Java interface can never declare a static abstract member. Their operator interfaces are also bound to `TResult = bool`, which can never satisfy the `IJCOBridgeReflected` bound. The whole family is excluded: in practice every generic interface of `System.Numerics`, plus `IParsable`, `ISpanParsable` and `IUtf8SpanParsable`, is matched by pattern.
 - **Method-level type parameters with no construction point.** A class-level type parameter (e.g. the `T` in `List<T>`) can be resolved at runtime because the anonymous-subclass trick captures its `Class<?>` when the instance is built. A type parameter that belongs to a single **method** instead (e.g. `Array.Empty<T>()`, `MemoryMarshal.GetArrayDataReference<T>(T[])`) has no such capture point — there is no moment where the caller supplies a `Class<T>` — so these members are skipped rather than emitting code that cannot compile.
 - **A generic class-level parameter used from a `static` member.** In .NET, each closed generic instantiation (`Foo<int>`, `Foo<string>`) has its own independent static state, so a static member can reference the class's own type parameter. In Java there is exactly one shared class per raw type regardless of how many parameterizations exist, so a static context can never see a class-level type parameter. Such members are skipped.
 - **Genuine erasure collisions.** Some pairs of distinct .NET members become identical once Java erasure removes their type arguments — two overloads (`Task.WhenAny(IEnumerable<Task>)` vs `WhenAny<TResult>(IEnumerable<Task<TResult>>)`), an array parameter next to a `params T[]` (`ImmutableArray<T>.AddRange`), or an inherited member whose erased signature collides with one from a base type or interface. Where a rename keeps both members usable (see [Renaming](#renaming-to-avoid-erasure-collisions) below) that is preferred; where no rename is possible without misrepresenting the API (e.g. two overloads whose only difference disappears entirely under erasure), the losing member is skipped.
@@ -111,12 +114,23 @@ The helper builds the subclass bytecode with the ASM copy that ships inside Cloj
 
 ## Known gaps
 
-A small number of specific types remain excluded (via an internal avoidance list) pending further investigation, rather than being fully worked through:
+A number of types and members are currently excluded through the exporting avoidance map, pending further investigation. The entries are temporary: each is either a genuine Java erasure limit (two .NET members that cannot coexist once type arguments are erased) or a bug not yet root-caused, and they are expected to be revisited in a future iteration.
+
+Whole types:
 
 - `System.Collections.Generic.IAlternateEqualityComparer<TAlternate,T>` (.NET 9+) — its `Equals(TAlternate, T)` collides with `NetObject.Equals` similarly to the cases above, but on two *different* type parameters, which the current renaming logic does not yet detect.
 - `System.Windows.Markup.INameScopeDictionary` — its `Implementation` class is missing members it inherits transitively through `IDictionary<TKey,TValue>`; the class-generation step currently only collects members declared directly on the interface being processed, not the full transitive interface closure.
 
-These are being tracked and are expected to be revisited in a future iteration.
+Members:
+
+- `SyndicationElementExtensionCollection.Add`
+- `ICollection<T>.Add` and `ICollection<T>.Remove`
+- `ImmutableArray<T>.AddRange`
+- `Sse41.Extract`
+- `TryFormat` on `Guid`, `Version`, `Rune`, `IPAddress` and `IPNetwork`
+- `GetPinnableReference` on `Span<T>` and `ReadOnlySpan<T>` — probably redundant, since both are `ref struct` types and are already excluded as whole types (see [What is intentionally not reflected](#what-is-intentionally-not-reflected)); the entries are to be reviewed.
+
+A whole-type entry (one without a member list) also stops the type itself from being exported as its own file. Skipping only its members would leave the type's `Implementation` class generated anyway, still missing members inherited from non-excluded interfaces such as `IComparable` or `IFormattable`.
 
 ## Impact on non-generic output
 

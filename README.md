@@ -258,6 +258,52 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 
 .NET generic types and members (classes, interfaces, delegates) can optionally be reflected into parameterized Java generics, instead of being discarded as before. The feature is opt-in and has known limitations driven by real differences between .NET's reified generics and Java's type erasure (some .NET generic APIs — `ref struct`s, "generic math" interfaces, method-level type parameters — have no representable Java equivalent and are intentionally skipped). See [Generics support](src/documentation/articles/generics.md) for the full picture.
 
+A generic class is created with the anonymous subclass syntax, note the trailing `{}`: this is how the type arguments are recovered at runtime despite Java type erasure. The following example does two things with generics: it creates a `List<T>` and it passes a generic delegate, `Comparison<T>`, to `List<T>.Sort`. The full code is in the project test folder (`tests/jvm/java/src/generics/GenericComparisonDelegateSortsAList.java`).
+
+```java
+List_1<system.Object> list = new List_1<system.Object>() {};
+list.Add(new system.Object());
+list.Add(new system.Object());
+
+final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
+
+Comparison_1<system.Object> comparison = new Comparison_1<system.Object>() {
+    @Override
+    public int Invoke(system.Object x, system.Object y) {
+        calls.incrementAndGet();
+        return 0;
+    }
+};
+list.Sort(comparison);
+
+if (calls.get() == 0) throw new AssertionError("Java comparison never invoked");
+```
+
+The same example written in Scala is the following one:
+
+```scala
+val list = new List_1[system.Object]() {}
+list.Add(new system.Object())
+list.Add(new system.Object())
+
+val calls = new java.util.concurrent.atomic.AtomicInteger()
+
+val comparison = new Comparison_1[system.Object]() {
+  override def Invoke(x: system.Object, y: system.Object): Int = {
+    calls.incrementAndGet()
+    0
+  }
+}
+list.Sort(comparison)
+
+if (calls.get() == 0) throw new AssertionError("Scala comparison never invoked")
+```
+
+In Clojure, where the anonymous subclass cannot be declared, a small helper generates it at runtime: see [Using generics from Clojure](src/documentation/articles/generics.md#using-generics-from-clojure).
+
+> [!NOTE]
+> Some generic scenarios, such as passing a `Comparison<T>` delegate to `List<T>.Sort` like in this example, require JCOBridge 2.6.10 preview 4 or later.
+
 ### Limitations
 
 C# and Java™ are different languages. The reflection process cannot reflects into Java™ some features available on C#: an example are properties where get/set is automatically choosed from C# compiler

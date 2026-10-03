@@ -195,6 +195,7 @@ jobs:
 
   # This workflow contains a single job called "build"
   build_windows_prepare_scala:
+    if: ${{ inputs.EnableWindowsTests }}
     needs: build_windows
     strategy:
       fail-fast: false
@@ -221,6 +222,7 @@ jobs:
 
   # This workflow contains a single job called "build"
   build_linux:
+    if: ${{ inputs.EnableLinuxTests || inputs.EnableMacOSTests }}
     needs: build_windows
     strategy:
       fail-fast: false
@@ -310,7 +312,6 @@ jobs:
 
   # prepare matrix info
   prepare_matrix_data:
-    needs: [build_windows, build_windows_prepare_scala, build_linux]
     runs-on: ubuntu-latest
     outputs:
       matrix_jdk_vendor: ${{ steps.set-jdk-vendor.outputs.matrix_jdk_vendor || steps.set-jdk-vendor-ext.outputs.matrix_jdk_vendor }}
@@ -352,7 +353,7 @@ jobs:
 
   java_tests_windows:
     if: ${{ inputs.EnableWindowsTests }}
-    needs: prepare_matrix_data
+    needs: [ prepare_matrix_data, build_windows ]
     strategy:
       fail-fast: false
       matrix:
@@ -517,7 +518,8 @@ jobs:
           retention-days: 1
 
   scala_tests_windows:
-    needs: prepare_matrix_data
+    if: ${{ inputs.EnableWindowsTests }}
+    needs: [ prepare_matrix_data, build_windows, build_windows_prepare_scala ]
     strategy:
       fail-fast: false
       matrix:
@@ -716,7 +718,8 @@ jobs:
           retention-days: 1
 
   kotlin_tests_windows:
-    needs: prepare_matrix_data
+    if: ${{ inputs.EnableWindowsTests }}
+    needs: [ prepare_matrix_data, build_windows ]
     strategy:
       fail-fast: false
       matrix:
@@ -789,14 +792,6 @@ jobs:
           enableCrossOsArchive: true
           path: ./bin/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ matrix.framework }}_${{ github.sha }}
-
-      - name: Restore Scala bin from cache
-        uses: actions/cache/restore@v6
-        with:
-          fail-on-cache-miss: true
-          enableCrossOsArchive: true
-          path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_scala_${{ env.SCALARELEASE }}_${{ github.sha }}
 
       - name: Set up JDK distribution
         if: ${{ matrix.jdk_vendor != 'graalvm' }}
@@ -921,7 +916,8 @@ jobs:
           retention-days: 1
 
   clojure_tests_windows:
-    needs: prepare_matrix_data
+    if: ${{ inputs.EnableWindowsTests }}
+    needs: [ prepare_matrix_data, build_windows ]
     strategy:
       fail-fast: false
       matrix:
@@ -1107,7 +1103,7 @@ jobs:
 
   java_tests_linux:
     if: ${{ inputs.EnableLinuxTests }}
-    needs: prepare_matrix_data
+    needs: [ prepare_matrix_data, build_linux ]
     strategy:
       fail-fast: false
       matrix:
@@ -1262,7 +1258,7 @@ jobs:
 
   scala_tests_linux:
     if: ${{ inputs.EnableLinuxTests }}
-    needs: prepare_matrix_data
+    needs: [ prepare_matrix_data, build_linux ]
     strategy:
       fail-fast: false
       matrix:
@@ -1416,7 +1412,7 @@ jobs:
 
   kotlin_tests_linux:
     if: ${{ inputs.EnableLinuxTests }}
-    needs: prepare_matrix_data
+    needs: [ prepare_matrix_data, build_linux ]
     strategy:
       fail-fast: false
       matrix:
@@ -1566,7 +1562,7 @@ jobs:
 
   clojure_tests_linux:
     if: ${{ inputs.EnableLinuxTests }}
-    needs: prepare_matrix_data
+    needs: [ prepare_matrix_data, build_linux ]
     strategy:
       fail-fast: false
       matrix:
@@ -1727,7 +1723,7 @@ jobs:
 
   java_tests_mac:
     if: ${{ inputs.EnableMacOSTests }}
-    needs: prepare_matrix_data
+    needs: [ prepare_matrix_data, build_linux ]
     strategy:
       fail-fast: false
       matrix:
@@ -1882,7 +1878,7 @@ jobs:
 
   scala_tests_mac:
     if: ${{ inputs.EnableMacOSTests }}
-    needs: prepare_matrix_data
+    needs: [ prepare_matrix_data, build_linux ]
     strategy:
       fail-fast: false
       matrix:
@@ -2042,7 +2038,7 @@ jobs:
 
   kotlin_tests_mac:
     if: ${{ inputs.EnableMacOSTests }}
-    needs: prepare_matrix_data
+    needs: [ prepare_matrix_data, build_linux ]
     strategy:
       fail-fast: false
       matrix:
@@ -2199,8 +2195,8 @@ jobs:
           retention-days: 1
 
   clojure_tests_mac:
-    if: ${{ inputs.EnableLinuxTests }}
-    needs: prepare_matrix_data
+    if: ${{ inputs.EnableMacOSTests }}
+    needs: [ prepare_matrix_data, build_linux ]
     strategy:
       fail-fast: false
       matrix:
